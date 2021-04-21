@@ -1,0 +1,23 @@
+var helpers = require("./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _react = require('react');
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactDom = require('react-dom');
+  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\index.jsx";
+  _reactDom.render(/*#__PURE__*/_reactDefault.default.createElement("h1", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 8
+    }
+  }, "Hello to react"), document.getElementById('app'));
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
