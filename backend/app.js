@@ -25,6 +25,9 @@ connection.once("open", () => {
   console.log("Connected to mongo DB");
 });
 
+const memberDetails = require("./Routes/CommiteeMembersRoute");
+app.use("/memberDetails", memberDetails);
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
