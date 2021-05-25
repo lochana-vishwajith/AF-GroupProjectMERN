@@ -43,7 +43,40 @@ const userSchema = new mongoose.Schema({
   isPayed: {
     type: Boolean,
   },
-  workshop: [], //add Workshop related things
+  workshop: [
+    {
+      wsName: {
+        type: String,
+        required: true,
+      },
+
+      wsDate: {
+        type: String,
+        required: true,
+      },
+
+      wsDescription: {
+        type: String,
+        required: true,
+      },
+
+      wsPresentorName: {
+        type: String,
+        required: true,
+      },
+
+      wsPresentorDescription: {
+        type: String,
+        required: true,
+      },
+
+      status: {
+        type: Boolean,
+        required: true,
+        default: false,
+      },
+    },
+  ], //add Workshop related things
   research: [
     {
       researchTitle: {
