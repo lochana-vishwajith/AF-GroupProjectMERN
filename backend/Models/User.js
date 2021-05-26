@@ -4,43 +4,44 @@ const mongoose = require("mongoose");
 //ill create the Backend API after adding Research and Workshop details
 //Please commit after adding model
 const userSchema = new mongoose.Schema({
-  name: {
+  name: {//1
     type: String,
     required: true,
   },
-  email: {
+  email: {//2
     type: String,
     required: true,
     pattern: /.com$/,
     lowercase: true,
   },
-  password: {
+  password: {//3
     type: String,
     required: true,
   },
-  mobile: {
+  mobile: {//4
     type: Number,
     required: true,
   },
-  linkedIn: {
+  linkedIn: {//5
     type: String,
   },
-  category: {
+  category: {//6
+    type:String,
     enum: ["Workshop Conductor", "Researcher"],
     required: true,
   },
-  description: {
+  description: {//7
     type: String,
     required: true,
   },
-  awards: {
+  awards: {//8
     type: String,
   },
-  profilePic: {
+  profilePic: { //9
     type: String,
   },
 
-  workshop: [
+  workshop: [ //10
     {
       wsID: {
         type: String,
@@ -121,14 +122,49 @@ async function Adduser(user){
     category: user.category,
     description: user.description,
     awards: user.awards,
-    profilePic: user.profilePic
+    profilePic: user.profilePic,
   })
-
-  
-
-
+  try {
+    const result = await userObj.save()
+    return result;
+  }catch (e) {
+    console.log(e.message);
+  }
 }
 
 
+async function getAllUsers(){
+try {
+  const result = await User.find()
+  return result;
+}catch (e){
+  console.log(e.message);
+}
+}
+
+
+async function UpdateUser(id,reqObj){
+  try{
+    const result = User.findByIdAndUpdate({id},{
+      $set:{description:reqObj.description,
+            awards:reqObj.awards
+      }},{new:true}
+    )
+    return result;
+  }catch (e) {
+    console.log(e.message);
+  }
+}
+
+
+async function deleteUser(id){
+  try {
+    const result = await User.findByIdAndDelete({_id:id})
+    return result;
+  }catch (e){
+    console.log(e.message);
+  }
+}
+module.exports = {Adduser,getAllUsers,UpdateUser,deleteUser}
 
 

@@ -28,6 +28,10 @@ connection.once("open", () => {
 const memberDetails = require("./Routes/CommiteeMembersRoute");
 app.use("/memberDetails", memberDetails);
 
+//routes for the users
+const users = require('./Routes/User');
+app.use('/Users',users);
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
