@@ -45,6 +45,11 @@ const userSchema = new mongoose.Schema({
   },
   workshop: [
     {
+      wsID: {
+        type: String,
+        required: true,
+      },
+
       wsName: {
         type: String,
         required: true,
@@ -74,6 +79,9 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         required: true,
         default: false,
+      },
+      comment: {
+        type: String,
       },
     },
   ], //add Workshop related things

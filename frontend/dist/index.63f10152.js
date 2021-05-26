@@ -1053,7 +1053,7 @@ try {
   var _reactDom = require('react-dom');
   var _App = require('./App');
   var _AppDefault = _parcelHelpers.interopDefault(_App);
-  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\index.jsx";
+  var _jsxFileName = "C:\\Users\\thima\\Desktop\\AF\\frontend\\index.jsx";
   _reactDom.render(/*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
     __self: undefined,
     __source: {
@@ -26271,7 +26271,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\App.jsx";
+  var _jsxFileName = "C:\\Users\\thima\\Desktop\\AF\\frontend\\App.jsx";
   class App extends _react.Component {
     render() {
       return (
