@@ -16,7 +16,6 @@ const userSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    min: 8,
     required: true,
   },
   mobile: {
@@ -27,7 +26,7 @@ const userSchema = new mongoose.Schema({
     type: String,
   },
   category: {
-    enum: ["Attendee", "Workshop Conductor", "Researcher"],
+    enum: ["Workshop Conductor", "Researcher"],
     required: true,
   },
   description: {
@@ -40,9 +39,7 @@ const userSchema = new mongoose.Schema({
   profilePic: {
     type: String,
   },
-  isPayed: {
-    type: Boolean,
-  },
+
   workshop: [
     {
       wsName: {
@@ -102,3 +99,28 @@ const userSchema = new mongoose.Schema({
     },
   ], //add Research related things
 });
+
+const User = mongoose.model('User',userSchema)
+
+async function Adduser(user){
+
+  const userObj= new User({
+    name: user.name,
+    email: user.email,
+    password: user.password,
+    mobile: user.mobile,
+    linkedIn: user.linkedIn,
+    category: user.category,
+    description: user.description,
+    awards: user.awards,
+    profilePic: user.profilePic
+  })
+
+  
+
+
+}
+
+
+
+
