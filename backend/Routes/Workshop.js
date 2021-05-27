@@ -7,13 +7,15 @@ router.get("/getws", (req, res) => {
 });
 
 router.post("/postws", (req, res) => {
-  res.send("post");
+  res.send("post works");
 });
 
 router.put("/updatews/:id", (req, res) => {
-  res.send("put");
+  res.send(req.params.id);
 });
 
 router.delete("/deletews/:id", (req, res) => {
-  res.send("delete");
+  res.send("delete works");
 });
+
+module.exports = router;

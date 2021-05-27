@@ -33,7 +33,8 @@ const users = require("./Routes/User");
 app.use("/Users", users);
 
 //routes for workshop
-app.use("/workshop", require("./Routes/Workshop"));
+const workshops = require("./Routes/Workshop");
+app.use("/Workshops", workshops);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
