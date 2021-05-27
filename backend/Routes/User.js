@@ -2,7 +2,7 @@
 //hasitha
 const express = require('express')
 const router = express.Router();
-const User = require('../Models/User');
+const User = require('../API/UserAPI');
 
 router.post('/addUsers',async(req,res)=>{
     let user = req.body;
