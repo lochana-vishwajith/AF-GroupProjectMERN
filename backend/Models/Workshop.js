@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 
 const workshopSchema = new mongoose.Schema({
-  wsID: {
-    type: String,
-    required: true,
-  },
-
   wsName: {
     type: String,
     required: true,
