@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
+// const multer = require("multer");
 
 const app = express();
 
@@ -29,8 +30,23 @@ const memberDetails = require("./Routes/CommiteeMembersRoute");
 app.use("/memberDetails", memberDetails);
 
 //routes for the users
-const users = require('./Routes/User');
-app.use('/Users',users);
+const users = require("./Routes/User");
+app.use("/Users", users);
+
+//routes for the research details
+const research = require("./Routes/ResearchRoute");
+app.use("/researchDetails", research);
+
+// const fileStorageEngine = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, "./FileStorage/ResearchPapers");
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, file.originalname);
+//   },
+// });
+
+// const upload = multer({ storage: fileStorageEngine });
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
