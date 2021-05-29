@@ -1,12 +1,21 @@
 
-const User = require('../Models/User')
+const User = require('../Models/UserModel')
+const bcrypt = require('bcrypt')
+
+
+
+
+
 
 async function Adduser(user){
+const salt = await bcrypt.genSalt(10);
+const pHash =await bcrypt.hash(user.password,salt);
+
 
     const userObj= new User({
         name: user.name,
         email: user.email,
-        password: user.password,
+        password: pHash,
         mobile: user.mobile,
         linkedIn: user.linkedIn,
         category: user.category,
@@ -55,4 +64,29 @@ async function deleteUser(id){
         console.log(e.message);
     }
 }
-module.exports = {Adduser,getAllUsers,UpdateUser,deleteUser}
+
+async  function loggingUser(logObj){
+try {
+    const loggedObj = User.findOne({email: logObj.email});
+    if (!loggedObj) {
+        return false;
+    } else {
+        const result = bcrypt.compare(logObj.password, loggedObj.password);
+        if (!result) return false;
+        else {
+            return loggedObj;
+        }
+    }
+}catch (e) {
+    console.log(e.message);
+}
+}
+
+async function getUserDetails(user){
+    const UserOb =await User.findById({_id:user._id})
+        .select({name:1,email:1,mobile:1,linkedIn:1,description:1,awards:1})
+    return UserOb;
+}
+
+
+module.exports = {Adduser,getAllUsers,UpdateUser,deleteUser,loggingUser,getUserDetails}
