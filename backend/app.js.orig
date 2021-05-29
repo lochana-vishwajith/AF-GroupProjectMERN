@@ -42,7 +42,11 @@ app.use(
 );
 
 //routes for the users
+<<<<<<< HEAD
 const users = require("./Routes/UserRoute");
+=======
+const users = require("./Routes/User");
+>>>>>>> origin/Admin-Editor
 app.use("/Users", users);
 
 //routes for workshop
