@@ -36,6 +36,11 @@ app.use("/Users", users);
 const workshops = require("./Routes/Workshop");
 app.use("/Workshops", workshops);
 
+//routes for research
+const research = require("./Routes/ResearchRoute");
+app.use("/researchDetails", research);
+
+app.use("/repaper", express.static("FileStorage/ResearchPapers"));
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

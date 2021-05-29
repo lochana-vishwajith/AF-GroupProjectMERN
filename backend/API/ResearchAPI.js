@@ -9,7 +9,8 @@ async function addResearchDetails(research) {
     researchYear: research.year,
     coAuthors: research.authors,
     isAccepted: research.isAccepted,
-    fileName: null,
+    fileName: `http://localhost:5000/repaper/${research.file.filename}`,
+    // fileName: `http://localhost:5000/repaper/${file}`,
   });
 
   try {

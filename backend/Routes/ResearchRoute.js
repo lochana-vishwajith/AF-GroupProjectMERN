@@ -4,25 +4,30 @@ const router = express.Router();
 const Research = require("../API/ResearchAPI");
 
 const multer = require("multer");
+const path = require("path");
 
 const fileStorageEngine = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "./FileStorage/ResearchPapers");
-  },
+  destination: "./FileStorage/ResearchPapers",
   filename: (req, file, cb) => {
-    cb(null, file.originalname);
+    cb(
+      null,
+      `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`
+    );
   },
 });
 
 const upload = multer({ storage: fileStorageEngine });
 
-router.post("/addResearchDetails", async (req, res) => {
-  // console.log(req.file);
-  // let fileName = req.file.filename;
-  let research = req.body;
-  const result = await Research.addResearchDetails(research);
-  res.send(result);
-});
+router.post(
+  "/addResearchDetails",
+  upload.single("fileName"),
+  async (req, res) => {
+    // console.log(req.file);
+    let research = req.body;
+    const result = await Research.addResearchDetails(research);
+    res.send(result);
+  }
+);
 
 router.get("/getResearchDetails", async (req, res) => {
   const result = await Research.getAllResearchDetails();
