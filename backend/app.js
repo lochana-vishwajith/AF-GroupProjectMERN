@@ -29,7 +29,7 @@ const memberDetails = require("./Routes/CommiteeMembersRoute");
 app.use("/memberDetails", memberDetails);
 
 //routes for the users
-const users = require("./Routes/User");
+const users = require("./Routes/UserRoute");
 app.use("/Users", users);
 
 //routes for workshop

@@ -34,4 +34,4 @@ const researchDetails = mongoose.model(
   researchDetailsSchema
 );
 
-module.exports = researchDetails;
+module.exports = {researchDetails,researchDetailsSchema};

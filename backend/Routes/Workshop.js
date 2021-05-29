@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Workshop = require("../Models/Workshop");
+const Workshop = require("../Models/Workshop").workshopModel;
 
 router.get("/getws", async (req, res) => {
   try {

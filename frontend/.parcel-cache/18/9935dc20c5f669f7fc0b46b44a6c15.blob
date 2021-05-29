@@ -4688,7 +4688,7 @@ if ("development" !== "production") {
       getHighestPriorityLanes(lane);
       var priority = return_highestLanePriority;
       if (priority >= InputContinuousLanePriority) {
-        // User interactions should expire slightly more quickly.
+        // UserModel interactions should expire slightly more quickly.
         // 
         // NOTE: This is set to the corresponding constant as in Scheduler.js. When
         // we made it larger, a product metric in www regressed, suggesting there's
@@ -17683,7 +17683,7 @@ if ("development" !== "production") {
         }
       }
     }
-    // User-originating errors (lifecycles and refs) should not interrupt
+    // UserModel-originating errors (lifecycles and refs) should not interrupt
     // deletion, so don't let them throw. Host-originating errors should
     // interrupt deletion, so it's okay
     function commitUnmount(finishedRoot, current, renderPriorityLevel) {

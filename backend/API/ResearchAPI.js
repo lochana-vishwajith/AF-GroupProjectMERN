@@ -1,6 +1,6 @@
 //Savith IT18014396
-const Research = require("../Models/ResearchModel");
-const User = require("../Models/User");
+const Research = require("../Models/ResearchModel").researchDetails;
+const User = require("../Models/UserModel");
 
 async function addResearchDetails(research) {
   const researchData = new Research({
