@@ -4,48 +4,58 @@ const mongoose = require("mongoose");
 //ill create the Backend API after adding Research and Workshop details
 //Please commit after adding model
 const userSchema = new mongoose.Schema({
-  name: {//1
+  name: {
+    //1
     type: String,
     required: true,
   },
-  email: {//2
+  email: {
+    //2
     type: String,
     required: true,
     match: /.com$/,
     lowercase: true,
   },
-  password: {//3
+  password: {
+    //3
     type: String,
     required: true,
   },
-  mobile: {//4
+  mobile: {
+    //4
     type: Number,
     required: true,
   },
-  linkedIn: {//5
+  linkedIn: {
+    //5
     type: String,
   },
-  category: {//6
-    type:String,
+  category: {
+    //6
+    type: String,
     enum: ["Workshop Conductor", "Researcher"],
     required: true,
   },
-  Date:{
-    type:Date,
-  default:Date.now
+  Date: {
+    type: Date,
+    default: Date.now,
   },
-  description: {//7
+  description: {
+    //7
     type: String,
     required: true,
   },
-  awards: {//8
+  awards: {
+    //8
     type: String,
   },
-  profilePic: { //9
+  profilePic: {
+    //9
     type: String,
   },
 
-  workshop: [ //10
+  workshop: [
+    //10
     {
       wsID: {
         type: String,
@@ -113,8 +123,6 @@ const userSchema = new mongoose.Schema({
   ], //add Research related things
 });
 
-const User = mongoose.model('User',userSchema)
+const User = mongoose.model("User", userSchema);
 
-
-module.exports =User;
-
+module.exports = User;

@@ -28,9 +28,22 @@ connection.once("open", () => {
 const memberDetails = require("./Routes/CommiteeMembersRoute");
 app.use("/memberDetails", memberDetails);
 
+const homePage = require("./Routes/HomePageRoutes");
+app.use("/homePage", homePage);
+
+const researchTemplate = require("./Routes/ResearchPaperTemplateRoute");
+app.use("/researchTemplate", researchTemplate);
+
+app.use("/images", express.static("HomePageImages"));
+app.use("/templateFolder", express.static("ResearchPaperTemplate"));
+app.use(
+  "/workShopTemplateFolder",
+  express.static("WorkshopRresentationTemplate")
+);
+
 //routes for the users
-const users = require('./Routes/User');
-app.use('/Users',users);
+const users = require("./Routes/User");
+app.use("/Users", users);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
