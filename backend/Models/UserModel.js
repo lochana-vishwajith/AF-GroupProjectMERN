@@ -61,7 +61,7 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.methods.authenticateUser =function () {
-  const jwtToken = JWT.sign({_id:this._id,category:this.category},"WEBTOKEN");
+  const jwtToken = JWT.sign({_id:this._id},"WEBTOKEN");
   return jwtToken;
 }
 

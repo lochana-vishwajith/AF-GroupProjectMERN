@@ -5,27 +5,23 @@ const Schema = mongoose.Schema;
 const researchDetailsSchema = new Schema({
   researchTitle: {
     type: String,
-    required: true,
   },
   researchField: {
     type: String,
-    required: true,
   },
   researchYear: {
     type: Date,
-    required: true,
+    default: Date.now,
   },
   coAuthors: {
     type: String,
-    required: true,
+
   },
   isAccepted: {
     type: Boolean,
-    required: true,
   },
   fileName: {
     type: String,
-    required: false,
   },
 });
 

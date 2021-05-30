@@ -2,6 +2,8 @@
 const express = require("express");
 const router = express.Router();
 const Research = require("../API/ResearchAPI");
+const auth = require('../Middleware/UserAuth');
+const User = require('../API/UserAPI')
 
 const multer = require("multer");
 
@@ -16,12 +18,18 @@ const fileStorageEngine = multer.diskStorage({
 
 const upload = multer({ storage: fileStorageEngine });
 
-router.post("/addResearchDetails", async (req, res) => {
+router.post("/addResearchDetails", auth,async (req, res) => {
   // console.log(req.file);
   // let fileName = req.file.filename;
   let research = req.body;
+  console.log(research);
   const result = await Research.addResearchDetails(research);
-  res.send(result);
+  const uId = req.user._id;
+  const resObj = await User.addResearches(uId,result)
+  res.send(resObj);
+
+
+
 });
 
 router.get("/getResearchDetails", async (req, res) => {

@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+
 const cors = require("cors");
 require("dotenv").config();
 
@@ -20,6 +21,8 @@ mongoose.connect(url, {
   useFindAndModify: false,
 });
 
+
+
 const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("Connected to mongo DB");
@@ -27,6 +30,12 @@ connection.once("open", () => {
 
 const memberDetails = require("./Routes/CommiteeMembersRoute");
 app.use("/memberDetails", memberDetails);
+
+//routes for the researcher
+
+const Researcher = require('./Routes/ResearchRoute');
+app.use('/Researcher',Researcher);
+
 
 //routes for the users
 const users = require("./Routes/UserRoute");

@@ -2,11 +2,6 @@
 const User = require('../Models/UserModel')
 const bcrypt = require('bcrypt')
 
-
-
-
-
-
 async function Adduser(user){
 const salt = await bcrypt.genSalt(10);
 const pHash =await bcrypt.hash(user.password,salt);
@@ -89,4 +84,11 @@ async function getUserDetails(user){
 }
 
 
-module.exports = {Adduser,getAllUsers,UpdateUser,deleteUser,loggingUser,getUserDetails}
+async function addResearches(userID,researchObj){
+    const userOb = await  User.findById({_id:userID})
+    userOb.research.push(researchObj);
+    const resOb = userOb.save();
+    return resOb;
+}
+
+module.exports = {Adduser,getAllUsers,UpdateUser,deleteUser,loggingUser,getUserDetails,addResearches}
