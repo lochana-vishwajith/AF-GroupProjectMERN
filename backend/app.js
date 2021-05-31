@@ -37,12 +37,16 @@ app.use("/researchTemplate", researchTemplate);
 const workshopTemplate = require("./Routes/WorkshopTemplateRoute");
 app.use("/workshopTemplate", workshopTemplate);
 
+const presentationTemplate = require("./Routes/WorkshopPresentationTemplateRoute");
+app.use("/presentationTemplate", presentationTemplate);
+
 app.use("/images", express.static("HomePageImages"));
 app.use("/templateFolder", express.static("ResearchPaperTemplate"));
 app.use(
   "/workShopTemplateFolder",
   express.static("WorkshopRresentationTemplate")
 );
+app.use("/presentationFolder", express.static("WorkshopPresentationTemplate"));
 
 //routes for the users
 const users = require("./Routes/UserRoute");
