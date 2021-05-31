@@ -2,8 +2,8 @@
 const express = require("express");
 const router = express.Router();
 const Research = require("../API/ResearchAPI");
-const auth = require('../Middleware/UserAuth');
-const User = require('../API/UserAPI')
+const auth = require("../Middleware/UserAuth");
+const User = require("../API/UserAPI");
 
 const multer = require("multer");
 const path = require("path");
@@ -44,6 +44,9 @@ router.post(
     console.log(details);
     // console.log(JSON.stringify(research));
     const result = await Research.addResearchDetails(details);
+    // const uId = req.user._id;
+    // const resObj = await User.addResearches(uId,result)
+    res.send(resObj);
     res.send(result);
   }
 );
