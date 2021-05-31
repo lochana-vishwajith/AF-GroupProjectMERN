@@ -5,6 +5,7 @@ const Research = require("../API/ResearchAPI");
 
 const multer = require("multer");
 const path = require("path");
+const { equal } = require("assert");
 
 const fileStorageEngine = multer.diskStorage({
   destination: "./FileStorage/ResearchPapers",
@@ -22,9 +23,25 @@ router.post(
   "/addResearchDetails",
   upload.single("fileName"),
   async (req, res) => {
-    // console.log(req.file);
-    let research = req.body;
-    const result = await Research.addResearchDetails(research);
+    console.log(req.file);
+    const {
+      researchTitle,
+      researchField,
+      researchYear,
+      coAuthors,
+      isAccepted,
+    } = req.body;
+    const details = {
+      researchTitle,
+      researchField,
+      researchYear,
+      coAuthors,
+      isAccepted,
+      fileName: req.file,
+    };
+    console.log(details);
+    // console.log(JSON.stringify(research));
+    const result = await Research.addResearchDetails(details);
     res.send(result);
   }
 );
@@ -62,5 +79,12 @@ router.post("/uploadResearch", upload.single("pdf"), (req, res) => {
   console.log(req.file);
   console.log(req.file.filename);
   res.send("File succesfully uploaded");
+});
+
+router.put("/acceptResearch/:id", (req, res) => {
+  let id = req.params.id;
+  let data = req.body;
+  const result = Research.accceptResearchById(id, data);
+  res.send(result);
 });
 module.exports = router;

@@ -4,12 +4,12 @@ const User = require("../Models/UserModel");
 
 async function addResearchDetails(research) {
   const researchData = new Research({
-    researchTitle: research.title,
-    researchField: research.field,
-    researchYear: research.year,
-    coAuthors: research.authors,
+    researchTitle: research.researchTitle,
+    researchField: research.researchField,
+    researchYear: research.researchYear,
+    coAuthors: research.coAuthors,
     isAccepted: research.isAccepted,
-    fileName: `http://localhost:5000/repaper/${research.file.filename}`,
+    fileName: `http://localhost:5000/repaper/${research.fileName.filename}`,
     // fileName: `http://localhost:5000/repaper/${file}`,
   });
 
@@ -80,6 +80,15 @@ async function deleteResearchDetail(id) {
   }
 }
 
+async function accceptResearchById(id, data) {
+  try {
+    const result = Research.findByIdAndUpdate(id, data);
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 module.exports = {
   addResearchDetails,
   getAllResearchDetails,
@@ -87,4 +96,5 @@ module.exports = {
   editResearchDetails,
   deleteResearchDetail,
   getResearchById,
+  accceptResearchById,
 };
