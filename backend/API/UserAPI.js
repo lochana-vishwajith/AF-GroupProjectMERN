@@ -85,10 +85,28 @@ async function getUserDetails(user){
 
 
 async function addResearches(userID,researchObj){
+    try{
     const userOb = await  User.findById({_id:userID})
     userOb.research.push(researchObj);
     const resOb = userOb.save();
     return resOb;
+}catch(e){
+    console.log(e.message);
 }
 
-module.exports = {Adduser,getAllUsers,UpdateUser,deleteUser,loggingUser,getUserDetails,addResearches}
+}
+
+
+async function addWorkshop(userID,WorkshopObj){
+    try{
+    const userOb = await  User.findById({_id:userID})
+    userOb.workshop.push(WorkshopObj);
+    const resOb = userOb.save();
+    return resOb;
+    }catch(e){
+        e.message
+    }
+}
+
+
+module.exports = {Adduser,getAllUsers,UpdateUser,deleteUser,loggingUser,getUserDetails,addResearches,addWorkshop}

@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const Workshop = require("../Models/Workshop").workshopModel;
-
+const auth = require('../Middleware/UserAuth');
+const USer = require('../API/UserAPI');
 router.get("/getws", async (req, res) => {
   try {
     const workshops = await Workshop.find();
@@ -20,7 +21,7 @@ router.get("/getws/:id", async (req, res) => {
   }
 });
 
-router.post("/postws", async (req, res) => {
+router.post("/postws",auth, async (req, res) => {
   const workshop = new Workshop({
     wsName: req.body.wsName,
     wsDate: req.body.wsDate,
@@ -33,7 +34,11 @@ router.post("/postws", async (req, res) => {
 
   try {
     const ws1 = await workshop.save();
-    res.send(ws1);
+    console.log(req.user);
+
+    const resobj =
+    res.send(resobj);
+
   } catch (error) {
     res.send(`Error - ${error}`);
   }

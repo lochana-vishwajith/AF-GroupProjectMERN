@@ -3,32 +3,32 @@ const mongoose = require("mongoose");
 const workshopSchema = new mongoose.Schema({
   wsName: {
     type: String,
-    required: true,
+   // required: true,
   },
 
   wsDate: {
     type: String,
-    required: true,
+   // required: true,
   },
 
   wsDescription: {
     type: String,
-    required: true,
+    //required: true,
   },
 
   wsPresentorName: {
     type: String,
-    required: true,
+    //required: true,
   },
 
   wsPresentorDescription: {
     type: String,
-    required: true,
+   // required: true,
   },
 
   status: {
     type: Boolean,
-    required: true,
+   // required: true,
     default: false,
   },
   comment: {
