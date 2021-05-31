@@ -31,12 +31,13 @@ connection.once("open", () => {
 const memberDetails = require("./Routes/CommiteeMembersRoute");
 app.use("/memberDetails", memberDetails);
 
+<<<<<<< HEAD
 //routes for the researcher
 
 const Researcher = require('./Routes/ResearchRoute');
 app.use('/Researcher',Researcher);
 
-
+=======
 const homePage = require("./Routes/HomePageRoutes");
 app.use("/homePage", homePage);
 
@@ -49,6 +50,7 @@ app.use(
   "/workShopTemplateFolder",
   express.static("WorkshopRresentationTemplate")
 );
+>>>>>>> file_upload_changes_to_do-saviya
 
 //routes for the users
 const users = require("./Routes/UserRoute");

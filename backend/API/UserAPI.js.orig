@@ -1,5 +1,34 @@
+<<<<<<< HEAD
+
+const User = require('../Models/UserModel')
+const bcrypt = require('bcrypt')
+
+async function Adduser(user){
+const salt = await bcrypt.genSalt(10);
+const pHash =await bcrypt.hash(user.password,salt);
+
+
+    const userObj= new User({
+        name: user.name,
+        email: user.email,
+        password: pHash,
+        mobile: user.mobile,
+        linkedIn: user.linkedIn,
+        category: user.category,
+        description: user.description,
+        awards: user.awards,
+        profilePic: user.profilePic,
+    })
+    try {
+        const result = await userObj.save()
+        return result;
+    }catch (e) {
+        console.log(e.message);
+    }
+=======
 const User = require("../Models/UserModel");
 const bcrypt = require("bcrypt");
+
 async function Adduser(user) {
   const salt = await bcrypt.genSalt(10);
   const pHash = await bcrypt.hash(user.password, salt);
@@ -21,6 +50,7 @@ async function Adduser(user) {
   } catch (e) {
     console.log(e.message);
   }
+>>>>>>> file_upload_changes_to_do-saviya
 }
 
 async function getAllUsers() {
@@ -85,15 +115,16 @@ async function getUserDetails(user) {
   return UserOb;
 }
 
-module.exports = {
-  Adduser,
-  getAllUsers,
-  UpdateUser,
-  deleteUser,
-  loggingUser,
-  getUserDetails,
-};
+<<<<<<< HEAD
 
+async function addResearches(userID,researchObj){
+    try{
+    const userOb = await  User.findById({_id:userID})
+    userOb.research.push(researchObj);
+    const resOb = userOb.save();
+    return resOb;
+}catch(e){
+    console.log(e.message);
 }
 
 }
@@ -112,3 +143,13 @@ async function addWorkshop(userID,WorkshopObj){
 
 
 module.exports = {Adduser,getAllUsers,UpdateUser,deleteUser,loggingUser,getUserDetails,addResearches,addWorkshop}
+=======
+module.exports = {
+  Adduser,
+  getAllUsers,
+  UpdateUser,
+  deleteUser,
+  loggingUser,
+  getUserDetails,
+};
+>>>>>>> file_upload_changes_to_do-saviya

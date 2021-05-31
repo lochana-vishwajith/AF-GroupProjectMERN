@@ -21,6 +21,21 @@ const fileStorageEngine = multer.diskStorage({
 
 const upload = multer({ storage: fileStorageEngine });
 
+<<<<<<< HEAD
+router.post("/addResearchDetails", auth,async (req, res) => {
+  // console.log(req.file);
+  // let fileName = req.file.filename;
+  let research = req.body;
+  console.log(research);
+  const result = await Research.addResearchDetails(research);
+  const uId = req.user._id;
+  const resObj = await User.addResearches(uId,result)
+  res.send(resObj);
+
+
+
+});
+=======
 router.post(
   "/addResearchDetails",
   upload.single("fileName"),
@@ -47,6 +62,7 @@ router.post(
     res.send(result);
   }
 );
+>>>>>>> file_upload_changes_to_do-saviya
 
 router.get("/getResearchDetails", async (req, res) => {
   const result = await Research.getAllResearchDetails();

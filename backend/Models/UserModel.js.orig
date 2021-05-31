@@ -69,11 +69,16 @@ const userSchema = new mongoose.Schema({
   ], //add Research related things
 });
 
+<<<<<<< HEAD
+userSchema.methods.authenticateUser =function () {
+  const jwtToken = JWT.sign({_id:this._id},"WEBTOKEN");
+=======
 userSchema.methods.authenticateUser = function () {
   const jwtToken = JWT.sign(
     { _id: this._id, category: this.category },
     "WEBTOKEN"
   );
+>>>>>>> file_upload_changes_to_do-saviya
   return jwtToken;
 };
 
