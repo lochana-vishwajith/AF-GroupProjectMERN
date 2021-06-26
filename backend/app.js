@@ -51,6 +51,8 @@ app.use("/presentationFolder", express.static("WorkshopPresentationTemplate"));
 //routes for the users
 const users = require("./Routes/UserRoute");
 app.use("/Users", users);
+const userImg = require("./Routes/UserImgs");
+app.use("/uImg",userImg);
 
 //routes for workshop
 const workshops = require("./Routes/Workshop");
