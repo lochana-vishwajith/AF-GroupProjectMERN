@@ -17,6 +17,10 @@ const commiteeMemberDetailsSchema = new Schema({
   memberNotes: {
     type: String,
   },
+  imageUrl: {
+    type: String,
+    required: true,
+  },
 });
 
 const memberDetails = mongoose.model(

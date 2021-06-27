@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Home from "./Components/HomePageComponent/home";
 import HomePageConfig from "./Components/HomePageConfigComponent/homePageConfig";
+import Footer from "./Components/FooterComponent/footer";
+import AddCommiteeMembers from "./Components/AddCommiteeMembers/addCommiteeMembers";
 
 export default class App extends Component {
     render() {
@@ -16,7 +18,9 @@ export default class App extends Component {
                 <Router>
                     <Route exact path = '/' component = {Home}/>
                     <Route exact path = '/homePageConfig' component = {HomePageConfig}/>
+                    <Route exact path = '/addComMembers' component = {AddCommiteeMembers}/>
                 </Router>
+                <Footer/>
             </div>
         )
     }

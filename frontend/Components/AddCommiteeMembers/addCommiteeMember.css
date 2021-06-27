@@ -1,0 +1,11 @@
+nav {
+  background-color: black;
+}
+#memberQualification {
+  border-radius: 0.5em;
+  border: rgb(190, 190, 190) solid 0.2px;
+}
+#memberNotes {
+  border-radius: 0.5em;
+  border: rgb(190, 190, 190) solid 0.2px;
+}
