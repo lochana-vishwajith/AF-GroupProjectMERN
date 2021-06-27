@@ -4,7 +4,7 @@ import "./header.css";
 export default class header extends Component {
   render() {
     return (
-      <div className="header-img">
+      <div>
         <nav className="navbar navbar-expand-lg" id="header">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
@@ -46,6 +46,11 @@ export default class header extends Component {
                 <li className="nav-item">
                   <a className="nav-link" href="#">
                     WorkShops
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/researchAdd">
+                    Research
                   </a>
                 </li>
                 <li className="nav-item">

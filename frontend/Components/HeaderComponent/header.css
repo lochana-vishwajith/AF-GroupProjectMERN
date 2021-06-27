@@ -1,11 +1,5 @@
-.header-img {
-  background-image: url("../../Book-Shelf.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  width: auto;
-  height: 400px;
+nav {
+  background-color: black;
 }
 
 .nav-link {

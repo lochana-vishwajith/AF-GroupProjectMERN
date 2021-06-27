@@ -18,45 +18,19 @@ const fileStorageEngine = multer.diskStorage({
 
 const upload = multer({ storage: fileStorageEngine });
 
-router.post(
-  "/addResearchDetails",
-  upload.single("fileName"),
-  async (req, res) => {
-    // console.log(req.file);
-    let research = req.body;
-    const result = await Research.addResearchDetails(research);
-    res.send(result);
-  }
-);
+router.post("/addResearchDetails/:id", Research.addResearchDetails);
 
-router.get("/getResearchDetails", async (req, res) => {
-  const result = await Research.getAllResearchDetails();
-  res.send(result);
-});
+router.get("/getResearchDetails", Research.getAllResearchDetails);
 
-router.get("/getAcceptedResearches", async (req, res) => {
-  const result = await Research.getAcceptedResearchDetails();
-  res.send(result);
-});
+router.get("/getAcceptedResearches", Research.getAcceptedResearchDetails);
 
-router.get("/getResearch/:id", async (req, res) => {
-  let id = req.params.id;
-  const result = await Research.getResearchById(id);
-  res.send(result);
-});
+router.get("/getResearch/:id", Research.getResearchById);
 
-router.put("/editResearchDetails/:id", async (req, res) => {
-  let id = req.params.id;
-  let data = req.body;
-  const result = await Research.editResearchDetails(id, data);
-  res.send(result);
-});
+router.put("/editResearchDetails/:id", Research.editResearchDetails);
 
-router.delete("/deleteResearchDetail/:id", async (req, res) => {
-  let id = req.params.id;
-  const result = await Research.deleteResearchDetail(id);
-  res.send(`Sucsessfully Deleted' ${result}`);
-});
+router.delete("/deleteResearchDetail/:id", Research.deleteResearchDetail);
+
+router.get("/userResearch/:id", Research.getResearchByUser);
 
 router.post("/uploadResearch", upload.single("pdf"), (req, res) => {
   console.log(req.file);
