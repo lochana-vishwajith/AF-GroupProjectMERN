@@ -9,7 +9,7 @@ const initialState = {
   researchField: "",
   researchYear: "",
   coAuthors: "",
-  fileName: "",
+  fileURL: "",
 };
 
 export default class researchEditComponent extends Component {
@@ -49,7 +49,7 @@ export default class researchEditComponent extends Component {
       researchField: this.state.researchField,
       researchYear: this.state.researchYear,
       coAuthors: this.state.coAuthors,
-      fileName: this.state.fileName,
+      fileURL: this.state.fileURL,
       isAccepted: "false",
     };
 
@@ -115,9 +115,9 @@ export default class researchEditComponent extends Component {
             <TextInput
               type={"file"}
               fieldValue={"Research Paper"}
-              name={"fileName"}
-              value={this.state.fileName}
-              id={"fileName"}
+              name={"fileURL"}
+              value={this.state.fileURL}
+              id={"fileURL"}
               onchange={this.onChange}
               placeholder={"Research Paper"}
             />

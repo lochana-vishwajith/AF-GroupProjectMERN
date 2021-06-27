@@ -9,7 +9,7 @@ const initialState = {
   researchField: "",
   researchYear: "",
   coAuthors: "",
-  fileName: "",
+  fileURL: "",
   dataArray: [],
 };
 

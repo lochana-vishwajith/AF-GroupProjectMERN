@@ -3,13 +3,15 @@ import React, { Component } from "react";
 import TextInput from "../TextInputComponent/textInputComponent";
 import Button from "../ButtonComponent/buttonComponent";
 import axios from "axios";
+import { storage } from "../../firebase/index";
 
 const initialState = {
   researchTitle: "",
   researchField: "",
   researchYear: "",
   coAuthors: "",
-  fileName: "",
+  fileURL: "",
+  researchPaper: "",
 };
 
 export default class researchAddComponent extends Component {
@@ -18,14 +20,50 @@ export default class researchAddComponent extends Component {
     this.state = initialState;
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.handlerChangeFiles = this.handlerChangeFiles.bind(this);
+    this.saveDetails = this.saveDetails.bind(this);
   }
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  onSubmit(e) {
-    e.preventDefault();
+  handlerChangeFiles(e) {
+    if (e.target.files[0]) {
+      this.setState({ [e.target.name]: e.target.files[0] });
+    }
+  }
+
+  saveDetails() {
+    console.log("inside save Details");
+    const { researchPaper } = this.state;
+    const date = Date.now();
+
+    const uploadTask = storage
+      .ref(`researchPapers/${date}_${researchPaper.name}`)
+      .put(researchPaper);
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {},
+      (error) => {
+        console.log(error);
+      },
+      () => {
+        storage
+          .ref("researchPapers")
+          .child(`${date}_${researchPaper.name}`)
+          .getDownloadURL()
+          .then((url) => {
+            console.log(url);
+            this.setState({ fileURL: url });
+            setTimeout(this.onSubmit(), 3000);
+          });
+      }
+    );
+  }
+
+  onSubmit() {
+    // e.preventDefault();
 
     console.log(" inside submit");
 
@@ -34,7 +72,7 @@ export default class researchAddComponent extends Component {
       researchField: this.state.researchField,
       researchYear: this.state.researchYear,
       coAuthors: this.state.coAuthors,
-      fileName: this.state.fileName,
+      fileURL: this.state.fileURL,
       isAccepted: "false",
     };
 
@@ -61,7 +99,7 @@ export default class researchAddComponent extends Component {
         <Header />
         <div className="container">
           <h2 className="mt-5 mb-5">Research Details </h2>
-          <form onSubmit={this.onSubmit}>
+          <form>
             <TextInput
               type={"text"}
               fieldValue={"Research Title"}
@@ -101,17 +139,17 @@ export default class researchAddComponent extends Component {
             <TextInput
               type={"file"}
               fieldValue={"Research Paper"}
-              name={"fileName"}
+              name={"researchPaper"}
               //   value={"value"}
-              id={"fileName"}
-              onchange={this.onChange}
+              id={"researchPaper"}
+              onchange={this.handlerChangeFiles}
               placeholder={"Research Paper"}
             />
             <Button
-              type={"submit"}
+              type={"button"}
               classname={"btn btn-info"}
-              //   onClick={this.onSubmit}
               value={"Add Details"}
+              onsubmit={this.saveDetails}
             />
           </form>
         </div>

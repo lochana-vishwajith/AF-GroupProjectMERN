@@ -11,6 +11,8 @@ import HomePageConfig from "./Components/HomePageConfigComponent/homePageConfig"
 import researchAddComponent from "./Components/ResearchDetailsAddComponent/researchAddComponent";
 import researchRemove from "./Components/ResearchEditComponent/researchRemoveComponent";
 import researchEdit from "./Components/ResearchEditComponent/researchEditComponent";
+import AddCommiteeMembers from "./Components/AddCommiteeMembers/addCommiteeMembers";
+import researchReviewerComponent from "./Components/ResearchReviewerComponent/researchReviewerComponent";
 
 export default class App extends Component {
     render() {
@@ -23,10 +25,10 @@ export default class App extends Component {
                     <Route exact path = '/addComMembers' component = {AddCommiteeMembers}/>
                     <Route exact path = '/researchAdd' component = {researchAddComponent} />
                     <Route exact path = '/researchEdit' component = {researchRemove} />
+                    <Route exact path = '/researchReview' component = {researchReviewerComponent} />
                     <Route exact path = '/:id' component = {researchEdit} />
                     </Switch>
                 </Router>
-                <Footer/>
             </div>
         )
     }

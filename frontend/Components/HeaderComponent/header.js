@@ -54,6 +54,11 @@ export default class header extends Component {
                   </a>
                 </li>
                 <li className="nav-item">
+                  <a className="nav-link" href="/researchReview">
+                    Research Review
+                  </a>
+                </li>
+                <li className="nav-item">
                   <a className="nav-link" href="#">
                     Template Download
                   </a>
