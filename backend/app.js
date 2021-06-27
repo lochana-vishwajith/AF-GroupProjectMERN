@@ -57,6 +57,7 @@ const research = require("./Routes/ResearchRoute");
 app.use("/researchDetails", research);
 
 app.use("/repaper", express.static("FileStorage/ResearchPapers"));
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
