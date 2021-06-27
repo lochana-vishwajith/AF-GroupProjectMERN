@@ -20,11 +20,13 @@ export default class App extends Component {
                     <Switch>
                     <Route exact path = '/' component = {Home}/>
                     <Route exact path = '/homePageConfig' component = {HomePageConfig}/>
+                    <Route exact path = '/addComMembers' component = {AddCommiteeMembers}/>
                     <Route exact path = '/researchAdd' component = {researchAddComponent} />
                     <Route exact path = '/researchEdit' component = {researchRemove} />
                     <Route exact path = '/:id' component = {researchEdit} />
                     </Switch>
                 </Router>
+                <Footer/>
             </div>
         )
     }
