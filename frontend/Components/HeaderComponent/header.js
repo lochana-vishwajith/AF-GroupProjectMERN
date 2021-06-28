@@ -4,7 +4,7 @@ import "./header.css";
 export default class header extends Component {
   render() {
     return (
-      <div className="header-img">
+        <div>
         <nav className="navbar navbar-expand-lg" id="header">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
@@ -39,7 +39,7 @@ export default class header extends Component {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/uRegistration">
                     Registration
                   </a>
                 </li>
@@ -51,6 +51,12 @@ export default class header extends Component {
                 <li className="nav-item">
                   <a className="nav-link" href="#">
                     Template Download
+                  </a>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="/login">
+                    Login
                   </a>
                 </li>
               </ul>

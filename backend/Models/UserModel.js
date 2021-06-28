@@ -11,10 +11,10 @@ const userSchema = new mongoose.Schema({
   },
   email: {//2
     type: String,
-    required: true,
-    match: /.com$/,
-    lowercase: true,
-    unique:true,
+    //required: true,
+    //match: /.com$/,
+    //lowercase: true,
+   // unique:true,
   },
   password: {//3
     type: String,
@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema({
   },
   category: {//6
     type:String,
-    enum: ["Workshop Conductor", "Researcher"],
+    enum: ["WorkshopConductor", "Researcher","Attendee"],
     required: true,
   },
   Date:{
@@ -39,7 +39,6 @@ const userSchema = new mongoose.Schema({
   },
   description: {//7
     type: String,
-    required: true,
   },
   awards: {//8
     type: String,
@@ -47,7 +46,6 @@ const userSchema = new mongoose.Schema({
   profilePic: { //9
     type: String,
   },
-
   workshop: [
     {
       type:WorkshopSchema,
@@ -58,15 +56,16 @@ const userSchema = new mongoose.Schema({
       type:ResearchSchema,
     }
   ], //add Research related things
+  payment:{
+    type:Boolean
+  }
+
 });
 
 userSchema.methods.authenticateUser =function () {
   const jwtToken = JWT.sign({_id:this._id,category:this.category},"WEBTOKEN");
   return jwtToken;
 }
-
-const UserModel = mongoose.model('UserModel',userSchema)
-
-
+const UserModel = mongoose.model('usermodels',userSchema)
 module.exports =UserModel;
 
