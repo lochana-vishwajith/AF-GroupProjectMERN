@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 export default class header extends Component {
   render() {
@@ -7,9 +8,9 @@ export default class header extends Component {
       <div>
         <nav className="navbar navbar-expand-lg" id="header">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <Link className="navbar-brand" to="/">
               logo
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -24,34 +25,34 @@ export default class header extends Component {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="#">
+                  <Link className="nav-link" aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="#">
                     Key Notes
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="/displayComMembers">
                     Committe Members
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="#">
                     Registration
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="#">
                     WorkShops
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="#">
                     Template Download
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

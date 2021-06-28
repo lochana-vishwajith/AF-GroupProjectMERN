@@ -1,0 +1,24 @@
+nav {
+  background-color: black;
+}
+h3 {
+  margin-top: 20px;
+}
+hr {
+  margin-bottom: 30px;
+}
+.comitteeDiv {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+.image {
+  width: 260px;
+  max-width: 260px !important;
+  max-height: 260px !important;
+  border-radius: 27em;
+}
+.innerDiv {
+  border-bottom: darkblue 1px solid;
+}
