@@ -48,6 +48,11 @@ app.use(
 const users = require("./Routes/UserRoute");
 app.use("/Users", users);
 
+
+//Routes for Payment
+const Payment = require('./Payemnt/PaymentRoutes');
+app.use('/payments',Payment);
+
 //routes for workshop
 const workshops = require("./Routes/Workshop");
 app.use("/Workshops", workshops);
