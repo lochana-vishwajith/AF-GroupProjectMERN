@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+nav{
+  background-color: black;
+}
+=======
+>>>>>>> Af/FrontEnd-BasicComponents
+.nav-link {
+  color: aliceblue !important;
+}

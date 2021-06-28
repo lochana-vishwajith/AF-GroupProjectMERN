@@ -2,14 +2,20 @@ const router = require("express").Router();
 const MemberDetails = require("../Models/CommiteeMembersModel");
 
 router.post("/", (req, res) => {
-  const { memberName, memberPosition, memberQualification, memberNotes } =
-    req.body;
+  const {
+    memberName,
+    memberPosition,
+    memberQualification,
+    memberNotes,
+    imageUrl,
+  } = req.body;
 
   const details = new MemberDetails({
     memberName,
     memberPosition,
     memberQualification,
     memberNotes,
+    imageUrl,
   });
 
   details
@@ -48,14 +54,20 @@ router.get("/:id", async (req, res) => {
 router.put("/:id", async (req, res) => {
   let mid = req.params.id;
 
-  const { memberName, memberPosition, memberQualification, memberNotes } =
-    req.body;
+  const {
+    memberName,
+    memberPosition,
+    memberQualification,
+    memberNotes,
+    imageUrl,
+  } = req.body;
 
   const updateDetails = {
     memberName,
     memberPosition,
     memberQualification,
     memberNotes,
+    imageUrl,
   };
 
   await MemberDetails.findByIdAndUpdate(mid, updateDetails)
