@@ -1,9 +1,9 @@
-import Header from "../HeaderComponent/header";
 import React, { Component } from "react";
-import TextInput from "../TextInputComponent/textInputComponent";
 import Button from "../ButtonComponent/buttonComponent";
+import Header from "../HeaderComponent/header";
 import axios from "axios";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 const initialState = {
   researchTitle: "",
@@ -11,47 +11,25 @@ const initialState = {
   researchYear: "",
   coAuthors: "",
   fileURL: "",
+  isApproved: "",
   dataArray: [],
 };
-
-export default class researchRemoveComponent extends Component {
+export default class researchAcceptedComponent extends Component {
   constructor(props) {
     super(props);
     this.state = initialState;
-    this.onRemove = this.onRemove.bind(this);
   }
 
   componentDidMount() {
-    const id = "60d82ca3b881ad7a64ce04f2";
     axios
-      .get(`http://localhost:5000/researchDetails/userResearch/${id}`)
+      .get("http://localhost:5000/researchDetails/getAcceptedResearches")
       .then((response) => {
-        console.log("Response data: ", response.data.data.research);
-        this.setState({ dataArray: response.data.data.research });
+        console.log("Response data: ", response.data.data);
+        this.setState({ dataArray: response.data.data });
       })
       .catch((error) => {
         console.log(error.message);
       });
-  }
-
-  onRemove(id) {
-    console.log(id);
-
-    axios
-      .delete(
-        `http://localhost:5000/researchDetails/deleteResearchDetail/${id}`
-      )
-      .then((response) => {
-        alert("Deleted Successfully!");
-        console.log("Deleted Successfully!");
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  }
-
-  navigateToEditPage(e, researchID) {
-    window.location = `/${researchID}`;
   }
 
   render() {
@@ -61,7 +39,7 @@ export default class researchRemoveComponent extends Component {
         <div className="container">
           <div className="card">
             <h3 className="card-header text-center font-weight-bold text-uppercase py-4">
-              Edit Research Paper Details
+              Accepted Research Papers
             </h3>
 
             <div className="card mb-3 p-3">
@@ -108,30 +86,32 @@ export default class researchRemoveComponent extends Component {
                             >
                               {item.coAuthors}
                             </td>
-                            <td>
-                              <span className="table-remove">
-                                <button
-                                  type="button"
-                                  className="btn btn-primary btn-rounded btn-sm my-0"
-                                  onClick={(e) =>
-                                    this.navigateToEditPage(e, item._id)
-                                  }
-                                >
-                                  Edit
-                                </button>
-                              </span>
+                            <td
+                              className="pt-3-half "
+                              name={"fileURL"}
+                              // onChange={this.onChange}
+                            >
+                              <Link href={item.fileURL}>
+                                <i
+                                  className="fas fa-file-download"
+                                  id="acc-icon"
+                                />
+                              </Link>
                             </td>
                             <td>
-                              <Button
-                                type={"submit"}
-                                classname={
-                                  "btn btn-danger btn-rounded btn-sm my-0"
-                                }
-                                onsubmit={() => {
-                                  this.onRemove(item._id);
-                                }}
-                                value={"Delete"}
-                              />
+                              <span className="table-remove">
+                                {item.isAccepted && (
+                                  <button
+                                    type="button"
+                                    className="btn btn-danger btn-rounded btn-sm my-0"
+                                    onClick={() =>
+                                      this.approveResearch(item._id, true)
+                                    }
+                                  >
+                                    Pay
+                                  </button>
+                                )}
+                              </span>
                             </td>
                           </tr>
                         </tbody>

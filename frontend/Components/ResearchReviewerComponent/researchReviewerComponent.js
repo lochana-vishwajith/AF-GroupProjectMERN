@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "../ButtonComponent/buttonComponent";
 import Header from "../HeaderComponent/header";
 import axios from "axios";
+import moment from "moment";
 
 const initialState = {
   researchTitle: "",
@@ -18,6 +19,7 @@ export default class researchReviewerComponent extends Component {
     super(props);
     this.state = initialState;
     this.approveResearch = this.approveResearch.bind(this);
+    this.onRemove = this.onRemove.bind(this);
   }
 
   componentDidMount() {
@@ -32,7 +34,45 @@ export default class researchReviewerComponent extends Component {
       });
   }
 
-  approveResearch() {}
+  approveResearch(id, data) {
+    console.log(data);
+    const dataSet = {
+      isAccepted: data,
+    };
+
+    console.log("DataSet", dataSet);
+
+    axios
+      .put(
+        `http://localhost:5000/researchDetails/editResearchDetails/${id}`,
+        dataSet
+      )
+      .then((response) => {
+        window.location.reload();
+        alert("Research Approved!!!");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        alert(error.message);
+      });
+  }
+
+  onRemove(id) {
+    console.log(id);
+
+    axios
+      .delete(
+        `http://localhost:5000/researchDetails/deleteResearchDetail/${id}`
+      )
+      .then((response) => {
+        alert("Deleted Successfully!");
+        console.log("Deleted Successfully!");
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }
 
   render() {
     return (
@@ -47,11 +87,6 @@ export default class researchReviewerComponent extends Component {
             <div className="card mb-3 p-3">
               <div className="card-body">
                 <div id="table" className="table-editable">
-                  <span className="table-add float-right mb-3 mr-2">
-                    <a href="#!" className="text-success">
-                      <i className="fas fa-plus fa-2x" aria-hidden="true"></i>
-                    </a>
-                  </span>
                   <table className="table table-bordered table-responsive-md table-striped text-center">
                     <thead>
                       <tr>
@@ -84,7 +119,7 @@ export default class researchReviewerComponent extends Component {
                               name={"researchYear"}
                               onChange={this.onChange}
                             >
-                              {item.researchYear}
+                              {moment(item.researchYear).format("YYYY")}
                             </td>
                             <td
                               className="pt-3-half"
@@ -93,17 +128,41 @@ export default class researchReviewerComponent extends Component {
                             >
                               {item.coAuthors}
                             </td>
+                            <td
+                              className="pt-3-half "
+                              name={"fileURL"}
+                              // onChange={this.onChange}
+                            >
+                              <a href={item.fileURL}>
+                                <i
+                                  className="fas fa-file-download"
+                                  id="acc-icon"
+                                />
+                              </a>
+                            </td>
                             <td>
                               <span className="table-remove">
-                                <button
-                                  type="button"
-                                  className="btn btn-primary btn-rounded btn-sm my-0"
-                                  onClick={(e) =>
-                                    this.approveResearch(item._id)
-                                  }
-                                >
-                                  Approve
-                                </button>
+                                {!item.isAccepted ? (
+                                  <button
+                                    type="button"
+                                    className="btn btn-primary btn-rounded btn-sm my-0"
+                                    onClick={() =>
+                                      this.approveResearch(item._id, true)
+                                    }
+                                  >
+                                    Accept
+                                  </button>
+                                ) : (
+                                  <button
+                                    type="button"
+                                    className="btn btn-success btn-rounded btn-sm my-0"
+                                    onClick={() =>
+                                      this.approveResearch(item._id, false)
+                                    }
+                                  >
+                                    Decline
+                                  </button>
+                                )}
                               </span>
                             </td>
                             <td>

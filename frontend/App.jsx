@@ -13,6 +13,7 @@ import researchRemove from "./Components/ResearchEditComponent/researchRemoveCom
 import researchEdit from "./Components/ResearchEditComponent/researchEditComponent";
 import AddCommiteeMembers from "./Components/AddCommiteeMembers/addCommiteeMembers";
 import researchReviewerComponent from "./Components/ResearchReviewerComponent/researchReviewerComponent";
+import researchAcceptedComponent from "./Components/ResearchAcceptedComponent/researchAcceptedComponent";
 
 export default class App extends Component {
     render() {
@@ -26,6 +27,7 @@ export default class App extends Component {
                     <Route exact path = '/researchAdd' component = {researchAddComponent} />
                     <Route exact path = '/researchEdit' component = {researchRemove} />
                     <Route exact path = '/researchReview' component = {researchReviewerComponent} />
+                    <Route exact path = '/researchAccepted' component = {researchAcceptedComponent} />
                     <Route exact path = '/:id' component = {researchEdit} />
                     </Switch>
                 </Router>
