@@ -3,7 +3,6 @@ import Button from "../ButtonComponent/buttonComponent";
 import Header from "../HeaderComponent/header";
 import axios from "axios";
 import moment from "moment";
-import { Link } from "react-router-dom";
 
 const initialState = {
   researchTitle: "",
@@ -91,12 +90,12 @@ export default class researchAcceptedComponent extends Component {
                               name={"fileURL"}
                               // onChange={this.onChange}
                             >
-                              <Link href={item.fileURL}>
+                              <a href={item.fileURL}>
                                 <i
                                   className="fas fa-file-download"
                                   id="acc-icon"
                                 />
-                              </Link>
+                              </a>
                             </td>
                             <td>
                               <span className="table-remove">

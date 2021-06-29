@@ -14,6 +14,7 @@ import researchEdit from "./Components/ResearchEditComponent/researchEditCompone
 import AddCommiteeMembers from "./Components/AddCommiteeMembers/addCommiteeMembers";
 import researchReviewerComponent from "./Components/ResearchReviewerComponent/researchReviewerComponent";
 import researchAcceptedComponent from "./Components/ResearchAcceptedComponent/researchAcceptedComponent";
+import notificationViewComponent from "./Components/NotificationViewComponent/notificationViewComponent";
 
 export default class App extends Component {
     render() {
@@ -28,6 +29,7 @@ export default class App extends Component {
                     <Route exact path = '/researchEdit' component = {researchRemove} />
                     <Route exact path = '/researchReview' component = {researchReviewerComponent} />
                     <Route exact path = '/researchAccepted' component = {researchAcceptedComponent} />
+                    <Route exact path = '/noti' component = {notificationViewComponent} />
                     <Route exact path = '/:id' component = {researchEdit} />
                     </Switch>
                 </Router>

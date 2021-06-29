@@ -10,6 +10,7 @@ const initialState = {
   researchYear: "",
   coAuthors: "",
   fileURL: "",
+  researchPaper: "",
 };
 
 export default class researchEditComponent extends Component {
@@ -112,7 +113,7 @@ export default class researchEditComponent extends Component {
               onchange={this.onChange}
               placeholder={"Research Author"}
             />
-            <TextInput
+            {/* <TextInput
               type={"file"}
               fieldValue={"Research Paper"}
               name={"fileURL"}
@@ -120,7 +121,7 @@ export default class researchEditComponent extends Component {
               id={"fileURL"}
               onchange={this.onChange}
               placeholder={"Research Paper"}
-            />
+            /> */}
             <Button
               type={"submit"}
               classname={"btn btn-info"}

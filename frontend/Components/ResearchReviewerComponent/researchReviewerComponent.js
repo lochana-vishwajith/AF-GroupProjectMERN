@@ -3,6 +3,7 @@ import Button from "../ButtonComponent/buttonComponent";
 import Header from "../HeaderComponent/header";
 import axios from "axios";
 import moment from "moment";
+import { notificationService } from "../NotificationServiceComponent/notificationService";
 
 const initialState = {
   researchTitle: "",
@@ -50,6 +51,7 @@ export default class researchReviewerComponent extends Component {
       .then((response) => {
         window.location.reload();
         alert("Research Approved!!!");
+        notificationService.sendMessage("Research paper Accepted!!");
       })
       .catch((error) => {
         console.log(error.message);
