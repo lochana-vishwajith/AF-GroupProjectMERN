@@ -34,6 +34,9 @@ app.use("/homePage", homePage);
 const researchTemplate = require("./Routes/ResearchPaperTemplateRoute");
 app.use("/researchTemplate", researchTemplate);
 
+const workshopTemplate = require("./Routes/WorkshopTemplateRoute");
+app.use("/workshopTemplate", workshopTemplate);
+
 app.use("/images", express.static("HomePageImages"));
 app.use("/templateFolder", express.static("ResearchPaperTemplate"));
 app.use(
@@ -54,6 +57,7 @@ const research = require("./Routes/ResearchRoute");
 app.use("/researchDetails", research);
 
 app.use("/repaper", express.static("FileStorage/ResearchPapers"));
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

@@ -1053,7 +1053,7 @@ try {
   var _reactDom = require('react-dom');
   var _App = require('./App');
   var _AppDefault = _parcelHelpers.interopDefault(_App);
-  var _jsxFileName = "C:\\Users\\thima\\Desktop\\AF\\frontend\\index.jsx";
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\index.jsx";
   _reactDom.render(/*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
     __self: undefined,
     __source: {
@@ -26269,9 +26269,29 @@ helpers.prelude(module);
 try {
   var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
   _parcelHelpers.defineInteropFlag(exports);
+  require("bootstrap/dist/css/bootstrap.min.css");
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "C:\\Users\\thima\\Desktop\\AF\\frontend\\App.jsx";
+  var _reactRouterDom = require("react-router-dom");
+  var _ComponentsHomePageComponentHome = require("./Components/HomePageComponent/home");
+  var _ComponentsHomePageComponentHomeDefault = _parcelHelpers.interopDefault(_ComponentsHomePageComponentHome);
+  var _ComponentsHomePageConfigComponentHomePageConfig = require("./Components/HomePageConfigComponent/homePageConfig");
+  var _ComponentsHomePageConfigComponentHomePageConfigDefault = _parcelHelpers.interopDefault(_ComponentsHomePageConfigComponentHomePageConfig);
+  var _ComponentsResearchDetailsAddComponentResearchAddComponent = require("./Components/ResearchDetailsAddComponent/researchAddComponent");
+  var _ComponentsResearchDetailsAddComponentResearchAddComponentDefault = _parcelHelpers.interopDefault(_ComponentsResearchDetailsAddComponentResearchAddComponent);
+  var _ComponentsResearchEditComponentResearchRemoveComponent = require("./Components/ResearchEditComponent/researchRemoveComponent");
+  var _ComponentsResearchEditComponentResearchRemoveComponentDefault = _parcelHelpers.interopDefault(_ComponentsResearchEditComponentResearchRemoveComponent);
+  var _ComponentsResearchEditComponentResearchEditComponent = require("./Components/ResearchEditComponent/researchEditComponent");
+  var _ComponentsResearchEditComponentResearchEditComponentDefault = _parcelHelpers.interopDefault(_ComponentsResearchEditComponentResearchEditComponent);
+  var _ComponentsAddCommiteeMembersAddCommiteeMembers = require("./Components/AddCommiteeMembers/addCommiteeMembers");
+  var _ComponentsAddCommiteeMembersAddCommiteeMembersDefault = _parcelHelpers.interopDefault(_ComponentsAddCommiteeMembersAddCommiteeMembers);
+  var _ComponentsResearchReviewerComponentResearchReviewerComponent = require("./Components/ResearchReviewerComponent/researchReviewerComponent");
+  var _ComponentsResearchReviewerComponentResearchReviewerComponentDefault = _parcelHelpers.interopDefault(_ComponentsResearchReviewerComponentResearchReviewerComponent);
+  var _ComponentsResearchAcceptedComponentResearchAcceptedComponent = require("./Components/ResearchAcceptedComponent/researchAcceptedComponent");
+  var _ComponentsResearchAcceptedComponentResearchAcceptedComponentDefault = _parcelHelpers.interopDefault(_ComponentsResearchAcceptedComponentResearchAcceptedComponent);
+  var _ComponentsNotificationViewComponentNotificationViewComponent = require("./Components/NotificationViewComponent/notificationViewComponent");
+  var _ComponentsNotificationViewComponentNotificationViewComponentDefault = _parcelHelpers.interopDefault(_ComponentsNotificationViewComponentNotificationViewComponent);
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\App.jsx";
   class App extends _react.Component {
     render() {
       return (
@@ -26279,10 +26299,114 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 6,
+            lineNumber: 22,
             columnNumber: 13
           }
-        })
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/",
+          component: _ComponentsHomePageComponentHomeDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/homePageConfig",
+          component: _ComponentsHomePageConfigComponentHomePageConfigDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/addComMembers",
+          component: _ComponentsAddCommiteeMembersAddCommiteeMembersDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/researchAdd",
+          component: _ComponentsResearchDetailsAddComponentResearchAddComponentDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/researchEdit",
+          component: _ComponentsResearchEditComponentResearchRemoveComponentDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/researchReview",
+          component: _ComponentsResearchReviewerComponentResearchReviewerComponentDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/researchAccepted",
+          component: _ComponentsResearchAcceptedComponentResearchAcceptedComponentDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/noti",
+          component: _ComponentsNotificationViewComponentNotificationViewComponentDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/:id",
+          component: _ComponentsResearchEditComponentResearchEditComponentDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33,
+            columnNumber: 21
+          }
+        }))))
       );
     }
   }
@@ -26293,7 +26417,4524 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5gA8y":[function(require,module,exports) {
+},{"bootstrap/dist/css/bootstrap.min.css":"5GTF8","react":"3b2NM","react-router-dom":"1PMSK","./Components/HomePageComponent/home":"4ESIl","./Components/HomePageConfigComponent/homePageConfig":"2xxfo","./Components/ResearchDetailsAddComponent/researchAddComponent":"2pAkI","./Components/ResearchEditComponent/researchRemoveComponent":"2Gi69","./Components/ResearchEditComponent/researchEditComponent":"6iOL6","./Components/AddCommiteeMembers/addCommiteeMembers":"7AyLR","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./Components/ResearchReviewerComponent/researchReviewerComponent":"d53Ty","./Components/ResearchAcceptedComponent/researchAcceptedComponent":"3mRRg","./Components/NotificationViewComponent/notificationViewComponent":"6LiEh"}],"5GTF8":[function() {},{}],"1PMSK":[function(require,module,exports) {
+"use strict";
+if ("development" === "production") {
+  module.exports = require("./cjs/react-router-dom.min.js");
+} else {
+  module.exports = require("./cjs/react-router-dom.js");
+}
+
+},{"./cjs/react-router-dom.js":"GyxyM"}],"GyxyM":[function(require,module,exports) {
+'use strict';
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var reactRouter = require('react-router');
+var React = _interopDefault(require('react'));
+var history = require('history');
+var PropTypes = _interopDefault(require('prop-types'));
+var warning = _interopDefault(require('tiny-warning'));
+var invariant = _interopDefault(require('tiny-invariant'));
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+/**
+ * The public API for a <Router> that uses HTML5 history.
+ */
+
+var BrowserRouter =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(BrowserRouter, _React$Component);
+
+  function BrowserRouter() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+    _this.history = history.createBrowserHistory(_this.props);
+    return _this;
+  }
+
+  var _proto = BrowserRouter.prototype;
+
+  _proto.render = function render() {
+    return React.createElement(reactRouter.Router, {
+      history: this.history,
+      children: this.props.children
+    });
+  };
+
+  return BrowserRouter;
+}(React.Component);
+
+{
+  BrowserRouter.propTypes = {
+    basename: PropTypes.string,
+    children: PropTypes.node,
+    forceRefresh: PropTypes.bool,
+    getUserConfirmation: PropTypes.func,
+    keyLength: PropTypes.number
+  };
+
+  BrowserRouter.prototype.componentDidMount = function () {
+     warning(!this.props.history, "<BrowserRouter> ignores the history prop. To use a custom history, " + "use `import { Router }` instead of `import { BrowserRouter as Router }`.") ;
+  };
+}
+
+/**
+ * The public API for a <Router> that uses window.location.hash.
+ */
+
+var HashRouter =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(HashRouter, _React$Component);
+
+  function HashRouter() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+    _this.history = history.createHashHistory(_this.props);
+    return _this;
+  }
+
+  var _proto = HashRouter.prototype;
+
+  _proto.render = function render() {
+    return React.createElement(reactRouter.Router, {
+      history: this.history,
+      children: this.props.children
+    });
+  };
+
+  return HashRouter;
+}(React.Component);
+
+{
+  HashRouter.propTypes = {
+    basename: PropTypes.string,
+    children: PropTypes.node,
+    getUserConfirmation: PropTypes.func,
+    hashType: PropTypes.oneOf(["hashbang", "noslash", "slash"])
+  };
+
+  HashRouter.prototype.componentDidMount = function () {
+     warning(!this.props.history, "<HashRouter> ignores the history prop. To use a custom history, " + "use `import { Router }` instead of `import { HashRouter as Router }`.") ;
+  };
+}
+
+var resolveToLocation = function resolveToLocation(to, currentLocation) {
+  return typeof to === "function" ? to(currentLocation) : to;
+};
+var normalizeToLocation = function normalizeToLocation(to, currentLocation) {
+  return typeof to === "string" ? history.createLocation(to, null, null, currentLocation) : to;
+};
+
+var forwardRefShim = function forwardRefShim(C) {
+  return C;
+};
+
+var forwardRef = React.forwardRef;
+
+if (typeof forwardRef === "undefined") {
+  forwardRef = forwardRefShim;
+}
+
+function isModifiedEvent(event) {
+  return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
+}
+
+var LinkAnchor = forwardRef(function (_ref, forwardedRef) {
+  var innerRef = _ref.innerRef,
+      navigate = _ref.navigate,
+      _onClick = _ref.onClick,
+      rest = _objectWithoutPropertiesLoose(_ref, ["innerRef", "navigate", "onClick"]);
+
+  var target = rest.target;
+
+  var props = _extends({}, rest, {
+    onClick: function onClick(event) {
+      try {
+        if (_onClick) _onClick(event);
+      } catch (ex) {
+        event.preventDefault();
+        throw ex;
+      }
+
+      if (!event.defaultPrevented && // onClick prevented default
+      event.button === 0 && ( // ignore everything but left clicks
+      !target || target === "_self") && // let browser handle "target=_blank" etc.
+      !isModifiedEvent(event) // ignore clicks with modifier keys
+      ) {
+          event.preventDefault();
+          navigate();
+        }
+    }
+  }); // React 15 compat
+
+
+  if (forwardRefShim !== forwardRef) {
+    props.ref = forwardedRef || innerRef;
+  } else {
+    props.ref = innerRef;
+  }
+  /* eslint-disable-next-line jsx-a11y/anchor-has-content */
+
+
+  return React.createElement("a", props);
+});
+
+{
+  LinkAnchor.displayName = "LinkAnchor";
+}
+/**
+ * The public API for rendering a history-aware <a>.
+ */
+
+
+var Link = forwardRef(function (_ref2, forwardedRef) {
+  var _ref2$component = _ref2.component,
+      component = _ref2$component === void 0 ? LinkAnchor : _ref2$component,
+      replace = _ref2.replace,
+      to = _ref2.to,
+      innerRef = _ref2.innerRef,
+      rest = _objectWithoutPropertiesLoose(_ref2, ["component", "replace", "to", "innerRef"]);
+
+  return React.createElement(reactRouter.__RouterContext.Consumer, null, function (context) {
+    !context ?  invariant(false, "You should not use <Link> outside a <Router>")  : void 0;
+    var history = context.history;
+    var location = normalizeToLocation(resolveToLocation(to, context.location), context.location);
+    var href = location ? history.createHref(location) : "";
+
+    var props = _extends({}, rest, {
+      href: href,
+      navigate: function navigate() {
+        var location = resolveToLocation(to, context.location);
+        var method = replace ? history.replace : history.push;
+        method(location);
+      }
+    }); // React 15 compat
+
+
+    if (forwardRefShim !== forwardRef) {
+      props.ref = forwardedRef || innerRef;
+    } else {
+      props.innerRef = innerRef;
+    }
+
+    return React.createElement(component, props);
+  });
+});
+
+{
+  var toType = PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.func]);
+  var refType = PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.shape({
+    current: PropTypes.any
+  })]);
+  Link.displayName = "Link";
+  Link.propTypes = {
+    innerRef: refType,
+    onClick: PropTypes.func,
+    replace: PropTypes.bool,
+    target: PropTypes.string,
+    to: toType.isRequired
+  };
+}
+
+var forwardRefShim$1 = function forwardRefShim(C) {
+  return C;
+};
+
+var forwardRef$1 = React.forwardRef;
+
+if (typeof forwardRef$1 === "undefined") {
+  forwardRef$1 = forwardRefShim$1;
+}
+
+function joinClassnames() {
+  for (var _len = arguments.length, classnames = new Array(_len), _key = 0; _key < _len; _key++) {
+    classnames[_key] = arguments[_key];
+  }
+
+  return classnames.filter(function (i) {
+    return i;
+  }).join(" ");
+}
+/**
+ * A <Link> wrapper that knows if it's "active" or not.
+ */
+
+
+var NavLink = forwardRef$1(function (_ref, forwardedRef) {
+  var _ref$ariaCurrent = _ref["aria-current"],
+      ariaCurrent = _ref$ariaCurrent === void 0 ? "page" : _ref$ariaCurrent,
+      _ref$activeClassName = _ref.activeClassName,
+      activeClassName = _ref$activeClassName === void 0 ? "active" : _ref$activeClassName,
+      activeStyle = _ref.activeStyle,
+      classNameProp = _ref.className,
+      exact = _ref.exact,
+      isActiveProp = _ref.isActive,
+      locationProp = _ref.location,
+      sensitive = _ref.sensitive,
+      strict = _ref.strict,
+      styleProp = _ref.style,
+      to = _ref.to,
+      innerRef = _ref.innerRef,
+      rest = _objectWithoutPropertiesLoose(_ref, ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"]);
+
+  return React.createElement(reactRouter.__RouterContext.Consumer, null, function (context) {
+    !context ?  invariant(false, "You should not use <NavLink> outside a <Router>")  : void 0;
+    var currentLocation = locationProp || context.location;
+    var toLocation = normalizeToLocation(resolveToLocation(to, currentLocation), currentLocation);
+    var path = toLocation.pathname; // Regex taken from: https://github.com/pillarjs/path-to-regexp/blob/master/index.js#L202
+
+    var escapedPath = path && path.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1");
+    var match = escapedPath ? reactRouter.matchPath(currentLocation.pathname, {
+      path: escapedPath,
+      exact: exact,
+      sensitive: sensitive,
+      strict: strict
+    }) : null;
+    var isActive = !!(isActiveProp ? isActiveProp(match, currentLocation) : match);
+    var className = isActive ? joinClassnames(classNameProp, activeClassName) : classNameProp;
+    var style = isActive ? _extends({}, styleProp, {}, activeStyle) : styleProp;
+
+    var props = _extends({
+      "aria-current": isActive && ariaCurrent || null,
+      className: className,
+      style: style,
+      to: toLocation
+    }, rest); // React 15 compat
+
+
+    if (forwardRefShim$1 !== forwardRef$1) {
+      props.ref = forwardedRef || innerRef;
+    } else {
+      props.innerRef = innerRef;
+    }
+
+    return React.createElement(Link, props);
+  });
+});
+
+{
+  NavLink.displayName = "NavLink";
+  var ariaCurrentType = PropTypes.oneOf(["page", "step", "location", "date", "time", "true"]);
+  NavLink.propTypes = _extends({}, Link.propTypes, {
+    "aria-current": ariaCurrentType,
+    activeClassName: PropTypes.string,
+    activeStyle: PropTypes.object,
+    className: PropTypes.string,
+    exact: PropTypes.bool,
+    isActive: PropTypes.func,
+    location: PropTypes.object,
+    sensitive: PropTypes.bool,
+    strict: PropTypes.bool,
+    style: PropTypes.object
+  });
+}
+
+Object.defineProperty(exports, 'MemoryRouter', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.MemoryRouter;
+  }
+});
+Object.defineProperty(exports, 'Prompt', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.Prompt;
+  }
+});
+Object.defineProperty(exports, 'Redirect', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.Redirect;
+  }
+});
+Object.defineProperty(exports, 'Route', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.Route;
+  }
+});
+Object.defineProperty(exports, 'Router', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.Router;
+  }
+});
+Object.defineProperty(exports, 'StaticRouter', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.StaticRouter;
+  }
+});
+Object.defineProperty(exports, 'Switch', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.Switch;
+  }
+});
+Object.defineProperty(exports, 'generatePath', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.generatePath;
+  }
+});
+Object.defineProperty(exports, 'matchPath', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.matchPath;
+  }
+});
+Object.defineProperty(exports, 'useHistory', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.useHistory;
+  }
+});
+Object.defineProperty(exports, 'useLocation', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.useLocation;
+  }
+});
+Object.defineProperty(exports, 'useParams', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.useParams;
+  }
+});
+Object.defineProperty(exports, 'useRouteMatch', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.useRouteMatch;
+  }
+});
+Object.defineProperty(exports, 'withRouter', {
+  enumerable: true,
+  get: function () {
+    return reactRouter.withRouter;
+  }
+});
+exports.BrowserRouter = BrowserRouter;
+exports.HashRouter = HashRouter;
+exports.Link = Link;
+exports.NavLink = NavLink;
+
+},{"react-router":"3v97x","react":"3b2NM","history":"RV0qD","prop-types":"4dfy5","tiny-warning":"3B527","tiny-invariant":"4v3Kg"}],"3v97x":[function(require,module,exports) {
+"use strict";
+if ("development" === "production") {
+  module.exports = require("./cjs/react-router.min.js");
+} else {
+  module.exports = require("./cjs/react-router.js");
+}
+
+},{"./cjs/react-router.js":"6hyRN"}],"6hyRN":[function(require,module,exports) {
+'use strict';
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = _interopDefault(require('react'));
+var PropTypes = _interopDefault(require('prop-types'));
+var history = require('history');
+var warning = _interopDefault(require('tiny-warning'));
+var createContext = _interopDefault(require('mini-create-react-context'));
+var invariant = _interopDefault(require('tiny-invariant'));
+var pathToRegexp = _interopDefault(require('path-to-regexp'));
+var reactIs = require('react-is');
+var hoistStatics = _interopDefault(require('hoist-non-react-statics'));
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+// TODO: Replace with React.createContext once we can assume React 16+
+
+var createNamedContext = function createNamedContext(name) {
+  var context = createContext();
+  context.displayName = name;
+  return context;
+};
+
+var historyContext =
+/*#__PURE__*/
+createNamedContext("Router-History");
+
+// TODO: Replace with React.createContext once we can assume React 16+
+
+var createNamedContext$1 = function createNamedContext(name) {
+  var context = createContext();
+  context.displayName = name;
+  return context;
+};
+
+var context =
+/*#__PURE__*/
+createNamedContext$1("Router");
+
+/**
+ * The public API for putting history on context.
+ */
+
+var Router =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(Router, _React$Component);
+
+  Router.computeRootMatch = function computeRootMatch(pathname) {
+    return {
+      path: "/",
+      url: "/",
+      params: {},
+      isExact: pathname === "/"
+    };
+  };
+
+  function Router(props) {
+    var _this;
+
+    _this = _React$Component.call(this, props) || this;
+    _this.state = {
+      location: props.history.location
+    }; // This is a bit of a hack. We have to start listening for location
+    // changes here in the constructor in case there are any <Redirect>s
+    // on the initial render. If there are, they will replace/push when
+    // they mount and since cDM fires in children before parents, we may
+    // get a new location before the <Router> is mounted.
+
+    _this._isMounted = false;
+    _this._pendingLocation = null;
+
+    if (!props.staticContext) {
+      _this.unlisten = props.history.listen(function (location) {
+        if (_this._isMounted) {
+          _this.setState({
+            location: location
+          });
+        } else {
+          _this._pendingLocation = location;
+        }
+      });
+    }
+
+    return _this;
+  }
+
+  var _proto = Router.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    this._isMounted = true;
+
+    if (this._pendingLocation) {
+      this.setState({
+        location: this._pendingLocation
+      });
+    }
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    if (this.unlisten) this.unlisten();
+  };
+
+  _proto.render = function render() {
+    return React.createElement(context.Provider, {
+      value: {
+        history: this.props.history,
+        location: this.state.location,
+        match: Router.computeRootMatch(this.state.location.pathname),
+        staticContext: this.props.staticContext
+      }
+    }, React.createElement(historyContext.Provider, {
+      children: this.props.children || null,
+      value: this.props.history
+    }));
+  };
+
+  return Router;
+}(React.Component);
+
+{
+  Router.propTypes = {
+    children: PropTypes.node,
+    history: PropTypes.object.isRequired,
+    staticContext: PropTypes.object
+  };
+
+  Router.prototype.componentDidUpdate = function (prevProps) {
+     warning(prevProps.history === this.props.history, "You cannot change <Router history>") ;
+  };
+}
+
+/**
+ * The public API for a <Router> that stores location in memory.
+ */
+
+var MemoryRouter =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(MemoryRouter, _React$Component);
+
+  function MemoryRouter() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+    _this.history = history.createMemoryHistory(_this.props);
+    return _this;
+  }
+
+  var _proto = MemoryRouter.prototype;
+
+  _proto.render = function render() {
+    return React.createElement(Router, {
+      history: this.history,
+      children: this.props.children
+    });
+  };
+
+  return MemoryRouter;
+}(React.Component);
+
+{
+  MemoryRouter.propTypes = {
+    initialEntries: PropTypes.array,
+    initialIndex: PropTypes.number,
+    getUserConfirmation: PropTypes.func,
+    keyLength: PropTypes.number,
+    children: PropTypes.node
+  };
+
+  MemoryRouter.prototype.componentDidMount = function () {
+     warning(!this.props.history, "<MemoryRouter> ignores the history prop. To use a custom history, " + "use `import { Router }` instead of `import { MemoryRouter as Router }`.") ;
+  };
+}
+
+var Lifecycle =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(Lifecycle, _React$Component);
+
+  function Lifecycle() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Lifecycle.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    if (this.props.onMount) this.props.onMount.call(this, this);
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    if (this.props.onUpdate) this.props.onUpdate.call(this, this, prevProps);
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    if (this.props.onUnmount) this.props.onUnmount.call(this, this);
+  };
+
+  _proto.render = function render() {
+    return null;
+  };
+
+  return Lifecycle;
+}(React.Component);
+
+/**
+ * The public API for prompting the user before navigating away from a screen.
+ */
+
+function Prompt(_ref) {
+  var message = _ref.message,
+      _ref$when = _ref.when,
+      when = _ref$when === void 0 ? true : _ref$when;
+  return React.createElement(context.Consumer, null, function (context) {
+    !context ?  invariant(false, "You should not use <Prompt> outside a <Router>")  : void 0;
+    if (!when || context.staticContext) return null;
+    var method = context.history.block;
+    return React.createElement(Lifecycle, {
+      onMount: function onMount(self) {
+        self.release = method(message);
+      },
+      onUpdate: function onUpdate(self, prevProps) {
+        if (prevProps.message !== message) {
+          self.release();
+          self.release = method(message);
+        }
+      },
+      onUnmount: function onUnmount(self) {
+        self.release();
+      },
+      message: message
+    });
+  });
+}
+
+{
+  var messageType = PropTypes.oneOfType([PropTypes.func, PropTypes.string]);
+  Prompt.propTypes = {
+    when: PropTypes.bool,
+    message: messageType.isRequired
+  };
+}
+
+var cache = {};
+var cacheLimit = 10000;
+var cacheCount = 0;
+
+function compilePath(path) {
+  if (cache[path]) return cache[path];
+  var generator = pathToRegexp.compile(path);
+
+  if (cacheCount < cacheLimit) {
+    cache[path] = generator;
+    cacheCount++;
+  }
+
+  return generator;
+}
+/**
+ * Public API for generating a URL pathname from a path and parameters.
+ */
+
+
+function generatePath(path, params) {
+  if (path === void 0) {
+    path = "/";
+  }
+
+  if (params === void 0) {
+    params = {};
+  }
+
+  return path === "/" ? path : compilePath(path)(params, {
+    pretty: true
+  });
+}
+
+/**
+ * The public API for navigating programmatically with a component.
+ */
+
+function Redirect(_ref) {
+  var computedMatch = _ref.computedMatch,
+      to = _ref.to,
+      _ref$push = _ref.push,
+      push = _ref$push === void 0 ? false : _ref$push;
+  return React.createElement(context.Consumer, null, function (context) {
+    !context ?  invariant(false, "You should not use <Redirect> outside a <Router>")  : void 0;
+    var history$1 = context.history,
+        staticContext = context.staticContext;
+    var method = push ? history$1.push : history$1.replace;
+    var location = history.createLocation(computedMatch ? typeof to === "string" ? generatePath(to, computedMatch.params) : _extends({}, to, {
+      pathname: generatePath(to.pathname, computedMatch.params)
+    }) : to); // When rendering in a static context,
+    // set the new location immediately.
+
+    if (staticContext) {
+      method(location);
+      return null;
+    }
+
+    return React.createElement(Lifecycle, {
+      onMount: function onMount() {
+        method(location);
+      },
+      onUpdate: function onUpdate(self, prevProps) {
+        var prevLocation = history.createLocation(prevProps.to);
+
+        if (!history.locationsAreEqual(prevLocation, _extends({}, location, {
+          key: prevLocation.key
+        }))) {
+          method(location);
+        }
+      },
+      to: to
+    });
+  });
+}
+
+{
+  Redirect.propTypes = {
+    push: PropTypes.bool,
+    from: PropTypes.string,
+    to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired
+  };
+}
+
+var cache$1 = {};
+var cacheLimit$1 = 10000;
+var cacheCount$1 = 0;
+
+function compilePath$1(path, options) {
+  var cacheKey = "" + options.end + options.strict + options.sensitive;
+  var pathCache = cache$1[cacheKey] || (cache$1[cacheKey] = {});
+  if (pathCache[path]) return pathCache[path];
+  var keys = [];
+  var regexp = pathToRegexp(path, keys, options);
+  var result = {
+    regexp: regexp,
+    keys: keys
+  };
+
+  if (cacheCount$1 < cacheLimit$1) {
+    pathCache[path] = result;
+    cacheCount$1++;
+  }
+
+  return result;
+}
+/**
+ * Public API for matching a URL pathname to a path.
+ */
+
+
+function matchPath(pathname, options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  if (typeof options === "string" || Array.isArray(options)) {
+    options = {
+      path: options
+    };
+  }
+
+  var _options = options,
+      path = _options.path,
+      _options$exact = _options.exact,
+      exact = _options$exact === void 0 ? false : _options$exact,
+      _options$strict = _options.strict,
+      strict = _options$strict === void 0 ? false : _options$strict,
+      _options$sensitive = _options.sensitive,
+      sensitive = _options$sensitive === void 0 ? false : _options$sensitive;
+  var paths = [].concat(path);
+  return paths.reduce(function (matched, path) {
+    if (!path && path !== "") return null;
+    if (matched) return matched;
+
+    var _compilePath = compilePath$1(path, {
+      end: exact,
+      strict: strict,
+      sensitive: sensitive
+    }),
+        regexp = _compilePath.regexp,
+        keys = _compilePath.keys;
+
+    var match = regexp.exec(pathname);
+    if (!match) return null;
+    var url = match[0],
+        values = match.slice(1);
+    var isExact = pathname === url;
+    if (exact && !isExact) return null;
+    return {
+      path: path,
+      // the path used to match
+      url: path === "/" && url === "" ? "/" : url,
+      // the matched portion of the URL
+      isExact: isExact,
+      // whether or not we matched exactly
+      params: keys.reduce(function (memo, key, index) {
+        memo[key.name] = values[index];
+        return memo;
+      }, {})
+    };
+  }, null);
+}
+
+function isEmptyChildren(children) {
+  return React.Children.count(children) === 0;
+}
+
+function evalChildrenDev(children, props, path) {
+  var value = children(props);
+   warning(value !== undefined, "You returned `undefined` from the `children` function of " + ("<Route" + (path ? " path=\"" + path + "\"" : "") + ">, but you ") + "should have returned a React element or `null`") ;
+  return value || null;
+}
+/**
+ * The public API for matching a single path and rendering.
+ */
+
+
+var Route =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(Route, _React$Component);
+
+  function Route() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Route.prototype;
+
+  _proto.render = function render() {
+    var _this = this;
+
+    return React.createElement(context.Consumer, null, function (context$1) {
+      !context$1 ?  invariant(false, "You should not use <Route> outside a <Router>")  : void 0;
+      var location = _this.props.location || context$1.location;
+      var match = _this.props.computedMatch ? _this.props.computedMatch // <Switch> already computed the match for us
+      : _this.props.path ? matchPath(location.pathname, _this.props) : context$1.match;
+
+      var props = _extends({}, context$1, {
+        location: location,
+        match: match
+      });
+
+      var _this$props = _this.props,
+          children = _this$props.children,
+          component = _this$props.component,
+          render = _this$props.render; // Preact uses an empty array as children by
+      // default, so use null if that's the case.
+
+      if (Array.isArray(children) && children.length === 0) {
+        children = null;
+      }
+
+      return React.createElement(context.Provider, {
+        value: props
+      }, props.match ? children ? typeof children === "function" ?  evalChildrenDev(children, props, _this.props.path)  : children : component ? React.createElement(component, props) : render ? render(props) : null : typeof children === "function" ?  evalChildrenDev(children, props, _this.props.path)  : null);
+    });
+  };
+
+  return Route;
+}(React.Component);
+
+{
+  Route.propTypes = {
+    children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
+    component: function component(props, propName) {
+      if (props[propName] && !reactIs.isValidElementType(props[propName])) {
+        return new Error("Invalid prop 'component' supplied to 'Route': the prop is not a valid React component");
+      }
+    },
+    exact: PropTypes.bool,
+    location: PropTypes.object,
+    path: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+    render: PropTypes.func,
+    sensitive: PropTypes.bool,
+    strict: PropTypes.bool
+  };
+
+  Route.prototype.componentDidMount = function () {
+     warning(!(this.props.children && !isEmptyChildren(this.props.children) && this.props.component), "You should not use <Route component> and <Route children> in the same route; <Route component> will be ignored") ;
+     warning(!(this.props.children && !isEmptyChildren(this.props.children) && this.props.render), "You should not use <Route render> and <Route children> in the same route; <Route render> will be ignored") ;
+     warning(!(this.props.component && this.props.render), "You should not use <Route component> and <Route render> in the same route; <Route render> will be ignored") ;
+  };
+
+  Route.prototype.componentDidUpdate = function (prevProps) {
+     warning(!(this.props.location && !prevProps.location), '<Route> elements should not change from uncontrolled to controlled (or vice versa). You initially used no "location" prop and then provided one on a subsequent render.') ;
+     warning(!(!this.props.location && prevProps.location), '<Route> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.') ;
+  };
+}
+
+function addLeadingSlash(path) {
+  return path.charAt(0) === "/" ? path : "/" + path;
+}
+
+function addBasename(basename, location) {
+  if (!basename) return location;
+  return _extends({}, location, {
+    pathname: addLeadingSlash(basename) + location.pathname
+  });
+}
+
+function stripBasename(basename, location) {
+  if (!basename) return location;
+  var base = addLeadingSlash(basename);
+  if (location.pathname.indexOf(base) !== 0) return location;
+  return _extends({}, location, {
+    pathname: location.pathname.substr(base.length)
+  });
+}
+
+function createURL(location) {
+  return typeof location === "string" ? location : history.createPath(location);
+}
+
+function staticHandler(methodName) {
+  return function () {
+      invariant(false, "You cannot %s with <StaticRouter>", methodName)  ;
+  };
+}
+
+function noop() {}
+/**
+ * The public top-level API for a "static" <Router>, so-called because it
+ * can't actually change the current location. Instead, it just records
+ * location changes in a context object. Useful mainly in testing and
+ * server-rendering scenarios.
+ */
+
+
+var StaticRouter =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(StaticRouter, _React$Component);
+
+  function StaticRouter() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.handlePush = function (location) {
+      return _this.navigateTo(location, "PUSH");
+    };
+
+    _this.handleReplace = function (location) {
+      return _this.navigateTo(location, "REPLACE");
+    };
+
+    _this.handleListen = function () {
+      return noop;
+    };
+
+    _this.handleBlock = function () {
+      return noop;
+    };
+
+    return _this;
+  }
+
+  var _proto = StaticRouter.prototype;
+
+  _proto.navigateTo = function navigateTo(location, action) {
+    var _this$props = this.props,
+        _this$props$basename = _this$props.basename,
+        basename = _this$props$basename === void 0 ? "" : _this$props$basename,
+        _this$props$context = _this$props.context,
+        context = _this$props$context === void 0 ? {} : _this$props$context;
+    context.action = action;
+    context.location = addBasename(basename, history.createLocation(location));
+    context.url = createURL(context.location);
+  };
+
+  _proto.render = function render() {
+    var _this$props2 = this.props,
+        _this$props2$basename = _this$props2.basename,
+        basename = _this$props2$basename === void 0 ? "" : _this$props2$basename,
+        _this$props2$context = _this$props2.context,
+        context = _this$props2$context === void 0 ? {} : _this$props2$context,
+        _this$props2$location = _this$props2.location,
+        location = _this$props2$location === void 0 ? "/" : _this$props2$location,
+        rest = _objectWithoutPropertiesLoose(_this$props2, ["basename", "context", "location"]);
+
+    var history$1 = {
+      createHref: function createHref(path) {
+        return addLeadingSlash(basename + createURL(path));
+      },
+      action: "POP",
+      location: stripBasename(basename, history.createLocation(location)),
+      push: this.handlePush,
+      replace: this.handleReplace,
+      go: staticHandler("go"),
+      goBack: staticHandler("goBack"),
+      goForward: staticHandler("goForward"),
+      listen: this.handleListen,
+      block: this.handleBlock
+    };
+    return React.createElement(Router, _extends({}, rest, {
+      history: history$1,
+      staticContext: context
+    }));
+  };
+
+  return StaticRouter;
+}(React.Component);
+
+{
+  StaticRouter.propTypes = {
+    basename: PropTypes.string,
+    context: PropTypes.object,
+    location: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+  };
+
+  StaticRouter.prototype.componentDidMount = function () {
+     warning(!this.props.history, "<StaticRouter> ignores the history prop. To use a custom history, " + "use `import { Router }` instead of `import { StaticRouter as Router }`.") ;
+  };
+}
+
+/**
+ * The public API for rendering the first <Route> that matches.
+ */
+
+var Switch =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(Switch, _React$Component);
+
+  function Switch() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Switch.prototype;
+
+  _proto.render = function render() {
+    var _this = this;
+
+    return React.createElement(context.Consumer, null, function (context) {
+      !context ?  invariant(false, "You should not use <Switch> outside a <Router>")  : void 0;
+      var location = _this.props.location || context.location;
+      var element, match; // We use React.Children.forEach instead of React.Children.toArray().find()
+      // here because toArray adds keys to all child elements and we do not want
+      // to trigger an unmount/remount for two <Route>s that render the same
+      // component at different URLs.
+
+      React.Children.forEach(_this.props.children, function (child) {
+        if (match == null && React.isValidElement(child)) {
+          element = child;
+          var path = child.props.path || child.props.from;
+          match = path ? matchPath(location.pathname, _extends({}, child.props, {
+            path: path
+          })) : context.match;
+        }
+      });
+      return match ? React.cloneElement(element, {
+        location: location,
+        computedMatch: match
+      }) : null;
+    });
+  };
+
+  return Switch;
+}(React.Component);
+
+{
+  Switch.propTypes = {
+    children: PropTypes.node,
+    location: PropTypes.object
+  };
+
+  Switch.prototype.componentDidUpdate = function (prevProps) {
+     warning(!(this.props.location && !prevProps.location), '<Switch> elements should not change from uncontrolled to controlled (or vice versa). You initially used no "location" prop and then provided one on a subsequent render.') ;
+     warning(!(!this.props.location && prevProps.location), '<Switch> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.') ;
+  };
+}
+
+/**
+ * A public higher-order component to access the imperative API
+ */
+
+function withRouter(Component) {
+  var displayName = "withRouter(" + (Component.displayName || Component.name) + ")";
+
+  var C = function C(props) {
+    var wrappedComponentRef = props.wrappedComponentRef,
+        remainingProps = _objectWithoutPropertiesLoose(props, ["wrappedComponentRef"]);
+
+    return React.createElement(context.Consumer, null, function (context) {
+      !context ?  invariant(false, "You should not use <" + displayName + " /> outside a <Router>")  : void 0;
+      return React.createElement(Component, _extends({}, remainingProps, context, {
+        ref: wrappedComponentRef
+      }));
+    });
+  };
+
+  C.displayName = displayName;
+  C.WrappedComponent = Component;
+
+  {
+    C.propTypes = {
+      wrappedComponentRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func, PropTypes.object])
+    };
+  }
+
+  return hoistStatics(C, Component);
+}
+
+var useContext = React.useContext;
+function useHistory() {
+  {
+    !(typeof useContext === "function") ?  invariant(false, "You must use React >= 16.8 in order to use useHistory()")  : void 0;
+  }
+
+  return useContext(historyContext);
+}
+function useLocation() {
+  {
+    !(typeof useContext === "function") ?  invariant(false, "You must use React >= 16.8 in order to use useLocation()")  : void 0;
+  }
+
+  return useContext(context).location;
+}
+function useParams() {
+  {
+    !(typeof useContext === "function") ?  invariant(false, "You must use React >= 16.8 in order to use useParams()")  : void 0;
+  }
+
+  var match = useContext(context).match;
+  return match ? match.params : {};
+}
+function useRouteMatch(path) {
+  {
+    !(typeof useContext === "function") ?  invariant(false, "You must use React >= 16.8 in order to use useRouteMatch()")  : void 0;
+  }
+
+  var location = useLocation();
+  var match = useContext(context).match;
+  return path ? matchPath(location.pathname, path) : match;
+}
+
+{
+  if (typeof window !== "undefined") {
+    var global = window;
+    var key = "__react_router_build__";
+    var buildNames = {
+      cjs: "CommonJS",
+      esm: "ES modules",
+      umd: "UMD"
+    };
+
+    if (global[key] && global[key] !== "cjs") {
+      var initialBuildName = buildNames[global[key]];
+      var secondaryBuildName = buildNames["cjs"]; // TODO: Add link to article that explains in detail how to avoid
+      // loading 2 different builds.
+
+      throw new Error("You are loading the " + secondaryBuildName + " build of React Router " + ("on a page that is already running the " + initialBuildName + " ") + "build, so things won't work right.");
+    }
+
+    global[key] = "cjs";
+  }
+}
+
+exports.MemoryRouter = MemoryRouter;
+exports.Prompt = Prompt;
+exports.Redirect = Redirect;
+exports.Route = Route;
+exports.Router = Router;
+exports.StaticRouter = StaticRouter;
+exports.Switch = Switch;
+exports.__HistoryContext = historyContext;
+exports.__RouterContext = context;
+exports.generatePath = generatePath;
+exports.matchPath = matchPath;
+exports.useHistory = useHistory;
+exports.useLocation = useLocation;
+exports.useParams = useParams;
+exports.useRouteMatch = useRouteMatch;
+exports.withRouter = withRouter;
+
+},{"react":"3b2NM","prop-types":"4dfy5","history":"RV0qD","tiny-warning":"3B527","mini-create-react-context":"g8cqP","tiny-invariant":"4v3Kg","path-to-regexp":"2JudW","react-is":"68QIU","hoist-non-react-statics":"3nUHV"}],"4dfy5":[function(require,module,exports) {
+/**
+* Copyright (c) 2013-present, Facebook, Inc.
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree.
+*/
+if ("development" !== 'production') {
+  var ReactIs = require('react-is');
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = require('./factoryWithTypeCheckers')(ReactIs.isElement, throwOnDirectAccess);
+} else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = require('./factoryWithThrowingShims')();
+}
+
+},{"react-is":"68QIU","./factoryWithTypeCheckers":"1PVBO"}],"68QIU":[function(require,module,exports) {
+"use strict";
+if ("development" === 'production') {
+  module.exports = require('./cjs/react-is.production.min.js');
+} else {
+  module.exports = require('./cjs/react-is.development.js');
+}
+
+},{"./cjs/react-is.development.js":"2onCQ"}],"2onCQ":[function(require,module,exports) {
+/** @license React v16.13.1
+* react-is.development.js
+*
+* Copyright (c) Facebook, Inc. and its affiliates.
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree.
+*/
+"use strict";
+if ("development" !== "production") {
+  (function () {
+    "use strict";
+    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    // nor polyfill, then a plain number is used for performance.
+    var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
+    // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    // (unstable) APIs that have been removed. Can we remove the symbols?
+    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
+    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
+    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
+    function isValidElementType(type) {
+      return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+      type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+    }
+    function typeOf(object) {
+      if (typeof object === 'object' && object !== null) {
+        var $$typeof = object.$$typeof;
+        switch ($$typeof) {
+          case REACT_ELEMENT_TYPE:
+            var type = object.type;
+            switch (type) {
+              case REACT_ASYNC_MODE_TYPE:
+              case REACT_CONCURRENT_MODE_TYPE:
+              case REACT_FRAGMENT_TYPE:
+              case REACT_PROFILER_TYPE:
+              case REACT_STRICT_MODE_TYPE:
+              case REACT_SUSPENSE_TYPE:
+                return type;
+              default:
+                var $$typeofType = type && type.$$typeof;
+                switch ($$typeofType) {
+                  case REACT_CONTEXT_TYPE:
+                  case REACT_FORWARD_REF_TYPE:
+                  case REACT_LAZY_TYPE:
+                  case REACT_MEMO_TYPE:
+                  case REACT_PROVIDER_TYPE:
+                    return $$typeofType;
+                  default:
+                    return $$typeof;
+                }
+            }
+          case REACT_PORTAL_TYPE:
+            return $$typeof;
+        }
+      }
+      return undefined;
+    }
+    // AsyncMode is deprecated along with isAsyncMode
+    var AsyncMode = REACT_ASYNC_MODE_TYPE;
+    var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+    var ContextConsumer = REACT_CONTEXT_TYPE;
+    var ContextProvider = REACT_PROVIDER_TYPE;
+    var Element = REACT_ELEMENT_TYPE;
+    var ForwardRef = REACT_FORWARD_REF_TYPE;
+    var Fragment = REACT_FRAGMENT_TYPE;
+    var Lazy = REACT_LAZY_TYPE;
+    var Memo = REACT_MEMO_TYPE;
+    var Portal = REACT_PORTAL_TYPE;
+    var Profiler = REACT_PROFILER_TYPE;
+    var StrictMode = REACT_STRICT_MODE_TYPE;
+    var Suspense = REACT_SUSPENSE_TYPE;
+    var hasWarnedAboutDeprecatedIsAsyncMode = false;
+    // AsyncMode should be deprecated
+    function isAsyncMode(object) {
+      {
+        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+          hasWarnedAboutDeprecatedIsAsyncMode = true;
+          // Using console['warn'] to evade Babel and ESLint
+          console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+        }
+      }
+      return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+    }
+    function isConcurrentMode(object) {
+      return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+    }
+    function isContextConsumer(object) {
+      return typeOf(object) === REACT_CONTEXT_TYPE;
+    }
+    function isContextProvider(object) {
+      return typeOf(object) === REACT_PROVIDER_TYPE;
+    }
+    function isElement(object) {
+      return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+    function isForwardRef(object) {
+      return typeOf(object) === REACT_FORWARD_REF_TYPE;
+    }
+    function isFragment(object) {
+      return typeOf(object) === REACT_FRAGMENT_TYPE;
+    }
+    function isLazy(object) {
+      return typeOf(object) === REACT_LAZY_TYPE;
+    }
+    function isMemo(object) {
+      return typeOf(object) === REACT_MEMO_TYPE;
+    }
+    function isPortal(object) {
+      return typeOf(object) === REACT_PORTAL_TYPE;
+    }
+    function isProfiler(object) {
+      return typeOf(object) === REACT_PROFILER_TYPE;
+    }
+    function isStrictMode(object) {
+      return typeOf(object) === REACT_STRICT_MODE_TYPE;
+    }
+    function isSuspense(object) {
+      return typeOf(object) === REACT_SUSPENSE_TYPE;
+    }
+    exports.AsyncMode = AsyncMode;
+    exports.ConcurrentMode = ConcurrentMode;
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
+  })();
+}
+
+},{}],"1PVBO":[function(require,module,exports) {
+/**
+* Copyright (c) 2013-present, Facebook, Inc.
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree.
+*/
+"use strict";
+var ReactIs = require('react-is');
+var assign = require('object-assign');
+var ReactPropTypesSecret = require('./lib/ReactPropTypesSecret');
+var checkPropTypes = require('./checkPropTypes');
+var has = Function.call.bind(Object.prototype.hasOwnProperty);
+var printWarning = function () {};
+if ("development" !== 'production') {
+  printWarning = function (text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+function emptyFunctionThatReturnsNull() {
+  return null;
+}
+module.exports = function (isValidElement, throwOnDirectAccess) {
+  /*global Symbol*/
+  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
+  var FAUX_ITERATOR_SYMBOL = '@@iterator';
+  // Before Symbol spec.
+  /**
+  * Returns the iterator method function contained on the iterable object.
+  *
+  * Be sure to invoke the function with the iterable as context:
+  *
+  *     var iteratorFn = getIteratorFn(myIterable);
+  *     if (iteratorFn) {
+  *       var iterator = iteratorFn.call(myIterable);
+  *       ...
+  *     }
+  *
+  * @param {?object} maybeIterable
+  * @return {?function}
+  */
+  function getIteratorFn(maybeIterable) {
+    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+    if (typeof iteratorFn === 'function') {
+      return iteratorFn;
+    }
+  }
+  /**
+  * Collection of methods that allow declaration and validation of props that are
+  * supplied to React components. Example usage:
+  *
+  *   var Props = require('ReactPropTypes');
+  *   var MyArticle = React.createClass({
+  *     propTypes: {
+  *       // An optional string prop named "description".
+  *       description: Props.string,
+  *
+  *       // A required enum prop named "category".
+  *       category: Props.oneOf(['News','Photos']).isRequired,
+  *
+  *       // A prop named "dialog" that requires an instance of Dialog.
+  *       dialog: Props.instanceOf(Dialog).isRequired
+  *     },
+  *     render: function() { ... }
+  *   });
+  *
+  * A more formal specification of how these methods are used:
+  *
+  *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+  *   decl := ReactPropTypes.{type}(.isRequired)?
+  *
+  * Each and every declaration produces a function with the same signature. This
+  * allows the creation of custom validation functions. For example:
+  *
+  *  var MyLink = React.createClass({
+  *    propTypes: {
+  *      // An optional string or URI prop named "href".
+  *      href: function(props, propName, componentName) {
+  *        var propValue = props[propName];
+  *        if (propValue != null && typeof propValue !== 'string' &&
+  *            !(propValue instanceof URI)) {
+  *          return new Error(
+  *            'Expected a string or an URI for ' + propName + ' in ' +
+  *            componentName
+  *          );
+  *        }
+  *      }
+  *    },
+  *    render: function() {...}
+  *  });
+  *
+  * @internal
+  */
+  var ANONYMOUS = '<<anonymous>>';
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+  var ReactPropTypes = {
+    array: createPrimitiveTypeChecker('array'),
+    bool: createPrimitiveTypeChecker('boolean'),
+    func: createPrimitiveTypeChecker('function'),
+    number: createPrimitiveTypeChecker('number'),
+    object: createPrimitiveTypeChecker('object'),
+    string: createPrimitiveTypeChecker('string'),
+    symbol: createPrimitiveTypeChecker('symbol'),
+    any: createAnyTypeChecker(),
+    arrayOf: createArrayOfTypeChecker,
+    element: createElementTypeChecker(),
+    elementType: createElementTypeTypeChecker(),
+    instanceOf: createInstanceTypeChecker,
+    node: createNodeChecker(),
+    objectOf: createObjectOfTypeChecker,
+    oneOf: createEnumTypeChecker,
+    oneOfType: createUnionTypeChecker,
+    shape: createShapeTypeChecker,
+    exact: createStrictShapeTypeChecker
+  };
+  /**
+  * inlined Object.is polyfill to avoid requiring consumers ship their own
+  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+  */
+  /*eslint-disable no-self-compare*/
+  function is(x, y) {
+    // SameValue algorithm
+    if (x === y) {
+      // Steps 1-5, 7-10
+      // Steps 6.b-6.e: +0 != -0
+      return x !== 0 || 1 / x === 1 / y;
+    } else {
+      // Step 6.a: NaN == NaN
+      return x !== x && y !== y;
+    }
+  }
+  /*eslint-enable no-self-compare*/
+  /**
+  * We use an Error-like object for backward compatibility as people may call
+  * PropTypes directly and inspect their output. However, we don't use real
+  * Errors anymore. We don't inspect their stack anyway, and creating them
+  * is prohibitively expensive if they are created too often, such as what
+  * happens in oneOfType() for any type before the one that matched.
+  */
+  function PropTypeError(message) {
+    this.message = message;
+    this.stack = '';
+  }
+  // Make `instanceof Error` still work for returned errors.
+  PropTypeError.prototype = Error.prototype;
+  function createChainableTypeChecker(validate) {
+    if ("development" !== 'production') {
+      var manualPropTypeCallCache = {};
+      var manualPropTypeWarningCount = 0;
+    }
+    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+      componentName = componentName || ANONYMOUS;
+      propFullName = propFullName || propName;
+      if (secret !== ReactPropTypesSecret) {
+        if (throwOnDirectAccess) {
+          // New behavior only for users of `prop-types` package
+          var err = new Error('Calling PropTypes validators directly is not supported by the `prop-types` package. ' + 'Use `PropTypes.checkPropTypes()` to call them. ' + 'Read more at http://fb.me/use-check-prop-types');
+          err.name = 'Invariant Violation';
+          throw err;
+        } else if ("development" !== 'production' && typeof console !== 'undefined') {
+          // Old behavior for people using React.PropTypes
+          var cacheKey = componentName + ':' + propName;
+          if (!manualPropTypeCallCache[cacheKey] && // Avoid spamming the console because they are often not actionable except for lib authors
+          manualPropTypeWarningCount < 3) {
+            printWarning('You are manually calling a React.PropTypes validation ' + 'function for the `' + propFullName + '` prop on `' + componentName + '`. This is deprecated ' + 'and will throw in the standalone `prop-types` package. ' + 'You may be seeing this warning due to a third-party PropTypes ' + 'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.');
+            manualPropTypeCallCache[cacheKey] = true;
+            manualPropTypeWarningCount++;
+          }
+        }
+      }
+      if (props[propName] == null) {
+        if (isRequired) {
+          if (props[propName] === null) {
+            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
+          }
+          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
+        }
+        return null;
+      } else {
+        return validate(props, propName, componentName, location, propFullName);
+      }
+    }
+    var chainedCheckType = checkType.bind(null, false);
+    chainedCheckType.isRequired = checkType.bind(null, true);
+    return chainedCheckType;
+  }
+  function createPrimitiveTypeChecker(expectedType) {
+    function validate(props, propName, componentName, location, propFullName, secret) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== expectedType) {
+        // `propValue` being instance of, say, date/regexp, pass the 'object'
+        // check, but we can offer a more precise error message here rather than
+        // 'of type `object`'.
+        var preciseType = getPreciseType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function createAnyTypeChecker() {
+    return createChainableTypeChecker(emptyFunctionThatReturnsNull);
+  }
+  function createArrayOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
+      }
+      var propValue = props[propName];
+      if (!Array.isArray(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
+      }
+      for (var i = 0; i < propValue.length; i++) {
+        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+        if (error instanceof Error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function createElementTypeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      if (!isValidElement(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function createElementTypeTypeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      if (!ReactIs.isValidElementType(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement type.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function createInstanceTypeChecker(expectedClass) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!(props[propName] instanceof expectedClass)) {
+        var expectedClassName = expectedClass.name || ANONYMOUS;
+        var actualClassName = getClassName(props[propName]);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function createEnumTypeChecker(expectedValues) {
+    if (!Array.isArray(expectedValues)) {
+      if ("development" !== 'production') {
+        if (arguments.length > 1) {
+          printWarning('Invalid arguments supplied to oneOf, expected an array, got ' + arguments.length + ' arguments. ' + 'A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).');
+        } else {
+          printWarning('Invalid argument supplied to oneOf, expected an array.');
+        }
+      }
+      return emptyFunctionThatReturnsNull;
+    }
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      for (var i = 0; i < expectedValues.length; i++) {
+        if (is(propValue, expectedValues[i])) {
+          return null;
+        }
+      }
+      var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
+        var type = getPreciseType(value);
+        if (type === 'symbol') {
+          return String(value);
+        }
+        return value;
+      });
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + String(propValue) + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function createObjectOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
+      }
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
+      }
+      for (var key in propValue) {
+        if (has(propValue, key)) {
+          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+          if (error instanceof Error) {
+            return error;
+          }
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function createUnionTypeChecker(arrayOfTypeCheckers) {
+    if (!Array.isArray(arrayOfTypeCheckers)) {
+      "development" !== 'production' ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
+      return emptyFunctionThatReturnsNull;
+    }
+    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+      var checker = arrayOfTypeCheckers[i];
+      if (typeof checker !== 'function') {
+        printWarning('Invalid argument supplied to oneOfType. Expected an array of check functions, but ' + 'received ' + getPostfixForTypeWarning(checker) + ' at index ' + i + '.');
+        return emptyFunctionThatReturnsNull;
+      }
+    }
+    function validate(props, propName, componentName, location, propFullName) {
+      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+        var checker = arrayOfTypeCheckers[i];
+        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+          return null;
+        }
+      }
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function createNodeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!isNode(props[propName])) {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function createShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      for (var key in shapeTypes) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          continue;
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function createStrictShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      // We need to check all keys in case some are required but missing from
+      // props.
+      var allKeys = assign({}, props[propName], shapeTypes);
+      for (var key in allKeys) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' + '\nBad object: ' + JSON.stringify(props[propName], null, '  ') + '\nValid keys: ' + JSON.stringify(Object.keys(shapeTypes), null, '  '));
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+  function isNode(propValue) {
+    switch (typeof propValue) {
+      case 'number':
+      case 'string':
+      case 'undefined':
+        return true;
+      case 'boolean':
+        return !propValue;
+      case 'object':
+        if (Array.isArray(propValue)) {
+          return propValue.every(isNode);
+        }
+        if (propValue === null || isValidElement(propValue)) {
+          return true;
+        }
+        var iteratorFn = getIteratorFn(propValue);
+        if (iteratorFn) {
+          var iterator = iteratorFn.call(propValue);
+          var step;
+          if (iteratorFn !== propValue.entries) {
+            while (!(step = iterator.next()).done) {
+              if (!isNode(step.value)) {
+                return false;
+              }
+            }
+          } else {
+            // Iterator will provide entry [k,v] tuples rather than values.
+            while (!(step = iterator.next()).done) {
+              var entry = step.value;
+              if (entry) {
+                if (!isNode(entry[1])) {
+                  return false;
+                }
+              }
+            }
+          }
+        } else {
+          return false;
+        }
+        return true;
+      default:
+        return false;
+    }
+  }
+  function isSymbol(propType, propValue) {
+    // Native Symbol.
+    if (propType === 'symbol') {
+      return true;
+    }
+    // falsy value can't be a Symbol
+    if (!propValue) {
+      return false;
+    }
+    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+    if (propValue['@@toStringTag'] === 'Symbol') {
+      return true;
+    }
+    // Fallback for non-spec compliant Symbols which are polyfilled.
+    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
+      return true;
+    }
+    return false;
+  }
+  // Equivalent of `typeof` but with special handling for array and regexp.
+  function getPropType(propValue) {
+    var propType = typeof propValue;
+    if (Array.isArray(propValue)) {
+      return 'array';
+    }
+    if (propValue instanceof RegExp) {
+      // Old webkits (at least until Android 4.0) return 'function' rather than
+      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+      // passes PropTypes.object.
+      return 'object';
+    }
+    if (isSymbol(propType, propValue)) {
+      return 'symbol';
+    }
+    return propType;
+  }
+  // This handles more types than `getPropType`. Only used for error messages.
+  // See `createPrimitiveTypeChecker`.
+  function getPreciseType(propValue) {
+    if (typeof propValue === 'undefined' || propValue === null) {
+      return '' + propValue;
+    }
+    var propType = getPropType(propValue);
+    if (propType === 'object') {
+      if (propValue instanceof Date) {
+        return 'date';
+      } else if (propValue instanceof RegExp) {
+        return 'regexp';
+      }
+    }
+    return propType;
+  }
+  // Returns a string that is postfixed to a warning about an invalid type.
+  // For example, "undefined" or "of type array"
+  function getPostfixForTypeWarning(value) {
+    var type = getPreciseType(value);
+    switch (type) {
+      case 'array':
+      case 'object':
+        return 'an ' + type;
+      case 'boolean':
+      case 'date':
+      case 'regexp':
+        return 'a ' + type;
+      default:
+        return type;
+    }
+  }
+  // Returns class name of the object, if any.
+  function getClassName(propValue) {
+    if (!propValue.constructor || !propValue.constructor.name) {
+      return ANONYMOUS;
+    }
+    return propValue.constructor.name;
+  }
+  ReactPropTypes.checkPropTypes = checkPropTypes;
+  ReactPropTypes.resetWarningCache = checkPropTypes.resetWarningCache;
+  ReactPropTypes.PropTypes = ReactPropTypes;
+  return ReactPropTypes;
+};
+
+},{"react-is":"68QIU","object-assign":"3eM6x","./lib/ReactPropTypesSecret":"3OVnw","./checkPropTypes":"R8SC7"}],"3OVnw":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+'use strict';
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
+},{}],"R8SC7":[function(require,module,exports) {
+/**
+* Copyright (c) 2013-present, Facebook, Inc.
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree.
+*/
+"use strict";
+var printWarning = function () {};
+if ("development" !== 'production') {
+  var ReactPropTypesSecret = require('./lib/ReactPropTypesSecret');
+  var loggedTypeFailures = {};
+  var has = Function.call.bind(Object.prototype.hasOwnProperty);
+  printWarning = function (text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+/**
+* Assert that the values match with the type specs.
+* Error messages are memorized and will only be shown once.
+*
+* @param {object} typeSpecs Map of name to a ReactPropType
+* @param {object} values Runtime values that need to be type-checked
+* @param {string} location e.g. "prop", "context", "child context"
+* @param {string} componentName Name of the component for error messages.
+* @param {?Function} getStack Returns the component stack.
+* @private
+*/
+function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+  if ("development" !== 'production') {
+    for (var typeSpecName in typeSpecs) {
+      if (has(typeSpecs, typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+          // This is intentionally an invariant that gets caught. It's the same
+          // behavior as without this statement except with a better message.
+          if (typeof typeSpecs[typeSpecName] !== 'function') {
+            var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.');
+            err.name = 'Invariant Violation';
+            throw err;
+          }
+          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+          error = ex;
+        }
+        if (error && !(error instanceof Error)) {
+          printWarning((componentName || 'React class') + ': type specification of ' + location + ' `' + typeSpecName + '` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a ' + typeof error + '. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).');
+        }
+        if (error instanceof Error && !((error.message in loggedTypeFailures))) {
+          // Only monitor this failure once because there tends to be a lot of the
+          // same error.
+          loggedTypeFailures[error.message] = true;
+          var stack = getStack ? getStack() : '';
+          printWarning('Failed ' + location + ' type: ' + error.message + (stack != null ? stack : ''));
+        }
+      }
+    }
+  }
+}
+/**
+* Resets warning cache when testing.
+*
+* @private
+*/
+checkPropTypes.resetWarningCache = function () {
+  if ("development" !== 'production') {
+    loggedTypeFailures = {};
+  }
+};
+module.exports = checkPropTypes;
+
+},{"./lib/ReactPropTypesSecret":"3OVnw"}],"RV0qD":[function(require,module,exports) {
+"use strict";
+if ("development" === 'production') {
+  module.exports = require('./cjs/history.min.js');
+} else {
+  module.exports = require('./cjs/history.js');
+}
+
+},{"./cjs/history.js":"4vZxn"}],"4vZxn":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var resolvePathname = _interopDefault(require('resolve-pathname'));
+var valueEqual = _interopDefault(require('value-equal'));
+var warning = _interopDefault(require('tiny-warning'));
+var invariant = _interopDefault(require('tiny-invariant'));
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function addLeadingSlash(path) {
+  return path.charAt(0) === '/' ? path : '/' + path;
+}
+function stripLeadingSlash(path) {
+  return path.charAt(0) === '/' ? path.substr(1) : path;
+}
+function hasBasename(path, prefix) {
+  return path.toLowerCase().indexOf(prefix.toLowerCase()) === 0 && '/?#'.indexOf(path.charAt(prefix.length)) !== -1;
+}
+function stripBasename(path, prefix) {
+  return hasBasename(path, prefix) ? path.substr(prefix.length) : path;
+}
+function stripTrailingSlash(path) {
+  return path.charAt(path.length - 1) === '/' ? path.slice(0, -1) : path;
+}
+function parsePath(path) {
+  var pathname = path || '/';
+  var search = '';
+  var hash = '';
+  var hashIndex = pathname.indexOf('#');
+
+  if (hashIndex !== -1) {
+    hash = pathname.substr(hashIndex);
+    pathname = pathname.substr(0, hashIndex);
+  }
+
+  var searchIndex = pathname.indexOf('?');
+
+  if (searchIndex !== -1) {
+    search = pathname.substr(searchIndex);
+    pathname = pathname.substr(0, searchIndex);
+  }
+
+  return {
+    pathname: pathname,
+    search: search === '?' ? '' : search,
+    hash: hash === '#' ? '' : hash
+  };
+}
+function createPath(location) {
+  var pathname = location.pathname,
+      search = location.search,
+      hash = location.hash;
+  var path = pathname || '/';
+  if (search && search !== '?') path += search.charAt(0) === '?' ? search : "?" + search;
+  if (hash && hash !== '#') path += hash.charAt(0) === '#' ? hash : "#" + hash;
+  return path;
+}
+
+function createLocation(path, state, key, currentLocation) {
+  var location;
+
+  if (typeof path === 'string') {
+    // Two-arg form: push(path, state)
+    location = parsePath(path);
+    location.state = state;
+  } else {
+    // One-arg form: push(location)
+    location = _extends({}, path);
+    if (location.pathname === undefined) location.pathname = '';
+
+    if (location.search) {
+      if (location.search.charAt(0) !== '?') location.search = '?' + location.search;
+    } else {
+      location.search = '';
+    }
+
+    if (location.hash) {
+      if (location.hash.charAt(0) !== '#') location.hash = '#' + location.hash;
+    } else {
+      location.hash = '';
+    }
+
+    if (state !== undefined && location.state === undefined) location.state = state;
+  }
+
+  try {
+    location.pathname = decodeURI(location.pathname);
+  } catch (e) {
+    if (e instanceof URIError) {
+      throw new URIError('Pathname "' + location.pathname + '" could not be decoded. ' + 'This is likely caused by an invalid percent-encoding.');
+    } else {
+      throw e;
+    }
+  }
+
+  if (key) location.key = key;
+
+  if (currentLocation) {
+    // Resolve incomplete/relative pathname relative to current location.
+    if (!location.pathname) {
+      location.pathname = currentLocation.pathname;
+    } else if (location.pathname.charAt(0) !== '/') {
+      location.pathname = resolvePathname(location.pathname, currentLocation.pathname);
+    }
+  } else {
+    // When there is no prior location and pathname is empty, set it to /
+    if (!location.pathname) {
+      location.pathname = '/';
+    }
+  }
+
+  return location;
+}
+function locationsAreEqual(a, b) {
+  return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && a.key === b.key && valueEqual(a.state, b.state);
+}
+
+function createTransitionManager() {
+  var prompt = null;
+
+  function setPrompt(nextPrompt) {
+    warning(prompt == null, 'A history supports only one prompt at a time');
+    prompt = nextPrompt;
+    return function () {
+      if (prompt === nextPrompt) prompt = null;
+    };
+  }
+
+  function confirmTransitionTo(location, action, getUserConfirmation, callback) {
+    // TODO: If another transition starts while we're still confirming
+    // the previous one, we may end up in a weird state. Figure out the
+    // best way to handle this.
+    if (prompt != null) {
+      var result = typeof prompt === 'function' ? prompt(location, action) : prompt;
+
+      if (typeof result === 'string') {
+        if (typeof getUserConfirmation === 'function') {
+          getUserConfirmation(result, callback);
+        } else {
+          warning(false, 'A history needs a getUserConfirmation function in order to use a prompt message');
+          callback(true);
+        }
+      } else {
+        // Return false from a transition hook to cancel the transition.
+        callback(result !== false);
+      }
+    } else {
+      callback(true);
+    }
+  }
+
+  var listeners = [];
+
+  function appendListener(fn) {
+    var isActive = true;
+
+    function listener() {
+      if (isActive) fn.apply(void 0, arguments);
+    }
+
+    listeners.push(listener);
+    return function () {
+      isActive = false;
+      listeners = listeners.filter(function (item) {
+        return item !== listener;
+      });
+    };
+  }
+
+  function notifyListeners() {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    listeners.forEach(function (listener) {
+      return listener.apply(void 0, args);
+    });
+  }
+
+  return {
+    setPrompt: setPrompt,
+    confirmTransitionTo: confirmTransitionTo,
+    appendListener: appendListener,
+    notifyListeners: notifyListeners
+  };
+}
+
+var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+function getConfirmation(message, callback) {
+  callback(window.confirm(message)); // eslint-disable-line no-alert
+}
+/**
+ * Returns true if the HTML5 history API is supported. Taken from Modernizr.
+ *
+ * https://github.com/Modernizr/Modernizr/blob/master/LICENSE
+ * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
+ * changed to avoid false negatives for Windows Phones: https://github.com/reactjs/react-router/issues/586
+ */
+
+function supportsHistory() {
+  var ua = window.navigator.userAgent;
+  if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) return false;
+  return window.history && 'pushState' in window.history;
+}
+/**
+ * Returns true if browser fires popstate on hash change.
+ * IE10 and IE11 do not.
+ */
+
+function supportsPopStateOnHashChange() {
+  return window.navigator.userAgent.indexOf('Trident') === -1;
+}
+/**
+ * Returns false if using go(n) with hash history causes a full page reload.
+ */
+
+function supportsGoWithoutReloadUsingHash() {
+  return window.navigator.userAgent.indexOf('Firefox') === -1;
+}
+/**
+ * Returns true if a given popstate event is an extraneous WebKit event.
+ * Accounts for the fact that Chrome on iOS fires real popstate events
+ * containing undefined state when pressing the back button.
+ */
+
+function isExtraneousPopstateEvent(event) {
+  return event.state === undefined && navigator.userAgent.indexOf('CriOS') === -1;
+}
+
+var PopStateEvent = 'popstate';
+var HashChangeEvent = 'hashchange';
+
+function getHistoryState() {
+  try {
+    return window.history.state || {};
+  } catch (e) {
+    // IE 11 sometimes throws when accessing window.history.state
+    // See https://github.com/ReactTraining/history/pull/289
+    return {};
+  }
+}
+/**
+ * Creates a history object that uses the HTML5 history API including
+ * pushState, replaceState, and the popstate event.
+ */
+
+
+function createBrowserHistory(props) {
+  if (props === void 0) {
+    props = {};
+  }
+
+  !canUseDOM ? invariant(false, 'Browser history needs a DOM') : void 0;
+  var globalHistory = window.history;
+  var canUseHistory = supportsHistory();
+  var needsHashChangeListener = !supportsPopStateOnHashChange();
+  var _props = props,
+      _props$forceRefresh = _props.forceRefresh,
+      forceRefresh = _props$forceRefresh === void 0 ? false : _props$forceRefresh,
+      _props$getUserConfirm = _props.getUserConfirmation,
+      getUserConfirmation = _props$getUserConfirm === void 0 ? getConfirmation : _props$getUserConfirm,
+      _props$keyLength = _props.keyLength,
+      keyLength = _props$keyLength === void 0 ? 6 : _props$keyLength;
+  var basename = props.basename ? stripTrailingSlash(addLeadingSlash(props.basename)) : '';
+
+  function getDOMLocation(historyState) {
+    var _ref = historyState || {},
+        key = _ref.key,
+        state = _ref.state;
+
+    var _window$location = window.location,
+        pathname = _window$location.pathname,
+        search = _window$location.search,
+        hash = _window$location.hash;
+    var path = pathname + search + hash;
+    warning(!basename || hasBasename(path, basename), 'You are attempting to use a basename on a page whose URL path does not begin ' + 'with the basename. Expected path "' + path + '" to begin with "' + basename + '".');
+    if (basename) path = stripBasename(path, basename);
+    return createLocation(path, state, key);
+  }
+
+  function createKey() {
+    return Math.random().toString(36).substr(2, keyLength);
+  }
+
+  var transitionManager = createTransitionManager();
+
+  function setState(nextState) {
+    _extends(history, nextState);
+
+    history.length = globalHistory.length;
+    transitionManager.notifyListeners(history.location, history.action);
+  }
+
+  function handlePopState(event) {
+    // Ignore extraneous popstate events in WebKit.
+    if (isExtraneousPopstateEvent(event)) return;
+    handlePop(getDOMLocation(event.state));
+  }
+
+  function handleHashChange() {
+    handlePop(getDOMLocation(getHistoryState()));
+  }
+
+  var forceNextPop = false;
+
+  function handlePop(location) {
+    if (forceNextPop) {
+      forceNextPop = false;
+      setState();
+    } else {
+      var action = 'POP';
+      transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
+        if (ok) {
+          setState({
+            action: action,
+            location: location
+          });
+        } else {
+          revertPop(location);
+        }
+      });
+    }
+  }
+
+  function revertPop(fromLocation) {
+    var toLocation = history.location; // TODO: We could probably make this more reliable by
+    // keeping a list of keys we've seen in sessionStorage.
+    // Instead, we just default to 0 for keys we don't know.
+
+    var toIndex = allKeys.indexOf(toLocation.key);
+    if (toIndex === -1) toIndex = 0;
+    var fromIndex = allKeys.indexOf(fromLocation.key);
+    if (fromIndex === -1) fromIndex = 0;
+    var delta = toIndex - fromIndex;
+
+    if (delta) {
+      forceNextPop = true;
+      go(delta);
+    }
+  }
+
+  var initialLocation = getDOMLocation(getHistoryState());
+  var allKeys = [initialLocation.key]; // Public interface
+
+  function createHref(location) {
+    return basename + createPath(location);
+  }
+
+  function push(path, state) {
+    warning(!(typeof path === 'object' && path.state !== undefined && state !== undefined), 'You should avoid providing a 2nd state argument to push when the 1st ' + 'argument is a location-like object that already has state; it is ignored');
+    var action = 'PUSH';
+    var location = createLocation(path, state, createKey(), history.location);
+    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
+      if (!ok) return;
+      var href = createHref(location);
+      var key = location.key,
+          state = location.state;
+
+      if (canUseHistory) {
+        globalHistory.pushState({
+          key: key,
+          state: state
+        }, null, href);
+
+        if (forceRefresh) {
+          window.location.href = href;
+        } else {
+          var prevIndex = allKeys.indexOf(history.location.key);
+          var nextKeys = allKeys.slice(0, prevIndex + 1);
+          nextKeys.push(location.key);
+          allKeys = nextKeys;
+          setState({
+            action: action,
+            location: location
+          });
+        }
+      } else {
+        warning(state === undefined, 'Browser history cannot push state in browsers that do not support HTML5 history');
+        window.location.href = href;
+      }
+    });
+  }
+
+  function replace(path, state) {
+    warning(!(typeof path === 'object' && path.state !== undefined && state !== undefined), 'You should avoid providing a 2nd state argument to replace when the 1st ' + 'argument is a location-like object that already has state; it is ignored');
+    var action = 'REPLACE';
+    var location = createLocation(path, state, createKey(), history.location);
+    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
+      if (!ok) return;
+      var href = createHref(location);
+      var key = location.key,
+          state = location.state;
+
+      if (canUseHistory) {
+        globalHistory.replaceState({
+          key: key,
+          state: state
+        }, null, href);
+
+        if (forceRefresh) {
+          window.location.replace(href);
+        } else {
+          var prevIndex = allKeys.indexOf(history.location.key);
+          if (prevIndex !== -1) allKeys[prevIndex] = location.key;
+          setState({
+            action: action,
+            location: location
+          });
+        }
+      } else {
+        warning(state === undefined, 'Browser history cannot replace state in browsers that do not support HTML5 history');
+        window.location.replace(href);
+      }
+    });
+  }
+
+  function go(n) {
+    globalHistory.go(n);
+  }
+
+  function goBack() {
+    go(-1);
+  }
+
+  function goForward() {
+    go(1);
+  }
+
+  var listenerCount = 0;
+
+  function checkDOMListeners(delta) {
+    listenerCount += delta;
+
+    if (listenerCount === 1 && delta === 1) {
+      window.addEventListener(PopStateEvent, handlePopState);
+      if (needsHashChangeListener) window.addEventListener(HashChangeEvent, handleHashChange);
+    } else if (listenerCount === 0) {
+      window.removeEventListener(PopStateEvent, handlePopState);
+      if (needsHashChangeListener) window.removeEventListener(HashChangeEvent, handleHashChange);
+    }
+  }
+
+  var isBlocked = false;
+
+  function block(prompt) {
+    if (prompt === void 0) {
+      prompt = false;
+    }
+
+    var unblock = transitionManager.setPrompt(prompt);
+
+    if (!isBlocked) {
+      checkDOMListeners(1);
+      isBlocked = true;
+    }
+
+    return function () {
+      if (isBlocked) {
+        isBlocked = false;
+        checkDOMListeners(-1);
+      }
+
+      return unblock();
+    };
+  }
+
+  function listen(listener) {
+    var unlisten = transitionManager.appendListener(listener);
+    checkDOMListeners(1);
+    return function () {
+      checkDOMListeners(-1);
+      unlisten();
+    };
+  }
+
+  var history = {
+    length: globalHistory.length,
+    action: 'POP',
+    location: initialLocation,
+    createHref: createHref,
+    push: push,
+    replace: replace,
+    go: go,
+    goBack: goBack,
+    goForward: goForward,
+    block: block,
+    listen: listen
+  };
+  return history;
+}
+
+var HashChangeEvent$1 = 'hashchange';
+var HashPathCoders = {
+  hashbang: {
+    encodePath: function encodePath(path) {
+      return path.charAt(0) === '!' ? path : '!/' + stripLeadingSlash(path);
+    },
+    decodePath: function decodePath(path) {
+      return path.charAt(0) === '!' ? path.substr(1) : path;
+    }
+  },
+  noslash: {
+    encodePath: stripLeadingSlash,
+    decodePath: addLeadingSlash
+  },
+  slash: {
+    encodePath: addLeadingSlash,
+    decodePath: addLeadingSlash
+  }
+};
+
+function stripHash(url) {
+  var hashIndex = url.indexOf('#');
+  return hashIndex === -1 ? url : url.slice(0, hashIndex);
+}
+
+function getHashPath() {
+  // We can't use window.location.hash here because it's not
+  // consistent across browsers - Firefox will pre-decode it!
+  var href = window.location.href;
+  var hashIndex = href.indexOf('#');
+  return hashIndex === -1 ? '' : href.substring(hashIndex + 1);
+}
+
+function pushHashPath(path) {
+  window.location.hash = path;
+}
+
+function replaceHashPath(path) {
+  window.location.replace(stripHash(window.location.href) + '#' + path);
+}
+
+function createHashHistory(props) {
+  if (props === void 0) {
+    props = {};
+  }
+
+  !canUseDOM ? invariant(false, 'Hash history needs a DOM') : void 0;
+  var globalHistory = window.history;
+  var canGoWithoutReload = supportsGoWithoutReloadUsingHash();
+  var _props = props,
+      _props$getUserConfirm = _props.getUserConfirmation,
+      getUserConfirmation = _props$getUserConfirm === void 0 ? getConfirmation : _props$getUserConfirm,
+      _props$hashType = _props.hashType,
+      hashType = _props$hashType === void 0 ? 'slash' : _props$hashType;
+  var basename = props.basename ? stripTrailingSlash(addLeadingSlash(props.basename)) : '';
+  var _HashPathCoders$hashT = HashPathCoders[hashType],
+      encodePath = _HashPathCoders$hashT.encodePath,
+      decodePath = _HashPathCoders$hashT.decodePath;
+
+  function getDOMLocation() {
+    var path = decodePath(getHashPath());
+    warning(!basename || hasBasename(path, basename), 'You are attempting to use a basename on a page whose URL path does not begin ' + 'with the basename. Expected path "' + path + '" to begin with "' + basename + '".');
+    if (basename) path = stripBasename(path, basename);
+    return createLocation(path);
+  }
+
+  var transitionManager = createTransitionManager();
+
+  function setState(nextState) {
+    _extends(history, nextState);
+
+    history.length = globalHistory.length;
+    transitionManager.notifyListeners(history.location, history.action);
+  }
+
+  var forceNextPop = false;
+  var ignorePath = null;
+
+  function locationsAreEqual$$1(a, b) {
+    return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash;
+  }
+
+  function handleHashChange() {
+    var path = getHashPath();
+    var encodedPath = encodePath(path);
+
+    if (path !== encodedPath) {
+      // Ensure we always have a properly-encoded hash.
+      replaceHashPath(encodedPath);
+    } else {
+      var location = getDOMLocation();
+      var prevLocation = history.location;
+      if (!forceNextPop && locationsAreEqual$$1(prevLocation, location)) return; // A hashchange doesn't always == location change.
+
+      if (ignorePath === createPath(location)) return; // Ignore this change; we already setState in push/replace.
+
+      ignorePath = null;
+      handlePop(location);
+    }
+  }
+
+  function handlePop(location) {
+    if (forceNextPop) {
+      forceNextPop = false;
+      setState();
+    } else {
+      var action = 'POP';
+      transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
+        if (ok) {
+          setState({
+            action: action,
+            location: location
+          });
+        } else {
+          revertPop(location);
+        }
+      });
+    }
+  }
+
+  function revertPop(fromLocation) {
+    var toLocation = history.location; // TODO: We could probably make this more reliable by
+    // keeping a list of paths we've seen in sessionStorage.
+    // Instead, we just default to 0 for paths we don't know.
+
+    var toIndex = allPaths.lastIndexOf(createPath(toLocation));
+    if (toIndex === -1) toIndex = 0;
+    var fromIndex = allPaths.lastIndexOf(createPath(fromLocation));
+    if (fromIndex === -1) fromIndex = 0;
+    var delta = toIndex - fromIndex;
+
+    if (delta) {
+      forceNextPop = true;
+      go(delta);
+    }
+  } // Ensure the hash is encoded properly before doing anything else.
+
+
+  var path = getHashPath();
+  var encodedPath = encodePath(path);
+  if (path !== encodedPath) replaceHashPath(encodedPath);
+  var initialLocation = getDOMLocation();
+  var allPaths = [createPath(initialLocation)]; // Public interface
+
+  function createHref(location) {
+    var baseTag = document.querySelector('base');
+    var href = '';
+
+    if (baseTag && baseTag.getAttribute('href')) {
+      href = stripHash(window.location.href);
+    }
+
+    return href + '#' + encodePath(basename + createPath(location));
+  }
+
+  function push(path, state) {
+    warning(state === undefined, 'Hash history cannot push state; it is ignored');
+    var action = 'PUSH';
+    var location = createLocation(path, undefined, undefined, history.location);
+    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
+      if (!ok) return;
+      var path = createPath(location);
+      var encodedPath = encodePath(basename + path);
+      var hashChanged = getHashPath() !== encodedPath;
+
+      if (hashChanged) {
+        // We cannot tell if a hashchange was caused by a PUSH, so we'd
+        // rather setState here and ignore the hashchange. The caveat here
+        // is that other hash histories in the page will consider it a POP.
+        ignorePath = path;
+        pushHashPath(encodedPath);
+        var prevIndex = allPaths.lastIndexOf(createPath(history.location));
+        var nextPaths = allPaths.slice(0, prevIndex + 1);
+        nextPaths.push(path);
+        allPaths = nextPaths;
+        setState({
+          action: action,
+          location: location
+        });
+      } else {
+        warning(false, 'Hash history cannot PUSH the same path; a new entry will not be added to the history stack');
+        setState();
+      }
+    });
+  }
+
+  function replace(path, state) {
+    warning(state === undefined, 'Hash history cannot replace state; it is ignored');
+    var action = 'REPLACE';
+    var location = createLocation(path, undefined, undefined, history.location);
+    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
+      if (!ok) return;
+      var path = createPath(location);
+      var encodedPath = encodePath(basename + path);
+      var hashChanged = getHashPath() !== encodedPath;
+
+      if (hashChanged) {
+        // We cannot tell if a hashchange was caused by a REPLACE, so we'd
+        // rather setState here and ignore the hashchange. The caveat here
+        // is that other hash histories in the page will consider it a POP.
+        ignorePath = path;
+        replaceHashPath(encodedPath);
+      }
+
+      var prevIndex = allPaths.indexOf(createPath(history.location));
+      if (prevIndex !== -1) allPaths[prevIndex] = path;
+      setState({
+        action: action,
+        location: location
+      });
+    });
+  }
+
+  function go(n) {
+    warning(canGoWithoutReload, 'Hash history go(n) causes a full page reload in this browser');
+    globalHistory.go(n);
+  }
+
+  function goBack() {
+    go(-1);
+  }
+
+  function goForward() {
+    go(1);
+  }
+
+  var listenerCount = 0;
+
+  function checkDOMListeners(delta) {
+    listenerCount += delta;
+
+    if (listenerCount === 1 && delta === 1) {
+      window.addEventListener(HashChangeEvent$1, handleHashChange);
+    } else if (listenerCount === 0) {
+      window.removeEventListener(HashChangeEvent$1, handleHashChange);
+    }
+  }
+
+  var isBlocked = false;
+
+  function block(prompt) {
+    if (prompt === void 0) {
+      prompt = false;
+    }
+
+    var unblock = transitionManager.setPrompt(prompt);
+
+    if (!isBlocked) {
+      checkDOMListeners(1);
+      isBlocked = true;
+    }
+
+    return function () {
+      if (isBlocked) {
+        isBlocked = false;
+        checkDOMListeners(-1);
+      }
+
+      return unblock();
+    };
+  }
+
+  function listen(listener) {
+    var unlisten = transitionManager.appendListener(listener);
+    checkDOMListeners(1);
+    return function () {
+      checkDOMListeners(-1);
+      unlisten();
+    };
+  }
+
+  var history = {
+    length: globalHistory.length,
+    action: 'POP',
+    location: initialLocation,
+    createHref: createHref,
+    push: push,
+    replace: replace,
+    go: go,
+    goBack: goBack,
+    goForward: goForward,
+    block: block,
+    listen: listen
+  };
+  return history;
+}
+
+function clamp(n, lowerBound, upperBound) {
+  return Math.min(Math.max(n, lowerBound), upperBound);
+}
+/**
+ * Creates a history object that stores locations in memory.
+ */
+
+
+function createMemoryHistory(props) {
+  if (props === void 0) {
+    props = {};
+  }
+
+  var _props = props,
+      getUserConfirmation = _props.getUserConfirmation,
+      _props$initialEntries = _props.initialEntries,
+      initialEntries = _props$initialEntries === void 0 ? ['/'] : _props$initialEntries,
+      _props$initialIndex = _props.initialIndex,
+      initialIndex = _props$initialIndex === void 0 ? 0 : _props$initialIndex,
+      _props$keyLength = _props.keyLength,
+      keyLength = _props$keyLength === void 0 ? 6 : _props$keyLength;
+  var transitionManager = createTransitionManager();
+
+  function setState(nextState) {
+    _extends(history, nextState);
+
+    history.length = history.entries.length;
+    transitionManager.notifyListeners(history.location, history.action);
+  }
+
+  function createKey() {
+    return Math.random().toString(36).substr(2, keyLength);
+  }
+
+  var index = clamp(initialIndex, 0, initialEntries.length - 1);
+  var entries = initialEntries.map(function (entry) {
+    return typeof entry === 'string' ? createLocation(entry, undefined, createKey()) : createLocation(entry, undefined, entry.key || createKey());
+  }); // Public interface
+
+  var createHref = createPath;
+
+  function push(path, state) {
+    warning(!(typeof path === 'object' && path.state !== undefined && state !== undefined), 'You should avoid providing a 2nd state argument to push when the 1st ' + 'argument is a location-like object that already has state; it is ignored');
+    var action = 'PUSH';
+    var location = createLocation(path, state, createKey(), history.location);
+    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
+      if (!ok) return;
+      var prevIndex = history.index;
+      var nextIndex = prevIndex + 1;
+      var nextEntries = history.entries.slice(0);
+
+      if (nextEntries.length > nextIndex) {
+        nextEntries.splice(nextIndex, nextEntries.length - nextIndex, location);
+      } else {
+        nextEntries.push(location);
+      }
+
+      setState({
+        action: action,
+        location: location,
+        index: nextIndex,
+        entries: nextEntries
+      });
+    });
+  }
+
+  function replace(path, state) {
+    warning(!(typeof path === 'object' && path.state !== undefined && state !== undefined), 'You should avoid providing a 2nd state argument to replace when the 1st ' + 'argument is a location-like object that already has state; it is ignored');
+    var action = 'REPLACE';
+    var location = createLocation(path, state, createKey(), history.location);
+    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
+      if (!ok) return;
+      history.entries[history.index] = location;
+      setState({
+        action: action,
+        location: location
+      });
+    });
+  }
+
+  function go(n) {
+    var nextIndex = clamp(history.index + n, 0, history.entries.length - 1);
+    var action = 'POP';
+    var location = history.entries[nextIndex];
+    transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
+      if (ok) {
+        setState({
+          action: action,
+          location: location,
+          index: nextIndex
+        });
+      } else {
+        // Mimic the behavior of DOM histories by
+        // causing a render after a cancelled POP.
+        setState();
+      }
+    });
+  }
+
+  function goBack() {
+    go(-1);
+  }
+
+  function goForward() {
+    go(1);
+  }
+
+  function canGo(n) {
+    var nextIndex = history.index + n;
+    return nextIndex >= 0 && nextIndex < history.entries.length;
+  }
+
+  function block(prompt) {
+    if (prompt === void 0) {
+      prompt = false;
+    }
+
+    return transitionManager.setPrompt(prompt);
+  }
+
+  function listen(listener) {
+    return transitionManager.appendListener(listener);
+  }
+
+  var history = {
+    length: entries.length,
+    action: 'POP',
+    location: entries[index],
+    index: index,
+    entries: entries,
+    createHref: createHref,
+    push: push,
+    replace: replace,
+    go: go,
+    goBack: goBack,
+    goForward: goForward,
+    canGo: canGo,
+    block: block,
+    listen: listen
+  };
+  return history;
+}
+
+exports.createBrowserHistory = createBrowserHistory;
+exports.createHashHistory = createHashHistory;
+exports.createMemoryHistory = createMemoryHistory;
+exports.createLocation = createLocation;
+exports.locationsAreEqual = locationsAreEqual;
+exports.parsePath = parsePath;
+exports.createPath = createPath;
+
+},{"resolve-pathname":"6t3oq","value-equal":"231GI","tiny-warning":"3B527","tiny-invariant":"4v3Kg"}],"6t3oq":[function(require,module,exports) {
+"use strict";
+if ("development" === 'production') {
+  module.exports = require('./cjs/resolve-pathname.min.js');
+} else {
+  module.exports = require('./cjs/resolve-pathname.js');
+}
+
+},{"./cjs/resolve-pathname.js":"PP9FI"}],"PP9FI":[function(require,module,exports) {
+'use strict';
+
+function isAbsolute(pathname) {
+  return pathname.charAt(0) === '/';
+}
+
+// About 1.5x faster than the two-arg version of Array#splice()
+function spliceOne(list, index) {
+  for (var i = index, k = i + 1, n = list.length; k < n; i += 1, k += 1) {
+    list[i] = list[k];
+  }
+
+  list.pop();
+}
+
+// This implementation is based heavily on node's url.parse
+function resolvePathname(to, from) {
+  if (from === undefined) from = '';
+
+  var toParts = (to && to.split('/')) || [];
+  var fromParts = (from && from.split('/')) || [];
+
+  var isToAbs = to && isAbsolute(to);
+  var isFromAbs = from && isAbsolute(from);
+  var mustEndAbs = isToAbs || isFromAbs;
+
+  if (to && isAbsolute(to)) {
+    // to is absolute
+    fromParts = toParts;
+  } else if (toParts.length) {
+    // to is relative, drop the filename
+    fromParts.pop();
+    fromParts = fromParts.concat(toParts);
+  }
+
+  if (!fromParts.length) return '/';
+
+  var hasTrailingSlash;
+  if (fromParts.length) {
+    var last = fromParts[fromParts.length - 1];
+    hasTrailingSlash = last === '.' || last === '..' || last === '';
+  } else {
+    hasTrailingSlash = false;
+  }
+
+  var up = 0;
+  for (var i = fromParts.length; i >= 0; i--) {
+    var part = fromParts[i];
+
+    if (part === '.') {
+      spliceOne(fromParts, i);
+    } else if (part === '..') {
+      spliceOne(fromParts, i);
+      up++;
+    } else if (up) {
+      spliceOne(fromParts, i);
+      up--;
+    }
+  }
+
+  if (!mustEndAbs) for (; up--; up) fromParts.unshift('..');
+
+  if (
+    mustEndAbs &&
+    fromParts[0] !== '' &&
+    (!fromParts[0] || !isAbsolute(fromParts[0]))
+  )
+    fromParts.unshift('');
+
+  var result = fromParts.join('/');
+
+  if (hasTrailingSlash && result.substr(-1) !== '/') result += '/';
+
+  return result;
+}
+
+module.exports = resolvePathname;
+
+},{}],"231GI":[function(require,module,exports) {
+"use strict";
+if ("development" === 'production') {
+  module.exports = require('./cjs/value-equal.min.js');
+} else {
+  module.exports = require('./cjs/value-equal.js');
+}
+
+},{"./cjs/value-equal.js":"6bQJP"}],"6bQJP":[function(require,module,exports) {
+'use strict';
+
+function valueOf(obj) {
+  return obj.valueOf ? obj.valueOf() : Object.prototype.valueOf.call(obj);
+}
+
+function valueEqual(a, b) {
+  // Test for strict equality first.
+  if (a === b) return true;
+
+  // Otherwise, if either of them == null they are not equal.
+  if (a == null || b == null) return false;
+
+  if (Array.isArray(a)) {
+    return (
+      Array.isArray(b) &&
+      a.length === b.length &&
+      a.every(function(item, index) {
+        return valueEqual(item, b[index]);
+      })
+    );
+  }
+
+  if (typeof a === 'object' || typeof b === 'object') {
+    var aValue = valueOf(a);
+    var bValue = valueOf(b);
+
+    if (aValue !== a || bValue !== b) return valueEqual(aValue, bValue);
+
+    return Object.keys(Object.assign({}, a, b)).every(function(key) {
+      return valueEqual(a[key], b[key]);
+    });
+  }
+
+  return false;
+}
+
+module.exports = valueEqual;
+
+},{}],"3B527":[function(require,module,exports) {
+"use strict";
+var isProduction = "development" === 'production';
+function warning(condition, message) {
+  if (!isProduction) {
+    if (condition) {
+      return;
+    }
+    var text = "Warning: " + message;
+    if (typeof console !== 'undefined') {
+      console.warn(text);
+    }
+    try {
+      throw Error(text);
+    } catch (x) {}
+  }
+}
+module.exports = warning;
+
+},{}],"4v3Kg":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var isProduction = "development" === 'production';
+var prefix = 'Invariant failed';
+function invariant(condition, message) {
+  if (condition) {
+    return;
+  }
+  if (isProduction) {
+    throw new Error(prefix);
+  }
+  throw new Error(prefix + ": " + (message || ''));
+}
+exports.default = invariant;
+
+},{}],"g8cqP":[function(require,module,exports) {
+"use strict";
+var global = arguments[3];
+var React = require('react'), _inheritsLoose = require('@babel/runtime/helpers/inheritsLoose'), PropTypes = require('prop-types'), warning = require('tiny-warning');
+function _interopDefaultLegacy(e) {
+  return e && typeof e === 'object' && ('default' in e) ? e : {
+    'default': e
+  };
+}
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+var _inheritsLoose__default = /*#__PURE__*/_interopDefaultLegacy(_inheritsLoose);
+var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
+var warning__default = /*#__PURE__*/_interopDefaultLegacy(warning);
+var MAX_SIGNED_31_BIT_INT = 1073741823;
+var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : {};
+function getUniqueId() {
+  var key = '__global_unique_id__';
+  return commonjsGlobal[key] = (commonjsGlobal[key] || 0) + 1;
+}
+function objectIs(x, y) {
+  if (x === y) {
+    return x !== 0 || 1 / x === 1 / y;
+  } else {
+    return x !== x && y !== y;
+  }
+}
+function createEventEmitter(value) {
+  var handlers = [];
+  return {
+    on: function on(handler) {
+      handlers.push(handler);
+    },
+    off: function off(handler) {
+      handlers = handlers.filter(function (h) {
+        return h !== handler;
+      });
+    },
+    get: function get() {
+      return value;
+    },
+    set: function set(newValue, changedBits) {
+      value = newValue;
+      handlers.forEach(function (handler) {
+        return handler(value, changedBits);
+      });
+    }
+  };
+}
+function onlyChild(children) {
+  return Array.isArray(children) ? children[0] : children;
+}
+function createReactContext(defaultValue, calculateChangedBits) {
+  var _Provider$childContex, _Consumer$contextType;
+  var contextProp = '__create-react-context-' + getUniqueId() + '__';
+  var Provider = /*#__PURE__*/(function (_Component) {
+    _inheritsLoose__default['default'](Provider, _Component);
+    function Provider() {
+      var _this;
+      _this = _Component.apply(this, arguments) || this;
+      _this.emitter = createEventEmitter(_this.props.value);
+      return _this;
+    }
+    var _proto = Provider.prototype;
+    _proto.getChildContext = function getChildContext() {
+      var _ref;
+      return (_ref = {}, _ref[contextProp] = this.emitter, _ref);
+    };
+    _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+      if (this.props.value !== nextProps.value) {
+        var oldValue = this.props.value;
+        var newValue = nextProps.value;
+        var changedBits;
+        if (objectIs(oldValue, newValue)) {
+          changedBits = 0;
+        } else {
+          changedBits = typeof calculateChangedBits === 'function' ? calculateChangedBits(oldValue, newValue) : MAX_SIGNED_31_BIT_INT;
+          if ("development" !== 'production') {
+            warning__default['default']((changedBits & MAX_SIGNED_31_BIT_INT) === changedBits, 'calculateChangedBits: Expected the return value to be a ' + '31-bit integer. Instead received: ' + changedBits);
+          }
+          changedBits |= 0;
+          if (changedBits !== 0) {
+            this.emitter.set(nextProps.value, changedBits);
+          }
+        }
+      }
+    };
+    _proto.render = function render() {
+      return this.props.children;
+    };
+    return Provider;
+  })(React.Component);
+  Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = PropTypes__default['default'].object.isRequired, _Provider$childContex);
+  var Consumer = /*#__PURE__*/(function (_Component2) {
+    _inheritsLoose__default['default'](Consumer, _Component2);
+    function Consumer() {
+      var _this2;
+      _this2 = _Component2.apply(this, arguments) || this;
+      _this2.state = {
+        value: _this2.getValue()
+      };
+      _this2.onUpdate = function (newValue, changedBits) {
+        var observedBits = _this2.observedBits | 0;
+        if ((observedBits & changedBits) !== 0) {
+          _this2.setState({
+            value: _this2.getValue()
+          });
+        }
+      };
+      return _this2;
+    }
+    var _proto2 = Consumer.prototype;
+    _proto2.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+      var observedBits = nextProps.observedBits;
+      this.observedBits = observedBits === undefined || observedBits === null ? MAX_SIGNED_31_BIT_INT : observedBits;
+    };
+    _proto2.componentDidMount = function componentDidMount() {
+      if (this.context[contextProp]) {
+        this.context[contextProp].on(this.onUpdate);
+      }
+      var observedBits = this.props.observedBits;
+      this.observedBits = observedBits === undefined || observedBits === null ? MAX_SIGNED_31_BIT_INT : observedBits;
+    };
+    _proto2.componentWillUnmount = function componentWillUnmount() {
+      if (this.context[contextProp]) {
+        this.context[contextProp].off(this.onUpdate);
+      }
+    };
+    _proto2.getValue = function getValue() {
+      if (this.context[contextProp]) {
+        return this.context[contextProp].get();
+      } else {
+        return defaultValue;
+      }
+    };
+    _proto2.render = function render() {
+      return onlyChild(this.props.children)(this.state.value);
+    };
+    return Consumer;
+  })(React.Component);
+  Consumer.contextTypes = (_Consumer$contextType = {}, _Consumer$contextType[contextProp] = PropTypes__default['default'].object, _Consumer$contextType);
+  return {
+    Provider: Provider,
+    Consumer: Consumer
+  };
+}
+var index = React__default['default'].createContext || createReactContext;
+module.exports = index;
+
+},{"react":"3b2NM","@babel/runtime/helpers/inheritsLoose":"01QUt","prop-types":"4dfy5","tiny-warning":"3B527"}],"01QUt":[function(require,module,exports) {
+var setPrototypeOf = require("./setPrototypeOf.js");
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  setPrototypeOf(subClass, superClass);
+}
+
+module.exports = _inheritsLoose;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{"./setPrototypeOf.js":"37Yld"}],"37Yld":[function(require,module,exports) {
+function _setPrototypeOf(o, p) {
+  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  return _setPrototypeOf(o, p);
+}
+
+module.exports = _setPrototypeOf;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],"2JudW":[function(require,module,exports) {
+var isarray = require('isarray')
+
+/**
+ * Expose `pathToRegexp`.
+ */
+module.exports = pathToRegexp
+module.exports.parse = parse
+module.exports.compile = compile
+module.exports.tokensToFunction = tokensToFunction
+module.exports.tokensToRegExp = tokensToRegExp
+
+/**
+ * The main path matching regexp utility.
+ *
+ * @type {RegExp}
+ */
+var PATH_REGEXP = new RegExp([
+  // Match escaped characters that would otherwise appear in future matches.
+  // This allows the user to escape special characters that won't transform.
+  '(\\\\.)',
+  // Match Express-style parameters and un-named parameters with a prefix
+  // and optional suffixes. Matches appear as:
+  //
+  // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
+  // "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+  // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
+  '([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))'
+].join('|'), 'g')
+
+/**
+ * Parse a string for the raw tokens.
+ *
+ * @param  {string}  str
+ * @param  {Object=} options
+ * @return {!Array}
+ */
+function parse (str, options) {
+  var tokens = []
+  var key = 0
+  var index = 0
+  var path = ''
+  var defaultDelimiter = options && options.delimiter || '/'
+  var res
+
+  while ((res = PATH_REGEXP.exec(str)) != null) {
+    var m = res[0]
+    var escaped = res[1]
+    var offset = res.index
+    path += str.slice(index, offset)
+    index = offset + m.length
+
+    // Ignore already escaped sequences.
+    if (escaped) {
+      path += escaped[1]
+      continue
+    }
+
+    var next = str[index]
+    var prefix = res[2]
+    var name = res[3]
+    var capture = res[4]
+    var group = res[5]
+    var modifier = res[6]
+    var asterisk = res[7]
+
+    // Push the current path onto the tokens.
+    if (path) {
+      tokens.push(path)
+      path = ''
+    }
+
+    var partial = prefix != null && next != null && next !== prefix
+    var repeat = modifier === '+' || modifier === '*'
+    var optional = modifier === '?' || modifier === '*'
+    var delimiter = res[2] || defaultDelimiter
+    var pattern = capture || group
+
+    tokens.push({
+      name: name || key++,
+      prefix: prefix || '',
+      delimiter: delimiter,
+      optional: optional,
+      repeat: repeat,
+      partial: partial,
+      asterisk: !!asterisk,
+      pattern: pattern ? escapeGroup(pattern) : (asterisk ? '.*' : '[^' + escapeString(delimiter) + ']+?')
+    })
+  }
+
+  // Match any characters still remaining.
+  if (index < str.length) {
+    path += str.substr(index)
+  }
+
+  // If the path exists, push it onto the end.
+  if (path) {
+    tokens.push(path)
+  }
+
+  return tokens
+}
+
+/**
+ * Compile a string to a template function for the path.
+ *
+ * @param  {string}             str
+ * @param  {Object=}            options
+ * @return {!function(Object=, Object=)}
+ */
+function compile (str, options) {
+  return tokensToFunction(parse(str, options), options)
+}
+
+/**
+ * Prettier encoding of URI path segments.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+function encodeURIComponentPretty (str) {
+  return encodeURI(str).replace(/[\/?#]/g, function (c) {
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase()
+  })
+}
+
+/**
+ * Encode the asterisk parameter. Similar to `pretty`, but allows slashes.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+function encodeAsterisk (str) {
+  return encodeURI(str).replace(/[?#]/g, function (c) {
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase()
+  })
+}
+
+/**
+ * Expose a method for transforming tokens into the path function.
+ */
+function tokensToFunction (tokens, options) {
+  // Compile all the tokens into regexps.
+  var matches = new Array(tokens.length)
+
+  // Compile all the patterns before compilation.
+  for (var i = 0; i < tokens.length; i++) {
+    if (typeof tokens[i] === 'object') {
+      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$', flags(options))
+    }
+  }
+
+  return function (obj, opts) {
+    var path = ''
+    var data = obj || {}
+    var options = opts || {}
+    var encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent
+
+    for (var i = 0; i < tokens.length; i++) {
+      var token = tokens[i]
+
+      if (typeof token === 'string') {
+        path += token
+
+        continue
+      }
+
+      var value = data[token.name]
+      var segment
+
+      if (value == null) {
+        if (token.optional) {
+          // Prepend partial segment prefixes.
+          if (token.partial) {
+            path += token.prefix
+          }
+
+          continue
+        } else {
+          throw new TypeError('Expected "' + token.name + '" to be defined')
+        }
+      }
+
+      if (isarray(value)) {
+        if (!token.repeat) {
+          throw new TypeError('Expected "' + token.name + '" to not repeat, but received `' + JSON.stringify(value) + '`')
+        }
+
+        if (value.length === 0) {
+          if (token.optional) {
+            continue
+          } else {
+            throw new TypeError('Expected "' + token.name + '" to not be empty')
+          }
+        }
+
+        for (var j = 0; j < value.length; j++) {
+          segment = encode(value[j])
+
+          if (!matches[i].test(segment)) {
+            throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received `' + JSON.stringify(segment) + '`')
+          }
+
+          path += (j === 0 ? token.prefix : token.delimiter) + segment
+        }
+
+        continue
+      }
+
+      segment = token.asterisk ? encodeAsterisk(value) : encode(value)
+
+      if (!matches[i].test(segment)) {
+        throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')
+      }
+
+      path += token.prefix + segment
+    }
+
+    return path
+  }
+}
+
+/**
+ * Escape a regular expression string.
+ *
+ * @param  {string} str
+ * @return {string}
+ */
+function escapeString (str) {
+  return str.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1')
+}
+
+/**
+ * Escape the capturing group by escaping special characters and meaning.
+ *
+ * @param  {string} group
+ * @return {string}
+ */
+function escapeGroup (group) {
+  return group.replace(/([=!:$\/()])/g, '\\$1')
+}
+
+/**
+ * Attach the keys as a property of the regexp.
+ *
+ * @param  {!RegExp} re
+ * @param  {Array}   keys
+ * @return {!RegExp}
+ */
+function attachKeys (re, keys) {
+  re.keys = keys
+  return re
+}
+
+/**
+ * Get the flags for a regexp from the options.
+ *
+ * @param  {Object} options
+ * @return {string}
+ */
+function flags (options) {
+  return options && options.sensitive ? '' : 'i'
+}
+
+/**
+ * Pull out keys from a regexp.
+ *
+ * @param  {!RegExp} path
+ * @param  {!Array}  keys
+ * @return {!RegExp}
+ */
+function regexpToRegexp (path, keys) {
+  // Use a negative lookahead to match only capturing groups.
+  var groups = path.source.match(/\((?!\?)/g)
+
+  if (groups) {
+    for (var i = 0; i < groups.length; i++) {
+      keys.push({
+        name: i,
+        prefix: null,
+        delimiter: null,
+        optional: false,
+        repeat: false,
+        partial: false,
+        asterisk: false,
+        pattern: null
+      })
+    }
+  }
+
+  return attachKeys(path, keys)
+}
+
+/**
+ * Transform an array into a regexp.
+ *
+ * @param  {!Array}  path
+ * @param  {Array}   keys
+ * @param  {!Object} options
+ * @return {!RegExp}
+ */
+function arrayToRegexp (path, keys, options) {
+  var parts = []
+
+  for (var i = 0; i < path.length; i++) {
+    parts.push(pathToRegexp(path[i], keys, options).source)
+  }
+
+  var regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options))
+
+  return attachKeys(regexp, keys)
+}
+
+/**
+ * Create a path regexp from string input.
+ *
+ * @param  {string}  path
+ * @param  {!Array}  keys
+ * @param  {!Object} options
+ * @return {!RegExp}
+ */
+function stringToRegexp (path, keys, options) {
+  return tokensToRegExp(parse(path, options), keys, options)
+}
+
+/**
+ * Expose a function for taking tokens and returning a RegExp.
+ *
+ * @param  {!Array}          tokens
+ * @param  {(Array|Object)=} keys
+ * @param  {Object=}         options
+ * @return {!RegExp}
+ */
+function tokensToRegExp (tokens, keys, options) {
+  if (!isarray(keys)) {
+    options = /** @type {!Object} */ (keys || options)
+    keys = []
+  }
+
+  options = options || {}
+
+  var strict = options.strict
+  var end = options.end !== false
+  var route = ''
+
+  // Iterate over the tokens and create our regexp string.
+  for (var i = 0; i < tokens.length; i++) {
+    var token = tokens[i]
+
+    if (typeof token === 'string') {
+      route += escapeString(token)
+    } else {
+      var prefix = escapeString(token.prefix)
+      var capture = '(?:' + token.pattern + ')'
+
+      keys.push(token)
+
+      if (token.repeat) {
+        capture += '(?:' + prefix + capture + ')*'
+      }
+
+      if (token.optional) {
+        if (!token.partial) {
+          capture = '(?:' + prefix + '(' + capture + '))?'
+        } else {
+          capture = prefix + '(' + capture + ')?'
+        }
+      } else {
+        capture = prefix + '(' + capture + ')'
+      }
+
+      route += capture
+    }
+  }
+
+  var delimiter = escapeString(options.delimiter || '/')
+  var endsWithDelimiter = route.slice(-delimiter.length) === delimiter
+
+  // In non-strict mode we allow a slash at the end of match. If the path to
+  // match already ends with a slash, we remove it for consistency. The slash
+  // is valid at the end of a path match, not in the middle. This is important
+  // in non-ending mode, where "/test/" shouldn't match "/test//route".
+  if (!strict) {
+    route = (endsWithDelimiter ? route.slice(0, -delimiter.length) : route) + '(?:' + delimiter + '(?=$))?'
+  }
+
+  if (end) {
+    route += '$'
+  } else {
+    // In non-ending mode, we need the capturing groups to match as much as
+    // possible by using a positive lookahead to the end or next path segment.
+    route += strict && endsWithDelimiter ? '' : '(?=' + delimiter + '|$)'
+  }
+
+  return attachKeys(new RegExp('^' + route, flags(options)), keys)
+}
+
+/**
+ * Normalize the given path string, returning a regular expression.
+ *
+ * An empty array can be passed in for the keys, which will hold the
+ * placeholder key descriptions. For example, using `/user/:id`, `keys` will
+ * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
+ *
+ * @param  {(string|RegExp|Array)} path
+ * @param  {(Array|Object)=}       keys
+ * @param  {Object=}               options
+ * @return {!RegExp}
+ */
+function pathToRegexp (path, keys, options) {
+  if (!isarray(keys)) {
+    options = /** @type {!Object} */ (keys || options)
+    keys = []
+  }
+
+  options = options || {}
+
+  if (path instanceof RegExp) {
+    return regexpToRegexp(path, /** @type {!Array} */ (keys))
+  }
+
+  if (isarray(path)) {
+    return arrayToRegexp(/** @type {!Array} */ (path), /** @type {!Array} */ (keys), options)
+  }
+
+  return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
+}
+
+},{"isarray":"1Mr3a"}],"1Mr3a":[function(require,module,exports) {
+module.exports = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
+
+},{}],"3nUHV":[function(require,module,exports) {
+'use strict';
+
+var reactIs = require('react-is');
+
+/**
+ * Copyright 2015, Yahoo! Inc.
+ * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
+ */
+var REACT_STATICS = {
+  childContextTypes: true,
+  contextType: true,
+  contextTypes: true,
+  defaultProps: true,
+  displayName: true,
+  getDefaultProps: true,
+  getDerivedStateFromError: true,
+  getDerivedStateFromProps: true,
+  mixins: true,
+  propTypes: true,
+  type: true
+};
+var KNOWN_STATICS = {
+  name: true,
+  length: true,
+  prototype: true,
+  caller: true,
+  callee: true,
+  arguments: true,
+  arity: true
+};
+var FORWARD_REF_STATICS = {
+  '$$typeof': true,
+  render: true,
+  defaultProps: true,
+  displayName: true,
+  propTypes: true
+};
+var MEMO_STATICS = {
+  '$$typeof': true,
+  compare: true,
+  defaultProps: true,
+  displayName: true,
+  propTypes: true,
+  type: true
+};
+var TYPE_STATICS = {};
+TYPE_STATICS[reactIs.ForwardRef] = FORWARD_REF_STATICS;
+TYPE_STATICS[reactIs.Memo] = MEMO_STATICS;
+
+function getStatics(component) {
+  // React v16.11 and below
+  if (reactIs.isMemo(component)) {
+    return MEMO_STATICS;
+  } // React v16.12 and above
+
+
+  return TYPE_STATICS[component['$$typeof']] || REACT_STATICS;
+}
+
+var defineProperty = Object.defineProperty;
+var getOwnPropertyNames = Object.getOwnPropertyNames;
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var getPrototypeOf = Object.getPrototypeOf;
+var objectPrototype = Object.prototype;
+function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+  if (typeof sourceComponent !== 'string') {
+    // don't hoist over string (html) components
+    if (objectPrototype) {
+      var inheritedComponent = getPrototypeOf(sourceComponent);
+
+      if (inheritedComponent && inheritedComponent !== objectPrototype) {
+        hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+      }
+    }
+
+    var keys = getOwnPropertyNames(sourceComponent);
+
+    if (getOwnPropertySymbols) {
+      keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+    }
+
+    var targetStatics = getStatics(targetComponent);
+    var sourceStatics = getStatics(sourceComponent);
+
+    for (var i = 0; i < keys.length; ++i) {
+      var key = keys[i];
+
+      if (!KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
+        var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+
+        try {
+          // Avoid failures from read-only properties
+          defineProperty(targetComponent, key, descriptor);
+        } catch (e) {}
+      }
+    }
+  }
+
+  return targetComponent;
+}
+
+module.exports = hoistNonReactStatics;
+
+},{"react-is":"68QIU"}],"4ESIl":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  require("./home.css");
+  var _HeaderComponentHeader = require("../HeaderComponent/header");
+  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\HomePageComponent\\home.js";
+  class home extends _react.Component {
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 8,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "header-img",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10,
+            columnNumber: 11
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "outer-div",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "page-name",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("center", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+          className: "conf-name",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16,
+            columnNumber: 15
+          }
+        }, "Internatinal Conference on Application Framework"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "dateOfConf",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19,
+            columnNumber: 15
+          }
+        }, "6,7 & 8 of September of 2021"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "venueOfConf",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20,
+            columnNumber: 15
+          }
+        }, "Kularathne Hall of Ananda Collage")))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("center", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "about",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 13
+          }
+        }, "About Our Conference"), /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          className: "aboutConfTopic",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30,
+            columnNumber: 15
+          }
+        }, "Internatinal Conference on Application Framework"))), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33,
+            columnNumber: 11
+          }
+        }, "The 3rd International conference on advancements in computing -2021 (ICAC2021) is organized by the Faculty of Computing of the Sri Lanka Institute of Information Technology (SLIIT) as an open forum for academics along with industry professionals to present the latest findings and research output and practical deployments in the Computer Science and Information Technology domains. Primary objective of the ICAC is to uplift the research culture and the quality of research done by Sri Lankan researchers. This conference will create a platform for national and international researchers to showcase their research output, networking opportunities to discuss innovative ideas, and initiate collaborative work. ICAC 2019 and ICAC 2020 were successfully conducted with a technical co-sponsorship by IEEE Sri Lanka Section and all publications are available in IEEE Xplore digital library December 9 - 11 in Sri Lanka Institute of Information Technology"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("center", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53,
+            columnNumber: 15
+          }
+        }, "Conference Tracks"))), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "trackGrid",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 58,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 59,
+            columnNumber: 15
+          }
+        }, "Frontend Frameworks and Best Parctices"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62,
+            columnNumber: 19
+          }
+        }, "Introduction to Web Frameworks")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 64,
+            columnNumber: 17
+          }
+        }, "React"), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 65,
+            columnNumber: 17
+          }
+        }, "Angular"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 68,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 69,
+            columnNumber: 15
+          }
+        }, "ServerSide Frameworks and Best Parctices"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 70,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72,
+            columnNumber: 19
+          }
+        }, "Introduction to ServerSide Frameworks")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 74,
+            columnNumber: 17
+          }
+        }, "Express"), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 75,
+            columnNumber: 17
+          }
+        }, "Koa"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 78,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 79,
+            columnNumber: 15
+          }
+        }, "Databases"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 80,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 81,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 82,
+            columnNumber: 19
+          }
+        }, "Introduction to Databases")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 84,
+            columnNumber: 17
+          }
+        }, "MongoDB"), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 85,
+            columnNumber: 17
+          }
+        }, "FireBase"), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 86,
+            columnNumber: 17
+          }
+        }, "MySQL"))))))
+      );
+    }
+  }
+  exports.default = home;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"./home.css":"6JSfZ","../HeaderComponent/header":"5VZ8N","react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6JSfZ":[function() {},{}],"5VZ8N":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./header.css");
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\HeaderComponent\\header.js";
+  class header extends _react.Component {
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 7,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("nav", {
+          className: "navbar navbar-expand-lg",
+          id: "header",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 8,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container-fluid",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          className: "navbar-brand",
+          href: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10,
+            columnNumber: 13
+          }
+        }, "logo"), /*#__PURE__*/_reactDefault.default.createElement("button", {
+          className: "navbar-toggler",
+          type: "button",
+          "data-bs-toggle": "collapse",
+          "data-bs-target": "#navbarNav",
+          "aria-controls": "navbarNav",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "navbar-toggler-icon",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22,
+            columnNumber: 15
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "collapse navbar-collapse",
+          id: "navbarNav",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
+          className: "navbar-nav",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          className: "nav-link",
+          "aria-current": "page",
+          href: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 19
+          }
+        }, "Home")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          className: "nav-link",
+          href: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32,
+            columnNumber: 19
+          }
+        }, "Key Notes")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 36,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          className: "nav-link",
+          href: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37,
+            columnNumber: 19
+          }
+        }, "Committe Members")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 41,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          className: "nav-link",
+          href: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42,
+            columnNumber: 19
+          }
+        }, "Registration")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          className: "nav-link",
+          href: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47,
+            columnNumber: 19
+          }
+        }, "WorkShops")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          className: "nav-link",
+          href: "/researchAdd",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52,
+            columnNumber: 19
+          }
+        }, "Research")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          className: "nav-link",
+          href: "/researchReview",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57,
+            columnNumber: 19
+          }
+        }, "Research Review")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          className: "nav-link",
+          href: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62,
+            columnNumber: 19
+          }
+        }, "Template Download")))))))
+      );
+    }
+  }
+  exports.default = header;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","./header.css":"76D0H","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"76D0H":[function() {},{}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {
@@ -26492,6 +31133,19755 @@ function registerExportsForReactRefresh(module) {
   }
 }
 
-},{"react-refresh/runtime":"592mh"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire768c")
+},{"react-refresh/runtime":"592mh"}],"2xxfo":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./homepageconfig.css");
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js";
+  class homePageConfig extends _react.Component {
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 6,
+            columnNumber: 12
+          }
+        })
+      );
+    }
+  }
+  exports.default = homePageConfig;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","./homepageconfig.css":"5Mm2P","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5Mm2P":[function() {},{}],"2pAkI":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _HeaderComponentHeader = require("../HeaderComponent/header");
+  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _TextInputComponentTextInputComponent = require("../TextInputComponent/textInputComponent");
+  var _TextInputComponentTextInputComponentDefault = _parcelHelpers.interopDefault(_TextInputComponentTextInputComponent);
+  var _ButtonComponentButtonComponent = require("../ButtonComponent/buttonComponent");
+  var _ButtonComponentButtonComponentDefault = _parcelHelpers.interopDefault(_ButtonComponentButtonComponent);
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _firebaseIndex = require("../../firebase/index");
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js";
+  const initialState = {
+    researchTitle: "",
+    researchField: "",
+    researchYear: "",
+    coAuthors: "",
+    fileURL: "",
+    researchPaper: ""
+  };
+  class researchAddComponent extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = initialState;
+      this.onChange = this.onChange.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
+      this.handlerChangeFiles = this.handlerChangeFiles.bind(this);
+      this.saveDetails = this.saveDetails.bind(this);
+    }
+    onChange(e) {
+      this.setState({
+        [e.target.name]: e.target.value
+      });
+    }
+    handlerChangeFiles(e) {
+      if (e.target.files[0]) {
+        this.setState({
+          [e.target.name]: e.target.files[0]
+        });
+      }
+    }
+    saveDetails() {
+      console.log("inside save Details");
+      const {researchPaper} = this.state;
+      const date = Date.now();
+      const uploadTask = _firebaseIndex.storage.ref(`researchPapers/${date}_${researchPaper.name}`).put(researchPaper);
+      uploadTask.on("state_changed", snapshot => {}, error => {
+        console.log(error);
+      }, () => {
+        _firebaseIndex.storage.ref("researchPapers").child(`${date}_${researchPaper.name}`).getDownloadURL().then(url => {
+          console.log(url);
+          this.setState({
+            fileURL: url
+          });
+          setTimeout(this.onSubmit(), 3000);
+        });
+      });
+    }
+    onSubmit() {
+      // e.preventDefault();
+      console.log(" inside submit");
+      const dataSet = {
+        researchTitle: this.state.researchTitle,
+        researchField: this.state.researchField,
+        researchYear: this.state.researchYear,
+        coAuthors: this.state.coAuthors,
+        fileURL: this.state.fileURL,
+        isAccepted: "false"
+      };
+      console.log("DataSet", dataSet);
+      const id = "60d82ca3b881ad7a64ce04f2";
+      _axiosDefault.default.post(`http://localhost:5000/researchDetails/addResearchDetails/${id}`, dataSet).then(response => {
+        alert("Research Details Added!!!");
+      }).catch(error => {
+        console.log(error.message);
+        alert(error.message);
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 98,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 99,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 100,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+          className: "mt-5 mb-5",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 101,
+            columnNumber: 11
+          }
+        }, "Research Details "), /*#__PURE__*/_reactDefault.default.createElement("form", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 102,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "text",
+          fieldValue: "Research Title",
+          name: "researchTitle",
+          /*value={this.state.researchTitle}*/
+          id: "researchTitle",
+          onchange: this.onChange,
+          placeholder: "Research Title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 103,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "text",
+          fieldValue: "Research Field",
+          name: "researchField",
+          /*value={"value"}*/
+          id: "researchField",
+          onchange: this.onChange,
+          placeholder: "Research Field",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 112,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "date",
+          fieldValue: "Research Year",
+          name: "researchYear",
+          /*value={"value"}*/
+          id: "researchYear",
+          onchange: this.onChange,
+          placeholder: "Research Year",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 121,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "text",
+          fieldValue: "Research Author",
+          name: "coAuthors",
+          /*value={"value"}*/
+          id: "coAuthors",
+          onchange: this.onChange,
+          placeholder: "Research Author",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 130,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "file",
+          fieldValue: "Research Paper",
+          name: "researchPaper",
+          /*value={"value"}*/
+          id: "researchPaper",
+          onchange: this.handlerChangeFiles,
+          placeholder: "Research Paper",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 139,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "button",
+          classname: "btn btn-info",
+          value: "Add Details",
+          onsubmit: this.saveDetails,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 148,
+            columnNumber: 13
+          }
+        }))))
+      );
+    }
+  }
+  exports.default = researchAddComponent;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"../HeaderComponent/header":"5VZ8N","react":"3b2NM","../TextInputComponent/textInputComponent":"15meu","../ButtonComponent/buttonComponent":"Zx1Ei","axios":"7rA65","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../firebase/index":"3CZmC"}],"15meu":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _propTypes = require("prop-types");
+  var _propTypesDefault = _parcelHelpers.interopDefault(_propTypes);
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\TextInputComponent\\textInputComponent.js";
+  const textInput = ({type, placeholder, value, name, onchange, id, fieldValue}) => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "input-group mb-3",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "input-group-prepend",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+        className: "input-group-text",
+        id: "basic-addon1",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 9
+        }
+      }, fieldValue)), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: type,
+        name: name,
+        value: value,
+        id: id,
+        onChange: onchange,
+        className: "form-control",
+        placeholder: placeholder,
+        "aria-label": placeholder,
+        "aria-describedby": "basic-addon1",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20,
+          columnNumber: 7
+        }
+      }))
+    );
+  };
+  textInput.prototype = {
+    type: _propTypesDefault.default.string.isRequired,
+    placeholder: _propTypesDefault.default.string.isRequired,
+    fieldValue: _propTypesDefault.default.string.isRequired,
+    name: _propTypesDefault.default.string.isRequired,
+    id: _propTypesDefault.default.string.isRequired,
+    value: _propTypesDefault.default.string,
+    onchange: _propTypesDefault.default.func
+  };
+  exports.default = textInput;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"Zx1Ei":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _propTypes = require("prop-types");
+  var _propTypesDefault = _parcelHelpers.interopDefault(_propTypes);
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\ButtonComponent\\buttonComponent.js";
+  const button = ({type, classname, value, onsubmit}) => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("button", {
+        type: type,
+        className: classname,
+        onClick: onsubmit,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 6,
+          columnNumber: 5
+        }
+      }, value)
+    );
+  };
+  button.prototype = {
+    type: _propTypesDefault.default.string.isRequired,
+    classname: _propTypesDefault.default.string.isRequired,
+    value: _propTypesDefault.default.string.isRequired,
+    onsubmit: _propTypesDefault.default.func
+  };
+  exports.default = button;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7rA65":[function(require,module,exports) {
+module.exports = require('./lib/axios');
+},{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./utils');
+var bind = require('./helpers/bind');
+var Axios = require('./core/Axios');
+var mergeConfig = require('./core/mergeConfig');
+var defaults = require('./defaults');
+
+/**
+ * Create an instance of Axios
+ *
+ * @param {Object} defaultConfig The default config for the instance
+ * @return {Axios} A new instance of Axios
+ */
+function createInstance(defaultConfig) {
+  var context = new Axios(defaultConfig);
+  var instance = bind(Axios.prototype.request, context);
+
+  // Copy axios.prototype to instance
+  utils.extend(instance, Axios.prototype, context);
+
+  // Copy context to instance
+  utils.extend(instance, context);
+
+  return instance;
+}
+
+// Create the default instance to be exported
+var axios = createInstance(defaults);
+
+// Expose Axios class to allow class inheritance
+axios.Axios = Axios;
+
+// Factory for creating new instances
+axios.create = function create(instanceConfig) {
+  return createInstance(mergeConfig(axios.defaults, instanceConfig));
+};
+
+// Expose Cancel & CancelToken
+axios.Cancel = require('./cancel/Cancel');
+axios.CancelToken = require('./cancel/CancelToken');
+axios.isCancel = require('./cancel/isCancel');
+
+// Expose all/spread
+axios.all = function all(promises) {
+  return Promise.all(promises);
+};
+axios.spread = require('./helpers/spread');
+
+// Expose isAxiosError
+axios.isAxiosError = require('./helpers/isAxiosError');
+
+module.exports = axios;
+
+// Allow use of default import syntax in TypeScript
+module.exports.default = axios;
+
+},{"./utils":"7J9rV","./helpers/bind":"78Fwk","./core/Axios":"26bz2","./core/mergeConfig":"42z1a","./defaults":"5j10E","./cancel/Cancel":"1Ql7i","./cancel/CancelToken":"hHamf","./cancel/isCancel":"3MAgn","./helpers/spread":"9FoXt","./helpers/isAxiosError":"1bzv8"}],"7J9rV":[function(require,module,exports) {
+'use strict';
+
+var bind = require('./helpers/bind');
+
+/*global toString:true*/
+
+// utils is a library of generic helper functions non-specific to axios
+
+var toString = Object.prototype.toString;
+
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Array, otherwise false
+ */
+function isArray(val) {
+  return toString.call(val) === '[object Array]';
+}
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+function isUndefined(val) {
+  return typeof val === 'undefined';
+}
+
+/**
+ * Determine if a value is a Buffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Buffer, otherwise false
+ */
+function isBuffer(val) {
+  return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor)
+    && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
+}
+
+/**
+ * Determine if a value is an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+ */
+function isArrayBuffer(val) {
+  return toString.call(val) === '[object ArrayBuffer]';
+}
+
+/**
+ * Determine if a value is a FormData
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an FormData, otherwise false
+ */
+function isFormData(val) {
+  return (typeof FormData !== 'undefined') && (val instanceof FormData);
+}
+
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */
+function isArrayBufferView(val) {
+  var result;
+  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+    result = ArrayBuffer.isView(val);
+  } else {
+    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+  }
+  return result;
+}
+
+/**
+ * Determine if a value is a String
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a String, otherwise false
+ */
+function isString(val) {
+  return typeof val === 'string';
+}
+
+/**
+ * Determine if a value is a Number
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Number, otherwise false
+ */
+function isNumber(val) {
+  return typeof val === 'number';
+}
+
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */
+function isObject(val) {
+  return val !== null && typeof val === 'object';
+}
+
+/**
+ * Determine if a value is a plain Object
+ *
+ * @param {Object} val The value to test
+ * @return {boolean} True if value is a plain Object, otherwise false
+ */
+function isPlainObject(val) {
+  if (toString.call(val) !== '[object Object]') {
+    return false;
+  }
+
+  var prototype = Object.getPrototypeOf(val);
+  return prototype === null || prototype === Object.prototype;
+}
+
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */
+function isDate(val) {
+  return toString.call(val) === '[object Date]';
+}
+
+/**
+ * Determine if a value is a File
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a File, otherwise false
+ */
+function isFile(val) {
+  return toString.call(val) === '[object File]';
+}
+
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */
+function isBlob(val) {
+  return toString.call(val) === '[object Blob]';
+}
+
+/**
+ * Determine if a value is a Function
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */
+function isFunction(val) {
+  return toString.call(val) === '[object Function]';
+}
+
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */
+function isStream(val) {
+  return isObject(val) && isFunction(val.pipe);
+}
+
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */
+function isURLSearchParams(val) {
+  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+}
+
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ * @returns {String} The String freed of excess whitespace
+ */
+function trim(str) {
+  return str.replace(/^\s*/, '').replace(/\s*$/, '');
+}
+
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ * nativescript
+ *  navigator.product -> 'NativeScript' or 'NS'
+ */
+function isStandardBrowserEnv() {
+  if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' ||
+                                           navigator.product === 'NativeScript' ||
+                                           navigator.product === 'NS')) {
+    return false;
+  }
+  return (
+    typeof window !== 'undefined' &&
+    typeof document !== 'undefined'
+  );
+}
+
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */
+function forEach(obj, fn) {
+  // Don't bother if no value provided
+  if (obj === null || typeof obj === 'undefined') {
+    return;
+  }
+
+  // Force an array if not already something iterable
+  if (typeof obj !== 'object') {
+    /*eslint no-param-reassign:0*/
+    obj = [obj];
+  }
+
+  if (isArray(obj)) {
+    // Iterate over array values
+    for (var i = 0, l = obj.length; i < l; i++) {
+      fn.call(null, obj[i], i, obj);
+    }
+  } else {
+    // Iterate over object keys
+    for (var key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        fn.call(null, obj[key], key, obj);
+      }
+    }
+  }
+}
+
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+function merge(/* obj1, obj2, obj3, ... */) {
+  var result = {};
+  function assignValue(val, key) {
+    if (isPlainObject(result[key]) && isPlainObject(val)) {
+      result[key] = merge(result[key], val);
+    } else if (isPlainObject(val)) {
+      result[key] = merge({}, val);
+    } else if (isArray(val)) {
+      result[key] = val.slice();
+    } else {
+      result[key] = val;
+    }
+  }
+
+  for (var i = 0, l = arguments.length; i < l; i++) {
+    forEach(arguments[i], assignValue);
+  }
+  return result;
+}
+
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ * @return {Object} The resulting value of object a
+ */
+function extend(a, b, thisArg) {
+  forEach(b, function assignValue(val, key) {
+    if (thisArg && typeof val === 'function') {
+      a[key] = bind(val, thisArg);
+    } else {
+      a[key] = val;
+    }
+  });
+  return a;
+}
+
+/**
+ * Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
+ *
+ * @param {string} content with BOM
+ * @return {string} content value without BOM
+ */
+function stripBOM(content) {
+  if (content.charCodeAt(0) === 0xFEFF) {
+    content = content.slice(1);
+  }
+  return content;
+}
+
+module.exports = {
+  isArray: isArray,
+  isArrayBuffer: isArrayBuffer,
+  isBuffer: isBuffer,
+  isFormData: isFormData,
+  isArrayBufferView: isArrayBufferView,
+  isString: isString,
+  isNumber: isNumber,
+  isObject: isObject,
+  isPlainObject: isPlainObject,
+  isUndefined: isUndefined,
+  isDate: isDate,
+  isFile: isFile,
+  isBlob: isBlob,
+  isFunction: isFunction,
+  isStream: isStream,
+  isURLSearchParams: isURLSearchParams,
+  isStandardBrowserEnv: isStandardBrowserEnv,
+  forEach: forEach,
+  merge: merge,
+  extend: extend,
+  trim: trim,
+  stripBOM: stripBOM
+};
+
+},{"./helpers/bind":"78Fwk"}],"78Fwk":[function(require,module,exports) {
+'use strict';
+
+module.exports = function bind(fn, thisArg) {
+  return function wrap() {
+    var args = new Array(arguments.length);
+    for (var i = 0; i < args.length; i++) {
+      args[i] = arguments[i];
+    }
+    return fn.apply(thisArg, args);
+  };
+};
+
+},{}],"26bz2":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+var buildURL = require('../helpers/buildURL');
+var InterceptorManager = require('./InterceptorManager');
+var dispatchRequest = require('./dispatchRequest');
+var mergeConfig = require('./mergeConfig');
+
+/**
+ * Create a new instance of Axios
+ *
+ * @param {Object} instanceConfig The default config for the instance
+ */
+function Axios(instanceConfig) {
+  this.defaults = instanceConfig;
+  this.interceptors = {
+    request: new InterceptorManager(),
+    response: new InterceptorManager()
+  };
+}
+
+/**
+ * Dispatch a request
+ *
+ * @param {Object} config The config specific for this request (merged with this.defaults)
+ */
+Axios.prototype.request = function request(config) {
+  /*eslint no-param-reassign:0*/
+  // Allow for axios('example/url'[, config]) a la fetch API
+  if (typeof config === 'string') {
+    config = arguments[1] || {};
+    config.url = arguments[0];
+  } else {
+    config = config || {};
+  }
+
+  config = mergeConfig(this.defaults, config);
+
+  // Set config.method
+  if (config.method) {
+    config.method = config.method.toLowerCase();
+  } else if (this.defaults.method) {
+    config.method = this.defaults.method.toLowerCase();
+  } else {
+    config.method = 'get';
+  }
+
+  // Hook up interceptors middleware
+  var chain = [dispatchRequest, undefined];
+  var promise = Promise.resolve(config);
+
+  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+    chain.unshift(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+    chain.push(interceptor.fulfilled, interceptor.rejected);
+  });
+
+  while (chain.length) {
+    promise = promise.then(chain.shift(), chain.shift());
+  }
+
+  return promise;
+};
+
+Axios.prototype.getUri = function getUri(config) {
+  config = mergeConfig(this.defaults, config);
+  return buildURL(config.url, config.params, config.paramsSerializer).replace(/^\?/, '');
+};
+
+// Provide aliases for supported request methods
+utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, config) {
+    return this.request(mergeConfig(config || {}, {
+      method: method,
+      url: url,
+      data: (config || {}).data
+    }));
+  };
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  /*eslint func-names:0*/
+  Axios.prototype[method] = function(url, data, config) {
+    return this.request(mergeConfig(config || {}, {
+      method: method,
+      url: url,
+      data: data
+    }));
+  };
+});
+
+module.exports = Axios;
+
+},{"./../utils":"7J9rV","../helpers/buildURL":"25KfR","./InterceptorManager":"33sRR","./dispatchRequest":"1mCjo","./mergeConfig":"42z1a"}],"25KfR":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+function encode(val) {
+  return encodeURIComponent(val).
+    replace(/%3A/gi, ':').
+    replace(/%24/g, '$').
+    replace(/%2C/gi, ',').
+    replace(/%20/g, '+').
+    replace(/%5B/gi, '[').
+    replace(/%5D/gi, ']');
+}
+
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @returns {string} The formatted url
+ */
+module.exports = function buildURL(url, params, paramsSerializer) {
+  /*eslint no-param-reassign:0*/
+  if (!params) {
+    return url;
+  }
+
+  var serializedParams;
+  if (paramsSerializer) {
+    serializedParams = paramsSerializer(params);
+  } else if (utils.isURLSearchParams(params)) {
+    serializedParams = params.toString();
+  } else {
+    var parts = [];
+
+    utils.forEach(params, function serialize(val, key) {
+      if (val === null || typeof val === 'undefined') {
+        return;
+      }
+
+      if (utils.isArray(val)) {
+        key = key + '[]';
+      } else {
+        val = [val];
+      }
+
+      utils.forEach(val, function parseValue(v) {
+        if (utils.isDate(v)) {
+          v = v.toISOString();
+        } else if (utils.isObject(v)) {
+          v = JSON.stringify(v);
+        }
+        parts.push(encode(key) + '=' + encode(v));
+      });
+    });
+
+    serializedParams = parts.join('&');
+  }
+
+  if (serializedParams) {
+    var hashmarkIndex = url.indexOf('#');
+    if (hashmarkIndex !== -1) {
+      url = url.slice(0, hashmarkIndex);
+    }
+
+    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+  }
+
+  return url;
+};
+
+},{"./../utils":"7J9rV"}],"33sRR":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+function InterceptorManager() {
+  this.handlers = [];
+}
+
+/**
+ * Add a new interceptor to the stack
+ *
+ * @param {Function} fulfilled The function to handle `then` for a `Promise`
+ * @param {Function} rejected The function to handle `reject` for a `Promise`
+ *
+ * @return {Number} An ID used to remove interceptor later
+ */
+InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+  this.handlers.push({
+    fulfilled: fulfilled,
+    rejected: rejected
+  });
+  return this.handlers.length - 1;
+};
+
+/**
+ * Remove an interceptor from the stack
+ *
+ * @param {Number} id The ID that was returned by `use`
+ */
+InterceptorManager.prototype.eject = function eject(id) {
+  if (this.handlers[id]) {
+    this.handlers[id] = null;
+  }
+};
+
+/**
+ * Iterate over all the registered interceptors
+ *
+ * This method is particularly useful for skipping over any
+ * interceptors that may have become `null` calling `eject`.
+ *
+ * @param {Function} fn The function to call for each interceptor
+ */
+InterceptorManager.prototype.forEach = function forEach(fn) {
+  utils.forEach(this.handlers, function forEachHandler(h) {
+    if (h !== null) {
+      fn(h);
+    }
+  });
+};
+
+module.exports = InterceptorManager;
+
+},{"./../utils":"7J9rV"}],"1mCjo":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+var transformData = require('./transformData');
+var isCancel = require('../cancel/isCancel');
+var defaults = require('../defaults');
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+function throwIfCancellationRequested(config) {
+  if (config.cancelToken) {
+    config.cancelToken.throwIfRequested();
+  }
+}
+
+/**
+ * Dispatch a request to the server using the configured adapter.
+ *
+ * @param {object} config The config that is to be used for the request
+ * @returns {Promise} The Promise to be fulfilled
+ */
+module.exports = function dispatchRequest(config) {
+  throwIfCancellationRequested(config);
+
+  // Ensure headers exist
+  config.headers = config.headers || {};
+
+  // Transform request data
+  config.data = transformData(
+    config.data,
+    config.headers,
+    config.transformRequest
+  );
+
+  // Flatten headers
+  config.headers = utils.merge(
+    config.headers.common || {},
+    config.headers[config.method] || {},
+    config.headers
+  );
+
+  utils.forEach(
+    ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+    function cleanHeaderConfig(method) {
+      delete config.headers[method];
+    }
+  );
+
+  var adapter = config.adapter || defaults.adapter;
+
+  return adapter(config).then(function onAdapterResolution(response) {
+    throwIfCancellationRequested(config);
+
+    // Transform response data
+    response.data = transformData(
+      response.data,
+      response.headers,
+      config.transformResponse
+    );
+
+    return response;
+  }, function onAdapterRejection(reason) {
+    if (!isCancel(reason)) {
+      throwIfCancellationRequested(config);
+
+      // Transform response data
+      if (reason && reason.response) {
+        reason.response.data = transformData(
+          reason.response.data,
+          reason.response.headers,
+          config.transformResponse
+        );
+      }
+    }
+
+    return Promise.reject(reason);
+  });
+};
+
+},{"./../utils":"7J9rV","./transformData":"1ueU6","../cancel/isCancel":"3MAgn","../defaults":"5j10E"}],"1ueU6":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+/**
+ * Transform the data for a request or a response
+ *
+ * @param {Object|String} data The data to be transformed
+ * @param {Array} headers The headers for the request or response
+ * @param {Array|Function} fns A single function or Array of functions
+ * @returns {*} The resulting transformed data
+ */
+module.exports = function transformData(data, headers, fns) {
+  /*eslint no-param-reassign:0*/
+  utils.forEach(fns, function transform(fn) {
+    data = fn(data, headers);
+  });
+
+  return data;
+};
+
+},{"./../utils":"7J9rV"}],"3MAgn":[function(require,module,exports) {
+'use strict';
+
+module.exports = function isCancel(value) {
+  return !!(value && value.__CANCEL__);
+};
+
+},{}],"5j10E":[function(require,module,exports) {
+"use strict";
+var process = require("process");
+var utils = require('./utils');
+var normalizeHeaderName = require('./helpers/normalizeHeaderName');
+var DEFAULT_CONTENT_TYPE = {
+  'Content-Type': 'application/x-www-form-urlencoded'
+};
+function setContentTypeIfUnset(headers, value) {
+  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+    headers['Content-Type'] = value;
+  }
+}
+function getDefaultAdapter() {
+  var adapter;
+  if (typeof XMLHttpRequest !== 'undefined') {
+    // For browsers use XHR adapter
+    adapter = require('./adapters/xhr');
+  } else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
+    // For node use HTTP adapter
+    adapter = require('./adapters/http');
+  }
+  return adapter;
+}
+var defaults = {
+  adapter: getDefaultAdapter(),
+  transformRequest: [function transformRequest(data, headers) {
+    normalizeHeaderName(headers, 'Accept');
+    normalizeHeaderName(headers, 'Content-Type');
+    if (utils.isFormData(data) || utils.isArrayBuffer(data) || utils.isBuffer(data) || utils.isStream(data) || utils.isFile(data) || utils.isBlob(data)) {
+      return data;
+    }
+    if (utils.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils.isURLSearchParams(data)) {
+      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+      return data.toString();
+    }
+    if (utils.isObject(data)) {
+      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+      return JSON.stringify(data);
+    }
+    return data;
+  }],
+  transformResponse: [function transformResponse(data) {
+    /*eslint no-param-reassign:0*/
+    if (typeof data === 'string') {
+      try {
+        data = JSON.parse(data);
+      } catch (e) {}
+    }
+    return data;
+  }],
+  /**
+  * A timeout in milliseconds to abort a request. If set to 0 (default) a
+  * timeout is not created.
+  */
+  timeout: 0,
+  xsrfCookieName: 'XSRF-TOKEN',
+  xsrfHeaderName: 'X-XSRF-TOKEN',
+  maxContentLength: -1,
+  maxBodyLength: -1,
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  }
+};
+defaults.headers = {
+  common: {
+    'Accept': 'application/json, text/plain, */*'
+  }
+};
+utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+  defaults.headers[method] = {};
+});
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+});
+module.exports = defaults;
+
+},{"process":"7AgFc","./utils":"7J9rV","./helpers/normalizeHeaderName":"5yMqL","./adapters/xhr":"6pJqL","./adapters/http":"6pJqL"}],"7AgFc":[function(require,module,exports) {
+// shim for using process in browser
+var process = module.exports = {};
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+var cachedSetTimeout;
+var cachedClearTimeout;
+function defaultSetTimout() {
+  throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout() {
+  throw new Error('clearTimeout has not been defined');
+}
+(function () {
+  try {
+    if (typeof setTimeout === 'function') {
+      cachedSetTimeout = setTimeout;
+    } else {
+      cachedSetTimeout = defaultSetTimout;
+    }
+  } catch (e) {
+    cachedSetTimeout = defaultSetTimout;
+  }
+  try {
+    if (typeof clearTimeout === 'function') {
+      cachedClearTimeout = clearTimeout;
+    } else {
+      cachedClearTimeout = defaultClearTimeout;
+    }
+  } catch (e) {
+    cachedClearTimeout = defaultClearTimeout;
+  }
+})();
+function runTimeout(fun) {
+  if (cachedSetTimeout === setTimeout) {
+    // normal enviroments in sane situations
+    return setTimeout(fun, 0);
+  }
+  // if setTimeout wasn't available but was latter defined
+  if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+    cachedSetTimeout = setTimeout;
+    return setTimeout(fun, 0);
+  }
+  try {
+    // when when somebody has screwed with setTimeout but no I.E. maddness
+    return cachedSetTimeout(fun, 0);
+  } catch (e) {
+    try {
+      // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+      return cachedSetTimeout.call(null, fun, 0);
+    } catch (e) {
+      // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+      return cachedSetTimeout.call(this, fun, 0);
+    }
+  }
+}
+function runClearTimeout(marker) {
+  if (cachedClearTimeout === clearTimeout) {
+    // normal enviroments in sane situations
+    return clearTimeout(marker);
+  }
+  // if clearTimeout wasn't available but was latter defined
+  if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+    cachedClearTimeout = clearTimeout;
+    return clearTimeout(marker);
+  }
+  try {
+    // when when somebody has screwed with setTimeout but no I.E. maddness
+    return cachedClearTimeout(marker);
+  } catch (e) {
+    try {
+      // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+      return cachedClearTimeout.call(null, marker);
+    } catch (e) {
+      // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+      // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+      return cachedClearTimeout.call(this, marker);
+    }
+  }
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+function cleanUpNextTick() {
+  if (!draining || !currentQueue) {
+    return;
+  }
+  draining = false;
+  if (currentQueue.length) {
+    queue = currentQueue.concat(queue);
+  } else {
+    queueIndex = -1;
+  }
+  if (queue.length) {
+    drainQueue();
+  }
+}
+function drainQueue() {
+  if (draining) {
+    return;
+  }
+  var timeout = runTimeout(cleanUpNextTick);
+  draining = true;
+  var len = queue.length;
+  while (len) {
+    currentQueue = queue;
+    queue = [];
+    while (++queueIndex < len) {
+      if (currentQueue) {
+        currentQueue[queueIndex].run();
+      }
+    }
+    queueIndex = -1;
+    len = queue.length;
+  }
+  currentQueue = null;
+  draining = false;
+  runClearTimeout(timeout);
+}
+process.nextTick = function (fun) {
+  var args = new Array(arguments.length - 1);
+  if (arguments.length > 1) {
+    for (var i = 1; i < arguments.length; i++) {
+      args[i - 1] = arguments[i];
+    }
+  }
+  queue.push(new Item(fun, args));
+  if (queue.length === 1 && !draining) {
+    runTimeout(drainQueue);
+  }
+};
+// v8 likes predictible objects
+function Item(fun, array) {
+  this.fun = fun;
+  this.array = array;
+}
+Item.prototype.run = function () {
+  this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = '';
+// empty string to avoid regexp issues
+process.versions = {};
+function noop() {}
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+process.listeners = function (name) {
+  return [];
+};
+process.binding = function (name) {
+  throw new Error('process.binding is not supported');
+};
+process.cwd = function () {
+  return '/';
+};
+process.chdir = function (dir) {
+  throw new Error('process.chdir is not supported');
+};
+process.umask = function () {
+  return 0;
+};
+
+},{}],"5yMqL":[function(require,module,exports) {
+'use strict';
+
+var utils = require('../utils');
+
+module.exports = function normalizeHeaderName(headers, normalizedName) {
+  utils.forEach(headers, function processHeader(value, name) {
+    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+      headers[normalizedName] = value;
+      delete headers[name];
+    }
+  });
+};
+
+},{"../utils":"7J9rV"}],"6pJqL":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+var settle = require('./../core/settle');
+var cookies = require('./../helpers/cookies');
+var buildURL = require('./../helpers/buildURL');
+var buildFullPath = require('../core/buildFullPath');
+var parseHeaders = require('./../helpers/parseHeaders');
+var isURLSameOrigin = require('./../helpers/isURLSameOrigin');
+var createError = require('../core/createError');
+
+module.exports = function xhrAdapter(config) {
+  return new Promise(function dispatchXhrRequest(resolve, reject) {
+    var requestData = config.data;
+    var requestHeaders = config.headers;
+
+    if (utils.isFormData(requestData)) {
+      delete requestHeaders['Content-Type']; // Let the browser set it
+    }
+
+    var request = new XMLHttpRequest();
+
+    // HTTP basic authentication
+    if (config.auth) {
+      var username = config.auth.username || '';
+      var password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
+      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+    }
+
+    var fullPath = buildFullPath(config.baseURL, config.url);
+    request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
+
+    // Set the request timeout in MS
+    request.timeout = config.timeout;
+
+    // Listen for ready state
+    request.onreadystatechange = function handleLoad() {
+      if (!request || request.readyState !== 4) {
+        return;
+      }
+
+      // The request errored out and we didn't get a response, this will be
+      // handled by onerror instead
+      // With one exception: request that using file: protocol, most browsers
+      // will return status as 0 even though it's a successful request
+      if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+        return;
+      }
+
+      // Prepare the response
+      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+      var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
+      var response = {
+        data: responseData,
+        status: request.status,
+        statusText: request.statusText,
+        headers: responseHeaders,
+        config: config,
+        request: request
+      };
+
+      settle(resolve, reject, response);
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle browser request cancellation (as opposed to a manual cancellation)
+    request.onabort = function handleAbort() {
+      if (!request) {
+        return;
+      }
+
+      reject(createError('Request aborted', config, 'ECONNABORTED', request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle low level network errors
+    request.onerror = function handleError() {
+      // Real errors are hidden from us by the browser
+      // onerror should only fire if it's a network error
+      reject(createError('Network Error', config, null, request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Handle timeout
+    request.ontimeout = function handleTimeout() {
+      var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
+      if (config.timeoutErrorMessage) {
+        timeoutErrorMessage = config.timeoutErrorMessage;
+      }
+      reject(createError(timeoutErrorMessage, config, 'ECONNABORTED',
+        request));
+
+      // Clean up request
+      request = null;
+    };
+
+    // Add xsrf header
+    // This is only done if running in a standard browser environment.
+    // Specifically not if we're in a web worker, or react-native.
+    if (utils.isStandardBrowserEnv()) {
+      // Add xsrf header
+      var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
+        cookies.read(config.xsrfCookieName) :
+        undefined;
+
+      if (xsrfValue) {
+        requestHeaders[config.xsrfHeaderName] = xsrfValue;
+      }
+    }
+
+    // Add headers to the request
+    if ('setRequestHeader' in request) {
+      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
+          // Remove Content-Type if data is undefined
+          delete requestHeaders[key];
+        } else {
+          // Otherwise add header to the request
+          request.setRequestHeader(key, val);
+        }
+      });
+    }
+
+    // Add withCredentials to request if needed
+    if (!utils.isUndefined(config.withCredentials)) {
+      request.withCredentials = !!config.withCredentials;
+    }
+
+    // Add responseType to request if needed
+    if (config.responseType) {
+      try {
+        request.responseType = config.responseType;
+      } catch (e) {
+        // Expected DOMException thrown by browsers not compatible XMLHttpRequest Level 2.
+        // But, this can be suppressed for 'json' type as it can be parsed by default 'transformResponse' function.
+        if (config.responseType !== 'json') {
+          throw e;
+        }
+      }
+    }
+
+    // Handle progress if needed
+    if (typeof config.onDownloadProgress === 'function') {
+      request.addEventListener('progress', config.onDownloadProgress);
+    }
+
+    // Not all browsers support upload events
+    if (typeof config.onUploadProgress === 'function' && request.upload) {
+      request.upload.addEventListener('progress', config.onUploadProgress);
+    }
+
+    if (config.cancelToken) {
+      // Handle cancellation
+      config.cancelToken.promise.then(function onCanceled(cancel) {
+        if (!request) {
+          return;
+        }
+
+        request.abort();
+        reject(cancel);
+        // Clean up request
+        request = null;
+      });
+    }
+
+    if (!requestData) {
+      requestData = null;
+    }
+
+    // Send the request
+    request.send(requestData);
+  });
+};
+
+},{"./../utils":"7J9rV","./../core/settle":"72M6J","./../helpers/cookies":"1m0F1","./../helpers/buildURL":"25KfR","../core/buildFullPath":"5fWja","./../helpers/parseHeaders":"1KizL","./../helpers/isURLSameOrigin":"6Gtz3","../core/createError":"7ETv1"}],"72M6J":[function(require,module,exports) {
+'use strict';
+
+var createError = require('./createError');
+
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ */
+module.exports = function settle(resolve, reject, response) {
+  var validateStatus = response.config.validateStatus;
+  if (!response.status || !validateStatus || validateStatus(response.status)) {
+    resolve(response);
+  } else {
+    reject(createError(
+      'Request failed with status code ' + response.status,
+      response.config,
+      null,
+      response.request,
+      response
+    ));
+  }
+};
+
+},{"./createError":"7ETv1"}],"7ETv1":[function(require,module,exports) {
+'use strict';
+
+var enhanceError = require('./enhanceError');
+
+/**
+ * Create an Error with the specified message, config, error code, request and response.
+ *
+ * @param {string} message The error message.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The created error.
+ */
+module.exports = function createError(message, config, code, request, response) {
+  var error = new Error(message);
+  return enhanceError(error, config, code, request, response);
+};
+
+},{"./enhanceError":"2O2Ud"}],"2O2Ud":[function(require,module,exports) {
+'use strict';
+
+/**
+ * Update an Error with the specified config, error code, and response.
+ *
+ * @param {Error} error The error to update.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The error.
+ */
+module.exports = function enhanceError(error, config, code, request, response) {
+  error.config = config;
+  if (code) {
+    error.code = code;
+  }
+
+  error.request = request;
+  error.response = response;
+  error.isAxiosError = true;
+
+  error.toJSON = function toJSON() {
+    return {
+      // Standard
+      message: this.message,
+      name: this.name,
+      // Microsoft
+      description: this.description,
+      number: this.number,
+      // Mozilla
+      fileName: this.fileName,
+      lineNumber: this.lineNumber,
+      columnNumber: this.columnNumber,
+      stack: this.stack,
+      // Axios
+      config: this.config,
+      code: this.code
+    };
+  };
+  return error;
+};
+
+},{}],"1m0F1":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs support document.cookie
+    (function standardBrowserEnv() {
+      return {
+        write: function write(name, value, expires, path, domain, secure) {
+          var cookie = [];
+          cookie.push(name + '=' + encodeURIComponent(value));
+
+          if (utils.isNumber(expires)) {
+            cookie.push('expires=' + new Date(expires).toGMTString());
+          }
+
+          if (utils.isString(path)) {
+            cookie.push('path=' + path);
+          }
+
+          if (utils.isString(domain)) {
+            cookie.push('domain=' + domain);
+          }
+
+          if (secure === true) {
+            cookie.push('secure');
+          }
+
+          document.cookie = cookie.join('; ');
+        },
+
+        read: function read(name) {
+          var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+          return (match ? decodeURIComponent(match[3]) : null);
+        },
+
+        remove: function remove(name) {
+          this.write(name, '', Date.now() - 86400000);
+        }
+      };
+    })() :
+
+  // Non standard browser env (web workers, react-native) lack needed support.
+    (function nonStandardBrowserEnv() {
+      return {
+        write: function write() {},
+        read: function read() { return null; },
+        remove: function remove() {}
+      };
+    })()
+);
+
+},{"./../utils":"7J9rV"}],"5fWja":[function(require,module,exports) {
+'use strict';
+
+var isAbsoluteURL = require('../helpers/isAbsoluteURL');
+var combineURLs = require('../helpers/combineURLs');
+
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ * @returns {string} The combined full path
+ */
+module.exports = function buildFullPath(baseURL, requestedURL) {
+  if (baseURL && !isAbsoluteURL(requestedURL)) {
+    return combineURLs(baseURL, requestedURL);
+  }
+  return requestedURL;
+};
+
+},{"../helpers/isAbsoluteURL":"4FcN1","../helpers/combineURLs":"qMap4"}],"4FcN1":[function(require,module,exports) {
+'use strict';
+
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */
+module.exports = function isAbsoluteURL(url) {
+  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+  // by any combination of letters, digits, plus, period, or hyphen.
+  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+};
+
+},{}],"qMap4":[function(require,module,exports) {
+'use strict';
+
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ * @returns {string} The combined URL
+ */
+module.exports = function combineURLs(baseURL, relativeURL) {
+  return relativeURL
+    ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '')
+    : baseURL;
+};
+
+},{}],"1KizL":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+// Headers whose duplicates are ignored by node
+// c.f. https://nodejs.org/api/http.html#http_message_headers
+var ignoreDuplicateOf = [
+  'age', 'authorization', 'content-length', 'content-type', 'etag',
+  'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
+  'last-modified', 'location', 'max-forwards', 'proxy-authorization',
+  'referer', 'retry-after', 'user-agent'
+];
+
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} headers Headers needing to be parsed
+ * @returns {Object} Headers parsed into an object
+ */
+module.exports = function parseHeaders(headers) {
+  var parsed = {};
+  var key;
+  var val;
+  var i;
+
+  if (!headers) { return parsed; }
+
+  utils.forEach(headers.split('\n'), function parser(line) {
+    i = line.indexOf(':');
+    key = utils.trim(line.substr(0, i)).toLowerCase();
+    val = utils.trim(line.substr(i + 1));
+
+    if (key) {
+      if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) {
+        return;
+      }
+      if (key === 'set-cookie') {
+        parsed[key] = (parsed[key] ? parsed[key] : []).concat([val]);
+      } else {
+        parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+      }
+    }
+  });
+
+  return parsed;
+};
+
+},{"./../utils":"7J9rV"}],"6Gtz3":[function(require,module,exports) {
+'use strict';
+
+var utils = require('./../utils');
+
+module.exports = (
+  utils.isStandardBrowserEnv() ?
+
+  // Standard browser envs have full support of the APIs needed to test
+  // whether the request URL is of the same origin as current location.
+    (function standardBrowserEnv() {
+      var msie = /(msie|trident)/i.test(navigator.userAgent);
+      var urlParsingNode = document.createElement('a');
+      var originURL;
+
+      /**
+    * Parse a URL to discover it's components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */
+      function resolveURL(url) {
+        var href = url;
+
+        if (msie) {
+        // IE needs attribute set twice to normalize properties
+          urlParsingNode.setAttribute('href', href);
+          href = urlParsingNode.href;
+        }
+
+        urlParsingNode.setAttribute('href', href);
+
+        // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+        return {
+          href: urlParsingNode.href,
+          protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+          host: urlParsingNode.host,
+          search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+          hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+          hostname: urlParsingNode.hostname,
+          port: urlParsingNode.port,
+          pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+            urlParsingNode.pathname :
+            '/' + urlParsingNode.pathname
+        };
+      }
+
+      originURL = resolveURL(window.location.href);
+
+      /**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */
+      return function isURLSameOrigin(requestURL) {
+        var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+        return (parsed.protocol === originURL.protocol &&
+            parsed.host === originURL.host);
+      };
+    })() :
+
+  // Non standard browser envs (web workers, react-native) lack needed support.
+    (function nonStandardBrowserEnv() {
+      return function isURLSameOrigin() {
+        return true;
+      };
+    })()
+);
+
+},{"./../utils":"7J9rV"}],"42z1a":[function(require,module,exports) {
+'use strict';
+
+var utils = require('../utils');
+
+/**
+ * Config-specific merge-function which creates a new config-object
+ * by merging two configuration objects together.
+ *
+ * @param {Object} config1
+ * @param {Object} config2
+ * @returns {Object} New object resulting from merging config2 to config1
+ */
+module.exports = function mergeConfig(config1, config2) {
+  // eslint-disable-next-line no-param-reassign
+  config2 = config2 || {};
+  var config = {};
+
+  var valueFromConfig2Keys = ['url', 'method', 'data'];
+  var mergeDeepPropertiesKeys = ['headers', 'auth', 'proxy', 'params'];
+  var defaultToConfig2Keys = [
+    'baseURL', 'transformRequest', 'transformResponse', 'paramsSerializer',
+    'timeout', 'timeoutMessage', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
+    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress', 'decompress',
+    'maxContentLength', 'maxBodyLength', 'maxRedirects', 'transport', 'httpAgent',
+    'httpsAgent', 'cancelToken', 'socketPath', 'responseEncoding'
+  ];
+  var directMergeKeys = ['validateStatus'];
+
+  function getMergedValue(target, source) {
+    if (utils.isPlainObject(target) && utils.isPlainObject(source)) {
+      return utils.merge(target, source);
+    } else if (utils.isPlainObject(source)) {
+      return utils.merge({}, source);
+    } else if (utils.isArray(source)) {
+      return source.slice();
+    }
+    return source;
+  }
+
+  function mergeDeepProperties(prop) {
+    if (!utils.isUndefined(config2[prop])) {
+      config[prop] = getMergedValue(config1[prop], config2[prop]);
+    } else if (!utils.isUndefined(config1[prop])) {
+      config[prop] = getMergedValue(undefined, config1[prop]);
+    }
+  }
+
+  utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
+    if (!utils.isUndefined(config2[prop])) {
+      config[prop] = getMergedValue(undefined, config2[prop]);
+    }
+  });
+
+  utils.forEach(mergeDeepPropertiesKeys, mergeDeepProperties);
+
+  utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
+    if (!utils.isUndefined(config2[prop])) {
+      config[prop] = getMergedValue(undefined, config2[prop]);
+    } else if (!utils.isUndefined(config1[prop])) {
+      config[prop] = getMergedValue(undefined, config1[prop]);
+    }
+  });
+
+  utils.forEach(directMergeKeys, function merge(prop) {
+    if (prop in config2) {
+      config[prop] = getMergedValue(config1[prop], config2[prop]);
+    } else if (prop in config1) {
+      config[prop] = getMergedValue(undefined, config1[prop]);
+    }
+  });
+
+  var axiosKeys = valueFromConfig2Keys
+    .concat(mergeDeepPropertiesKeys)
+    .concat(defaultToConfig2Keys)
+    .concat(directMergeKeys);
+
+  var otherKeys = Object
+    .keys(config1)
+    .concat(Object.keys(config2))
+    .filter(function filterAxiosKeys(key) {
+      return axiosKeys.indexOf(key) === -1;
+    });
+
+  utils.forEach(otherKeys, mergeDeepProperties);
+
+  return config;
+};
+
+},{"../utils":"7J9rV"}],"1Ql7i":[function(require,module,exports) {
+'use strict';
+
+/**
+ * A `Cancel` is an object that is thrown when an operation is canceled.
+ *
+ * @class
+ * @param {string=} message The message.
+ */
+function Cancel(message) {
+  this.message = message;
+}
+
+Cancel.prototype.toString = function toString() {
+  return 'Cancel' + (this.message ? ': ' + this.message : '');
+};
+
+Cancel.prototype.__CANCEL__ = true;
+
+module.exports = Cancel;
+
+},{}],"hHamf":[function(require,module,exports) {
+'use strict';
+
+var Cancel = require('./Cancel');
+
+/**
+ * A `CancelToken` is an object that can be used to request cancellation of an operation.
+ *
+ * @class
+ * @param {Function} executor The executor function.
+ */
+function CancelToken(executor) {
+  if (typeof executor !== 'function') {
+    throw new TypeError('executor must be a function.');
+  }
+
+  var resolvePromise;
+  this.promise = new Promise(function promiseExecutor(resolve) {
+    resolvePromise = resolve;
+  });
+
+  var token = this;
+  executor(function cancel(message) {
+    if (token.reason) {
+      // Cancellation has already been requested
+      return;
+    }
+
+    token.reason = new Cancel(message);
+    resolvePromise(token.reason);
+  });
+}
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+  if (this.reason) {
+    throw this.reason;
+  }
+};
+
+/**
+ * Returns an object that contains a new `CancelToken` and a function that, when called,
+ * cancels the `CancelToken`.
+ */
+CancelToken.source = function source() {
+  var cancel;
+  var token = new CancelToken(function executor(c) {
+    cancel = c;
+  });
+  return {
+    token: token,
+    cancel: cancel
+  };
+};
+
+module.exports = CancelToken;
+
+},{"./Cancel":"1Ql7i"}],"9FoXt":[function(require,module,exports) {
+'use strict';
+
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ * @returns {Function}
+ */
+module.exports = function spread(callback) {
+  return function wrap(arr) {
+    return callback.apply(null, arr);
+  };
+};
+
+},{}],"1bzv8":[function(require,module,exports) {
+'use strict';
+
+/**
+ * Determines whether the payload is an error thrown by Axios
+ *
+ * @param {*} payload The value to test
+ * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
+ */
+module.exports = function isAxiosError(payload) {
+  return (typeof payload === 'object') && (payload.isAxiosError === true);
+};
+
+},{}],"3CZmC":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "storage", function () {
+  return storage;
+});
+_parcelHelpers.export(exports, "default", function () {
+  return _firebaseAppDefault.default;
+});
+var _firebaseApp = require("firebase/app");
+var _firebaseAppDefault = _parcelHelpers.interopDefault(_firebaseApp);
+require("firebase/storage");
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDfwvMHYrsp2uGp1wHVHPWXIWW8r8e_jTA",
+  authDomain: "icaf-storage-c23a0.firebaseapp.com",
+  projectId: "icaf-storage-c23a0",
+  storageBucket: "icaf-storage-c23a0.appspot.com",
+  messagingSenderId: "854087654213",
+  appId: "1:854087654213:web:606bcdf35d59e8166ffc2c",
+  measurementId: "G-C5MVXGNQKF"
+};
+_firebaseAppDefault.default.initializeApp(firebaseConfig);
+const storage = _firebaseAppDefault.default.storage();
+
+},{"firebase/app":"6wFrx","firebase/storage":"3QMfp","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"6wFrx":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "default", function () {
+  return _firebaseAppDefault.default;
+});
+var _firebaseApp = require('@firebase/app');
+var _firebaseAppDefault = _parcelHelpers.interopDefault(_firebaseApp);
+var _firebaseAppDefault = _parcelHelpers.interopDefault(_firebaseApp);
+var name = "firebase";
+var version = "8.6.8";
+/**
+* @license
+* Copyright 2018 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+_firebaseAppDefault.default.registerVersion(name, version, 'app');
+_firebaseAppDefault.default.SDK_VERSION = version;
+
+},{"@firebase/app":"6IUA5","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"6IUA5":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "firebase", function () {
+  return firebase$1;
+});
+var _tslib = require('tslib');
+var _firebaseUtil = require('@firebase/util');
+var _firebaseComponent = require('@firebase/component');
+var _firebaseLogger = require('@firebase/logger');
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var _a;
+var ERRORS = (_a = {}, _a["no-app"] = "No Firebase App '{$appName}' has been created - " + 'call Firebase App.initializeApp()', _a["bad-app-name"] = "Illegal App name: '{$appName}", _a["duplicate-app"] = "Firebase App named '{$appName}' already exists", _a["app-deleted"] = "Firebase App named '{$appName}' already deleted", _a["invalid-app-argument"] = 'firebase.{$appName}() takes either no argument or a ' + 'Firebase App instance.', _a["invalid-log-argument"] = 'First argument to `onLog` must be null or a function.', _a);
+var ERROR_FACTORY = new _firebaseUtil.ErrorFactory('app', 'Firebase', ERRORS);
+var name = "@firebase/app";
+var version = "0.6.27";
+var name$1 = "@firebase/analytics";
+var name$2 = "@firebase/app-check";
+var name$3 = "@firebase/auth";
+var name$4 = "@firebase/database";
+var name$5 = "@firebase/functions";
+var name$6 = "@firebase/installations";
+var name$7 = "@firebase/messaging";
+var name$8 = "@firebase/performance";
+var name$9 = "@firebase/remote-config";
+var name$a = "@firebase/storage";
+var name$b = "@firebase/firestore";
+var name$c = "firebase-wrapper";
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var _a$1;
+var DEFAULT_ENTRY_NAME = '[DEFAULT]';
+var PLATFORM_LOG_STRING = (_a$1 = {}, _a$1[name] = 'fire-core', _a$1[name$1] = 'fire-analytics', _a$1[name$2] = 'fire-app-check', _a$1[name$3] = 'fire-auth', _a$1[name$4] = 'fire-rtdb', _a$1[name$5] = 'fire-fn', _a$1[name$6] = 'fire-iid', _a$1[name$7] = 'fire-fcm', _a$1[name$8] = 'fire-perf', _a$1[name$9] = 'fire-rc', _a$1[name$a] = 'fire-gcs', _a$1[name$b] = 'fire-fst', _a$1['fire-js'] = 'fire-js', _a$1[name$c] = 'fire-js-all', _a$1);
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var logger = new _firebaseLogger.Logger('@firebase/app');
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Global context object for a collection of services using
+* a shared authentication state.
+*/
+var FirebaseAppImpl = /** @class*/
+(function () {
+  function FirebaseAppImpl(options, config, firebase_) {
+    var _this = this;
+    this.firebase_ = firebase_;
+    this.isDeleted_ = false;
+    this.name_ = config.name;
+    this.automaticDataCollectionEnabled_ = config.automaticDataCollectionEnabled || false;
+    this.options_ = _firebaseUtil.deepCopy(options);
+    this.container = new _firebaseComponent.ComponentContainer(config.name);
+    // add itself to container
+    this._addComponent(new _firebaseComponent.Component('app', function () {
+      return _this;
+    }, "PUBLIC"));
+    // populate ComponentContainer with existing components
+    this.firebase_.INTERNAL.components.forEach(function (component) {
+      return _this._addComponent(component);
+    });
+  }
+  Object.defineProperty(FirebaseAppImpl.prototype, "automaticDataCollectionEnabled", {
+    get: function () {
+      this.checkDestroyed_();
+      return this.automaticDataCollectionEnabled_;
+    },
+    set: function (val) {
+      this.checkDestroyed_();
+      this.automaticDataCollectionEnabled_ = val;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(FirebaseAppImpl.prototype, "name", {
+    get: function () {
+      this.checkDestroyed_();
+      return this.name_;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(FirebaseAppImpl.prototype, "options", {
+    get: function () {
+      this.checkDestroyed_();
+      return this.options_;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  FirebaseAppImpl.prototype.delete = function () {
+    var _this = this;
+    return new Promise(function (resolve) {
+      _this.checkDestroyed_();
+      resolve();
+    }).then(function () {
+      _this.firebase_.INTERNAL.removeApp(_this.name_);
+      return Promise.all(_this.container.getProviders().map(function (provider) {
+        return provider.delete();
+      }));
+    }).then(function () {
+      _this.isDeleted_ = true;
+    });
+  };
+  /**
+  * Return a service instance associated with this app (creating it
+  * on demand), identified by the passed instanceIdentifier.
+  *
+  * NOTE: Currently storage and functions are the only ones that are leveraging this
+  * functionality. They invoke it by calling:
+  *
+  * ```javascript
+  * firebase.app().storage('STORAGE BUCKET ID')
+  * ```
+  *
+  * The service name is passed to this already
+  * @internal
+  */
+  FirebaseAppImpl.prototype._getService = function (name, instanceIdentifier) {
+    var _a;
+    if (instanceIdentifier === void 0) {
+      instanceIdentifier = DEFAULT_ENTRY_NAME;
+    }
+    this.checkDestroyed_();
+    // Initialize instance if InstatiationMode is `EXPLICIT`.
+    var provider = this.container.getProvider(name);
+    if (!provider.isInitialized() && ((_a = provider.getComponent()) === null || _a === void 0 ? void 0 : _a.instantiationMode) === "EXPLICIT") /*EXPLICIT*/
+    {
+      provider.initialize();
+    }
+    // getImmediate will always succeed because _getService is only called for registered components.
+    return provider.getImmediate({
+      identifier: instanceIdentifier
+    });
+  };
+  /**
+  * Remove a service instance from the cache, so we will create a new instance for this service
+  * when people try to get this service again.
+  *
+  * NOTE: currently only firestore is using this functionality to support firestore shutdown.
+  *
+  * @param name The service name
+  * @param instanceIdentifier instance identifier in case multiple instances are allowed
+  * @internal
+  */
+  FirebaseAppImpl.prototype._removeServiceInstance = function (name, instanceIdentifier) {
+    if (instanceIdentifier === void 0) {
+      instanceIdentifier = DEFAULT_ENTRY_NAME;
+    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    this.container.getProvider(name).clearInstance(instanceIdentifier);
+  };
+  /**
+  * @param component the component being added to this app's container
+  */
+  FirebaseAppImpl.prototype._addComponent = function (component) {
+    try {
+      this.container.addComponent(component);
+    } catch (e) {
+      logger.debug("Component " + component.name + " failed to register with FirebaseApp " + this.name, e);
+    }
+  };
+  FirebaseAppImpl.prototype._addOrOverwriteComponent = function (component) {
+    this.container.addOrOverwriteComponent(component);
+  };
+  FirebaseAppImpl.prototype.toJSON = function () {
+    return {
+      name: this.name,
+      automaticDataCollectionEnabled: this.automaticDataCollectionEnabled,
+      options: this.options
+    };
+  };
+  /**
+  * This function will throw an Error if the App has already been deleted -
+  * use before performing API actions on the App.
+  */
+  FirebaseAppImpl.prototype.checkDestroyed_ = function () {
+    if (this.isDeleted_) {
+      throw ERROR_FACTORY.create("app-deleted", /*APP_DELETED*/
+      {
+        appName: this.name_
+      });
+    }
+  };
+  return FirebaseAppImpl;
+})();
+// Prevent dead-code elimination of these methods w/o invalid property
+// copying.
+FirebaseAppImpl.prototype.name && FirebaseAppImpl.prototype.options || FirebaseAppImpl.prototype.delete || console.log('dc');
+var version$1 = "8.6.8";
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Because auth can't share code with other components, we attach the utility functions
+* in an internal namespace to share code.
+* This function return a firebase namespace object without
+* any utility functions, so it can be shared between the regular firebaseNamespace and
+* the lite version.
+*/
+function createFirebaseNamespaceCore(firebaseAppImpl) {
+  var apps = {};
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  var components = new Map();
+  // A namespace is a plain JavaScript Object.
+  var namespace = {
+    // Hack to prevent Babel from modifying the object returned
+    // as the firebase namespace.
+    // @ts-ignore
+    __esModule: true,
+    initializeApp: initializeApp,
+    // @ts-ignore
+    app: app,
+    registerVersion: registerVersion,
+    setLogLevel: _firebaseLogger.setLogLevel,
+    onLog: onLog,
+    // @ts-ignore
+    apps: null,
+    SDK_VERSION: version$1,
+    INTERNAL: {
+      registerComponent: registerComponent,
+      removeApp: removeApp,
+      components: components,
+      useAsService: useAsService
+    }
+  };
+  // Inject a circular default export to allow Babel users who were previously
+  // using:
+  // 
+  // import firebase from 'firebase';
+  // which becomes: var firebase = require('firebase').default;
+  // 
+  // instead of
+  // 
+  // import * as firebase from 'firebase';
+  // which becomes: var firebase = require('firebase');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  namespace['default'] = namespace;
+  // firebase.apps is a read-only getter.
+  Object.defineProperty(namespace, 'apps', {
+    get: getApps
+  });
+  /**
+  * Called by App.delete() - but before any services associated with the App
+  * are deleted.
+  */
+  function removeApp(name) {
+    delete apps[name];
+  }
+  /**
+  * Get the App object for a given name (or DEFAULT).
+  */
+  function app(name) {
+    name = name || DEFAULT_ENTRY_NAME;
+    if (!_firebaseUtil.contains(apps, name)) {
+      throw ERROR_FACTORY.create("no-app", /*NO_APP*/
+      {
+        appName: name
+      });
+    }
+    return apps[name];
+  }
+  // @ts-ignore
+  app['App'] = firebaseAppImpl;
+  function initializeApp(options, rawConfig) {
+    if (rawConfig === void 0) {
+      rawConfig = {};
+    }
+    if (typeof rawConfig !== 'object' || rawConfig === null) {
+      var name_1 = rawConfig;
+      rawConfig = {
+        name: name_1
+      };
+    }
+    var config = rawConfig;
+    if (config.name === undefined) {
+      config.name = DEFAULT_ENTRY_NAME;
+    }
+    var name = config.name;
+    if (typeof name !== 'string' || !name) {
+      throw ERROR_FACTORY.create("bad-app-name", /*BAD_APP_NAME*/
+      {
+        appName: String(name)
+      });
+    }
+    if (_firebaseUtil.contains(apps, name)) {
+      throw ERROR_FACTORY.create("duplicate-app", /*DUPLICATE_APP*/
+      {
+        appName: name
+      });
+    }
+    var app = new firebaseAppImpl(options, config, namespace);
+    apps[name] = app;
+    return app;
+  }
+  /*
+  * Return an array of all the non-deleted FirebaseApps.
+  */
+  function getApps() {
+    // Make a copy so caller cannot mutate the apps list.
+    return Object.keys(apps).map(function (name) {
+      return apps[name];
+    });
+  }
+  function registerComponent(component) {
+    var componentName = component.name;
+    if (components.has(componentName)) {
+      logger.debug("There were multiple attempts to register component " + componentName + ".");
+      return component.type === "PUBLIC" ? /*PUBLIC*/
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      namespace[componentName] : null;
+    }
+    components.set(componentName, component);
+    // create service namespace for public components
+    if (component.type === "PUBLIC") /*PUBLIC*/
+    {
+      // The Service namespace is an accessor function ...
+      var serviceNamespace = function (appArg) {
+        if (appArg === void 0) {
+          appArg = app();
+        }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if (typeof appArg[componentName] !== 'function') {
+          // Invalid argument.
+          // This happens in the following case: firebase.storage('gs:/')
+          throw ERROR_FACTORY.create("invalid-app-argument", /*INVALID_APP_ARGUMENT*/
+          {
+            appName: componentName
+          });
+        }
+        // Forward service instance lookup to the FirebaseApp.
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        return appArg[componentName]();
+      };
+      // ... and a container for service-level properties.
+      if (component.serviceProps !== undefined) {
+        _firebaseUtil.deepExtend(serviceNamespace, component.serviceProps);
+      }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      namespace[componentName] = serviceNamespace;
+      // Patch the FirebaseAppImpl prototype
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      firebaseAppImpl.prototype[componentName] = // TODO: The eslint disable can be removed and the 'ignoreRestArgs'
+      // option added to the no-explicit-any rule when ESlint releases it.
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+          args[_i] = arguments[_i];
+        }
+        var serviceFxn = this._getService.bind(this, componentName);
+        return serviceFxn.apply(this, component.multipleInstances ? args : []);
+      };
+    }
+    // add the component to existing app instances
+    for (var _i = 0, _a = Object.keys(apps); _i < _a.length; _i++) {
+      var appName = _a[_i];
+      apps[appName]._addComponent(component);
+    }
+    return component.type === "PUBLIC" ? /*PUBLIC*/
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    namespace[componentName] : null;
+  }
+  function registerVersion(libraryKeyOrName, version, variant) {
+    var _a;
+    // TODO: We can use this check to whitelist strings when/if we set up
+    // a good whitelist system.
+    var library = (_a = PLATFORM_LOG_STRING[libraryKeyOrName]) !== null && _a !== void 0 ? _a : libraryKeyOrName;
+    if (variant) {
+      library += "-" + variant;
+    }
+    var libraryMismatch = library.match(/\s|\//);
+    var versionMismatch = version.match(/\s|\//);
+    if (libraryMismatch || versionMismatch) {
+      var warning = ["Unable to register library \"" + library + "\" with version \"" + version + "\":"];
+      if (libraryMismatch) {
+        warning.push("library name \"" + library + "\" contains illegal characters (whitespace or \"/\")");
+      }
+      if (libraryMismatch && versionMismatch) {
+        warning.push('and');
+      }
+      if (versionMismatch) {
+        warning.push("version name \"" + version + "\" contains illegal characters (whitespace or \"/\")");
+      }
+      logger.warn(warning.join(' '));
+      return;
+    }
+    registerComponent(new _firebaseComponent.Component(library + "-version", function () {
+      return {
+        library: library,
+        version: version
+      };
+    }, "VERSION"));
+  }
+  function onLog(logCallback, options) {
+    if (logCallback !== null && typeof logCallback !== 'function') {
+      throw ERROR_FACTORY.create("invalid-log-argument");
+    }
+    _firebaseLogger.setUserLogHandler(logCallback, options);
+  }
+  // Map the requested service to a registered service name
+  // (used to map auth to serverAuth service when needed).
+  function useAsService(app, name) {
+    if (name === 'serverAuth') {
+      return null;
+    }
+    var useService = name;
+    return useService;
+  }
+  return namespace;
+}
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Return a firebase namespace object.
+*
+* In production, this will be called exactly once and the result
+* assigned to the 'firebase' global.  It may be called multiple times
+* in unit tests.
+*/
+function createFirebaseNamespace() {
+  var namespace = createFirebaseNamespaceCore(FirebaseAppImpl);
+  namespace.INTERNAL = _tslib.__assign(_tslib.__assign({}, namespace.INTERNAL), {
+    createFirebaseNamespace: createFirebaseNamespace,
+    extendNamespace: extendNamespace,
+    createSubscribe: _firebaseUtil.createSubscribe,
+    ErrorFactory: _firebaseUtil.ErrorFactory,
+    deepExtend: _firebaseUtil.deepExtend
+  });
+  /**
+  * Patch the top-level firebase namespace with additional properties.
+  *
+  * firebase.INTERNAL.extendNamespace()
+  */
+  function extendNamespace(props) {
+    _firebaseUtil.deepExtend(namespace, props);
+  }
+  return namespace;
+}
+var firebase = createFirebaseNamespace();
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var PlatformLoggerService = /** @class*/
+(function () {
+  function PlatformLoggerService(container) {
+    this.container = container;
+  }
+  // In initial implementation, this will be called by installations on
+  // auth token refresh, and installations will send this string.
+  PlatformLoggerService.prototype.getPlatformInfoString = function () {
+    var providers = this.container.getProviders();
+    // Loop through providers and get library/version pairs from any that are
+    // version components.
+    return providers.map(function (provider) {
+      if (isVersionServiceProvider(provider)) {
+        var service = provider.getImmediate();
+        return service.library + "/" + service.version;
+      } else {
+        return null;
+      }
+    }).filter(function (logString) {
+      return logString;
+    }).join(' ');
+  };
+  return PlatformLoggerService;
+})();
+/**
+*
+* @param provider check if this provider provides a VersionService
+*
+* NOTE: Using Provider<'app-version'> is a hack to indicate that the provider
+* provides VersionService. The provider is not necessarily a 'app-version'
+* provider.
+*/
+function isVersionServiceProvider(provider) {
+  var component = provider.getComponent();
+  return (component === null || component === void 0 ? void 0 : component.type) === "VERSION";
+}
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+function registerCoreComponents(firebase, variant) {
+  firebase.INTERNAL.registerComponent(new _firebaseComponent.Component('platform-logger', function (container) {
+    return new PlatformLoggerService(container);
+  }, "PRIVATE"));
+  // Register `app` package.
+  firebase.registerVersion(name, version, variant);
+  // Register platform SDK identifier (no version).
+  firebase.registerVersion('fire-js', '');
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+// Firebase Lite detection test
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+if (_firebaseUtil.isBrowser() && self.firebase !== undefined) {
+  logger.warn("\n    Warning: Firebase is already defined in the global scope. Please make sure\n    Firebase library is only loaded once.\n  ");
+  // eslint-disable-next-line
+  var sdkVersion = self.firebase.SDK_VERSION;
+  if (sdkVersion && sdkVersion.indexOf('LITE') >= 0) {
+    logger.warn("\n    Warning: You are trying to load Firebase while using Firebase Performance standalone script.\n    You should load Firebase Performance with this instance of Firebase to avoid loading duplicate code.\n    ");
+  }
+}
+var initializeApp = firebase.initializeApp;
+// TODO: This disable can be removed and the 'ignoreRestArgs' option added to
+// the no-explicit-any rule when ESlint releases it.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+firebase.initializeApp = function () {
+  var args = [];
+  for (var _i = 0; _i < arguments.length; _i++) {
+    args[_i] = arguments[_i];
+  }
+  // Environment check before initializing app
+  // Do the check in initializeApp, so people have a chance to disable it by setting logLevel
+  // in @firebase/logger
+  if (_firebaseUtil.isNode()) {
+    logger.warn("\n      Warning: This is a browser-targeted Firebase bundle but it appears it is being\n      run in a Node environment.  If running in a Node environment, make sure you\n      are using the bundle specified by the \"main\" field in package.json.\n      \n      If you are using Webpack, you can specify \"main\" as the first item in\n      \"resolve.mainFields\":\n      https://webpack.js.org/configuration/resolve/#resolvemainfields\n      \n      If using Rollup, use the @rollup/plugin-node-resolve plugin and specify \"main\"\n      as the first item in \"mainFields\", e.g. ['main', 'module'].\n      https://github.com/rollup/@rollup/plugin-node-resolve\n      ");
+  }
+  return initializeApp.apply(undefined, args);
+};
+var firebase$1 = firebase;
+registerCoreComponents(firebase$1);
+exports.default = firebase$1;
+
+},{"tslib":"4rd38","@firebase/util":"3bR6t","@firebase/component":"5qT0x","@firebase/logger":"5PuYX","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"4rd38":[function(require,module,exports) {
+var global = arguments[3];
+var define;
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+******************************************************************************/
+/*global global, define, System, Reflect, Promise*/
+var __extends;
+var __assign;
+var __rest;
+var __decorate;
+var __param;
+var __metadata;
+var __awaiter;
+var __generator;
+var __exportStar;
+var __values;
+var __read;
+var __spread;
+var __spreadArrays;
+var __spreadArray;
+var __await;
+var __asyncGenerator;
+var __asyncDelegator;
+var __asyncValues;
+var __makeTemplateObject;
+var __importStar;
+var __importDefault;
+var __classPrivateFieldGet;
+var __classPrivateFieldSet;
+var __createBinding;
+(function (factory) {
+  var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
+  if (typeof define === "function" && define.amd) {
+    define("tslib", ["exports"], function (exports) {
+      factory(createExporter(root, createExporter(exports)));
+    });
+  } else if (typeof module === "object" && typeof module.exports === "object") {
+    factory(createExporter(root, createExporter(module.exports)));
+  } else {
+    factory(createExporter(root));
+  }
+  function createExporter(exports, previous) {
+    if (exports !== root) {
+      if (typeof Object.create === "function") {
+        Object.defineProperty(exports, "__esModule", {
+          value: true
+        });
+      } else {
+        exports.__esModule = true;
+      }
+    }
+    return function (id, v) {
+      return exports[id] = previous ? previous(id, v) : v;
+    };
+  }
+})(function (exporter) {
+  var extendStatics = Object.setPrototypeOf || ({
+    __proto__: []
+  }) instanceof Array && (function (d, b) {
+    d.__proto__ = b;
+  }) || (function (d, b) {
+    for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+  });
+  __extends = function (d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+    extendStatics(d, b);
+    function __() {
+      this.constructor = d;
+    }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+  __assign = Object.assign || (function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+  });
+  __rest = function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+      if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+    }
+    return t;
+  };
+  __decorate = function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return (c > 3 && r && Object.defineProperty(target, key, r), r);
+  };
+  __param = function (paramIndex, decorator) {
+    return function (target, key) {
+      decorator(target, key, paramIndex);
+    };
+  };
+  __metadata = function (metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+  };
+  __awaiter = function (thisArg, _arguments, P, generator) {
+    function adopt(value) {
+      return value instanceof P ? value : new P(function (resolve) {
+        resolve(value);
+      });
+    }
+    return new (P || (P = Promise))(function (resolve, reject) {
+      function fulfilled(value) {
+        try {
+          step(generator.next(value));
+        } catch (e) {
+          reject(e);
+        }
+      }
+      function rejected(value) {
+        try {
+          step(generator["throw"](value));
+        } catch (e) {
+          reject(e);
+        }
+      }
+      function step(result) {
+        result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+      }
+      step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+  };
+  __generator = function (thisArg, body) {
+    var _ = {
+      label: 0,
+      sent: function () {
+        if (t[0] & 1) throw t[1];
+        return t[1];
+      },
+      trys: [],
+      ops: []
+    }, f, y, t, g;
+    return (g = {
+      next: verb(0),
+      "throw": verb(1),
+      "return": verb(2)
+    }, typeof Symbol === "function" && (g[Symbol.iterator] = function () {
+      return this;
+    }), g);
+    function verb(n) {
+      return function (v) {
+        return step([n, v]);
+      };
+    }
+    function step(op) {
+      if (f) throw new TypeError("Generator is already executing.");
+      while (_) try {
+        if ((f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)) return t;
+        if ((y = 0, t)) op = [op[0] & 2, t.value];
+        switch (op[0]) {
+          case 0:
+          case 1:
+            t = op;
+            break;
+          case 4:
+            _.label++;
+            return {
+              value: op[1],
+              done: false
+            };
+          case 5:
+            _.label++;
+            y = op[1];
+            op = [0];
+            continue;
+          case 7:
+            op = _.ops.pop();
+            _.trys.pop();
+            continue;
+          default:
+            if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+              _ = 0;
+              continue;
+            }
+            if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+              _.label = op[1];
+              break;
+            }
+            if (op[0] === 6 && _.label < t[1]) {
+              _.label = t[1];
+              t = op;
+              break;
+            }
+            if (t && _.label < t[2]) {
+              _.label = t[2];
+              _.ops.push(op);
+              break;
+            }
+            if (t[2]) _.ops.pop();
+            _.trys.pop();
+            continue;
+        }
+        op = body.call(thisArg, _);
+      } catch (e) {
+        op = [6, e];
+        y = 0;
+      } finally {
+        f = t = 0;
+      }
+      if (op[0] & 5) throw op[1];
+      return {
+        value: op[0] ? op[1] : void 0,
+        done: true
+      };
+    }
+  };
+  __exportStar = function (m, o) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
+  };
+  __createBinding = Object.create ? function (o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, {
+      enumerable: true,
+      get: function () {
+        return m[k];
+      }
+    });
+  } : function (o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+  };
+  __values = function (o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+      next: function () {
+        if (o && i >= o.length) o = void 0;
+        return {
+          value: o && o[i++],
+          done: !o
+        };
+      }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+  };
+  __read = function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+      while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    } catch (error) {
+      e = {
+        error: error
+      };
+    } finally {
+      try {
+        if (r && !r.done && (m = i["return"])) m.call(i);
+      } finally {
+        if (e) throw e.error;
+      }
+    }
+    return ar;
+  };
+  /** @deprecated*/
+  __spread = function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+  };
+  /** @deprecated*/
+  __spreadArrays = function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++) for (var a = arguments[i], j = 0, jl = a.length; j < jl; (j++, k++)) r[k] = a[j];
+    return r;
+  };
+  __spreadArray = function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+      if (ar || !((i in from))) {
+        if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+        ar[i] = from[i];
+      }
+    }
+    return to.concat(ar || from);
+  };
+  __await = function (v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+  };
+  __asyncGenerator = function (thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return (i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+      return this;
+    }, i);
+    function verb(n) {
+      if (g[n]) i[n] = function (v) {
+        return new Promise(function (a, b) {
+          q.push([n, v, a, b]) > 1 || resume(n, v);
+        });
+      };
+    }
+    function resume(n, v) {
+      try {
+        step(g[n](v));
+      } catch (e) {
+        settle(q[0][3], e);
+      }
+    }
+    function step(r) {
+      r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
+    }
+    function fulfill(value) {
+      resume("next", value);
+    }
+    function reject(value) {
+      resume("throw", value);
+    }
+    function settle(f, v) {
+      if ((f(v), q.shift(), q.length)) resume(q[0][0], q[0][1]);
+    }
+  };
+  __asyncDelegator = function (o) {
+    var i, p;
+    return (i = {}, verb("next"), verb("throw", function (e) {
+      throw e;
+    }), verb("return"), i[Symbol.iterator] = function () {
+      return this;
+    }, i);
+    function verb(n, f) {
+      i[n] = o[n] ? function (v) {
+        return (p = !p) ? {
+          value: __await(o[n](v)),
+          done: n === "return"
+        } : f ? f(v) : v;
+      } : f;
+    }
+  };
+  __asyncValues = function (o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+      return this;
+    }, i);
+    function verb(n) {
+      i[n] = o[n] && (function (v) {
+        return new Promise(function (resolve, reject) {
+          (v = o[n](v), settle(resolve, reject, v.done, v.value));
+        });
+      });
+    }
+    function settle(resolve, reject, d, v) {
+      Promise.resolve(v).then(function (v) {
+        resolve({
+          value: v,
+          done: d
+        });
+      }, reject);
+    }
+  };
+  __makeTemplateObject = function (cooked, raw) {
+    if (Object.defineProperty) {
+      Object.defineProperty(cooked, "raw", {
+        value: raw
+      });
+    } else {
+      cooked.raw = raw;
+    }
+    return cooked;
+  };
+  var __setModuleDefault = Object.create ? function (o, v) {
+    Object.defineProperty(o, "default", {
+      enumerable: true,
+      value: v
+    });
+  } : function (o, v) {
+    o["default"] = v;
+  };
+  __importStar = function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+  };
+  __importDefault = function (mod) {
+    return mod && mod.__esModule ? mod : {
+      "default": mod
+    };
+  };
+  __classPrivateFieldGet = function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+  };
+  __classPrivateFieldSet = function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value);
+  };
+  exporter("__extends", __extends);
+  exporter("__assign", __assign);
+  exporter("__rest", __rest);
+  exporter("__decorate", __decorate);
+  exporter("__param", __param);
+  exporter("__metadata", __metadata);
+  exporter("__awaiter", __awaiter);
+  exporter("__generator", __generator);
+  exporter("__exportStar", __exportStar);
+  exporter("__createBinding", __createBinding);
+  exporter("__values", __values);
+  exporter("__read", __read);
+  exporter("__spread", __spread);
+  exporter("__spreadArrays", __spreadArrays);
+  exporter("__spreadArray", __spreadArray);
+  exporter("__await", __await);
+  exporter("__asyncGenerator", __asyncGenerator);
+  exporter("__asyncDelegator", __asyncDelegator);
+  exporter("__asyncValues", __asyncValues);
+  exporter("__makeTemplateObject", __makeTemplateObject);
+  exporter("__importStar", __importStar);
+  exporter("__importDefault", __importDefault);
+  exporter("__classPrivateFieldGet", __classPrivateFieldGet);
+  exporter("__classPrivateFieldSet", __classPrivateFieldSet);
+});
+
+},{}],"3bR6t":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "CONSTANTS", function () {
+  return CONSTANTS;
+});
+_parcelHelpers.export(exports, "Deferred", function () {
+  return Deferred;
+});
+_parcelHelpers.export(exports, "ErrorFactory", function () {
+  return ErrorFactory;
+});
+_parcelHelpers.export(exports, "FirebaseError", function () {
+  return FirebaseError;
+});
+_parcelHelpers.export(exports, "MAX_VALUE_MILLIS", function () {
+  return MAX_VALUE_MILLIS;
+});
+_parcelHelpers.export(exports, "RANDOM_FACTOR", function () {
+  return RANDOM_FACTOR;
+});
+_parcelHelpers.export(exports, "Sha1", function () {
+  return Sha1;
+});
+_parcelHelpers.export(exports, "areCookiesEnabled", function () {
+  return areCookiesEnabled;
+});
+_parcelHelpers.export(exports, "assert", function () {
+  return assert;
+});
+_parcelHelpers.export(exports, "assertionError", function () {
+  return assertionError;
+});
+_parcelHelpers.export(exports, "async", function () {
+  return async;
+});
+_parcelHelpers.export(exports, "base64", function () {
+  return base64;
+});
+_parcelHelpers.export(exports, "base64Decode", function () {
+  return base64Decode;
+});
+_parcelHelpers.export(exports, "base64Encode", function () {
+  return base64Encode;
+});
+_parcelHelpers.export(exports, "calculateBackoffMillis", function () {
+  return calculateBackoffMillis;
+});
+_parcelHelpers.export(exports, "contains", function () {
+  return contains;
+});
+_parcelHelpers.export(exports, "createMockUserToken", function () {
+  return createMockUserToken;
+});
+_parcelHelpers.export(exports, "createSubscribe", function () {
+  return createSubscribe;
+});
+_parcelHelpers.export(exports, "decode", function () {
+  return decode;
+});
+_parcelHelpers.export(exports, "deepCopy", function () {
+  return deepCopy;
+});
+_parcelHelpers.export(exports, "deepExtend", function () {
+  return deepExtend;
+});
+_parcelHelpers.export(exports, "errorPrefix", function () {
+  return errorPrefix;
+});
+_parcelHelpers.export(exports, "extractQuerystring", function () {
+  return extractQuerystring;
+});
+_parcelHelpers.export(exports, "getGlobal", function () {
+  return getGlobal;
+});
+_parcelHelpers.export(exports, "getModularInstance", function () {
+  return getModularInstance;
+});
+_parcelHelpers.export(exports, "getUA", function () {
+  return getUA;
+});
+_parcelHelpers.export(exports, "isAdmin", function () {
+  return isAdmin;
+});
+_parcelHelpers.export(exports, "isBrowser", function () {
+  return isBrowser;
+});
+_parcelHelpers.export(exports, "isBrowserExtension", function () {
+  return isBrowserExtension;
+});
+_parcelHelpers.export(exports, "isElectron", function () {
+  return isElectron;
+});
+_parcelHelpers.export(exports, "isEmpty", function () {
+  return isEmpty;
+});
+_parcelHelpers.export(exports, "isIE", function () {
+  return isIE;
+});
+_parcelHelpers.export(exports, "isIndexedDBAvailable", function () {
+  return isIndexedDBAvailable;
+});
+_parcelHelpers.export(exports, "isMobileCordova", function () {
+  return isMobileCordova;
+});
+_parcelHelpers.export(exports, "isNode", function () {
+  return isNode;
+});
+_parcelHelpers.export(exports, "isNodeSdk", function () {
+  return isNodeSdk;
+});
+_parcelHelpers.export(exports, "isReactNative", function () {
+  return isReactNative;
+});
+_parcelHelpers.export(exports, "isSafari", function () {
+  return isSafari;
+});
+_parcelHelpers.export(exports, "isUWP", function () {
+  return isUWP;
+});
+_parcelHelpers.export(exports, "isValidFormat", function () {
+  return isValidFormat;
+});
+_parcelHelpers.export(exports, "isValidTimestamp", function () {
+  return isValidTimestamp;
+});
+_parcelHelpers.export(exports, "issuedAtTime", function () {
+  return issuedAtTime;
+});
+_parcelHelpers.export(exports, "jsonEval", function () {
+  return jsonEval;
+});
+_parcelHelpers.export(exports, "map", function () {
+  return map;
+});
+_parcelHelpers.export(exports, "ordinal", function () {
+  return ordinal;
+});
+_parcelHelpers.export(exports, "querystring", function () {
+  return querystring;
+});
+_parcelHelpers.export(exports, "querystringDecode", function () {
+  return querystringDecode;
+});
+_parcelHelpers.export(exports, "safeGet", function () {
+  return safeGet;
+});
+_parcelHelpers.export(exports, "stringLength", function () {
+  return stringLength;
+});
+_parcelHelpers.export(exports, "stringToByteArray", function () {
+  return stringToByteArray$1;
+});
+_parcelHelpers.export(exports, "stringify", function () {
+  return stringify;
+});
+_parcelHelpers.export(exports, "validateArgCount", function () {
+  return validateArgCount;
+});
+_parcelHelpers.export(exports, "validateCallback", function () {
+  return validateCallback;
+});
+_parcelHelpers.export(exports, "validateContextObject", function () {
+  return validateContextObject;
+});
+_parcelHelpers.export(exports, "validateIndexedDBOpenable", function () {
+  return validateIndexedDBOpenable;
+});
+_parcelHelpers.export(exports, "validateNamespace", function () {
+  return validateNamespace;
+});
+var _tslib = require('tslib');
+var global = arguments[3];
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* @fileoverview Firebase constants.  Some of these (@defines) can be overridden at compile-time.
+*/
+var CONSTANTS = {
+  /**
+  * @define {boolean} Whether this is the client Node.js SDK.
+  */
+  NODE_CLIENT: false,
+  /**
+  * @define {boolean} Whether this is the Admin Node.js SDK.
+  */
+  NODE_ADMIN: false,
+  /**
+  * Firebase SDK Version
+  */
+  SDK_VERSION: '${JSCORE_VERSION}'
+};
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Throws an error if the provided assertion is falsy
+*/
+var assert = function (assertion, message) {
+  if (!assertion) {
+    throw assertionError(message);
+  }
+};
+/**
+* Returns an Error object suitable for throwing.
+*/
+var assertionError = function (message) {
+  return new Error('Firebase Database (' + CONSTANTS.SDK_VERSION + ') INTERNAL ASSERT FAILED: ' + message);
+};
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var stringToByteArray = function (str) {
+  // TODO(user): Use native implementations if/when available
+  var out = [];
+  var p = 0;
+  for (var i = 0; i < str.length; i++) {
+    var c = str.charCodeAt(i);
+    if (c < 128) {
+      out[p++] = c;
+    } else if (c < 2048) {
+      out[p++] = c >> 6 | 192;
+      out[p++] = c & 63 | 128;
+    } else if ((c & 0xfc00) === 0xd800 && i + 1 < str.length && (str.charCodeAt(i + 1) & 0xfc00) === 0xdc00) {
+      // Surrogate Pair
+      c = 0x10000 + ((c & 0x03ff) << 10) + (str.charCodeAt(++i) & 0x03ff);
+      out[p++] = c >> 18 | 240;
+      out[p++] = c >> 12 & 63 | 128;
+      out[p++] = c >> 6 & 63 | 128;
+      out[p++] = c & 63 | 128;
+    } else {
+      out[p++] = c >> 12 | 224;
+      out[p++] = c >> 6 & 63 | 128;
+      out[p++] = c & 63 | 128;
+    }
+  }
+  return out;
+};
+/**
+* Turns an array of numbers into the string given by the concatenation of the
+* characters to which the numbers correspond.
+* @param bytes Array of numbers representing characters.
+* @return Stringification of the array.
+*/
+var byteArrayToString = function (bytes) {
+  // TODO(user): Use native implementations if/when available
+  var out = [];
+  var pos = 0, c = 0;
+  while (pos < bytes.length) {
+    var c1 = bytes[pos++];
+    if (c1 < 128) {
+      out[c++] = String.fromCharCode(c1);
+    } else if (c1 > 191 && c1 < 224) {
+      var c2 = bytes[pos++];
+      out[c++] = String.fromCharCode((c1 & 31) << 6 | c2 & 63);
+    } else if (c1 > 239 && c1 < 365) {
+      // Surrogate Pair
+      var c2 = bytes[pos++];
+      var c3 = bytes[pos++];
+      var c4 = bytes[pos++];
+      var u = ((c1 & 7) << 18 | (c2 & 63) << 12 | (c3 & 63) << 6 | c4 & 63) - 0x10000;
+      out[c++] = String.fromCharCode(0xd800 + (u >> 10));
+      out[c++] = String.fromCharCode(0xdc00 + (u & 1023));
+    } else {
+      var c2 = bytes[pos++];
+      var c3 = bytes[pos++];
+      out[c++] = String.fromCharCode((c1 & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
+    }
+  }
+  return out.join('');
+};
+// We define it as an object literal instead of a class because a class compiled down to es5 can't
+// be treeshaked. https://github.com/rollup/rollup/issues/1691
+// Static lookup maps, lazily populated by init_()
+var base64 = {
+  /**
+  * Maps bytes to characters.
+  */
+  byteToCharMap_: null,
+  /**
+  * Maps characters to bytes.
+  */
+  charToByteMap_: null,
+  /**
+  * Maps bytes to websafe characters.
+  * @private
+  */
+  byteToCharMapWebSafe_: null,
+  /**
+  * Maps websafe characters to bytes.
+  * @private
+  */
+  charToByteMapWebSafe_: null,
+  /**
+  * Our default alphabet, shared between
+  * ENCODED_VALS and ENCODED_VALS_WEBSAFE
+  */
+  ENCODED_VALS_BASE: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 'abcdefghijklmnopqrstuvwxyz' + '0123456789',
+  /**
+  * Our default alphabet. Value 64 (=) is special; it means "nothing."
+  */
+  /**
+  * Our default alphabet. Value 64 (=) is special; it means "nothing."
+  */
+  get ENCODED_VALS() {
+    return this.ENCODED_VALS_BASE + '+/=';
+  },
+  /**
+  * Our websafe alphabet.
+  */
+  /**
+  * Our websafe alphabet.
+  */
+  get ENCODED_VALS_WEBSAFE() {
+    return this.ENCODED_VALS_BASE + '-_.';
+  },
+  /**
+  * Whether this browser supports the atob and btoa functions. This extension
+  * started at Mozilla but is now implemented by many browsers. We use the
+  * ASSUME_* variables to avoid pulling in the full useragent detection library
+  * but still allowing the standard per-browser compilations.
+  *
+  */
+  HAS_NATIVE_SUPPORT: typeof atob === 'function',
+  /**
+  * Base64-encode an array of bytes.
+  *
+  * @param input An array of bytes (numbers with
+  *     value in [0, 255]) to encode.
+  * @param webSafe Boolean indicating we should use the
+  *     alternative alphabet.
+  * @return The base64 encoded string.
+  */
+  encodeByteArray: function (input, webSafe) {
+    if (!Array.isArray(input)) {
+      throw Error('encodeByteArray takes an array as a parameter');
+    }
+    this.init_();
+    var byteToCharMap = webSafe ? this.byteToCharMapWebSafe_ : this.byteToCharMap_;
+    var output = [];
+    for (var i = 0; i < input.length; i += 3) {
+      var byte1 = input[i];
+      var haveByte2 = i + 1 < input.length;
+      var byte2 = haveByte2 ? input[i + 1] : 0;
+      var haveByte3 = i + 2 < input.length;
+      var byte3 = haveByte3 ? input[i + 2] : 0;
+      var outByte1 = byte1 >> 2;
+      var outByte2 = (byte1 & 0x03) << 4 | byte2 >> 4;
+      var outByte3 = (byte2 & 0x0f) << 2 | byte3 >> 6;
+      var outByte4 = byte3 & 0x3f;
+      if (!haveByte3) {
+        outByte4 = 64;
+        if (!haveByte2) {
+          outByte3 = 64;
+        }
+      }
+      output.push(byteToCharMap[outByte1], byteToCharMap[outByte2], byteToCharMap[outByte3], byteToCharMap[outByte4]);
+    }
+    return output.join('');
+  },
+  /**
+  * Base64-encode a string.
+  *
+  * @param input A string to encode.
+  * @param webSafe If true, we should use the
+  *     alternative alphabet.
+  * @return The base64 encoded string.
+  */
+  encodeString: function (input, webSafe) {
+    // Shortcut for Mozilla browsers that implement
+    // a native base64 encoder in the form of "btoa/atob"
+    if (this.HAS_NATIVE_SUPPORT && !webSafe) {
+      return btoa(input);
+    }
+    return this.encodeByteArray(stringToByteArray(input), webSafe);
+  },
+  /**
+  * Base64-decode a string.
+  *
+  * @param input to decode.
+  * @param webSafe True if we should use the
+  *     alternative alphabet.
+  * @return string representing the decoded value.
+  */
+  decodeString: function (input, webSafe) {
+    // Shortcut for Mozilla browsers that implement
+    // a native base64 encoder in the form of "btoa/atob"
+    if (this.HAS_NATIVE_SUPPORT && !webSafe) {
+      return atob(input);
+    }
+    return byteArrayToString(this.decodeStringToByteArray(input, webSafe));
+  },
+  /**
+  * Base64-decode a string.
+  *
+  * In base-64 decoding, groups of four characters are converted into three
+  * bytes.  If the encoder did not apply padding, the input length may not
+  * be a multiple of 4.
+  *
+  * In this case, the last group will have fewer than 4 characters, and
+  * padding will be inferred.  If the group has one or two characters, it decodes
+  * to one byte.  If the group has three characters, it decodes to two bytes.
+  *
+  * @param input Input to decode.
+  * @param webSafe True if we should use the web-safe alphabet.
+  * @return bytes representing the decoded value.
+  */
+  decodeStringToByteArray: function (input, webSafe) {
+    this.init_();
+    var charToByteMap = webSafe ? this.charToByteMapWebSafe_ : this.charToByteMap_;
+    var output = [];
+    for (var i = 0; i < input.length; ) {
+      var byte1 = charToByteMap[input.charAt(i++)];
+      var haveByte2 = i < input.length;
+      var byte2 = haveByte2 ? charToByteMap[input.charAt(i)] : 0;
+      ++i;
+      var haveByte3 = i < input.length;
+      var byte3 = haveByte3 ? charToByteMap[input.charAt(i)] : 64;
+      ++i;
+      var haveByte4 = i < input.length;
+      var byte4 = haveByte4 ? charToByteMap[input.charAt(i)] : 64;
+      ++i;
+      if (byte1 == null || byte2 == null || byte3 == null || byte4 == null) {
+        throw Error();
+      }
+      var outByte1 = byte1 << 2 | byte2 >> 4;
+      output.push(outByte1);
+      if (byte3 !== 64) {
+        var outByte2 = byte2 << 4 & 0xf0 | byte3 >> 2;
+        output.push(outByte2);
+        if (byte4 !== 64) {
+          var outByte3 = byte3 << 6 & 0xc0 | byte4;
+          output.push(outByte3);
+        }
+      }
+    }
+    return output;
+  },
+  /**
+  * Lazy static initialization function. Called before
+  * accessing any of the static map variables.
+  * @private
+  */
+  init_: function () {
+    if (!this.byteToCharMap_) {
+      this.byteToCharMap_ = {};
+      this.charToByteMap_ = {};
+      this.byteToCharMapWebSafe_ = {};
+      this.charToByteMapWebSafe_ = {};
+      // We want quick mappings back and forth, so we precompute two maps.
+      for (var i = 0; i < this.ENCODED_VALS.length; i++) {
+        this.byteToCharMap_[i] = this.ENCODED_VALS.charAt(i);
+        this.charToByteMap_[this.byteToCharMap_[i]] = i;
+        this.byteToCharMapWebSafe_[i] = this.ENCODED_VALS_WEBSAFE.charAt(i);
+        this.charToByteMapWebSafe_[this.byteToCharMapWebSafe_[i]] = i;
+        // Be forgiving when decoding and correctly decode both encodings.
+        if (i >= this.ENCODED_VALS_BASE.length) {
+          this.charToByteMap_[this.ENCODED_VALS_WEBSAFE.charAt(i)] = i;
+          this.charToByteMapWebSafe_[this.ENCODED_VALS.charAt(i)] = i;
+        }
+      }
+    }
+  }
+};
+/**
+* URL-safe base64 encoding
+*/
+var base64Encode = function (str) {
+  var utf8Bytes = stringToByteArray(str);
+  return base64.encodeByteArray(utf8Bytes, true);
+};
+/**
+* URL-safe base64 decoding
+*
+* NOTE: DO NOT use the global atob() function - it does NOT support the
+* base64Url variant encoding.
+*
+* @param str To be decoded
+* @return Decoded result, if possible
+*/
+var base64Decode = function (str) {
+  try {
+    return base64.decodeString(str, true);
+  } catch (e) {
+    console.error('base64Decode failed: ', e);
+  }
+  return null;
+};
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Do a deep-copy of basic JavaScript Objects or Arrays.
+*/
+function deepCopy(value) {
+  return deepExtend(undefined, value);
+}
+/**
+* Copy properties from source to target (recursively allows extension
+* of Objects and Arrays).  Scalar values in the target are over-written.
+* If target is undefined, an object of the appropriate type will be created
+* (and returned).
+*
+* We recursively copy all child properties of plain Objects in the source- so
+* that namespace- like dictionaries are merged.
+*
+* Note that the target can be a function, in which case the properties in
+* the source Object are copied onto it as static properties of the Function.
+*
+* Note: we don't merge __proto__ to prevent prototype pollution
+*/
+function deepExtend(target, source) {
+  if (!(source instanceof Object)) {
+    return source;
+  }
+  switch (source.constructor) {
+    case Date:
+      // Treat Dates like scalars; if the target date object had any child
+      // properties - they will be lost!
+      var dateValue = source;
+      return new Date(dateValue.getTime());
+    case Object:
+      if (target === undefined) {
+        target = {};
+      }
+      break;
+    case Array:
+      // Always copy the array source and overwrite the target.
+      target = [];
+      break;
+    default:
+      // Not a plain Object - treat it as a scalar.
+      return source;
+  }
+  for (var prop in source) {
+    // use isValidKey to guard against prototype pollution. See https://snyk.io/vuln/SNYK-JS-LODASH-450202
+    if (!source.hasOwnProperty(prop) || !isValidKey(prop)) {
+      continue;
+    }
+    target[prop] = deepExtend(target[prop], source[prop]);
+  }
+  return target;
+}
+function isValidKey(key) {
+  return key !== '__proto__';
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var Deferred = /** @class*/
+(function () {
+  function Deferred() {
+    var _this = this;
+    this.reject = function () {};
+    this.resolve = function () {};
+    this.promise = new Promise(function (resolve, reject) {
+      _this.resolve = resolve;
+      _this.reject = reject;
+    });
+  }
+  /**
+  * Our API internals are not promiseified and cannot because our callback APIs have subtle expectations around
+  * invoking promises inline, which Promises are forbidden to do. This method accepts an optional node-style callback
+  * and returns a node-style callback which will resolve or reject the Deferred's promise.
+  */
+  Deferred.prototype.wrapCallback = function (callback) {
+    var _this = this;
+    return function (error, value) {
+      if (error) {
+        _this.reject(error);
+      } else {
+        _this.resolve(value);
+      }
+      if (typeof callback === 'function') {
+        // Attaching noop handler just in case developer wasn't expecting
+        // promises
+        _this.promise.catch(function () {});
+        // Some of our callbacks don't expect a value and our own tests
+        // assert that the parameter length is 1
+        if (callback.length === 1) {
+          callback(error);
+        } else {
+          callback(error, value);
+        }
+      }
+    };
+  };
+  return Deferred;
+})();
+/**
+* @license
+* Copyright 2021 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+function createMockUserToken(token, projectId) {
+  if (token.uid) {
+    throw new Error('The "uid" field is no longer supported by mockUserToken. Please use "sub" instead for Firebase Auth User ID.');
+  }
+  // Unsecured JWTs use "none" as the algorithm.
+  var header = {
+    alg: 'none',
+    type: 'JWT'
+  };
+  var project = projectId || 'demo-project';
+  var iat = token.iat || 0;
+  var sub = token.sub || token.user_id;
+  if (!sub) {
+    throw new Error("mockUserToken must contain 'sub' or 'user_id' field!");
+  }
+  var payload = _tslib.__assign({
+    // Set all required fields to decent defaults
+    iss: "https://securetoken.google.com/" + project,
+    aud: project,
+    iat: iat,
+    exp: iat + 3600,
+    auth_time: iat,
+    sub: sub,
+    user_id: sub,
+    firebase: {
+      sign_in_provider: 'custom',
+      identities: {}
+    }
+  }, token);
+  // Unsecured JWTs use the empty string as a signature.
+  var signature = '';
+  return [base64.encodeString(JSON.stringify(header), /*webSafe=*/
+  false), base64.encodeString(JSON.stringify(payload), /*webSafe=*/
+  false), signature].join('.');
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Returns navigator.userAgent string or '' if it's not defined.
+* @return user agent string
+*/
+function getUA() {
+  if (typeof navigator !== 'undefined' && typeof navigator['userAgent'] === 'string') {
+    return navigator['userAgent'];
+  } else {
+    return '';
+  }
+}
+/**
+* Detect Cordova / PhoneGap / Ionic frameworks on a mobile device.
+*
+* Deliberately does not rely on checking `file://` URLs (as this fails PhoneGap
+* in the Ripple emulator) nor Cordova `onDeviceReady`, which would normally
+* wait for a callback.
+*/
+function isMobileCordova() {
+  return typeof window !== 'undefined' && // @ts-ignore Setting up an broadly applicable index signature for Window
+  // just to deal with this case would probably be a bad idea.
+  !!(window['cordova'] || window['phonegap'] || window['PhoneGap']) && (/ios|iphone|ipod|ipad|android|blackberry|iemobile/i).test(getUA());
+}
+/**
+* Detect Node.js.
+*
+* @return true if Node.js environment is detected.
+*/
+// Node detection logic from: https://github.com/iliakan/detect-node/
+function isNode() {
+  try {
+    return Object.prototype.toString.call(global.process) === '[object process]';
+  } catch (e) {
+    return false;
+  }
+}
+/**
+* Detect Browser Environment
+*/
+function isBrowser() {
+  return typeof self === 'object' && self.self === self;
+}
+function isBrowserExtension() {
+  var runtime = typeof chrome === 'object' ? chrome.runtime : typeof browser === 'object' ? browser.runtime : undefined;
+  return typeof runtime === 'object' && runtime.id !== undefined;
+}
+/**
+* Detect React Native.
+*
+* @return true if ReactNative environment is detected.
+*/
+function isReactNative() {
+  return typeof navigator === 'object' && navigator['product'] === 'ReactNative';
+}
+/** Detects Electron apps.*/
+function isElectron() {
+  return getUA().indexOf('Electron/') >= 0;
+}
+/** Detects Internet Explorer.*/
+function isIE() {
+  var ua = getUA();
+  return ua.indexOf('MSIE ') >= 0 || ua.indexOf('Trident/') >= 0;
+}
+/** Detects Universal Windows Platform apps.*/
+function isUWP() {
+  return getUA().indexOf('MSAppHost/') >= 0;
+}
+/**
+* Detect whether the current SDK build is the Node version.
+*
+* @return true if it's the Node SDK build.
+*/
+function isNodeSdk() {
+  return CONSTANTS.NODE_CLIENT === true || CONSTANTS.NODE_ADMIN === true;
+}
+/** Returns true if we are running in Safari.*/
+function isSafari() {
+  return !isNode() && navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome');
+}
+/**
+* This method checks if indexedDB is supported by current browser/service worker context
+* @return true if indexedDB is supported by current browser/service worker context
+*/
+function isIndexedDBAvailable() {
+  return ('indexedDB' in self) && indexedDB != null;
+}
+/**
+* This method validates browser/sw context for indexedDB by opening a dummy indexedDB database and reject
+* if errors occur during the database open operation.
+*
+* @throws exception if current browser/sw context can't run idb.open (ex: Safari iframe, Firefox
+* private browsing)
+*/
+function validateIndexedDBOpenable() {
+  return new Promise(function (resolve, reject) {
+    try {
+      var preExist_1 = true;
+      var DB_CHECK_NAME_1 = 'validate-browser-context-for-indexeddb-analytics-module';
+      var request_1 = self.indexedDB.open(DB_CHECK_NAME_1);
+      request_1.onsuccess = function () {
+        request_1.result.close();
+        // delete database only when it doesn't pre-exist
+        if (!preExist_1) {
+          self.indexedDB.deleteDatabase(DB_CHECK_NAME_1);
+        }
+        resolve(true);
+      };
+      request_1.onupgradeneeded = function () {
+        preExist_1 = false;
+      };
+      request_1.onerror = function () {
+        var _a;
+        reject(((_a = request_1.error) === null || _a === void 0 ? void 0 : _a.message) || '');
+      };
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+/**
+*
+* This method checks whether cookie is enabled within current browser
+* @return true if cookie is enabled within current browser
+*/
+function areCookiesEnabled() {
+  if (!navigator || !navigator.cookieEnabled) {
+    return false;
+  }
+  return true;
+}
+/**
+* Polyfill for `globalThis` object.
+* @returns the `globalThis` object for the given environment.
+*/
+function getGlobal() {
+  if (typeof self !== 'undefined') {
+    return self;
+  }
+  if (typeof window !== 'undefined') {
+    return window;
+  }
+  if (typeof global !== 'undefined') {
+    return global;
+  }
+  throw new Error('Unable to locate global object.');
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var ERROR_NAME = 'FirebaseError';
+// Based on code from:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Custom_Error_Types
+var FirebaseError = /** @class*/
+(function (_super) {
+  _tslib.__extends(FirebaseError, _super);
+  function FirebaseError(code, message, customData) {
+    var _this = _super.call(this, message) || this;
+    _this.code = code;
+    _this.customData = customData;
+    _this.name = ERROR_NAME;
+    // Fix For ES5
+    // https://github.com/Microsoft/TypeScript-wiki/blob/master/Breaking-Changes.md#extending-built-ins-like-error-array-and-map-may-no-longer-work
+    Object.setPrototypeOf(_this, FirebaseError.prototype);
+    // Maintains proper stack trace for where our error was thrown.
+    // Only available on V8.
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(_this, ErrorFactory.prototype.create);
+    }
+    return _this;
+  }
+  return FirebaseError;
+})(Error);
+var ErrorFactory = /** @class*/
+(function () {
+  function ErrorFactory(service, serviceName, errors) {
+    this.service = service;
+    this.serviceName = serviceName;
+    this.errors = errors;
+  }
+  ErrorFactory.prototype.create = function (code) {
+    var data = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+      data[_i - 1] = arguments[_i];
+    }
+    var customData = data[0] || ({});
+    var fullCode = this.service + "/" + code;
+    var template = this.errors[code];
+    var message = template ? replaceTemplate(template, customData) : 'Error';
+    // Service Name: Error message (service/code).
+    var fullMessage = this.serviceName + ": " + message + " (" + fullCode + ").";
+    var error = new FirebaseError(fullCode, fullMessage, customData);
+    return error;
+  };
+  return ErrorFactory;
+})();
+function replaceTemplate(template, data) {
+  return template.replace(PATTERN, function (_, key) {
+    var value = data[key];
+    return value != null ? String(value) : "<" + key + "?>";
+  });
+}
+var PATTERN = /\{\$([^}]+)}/g;
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Evaluates a JSON string into a javascript object.
+*
+* @param {string} str A string containing JSON.
+* @return {*} The javascript object representing the specified JSON.
+*/
+function jsonEval(str) {
+  return JSON.parse(str);
+}
+/**
+* Returns JSON representing a javascript object.
+* @param {*} data Javascript object to be stringified.
+* @return {string} The JSON contents of the object.
+*/
+function stringify(data) {
+  return JSON.stringify(data);
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Decodes a Firebase auth. token into constituent parts.
+*
+* Notes:
+* - May return with invalid / incomplete claims if there's no native base64 decoding support.
+* - Doesn't check if the token is actually valid.
+*/
+var decode = function (token) {
+  var header = {}, claims = {}, data = {}, signature = '';
+  try {
+    var parts = token.split('.');
+    header = jsonEval(base64Decode(parts[0]) || '');
+    claims = jsonEval(base64Decode(parts[1]) || '');
+    signature = parts[2];
+    data = claims['d'] || ({});
+    delete claims['d'];
+  } catch (e) {}
+  return {
+    header: header,
+    claims: claims,
+    data: data,
+    signature: signature
+  };
+};
+/**
+* Decodes a Firebase auth. token and checks the validity of its time-based claims. Will return true if the
+* token is within the time window authorized by the 'nbf' (not-before) and 'iat' (issued-at) claims.
+*
+* Notes:
+* - May return a false negative if there's no native base64 decoding support.
+* - Doesn't check if the token is actually valid.
+*/
+var isValidTimestamp = function (token) {
+  var claims = decode(token).claims;
+  var now = Math.floor(new Date().getTime() / 1000);
+  var validSince = 0, validUntil = 0;
+  if (typeof claims === 'object') {
+    if (claims.hasOwnProperty('nbf')) {
+      validSince = claims['nbf'];
+    } else if (claims.hasOwnProperty('iat')) {
+      validSince = claims['iat'];
+    }
+    if (claims.hasOwnProperty('exp')) {
+      validUntil = claims['exp'];
+    } else {
+      // token will expire after 24h by default
+      validUntil = validSince + 86400;
+    }
+  }
+  return !!now && !!validSince && !!validUntil && now >= validSince && now <= validUntil;
+};
+/**
+* Decodes a Firebase auth. token and returns its issued at time if valid, null otherwise.
+*
+* Notes:
+* - May return null if there's no native base64 decoding support.
+* - Doesn't check if the token is actually valid.
+*/
+var issuedAtTime = function (token) {
+  var claims = decode(token).claims;
+  if (typeof claims === 'object' && claims.hasOwnProperty('iat')) {
+    return claims['iat'];
+  }
+  return null;
+};
+/**
+* Decodes a Firebase auth. token and checks the validity of its format. Expects a valid issued-at time.
+*
+* Notes:
+* - May return a false negative if there's no native base64 decoding support.
+* - Doesn't check if the token is actually valid.
+*/
+var isValidFormat = function (token) {
+  var decoded = decode(token), claims = decoded.claims;
+  return !!claims && typeof claims === 'object' && claims.hasOwnProperty('iat');
+};
+/**
+* Attempts to peer into an auth token and determine if it's an admin auth token by looking at the claims portion.
+*
+* Notes:
+* - May return a false negative if there's no native base64 decoding support.
+* - Doesn't check if the token is actually valid.
+*/
+var isAdmin = function (token) {
+  var claims = decode(token).claims;
+  return typeof claims === 'object' && claims['admin'] === true;
+};
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+function contains(obj, key) {
+  return Object.prototype.hasOwnProperty.call(obj, key);
+}
+function safeGet(obj, key) {
+  if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    return obj[key];
+  } else {
+    return undefined;
+  }
+}
+function isEmpty(obj) {
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      return false;
+    }
+  }
+  return true;
+}
+function map(obj, fn, contextObj) {
+  var res = {};
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      res[key] = fn.call(contextObj, obj[key], key, obj);
+    }
+  }
+  return res;
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Returns a querystring-formatted string (e.g. &arg=val&arg2=val2) from a
+* params object (e.g. {arg: 'val', arg2: 'val2'})
+* Note: You must prepend it with ? when adding it to a URL.
+*/
+function querystring(querystringParams) {
+  var params = [];
+  var _loop_1 = function (key, value) {
+    if (Array.isArray(value)) {
+      value.forEach(function (arrayVal) {
+        params.push(encodeURIComponent(key) + '=' + encodeURIComponent(arrayVal));
+      });
+    } else {
+      params.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
+    }
+  };
+  for (var _i = 0, _a = Object.entries(querystringParams); _i < _a.length; _i++) {
+    var _b = _a[_i], key = _b[0], value = _b[1];
+    _loop_1(key, value);
+  }
+  return params.length ? '&' + params.join('&') : '';
+}
+/**
+* Decodes a querystring (e.g. ?arg=val&arg2=val2) into a params object
+* (e.g. {arg: 'val', arg2: 'val2'})
+*/
+function querystringDecode(querystring) {
+  var obj = {};
+  var tokens = querystring.replace(/^\?/, '').split('&');
+  tokens.forEach(function (token) {
+    if (token) {
+      var _a = token.split('='), key = _a[0], value = _a[1];
+      obj[decodeURIComponent(key)] = decodeURIComponent(value);
+    }
+  });
+  return obj;
+}
+/**
+* Extract the query string part of a URL, including the leading question mark (if present).
+*/
+function extractQuerystring(url) {
+  var queryStart = url.indexOf('?');
+  if (!queryStart) {
+    return '';
+  }
+  var fragmentStart = url.indexOf('#', queryStart);
+  return url.substring(queryStart, fragmentStart > 0 ? fragmentStart : undefined);
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* @fileoverview SHA-1 cryptographic hash.
+* Variable names follow the notation in FIPS PUB 180-3:
+* http://csrc.nist.gov/publications/fips/fips180-3/fips180-3_final.pdf.
+*
+* Usage:
+*   var sha1 = new sha1();
+*   sha1.update(bytes);
+*   var hash = sha1.digest();
+*
+* Performance:
+*   Chrome 23:   ~400 Mbit/s
+*   Firefox 16:  ~250 Mbit/s
+*
+*/
+/**
+* SHA-1 cryptographic hash constructor.
+*
+* The properties declared here are discussed in the above algorithm document.
+* @constructor
+* @final
+* @struct
+*/
+var Sha1 = /** @class*/
+(function () {
+  function Sha1() {
+    /**
+    * Holds the previous values of accumulated variables a-e in the compress_
+    * function.
+    * @private
+    */
+    this.chain_ = [];
+    /**
+    * A buffer holding the partially computed hash result.
+    * @private
+    */
+    this.buf_ = [];
+    /**
+    * An array of 80 bytes, each a part of the message to be hashed.  Referred to
+    * as the message schedule in the docs.
+    * @private
+    */
+    this.W_ = [];
+    /**
+    * Contains data needed to pad messages less than 64 bytes.
+    * @private
+    */
+    this.pad_ = [];
+    /**
+    * @private {number}
+    */
+    this.inbuf_ = 0;
+    /**
+    * @private {number}
+    */
+    this.total_ = 0;
+    this.blockSize = 512 / 8;
+    this.pad_[0] = 128;
+    for (var i = 1; i < this.blockSize; ++i) {
+      this.pad_[i] = 0;
+    }
+    this.reset();
+  }
+  Sha1.prototype.reset = function () {
+    this.chain_[0] = 0x67452301;
+    this.chain_[1] = 0xefcdab89;
+    this.chain_[2] = 0x98badcfe;
+    this.chain_[3] = 0x10325476;
+    this.chain_[4] = 0xc3d2e1f0;
+    this.inbuf_ = 0;
+    this.total_ = 0;
+  };
+  /**
+  * Internal compress helper function.
+  * @param buf Block to compress.
+  * @param offset Offset of the block in the buffer.
+  * @private
+  */
+  Sha1.prototype.compress_ = function (buf, offset) {
+    if (!offset) {
+      offset = 0;
+    }
+    var W = this.W_;
+    // get 16 big endian words
+    if (typeof buf === 'string') {
+      for (var i = 0; i < 16; i++) {
+        // TODO(user): [bug 8140122] Recent versions of Safari for Mac OS and iOS
+        // have a bug that turns the post-increment ++ operator into pre-increment
+        // during JIT compilation.  We have code that depends heavily on SHA-1 for
+        // correctness and which is affected by this bug, so I've removed all uses
+        // of post-increment ++ in which the result value is used.  We can revert
+        // this change once the Safari bug
+        // (https://bugs.webkit.org/show_bug.cgi?id=109036) has been fixed and
+        // most clients have been updated.
+        W[i] = buf.charCodeAt(offset) << 24 | buf.charCodeAt(offset + 1) << 16 | buf.charCodeAt(offset + 2) << 8 | buf.charCodeAt(offset + 3);
+        offset += 4;
+      }
+    } else {
+      for (var i = 0; i < 16; i++) {
+        W[i] = buf[offset] << 24 | buf[offset + 1] << 16 | buf[offset + 2] << 8 | buf[offset + 3];
+        offset += 4;
+      }
+    }
+    // expand to 80 words
+    for (var i = 16; i < 80; i++) {
+      var t = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];
+      W[i] = (t << 1 | t >>> 31) & 0xffffffff;
+    }
+    var a = this.chain_[0];
+    var b = this.chain_[1];
+    var c = this.chain_[2];
+    var d = this.chain_[3];
+    var e = this.chain_[4];
+    var f, k;
+    // TODO(user): Try to unroll this loop to speed up the computation.
+    for (var i = 0; i < 80; i++) {
+      if (i < 40) {
+        if (i < 20) {
+          f = d ^ b & (c ^ d);
+          k = 0x5a827999;
+        } else {
+          f = b ^ c ^ d;
+          k = 0x6ed9eba1;
+        }
+      } else {
+        if (i < 60) {
+          f = b & c | d & (b | c);
+          k = 0x8f1bbcdc;
+        } else {
+          f = b ^ c ^ d;
+          k = 0xca62c1d6;
+        }
+      }
+      var t = (a << 5 | a >>> 27) + f + e + k + W[i] & 0xffffffff;
+      e = d;
+      d = c;
+      c = (b << 30 | b >>> 2) & 0xffffffff;
+      b = a;
+      a = t;
+    }
+    this.chain_[0] = this.chain_[0] + a & 0xffffffff;
+    this.chain_[1] = this.chain_[1] + b & 0xffffffff;
+    this.chain_[2] = this.chain_[2] + c & 0xffffffff;
+    this.chain_[3] = this.chain_[3] + d & 0xffffffff;
+    this.chain_[4] = this.chain_[4] + e & 0xffffffff;
+  };
+  Sha1.prototype.update = function (bytes, length) {
+    // TODO(johnlenz): tighten the function signature and remove this check
+    if (bytes == null) {
+      return;
+    }
+    if (length === undefined) {
+      length = bytes.length;
+    }
+    var lengthMinusBlock = length - this.blockSize;
+    var n = 0;
+    // Using local instead of member variables gives ~5% speedup on Firefox 16.
+    var buf = this.buf_;
+    var inbuf = this.inbuf_;
+    // The outer while loop should execute at most twice.
+    while (n < length) {
+      // When we have no data in the block to top up, we can directly process the
+      // input buffer (assuming it contains sufficient data). This gives ~25%
+      // speedup on Chrome 23 and ~15% speedup on Firefox 16, but requires that
+      // the data is provided in large chunks (or in multiples of 64 bytes).
+      if (inbuf === 0) {
+        while (n <= lengthMinusBlock) {
+          this.compress_(bytes, n);
+          n += this.blockSize;
+        }
+      }
+      if (typeof bytes === 'string') {
+        while (n < length) {
+          buf[inbuf] = bytes.charCodeAt(n);
+          ++inbuf;
+          ++n;
+          if (inbuf === this.blockSize) {
+            this.compress_(buf);
+            inbuf = 0;
+            // Jump to the outer loop so we use the full-block optimization.
+            break;
+          }
+        }
+      } else {
+        while (n < length) {
+          buf[inbuf] = bytes[n];
+          ++inbuf;
+          ++n;
+          if (inbuf === this.blockSize) {
+            this.compress_(buf);
+            inbuf = 0;
+            // Jump to the outer loop so we use the full-block optimization.
+            break;
+          }
+        }
+      }
+    }
+    this.inbuf_ = inbuf;
+    this.total_ += length;
+  };
+  /** @override*/
+  Sha1.prototype.digest = function () {
+    var digest = [];
+    var totalBits = this.total_ * 8;
+    // Add pad 0x80 0x00*.
+    if (this.inbuf_ < 56) {
+      this.update(this.pad_, 56 - this.inbuf_);
+    } else {
+      this.update(this.pad_, this.blockSize - (this.inbuf_ - 56));
+    }
+    // Add # bits.
+    for (var i = this.blockSize - 1; i >= 56; i--) {
+      this.buf_[i] = totalBits & 255;
+      totalBits /= 256;
+    }
+    this.compress_(this.buf_);
+    var n = 0;
+    for (var i = 0; i < 5; i++) {
+      for (var j = 24; j >= 0; j -= 8) {
+        digest[n] = this.chain_[i] >> j & 255;
+        ++n;
+      }
+    }
+    return digest;
+  };
+  return Sha1;
+})();
+/**
+* Helper to make a Subscribe function (just like Promise helps make a
+* Thenable).
+*
+* @param executor Function which can make calls to a single Observer
+*     as a proxy.
+* @param onNoObservers Callback when count of Observers goes to zero.
+*/
+function createSubscribe(executor, onNoObservers) {
+  var proxy = new ObserverProxy(executor, onNoObservers);
+  return proxy.subscribe.bind(proxy);
+}
+/**
+* Implement fan-out for any number of Observers attached via a subscribe
+* function.
+*/
+var ObserverProxy = /** @class*/
+(function () {
+  /**
+  * @param executor Function which can make calls to a single Observer
+  *     as a proxy.
+  * @param onNoObservers Callback when count of Observers goes to zero.
+  */
+  function ObserverProxy(executor, onNoObservers) {
+    var _this = this;
+    this.observers = [];
+    this.unsubscribes = [];
+    this.observerCount = 0;
+    // Micro-task scheduling by calling task.then().
+    this.task = Promise.resolve();
+    this.finalized = false;
+    this.onNoObservers = onNoObservers;
+    // Call the executor asynchronously so subscribers that are called
+    // synchronously after the creation of the subscribe function
+    // can still receive the very first value generated in the executor.
+    this.task.then(function () {
+      executor(_this);
+    }).catch(function (e) {
+      _this.error(e);
+    });
+  }
+  ObserverProxy.prototype.next = function (value) {
+    this.forEachObserver(function (observer) {
+      observer.next(value);
+    });
+  };
+  ObserverProxy.prototype.error = function (error) {
+    this.forEachObserver(function (observer) {
+      observer.error(error);
+    });
+    this.close(error);
+  };
+  ObserverProxy.prototype.complete = function () {
+    this.forEachObserver(function (observer) {
+      observer.complete();
+    });
+    this.close();
+  };
+  /**
+  * Subscribe function that can be used to add an Observer to the fan-out list.
+  *
+  * - We require that no event is sent to a subscriber sychronously to their
+  *   call to subscribe().
+  */
+  ObserverProxy.prototype.subscribe = function (nextOrObserver, error, complete) {
+    var _this = this;
+    var observer;
+    if (nextOrObserver === undefined && error === undefined && complete === undefined) {
+      throw new Error('Missing Observer.');
+    }
+    // Assemble an Observer object when passed as callback functions.
+    if (implementsAnyMethods(nextOrObserver, ['next', 'error', 'complete'])) {
+      observer = nextOrObserver;
+    } else {
+      observer = {
+        next: nextOrObserver,
+        error: error,
+        complete: complete
+      };
+    }
+    if (observer.next === undefined) {
+      observer.next = noop;
+    }
+    if (observer.error === undefined) {
+      observer.error = noop;
+    }
+    if (observer.complete === undefined) {
+      observer.complete = noop;
+    }
+    var unsub = this.unsubscribeOne.bind(this, this.observers.length);
+    // Attempt to subscribe to a terminated Observable - we
+    // just respond to the Observer with the final error or complete
+    // event.
+    if (this.finalized) {
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      this.task.then(function () {
+        try {
+          if (_this.finalError) {
+            observer.error(_this.finalError);
+          } else {
+            observer.complete();
+          }
+        } catch (e) {}
+        return;
+      });
+    }
+    this.observers.push(observer);
+    return unsub;
+  };
+  // Unsubscribe is synchronous - we guarantee that no events are sent to
+  // any unsubscribed Observer.
+  ObserverProxy.prototype.unsubscribeOne = function (i) {
+    if (this.observers === undefined || this.observers[i] === undefined) {
+      return;
+    }
+    delete this.observers[i];
+    this.observerCount -= 1;
+    if (this.observerCount === 0 && this.onNoObservers !== undefined) {
+      this.onNoObservers(this);
+    }
+  };
+  ObserverProxy.prototype.forEachObserver = function (fn) {
+    if (this.finalized) {
+      // Already closed by previous event....just eat the additional values.
+      return;
+    }
+    // Since sendOne calls asynchronously - there is no chance that
+    // this.observers will become undefined.
+    for (var i = 0; i < this.observers.length; i++) {
+      this.sendOne(i, fn);
+    }
+  };
+  // Call the Observer via one of it's callback function. We are careful to
+  // confirm that the observe has not been unsubscribed since this asynchronous
+  // function had been queued.
+  ObserverProxy.prototype.sendOne = function (i, fn) {
+    var _this = this;
+    // Execute the callback asynchronously
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    this.task.then(function () {
+      if (_this.observers !== undefined && _this.observers[i] !== undefined) {
+        try {
+          fn(_this.observers[i]);
+        } catch (e) {
+          // Ignore exceptions raised in Observers or missing methods of an
+          // Observer.
+          // Log error to console. b/31404806
+          if (typeof console !== 'undefined' && console.error) {
+            console.error(e);
+          }
+        }
+      }
+    });
+  };
+  ObserverProxy.prototype.close = function (err) {
+    var _this = this;
+    if (this.finalized) {
+      return;
+    }
+    this.finalized = true;
+    if (err !== undefined) {
+      this.finalError = err;
+    }
+    // Proxy is no longer needed - garbage collect references
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    this.task.then(function () {
+      _this.observers = undefined;
+      _this.onNoObservers = undefined;
+    });
+  };
+  return ObserverProxy;
+})();
+/** Turn synchronous function into one called asynchronously.*/
+// eslint-disable-next-line @typescript-eslint/ban-types
+function async(fn, onError) {
+  return function () {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+      args[_i] = arguments[_i];
+    }
+    Promise.resolve(true).then(function () {
+      fn.apply(void 0, args);
+    }).catch(function (error) {
+      if (onError) {
+        onError(error);
+      }
+    });
+  };
+}
+/**
+* Return true if the object passed in implements any of the named methods.
+*/
+function implementsAnyMethods(obj, methods) {
+  if (typeof obj !== 'object' || obj === null) {
+    return false;
+  }
+  for (var _i = 0, methods_1 = methods; _i < methods_1.length; _i++) {
+    var method = methods_1[_i];
+    if ((method in obj) && typeof obj[method] === 'function') {
+      return true;
+    }
+  }
+  return false;
+}
+function noop() {}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Check to make sure the appropriate number of arguments are provided for a public function.
+* Throws an error if it fails.
+*
+* @param fnName The function name
+* @param minCount The minimum number of arguments to allow for the function call
+* @param maxCount The maximum number of argument to allow for the function call
+* @param argCount The actual number of arguments provided.
+*/
+var validateArgCount = function (fnName, minCount, maxCount, argCount) {
+  var argError;
+  if (argCount < minCount) {
+    argError = 'at least ' + minCount;
+  } else if (argCount > maxCount) {
+    argError = maxCount === 0 ? 'none' : 'no more than ' + maxCount;
+  }
+  if (argError) {
+    var error = fnName + ' failed: Was called with ' + argCount + (argCount === 1 ? ' argument.' : ' arguments.') + ' Expects ' + argError + '.';
+    throw new Error(error);
+  }
+};
+/**
+* Generates a string to prefix an error message about failed argument validation
+*
+* @param fnName The function name
+* @param argName The name of the argument
+* @return The prefix to add to the error thrown for validation.
+*/
+function errorPrefix(fnName, argName) {
+  return fnName + " failed: " + argName + " argument ";
+}
+/**
+* @param fnName
+* @param argumentNumber
+* @param namespace
+* @param optional
+*/
+function validateNamespace(fnName, namespace, optional) {
+  if (optional && !namespace) {
+    return;
+  }
+  if (typeof namespace !== 'string') {
+    // TODO: I should do more validation here. We only allow certain chars in namespaces.
+    throw new Error(errorPrefix(fnName, 'namespace') + 'must be a valid firebase namespace.');
+  }
+}
+function validateCallback(fnName, argumentName, // eslint-disable-next-line @typescript-eslint/ban-types
+callback, optional) {
+  if (optional && !callback) {
+    return;
+  }
+  if (typeof callback !== 'function') {
+    throw new Error(errorPrefix(fnName, argumentName) + 'must be a valid function.');
+  }
+}
+function validateContextObject(fnName, argumentName, context, optional) {
+  if (optional && !context) {
+    return;
+  }
+  if (typeof context !== 'object' || context === null) {
+    throw new Error(errorPrefix(fnName, argumentName) + 'must be a valid context object.');
+  }
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+// Code originally came from goog.crypt.stringToUtf8ByteArray, but for some reason they
+// automatically replaced '\r\n' with '\n', and they didn't handle surrogate pairs,
+// so it's been modified.
+// Note that not all Unicode characters appear as single characters in JavaScript strings.
+// fromCharCode returns the UTF-16 encoding of a character - so some Unicode characters
+// use 2 characters in Javascript.  All 4-byte UTF-8 characters begin with a first
+// character in the range 0xD800 - 0xDBFF (the first character of a so-called surrogate
+// pair).
+// See http://www.ecma-international.org/ecma-262/5.1/#sec-15.1.3
+/**
+* @param {string} str
+* @return {Array}
+*/
+var stringToByteArray$1 = function (str) {
+  var out = [];
+  var p = 0;
+  for (var i = 0; i < str.length; i++) {
+    var c = str.charCodeAt(i);
+    // Is this the lead surrogate in a surrogate pair?
+    if (c >= 0xd800 && c <= 0xdbff) {
+      var high = c - 0xd800;
+      // the high 10 bits.
+      i++;
+      assert(i < str.length, 'Surrogate pair missing trail surrogate.');
+      var low = str.charCodeAt(i) - 0xdc00;
+      // the low 10 bits.
+      c = 0x10000 + (high << 10) + low;
+    }
+    if (c < 128) {
+      out[p++] = c;
+    } else if (c < 2048) {
+      out[p++] = c >> 6 | 192;
+      out[p++] = c & 63 | 128;
+    } else if (c < 65536) {
+      out[p++] = c >> 12 | 224;
+      out[p++] = c >> 6 & 63 | 128;
+      out[p++] = c & 63 | 128;
+    } else {
+      out[p++] = c >> 18 | 240;
+      out[p++] = c >> 12 & 63 | 128;
+      out[p++] = c >> 6 & 63 | 128;
+      out[p++] = c & 63 | 128;
+    }
+  }
+  return out;
+};
+/**
+* Calculate length without actually converting; useful for doing cheaper validation.
+* @param {string} str
+* @return {number}
+*/
+var stringLength = function (str) {
+  var p = 0;
+  for (var i = 0; i < str.length; i++) {
+    var c = str.charCodeAt(i);
+    if (c < 128) {
+      p++;
+    } else if (c < 2048) {
+      p += 2;
+    } else if (c >= 0xd800 && c <= 0xdbff) {
+      // Lead surrogate of a surrogate pair.  The pair together will take 4 bytes to represent.
+      p += 4;
+      i++;
+    } else {
+      p += 3;
+    }
+  }
+  return p;
+};
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* The amount of milliseconds to exponentially increase.
+*/
+var DEFAULT_INTERVAL_MILLIS = 1000;
+/**
+* The factor to backoff by.
+* Should be a number greater than 1.
+*/
+var DEFAULT_BACKOFF_FACTOR = 2;
+/**
+* The maximum milliseconds to increase to.
+*
+* <p>Visible for testing
+*/
+var MAX_VALUE_MILLIS = 4 * 60 * 60 * 1000;
+// Four hours, like iOS and Android.
+/**
+* The percentage of backoff time to randomize by.
+* See
+* http://go/safe-client-behavior#step-1-determine-the-appropriate-retry-interval-to-handle-spike-traffic
+* for context.
+*
+* <p>Visible for testing
+*/
+var RANDOM_FACTOR = 0.5;
+/**
+* Based on the backoff method from
+* https://github.com/google/closure-library/blob/master/closure/goog/math/exponentialbackoff.js.
+* Extracted here so we don't need to pass metadata and a stateful ExponentialBackoff object around.
+*/
+function calculateBackoffMillis(backoffCount, intervalMillis, backoffFactor) {
+  if (intervalMillis === void 0) {
+    intervalMillis = DEFAULT_INTERVAL_MILLIS;
+  }
+  if (backoffFactor === void 0) {
+    backoffFactor = DEFAULT_BACKOFF_FACTOR;
+  }
+  // Calculates an exponentially increasing value.
+  // Deviation: calculates value from count and a constant interval, so we only need to save value
+  // and count to restore state.
+  var currBaseValue = intervalMillis * Math.pow(backoffFactor, backoffCount);
+  // A random "fuzz" to avoid waves of retries.
+  // Deviation: randomFactor is required.
+  var randomWait = Math.round(// A fraction of the backoff value to add/subtract.
+  // Deviation: changes multiplication order to improve readability.
+  RANDOM_FACTOR * currBaseValue * (// A random float (rounded to int by Math.round above) in the range [-1, 1]. Determines
+  // if we add or subtract.
+  Math.random() - 0.5) * 2);
+  // Limits backoff to max to avoid effectively permanent backoff.
+  return Math.min(MAX_VALUE_MILLIS, currBaseValue + randomWait);
+}
+/**
+* @license
+* Copyright 2020 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Provide English ordinal letters after a number
+*/
+function ordinal(i) {
+  if (!Number.isFinite(i)) {
+    return "" + i;
+  }
+  return i + indicator(i);
+}
+function indicator(i) {
+  i = Math.abs(i);
+  var cent = i % 100;
+  if (cent >= 10 && cent <= 20) {
+    return 'th';
+  }
+  var dec = i % 10;
+  if (dec === 1) {
+    return 'st';
+  }
+  if (dec === 2) {
+    return 'nd';
+  }
+  if (dec === 3) {
+    return 'rd';
+  }
+  return 'th';
+}
+/**
+* @license
+* Copyright 2021 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+function getModularInstance(service) {
+  if (service && service._delegate) {
+    return service._delegate;
+  } else {
+    return service;
+  }
+}
+
+},{"tslib":"4rd38","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5qT0x":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "Component", function () {
+  return Component;
+});
+_parcelHelpers.export(exports, "ComponentContainer", function () {
+  return ComponentContainer;
+});
+_parcelHelpers.export(exports, "Provider", function () {
+  return Provider;
+});
+var _tslib = require('tslib');
+var _firebaseUtil = require('@firebase/util');
+/**
+* Component for service name T, e.g. `auth`, `auth-internal`
+*/
+var Component = /** @class*/
+(function () {
+  /**
+  *
+  * @param name The public service name, e.g. app, auth, firestore, database
+  * @param instanceFactory Service factory responsible for creating the public interface
+  * @param type whether the service provided by the component is public or private
+  */
+  function Component(name, instanceFactory, type) {
+    this.name = name;
+    this.instanceFactory = instanceFactory;
+    this.type = type;
+    this.multipleInstances = false;
+    /**
+    * Properties to be added to the service namespace
+    */
+    this.serviceProps = {};
+    this.instantiationMode = "LAZY";
+    this.onInstanceCreated = null;
+  }
+  Component.prototype.setInstantiationMode = function (mode) {
+    this.instantiationMode = mode;
+    return this;
+  };
+  Component.prototype.setMultipleInstances = function (multipleInstances) {
+    this.multipleInstances = multipleInstances;
+    return this;
+  };
+  Component.prototype.setServiceProps = function (props) {
+    this.serviceProps = props;
+    return this;
+  };
+  Component.prototype.setInstanceCreatedCallback = function (callback) {
+    this.onInstanceCreated = callback;
+    return this;
+  };
+  return Component;
+})();
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var DEFAULT_ENTRY_NAME = '[DEFAULT]';
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Provider for instance for service name T, e.g. 'auth', 'auth-internal'
+* NameServiceMapping[T] is an alias for the type of the instance
+*/
+var Provider = /** @class*/
+(function () {
+  function Provider(name, container) {
+    this.name = name;
+    this.container = container;
+    this.component = null;
+    this.instances = new Map();
+    this.instancesDeferred = new Map();
+    this.onInitCallbacks = new Map();
+  }
+  /**
+  * @param identifier A provider can provide mulitple instances of a service
+  * if this.component.multipleInstances is true.
+  */
+  Provider.prototype.get = function (identifier) {
+    // if multipleInstances is not supported, use the default name
+    var normalizedIdentifier = this.normalizeInstanceIdentifier(identifier);
+    if (!this.instancesDeferred.has(normalizedIdentifier)) {
+      var deferred = new _firebaseUtil.Deferred();
+      this.instancesDeferred.set(normalizedIdentifier, deferred);
+      if (this.isInitialized(normalizedIdentifier) || this.shouldAutoInitialize()) {
+        // initialize the service if it can be auto-initialized
+        try {
+          var instance = this.getOrInitializeService({
+            instanceIdentifier: normalizedIdentifier
+          });
+          if (instance) {
+            deferred.resolve(instance);
+          }
+        } catch (e) {}
+      }
+    }
+    return this.instancesDeferred.get(normalizedIdentifier).promise;
+  };
+  Provider.prototype.getImmediate = function (options) {
+    var _a;
+    // if multipleInstances is not supported, use the default name
+    var normalizedIdentifier = this.normalizeInstanceIdentifier(options === null || options === void 0 ? void 0 : options.identifier);
+    var optional = (_a = options === null || options === void 0 ? void 0 : options.optional) !== null && _a !== void 0 ? _a : false;
+    if (this.isInitialized(normalizedIdentifier) || this.shouldAutoInitialize()) {
+      try {
+        return this.getOrInitializeService({
+          instanceIdentifier: normalizedIdentifier
+        });
+      } catch (e) {
+        if (optional) {
+          return null;
+        } else {
+          throw e;
+        }
+      }
+    } else {
+      // In case a component is not initialized and should/can not be auto-initialized at the moment, return null if the optional flag is set, or throw
+      if (optional) {
+        return null;
+      } else {
+        throw Error("Service " + this.name + " is not available");
+      }
+    }
+  };
+  Provider.prototype.getComponent = function () {
+    return this.component;
+  };
+  Provider.prototype.setComponent = function (component) {
+    var e_1, _a;
+    if (component.name !== this.name) {
+      throw Error("Mismatching Component " + component.name + " for Provider " + this.name + ".");
+    }
+    if (this.component) {
+      throw Error("Component for " + this.name + " has already been provided");
+    }
+    this.component = component;
+    // return early without attempting to initialize the component if the component requires explicit initialization (calling `Provider.initialize()`)
+    if (!this.shouldAutoInitialize()) {
+      return;
+    }
+    // if the service is eager, initialize the default instance
+    if (isComponentEager(component)) {
+      try {
+        this.getOrInitializeService({
+          instanceIdentifier: DEFAULT_ENTRY_NAME
+        });
+      } catch (e) {}
+    }
+    try {
+      // Create service instances for the pending promises and resolve them
+      // NOTE: if this.multipleInstances is false, only the default instance will be created
+      // and all promises with resolve with it regardless of the identifier.
+      for (var _b = _tslib.__values(this.instancesDeferred.entries()), _c = _b.next(); !_c.done; _c = _b.next()) {
+        var _d = _tslib.__read(_c.value, 2), instanceIdentifier = _d[0], instanceDeferred = _d[1];
+        var normalizedIdentifier = this.normalizeInstanceIdentifier(instanceIdentifier);
+        try {
+          // `getOrInitializeService()` should always return a valid instance since a component is guaranteed. use ! to make typescript happy.
+          var instance = this.getOrInitializeService({
+            instanceIdentifier: normalizedIdentifier
+          });
+          instanceDeferred.resolve(instance);
+        } catch (e) {}
+      }
+    } catch (e_1_1) {
+      e_1 = {
+        error: e_1_1
+      };
+    } finally {
+      try {
+        if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+      } finally {
+        if (e_1) throw e_1.error;
+      }
+    }
+  };
+  Provider.prototype.clearInstance = function (identifier) {
+    if (identifier === void 0) {
+      identifier = DEFAULT_ENTRY_NAME;
+    }
+    this.instancesDeferred.delete(identifier);
+    this.instances.delete(identifier);
+  };
+  // app.delete() will call this method on every provider to delete the services
+  // TODO: should we mark the provider as deleted?
+  Provider.prototype.delete = function () {
+    return _tslib.__awaiter(this, void 0, void 0, function () {
+      var services;
+      return _tslib.__generator(this, function (_a) {
+        switch (_a.label) {
+          case 0:
+            services = Array.from(this.instances.values());
+            return [4, /*yield*/
+            Promise.all(_tslib.__spreadArray(_tslib.__spreadArray([], _tslib.__read(services.filter(function (service) {
+              return ('INTERNAL' in service);
+            }).// legacy services
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            map(function (service) {
+              return service.INTERNAL.delete();
+            }))), _tslib.__read(services.filter(function (service) {
+              return ('_delete' in service);
+            }).// modularized services
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            map(function (service) {
+              return service._delete();
+            }))))];
+          case 1:
+            _a.sent();
+            return [2];
+        }
+      });
+    });
+  };
+  Provider.prototype.isComponentSet = function () {
+    return this.component != null;
+  };
+  Provider.prototype.isInitialized = function (identifier) {
+    if (identifier === void 0) {
+      identifier = DEFAULT_ENTRY_NAME;
+    }
+    return this.instances.has(identifier);
+  };
+  Provider.prototype.initialize = function (opts) {
+    var e_2, _a;
+    if (opts === void 0) {
+      opts = {};
+    }
+    var _b = opts.options, options = _b === void 0 ? {} : _b;
+    var normalizedIdentifier = this.normalizeInstanceIdentifier(opts.instanceIdentifier);
+    if (this.isInitialized(normalizedIdentifier)) {
+      throw Error(this.name + "(" + normalizedIdentifier + ") has already been initialized");
+    }
+    if (!this.isComponentSet()) {
+      throw Error("Component " + this.name + " has not been registered yet");
+    }
+    var instance = this.getOrInitializeService({
+      instanceIdentifier: normalizedIdentifier,
+      options: options
+    });
+    try {
+      // resolve any pending promise waiting for the service instance
+      for (var _c = _tslib.__values(this.instancesDeferred.entries()), _d = _c.next(); !_d.done; _d = _c.next()) {
+        var _e = _tslib.__read(_d.value, 2), instanceIdentifier = _e[0], instanceDeferred = _e[1];
+        var normalizedDeferredIdentifier = this.normalizeInstanceIdentifier(instanceIdentifier);
+        if (normalizedIdentifier === normalizedDeferredIdentifier) {
+          instanceDeferred.resolve(instance);
+        }
+      }
+    } catch (e_2_1) {
+      e_2 = {
+        error: e_2_1
+      };
+    } finally {
+      try {
+        if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
+      } finally {
+        if (e_2) throw e_2.error;
+      }
+    }
+    this.invokeOnInitCallbacks(instance, normalizedIdentifier);
+    return instance;
+  };
+  /**
+  *
+  * @param callback - a function that will be invoked  after the provider has been initialized by calling provider.initialize().
+  * The function is invoked SYNCHRONOUSLY, so it should not execute any longrunning tasks in order to not block the program.
+  *
+  * @param identifier An optional instance identifier
+  * @returns a function to unregister the callback
+  */
+  Provider.prototype.onInit = function (callback, identifier) {
+    var _a;
+    var normalizedIdentifier = this.normalizeInstanceIdentifier(identifier);
+    var existingCallbacks = (_a = this.onInitCallbacks.get(normalizedIdentifier)) !== null && _a !== void 0 ? _a : new Set();
+    existingCallbacks.add(callback);
+    this.onInitCallbacks.set(normalizedIdentifier, existingCallbacks);
+    var existingInstance = this.instances.get(normalizedIdentifier);
+    if (existingInstance) {
+      callback(existingInstance, normalizedIdentifier);
+    }
+    return function () {
+      existingCallbacks.delete(callback);
+    };
+  };
+  /**
+  * Invoke onInit callbacks synchronously
+  * @param instance the service instance`
+  */
+  Provider.prototype.invokeOnInitCallbacks = function (instance, identifier) {
+    var e_3, _a;
+    var callbacks = this.onInitCallbacks.get(identifier);
+    if (!callbacks) {
+      return;
+    }
+    try {
+      for (var callbacks_1 = _tslib.__values(callbacks), callbacks_1_1 = callbacks_1.next(); !callbacks_1_1.done; callbacks_1_1 = callbacks_1.next()) {
+        var callback = callbacks_1_1.value;
+        try {
+          callback(instance, identifier);
+        } catch (_b) {}
+      }
+    } catch (e_3_1) {
+      e_3 = {
+        error: e_3_1
+      };
+    } finally {
+      try {
+        if (callbacks_1_1 && !callbacks_1_1.done && (_a = callbacks_1.return)) _a.call(callbacks_1);
+      } finally {
+        if (e_3) throw e_3.error;
+      }
+    }
+  };
+  Provider.prototype.getOrInitializeService = function (_a) {
+    var instanceIdentifier = _a.instanceIdentifier, _b = _a.options, options = _b === void 0 ? {} : _b;
+    var instance = this.instances.get(instanceIdentifier);
+    if (!instance && this.component) {
+      instance = this.component.instanceFactory(this.container, {
+        instanceIdentifier: normalizeIdentifierForFactory(instanceIdentifier),
+        options: options
+      });
+      this.instances.set(instanceIdentifier, instance);
+      /**
+      * Order is important
+      * onInstanceCreated() should be called after this.instances.set(instanceIdentifier, instance); which
+      * makes `isInitialized()` return true.
+      */
+      if (this.component.onInstanceCreated) {
+        try {
+          this.component.onInstanceCreated(this.container, instanceIdentifier, instance);
+        } catch (_c) {}
+      }
+    }
+    return instance || null;
+  };
+  Provider.prototype.normalizeInstanceIdentifier = function (identifier) {
+    if (identifier === void 0) {
+      identifier = DEFAULT_ENTRY_NAME;
+    }
+    if (this.component) {
+      return this.component.multipleInstances ? identifier : DEFAULT_ENTRY_NAME;
+    } else {
+      return identifier;
+    }
+  };
+  Provider.prototype.shouldAutoInitialize = function () {
+    return !!this.component && this.component.instantiationMode !== "EXPLICIT";
+  };
+  return Provider;
+})();
+// undefined should be passed to the service factory for the default instance
+function normalizeIdentifierForFactory(identifier) {
+  return identifier === DEFAULT_ENTRY_NAME ? undefined : identifier;
+}
+function isComponentEager(component) {
+  return component.instantiationMode === "EAGER";
+}
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* ComponentContainer that provides Providers for service name T, e.g. `auth`, `auth-internal`
+*/
+var ComponentContainer = /** @class*/
+(function () {
+  function ComponentContainer(name) {
+    this.name = name;
+    this.providers = new Map();
+  }
+  /**
+  *
+  * @param component Component being added
+  * @param overwrite When a component with the same name has already been registered,
+  * if overwrite is true: overwrite the existing component with the new component and create a new
+  * provider with the new component. It can be useful in tests where you want to use different mocks
+  * for different tests.
+  * if overwrite is false: throw an exception
+  */
+  ComponentContainer.prototype.addComponent = function (component) {
+    var provider = this.getProvider(component.name);
+    if (provider.isComponentSet()) {
+      throw new Error("Component " + component.name + " has already been registered with " + this.name);
+    }
+    provider.setComponent(component);
+  };
+  ComponentContainer.prototype.addOrOverwriteComponent = function (component) {
+    var provider = this.getProvider(component.name);
+    if (provider.isComponentSet()) {
+      // delete the existing provider from the container, so we can register the new component
+      this.providers.delete(component.name);
+    }
+    this.addComponent(component);
+  };
+  /**
+  * getProvider provides a type safe interface where it can only be called with a field name
+  * present in NameServiceMapping interface.
+  *
+  * Firebase SDKs providing services should extend NameServiceMapping interface to register
+  * themselves.
+  */
+  ComponentContainer.prototype.getProvider = function (name) {
+    if (this.providers.has(name)) {
+      return this.providers.get(name);
+    }
+    // create a Provider for a service that hasn't registered with Firebase
+    var provider = new Provider(name, this);
+    this.providers.set(name, provider);
+    return provider;
+  };
+  ComponentContainer.prototype.getProviders = function () {
+    return Array.from(this.providers.values());
+  };
+  return ComponentContainer;
+})();
+
+},{"tslib":"4rd38","@firebase/util":"3bR6t","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5PuYX":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+var _a;
+/**
+ * A container for all of the Logger instances
+ */
+var instances = [];
+(function (LogLevel) {
+    LogLevel[LogLevel["DEBUG"] = 0] = "DEBUG";
+    LogLevel[LogLevel["VERBOSE"] = 1] = "VERBOSE";
+    LogLevel[LogLevel["INFO"] = 2] = "INFO";
+    LogLevel[LogLevel["WARN"] = 3] = "WARN";
+    LogLevel[LogLevel["ERROR"] = 4] = "ERROR";
+    LogLevel[LogLevel["SILENT"] = 5] = "SILENT";
+})(exports.LogLevel || (exports.LogLevel = {}));
+var levelStringToEnum = {
+    'debug': exports.LogLevel.DEBUG,
+    'verbose': exports.LogLevel.VERBOSE,
+    'info': exports.LogLevel.INFO,
+    'warn': exports.LogLevel.WARN,
+    'error': exports.LogLevel.ERROR,
+    'silent': exports.LogLevel.SILENT
+};
+/**
+ * The default log level
+ */
+var defaultLogLevel = exports.LogLevel.INFO;
+/**
+ * By default, `console.debug` is not displayed in the developer console (in
+ * chrome). To avoid forcing users to have to opt-in to these logs twice
+ * (i.e. once for firebase, and once in the console), we are sending `DEBUG`
+ * logs to the `console.log` function.
+ */
+var ConsoleMethod = (_a = {},
+    _a[exports.LogLevel.DEBUG] = 'log',
+    _a[exports.LogLevel.VERBOSE] = 'log',
+    _a[exports.LogLevel.INFO] = 'info',
+    _a[exports.LogLevel.WARN] = 'warn',
+    _a[exports.LogLevel.ERROR] = 'error',
+    _a);
+/**
+ * The default log handler will forward DEBUG, VERBOSE, INFO, WARN, and ERROR
+ * messages on to their corresponding console counterparts (if the log method
+ * is supported by the current log level)
+ */
+var defaultLogHandler = function (instance, logType) {
+    var args = [];
+    for (var _i = 2; _i < arguments.length; _i++) {
+        args[_i - 2] = arguments[_i];
+    }
+    if (logType < instance.logLevel) {
+        return;
+    }
+    var now = new Date().toISOString();
+    var method = ConsoleMethod[logType];
+    if (method) {
+        console[method].apply(console, __spreadArrays(["[" + now + "]  " + instance.name + ":"], args));
+    }
+    else {
+        throw new Error("Attempted to log a message with an invalid logType (value: " + logType + ")");
+    }
+};
+var Logger = /** @class */ (function () {
+    /**
+     * Gives you an instance of a Logger to capture messages according to
+     * Firebase's logging scheme.
+     *
+     * @param name The name that the logs will be associated with
+     */
+    function Logger(name) {
+        this.name = name;
+        /**
+         * The log level of the given Logger instance.
+         */
+        this._logLevel = defaultLogLevel;
+        /**
+         * The main (internal) log handler for the Logger instance.
+         * Can be set to a new function in internal package code but not by user.
+         */
+        this._logHandler = defaultLogHandler;
+        /**
+         * The optional, additional, user-defined log handler for the Logger instance.
+         */
+        this._userLogHandler = null;
+        /**
+         * Capture the current instance for later use
+         */
+        instances.push(this);
+    }
+    Object.defineProperty(Logger.prototype, "logLevel", {
+        get: function () {
+            return this._logLevel;
+        },
+        set: function (val) {
+            if (!(val in exports.LogLevel)) {
+                throw new TypeError("Invalid value \"" + val + "\" assigned to `logLevel`");
+            }
+            this._logLevel = val;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    // Workaround for setter/getter having to be the same type.
+    Logger.prototype.setLogLevel = function (val) {
+        this._logLevel = typeof val === 'string' ? levelStringToEnum[val] : val;
+    };
+    Object.defineProperty(Logger.prototype, "logHandler", {
+        get: function () {
+            return this._logHandler;
+        },
+        set: function (val) {
+            if (typeof val !== 'function') {
+                throw new TypeError('Value assigned to `logHandler` must be a function');
+            }
+            this._logHandler = val;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Logger.prototype, "userLogHandler", {
+        get: function () {
+            return this._userLogHandler;
+        },
+        set: function (val) {
+            this._userLogHandler = val;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /**
+     * The functions below are all based on the `console` interface
+     */
+    Logger.prototype.debug = function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        this._userLogHandler && this._userLogHandler.apply(this, __spreadArrays([this, exports.LogLevel.DEBUG], args));
+        this._logHandler.apply(this, __spreadArrays([this, exports.LogLevel.DEBUG], args));
+    };
+    Logger.prototype.log = function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        this._userLogHandler && this._userLogHandler.apply(this, __spreadArrays([this, exports.LogLevel.VERBOSE], args));
+        this._logHandler.apply(this, __spreadArrays([this, exports.LogLevel.VERBOSE], args));
+    };
+    Logger.prototype.info = function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        this._userLogHandler && this._userLogHandler.apply(this, __spreadArrays([this, exports.LogLevel.INFO], args));
+        this._logHandler.apply(this, __spreadArrays([this, exports.LogLevel.INFO], args));
+    };
+    Logger.prototype.warn = function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        this._userLogHandler && this._userLogHandler.apply(this, __spreadArrays([this, exports.LogLevel.WARN], args));
+        this._logHandler.apply(this, __spreadArrays([this, exports.LogLevel.WARN], args));
+    };
+    Logger.prototype.error = function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        this._userLogHandler && this._userLogHandler.apply(this, __spreadArrays([this, exports.LogLevel.ERROR], args));
+        this._logHandler.apply(this, __spreadArrays([this, exports.LogLevel.ERROR], args));
+    };
+    return Logger;
+}());
+function setLogLevel(level) {
+    instances.forEach(function (inst) {
+        inst.setLogLevel(level);
+    });
+}
+function setUserLogHandler(logCallback, options) {
+    var _loop_1 = function (instance) {
+        var customLogLevel = null;
+        if (options && options.level) {
+            customLogLevel = levelStringToEnum[options.level];
+        }
+        if (logCallback === null) {
+            instance.userLogHandler = null;
+        }
+        else {
+            instance.userLogHandler = function (instance, level) {
+                var args = [];
+                for (var _i = 2; _i < arguments.length; _i++) {
+                    args[_i - 2] = arguments[_i];
+                }
+                var message = args
+                    .map(function (arg) {
+                    if (arg == null) {
+                        return null;
+                    }
+                    else if (typeof arg === 'string') {
+                        return arg;
+                    }
+                    else if (typeof arg === 'number' || typeof arg === 'boolean') {
+                        return arg.toString();
+                    }
+                    else if (arg instanceof Error) {
+                        return arg.message;
+                    }
+                    else {
+                        try {
+                            return JSON.stringify(arg);
+                        }
+                        catch (ignored) {
+                            return null;
+                        }
+                    }
+                })
+                    .filter(function (arg) { return arg; })
+                    .join(' ');
+                if (level >= (customLogLevel !== null && customLogLevel !== void 0 ? customLogLevel : instance.logLevel)) {
+                    logCallback({
+                        level: exports.LogLevel[level].toLowerCase(),
+                        message: message,
+                        args: args,
+                        type: instance.name
+                    });
+                }
+            };
+        }
+    };
+    for (var _i = 0, instances_1 = instances; _i < instances_1.length; _i++) {
+        var instance = instances_1[_i];
+        _loop_1(instance);
+    }
+}
+
+exports.Logger = Logger;
+exports.setLogLevel = setLogLevel;
+exports.setUserLogHandler = setUserLogHandler;
+
+},{}],"3QMfp":[function(require,module,exports) {
+'use strict';
+
+require('@firebase/storage');
+
+
+},{"@firebase/storage":"2AxFM"}],"2AxFM":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "registerStorage", function () {
+  return registerStorage;
+});
+var _firebaseApp = require('@firebase/app');
+var _firebaseAppDefault = _parcelHelpers.interopDefault(_firebaseApp);
+var _tslib = require('tslib');
+var _firebaseUtil = require('@firebase/util');
+var _firebaseComponent = require('@firebase/component');
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* @fileoverview Constants used in the Firebase Storage library.
+*/
+/**
+* Domain name for firebase storage.
+*/
+var DEFAULT_HOST = 'firebasestorage.googleapis.com';
+/**
+* The key in Firebase config json for the storage bucket.
+*/
+var CONFIG_STORAGE_BUCKET_KEY = 'storageBucket';
+/**
+* 2 minutes
+*
+* The timeout for all operations except upload.
+*/
+var DEFAULT_MAX_OPERATION_RETRY_TIME = 2 * 60 * 1000;
+/**
+* 10 minutes
+*
+* The timeout for upload.
+*/
+var DEFAULT_MAX_UPLOAD_RETRY_TIME = 10 * 60 * 1000;
+/**
+* An error returned by the Firebase Storage SDK.
+* @public
+*/
+var FirebaseStorageError = /** @class*/
+(function (_super) {
+  _tslib.__extends(FirebaseStorageError, _super);
+  /**
+  * @param code - A StorageErrorCode string to be prefixed with 'storage/' and
+  *  added to the end of the message.
+  * @param message  - Error message.
+  */
+  function FirebaseStorageError(code, message) {
+    var _this = _super.call(this, prependCode(code), "Firebase Storage: " + message + " (" + prependCode(code) + ")") || this;
+    /**
+    * Stores custom error data unque to FirebaseStorageError.
+    */
+    _this.customData = {
+      serverResponse: null
+    };
+    _this._baseMessage = _this.message;
+    // Without this, `instanceof FirebaseStorageError`, in tests for example,
+    // returns false.
+    Object.setPrototypeOf(_this, FirebaseStorageError.prototype);
+    return _this;
+  }
+  /**
+  * Compares a StorageErrorCode against this error's code, filtering out the prefix.
+  */
+  FirebaseStorageError.prototype._codeEquals = function (code) {
+    return prependCode(code) === this.code;
+  };
+  Object.defineProperty(FirebaseStorageError.prototype, "serverResponse", {
+    /**
+    * Optional response message that was added by the server.
+    */
+    get: function () {
+      return this.customData.serverResponse;
+    },
+    set: function (serverResponse) {
+      this.customData.serverResponse = serverResponse;
+      if (this.customData.serverResponse) {
+        this.message = this._baseMessage + "\n" + this.customData.serverResponse;
+      } else {
+        this.message = this._baseMessage;
+      }
+    },
+    enumerable: false,
+    configurable: true
+  });
+  return FirebaseStorageError;
+})(_firebaseUtil.FirebaseError);
+function prependCode(code) {
+  return 'storage/' + code;
+}
+function unknown() {
+  var message = 'An unknown error occurred, please check the error payload for ' + 'server response.';
+  return new FirebaseStorageError("unknown", /*UNKNOWN*/
+  message);
+}
+function objectNotFound(path) {
+  return new FirebaseStorageError("object-not-found", /*OBJECT_NOT_FOUND*/
+  "Object '" + path + "' does not exist.");
+}
+function quotaExceeded(bucket) {
+  return new FirebaseStorageError("quota-exceeded", /*QUOTA_EXCEEDED*/
+  "Quota for bucket '" + bucket + "' exceeded, please view quota on " + 'https://firebase.google.com/pricing/.');
+}
+function unauthenticated() {
+  var message = 'User is not authenticated, please authenticate using Firebase ' + 'Authentication and try again.';
+  return new FirebaseStorageError("unauthenticated", /*UNAUTHENTICATED*/
+  message);
+}
+function unauthorizedApp() {
+  return new FirebaseStorageError("unauthorized-app", /*UNAUTHORIZED_APP*/
+  'This app does not have permission to access Firebase Storage on this project.');
+}
+function unauthorized(path) {
+  return new FirebaseStorageError("unauthorized", /*UNAUTHORIZED*/
+  "User does not have permission to access '" + path + "'.");
+}
+function retryLimitExceeded() {
+  return new FirebaseStorageError("retry-limit-exceeded", /*RETRY_LIMIT_EXCEEDED*/
+  'Max retry time for operation exceeded, please try again.');
+}
+function canceled() {
+  return new FirebaseStorageError("canceled", /*CANCELED*/
+  'User canceled the upload/download.');
+}
+function invalidUrl(url) {
+  return new FirebaseStorageError("invalid-url", /*INVALID_URL*/
+  "Invalid URL '" + url + "'.");
+}
+function invalidDefaultBucket(bucket) {
+  return new FirebaseStorageError("invalid-default-bucket", /*INVALID_DEFAULT_BUCKET*/
+  "Invalid default bucket '" + bucket + "'.");
+}
+function noDefaultBucket() {
+  return new FirebaseStorageError("no-default-bucket", /*NO_DEFAULT_BUCKET*/
+  'No default bucket ' + "found. Did you set the '" + CONFIG_STORAGE_BUCKET_KEY + "' property when initializing the app?");
+}
+function cannotSliceBlob() {
+  return new FirebaseStorageError("cannot-slice-blob", /*CANNOT_SLICE_BLOB*/
+  'Cannot slice blob for upload. Please retry the upload.');
+}
+function serverFileWrongSize() {
+  return new FirebaseStorageError("server-file-wrong-size", /*SERVER_FILE_WRONG_SIZE*/
+  'Server recorded incorrect upload file size, please retry the upload.');
+}
+function noDownloadURL() {
+  return new FirebaseStorageError("no-download-url", /*NO_DOWNLOAD_URL*/
+  'The given file does not have any download URLs.');
+}
+function invalidArgument(message) {
+  return new FirebaseStorageError("invalid-argument", /*INVALID_ARGUMENT*/
+  message);
+}
+function appDeleted() {
+  return new FirebaseStorageError("app-deleted", /*APP_DELETED*/
+  'The Firebase app was deleted.');
+}
+/**
+* @param name - The name of the operation that was invalid.
+*/
+function invalidRootOperation(name) {
+  return new FirebaseStorageError("invalid-root-operation", /*INVALID_ROOT_OPERATION*/
+  "The operation '" + name + "' cannot be performed on a root reference, create a non-root " + "reference using child, such as .child('file.png').");
+}
+/**
+* @param format - The format that was not valid.
+* @param message - A message describing the format violation.
+*/
+function invalidFormat(format, message) {
+  return new FirebaseStorageError("invalid-format", /*INVALID_FORMAT*/
+  "String does not match format '" + format + "': " + message);
+}
+/**
+* @param message - A message describing the internal error.
+*/
+function internalError(message) {
+  throw new FirebaseStorageError("internal-error", /*INTERNAL_ERROR*/
+  'Internal error: ' + message);
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* An enumeration of the possible string formats for upload.
+* @public
+*/
+var StringFormat = {
+  /**
+  * Indicates the string should be interpreted "raw", that is, as normal text.
+  * The string will be interpreted as UTF-16, then uploaded as a UTF-8 byte
+  * sequence.
+  * Example: The string 'Hello! \\ud83d\\ude0a' becomes the byte sequence
+  * 48 65 6c 6c 6f 21 20 f0 9f 98 8a
+  */
+  RAW: 'raw',
+  /**
+  * Indicates the string should be interpreted as base64-encoded data.
+  * Padding characters (trailing '='s) are optional.
+  * Example: The string 'rWmO++E6t7/rlw==' becomes the byte sequence
+  * ad 69 8e fb e1 3a b7 bf eb 97
+  */
+  BASE64: 'base64',
+  /**
+  * Indicates the string should be interpreted as base64url-encoded data.
+  * Padding characters (trailing '='s) are optional.
+  * Example: The string 'rWmO--E6t7_rlw==' becomes the byte sequence
+  * ad 69 8e fb e1 3a b7 bf eb 97
+  */
+  BASE64URL: 'base64url',
+  /**
+  * Indicates the string is a data URL, such as one obtained from
+  * canvas.toDataURL().
+  * Example: the string 'data:application/octet-stream;base64,aaaa'
+  * becomes the byte sequence
+  * 69 a6 9a
+  * (the content-type "application/octet-stream" is also applied, but can
+  * be overridden in the metadata object).
+  */
+  DATA_URL: 'data_url'
+};
+var StringData = /** @class*/
+(function () {
+  function StringData(data, contentType) {
+    this.data = data;
+    this.contentType = contentType || null;
+  }
+  return StringData;
+})();
+function dataFromString(format, stringData) {
+  switch (format) {
+    case StringFormat.RAW:
+      return new StringData(utf8Bytes_(stringData));
+    case StringFormat.BASE64:
+    case StringFormat.BASE64URL:
+      return new StringData(base64Bytes_(format, stringData));
+    case StringFormat.DATA_URL:
+      return new StringData(dataURLBytes_(stringData), dataURLContentType_(stringData));
+  }
+  // assert(false);
+  throw unknown();
+}
+function utf8Bytes_(value) {
+  var b = [];
+  for (var i = 0; i < value.length; i++) {
+    var c = value.charCodeAt(i);
+    if (c <= 127) {
+      b.push(c);
+    } else {
+      if (c <= 2047) {
+        b.push(192 | c >> 6, 128 | c & 63);
+      } else {
+        if ((c & 64512) === 55296) {
+          // The start of a surrogate pair.
+          var valid = i < value.length - 1 && (value.charCodeAt(i + 1) & 64512) === 56320;
+          if (!valid) {
+            // The second surrogate wasn't there.
+            b.push(239, 191, 189);
+          } else {
+            var hi = c;
+            var lo = value.charCodeAt(++i);
+            c = 65536 | (hi & 1023) << 10 | lo & 1023;
+            b.push(240 | c >> 18, 128 | c >> 12 & 63, 128 | c >> 6 & 63, 128 | c & 63);
+          }
+        } else {
+          if ((c & 64512) === 56320) {
+            // Invalid low surrogate.
+            b.push(239, 191, 189);
+          } else {
+            b.push(224 | c >> 12, 128 | c >> 6 & 63, 128 | c & 63);
+          }
+        }
+      }
+    }
+  }
+  return new Uint8Array(b);
+}
+function percentEncodedBytes_(value) {
+  var decoded;
+  try {
+    decoded = decodeURIComponent(value);
+  } catch (e) {
+    throw invalidFormat(StringFormat.DATA_URL, 'Malformed data URL.');
+  }
+  return utf8Bytes_(decoded);
+}
+function base64Bytes_(format, value) {
+  switch (format) {
+    case StringFormat.BASE64:
+      {
+        var hasMinus = value.indexOf('-') !== -1;
+        var hasUnder = value.indexOf('_') !== -1;
+        if (hasMinus || hasUnder) {
+          var invalidChar = hasMinus ? '-' : '_';
+          throw invalidFormat(format, "Invalid character '" + invalidChar + "' found: is it base64url encoded?");
+        }
+        break;
+      }
+    case StringFormat.BASE64URL:
+      {
+        var hasPlus = value.indexOf('+') !== -1;
+        var hasSlash = value.indexOf('/') !== -1;
+        if (hasPlus || hasSlash) {
+          var invalidChar = hasPlus ? '+' : '/';
+          throw invalidFormat(format, "Invalid character '" + invalidChar + "' found: is it base64 encoded?");
+        }
+        value = value.replace(/-/g, '+').replace(/_/g, '/');
+        break;
+      }
+  }
+  var bytes;
+  try {
+    bytes = atob(value);
+  } catch (e) {
+    throw invalidFormat(format, 'Invalid character found');
+  }
+  var array = new Uint8Array(bytes.length);
+  for (var i = 0; i < bytes.length; i++) {
+    array[i] = bytes.charCodeAt(i);
+  }
+  return array;
+}
+var DataURLParts = /** @class*/
+(function () {
+  function DataURLParts(dataURL) {
+    this.base64 = false;
+    this.contentType = null;
+    var matches = dataURL.match(/^data:([^,]+)?,/);
+    if (matches === null) {
+      throw invalidFormat(StringFormat.DATA_URL, "Must be formatted 'data:[<mediatype>][;base64],<data>");
+    }
+    var middle = matches[1] || null;
+    if (middle != null) {
+      this.base64 = endsWith(middle, ';base64');
+      this.contentType = this.base64 ? middle.substring(0, middle.length - (';base64').length) : middle;
+    }
+    this.rest = dataURL.substring(dataURL.indexOf(',') + 1);
+  }
+  return DataURLParts;
+})();
+function dataURLBytes_(dataUrl) {
+  var parts = new DataURLParts(dataUrl);
+  if (parts.base64) {
+    return base64Bytes_(StringFormat.BASE64, parts.rest);
+  } else {
+    return percentEncodedBytes_(parts.rest);
+  }
+}
+function dataURLContentType_(dataUrl) {
+  var parts = new DataURLParts(dataUrl);
+  return parts.contentType;
+}
+function endsWith(s, end) {
+  var longEnough = s.length >= end.length;
+  if (!longEnough) {
+    return false;
+  }
+  return s.substring(s.length - end.length) === end;
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* An event that is triggered on a task.
+*/
+var TaskEvent = {
+  /**
+  * For this event,
+  * <ul>
+  *   <li>The `next` function is triggered on progress updates and when the
+  *       task is paused/resumed with an `UploadTaskSnapshot` as the first
+  *       argument.</li>
+  *   <li>The `error` function is triggered if the upload is canceled or fails
+  *       for another reason.</li>
+  *   <li>The `complete` function is triggered if the upload completes
+  *       successfully.</li>
+  * </ul>
+  */
+  STATE_CHANGED: 'state_changed'
+};
+/**
+* Represents the current state of a running upload.
+*/
+var TaskState = {
+  /** The task is currently transferring data.*/
+  RUNNING: 'running',
+  /** The task was paused by the user.*/
+  PAUSED: 'paused',
+  /** The task completed successfully.*/
+  SUCCESS: 'success',
+  /** The task was canceled.*/
+  CANCELED: 'canceled',
+  /** The task failed with an error.*/
+  ERROR: 'error'
+};
+function taskStateFromInternalTaskState(state) {
+  switch (state) {
+    case "running":
+    case "pausing":
+    case "canceling":
+      /*CANCELING*/
+      return TaskState.RUNNING;
+    case "paused":
+      /*PAUSED*/
+      return TaskState.PAUSED;
+    case "success":
+      /*SUCCESS*/
+      return TaskState.SUCCESS;
+    case "canceled":
+      /*CANCELED*/
+      return TaskState.CANCELED;
+    case "error":
+      /*ERROR*/
+      return TaskState.ERROR;
+    default:
+      // TODO(andysoto): assert(false);
+      return TaskState.ERROR;
+  }
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Error codes for requests made by the the XhrIo wrapper.
+*/
+var ErrorCode;
+(function (ErrorCode) {
+  ErrorCode[ErrorCode["NO_ERROR"] = 0] = "NO_ERROR";
+  ErrorCode[ErrorCode["NETWORK_ERROR"] = 1] = "NETWORK_ERROR";
+  ErrorCode[ErrorCode["ABORT"] = 2] = "ABORT";
+})(ErrorCode || (ErrorCode = {}));
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* We use this instead of goog.net.XhrIo because goog.net.XhrIo is hyuuuuge and
+* doesn't work in React Native on Android.
+*/
+var NetworkXhrIo = /** @class*/
+(function () {
+  function NetworkXhrIo() {
+    var _this = this;
+    this.sent_ = false;
+    this.xhr_ = new XMLHttpRequest();
+    this.errorCode_ = ErrorCode.NO_ERROR;
+    this.sendPromise_ = new Promise(function (resolve) {
+      _this.xhr_.addEventListener('abort', function () {
+        _this.errorCode_ = ErrorCode.ABORT;
+        resolve(_this);
+      });
+      _this.xhr_.addEventListener('error', function () {
+        _this.errorCode_ = ErrorCode.NETWORK_ERROR;
+        resolve(_this);
+      });
+      _this.xhr_.addEventListener('load', function () {
+        resolve(_this);
+      });
+    });
+  }
+  /**
+  * @override
+  */
+  NetworkXhrIo.prototype.send = function (url, method, body, headers) {
+    if (this.sent_) {
+      throw internalError('cannot .send() more than once');
+    }
+    this.sent_ = true;
+    this.xhr_.open(method, url, true);
+    if (headers !== undefined) {
+      for (var key in headers) {
+        if (headers.hasOwnProperty(key)) {
+          this.xhr_.setRequestHeader(key, headers[key].toString());
+        }
+      }
+    }
+    if (body !== undefined) {
+      this.xhr_.send(body);
+    } else {
+      this.xhr_.send();
+    }
+    return this.sendPromise_;
+  };
+  /**
+  * @override
+  */
+  NetworkXhrIo.prototype.getErrorCode = function () {
+    if (!this.sent_) {
+      throw internalError('cannot .getErrorCode() before sending');
+    }
+    return this.errorCode_;
+  };
+  /**
+  * @override
+  */
+  NetworkXhrIo.prototype.getStatus = function () {
+    if (!this.sent_) {
+      throw internalError('cannot .getStatus() before sending');
+    }
+    try {
+      return this.xhr_.status;
+    } catch (e) {
+      return -1;
+    }
+  };
+  /**
+  * @override
+  */
+  NetworkXhrIo.prototype.getResponseText = function () {
+    if (!this.sent_) {
+      throw internalError('cannot .getResponseText() before sending');
+    }
+    return this.xhr_.responseText;
+  };
+  /**
+  * Aborts the request.
+  * @override
+  */
+  NetworkXhrIo.prototype.abort = function () {
+    this.xhr_.abort();
+  };
+  /**
+  * @override
+  */
+  NetworkXhrIo.prototype.getResponseHeader = function (header) {
+    return this.xhr_.getResponseHeader(header);
+  };
+  /**
+  * @override
+  */
+  NetworkXhrIo.prototype.addUploadProgressListener = function (listener) {
+    if (this.xhr_.upload != null) {
+      this.xhr_.upload.addEventListener('progress', listener);
+    }
+  };
+  /**
+  * @override
+  */
+  NetworkXhrIo.prototype.removeUploadProgressListener = function (listener) {
+    if (this.xhr_.upload != null) {
+      this.xhr_.upload.removeEventListener('progress', listener);
+    }
+  };
+  return NetworkXhrIo;
+})();
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Factory-like class for creating XhrIo instances.
+*/
+var XhrIoPool = /** @class*/
+(function () {
+  function XhrIoPool() {}
+  XhrIoPool.prototype.createXhrIo = function () {
+    return new NetworkXhrIo();
+  };
+  return XhrIoPool;
+})();
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Firebase Storage location data.
+*
+* @internal
+*/
+var Location = /** @class*/
+(function () {
+  function Location(bucket, path) {
+    this.bucket = bucket;
+    this.path_ = path;
+  }
+  Object.defineProperty(Location.prototype, "path", {
+    get: function () {
+      return this.path_;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(Location.prototype, "isRoot", {
+    get: function () {
+      return this.path.length === 0;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Location.prototype.fullServerUrl = function () {
+    var encode = encodeURIComponent;
+    return '/b/' + encode(this.bucket) + '/o/' + encode(this.path);
+  };
+  Location.prototype.bucketOnlyServerUrl = function () {
+    var encode = encodeURIComponent;
+    return '/b/' + encode(this.bucket) + '/o';
+  };
+  Location.makeFromBucketSpec = function (bucketString, host) {
+    var bucketLocation;
+    try {
+      bucketLocation = Location.makeFromUrl(bucketString, host);
+    } catch (e) {
+      // Not valid URL, use as-is. This lets you put bare bucket names in
+      // config.
+      return new Location(bucketString, '');
+    }
+    if (bucketLocation.path === '') {
+      return bucketLocation;
+    } else {
+      throw invalidDefaultBucket(bucketString);
+    }
+  };
+  Location.makeFromUrl = function (url, host) {
+    var location = null;
+    var bucketDomain = '([A-Za-z0-9.\\-_]+)';
+    function gsModify(loc) {
+      if (loc.path.charAt(loc.path.length - 1) === '/') {
+        loc.path_ = loc.path_.slice(0, -1);
+      }
+    }
+    var gsPath = '(/(.*))?$';
+    var gsRegex = new RegExp('^gs://' + bucketDomain + gsPath, 'i');
+    var gsIndices = {
+      bucket: 1,
+      path: 3
+    };
+    function httpModify(loc) {
+      loc.path_ = decodeURIComponent(loc.path);
+    }
+    var version = 'v[A-Za-z0-9_]+';
+    var firebaseStorageHost = host.replace(/[.]/g, '\\.');
+    var firebaseStoragePath = '(/([^?#]*).*)?$';
+    var firebaseStorageRegExp = new RegExp("^https?://" + firebaseStorageHost + "/" + version + "/b/" + bucketDomain + "/o" + firebaseStoragePath, 'i');
+    var firebaseStorageIndices = {
+      bucket: 1,
+      path: 3
+    };
+    var cloudStorageHost = host === DEFAULT_HOST ? '(?:storage.googleapis.com|storage.cloud.google.com)' : host;
+    var cloudStoragePath = '([^?#]*)';
+    var cloudStorageRegExp = new RegExp("^https?://" + cloudStorageHost + "/" + bucketDomain + "/" + cloudStoragePath, 'i');
+    var cloudStorageIndices = {
+      bucket: 1,
+      path: 2
+    };
+    var groups = [{
+      regex: gsRegex,
+      indices: gsIndices,
+      postModify: gsModify
+    }, {
+      regex: firebaseStorageRegExp,
+      indices: firebaseStorageIndices,
+      postModify: httpModify
+    }, {
+      regex: cloudStorageRegExp,
+      indices: cloudStorageIndices,
+      postModify: httpModify
+    }];
+    for (var i = 0; i < groups.length; i++) {
+      var group = groups[i];
+      var captures = group.regex.exec(url);
+      if (captures) {
+        var bucketValue = captures[group.indices.bucket];
+        var pathValue = captures[group.indices.path];
+        if (!pathValue) {
+          pathValue = '';
+        }
+        location = new Location(bucketValue, pathValue);
+        group.postModify(location);
+        break;
+      }
+    }
+    if (location == null) {
+      throw invalidUrl(url);
+    }
+    return location;
+  };
+  return Location;
+})();
+/**
+* A request whose promise always fails.
+*/
+var FailRequest = /** @class*/
+(function () {
+  function FailRequest(error) {
+    this.promise_ = Promise.reject(error);
+  }
+  /** @inheritDoc*/
+  FailRequest.prototype.getPromise = function () {
+    return this.promise_;
+  };
+  /** @inheritDoc*/
+  FailRequest.prototype.cancel = function (_appDelete) {};
+  return FailRequest;
+})();
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* @param f May be invoked
+*     before the function returns.
+* @param callback Get all the arguments passed to the function
+*     passed to f, including the initial boolean.
+*/
+function start(f, // eslint-disable-next-line @typescript-eslint/no-explicit-any
+callback, timeout) {
+  // TODO(andysoto): make this code cleaner (probably refactor into an actual
+  // type instead of a bunch of functions with state shared in the closure)
+  var waitSeconds = 1;
+  // Would type this as "number" but that doesn't work for Node so ¯\_(ツ)_/¯
+  // TODO: find a way to exclude Node type definition for storage because storage only works in browser
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  var timeoutId = null;
+  var hitTimeout = false;
+  var cancelState = 0;
+  function canceled() {
+    return cancelState === 2;
+  }
+  var triggeredCallback = false;
+  function triggerCallback() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+      args[_i] = arguments[_i];
+    }
+    if (!triggeredCallback) {
+      triggeredCallback = true;
+      callback.apply(null, args);
+    }
+  }
+  function callWithDelay(millis) {
+    timeoutId = setTimeout(function () {
+      timeoutId = null;
+      f(handler, canceled());
+    }, millis);
+  }
+  function handler(success) {
+    var args = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+      args[_i - 1] = arguments[_i];
+    }
+    if (triggeredCallback) {
+      return;
+    }
+    if (success) {
+      triggerCallback.call.apply(triggerCallback, _tslib.__spreadArray([null, success], args));
+      return;
+    }
+    var mustStop = canceled() || hitTimeout;
+    if (mustStop) {
+      triggerCallback.call.apply(triggerCallback, _tslib.__spreadArray([null, success], args));
+      return;
+    }
+    if (waitSeconds < 64) {
+      /*TODO(andysoto): don't back off so quickly if we know we're offline.*/
+      waitSeconds *= 2;
+    }
+    var waitMillis;
+    if (cancelState === 1) {
+      cancelState = 2;
+      waitMillis = 0;
+    } else {
+      waitMillis = (waitSeconds + Math.random()) * 1000;
+    }
+    callWithDelay(waitMillis);
+  }
+  var stopped = false;
+  function stop(wasTimeout) {
+    if (stopped) {
+      return;
+    }
+    stopped = true;
+    if (triggeredCallback) {
+      return;
+    }
+    if (timeoutId !== null) {
+      if (!wasTimeout) {
+        cancelState = 2;
+      }
+      clearTimeout(timeoutId);
+      callWithDelay(0);
+    } else {
+      if (!wasTimeout) {
+        cancelState = 1;
+      }
+    }
+  }
+  callWithDelay(0);
+  setTimeout(function () {
+    hitTimeout = true;
+    stop(true);
+  }, timeout);
+  return stop;
+}
+/**
+* Stops the retry loop from repeating.
+* If the function is currently "in between" retries, it is invoked immediately
+* with the second parameter as "true". Otherwise, it will be invoked once more
+* after the current invocation finishes iff the current invocation would have
+* triggered another retry.
+*/
+function stop(id) {
+  id(false);
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+function isJustDef(p) {
+  return p !== void 0;
+}
+// eslint-disable-next-line @typescript-eslint/ban-types
+function isFunction(p) {
+  return typeof p === 'function';
+}
+function isNonArrayObject(p) {
+  return typeof p === 'object' && !Array.isArray(p);
+}
+function isString(p) {
+  return typeof p === 'string' || p instanceof String;
+}
+function isNativeBlob(p) {
+  return isNativeBlobDefined() && p instanceof Blob;
+}
+function isNativeBlobDefined() {
+  return typeof Blob !== 'undefined';
+}
+function validateNumber(argument, minValue, maxValue, value) {
+  if (value < minValue) {
+    throw invalidArgument("Invalid value for '" + argument + "'. Expected " + minValue + " or greater.");
+  }
+  if (value > maxValue) {
+    throw invalidArgument("Invalid value for '" + argument + "'. Expected " + maxValue + " or less.");
+  }
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+function makeUrl(urlPart, host) {
+  var protocolMatch = host.match(/^(\w+):\/\/.+/);
+  var protocol = protocolMatch === null || protocolMatch === void 0 ? void 0 : protocolMatch[1];
+  var origin = host;
+  if (protocol == null) {
+    origin = "https://" + host;
+  }
+  return origin + "/v0" + urlPart;
+}
+function makeQueryString(params) {
+  var encode = encodeURIComponent;
+  var queryPart = '?';
+  for (var key in params) {
+    if (params.hasOwnProperty(key)) {
+      var nextPart = encode(key) + '=' + encode(params[key]);
+      queryPart = queryPart + nextPart + '&';
+    }
+  }
+  // Chop off the extra '&' or '?' on the end
+  queryPart = queryPart.slice(0, -1);
+  return queryPart;
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var NetworkRequest = /** @class*/
+(function () {
+  function NetworkRequest(url, method, headers, body, successCodes, additionalRetryCodes, callback, errorCallback, timeout, progressCallback, pool) {
+    var _this = this;
+    this.pendingXhr_ = null;
+    this.backoffId_ = null;
+    this.canceled_ = false;
+    this.appDelete_ = false;
+    this.url_ = url;
+    this.method_ = method;
+    this.headers_ = headers;
+    this.body_ = body;
+    this.successCodes_ = successCodes.slice();
+    this.additionalRetryCodes_ = additionalRetryCodes.slice();
+    this.callback_ = callback;
+    this.errorCallback_ = errorCallback;
+    this.progressCallback_ = progressCallback;
+    this.timeout_ = timeout;
+    this.pool_ = pool;
+    this.promise_ = new Promise(function (resolve, reject) {
+      _this.resolve_ = resolve;
+      _this.reject_ = reject;
+      _this.start_();
+    });
+  }
+  /**
+  * Actually starts the retry loop.
+  */
+  NetworkRequest.prototype.start_ = function () {
+    var self = this;
+    function doTheRequest(backoffCallback, canceled) {
+      if (canceled) {
+        backoffCallback(false, new RequestEndStatus(false, null, true));
+        return;
+      }
+      var xhr = self.pool_.createXhrIo();
+      self.pendingXhr_ = xhr;
+      function progressListener(progressEvent) {
+        var loaded = progressEvent.loaded;
+        var total = progressEvent.lengthComputable ? progressEvent.total : -1;
+        if (self.progressCallback_ !== null) {
+          self.progressCallback_(loaded, total);
+        }
+      }
+      if (self.progressCallback_ !== null) {
+        xhr.addUploadProgressListener(progressListener);
+      }
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      xhr.send(self.url_, self.method_, self.body_, self.headers_).then(function (xhr) {
+        if (self.progressCallback_ !== null) {
+          xhr.removeUploadProgressListener(progressListener);
+        }
+        self.pendingXhr_ = null;
+        xhr = xhr;
+        var hitServer = xhr.getErrorCode() === ErrorCode.NO_ERROR;
+        var status = xhr.getStatus();
+        if (!hitServer || self.isRetryStatusCode_(status)) {
+          var wasCanceled = xhr.getErrorCode() === ErrorCode.ABORT;
+          backoffCallback(false, new RequestEndStatus(false, null, wasCanceled));
+          return;
+        }
+        var successCode = self.successCodes_.indexOf(status) !== -1;
+        backoffCallback(true, new RequestEndStatus(successCode, xhr));
+      });
+    }
+    /**
+    * @param requestWentThrough - True if the request eventually went
+    *     through, false if it hit the retry limit or was canceled.
+    */
+    function backoffDone(requestWentThrough, status) {
+      var resolve = self.resolve_;
+      var reject = self.reject_;
+      var xhr = status.xhr;
+      if (status.wasSuccessCode) {
+        try {
+          var result = self.callback_(xhr, xhr.getResponseText());
+          if (isJustDef(result)) {
+            resolve(result);
+          } else {
+            resolve();
+          }
+        } catch (e) {
+          reject(e);
+        }
+      } else {
+        if (xhr !== null) {
+          var err = unknown();
+          err.serverResponse = xhr.getResponseText();
+          if (self.errorCallback_) {
+            reject(self.errorCallback_(xhr, err));
+          } else {
+            reject(err);
+          }
+        } else {
+          if (status.canceled) {
+            var err = self.appDelete_ ? appDeleted() : canceled();
+            reject(err);
+          } else {
+            var err = retryLimitExceeded();
+            reject(err);
+          }
+        }
+      }
+    }
+    if (this.canceled_) {
+      backoffDone(false, new RequestEndStatus(false, null, true));
+    } else {
+      this.backoffId_ = start(doTheRequest, backoffDone, this.timeout_);
+    }
+  };
+  /** @inheritDoc*/
+  NetworkRequest.prototype.getPromise = function () {
+    return this.promise_;
+  };
+  /** @inheritDoc*/
+  NetworkRequest.prototype.cancel = function (appDelete) {
+    this.canceled_ = true;
+    this.appDelete_ = appDelete || false;
+    if (this.backoffId_ !== null) {
+      stop(this.backoffId_);
+    }
+    if (this.pendingXhr_ !== null) {
+      this.pendingXhr_.abort();
+    }
+  };
+  NetworkRequest.prototype.isRetryStatusCode_ = function (status) {
+    // The codes for which to retry came from this page:
+    // https://cloud.google.com/storage/docs/exponential-backoff
+    var isFiveHundredCode = status >= 500 && status < 600;
+    var extraRetryCodes = [// Request Timeout: web server didn't receive full request in time.
+    408, // Too Many Requests: you're getting rate-limited, basically.
+    429];
+    var isExtraRetryCode = extraRetryCodes.indexOf(status) !== -1;
+    var isRequestSpecificRetryCode = this.additionalRetryCodes_.indexOf(status) !== -1;
+    return isFiveHundredCode || isExtraRetryCode || isRequestSpecificRetryCode;
+  };
+  return NetworkRequest;
+})();
+/**
+* A collection of information about the result of a network request.
+* @param opt_canceled - Defaults to false.
+*/
+var RequestEndStatus = /** @class*/
+(function () {
+  function RequestEndStatus(wasSuccessCode, xhr, canceled) {
+    this.wasSuccessCode = wasSuccessCode;
+    this.xhr = xhr;
+    this.canceled = !!canceled;
+  }
+  return RequestEndStatus;
+})();
+function addAuthHeader_(headers, authToken) {
+  if (authToken !== null && authToken.length > 0) {
+    headers['Authorization'] = 'Firebase ' + authToken;
+  }
+}
+function addVersionHeader_(headers, firebaseVersion) {
+  headers['X-Firebase-Storage-Version'] = 'webjs/' + (firebaseVersion !== null && firebaseVersion !== void 0 ? firebaseVersion : 'AppManager');
+}
+function addGmpidHeader_(headers, appId) {
+  if (appId) {
+    headers['X-Firebase-GMPID'] = appId;
+  }
+}
+function addAppCheckHeader_(headers, appCheckToken) {
+  if (appCheckToken !== null) {
+    headers['X-Firebase-AppCheck'] = appCheckToken;
+  }
+}
+function makeRequest(requestInfo, appId, authToken, appCheckToken, pool, firebaseVersion) {
+  var queryPart = makeQueryString(requestInfo.urlParams);
+  var url = requestInfo.url + queryPart;
+  var headers = Object.assign({}, requestInfo.headers);
+  addGmpidHeader_(headers, appId);
+  addAuthHeader_(headers, authToken);
+  addVersionHeader_(headers, firebaseVersion);
+  addAppCheckHeader_(headers, appCheckToken);
+  return new NetworkRequest(url, requestInfo.method, headers, requestInfo.body, requestInfo.successCodes, requestInfo.additionalRetryCodes, requestInfo.handler, requestInfo.errorHandler, requestInfo.timeout, requestInfo.progressCallback, pool);
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+function getBlobBuilder() {
+  if (typeof BlobBuilder !== 'undefined') {
+    return BlobBuilder;
+  } else if (typeof WebKitBlobBuilder !== 'undefined') {
+    return WebKitBlobBuilder;
+  } else {
+    return undefined;
+  }
+}
+/**
+* Concatenates one or more values together and converts them to a Blob.
+*
+* @param args The values that will make up the resulting blob.
+* @return The blob.
+*/
+function getBlob() {
+  var args = [];
+  for (var _i = 0; _i < arguments.length; _i++) {
+    args[_i] = arguments[_i];
+  }
+  var BlobBuilder = getBlobBuilder();
+  if (BlobBuilder !== undefined) {
+    var bb = new BlobBuilder();
+    for (var i = 0; i < args.length; i++) {
+      bb.append(args[i]);
+    }
+    return bb.getBlob();
+  } else {
+    if (isNativeBlobDefined()) {
+      return new Blob(args);
+    } else {
+      throw new FirebaseStorageError("unsupported-environment", /*UNSUPPORTED_ENVIRONMENT*/
+      "This browser doesn't seem to support creating Blobs");
+    }
+  }
+}
+/**
+* Slices the blob. The returned blob contains data from the start byte
+* (inclusive) till the end byte (exclusive). Negative indices cannot be used.
+*
+* @param blob The blob to be sliced.
+* @param start Index of the starting byte.
+* @param end Index of the ending byte.
+* @return The blob slice or null if not supported.
+*/
+function sliceBlob(blob, start, end) {
+  if (blob.webkitSlice) {
+    return blob.webkitSlice(start, end);
+  } else if (blob.mozSlice) {
+    return blob.mozSlice(start, end);
+  } else if (blob.slice) {
+    return blob.slice(start, end);
+  }
+  return null;
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* @param opt_elideCopy - If true, doesn't copy mutable input data
+*     (e.g. Uint8Arrays). Pass true only if you know the objects will not be
+*     modified after this blob's construction.
+*
+* @internal
+*/
+var FbsBlob = /** @class*/
+(function () {
+  function FbsBlob(data, elideCopy) {
+    var size = 0;
+    var blobType = '';
+    if (isNativeBlob(data)) {
+      this.data_ = data;
+      size = data.size;
+      blobType = data.type;
+    } else if (data instanceof ArrayBuffer) {
+      if (elideCopy) {
+        this.data_ = new Uint8Array(data);
+      } else {
+        this.data_ = new Uint8Array(data.byteLength);
+        this.data_.set(new Uint8Array(data));
+      }
+      size = this.data_.length;
+    } else if (data instanceof Uint8Array) {
+      if (elideCopy) {
+        this.data_ = data;
+      } else {
+        this.data_ = new Uint8Array(data.length);
+        this.data_.set(data);
+      }
+      size = data.length;
+    }
+    this.size_ = size;
+    this.type_ = blobType;
+  }
+  FbsBlob.prototype.size = function () {
+    return this.size_;
+  };
+  FbsBlob.prototype.type = function () {
+    return this.type_;
+  };
+  FbsBlob.prototype.slice = function (startByte, endByte) {
+    if (isNativeBlob(this.data_)) {
+      var realBlob = this.data_;
+      var sliced = sliceBlob(realBlob, startByte, endByte);
+      if (sliced === null) {
+        return null;
+      }
+      return new FbsBlob(sliced);
+    } else {
+      var slice = new Uint8Array(this.data_.buffer, startByte, endByte - startByte);
+      return new FbsBlob(slice, true);
+    }
+  };
+  FbsBlob.getBlob = function () {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+      args[_i] = arguments[_i];
+    }
+    if (isNativeBlobDefined()) {
+      var blobby = args.map(function (val) {
+        if (val instanceof FbsBlob) {
+          return val.data_;
+        } else {
+          return val;
+        }
+      });
+      return new FbsBlob(getBlob.apply(null, blobby));
+    } else {
+      var uint8Arrays = args.map(function (val) {
+        if (isString(val)) {
+          return dataFromString(StringFormat.RAW, val).data;
+        } else {
+          // Blobs don't exist, so this has to be a Uint8Array.
+          return val.data_;
+        }
+      });
+      var finalLength_1 = 0;
+      uint8Arrays.forEach(function (array) {
+        finalLength_1 += array.byteLength;
+      });
+      var merged_1 = new Uint8Array(finalLength_1);
+      var index_1 = 0;
+      uint8Arrays.forEach(function (array) {
+        for (var i = 0; i < array.length; i++) {
+          merged_1[index_1++] = array[i];
+        }
+      });
+      return new FbsBlob(merged_1, true);
+    }
+  };
+  FbsBlob.prototype.uploadData = function () {
+    return this.data_;
+  };
+  return FbsBlob;
+})();
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Returns the Object resulting from parsing the given JSON, or null if the
+* given string does not represent a JSON object.
+*/
+function jsonObjectOrNull(s) {
+  var obj;
+  try {
+    obj = JSON.parse(s);
+  } catch (e) {
+    return null;
+  }
+  if (isNonArrayObject(obj)) {
+    return obj;
+  } else {
+    return null;
+  }
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* @fileoverview Contains helper methods for manipulating paths.
+*/
+/**
+* @return Null if the path is already at the root.
+*/
+function parent(path) {
+  if (path.length === 0) {
+    return null;
+  }
+  var index = path.lastIndexOf('/');
+  if (index === -1) {
+    return '';
+  }
+  var newPath = path.slice(0, index);
+  return newPath;
+}
+function child(path, childPath) {
+  var canonicalChildPath = childPath.split('/').filter(function (component) {
+    return component.length > 0;
+  }).join('/');
+  if (path.length === 0) {
+    return canonicalChildPath;
+  } else {
+    return path + '/' + canonicalChildPath;
+  }
+}
+/**
+* Returns the last component of a path.
+* '/foo/bar' -> 'bar'
+* '/foo/bar/baz/' -> 'baz/'
+* '/a' -> 'a'
+*/
+function lastComponent(path) {
+  var index = path.lastIndexOf('/', path.length - 2);
+  if (index === -1) {
+    return path;
+  } else {
+    return path.slice(index + 1);
+  }
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+function noXform_(metadata, value) {
+  return value;
+}
+var Mapping = /** @class*/
+(function () {
+  function Mapping(server, local, writable, xform) {
+    this.server = server;
+    this.local = local || server;
+    this.writable = !!writable;
+    this.xform = xform || noXform_;
+  }
+  return Mapping;
+})();
+var mappings_ = null;
+function xformPath(fullPath) {
+  if (!isString(fullPath) || fullPath.length < 2) {
+    return fullPath;
+  } else {
+    return lastComponent(fullPath);
+  }
+}
+function getMappings() {
+  if (mappings_) {
+    return mappings_;
+  }
+  var mappings = [];
+  mappings.push(new Mapping('bucket'));
+  mappings.push(new Mapping('generation'));
+  mappings.push(new Mapping('metageneration'));
+  mappings.push(new Mapping('name', 'fullPath', true));
+  function mappingsXformPath(_metadata, fullPath) {
+    return xformPath(fullPath);
+  }
+  var nameMapping = new Mapping('name');
+  nameMapping.xform = mappingsXformPath;
+  mappings.push(nameMapping);
+  /**
+  * Coerces the second param to a number, if it is defined.
+  */
+  function xformSize(_metadata, size) {
+    if (size !== undefined) {
+      return Number(size);
+    } else {
+      return size;
+    }
+  }
+  var sizeMapping = new Mapping('size');
+  sizeMapping.xform = xformSize;
+  mappings.push(sizeMapping);
+  mappings.push(new Mapping('timeCreated'));
+  mappings.push(new Mapping('updated'));
+  mappings.push(new Mapping('md5Hash', null, true));
+  mappings.push(new Mapping('cacheControl', null, true));
+  mappings.push(new Mapping('contentDisposition', null, true));
+  mappings.push(new Mapping('contentEncoding', null, true));
+  mappings.push(new Mapping('contentLanguage', null, true));
+  mappings.push(new Mapping('contentType', null, true));
+  mappings.push(new Mapping('metadata', 'customMetadata', true));
+  mappings_ = mappings;
+  return mappings_;
+}
+function addRef(metadata, service) {
+  function generateRef() {
+    var bucket = metadata['bucket'];
+    var path = metadata['fullPath'];
+    var loc = new Location(bucket, path);
+    return service._makeStorageReference(loc);
+  }
+  Object.defineProperty(metadata, 'ref', {
+    get: generateRef
+  });
+}
+function fromResource(service, resource, mappings) {
+  var metadata = {};
+  metadata['type'] = 'file';
+  var len = mappings.length;
+  for (var i = 0; i < len; i++) {
+    var mapping = mappings[i];
+    metadata[mapping.local] = mapping.xform(metadata, resource[mapping.server]);
+  }
+  addRef(metadata, service);
+  return metadata;
+}
+function fromResourceString(service, resourceString, mappings) {
+  var obj = jsonObjectOrNull(resourceString);
+  if (obj === null) {
+    return null;
+  }
+  var resource = obj;
+  return fromResource(service, resource, mappings);
+}
+function downloadUrlFromResourceString(metadata, resourceString, host) {
+  var obj = jsonObjectOrNull(resourceString);
+  if (obj === null) {
+    return null;
+  }
+  if (!isString(obj['downloadTokens'])) {
+    // This can happen if objects are uploaded through GCS and retrieved
+    // through list, so we don't want to throw an Error.
+    return null;
+  }
+  var tokens = obj['downloadTokens'];
+  if (tokens.length === 0) {
+    return null;
+  }
+  var encode = encodeURIComponent;
+  var tokensList = tokens.split(',');
+  var urls = tokensList.map(function (token) {
+    var bucket = metadata['bucket'];
+    var path = metadata['fullPath'];
+    var urlPart = '/b/' + encode(bucket) + '/o/' + encode(path);
+    var base = makeUrl(urlPart, host);
+    var queryString = makeQueryString({
+      alt: 'media',
+      token: token
+    });
+    return base + queryString;
+  });
+  return urls[0];
+}
+function toResourceString(metadata, mappings) {
+  var resource = {};
+  var len = mappings.length;
+  for (var i = 0; i < len; i++) {
+    var mapping = mappings[i];
+    if (mapping.writable) {
+      resource[mapping.server] = metadata[mapping.local];
+    }
+  }
+  return JSON.stringify(resource);
+}
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var PREFIXES_KEY = 'prefixes';
+var ITEMS_KEY = 'items';
+function fromBackendResponse(service, bucket, resource) {
+  var listResult = {
+    prefixes: [],
+    items: [],
+    nextPageToken: resource['nextPageToken']
+  };
+  if (resource[PREFIXES_KEY]) {
+    for (var _i = 0, _a = resource[PREFIXES_KEY]; _i < _a.length; _i++) {
+      var path = _a[_i];
+      var pathWithoutTrailingSlash = path.replace(/\/$/, '');
+      var reference = service._makeStorageReference(new Location(bucket, pathWithoutTrailingSlash));
+      listResult.prefixes.push(reference);
+    }
+  }
+  if (resource[ITEMS_KEY]) {
+    for (var _b = 0, _c = resource[ITEMS_KEY]; _b < _c.length; _b++) {
+      var item = _c[_b];
+      var reference = service._makeStorageReference(new Location(bucket, item['name']));
+      listResult.items.push(reference);
+    }
+  }
+  return listResult;
+}
+function fromResponseString(service, bucket, resourceString) {
+  var obj = jsonObjectOrNull(resourceString);
+  if (obj === null) {
+    return null;
+  }
+  var resource = obj;
+  return fromBackendResponse(service, bucket, resource);
+}
+var RequestInfo = /** @class*/
+(function () {
+  function RequestInfo(url, method, /**
+  * Returns the value with which to resolve the request's promise. Only called
+  * if the request is successful. Throw from this function to reject the
+  * returned Request's promise with the thrown error.
+  * Note: The XhrIo passed to this function may be reused after this callback
+  * returns. Do not keep a reference to it in any way.
+  */
+  handler, timeout) {
+    this.url = url;
+    this.method = method;
+    this.handler = handler;
+    this.timeout = timeout;
+    this.urlParams = {};
+    this.headers = {};
+    this.body = null;
+    this.errorHandler = null;
+    /**
+    * Called with the current number of bytes uploaded and total size (-1 if not
+    * computable) of the request body (i.e. used to report upload progress).
+    */
+    this.progressCallback = null;
+    this.successCodes = [200];
+    this.additionalRetryCodes = [];
+  }
+  return RequestInfo;
+})();
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Throws the UNKNOWN FirebaseStorageError if cndn is false.
+*/
+function handlerCheck(cndn) {
+  if (!cndn) {
+    throw unknown();
+  }
+}
+function metadataHandler(service, mappings) {
+  function handler(xhr, text) {
+    var metadata = fromResourceString(service, text, mappings);
+    handlerCheck(metadata !== null);
+    return metadata;
+  }
+  return handler;
+}
+function listHandler(service, bucket) {
+  function handler(xhr, text) {
+    var listResult = fromResponseString(service, bucket, text);
+    handlerCheck(listResult !== null);
+    return listResult;
+  }
+  return handler;
+}
+function downloadUrlHandler(service, mappings) {
+  function handler(xhr, text) {
+    var metadata = fromResourceString(service, text, mappings);
+    handlerCheck(metadata !== null);
+    return downloadUrlFromResourceString(metadata, text, service.host);
+  }
+  return handler;
+}
+function sharedErrorHandler(location) {
+  function errorHandler(xhr, err) {
+    var newErr;
+    if (xhr.getStatus() === 401) {
+      if (// This exact message string is the only consistent part of the
+      // server's error response that identifies it as an App Check error.
+      xhr.getResponseText().includes('Firebase App Check token is invalid')) {
+        newErr = unauthorizedApp();
+      } else {
+        newErr = unauthenticated();
+      }
+    } else {
+      if (xhr.getStatus() === 402) {
+        newErr = quotaExceeded(location.bucket);
+      } else {
+        if (xhr.getStatus() === 403) {
+          newErr = unauthorized(location.path);
+        } else {
+          newErr = err;
+        }
+      }
+    }
+    newErr.serverResponse = err.serverResponse;
+    return newErr;
+  }
+  return errorHandler;
+}
+function objectErrorHandler(location) {
+  var shared = sharedErrorHandler(location);
+  function errorHandler(xhr, err) {
+    var newErr = shared(xhr, err);
+    if (xhr.getStatus() === 404) {
+      newErr = objectNotFound(location.path);
+    }
+    newErr.serverResponse = err.serverResponse;
+    return newErr;
+  }
+  return errorHandler;
+}
+function getMetadata(service, location, mappings) {
+  var urlPart = location.fullServerUrl();
+  var url = makeUrl(urlPart, service.host);
+  var method = 'GET';
+  var timeout = service.maxOperationRetryTime;
+  var requestInfo = new RequestInfo(url, method, metadataHandler(service, mappings), timeout);
+  requestInfo.errorHandler = objectErrorHandler(location);
+  return requestInfo;
+}
+function list(service, location, delimiter, pageToken, maxResults) {
+  var urlParams = {};
+  if (location.isRoot) {
+    urlParams['prefix'] = '';
+  } else {
+    urlParams['prefix'] = location.path + '/';
+  }
+  if (delimiter && delimiter.length > 0) {
+    urlParams['delimiter'] = delimiter;
+  }
+  if (pageToken) {
+    urlParams['pageToken'] = pageToken;
+  }
+  if (maxResults) {
+    urlParams['maxResults'] = maxResults;
+  }
+  var urlPart = location.bucketOnlyServerUrl();
+  var url = makeUrl(urlPart, service.host);
+  var method = 'GET';
+  var timeout = service.maxOperationRetryTime;
+  var requestInfo = new RequestInfo(url, method, listHandler(service, location.bucket), timeout);
+  requestInfo.urlParams = urlParams;
+  requestInfo.errorHandler = sharedErrorHandler(location);
+  return requestInfo;
+}
+function getDownloadUrl(service, location, mappings) {
+  var urlPart = location.fullServerUrl();
+  var url = makeUrl(urlPart, service.host);
+  var method = 'GET';
+  var timeout = service.maxOperationRetryTime;
+  var requestInfo = new RequestInfo(url, method, downloadUrlHandler(service, mappings), timeout);
+  requestInfo.errorHandler = objectErrorHandler(location);
+  return requestInfo;
+}
+function updateMetadata(service, location, metadata, mappings) {
+  var urlPart = location.fullServerUrl();
+  var url = makeUrl(urlPart, service.host);
+  var method = 'PATCH';
+  var body = toResourceString(metadata, mappings);
+  var headers = {
+    'Content-Type': 'application/json; charset=utf-8'
+  };
+  var timeout = service.maxOperationRetryTime;
+  var requestInfo = new RequestInfo(url, method, metadataHandler(service, mappings), timeout);
+  requestInfo.headers = headers;
+  requestInfo.body = body;
+  requestInfo.errorHandler = objectErrorHandler(location);
+  return requestInfo;
+}
+function deleteObject(service, location) {
+  var urlPart = location.fullServerUrl();
+  var url = makeUrl(urlPart, service.host);
+  var method = 'DELETE';
+  var timeout = service.maxOperationRetryTime;
+  function handler(_xhr, _text) {}
+  var requestInfo = new RequestInfo(url, method, handler, timeout);
+  requestInfo.successCodes = [200, 204];
+  requestInfo.errorHandler = objectErrorHandler(location);
+  return requestInfo;
+}
+function determineContentType_(metadata, blob) {
+  return metadata && metadata['contentType'] || blob && blob.type() || 'application/octet-stream';
+}
+function metadataForUpload_(location, blob, metadata) {
+  var metadataClone = Object.assign({}, metadata);
+  metadataClone['fullPath'] = location.path;
+  metadataClone['size'] = blob.size();
+  if (!metadataClone['contentType']) {
+    metadataClone['contentType'] = determineContentType_(null, blob);
+  }
+  return metadataClone;
+}
+/**
+* Prepare RequestInfo for uploads as Content-Type: multipart.
+*/
+function multipartUpload(service, location, mappings, blob, metadata) {
+  var urlPart = location.bucketOnlyServerUrl();
+  var headers = {
+    'X-Goog-Upload-Protocol': 'multipart'
+  };
+  function genBoundary() {
+    var str = '';
+    for (var i = 0; i < 2; i++) {
+      str = str + Math.random().toString().slice(2);
+    }
+    return str;
+  }
+  var boundary = genBoundary();
+  headers['Content-Type'] = 'multipart/related; boundary=' + boundary;
+  var metadata_ = metadataForUpload_(location, blob, metadata);
+  var metadataString = toResourceString(metadata_, mappings);
+  var preBlobPart = '--' + boundary + '\r\n' + 'Content-Type: application/json; charset=utf-8\r\n\r\n' + metadataString + '\r\n--' + boundary + '\r\n' + 'Content-Type: ' + metadata_['contentType'] + '\r\n\r\n';
+  var postBlobPart = '\r\n--' + boundary + '--';
+  var body = FbsBlob.getBlob(preBlobPart, blob, postBlobPart);
+  if (body === null) {
+    throw cannotSliceBlob();
+  }
+  var urlParams = {
+    name: metadata_['fullPath']
+  };
+  var url = makeUrl(urlPart, service.host);
+  var method = 'POST';
+  var timeout = service.maxUploadRetryTime;
+  var requestInfo = new RequestInfo(url, method, metadataHandler(service, mappings), timeout);
+  requestInfo.urlParams = urlParams;
+  requestInfo.headers = headers;
+  requestInfo.body = body.uploadData();
+  requestInfo.errorHandler = sharedErrorHandler(location);
+  return requestInfo;
+}
+/**
+* @param current The number of bytes that have been uploaded so far.
+* @param total The total number of bytes in the upload.
+* @param opt_finalized True if the server has finished the upload.
+* @param opt_metadata The upload metadata, should
+*     only be passed if opt_finalized is true.
+*/
+var ResumableUploadStatus = /** @class*/
+(function () {
+  function ResumableUploadStatus(current, total, finalized, metadata) {
+    this.current = current;
+    this.total = total;
+    this.finalized = !!finalized;
+    this.metadata = metadata || null;
+  }
+  return ResumableUploadStatus;
+})();
+function checkResumeHeader_(xhr, allowed) {
+  var status = null;
+  try {
+    status = xhr.getResponseHeader('X-Goog-Upload-Status');
+  } catch (e) {
+    handlerCheck(false);
+  }
+  var allowedStatus = allowed || ['active'];
+  handlerCheck(!!status && allowedStatus.indexOf(status) !== -1);
+  return status;
+}
+function createResumableUpload(service, location, mappings, blob, metadata) {
+  var urlPart = location.bucketOnlyServerUrl();
+  var metadataForUpload = metadataForUpload_(location, blob, metadata);
+  var urlParams = {
+    name: metadataForUpload['fullPath']
+  };
+  var url = makeUrl(urlPart, service.host);
+  var method = 'POST';
+  var headers = {
+    'X-Goog-Upload-Protocol': 'resumable',
+    'X-Goog-Upload-Command': 'start',
+    'X-Goog-Upload-Header-Content-Length': blob.size(),
+    'X-Goog-Upload-Header-Content-Type': metadataForUpload['contentType'],
+    'Content-Type': 'application/json; charset=utf-8'
+  };
+  var body = toResourceString(metadataForUpload, mappings);
+  var timeout = service.maxUploadRetryTime;
+  function handler(xhr) {
+    checkResumeHeader_(xhr);
+    var url;
+    try {
+      url = xhr.getResponseHeader('X-Goog-Upload-URL');
+    } catch (e) {
+      handlerCheck(false);
+    }
+    handlerCheck(isString(url));
+    return url;
+  }
+  var requestInfo = new RequestInfo(url, method, handler, timeout);
+  requestInfo.urlParams = urlParams;
+  requestInfo.headers = headers;
+  requestInfo.body = body;
+  requestInfo.errorHandler = sharedErrorHandler(location);
+  return requestInfo;
+}
+/**
+* @param url From a call to fbs.requests.createResumableUpload.
+*/
+function getResumableUploadStatus(service, location, url, blob) {
+  var headers = {
+    'X-Goog-Upload-Command': 'query'
+  };
+  function handler(xhr) {
+    var status = checkResumeHeader_(xhr, ['active', 'final']);
+    var sizeString = null;
+    try {
+      sizeString = xhr.getResponseHeader('X-Goog-Upload-Size-Received');
+    } catch (e) {
+      handlerCheck(false);
+    }
+    if (!sizeString) {
+      // null or empty string
+      handlerCheck(false);
+    }
+    var size = Number(sizeString);
+    handlerCheck(!isNaN(size));
+    return new ResumableUploadStatus(size, blob.size(), status === 'final');
+  }
+  var method = 'POST';
+  var timeout = service.maxUploadRetryTime;
+  var requestInfo = new RequestInfo(url, method, handler, timeout);
+  requestInfo.headers = headers;
+  requestInfo.errorHandler = sharedErrorHandler(location);
+  return requestInfo;
+}
+/**
+* Any uploads via the resumable upload API must transfer a number of bytes
+* that is a multiple of this number.
+*/
+var RESUMABLE_UPLOAD_CHUNK_SIZE = 256 * 1024;
+/**
+* @param url From a call to fbs.requests.createResumableUpload.
+* @param chunkSize Number of bytes to upload.
+* @param status The previous status.
+*     If not passed or null, we start from the beginning.
+* @throws fbs.Error If the upload is already complete, the passed in status
+*     has a final size inconsistent with the blob, or the blob cannot be sliced
+*     for upload.
+*/
+function continueResumableUpload(location, service, url, blob, chunkSize, mappings, status, progressCallback) {
+  // TODO(andysoto): standardize on internal asserts
+  // assert(!(opt_status && opt_status.finalized));
+  var status_ = new ResumableUploadStatus(0, 0);
+  if (status) {
+    status_.current = status.current;
+    status_.total = status.total;
+  } else {
+    status_.current = 0;
+    status_.total = blob.size();
+  }
+  if (blob.size() !== status_.total) {
+    throw serverFileWrongSize();
+  }
+  var bytesLeft = status_.total - status_.current;
+  var bytesToUpload = bytesLeft;
+  if (chunkSize > 0) {
+    bytesToUpload = Math.min(bytesToUpload, chunkSize);
+  }
+  var startByte = status_.current;
+  var endByte = startByte + bytesToUpload;
+  var uploadCommand = bytesToUpload === bytesLeft ? 'upload, finalize' : 'upload';
+  var headers = {
+    'X-Goog-Upload-Command': uploadCommand,
+    'X-Goog-Upload-Offset': status_.current
+  };
+  var body = blob.slice(startByte, endByte);
+  if (body === null) {
+    throw cannotSliceBlob();
+  }
+  function handler(xhr, text) {
+    // TODO(andysoto): Verify the MD5 of each uploaded range:
+    // the 'x-range-md5' header comes back with status code 308 responses.
+    // We'll only be able to bail out though, because you can't re-upload a
+    // range that you previously uploaded.
+    var uploadStatus = checkResumeHeader_(xhr, ['active', 'final']);
+    var newCurrent = status_.current + bytesToUpload;
+    var size = blob.size();
+    var metadata;
+    if (uploadStatus === 'final') {
+      metadata = metadataHandler(service, mappings)(xhr, text);
+    } else {
+      metadata = null;
+    }
+    return new ResumableUploadStatus(newCurrent, size, uploadStatus === 'final', metadata);
+  }
+  var method = 'POST';
+  var timeout = service.maxUploadRetryTime;
+  var requestInfo = new RequestInfo(url, method, handler, timeout);
+  requestInfo.headers = headers;
+  requestInfo.body = body.uploadData();
+  requestInfo.progressCallback = progressCallback || null;
+  requestInfo.errorHandler = sharedErrorHandler(location);
+  return requestInfo;
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var Observer = /** @class*/
+(function () {
+  function Observer(nextOrObserver, error, complete) {
+    var asFunctions = isFunction(nextOrObserver) || error != null || complete != null;
+    if (asFunctions) {
+      this.next = nextOrObserver;
+      this.error = error;
+      this.complete = complete;
+    } else {
+      var observer = nextOrObserver;
+      this.next = observer.next;
+      this.error = observer.error;
+      this.complete = observer.complete;
+    }
+  }
+  return Observer;
+})();
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Returns a function that invokes f with its arguments asynchronously as a
+* microtask, i.e. as soon as possible after the current script returns back
+* into browser code.
+*/
+// eslint-disable-next-line @typescript-eslint/ban-types
+function async(f) {
+  return function () {
+    var argsToForward = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+      argsToForward[_i] = arguments[_i];
+    }
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    Promise.resolve().then(function () {
+      return f.apply(void 0, argsToForward);
+    });
+  };
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Represents a blob being uploaded. Can be used to pause/resume/cancel the
+* upload and manage callbacks for various events.
+* @internal
+*/
+var UploadTask = /** @class*/
+(function () {
+  /**
+  * @param ref - The firebaseStorage.Reference object this task came
+  *     from, untyped to avoid cyclic dependencies.
+  * @param blob - The blob to upload.
+  */
+  function UploadTask(ref, blob, metadata) {
+    var _this = this;
+    if (metadata === void 0) {
+      metadata = null;
+    }
+    /**
+    * Number of bytes transferred so far.
+    */
+    this._transferred = 0;
+    this._needToFetchStatus = false;
+    this._needToFetchMetadata = false;
+    this._observers = [];
+    this._error = undefined;
+    this._uploadUrl = undefined;
+    this._request = undefined;
+    this._chunkMultiplier = 1;
+    this._resolve = undefined;
+    this._reject = undefined;
+    this._ref = ref;
+    this._blob = blob;
+    this._metadata = metadata;
+    this._mappings = getMappings();
+    this._resumable = this._shouldDoResumable(this._blob);
+    this._state = "running";
+    this._errorHandler = function (error) {
+      _this._request = undefined;
+      _this._chunkMultiplier = 1;
+      if (error._codeEquals("canceled")) {
+        _this._needToFetchStatus = true;
+        _this.completeTransitions_();
+      } else {
+        _this._error = error;
+        _this._transition("error");
+      }
+    };
+    this._metadataErrorHandler = function (error) {
+      _this._request = undefined;
+      if (error._codeEquals("canceled")) {
+        _this.completeTransitions_();
+      } else {
+        _this._error = error;
+        _this._transition("error");
+      }
+    };
+    this._promise = new Promise(function (resolve, reject) {
+      _this._resolve = resolve;
+      _this._reject = reject;
+      _this._start();
+    });
+    // Prevent uncaught rejections on the internal promise from bubbling out
+    // to the top level with a dummy handler.
+    this._promise.then(null, function () {});
+  }
+  UploadTask.prototype._makeProgressCallback = function () {
+    var _this = this;
+    var sizeBefore = this._transferred;
+    return function (loaded) {
+      return _this._updateProgress(sizeBefore + loaded);
+    };
+  };
+  UploadTask.prototype._shouldDoResumable = function (blob) {
+    return blob.size() > 256 * 1024;
+  };
+  UploadTask.prototype._start = function () {
+    if (this._state !== "running") /*RUNNING*/
+    {
+      // This can happen if someone pauses us in a resume callback, for example.
+      return;
+    }
+    if (this._request !== undefined) {
+      return;
+    }
+    if (this._resumable) {
+      if (this._uploadUrl === undefined) {
+        this._createResumable();
+      } else {
+        if (this._needToFetchStatus) {
+          this._fetchStatus();
+        } else {
+          if (this._needToFetchMetadata) {
+            // Happens if we miss the metadata on upload completion.
+            this._fetchMetadata();
+          } else {
+            this._continueUpload();
+          }
+        }
+      }
+    } else {
+      this._oneShotUpload();
+    }
+  };
+  UploadTask.prototype._resolveToken = function (callback) {
+    var _this = this;
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    Promise.all([this._ref.storage._getAuthToken(), this._ref.storage._getAppCheckToken()]).then(function (_a) {
+      var authToken = _a[0], appCheckToken = _a[1];
+      switch (_this._state) {
+        case "running":
+          /*RUNNING*/
+          callback(authToken, appCheckToken);
+          break;
+        case "canceling":
+          /*CANCELING*/
+          _this._transition("canceled");
+          break;
+        case "pausing":
+          /*PAUSING*/
+          _this._transition("paused");
+          break;
+      }
+    });
+  };
+  // TODO(andysoto): assert false
+  UploadTask.prototype._createResumable = function () {
+    var _this = this;
+    this._resolveToken(function (authToken, appCheckToken) {
+      var requestInfo = createResumableUpload(_this._ref.storage, _this._ref._location, _this._mappings, _this._blob, _this._metadata);
+      var createRequest = _this._ref.storage._makeRequest(requestInfo, authToken, appCheckToken);
+      _this._request = createRequest;
+      createRequest.getPromise().then(function (url) {
+        _this._request = undefined;
+        _this._uploadUrl = url;
+        _this._needToFetchStatus = false;
+        _this.completeTransitions_();
+      }, _this._errorHandler);
+    });
+  };
+  UploadTask.prototype._fetchStatus = function () {
+    var _this = this;
+    // TODO(andysoto): assert(this.uploadUrl_ !== null);
+    var url = this._uploadUrl;
+    this._resolveToken(function (authToken, appCheckToken) {
+      var requestInfo = getResumableUploadStatus(_this._ref.storage, _this._ref._location, url, _this._blob);
+      var statusRequest = _this._ref.storage._makeRequest(requestInfo, authToken, appCheckToken);
+      _this._request = statusRequest;
+      statusRequest.getPromise().then(function (status) {
+        status = status;
+        _this._request = undefined;
+        _this._updateProgress(status.current);
+        _this._needToFetchStatus = false;
+        if (status.finalized) {
+          _this._needToFetchMetadata = true;
+        }
+        _this.completeTransitions_();
+      }, _this._errorHandler);
+    });
+  };
+  UploadTask.prototype._continueUpload = function () {
+    var _this = this;
+    var chunkSize = RESUMABLE_UPLOAD_CHUNK_SIZE * this._chunkMultiplier;
+    var status = new ResumableUploadStatus(this._transferred, this._blob.size());
+    // TODO(andysoto): assert(this.uploadUrl_ !== null);
+    var url = this._uploadUrl;
+    this._resolveToken(function (authToken, appCheckToken) {
+      var requestInfo;
+      try {
+        requestInfo = continueResumableUpload(_this._ref._location, _this._ref.storage, url, _this._blob, chunkSize, _this._mappings, status, _this._makeProgressCallback());
+      } catch (e) {
+        _this._error = e;
+        _this._transition("error");
+        return;
+      }
+      var uploadRequest = _this._ref.storage._makeRequest(requestInfo, authToken, appCheckToken);
+      _this._request = uploadRequest;
+      uploadRequest.getPromise().then(function (newStatus) {
+        _this._increaseMultiplier();
+        _this._request = undefined;
+        _this._updateProgress(newStatus.current);
+        if (newStatus.finalized) {
+          _this._metadata = newStatus.metadata;
+          _this._transition("success");
+        } else {
+          _this.completeTransitions_();
+        }
+      }, _this._errorHandler);
+    });
+  };
+  UploadTask.prototype._increaseMultiplier = function () {
+    var currentSize = RESUMABLE_UPLOAD_CHUNK_SIZE * this._chunkMultiplier;
+    // Max chunk size is 32M.
+    if (currentSize < 32 * 1024 * 1024) {
+      this._chunkMultiplier *= 2;
+    }
+  };
+  UploadTask.prototype._fetchMetadata = function () {
+    var _this = this;
+    this._resolveToken(function (authToken, appCheckToken) {
+      var requestInfo = getMetadata(_this._ref.storage, _this._ref._location, _this._mappings);
+      var metadataRequest = _this._ref.storage._makeRequest(requestInfo, authToken, appCheckToken);
+      _this._request = metadataRequest;
+      metadataRequest.getPromise().then(function (metadata) {
+        _this._request = undefined;
+        _this._metadata = metadata;
+        _this._transition("success");
+      }, _this._metadataErrorHandler);
+    });
+  };
+  UploadTask.prototype._oneShotUpload = function () {
+    var _this = this;
+    this._resolveToken(function (authToken, appCheckToken) {
+      var requestInfo = multipartUpload(_this._ref.storage, _this._ref._location, _this._mappings, _this._blob, _this._metadata);
+      var multipartRequest = _this._ref.storage._makeRequest(requestInfo, authToken, appCheckToken);
+      _this._request = multipartRequest;
+      multipartRequest.getPromise().then(function (metadata) {
+        _this._request = undefined;
+        _this._metadata = metadata;
+        _this._updateProgress(_this._blob.size());
+        _this._transition("success");
+      }, _this._errorHandler);
+    });
+  };
+  UploadTask.prototype._updateProgress = function (transferred) {
+    var old = this._transferred;
+    this._transferred = transferred;
+    // A progress update can make the "transferred" value smaller (e.g. a
+    // partial upload not completed by server, after which the "transferred"
+    // value may reset to the value at the beginning of the request).
+    if (this._transferred !== old) {
+      this._notifyObservers();
+    }
+  };
+  UploadTask.prototype._transition = function (state) {
+    if (this._state === state) {
+      return;
+    }
+    switch (state) {
+      case "canceling":
+        /*CANCELING*/
+        // TODO(andysoto):
+        // assert(this.state_ === InternalTaskState.RUNNING ||
+        // this.state_ === InternalTaskState.PAUSING);
+        this._state = state;
+        if (this._request !== undefined) {
+          this._request.cancel();
+        }
+        break;
+      case "pausing":
+        /*PAUSING*/
+        // TODO(andysoto):
+        // assert(this.state_ === InternalTaskState.RUNNING);
+        this._state = state;
+        if (this._request !== undefined) {
+          this._request.cancel();
+        }
+        break;
+      case "running":
+        /*RUNNING*/
+        // TODO(andysoto):
+        // assert(this.state_ === InternalTaskState.PAUSED ||
+        // this.state_ === InternalTaskState.PAUSING);
+        var wasPaused = this._state === "paused";
+        this._state = state;
+        if (wasPaused) {
+          this._notifyObservers();
+          this._start();
+        }
+        break;
+      case "paused":
+        /*PAUSED*/
+        // TODO(andysoto):
+        // assert(this.state_ === InternalTaskState.PAUSING);
+        this._state = state;
+        this._notifyObservers();
+        break;
+      case "canceled":
+        /*CANCELED*/
+        // TODO(andysoto):
+        // assert(this.state_ === InternalTaskState.PAUSED ||
+        // this.state_ === InternalTaskState.CANCELING);
+        this._error = canceled();
+        this._state = state;
+        this._notifyObservers();
+        break;
+      case "error":
+        /*ERROR*/
+        // TODO(andysoto):
+        // assert(this.state_ === InternalTaskState.RUNNING ||
+        // this.state_ === InternalTaskState.PAUSING ||
+        // this.state_ === InternalTaskState.CANCELING);
+        this._state = state;
+        this._notifyObservers();
+        break;
+      case "success":
+        /*SUCCESS*/
+        // TODO(andysoto):
+        // assert(this.state_ === InternalTaskState.RUNNING ||
+        // this.state_ === InternalTaskState.PAUSING ||
+        // this.state_ === InternalTaskState.CANCELING);
+        this._state = state;
+        this._notifyObservers();
+        break;
+    }
+  };
+  UploadTask.prototype.completeTransitions_ = function () {
+    switch (this._state) {
+      case "pausing":
+        /*PAUSING*/
+        this._transition("paused");
+        break;
+      case "canceling":
+        /*CANCELING*/
+        this._transition("canceled");
+        break;
+      case "running":
+        /*RUNNING*/
+        this._start();
+        break;
+    }
+  };
+  Object.defineProperty(UploadTask.prototype, "snapshot", {
+    /**
+    * A snapshot of the current task state.
+    */
+    get: function () {
+      var externalState = taskStateFromInternalTaskState(this._state);
+      return {
+        bytesTransferred: this._transferred,
+        totalBytes: this._blob.size(),
+        state: externalState,
+        metadata: this._metadata,
+        task: this,
+        ref: this._ref
+      };
+    },
+    enumerable: false,
+    configurable: true
+  });
+  /**
+  * Adds a callback for an event.
+  * @param type - The type of event to listen for.
+  * @param nextOrObserver -
+  *     The `next` function, which gets called for each item in
+  *     the event stream, or an observer object with some or all of these three
+  *     properties (`next`, `error`, `complete`).
+  * @param error - A function that gets called with a `FirebaseStorageError`
+  *     if the event stream ends due to an error.
+  * @param completed - A function that gets called if the
+  *     event stream ends normally.
+  * @returns
+  *     If only the event argument is passed, returns a function you can use to
+  *     add callbacks (see the examples above). If more than just the event
+  *     argument is passed, returns a function you can call to unregister the
+  *     callbacks.
+  */
+  UploadTask.prototype.on = function (type, nextOrObserver, error, completed) {
+    var _this = this;
+    var observer = new Observer(nextOrObserver, error, completed);
+    this._addObserver(observer);
+    return function () {
+      _this._removeObserver(observer);
+    };
+  };
+  /**
+  * This object behaves like a Promise, and resolves with its snapshot data
+  * when the upload completes.
+  * @param onFulfilled - The fulfillment callback. Promise chaining works as normal.
+  * @param onRejected - The rejection callback.
+  */
+  UploadTask.prototype.then = function (onFulfilled, onRejected) {
+    // These casts are needed so that TypeScript can infer the types of the
+    // resulting Promise.
+    return this._promise.then(onFulfilled, onRejected);
+  };
+  /**
+  * Equivalent to calling `then(null, onRejected)`.
+  */
+  UploadTask.prototype.catch = function (onRejected) {
+    return this.then(null, onRejected);
+  };
+  /**
+  * Adds the given observer.
+  */
+  UploadTask.prototype._addObserver = function (observer) {
+    this._observers.push(observer);
+    this._notifyObserver(observer);
+  };
+  /**
+  * Removes the given observer.
+  */
+  UploadTask.prototype._removeObserver = function (observer) {
+    var i = this._observers.indexOf(observer);
+    if (i !== -1) {
+      this._observers.splice(i, 1);
+    }
+  };
+  UploadTask.prototype._notifyObservers = function () {
+    var _this = this;
+    this._finishPromise();
+    var observers = this._observers.slice();
+    observers.forEach(function (observer) {
+      _this._notifyObserver(observer);
+    });
+  };
+  UploadTask.prototype._finishPromise = function () {
+    if (this._resolve !== undefined) {
+      var triggered = true;
+      switch (taskStateFromInternalTaskState(this._state)) {
+        case TaskState.SUCCESS:
+          async(this._resolve.bind(null, this.snapshot))();
+          break;
+        case TaskState.CANCELED:
+        case TaskState.ERROR:
+          var toCall = this._reject;
+          async(toCall.bind(null, this._error))();
+          break;
+        default:
+          triggered = false;
+          break;
+      }
+      if (triggered) {
+        this._resolve = undefined;
+        this._reject = undefined;
+      }
+    }
+  };
+  UploadTask.prototype._notifyObserver = function (observer) {
+    var externalState = taskStateFromInternalTaskState(this._state);
+    switch (externalState) {
+      case TaskState.RUNNING:
+      case TaskState.PAUSED:
+        if (observer.next) {
+          async(observer.next.bind(observer, this.snapshot))();
+        }
+        break;
+      case TaskState.SUCCESS:
+        if (observer.complete) {
+          async(observer.complete.bind(observer))();
+        }
+        break;
+      case TaskState.CANCELED:
+      case TaskState.ERROR:
+        if (observer.error) {
+          async(observer.error.bind(observer, this._error))();
+        }
+        break;
+      default:
+        // TODO(andysoto): assert(false);
+        if (observer.error) {
+          async(observer.error.bind(observer, this._error))();
+        }
+    }
+  };
+  /**
+  * Resumes a paused task. Has no effect on a currently running or failed task.
+  * @returns True if the operation took effect, false if ignored.
+  */
+  UploadTask.prototype.resume = function () {
+    var valid = this._state === "paused" || /*PAUSED*/
+    this._state === "pausing";
+    if (valid) {
+      this._transition("running");
+    }
+    return valid;
+  };
+  /**
+  * Pauses a currently running task. Has no effect on a paused or failed task.
+  * @returns True if the operation took effect, false if ignored.
+  */
+  UploadTask.prototype.pause = function () {
+    var valid = this._state === "running";
+    if (valid) {
+      this._transition("pausing");
+    }
+    return valid;
+  };
+  /**
+  * Cancels a currently running or paused task. Has no effect on a complete or
+  * failed task.
+  * @returns True if the operation took effect, false if ignored.
+  */
+  UploadTask.prototype.cancel = function () {
+    var valid = this._state === "running" || /*RUNNING*/
+    this._state === "pausing";
+    if (valid) {
+      this._transition("canceling");
+    }
+    return valid;
+  };
+  return UploadTask;
+})();
+/**
+* @license
+* Copyright 2019 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Provides methods to interact with a bucket in the Firebase Storage service.
+* @internal
+* @param _location - An fbs.location, or the URL at
+*     which to base this object, in one of the following forms:
+*         gs://<bucket>/<object-path>
+*         http[s]://firebasestorage.googleapis.com/
+*                     <api-version>/b/<bucket>/o/<object-path>
+*     Any query or fragment strings will be ignored in the http[s]
+*     format. If no value is passed, the storage object will use a URL based on
+*     the project ID of the base firebase.App instance.
+*/
+var Reference = /** @class*/
+(function () {
+  function Reference(_service, location) {
+    this._service = _service;
+    if (location instanceof Location) {
+      this._location = location;
+    } else {
+      this._location = Location.makeFromUrl(location, _service.host);
+    }
+  }
+  /**
+  * Returns the URL for the bucket and path this object references,
+  *     in the form gs://<bucket>/<object-path>
+  * @override
+  */
+  Reference.prototype.toString = function () {
+    return 'gs://' + this._location.bucket + '/' + this._location.path;
+  };
+  Reference.prototype._newRef = function (service, location) {
+    return new Reference(service, location);
+  };
+  Object.defineProperty(Reference.prototype, "root", {
+    /**
+    * A reference to the root of this object's bucket.
+    */
+    get: function () {
+      var location = new Location(this._location.bucket, '');
+      return this._newRef(this._service, location);
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(Reference.prototype, "bucket", {
+    /**
+    * The name of the bucket containing this reference's object.
+    */
+    get: function () {
+      return this._location.bucket;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(Reference.prototype, "fullPath", {
+    /**
+    * The full path of this object.
+    */
+    get: function () {
+      return this._location.path;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(Reference.prototype, "name", {
+    /**
+    * The short name of this object, which is the last component of the full path.
+    * For example, if fullPath is 'full/path/image.png', name is 'image.png'.
+    */
+    get: function () {
+      return lastComponent(this._location.path);
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(Reference.prototype, "storage", {
+    /**
+    * The `StorageService` instance this `StorageReference` is associated with.
+    */
+    get: function () {
+      return this._service;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(Reference.prototype, "parent", {
+    /**
+    * A `StorageReference` pointing to the parent location of this `StorageReference`, or null if
+    * this reference is the root.
+    */
+    get: function () {
+      var newPath = parent(this._location.path);
+      if (newPath === null) {
+        return null;
+      }
+      var location = new Location(this._location.bucket, newPath);
+      return new Reference(this._service, location);
+    },
+    enumerable: false,
+    configurable: true
+  });
+  /**
+  * Utility function to throw an error in methods that do not accept a root reference.
+  */
+  Reference.prototype._throwIfRoot = function (name) {
+    if (this._location.path === '') {
+      throw invalidRootOperation(name);
+    }
+  };
+  return Reference;
+})();
+/**
+* Uploads data to this object's location.
+* The upload can be paused and resumed, and exposes progress updates.
+* @public
+* @param ref - StorageReference where data should be uploaded.
+* @param data - The data to upload.
+* @param metadata - Metadata for the newly uploaded data.
+* @returns An UploadTask
+*/
+function uploadBytesResumable(ref, data, metadata) {
+  ref._throwIfRoot('uploadBytesResumable');
+  return new UploadTask(ref, new FbsBlob(data), metadata);
+}
+/**
+* List all items (files) and prefixes (folders) under this storage reference.
+*
+* This is a helper method for calling list() repeatedly until there are
+* no more results. The default pagination size is 1000.
+*
+* Note: The results may not be consistent if objects are changed while this
+* operation is running.
+*
+* Warning: listAll may potentially consume too many resources if there are
+* too many results.
+* @public
+* @param ref - StorageReference to get list from.
+*
+* @returns A Promise that resolves with all the items and prefixes under
+*      the current storage reference. `prefixes` contains references to
+*      sub-directories and `items` contains references to objects in this
+*      folder. `nextPageToken` is never returned.
+*/
+function listAll(ref) {
+  var accumulator = {
+    prefixes: [],
+    items: []
+  };
+  return listAllHelper(ref, accumulator).then(function () {
+    return accumulator;
+  });
+}
+/**
+* Separated from listAll because async functions can't use "arguments".
+* @param ref
+* @param accumulator
+* @param pageToken
+*/
+function listAllHelper(ref, accumulator, pageToken) {
+  return _tslib.__awaiter(this, void 0, void 0, function () {
+    var opt, nextPage;
+    var _a, _b;
+    return _tslib.__generator(this, function (_c) {
+      switch (_c.label) {
+        case 0:
+          opt = {
+            // maxResults is 1000 by default.
+            pageToken: pageToken
+          };
+          return [4, /*yield*/
+          list$1(ref, opt)];
+        case 1:
+          nextPage = _c.sent();
+          (_a = accumulator.prefixes).push.apply(_a, nextPage.prefixes);
+          (_b = accumulator.items).push.apply(_b, nextPage.items);
+          if (!(nextPage.nextPageToken != null)) return [3, /*break*/
+          3];
+          return [4, /*yield*/
+          listAllHelper(ref, accumulator, nextPage.nextPageToken)];
+        case 2:
+          _c.sent();
+          _c.label = 3;
+        case 3:
+          return [2];
+      }
+    });
+  });
+}
+/**
+* List items (files) and prefixes (folders) under this storage reference.
+*
+* List API is only available for Firebase Rules Version 2.
+*
+* GCS is a key-blob store. Firebase Storage imposes the semantic of '/'
+* delimited folder structure.
+* Refer to GCS's List API if you want to learn more.
+*
+* To adhere to Firebase Rules's Semantics, Firebase Storage does not
+* support objects whose paths end with "/" or contain two consecutive
+* "/"s. Firebase Storage List API will filter these unsupported objects.
+* list() may fail if there are too many unsupported objects in the bucket.
+* @public
+*
+* @param ref - StorageReference to get list from.
+* @param options - See ListOptions for details.
+* @returns A Promise that resolves with the items and prefixes.
+*      `prefixes` contains references to sub-folders and `items`
+*      contains references to objects in this folder. `nextPageToken`
+*      can be used to get the rest of the results.
+*/
+function list$1(ref, options) {
+  return _tslib.__awaiter(this, void 0, void 0, function () {
+    var op, requestInfo;
+    return _tslib.__generator(this, function (_a) {
+      switch (_a.label) {
+        case 0:
+          if (options != null) {
+            if (typeof options.maxResults === 'number') {
+              validateNumber('options.maxResults', /*minValue=*/
+              1, /*maxValue=*/
+              1000, options.maxResults);
+            }
+          }
+          op = options || ({});
+          requestInfo = list(ref.storage, ref._location, /*delimiter=*/
+          '/', op.pageToken, op.maxResults);
+          return [4, /*yield*/
+          ref.storage.makeRequestWithTokens(requestInfo)];
+        case 1:
+          return [2, /*return*/
+          _a.sent().getPromise()];
+      }
+    });
+  });
+}
+/**
+* A promise that resolves with the metadata for this object. If this
+* object doesn't exist or metadata cannot be retreived, the promise is
+* rejected.
+* @public
+* @param ref - StorageReference to get metadata from.
+*/
+function getMetadata$1(ref) {
+  return _tslib.__awaiter(this, void 0, void 0, function () {
+    var requestInfo;
+    return _tslib.__generator(this, function (_a) {
+      switch (_a.label) {
+        case 0:
+          ref._throwIfRoot('getMetadata');
+          requestInfo = getMetadata(ref.storage, ref._location, getMappings());
+          return [4, /*yield*/
+          ref.storage.makeRequestWithTokens(requestInfo)];
+        case 1:
+          return [2, /*return*/
+          _a.sent().getPromise()];
+      }
+    });
+  });
+}
+/**
+* Updates the metadata for this object.
+* @public
+* @param ref - StorageReference to update metadata for.
+* @param metadata - The new metadata for the object.
+*     Only values that have been explicitly set will be changed. Explicitly
+*     setting a value to null will remove the metadata.
+* @returns A promise that resolves
+*     with the new metadata for this object.
+*     See `firebaseStorage.Reference.prototype.getMetadata`
+*/
+function updateMetadata$1(ref, metadata) {
+  return _tslib.__awaiter(this, void 0, void 0, function () {
+    var requestInfo;
+    return _tslib.__generator(this, function (_a) {
+      switch (_a.label) {
+        case 0:
+          ref._throwIfRoot('updateMetadata');
+          requestInfo = updateMetadata(ref.storage, ref._location, metadata, getMappings());
+          return [4, /*yield*/
+          ref.storage.makeRequestWithTokens(requestInfo)];
+        case 1:
+          return [2, /*return*/
+          _a.sent().getPromise()];
+      }
+    });
+  });
+}
+/**
+* Returns the download URL for the given Reference.
+* @public
+* @returns A promise that resolves with the download
+*     URL for this object.
+*/
+function getDownloadURL(ref) {
+  return _tslib.__awaiter(this, void 0, void 0, function () {
+    var requestInfo;
+    return _tslib.__generator(this, function (_a) {
+      switch (_a.label) {
+        case 0:
+          ref._throwIfRoot('getDownloadURL');
+          requestInfo = getDownloadUrl(ref.storage, ref._location, getMappings());
+          return [4, /*yield*/
+          ref.storage.makeRequestWithTokens(requestInfo)];
+        case 1:
+          return [2, /*return*/
+          _a.sent().getPromise().then(function (url) {
+            if (url === null) {
+              throw noDownloadURL();
+            }
+            return url;
+          })];
+      }
+    });
+  });
+}
+/**
+* Deletes the object at this location.
+* @public
+* @param ref - StorageReference for object to delete.
+* @returns A promise that resolves if the deletion succeeds.
+*/
+function deleteObject$1(ref) {
+  return _tslib.__awaiter(this, void 0, void 0, function () {
+    var requestInfo;
+    return _tslib.__generator(this, function (_a) {
+      switch (_a.label) {
+        case 0:
+          ref._throwIfRoot('deleteObject');
+          requestInfo = deleteObject(ref.storage, ref._location);
+          return [4, /*yield*/
+          ref.storage.makeRequestWithTokens(requestInfo)];
+        case 1:
+          return [2, /*return*/
+          _a.sent().getPromise()];
+      }
+    });
+  });
+}
+/**
+* Returns reference for object obtained by appending `childPath` to `ref`.
+*
+* @param ref - StorageReference to get child of.
+* @param childPath - Child path from provided ref.
+* @returns A reference to the object obtained by
+* appending childPath, removing any duplicate, beginning, or trailing
+* slashes.
+*
+*/
+function _getChild(ref, childPath) {
+  var newPath = child(ref._location.path, childPath);
+  var location = new Location(ref._location.bucket, newPath);
+  return new Reference(ref.storage, location);
+}
+/**
+* @license
+* Copyright 2017 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+function isUrl(path) {
+  return (/^[A-Za-z]+:\/\//).test(path);
+}
+/**
+* Returns a firebaseStorage.Reference for the given url.
+*/
+function refFromURL(service, url) {
+  return new Reference(service, url);
+}
+/**
+* Returns a firebaseStorage.Reference for the given path in the default
+* bucket.
+*/
+function refFromPath(ref, path) {
+  if (ref instanceof StorageService) {
+    var service = ref;
+    if (service._bucket == null) {
+      throw noDefaultBucket();
+    }
+    var reference = new Reference(service, service._bucket);
+    if (path != null) {
+      return refFromPath(reference, path);
+    } else {
+      return reference;
+    }
+  } else {
+    // ref is a Reference
+    if (path !== undefined) {
+      if (path.includes('..')) {
+        throw invalidArgument('`path` param cannot contain ".."');
+      }
+      return _getChild(ref, path);
+    } else {
+      return ref;
+    }
+  }
+}
+function ref(serviceOrRef, pathOrUrl) {
+  if (pathOrUrl && isUrl(pathOrUrl)) {
+    if (serviceOrRef instanceof StorageService) {
+      return refFromURL(serviceOrRef, pathOrUrl);
+    } else {
+      throw invalidArgument('To use ref(service, url), the first argument must be a Storage instance.');
+    }
+  } else {
+    return refFromPath(serviceOrRef, pathOrUrl);
+  }
+}
+function extractBucket(host, config) {
+  var bucketString = config === null || config === void 0 ? void 0 : config[CONFIG_STORAGE_BUCKET_KEY];
+  if (bucketString == null) {
+    return null;
+  }
+  return Location.makeFromBucketSpec(bucketString, host);
+}
+function useStorageEmulator(storage, host, port) {
+  storage.host = "http://" + host + ":" + port;
+}
+/**
+* A service that provides Firebase Storage Reference instances.
+* @public
+* @param opt_url - gs:// url to a custom Storage Bucket
+*/
+var StorageService = /** @class*/
+(function () {
+  function StorageService(/**
+  * FirebaseApp associated with this StorageService instance.
+  */
+  app, _authProvider, /**
+  * @internal
+  */
+  _appCheckProvider, /**
+  * @internal
+  */
+  _pool, _url, _firebaseVersion) {
+    this.app = app;
+    this._authProvider = _authProvider;
+    this._appCheckProvider = _appCheckProvider;
+    this._pool = _pool;
+    this._url = _url;
+    this._firebaseVersion = _firebaseVersion;
+    this._bucket = null;
+    /**
+    * This string can be in the formats:
+    * - host
+    * - host:port
+    * - protocol://host:port
+    */
+    this._host = DEFAULT_HOST;
+    this._appId = null;
+    this._deleted = false;
+    this._maxOperationRetryTime = DEFAULT_MAX_OPERATION_RETRY_TIME;
+    this._maxUploadRetryTime = DEFAULT_MAX_UPLOAD_RETRY_TIME;
+    this._requests = new Set();
+    if (_url != null) {
+      this._bucket = Location.makeFromBucketSpec(_url, this._host);
+    } else {
+      this._bucket = extractBucket(this._host, this.app.options);
+    }
+  }
+  Object.defineProperty(StorageService.prototype, "host", {
+    get: function () {
+      return this._host;
+    },
+    /**
+    * Set host string for this service.
+    * @param host - host string in the form of host, host:port,
+    * or protocol://host:port
+    */
+    set: function (host) {
+      this._host = host;
+      if (this._url != null) {
+        this._bucket = Location.makeFromBucketSpec(this._url, host);
+      } else {
+        this._bucket = extractBucket(host, this.app.options);
+      }
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(StorageService.prototype, "maxUploadRetryTime", {
+    /**
+    * The maximum time to retry uploads in milliseconds.
+    */
+    get: function () {
+      return this._maxUploadRetryTime;
+    },
+    set: function (time) {
+      validateNumber('time', /*minValue=*/
+      0, /*maxValue=*/
+      Number.POSITIVE_INFINITY, time);
+      this._maxUploadRetryTime = time;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(StorageService.prototype, "maxOperationRetryTime", {
+    /**
+    * The maximum time to retry operations other than uploads or downloads in
+    * milliseconds.
+    */
+    get: function () {
+      return this._maxOperationRetryTime;
+    },
+    set: function (time) {
+      validateNumber('time', /*minValue=*/
+      0, /*maxValue=*/
+      Number.POSITIVE_INFINITY, time);
+      this._maxOperationRetryTime = time;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  StorageService.prototype._getAuthToken = function () {
+    return _tslib.__awaiter(this, void 0, void 0, function () {
+      var auth, tokenData;
+      return _tslib.__generator(this, function (_a) {
+        switch (_a.label) {
+          case 0:
+            auth = this._authProvider.getImmediate({
+              optional: true
+            });
+            if (!auth) return [3, /*break*/
+            2];
+            return [4, /*yield*/
+            auth.getToken()];
+          case 1:
+            tokenData = _a.sent();
+            if (tokenData !== null) {
+              return [2, /*return*/
+              tokenData.accessToken];
+            }
+            _a.label = 2;
+          case 2:
+            return [2, /*return*/
+            null];
+        }
+      });
+    });
+  };
+  StorageService.prototype._getAppCheckToken = function () {
+    return _tslib.__awaiter(this, void 0, void 0, function () {
+      var appCheck, result;
+      return _tslib.__generator(this, function (_a) {
+        switch (_a.label) {
+          case 0:
+            appCheck = this._appCheckProvider.getImmediate({
+              optional: true
+            });
+            if (!appCheck) return [3, /*break*/
+            2];
+            return [4, /*yield*/
+            appCheck.getToken()];
+          case 1:
+            result = _a.sent();
+            // TODO: What do we want to do if there is an error getting the token?
+            // Context: appCheck.getToken() will never throw even if an error happened. In the error case, a dummy token will be
+            // returned along with an error field describing the error. In general, we shouldn't care about the error condition and just use
+            // the token (actual or dummy) to send requests.
+            return [2, /*return*/
+            result.token];
+          case 2:
+            return [2, /*return*/
+            null];
+        }
+      });
+    });
+  };
+  /**
+  * Stop running requests and prevent more from being created.
+  */
+  StorageService.prototype._delete = function () {
+    this._deleted = true;
+    this._requests.forEach(function (request) {
+      return request.cancel();
+    });
+    this._requests.clear();
+    return Promise.resolve();
+  };
+  /**
+  * Returns a new firebaseStorage.Reference object referencing this StorageService
+  * at the given Location.
+  */
+  StorageService.prototype._makeStorageReference = function (loc) {
+    return new Reference(this, loc);
+  };
+  /**
+  * @param requestInfo - HTTP RequestInfo object
+  * @param authToken - Firebase auth token
+  */
+  StorageService.prototype._makeRequest = function (requestInfo, authToken, appCheckToken) {
+    var _this = this;
+    if (!this._deleted) {
+      var request_1 = makeRequest(requestInfo, this._appId, authToken, appCheckToken, this._pool, this._firebaseVersion);
+      this._requests.add(request_1);
+      // Request removes itself from set when complete.
+      request_1.getPromise().then(function () {
+        return _this._requests.delete(request_1);
+      }, function () {
+        return _this._requests.delete(request_1);
+      });
+      return request_1;
+    } else {
+      return new FailRequest(appDeleted());
+    }
+  };
+  StorageService.prototype.makeRequestWithTokens = function (requestInfo) {
+    return _tslib.__awaiter(this, void 0, void 0, function () {
+      var _a, authToken, appCheckToken;
+      return _tslib.__generator(this, function (_b) {
+        switch (_b.label) {
+          case 0:
+            return [4, /*yield*/
+            Promise.all([this._getAuthToken(), this._getAppCheckToken()])];
+          case 1:
+            (_a = _b.sent(), authToken = _a[0], appCheckToken = _a[1]);
+            return [2, /*return*/
+            this._makeRequest(requestInfo, authToken, appCheckToken)];
+        }
+      });
+    });
+  };
+  return StorageService;
+})();
+/**
+* @license
+* Copyright 2020 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Uploads data to this object's location.
+* The upload can be paused and resumed, and exposes progress updates.
+* @public
+* @param ref - StorageReference where data should be uploaded.
+* @param data - The data to upload.
+* @param metadata - Metadata for the data to upload.
+* @returns An UploadTask
+*/
+function uploadBytesResumable$1(ref, data, metadata) {
+  ref = _firebaseUtil.getModularInstance(ref);
+  return uploadBytesResumable(ref, data, metadata);
+}
+/**
+* A promise that resolves with the metadata for this object. If this
+* object doesn't exist or metadata cannot be retreived, the promise is
+* rejected.
+* @public
+* @param ref - StorageReference to get metadata from.
+*/
+function getMetadata$2(ref) {
+  ref = _firebaseUtil.getModularInstance(ref);
+  return getMetadata$1(ref);
+}
+/**
+* Updates the metadata for this object.
+* @public
+* @param ref - StorageReference to update metadata for.
+* @param metadata - The new metadata for the object.
+*     Only values that have been explicitly set will be changed. Explicitly
+*     setting a value to null will remove the metadata.
+* @returns A promise that resolves with the new metadata for this object.
+*/
+function updateMetadata$2(ref, metadata) {
+  ref = _firebaseUtil.getModularInstance(ref);
+  return updateMetadata$1(ref, metadata);
+}
+/**
+* List items (files) and prefixes (folders) under this storage reference.
+*
+* List API is only available for Firebase Rules Version 2.
+*
+* GCS is a key-blob store. Firebase Storage imposes the semantic of '/'
+* delimited folder structure.
+* Refer to GCS's List API if you want to learn more.
+*
+* To adhere to Firebase Rules's Semantics, Firebase Storage does not
+* support objects whose paths end with "/" or contain two consecutive
+* "/"s. Firebase Storage List API will filter these unsupported objects.
+* list() may fail if there are too many unsupported objects in the bucket.
+* @public
+*
+* @param ref - StorageReference to get list from.
+* @param options - See ListOptions for details.
+* @returns A Promise that resolves with the items and prefixes.
+*      `prefixes` contains references to sub-folders and `items`
+*      contains references to objects in this folder. `nextPageToken`
+*      can be used to get the rest of the results.
+*/
+function list$2(ref, options) {
+  ref = _firebaseUtil.getModularInstance(ref);
+  return list$1(ref, options);
+}
+/**
+* List all items (files) and prefixes (folders) under this storage reference.
+*
+* This is a helper method for calling list() repeatedly until there are
+* no more results. The default pagination size is 1000.
+*
+* Note: The results may not be consistent if objects are changed while this
+* operation is running.
+*
+* Warning: listAll may potentially consume too many resources if there are
+* too many results.
+* @public
+* @param ref - StorageReference to get list from.
+*
+* @returns A Promise that resolves with all the items and prefixes under
+*      the current storage reference. `prefixes` contains references to
+*      sub-directories and `items` contains references to objects in this
+*      folder. `nextPageToken` is never returned.
+*/
+function listAll$1(ref) {
+  ref = _firebaseUtil.getModularInstance(ref);
+  return listAll(ref);
+}
+/**
+* Returns the download URL for the given Reference.
+* @public
+* @returns A promise that resolves with the download
+*     URL for this object.
+*/
+function getDownloadURL$1(ref) {
+  ref = _firebaseUtil.getModularInstance(ref);
+  return getDownloadURL(ref);
+}
+/**
+* Deletes the object at this location.
+* @public
+* @param ref - StorageReference for object to delete.
+* @returns A promise that resolves if the deletion succeeds.
+*/
+function deleteObject$2(ref) {
+  ref = _firebaseUtil.getModularInstance(ref);
+  return deleteObject$1(ref);
+}
+function ref$1(serviceOrRef, pathOrUrl) {
+  serviceOrRef = _firebaseUtil.getModularInstance(serviceOrRef);
+  return ref(serviceOrRef, pathOrUrl);
+}
+/**
+* @internal
+*/
+function _getChild$1(ref, childPath) {
+  return _getChild(ref, childPath);
+}
+/**
+* @license
+* Copyright 2020 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var UploadTaskSnapshotCompat = /** @class*/
+(function () {
+  function UploadTaskSnapshotCompat(_delegate, task, ref) {
+    this._delegate = _delegate;
+    this.task = task;
+    this.ref = ref;
+  }
+  Object.defineProperty(UploadTaskSnapshotCompat.prototype, "bytesTransferred", {
+    get: function () {
+      return this._delegate.bytesTransferred;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(UploadTaskSnapshotCompat.prototype, "metadata", {
+    get: function () {
+      return this._delegate.metadata;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(UploadTaskSnapshotCompat.prototype, "state", {
+    get: function () {
+      return this._delegate.state;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(UploadTaskSnapshotCompat.prototype, "totalBytes", {
+    get: function () {
+      return this._delegate.totalBytes;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  return UploadTaskSnapshotCompat;
+})();
+/**
+* @license
+* Copyright 2020 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var UploadTaskCompat = /** @class*/
+(function () {
+  function UploadTaskCompat(_delegate, _ref) {
+    this._delegate = _delegate;
+    this._ref = _ref;
+    this.cancel = this._delegate.cancel.bind(this._delegate);
+    this.catch = this._delegate.catch.bind(this._delegate);
+    this.pause = this._delegate.pause.bind(this._delegate);
+    this.resume = this._delegate.resume.bind(this._delegate);
+  }
+  Object.defineProperty(UploadTaskCompat.prototype, "snapshot", {
+    get: function () {
+      return new UploadTaskSnapshotCompat(this._delegate.snapshot, this, this._ref);
+    },
+    enumerable: false,
+    configurable: true
+  });
+  UploadTaskCompat.prototype.then = function (onFulfilled, onRejected) {
+    var _this = this;
+    return this._delegate.then(function (snapshot) {
+      if (onFulfilled) {
+        return onFulfilled(new UploadTaskSnapshotCompat(snapshot, _this, _this._ref));
+      }
+    }, onRejected);
+  };
+  UploadTaskCompat.prototype.on = function (type, nextOrObserver, error, completed) {
+    var _this = this;
+    var wrappedNextOrObserver = undefined;
+    if (!!nextOrObserver) {
+      if (typeof nextOrObserver === 'function') {
+        wrappedNextOrObserver = function (taskSnapshot) {
+          return nextOrObserver(new UploadTaskSnapshotCompat(taskSnapshot, _this, _this._ref));
+        };
+      } else {
+        wrappedNextOrObserver = {
+          next: !!nextOrObserver.next ? function (taskSnapshot) {
+            return nextOrObserver.next(new UploadTaskSnapshotCompat(taskSnapshot, _this, _this._ref));
+          } : undefined,
+          complete: nextOrObserver.complete || undefined,
+          error: nextOrObserver.error || undefined
+        };
+      }
+    }
+    return this._delegate.on(type, wrappedNextOrObserver, error || undefined, completed || undefined);
+  };
+  return UploadTaskCompat;
+})();
+var ListResultCompat = /** @class*/
+(function () {
+  function ListResultCompat(_delegate, _service) {
+    this._delegate = _delegate;
+    this._service = _service;
+  }
+  Object.defineProperty(ListResultCompat.prototype, "prefixes", {
+    get: function () {
+      var _this = this;
+      return this._delegate.prefixes.map(function (ref) {
+        return new ReferenceCompat(ref, _this._service);
+      });
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(ListResultCompat.prototype, "items", {
+    get: function () {
+      var _this = this;
+      return this._delegate.items.map(function (ref) {
+        return new ReferenceCompat(ref, _this._service);
+      });
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(ListResultCompat.prototype, "nextPageToken", {
+    get: function () {
+      return this._delegate.nextPageToken || null;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  return ListResultCompat;
+})();
+/**
+* @license
+* Copyright 2020 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*  http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+var ReferenceCompat = /** @class*/
+(function () {
+  function ReferenceCompat(_delegate, storage) {
+    this._delegate = _delegate;
+    this.storage = storage;
+  }
+  Object.defineProperty(ReferenceCompat.prototype, "name", {
+    get: function () {
+      return this._delegate.name;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(ReferenceCompat.prototype, "bucket", {
+    get: function () {
+      return this._delegate.bucket;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(ReferenceCompat.prototype, "fullPath", {
+    get: function () {
+      return this._delegate.fullPath;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  ReferenceCompat.prototype.toString = function () {
+    return this._delegate.toString();
+  };
+  /**
+  * @returns A reference to the object obtained by
+  * appending childPath, removing any duplicate, beginning, or trailing
+  * slashes.
+  */
+  ReferenceCompat.prototype.child = function (childPath) {
+    var reference = _getChild$1(this._delegate, childPath);
+    return new ReferenceCompat(reference, this.storage);
+  };
+  Object.defineProperty(ReferenceCompat.prototype, "root", {
+    get: function () {
+      return new ReferenceCompat(this._delegate.root, this.storage);
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(ReferenceCompat.prototype, "parent", {
+    /**
+    * @returns A reference to the parent of the
+    * current object, or null if the current object is the root.
+    */
+    get: function () {
+      var reference = this._delegate.parent;
+      if (reference == null) {
+        return null;
+      }
+      return new ReferenceCompat(reference, this.storage);
+    },
+    enumerable: false,
+    configurable: true
+  });
+  /**
+  * Uploads a blob to this object's location.
+  * @param data - The blob to upload.
+  * @returns An UploadTask that lets you control and
+  * observe the upload.
+  */
+  ReferenceCompat.prototype.put = function (data, metadata) {
+    this._throwIfRoot('put');
+    return new UploadTaskCompat(uploadBytesResumable$1(this._delegate, data, metadata), this);
+  };
+  /**
+  * Uploads a string to this object's location.
+  * @param value - The string to upload.
+  * @param format - The format of the string to upload.
+  * @returns An UploadTask that lets you control and
+  * observe the upload.
+  */
+  ReferenceCompat.prototype.putString = function (value, format, metadata) {
+    if (format === void 0) {
+      format = StringFormat.RAW;
+    }
+    this._throwIfRoot('putString');
+    var data = dataFromString(format, value);
+    var metadataClone = _tslib.__assign({}, metadata);
+    if (metadataClone['contentType'] == null && data.contentType != null) {
+      metadataClone['contentType'] = data.contentType;
+    }
+    return new UploadTaskCompat(new UploadTask(this._delegate, new FbsBlob(data.data, true), metadataClone), this);
+  };
+  /**
+  * List all items (files) and prefixes (folders) under this storage reference.
+  *
+  * This is a helper method for calling list() repeatedly until there are
+  * no more results. The default pagination size is 1000.
+  *
+  * Note: The results may not be consistent if objects are changed while this
+  * operation is running.
+  *
+  * Warning: listAll may potentially consume too many resources if there are
+  * too many results.
+  *
+  * @returns A Promise that resolves with all the items and prefixes under
+  *  the current storage reference. `prefixes` contains references to
+  *  sub-directories and `items` contains references to objects in this
+  *  folder. `nextPageToken` is never returned.
+  */
+  ReferenceCompat.prototype.listAll = function () {
+    var _this = this;
+    return listAll$1(this._delegate).then(function (r) {
+      return new ListResultCompat(r, _this.storage);
+    });
+  };
+  /**
+  * List items (files) and prefixes (folders) under this storage reference.
+  *
+  * List API is only available for Firebase Rules Version 2.
+  *
+  * GCS is a key-blob store. Firebase Storage imposes the semantic of '/'
+  * delimited folder structure. Refer to GCS's List API if you want to learn more.
+  *
+  * To adhere to Firebase Rules's Semantics, Firebase Storage does not
+  * support objects whose paths end with "/" or contain two consecutive
+  * "/"s. Firebase Storage List API will filter these unsupported objects.
+  * list() may fail if there are too many unsupported objects in the bucket.
+  *
+  * @param options - See ListOptions for details.
+  * @returns A Promise that resolves with the items and prefixes.
+  * `prefixes` contains references to sub-folders and `items`
+  * contains references to objects in this folder. `nextPageToken`
+  * can be used to get the rest of the results.
+  */
+  ReferenceCompat.prototype.list = function (options) {
+    var _this = this;
+    return list$2(this._delegate, options || undefined).then(function (r) {
+      return new ListResultCompat(r, _this.storage);
+    });
+  };
+  /**
+  * A promise that resolves with the metadata for this object. If this
+  * object doesn't exist or metadata cannot be retreived, the promise is
+  * rejected.
+  */
+  ReferenceCompat.prototype.getMetadata = function () {
+    return getMetadata$2(this._delegate);
+  };
+  /**
+  * Updates the metadata for this object.
+  * @param metadata - The new metadata for the object.
+  * Only values that have been explicitly set will be changed. Explicitly
+  * setting a value to null will remove the metadata.
+  * @returns A promise that resolves
+  * with the new metadata for this object.
+  * @see firebaseStorage.Reference.prototype.getMetadata
+  */
+  ReferenceCompat.prototype.updateMetadata = function (metadata) {
+    return updateMetadata$2(this._delegate, metadata);
+  };
+  /**
+  * @returns A promise that resolves with the download
+  * URL for this object.
+  */
+  ReferenceCompat.prototype.getDownloadURL = function () {
+    return getDownloadURL$1(this._delegate);
+  };
+  /**
+  * Deletes the object at this location.
+  * @returns A promise that resolves if the deletion succeeds.
+  */
+  ReferenceCompat.prototype.delete = function () {
+    this._throwIfRoot('delete');
+    return deleteObject$2(this._delegate);
+  };
+  ReferenceCompat.prototype._throwIfRoot = function (name) {
+    if (this._delegate._location.path === '') {
+      throw invalidRootOperation(name);
+    }
+  };
+  return ReferenceCompat;
+})();
+/**
+* @license
+* Copyright 2020 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* A service that provides firebaseStorage.Reference instances.
+* @param opt_url gs:// url to a custom Storage Bucket
+*/
+var StorageServiceCompat = /** @class*/
+(function () {
+  function StorageServiceCompat(app, _delegate) {
+    var _this = this;
+    this.app = app;
+    this._delegate = _delegate;
+    this.INTERNAL = {
+      /**
+      * Called when the associated app is deleted.
+      */
+      delete: function () {
+        return _this._delegate._delete();
+      }
+    };
+  }
+  Object.defineProperty(StorageServiceCompat.prototype, "maxOperationRetryTime", {
+    get: function () {
+      return this._delegate.maxOperationRetryTime;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  Object.defineProperty(StorageServiceCompat.prototype, "maxUploadRetryTime", {
+    get: function () {
+      return this._delegate.maxUploadRetryTime;
+    },
+    enumerable: false,
+    configurable: true
+  });
+  /**
+  * Returns a firebaseStorage.Reference for the given path in the default
+  * bucket.
+  */
+  StorageServiceCompat.prototype.ref = function (path) {
+    if (isUrl(path)) {
+      throw invalidArgument('ref() expected a child path but got a URL, use refFromURL instead.');
+    }
+    return new ReferenceCompat(ref$1(this._delegate, path), this);
+  };
+  /**
+  * Returns a firebaseStorage.Reference object for the given absolute URL,
+  * which must be a gs:// or http[s]:// URL.
+  */
+  StorageServiceCompat.prototype.refFromURL = function (url) {
+    if (!isUrl(url)) {
+      throw invalidArgument('refFromURL() expected a full URL but got a child path, use ref() instead.');
+    }
+    try {
+      Location.makeFromUrl(url, this._delegate.host);
+    } catch (e) {
+      throw invalidArgument('refFromUrl() expected a valid full URL but got an invalid one.');
+    }
+    return new ReferenceCompat(ref$1(this._delegate, url), this);
+  };
+  StorageServiceCompat.prototype.setMaxUploadRetryTime = function (time) {
+    this._delegate.maxUploadRetryTime = time;
+  };
+  StorageServiceCompat.prototype.setMaxOperationRetryTime = function (time) {
+    this._delegate.maxOperationRetryTime = time;
+  };
+  StorageServiceCompat.prototype.useEmulator = function (host, port) {
+    useStorageEmulator(this._delegate, host, port);
+  };
+  return StorageServiceCompat;
+})();
+var name = "@firebase/storage";
+var version = "0.5.5";
+/**
+* @license
+* Copyright 2020 Google LLC
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/**
+* Type constant for Firebase Storage.
+*/
+var STORAGE_TYPE = 'storage';
+function factory(container, _a) {
+  var url = _a.instanceIdentifier;
+  // Dependencies
+  // TODO: This should eventually be 'app-compat'
+  var app = container.getProvider('app').getImmediate();
+  var authProvider = container.getProvider('auth-internal');
+  var appCheckProvider = container.getProvider('app-check-internal');
+  // TODO: get StorageService instance from component framework instead
+  // of creating a new one.
+  var storageServiceCompat = new StorageServiceCompat(app, new StorageService(app, authProvider, appCheckProvider, new XhrIoPool(), url, _firebaseAppDefault.default.SDK_VERSION));
+  return storageServiceCompat;
+}
+function registerStorage(instance) {
+  var namespaceExports = {
+    // no-inline
+    TaskState: TaskState,
+    TaskEvent: TaskEvent,
+    StringFormat: StringFormat,
+    Storage: StorageService,
+    Reference: ReferenceCompat
+  };
+  instance.INTERNAL.registerComponent(new _firebaseComponent.Component(STORAGE_TYPE, factory, "PUBLIC").setServiceProps(namespaceExports).setMultipleInstances(true));
+  instance.registerVersion(name, version);
+}
+registerStorage(_firebaseAppDefault.default);
+
+},{"@firebase/app":"6IUA5","tslib":"4rd38","@firebase/util":"3bR6t","@firebase/component":"5qT0x","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"2Gi69":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _HeaderComponentHeader = require("../HeaderComponent/header");
+  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("../TextInputComponent/textInputComponent");
+  var _ButtonComponentButtonComponent = require("../ButtonComponent/buttonComponent");
+  var _ButtonComponentButtonComponentDefault = _parcelHelpers.interopDefault(_ButtonComponentButtonComponent);
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _moment = require("moment");
+  var _momentDefault = _parcelHelpers.interopDefault(_moment);
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js";
+  const initialState = {
+    researchTitle: "",
+    researchField: "",
+    researchYear: "",
+    coAuthors: "",
+    fileURL: "",
+    dataArray: []
+  };
+  class researchRemoveComponent extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = initialState;
+      this.onRemove = this.onRemove.bind(this);
+    }
+    componentDidMount() {
+      const id = "60d82ca3b881ad7a64ce04f2";
+      _axiosDefault.default.get(`http://localhost:5000/researchDetails/userResearch/${id}`).then(response => {
+        console.log("Response data: ", response.data.data.research);
+        this.setState({
+          dataArray: response.data.data.research
+        });
+      }).catch(error => {
+        console.log(error.message);
+      });
+    }
+    onRemove(id) {
+      console.log(id);
+      _axiosDefault.default.delete(`http://localhost:5000/researchDetails/deleteResearchDetail/${id}`).then(response => {
+        alert("Deleted Successfully!");
+        console.log("Deleted Successfully!");
+      }).catch(error => {
+        console.log(error.message);
+      });
+    }
+    navigateToEditPage(e, researchID) {
+      window.location = `/${researchID}`;
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 59,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          className: "card-header text-center font-weight-bold text-uppercase py-4",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 63,
+            columnNumber: 13
+          }
+        }, "Edit Research Paper Details"), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card mb-3 p-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 67,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card-body",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 68,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          id: "table",
+          className: "table-editable",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 69,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("table", {
+          className: "table table-bordered table-responsive-md table-striped text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 70,
+            columnNumber: 19
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("thead", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72,
+            columnNumber: 23
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 73,
+            columnNumber: 25
+          }
+        }, "Research Title"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 74,
+            columnNumber: 25
+          }
+        }, "Research Field"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 75,
+            columnNumber: 25
+          }
+        }, "Research Year"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 76,
+            columnNumber: 25
+          }
+        }, "Research Author"))), this.state.dataArray.length > 0 && this.state.dataArray.map((item, index) => /*#__PURE__*/_reactDefault.default.createElement("tbody", {
+          key: index,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 81,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 82,
+            columnNumber: 27
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "researchTitle",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 83,
+            columnNumber: 29
+          }
+        }, item.researchTitle), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "researchField",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 90,
+            columnNumber: 29
+          }
+        }, item.researchField), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "researchYear",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 97,
+            columnNumber: 29
+          }
+        }, _momentDefault.default(item.researchYear).format("YYYY")), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "coAuthors",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 104,
+            columnNumber: 29
+          }
+        }, item.coAuthors), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 111,
+            columnNumber: 29
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "table-remove",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 112,
+            columnNumber: 31
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("button", {
+          type: "button",
+          className: "btn btn-primary btn-rounded btn-sm my-0",
+          onClick: e => this.navigateToEditPage(e, item._id),
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 113,
+            columnNumber: 33
+          }
+        }, "Edit"))), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 124,
+            columnNumber: 29
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "submit",
+          classname: "btn btn-danger btn-rounded btn-sm my-0",
+          onsubmit: () => {
+            this.onRemove(item._id);
+          },
+          value: "Delete",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 125,
+            columnNumber: 31
+          }
+        }))))))))))))
+      );
+    }
+  }
+  exports.default = researchRemoveComponent;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"../HeaderComponent/header":"5VZ8N","react":"3b2NM","../TextInputComponent/textInputComponent":"15meu","../ButtonComponent/buttonComponent":"Zx1Ei","axios":"7rA65","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","moment":"5Hi32"}],"5Hi32":[function(require,module,exports) {
+var define;
+// ! moment.js
+// ! version : 2.29.1
+// ! authors : Tim Wood, Iskren Chernev, Moment.js contributors
+// ! license : MIT
+// ! momentjs.com
+;
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() : typeof define === 'function' && define.amd ? define(factory) : global.moment = factory();
+})(this, function () {
+  "use strict";
+  var hookCallback;
+  function hooks() {
+    return hookCallback.apply(null, arguments);
+  }
+  // This is done to register the method called with moment()
+  // without creating circular dependencies.
+  function setHookCallback(callback) {
+    hookCallback = callback;
+  }
+  function isArray(input) {
+    return input instanceof Array || Object.prototype.toString.call(input) === '[object Array]';
+  }
+  function isObject(input) {
+    // IE8 will treat undefined and null as object if it wasn't for
+    // input != null
+    return input != null && Object.prototype.toString.call(input) === '[object Object]';
+  }
+  function hasOwnProp(a, b) {
+    return Object.prototype.hasOwnProperty.call(a, b);
+  }
+  function isObjectEmpty(obj) {
+    if (Object.getOwnPropertyNames) {
+      return Object.getOwnPropertyNames(obj).length === 0;
+    } else {
+      var k;
+      for (k in obj) {
+        if (hasOwnProp(obj, k)) {
+          return false;
+        }
+      }
+      return true;
+    }
+  }
+  function isUndefined(input) {
+    return input === void 0;
+  }
+  function isNumber(input) {
+    return typeof input === 'number' || Object.prototype.toString.call(input) === '[object Number]';
+  }
+  function isDate(input) {
+    return input instanceof Date || Object.prototype.toString.call(input) === '[object Date]';
+  }
+  function map(arr, fn) {
+    var res = [], i;
+    for (i = 0; i < arr.length; ++i) {
+      res.push(fn(arr[i], i));
+    }
+    return res;
+  }
+  function extend(a, b) {
+    for (var i in b) {
+      if (hasOwnProp(b, i)) {
+        a[i] = b[i];
+      }
+    }
+    if (hasOwnProp(b, 'toString')) {
+      a.toString = b.toString;
+    }
+    if (hasOwnProp(b, 'valueOf')) {
+      a.valueOf = b.valueOf;
+    }
+    return a;
+  }
+  function createUTC(input, format, locale, strict) {
+    return createLocalOrUTC(input, format, locale, strict, true).utc();
+  }
+  function defaultParsingFlags() {
+    // We need to deep clone this object.
+    return {
+      empty: false,
+      unusedTokens: [],
+      unusedInput: [],
+      overflow: -2,
+      charsLeftOver: 0,
+      nullInput: false,
+      invalidEra: null,
+      invalidMonth: null,
+      invalidFormat: false,
+      userInvalidated: false,
+      iso: false,
+      parsedDateParts: [],
+      era: null,
+      meridiem: null,
+      rfc2822: false,
+      weekdayMismatch: false
+    };
+  }
+  function getParsingFlags(m) {
+    if (m._pf == null) {
+      m._pf = defaultParsingFlags();
+    }
+    return m._pf;
+  }
+  var some;
+  if (Array.prototype.some) {
+    some = Array.prototype.some;
+  } else {
+    some = function (fun) {
+      var t = Object(this), len = t.length >>> 0, i;
+      for (i = 0; i < len; i++) {
+        if ((i in t) && fun.call(this, t[i], i, t)) {
+          return true;
+        }
+      }
+      return false;
+    };
+  }
+  function isValid(m) {
+    if (m._isValid == null) {
+      var flags = getParsingFlags(m), parsedParts = some.call(flags.parsedDateParts, function (i) {
+        return i != null;
+      }), isNowValid = !isNaN(m._d.getTime()) && flags.overflow < 0 && !flags.empty && !flags.invalidEra && !flags.invalidMonth && !flags.invalidWeekday && !flags.weekdayMismatch && !flags.nullInput && !flags.invalidFormat && !flags.userInvalidated && (!flags.meridiem || flags.meridiem && parsedParts);
+      if (m._strict) {
+        isNowValid = isNowValid && flags.charsLeftOver === 0 && flags.unusedTokens.length === 0 && flags.bigHour === undefined;
+      }
+      if (Object.isFrozen == null || !Object.isFrozen(m)) {
+        m._isValid = isNowValid;
+      } else {
+        return isNowValid;
+      }
+    }
+    return m._isValid;
+  }
+  function createInvalid(flags) {
+    var m = createUTC(NaN);
+    if (flags != null) {
+      extend(getParsingFlags(m), flags);
+    } else {
+      getParsingFlags(m).userInvalidated = true;
+    }
+    return m;
+  }
+  // Plugins that add properties should also add the key here (null value),
+  // so we can properly clone ourselves.
+  var momentProperties = hooks.momentProperties = [], updateInProgress = false;
+  function copyConfig(to, from) {
+    var i, prop, val;
+    if (!isUndefined(from._isAMomentObject)) {
+      to._isAMomentObject = from._isAMomentObject;
+    }
+    if (!isUndefined(from._i)) {
+      to._i = from._i;
+    }
+    if (!isUndefined(from._f)) {
+      to._f = from._f;
+    }
+    if (!isUndefined(from._l)) {
+      to._l = from._l;
+    }
+    if (!isUndefined(from._strict)) {
+      to._strict = from._strict;
+    }
+    if (!isUndefined(from._tzm)) {
+      to._tzm = from._tzm;
+    }
+    if (!isUndefined(from._isUTC)) {
+      to._isUTC = from._isUTC;
+    }
+    if (!isUndefined(from._offset)) {
+      to._offset = from._offset;
+    }
+    if (!isUndefined(from._pf)) {
+      to._pf = getParsingFlags(from);
+    }
+    if (!isUndefined(from._locale)) {
+      to._locale = from._locale;
+    }
+    if (momentProperties.length > 0) {
+      for (i = 0; i < momentProperties.length; i++) {
+        prop = momentProperties[i];
+        val = from[prop];
+        if (!isUndefined(val)) {
+          to[prop] = val;
+        }
+      }
+    }
+    return to;
+  }
+  // Moment prototype object
+  function Moment(config) {
+    copyConfig(this, config);
+    this._d = new Date(config._d != null ? config._d.getTime() : NaN);
+    if (!this.isValid()) {
+      this._d = new Date(NaN);
+    }
+    // Prevent infinite loop in case updateOffset creates new moment
+    // objects.
+    if (updateInProgress === false) {
+      updateInProgress = true;
+      hooks.updateOffset(this);
+      updateInProgress = false;
+    }
+  }
+  function isMoment(obj) {
+    return obj instanceof Moment || obj != null && obj._isAMomentObject != null;
+  }
+  function warn(msg) {
+    if (hooks.suppressDeprecationWarnings === false && typeof console !== 'undefined' && console.warn) {
+      console.warn('Deprecation warning: ' + msg);
+    }
+  }
+  function deprecate(msg, fn) {
+    var firstTime = true;
+    return extend(function () {
+      if (hooks.deprecationHandler != null) {
+        hooks.deprecationHandler(null, msg);
+      }
+      if (firstTime) {
+        var args = [], arg, i, key;
+        for (i = 0; i < arguments.length; i++) {
+          arg = '';
+          if (typeof arguments[i] === 'object') {
+            arg += '\n[' + i + '] ';
+            for (key in arguments[0]) {
+              if (hasOwnProp(arguments[0], key)) {
+                arg += key + ': ' + arguments[0][key] + ', ';
+              }
+            }
+            arg = arg.slice(0, -2);
+          } else {
+            arg = arguments[i];
+          }
+          args.push(arg);
+        }
+        warn(msg + '\nArguments: ' + Array.prototype.slice.call(args).join('') + '\n' + new Error().stack);
+        firstTime = false;
+      }
+      return fn.apply(this, arguments);
+    }, fn);
+  }
+  var deprecations = {};
+  function deprecateSimple(name, msg) {
+    if (hooks.deprecationHandler != null) {
+      hooks.deprecationHandler(name, msg);
+    }
+    if (!deprecations[name]) {
+      warn(msg);
+      deprecations[name] = true;
+    }
+  }
+  hooks.suppressDeprecationWarnings = false;
+  hooks.deprecationHandler = null;
+  function isFunction(input) {
+    return typeof Function !== 'undefined' && input instanceof Function || Object.prototype.toString.call(input) === '[object Function]';
+  }
+  function set(config) {
+    var prop, i;
+    for (i in config) {
+      if (hasOwnProp(config, i)) {
+        prop = config[i];
+        if (isFunction(prop)) {
+          this[i] = prop;
+        } else {
+          this['_' + i] = prop;
+        }
+      }
+    }
+    this._config = config;
+    // Lenient ordinal parsing accepts just a number in addition to
+    // number + (possibly) stuff coming from _dayOfMonthOrdinalParse.
+    // TODO: Remove "ordinalParse" fallback in next major release.
+    this._dayOfMonthOrdinalParseLenient = new RegExp((this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) + '|' + (/\d{1,2}/).source);
+  }
+  function mergeConfigs(parentConfig, childConfig) {
+    var res = extend({}, parentConfig), prop;
+    for (prop in childConfig) {
+      if (hasOwnProp(childConfig, prop)) {
+        if (isObject(parentConfig[prop]) && isObject(childConfig[prop])) {
+          res[prop] = {};
+          extend(res[prop], parentConfig[prop]);
+          extend(res[prop], childConfig[prop]);
+        } else if (childConfig[prop] != null) {
+          res[prop] = childConfig[prop];
+        } else {
+          delete res[prop];
+        }
+      }
+    }
+    for (prop in parentConfig) {
+      if (hasOwnProp(parentConfig, prop) && !hasOwnProp(childConfig, prop) && isObject(parentConfig[prop])) {
+        // make sure changes to properties don't modify parent config
+        res[prop] = extend({}, res[prop]);
+      }
+    }
+    return res;
+  }
+  function Locale(config) {
+    if (config != null) {
+      this.set(config);
+    }
+  }
+  var keys;
+  if (Object.keys) {
+    keys = Object.keys;
+  } else {
+    keys = function (obj) {
+      var i, res = [];
+      for (i in obj) {
+        if (hasOwnProp(obj, i)) {
+          res.push(i);
+        }
+      }
+      return res;
+    };
+  }
+  var defaultCalendar = {
+    sameDay: '[Today at] LT',
+    nextDay: '[Tomorrow at] LT',
+    nextWeek: 'dddd [at] LT',
+    lastDay: '[Yesterday at] LT',
+    lastWeek: '[Last] dddd [at] LT',
+    sameElse: 'L'
+  };
+  function calendar(key, mom, now) {
+    var output = this._calendar[key] || this._calendar['sameElse'];
+    return isFunction(output) ? output.call(mom, now) : output;
+  }
+  function zeroFill(number, targetLength, forceSign) {
+    var absNumber = '' + Math.abs(number), zerosToFill = targetLength - absNumber.length, sign = number >= 0;
+    return (sign ? forceSign ? '+' : '' : '-') + Math.pow(10, Math.max(0, zerosToFill)).toString().substr(1) + absNumber;
+  }
+  var formattingTokens = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g, localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g, formatFunctions = {}, formatTokenFunctions = {};
+  // token:    'M'
+  // padded:   ['MM', 2]
+  // ordinal:  'Mo'
+  // callback: function () { this.month() + 1 }
+  function addFormatToken(token, padded, ordinal, callback) {
+    var func = callback;
+    if (typeof callback === 'string') {
+      func = function () {
+        return this[callback]();
+      };
+    }
+    if (token) {
+      formatTokenFunctions[token] = func;
+    }
+    if (padded) {
+      formatTokenFunctions[padded[0]] = function () {
+        return zeroFill(func.apply(this, arguments), padded[1], padded[2]);
+      };
+    }
+    if (ordinal) {
+      formatTokenFunctions[ordinal] = function () {
+        return this.localeData().ordinal(func.apply(this, arguments), token);
+      };
+    }
+  }
+  function removeFormattingTokens(input) {
+    if (input.match(/\[[\s\S]/)) {
+      return input.replace(/^\[|\]$/g, '');
+    }
+    return input.replace(/\\/g, '');
+  }
+  function makeFormatFunction(format) {
+    var array = format.match(formattingTokens), i, length;
+    for ((i = 0, length = array.length); i < length; i++) {
+      if (formatTokenFunctions[array[i]]) {
+        array[i] = formatTokenFunctions[array[i]];
+      } else {
+        array[i] = removeFormattingTokens(array[i]);
+      }
+    }
+    return function (mom) {
+      var output = '', i;
+      for (i = 0; i < length; i++) {
+        output += isFunction(array[i]) ? array[i].call(mom, format) : array[i];
+      }
+      return output;
+    };
+  }
+  // format date using native date object
+  function formatMoment(m, format) {
+    if (!m.isValid()) {
+      return m.localeData().invalidDate();
+    }
+    format = expandFormat(format, m.localeData());
+    formatFunctions[format] = formatFunctions[format] || makeFormatFunction(format);
+    return formatFunctions[format](m);
+  }
+  function expandFormat(format, locale) {
+    var i = 5;
+    function replaceLongDateFormatTokens(input) {
+      return locale.longDateFormat(input) || input;
+    }
+    localFormattingTokens.lastIndex = 0;
+    while (i >= 0 && localFormattingTokens.test(format)) {
+      format = format.replace(localFormattingTokens, replaceLongDateFormatTokens);
+      localFormattingTokens.lastIndex = 0;
+      i -= 1;
+    }
+    return format;
+  }
+  var defaultLongDateFormat = {
+    LTS: 'h:mm:ss A',
+    LT: 'h:mm A',
+    L: 'MM/DD/YYYY',
+    LL: 'MMMM D, YYYY',
+    LLL: 'MMMM D, YYYY h:mm A',
+    LLLL: 'dddd, MMMM D, YYYY h:mm A'
+  };
+  function longDateFormat(key) {
+    var format = this._longDateFormat[key], formatUpper = this._longDateFormat[key.toUpperCase()];
+    if (format || !formatUpper) {
+      return format;
+    }
+    this._longDateFormat[key] = formatUpper.match(formattingTokens).map(function (tok) {
+      if (tok === 'MMMM' || tok === 'MM' || tok === 'DD' || tok === 'dddd') {
+        return tok.slice(1);
+      }
+      return tok;
+    }).join('');
+    return this._longDateFormat[key];
+  }
+  var defaultInvalidDate = 'Invalid date';
+  function invalidDate() {
+    return this._invalidDate;
+  }
+  var defaultOrdinal = '%d', defaultDayOfMonthOrdinalParse = /\d{1,2}/;
+  function ordinal(number) {
+    return this._ordinal.replace('%d', number);
+  }
+  var defaultRelativeTime = {
+    future: 'in %s',
+    past: '%s ago',
+    s: 'a few seconds',
+    ss: '%d seconds',
+    m: 'a minute',
+    mm: '%d minutes',
+    h: 'an hour',
+    hh: '%d hours',
+    d: 'a day',
+    dd: '%d days',
+    w: 'a week',
+    ww: '%d weeks',
+    M: 'a month',
+    MM: '%d months',
+    y: 'a year',
+    yy: '%d years'
+  };
+  function relativeTime(number, withoutSuffix, string, isFuture) {
+    var output = this._relativeTime[string];
+    return isFunction(output) ? output(number, withoutSuffix, string, isFuture) : output.replace(/%d/i, number);
+  }
+  function pastFuture(diff, output) {
+    var format = this._relativeTime[diff > 0 ? 'future' : 'past'];
+    return isFunction(format) ? format(output) : format.replace(/%s/i, output);
+  }
+  var aliases = {};
+  function addUnitAlias(unit, shorthand) {
+    var lowerCase = unit.toLowerCase();
+    aliases[lowerCase] = aliases[lowerCase + 's'] = aliases[shorthand] = unit;
+  }
+  function normalizeUnits(units) {
+    return typeof units === 'string' ? aliases[units] || aliases[units.toLowerCase()] : undefined;
+  }
+  function normalizeObjectUnits(inputObject) {
+    var normalizedInput = {}, normalizedProp, prop;
+    for (prop in inputObject) {
+      if (hasOwnProp(inputObject, prop)) {
+        normalizedProp = normalizeUnits(prop);
+        if (normalizedProp) {
+          normalizedInput[normalizedProp] = inputObject[prop];
+        }
+      }
+    }
+    return normalizedInput;
+  }
+  var priorities = {};
+  function addUnitPriority(unit, priority) {
+    priorities[unit] = priority;
+  }
+  function getPrioritizedUnits(unitsObj) {
+    var units = [], u;
+    for (u in unitsObj) {
+      if (hasOwnProp(unitsObj, u)) {
+        units.push({
+          unit: u,
+          priority: priorities[u]
+        });
+      }
+    }
+    units.sort(function (a, b) {
+      return a.priority - b.priority;
+    });
+    return units;
+  }
+  function isLeapYear(year) {
+    return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
+  }
+  function absFloor(number) {
+    if (number < 0) {
+      // -0 -> 0
+      return Math.ceil(number) || 0;
+    } else {
+      return Math.floor(number);
+    }
+  }
+  function toInt(argumentForCoercion) {
+    var coercedNumber = +argumentForCoercion, value = 0;
+    if (coercedNumber !== 0 && isFinite(coercedNumber)) {
+      value = absFloor(coercedNumber);
+    }
+    return value;
+  }
+  function makeGetSet(unit, keepTime) {
+    return function (value) {
+      if (value != null) {
+        set$1(this, unit, value);
+        hooks.updateOffset(this, keepTime);
+        return this;
+      } else {
+        return get(this, unit);
+      }
+    };
+  }
+  function get(mom, unit) {
+    return mom.isValid() ? mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]() : NaN;
+  }
+  function set$1(mom, unit, value) {
+    if (mom.isValid() && !isNaN(value)) {
+      if (unit === 'FullYear' && isLeapYear(mom.year()) && mom.month() === 1 && mom.date() === 29) {
+        value = toInt(value);
+        mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value, mom.month(), daysInMonth(value, mom.month()));
+      } else {
+        mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
+      }
+    }
+  }
+  // MOMENTS
+  function stringGet(units) {
+    units = normalizeUnits(units);
+    if (isFunction(this[units])) {
+      return this[units]();
+    }
+    return this;
+  }
+  function stringSet(units, value) {
+    if (typeof units === 'object') {
+      units = normalizeObjectUnits(units);
+      var prioritized = getPrioritizedUnits(units), i;
+      for (i = 0; i < prioritized.length; i++) {
+        this[prioritized[i].unit](units[prioritized[i].unit]);
+      }
+    } else {
+      units = normalizeUnits(units);
+      if (isFunction(this[units])) {
+        return this[units](value);
+      }
+    }
+    return this;
+  }
+  var match1 = /\d/, // 0 - 9
+  match2 = /\d\d/, // 00 - 99
+  match3 = /\d{3}/, // 000 - 999
+  match4 = /\d{4}/, // 0000 - 9999
+  match6 = /[+-]?\d{6}/, // -999999 - 999999
+  match1to2 = /\d\d?/, // 0 - 99
+  match3to4 = /\d\d\d\d?/, // 999 - 9999
+  match5to6 = /\d\d\d\d\d\d?/, // 99999 - 999999
+  match1to3 = /\d{1,3}/, // 0 - 999
+  match1to4 = /\d{1,4}/, // 0 - 9999
+  match1to6 = /[+-]?\d{1,6}/, // -999999 - 999999
+  matchUnsigned = /\d+/, // 0 - inf
+  matchSigned = /[+-]?\d+/, // -inf - inf
+  matchOffset = /Z|[+-]\d\d:?\d\d/gi, // +00:00 -00:00 +0000 -0000 or Z
+  matchShortOffset = /Z|[+-]\d\d(?::?\d\d)?/gi, // +00 -00 +00:00 -00:00 +0000 -0000 or Z
+  matchTimestamp = /[+-]?\d+(\.\d{1,3})?/, // 123456789 123456789.123
+  // any word (or two) characters or numbers including two/three word month in arabic.
+  // includes scottish gaelic two word and hyphenated months
+  matchWord = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i, regexes;
+  regexes = {};
+  function addRegexToken(token, regex, strictRegex) {
+    regexes[token] = isFunction(regex) ? regex : function (isStrict, localeData) {
+      return isStrict && strictRegex ? strictRegex : regex;
+    };
+  }
+  function getParseRegexForToken(token, config) {
+    if (!hasOwnProp(regexes, token)) {
+      return new RegExp(unescapeFormat(token));
+    }
+    return regexes[token](config._strict, config._locale);
+  }
+  // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
+  function unescapeFormat(s) {
+    return regexEscape(s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (matched, p1, p2, p3, p4) {
+      return p1 || p2 || p3 || p4;
+    }));
+  }
+  function regexEscape(s) {
+    return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  }
+  var tokens = {};
+  function addParseToken(token, callback) {
+    var i, func = callback;
+    if (typeof token === 'string') {
+      token = [token];
+    }
+    if (isNumber(callback)) {
+      func = function (input, array) {
+        array[callback] = toInt(input);
+      };
+    }
+    for (i = 0; i < token.length; i++) {
+      tokens[token[i]] = func;
+    }
+  }
+  function addWeekParseToken(token, callback) {
+    addParseToken(token, function (input, array, config, token) {
+      config._w = config._w || ({});
+      callback(input, config._w, config, token);
+    });
+  }
+  function addTimeToArrayFromToken(token, input, config) {
+    if (input != null && hasOwnProp(tokens, token)) {
+      tokens[token](input, config._a, config, token);
+    }
+  }
+  var YEAR = 0, MONTH = 1, DATE = 2, HOUR = 3, MINUTE = 4, SECOND = 5, MILLISECOND = 6, WEEK = 7, WEEKDAY = 8;
+  function mod(n, x) {
+    return (n % x + x) % x;
+  }
+  var indexOf;
+  if (Array.prototype.indexOf) {
+    indexOf = Array.prototype.indexOf;
+  } else {
+    indexOf = function (o) {
+      // I know
+      var i;
+      for (i = 0; i < this.length; ++i) {
+        if (this[i] === o) {
+          return i;
+        }
+      }
+      return -1;
+    };
+  }
+  function daysInMonth(year, month) {
+    if (isNaN(year) || isNaN(month)) {
+      return NaN;
+    }
+    var modMonth = mod(month, 12);
+    year += (month - modMonth) / 12;
+    return modMonth === 1 ? isLeapYear(year) ? 29 : 28 : 31 - modMonth % 7 % 2;
+  }
+  // FORMATTING
+  addFormatToken('M', ['MM', 2], 'Mo', function () {
+    return this.month() + 1;
+  });
+  addFormatToken('MMM', 0, 0, function (format) {
+    return this.localeData().monthsShort(this, format);
+  });
+  addFormatToken('MMMM', 0, 0, function (format) {
+    return this.localeData().months(this, format);
+  });
+  // ALIASES
+  addUnitAlias('month', 'M');
+  // PRIORITY
+  addUnitPriority('month', 8);
+  // PARSING
+  addRegexToken('M', match1to2);
+  addRegexToken('MM', match1to2, match2);
+  addRegexToken('MMM', function (isStrict, locale) {
+    return locale.monthsShortRegex(isStrict);
+  });
+  addRegexToken('MMMM', function (isStrict, locale) {
+    return locale.monthsRegex(isStrict);
+  });
+  addParseToken(['M', 'MM'], function (input, array) {
+    array[MONTH] = toInt(input) - 1;
+  });
+  addParseToken(['MMM', 'MMMM'], function (input, array, config, token) {
+    var month = config._locale.monthsParse(input, token, config._strict);
+    // if we didn't find a month name, mark the date as invalid.
+    if (month != null) {
+      array[MONTH] = month;
+    } else {
+      getParsingFlags(config).invalidMonth = input;
+    }
+  });
+  // LOCALES
+  var defaultLocaleMonths = ('January_February_March_April_May_June_July_August_September_October_November_December').split('_'), defaultLocaleMonthsShort = ('Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec').split('_'), MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/, defaultMonthsShortRegex = matchWord, defaultMonthsRegex = matchWord;
+  function localeMonths(m, format) {
+    if (!m) {
+      return isArray(this._months) ? this._months : this._months['standalone'];
+    }
+    return isArray(this._months) ? this._months[m.month()] : this._months[(this._months.isFormat || MONTHS_IN_FORMAT).test(format) ? 'format' : 'standalone'][m.month()];
+  }
+  function localeMonthsShort(m, format) {
+    if (!m) {
+      return isArray(this._monthsShort) ? this._monthsShort : this._monthsShort['standalone'];
+    }
+    return isArray(this._monthsShort) ? this._monthsShort[m.month()] : this._monthsShort[MONTHS_IN_FORMAT.test(format) ? 'format' : 'standalone'][m.month()];
+  }
+  function handleStrictParse(monthName, format, strict) {
+    var i, ii, mom, llc = monthName.toLocaleLowerCase();
+    if (!this._monthsParse) {
+      // this is not used
+      this._monthsParse = [];
+      this._longMonthsParse = [];
+      this._shortMonthsParse = [];
+      for (i = 0; i < 12; ++i) {
+        mom = createUTC([2000, i]);
+        this._shortMonthsParse[i] = this.monthsShort(mom, '').toLocaleLowerCase();
+        this._longMonthsParse[i] = this.months(mom, '').toLocaleLowerCase();
+      }
+    }
+    if (strict) {
+      if (format === 'MMM') {
+        ii = indexOf.call(this._shortMonthsParse, llc);
+        return ii !== -1 ? ii : null;
+      } else {
+        ii = indexOf.call(this._longMonthsParse, llc);
+        return ii !== -1 ? ii : null;
+      }
+    } else {
+      if (format === 'MMM') {
+        ii = indexOf.call(this._shortMonthsParse, llc);
+        if (ii !== -1) {
+          return ii;
+        }
+        ii = indexOf.call(this._longMonthsParse, llc);
+        return ii !== -1 ? ii : null;
+      } else {
+        ii = indexOf.call(this._longMonthsParse, llc);
+        if (ii !== -1) {
+          return ii;
+        }
+        ii = indexOf.call(this._shortMonthsParse, llc);
+        return ii !== -1 ? ii : null;
+      }
+    }
+  }
+  function localeMonthsParse(monthName, format, strict) {
+    var i, mom, regex;
+    if (this._monthsParseExact) {
+      return handleStrictParse.call(this, monthName, format, strict);
+    }
+    if (!this._monthsParse) {
+      this._monthsParse = [];
+      this._longMonthsParse = [];
+      this._shortMonthsParse = [];
+    }
+    // TODO: add sorting
+    // Sorting makes sure if one month (or abbr) is a prefix of another
+    // see sorting in computeMonthsParse
+    for (i = 0; i < 12; i++) {
+      // make the regex if we don't have it already
+      mom = createUTC([2000, i]);
+      if (strict && !this._longMonthsParse[i]) {
+        this._longMonthsParse[i] = new RegExp('^' + this.months(mom, '').replace('.', '') + '$', 'i');
+        this._shortMonthsParse[i] = new RegExp('^' + this.monthsShort(mom, '').replace('.', '') + '$', 'i');
+      }
+      if (!strict && !this._monthsParse[i]) {
+        regex = '^' + this.months(mom, '') + '|^' + this.monthsShort(mom, '');
+        this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
+      }
+      // test the regex
+      if (strict && format === 'MMMM' && this._longMonthsParse[i].test(monthName)) {
+        return i;
+      } else if (strict && format === 'MMM' && this._shortMonthsParse[i].test(monthName)) {
+        return i;
+      } else if (!strict && this._monthsParse[i].test(monthName)) {
+        return i;
+      }
+    }
+  }
+  // MOMENTS
+  function setMonth(mom, value) {
+    var dayOfMonth;
+    if (!mom.isValid()) {
+      // No op
+      return mom;
+    }
+    if (typeof value === 'string') {
+      if ((/^\d+$/).test(value)) {
+        value = toInt(value);
+      } else {
+        value = mom.localeData().monthsParse(value);
+        // TODO: Another silent failure?
+        if (!isNumber(value)) {
+          return mom;
+        }
+      }
+    }
+    dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
+    mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
+    return mom;
+  }
+  function getSetMonth(value) {
+    if (value != null) {
+      setMonth(this, value);
+      hooks.updateOffset(this, true);
+      return this;
+    } else {
+      return get(this, 'Month');
+    }
+  }
+  function getDaysInMonth() {
+    return daysInMonth(this.year(), this.month());
+  }
+  function monthsShortRegex(isStrict) {
+    if (this._monthsParseExact) {
+      if (!hasOwnProp(this, '_monthsRegex')) {
+        computeMonthsParse.call(this);
+      }
+      if (isStrict) {
+        return this._monthsShortStrictRegex;
+      } else {
+        return this._monthsShortRegex;
+      }
+    } else {
+      if (!hasOwnProp(this, '_monthsShortRegex')) {
+        this._monthsShortRegex = defaultMonthsShortRegex;
+      }
+      return this._monthsShortStrictRegex && isStrict ? this._monthsShortStrictRegex : this._monthsShortRegex;
+    }
+  }
+  function monthsRegex(isStrict) {
+    if (this._monthsParseExact) {
+      if (!hasOwnProp(this, '_monthsRegex')) {
+        computeMonthsParse.call(this);
+      }
+      if (isStrict) {
+        return this._monthsStrictRegex;
+      } else {
+        return this._monthsRegex;
+      }
+    } else {
+      if (!hasOwnProp(this, '_monthsRegex')) {
+        this._monthsRegex = defaultMonthsRegex;
+      }
+      return this._monthsStrictRegex && isStrict ? this._monthsStrictRegex : this._monthsRegex;
+    }
+  }
+  function computeMonthsParse() {
+    function cmpLenRev(a, b) {
+      return b.length - a.length;
+    }
+    var shortPieces = [], longPieces = [], mixedPieces = [], i, mom;
+    for (i = 0; i < 12; i++) {
+      // make the regex if we don't have it already
+      mom = createUTC([2000, i]);
+      shortPieces.push(this.monthsShort(mom, ''));
+      longPieces.push(this.months(mom, ''));
+      mixedPieces.push(this.months(mom, ''));
+      mixedPieces.push(this.monthsShort(mom, ''));
+    }
+    // Sorting makes sure if one month (or abbr) is a prefix of another it
+    // will match the longer piece.
+    shortPieces.sort(cmpLenRev);
+    longPieces.sort(cmpLenRev);
+    mixedPieces.sort(cmpLenRev);
+    for (i = 0; i < 12; i++) {
+      shortPieces[i] = regexEscape(shortPieces[i]);
+      longPieces[i] = regexEscape(longPieces[i]);
+    }
+    for (i = 0; i < 24; i++) {
+      mixedPieces[i] = regexEscape(mixedPieces[i]);
+    }
+    this._monthsRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
+    this._monthsShortRegex = this._monthsRegex;
+    this._monthsStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
+    this._monthsShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
+  }
+  // FORMATTING
+  addFormatToken('Y', 0, 0, function () {
+    var y = this.year();
+    return y <= 9999 ? zeroFill(y, 4) : '+' + y;
+  });
+  addFormatToken(0, ['YY', 2], 0, function () {
+    return this.year() % 100;
+  });
+  addFormatToken(0, ['YYYY', 4], 0, 'year');
+  addFormatToken(0, ['YYYYY', 5], 0, 'year');
+  addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
+  // ALIASES
+  addUnitAlias('year', 'y');
+  // PRIORITIES
+  addUnitPriority('year', 1);
+  // PARSING
+  addRegexToken('Y', matchSigned);
+  addRegexToken('YY', match1to2, match2);
+  addRegexToken('YYYY', match1to4, match4);
+  addRegexToken('YYYYY', match1to6, match6);
+  addRegexToken('YYYYYY', match1to6, match6);
+  addParseToken(['YYYYY', 'YYYYYY'], YEAR);
+  addParseToken('YYYY', function (input, array) {
+    array[YEAR] = input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
+  });
+  addParseToken('YY', function (input, array) {
+    array[YEAR] = hooks.parseTwoDigitYear(input);
+  });
+  addParseToken('Y', function (input, array) {
+    array[YEAR] = parseInt(input, 10);
+  });
+  // HELPERS
+  function daysInYear(year) {
+    return isLeapYear(year) ? 366 : 365;
+  }
+  // HOOKS
+  hooks.parseTwoDigitYear = function (input) {
+    return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
+  };
+  // MOMENTS
+  var getSetYear = makeGetSet('FullYear', true);
+  function getIsLeapYear() {
+    return isLeapYear(this.year());
+  }
+  function createDate(y, m, d, h, M, s, ms) {
+    // can't just apply() to create a date:
+    // https://stackoverflow.com/q/181348
+    var date;
+    // the date constructor remaps years 0-99 to 1900-1999
+    if (y < 100 && y >= 0) {
+      // preserve leap years using a full 400 year cycle, then reset
+      date = new Date(y + 400, m, d, h, M, s, ms);
+      if (isFinite(date.getFullYear())) {
+        date.setFullYear(y);
+      }
+    } else {
+      date = new Date(y, m, d, h, M, s, ms);
+    }
+    return date;
+  }
+  function createUTCDate(y) {
+    var date, args;
+    // the Date.UTC function remaps years 0-99 to 1900-1999
+    if (y < 100 && y >= 0) {
+      args = Array.prototype.slice.call(arguments);
+      // preserve leap years using a full 400 year cycle, then reset
+      args[0] = y + 400;
+      date = new Date(Date.UTC.apply(null, args));
+      if (isFinite(date.getUTCFullYear())) {
+        date.setUTCFullYear(y);
+      }
+    } else {
+      date = new Date(Date.UTC.apply(null, arguments));
+    }
+    return date;
+  }
+  // start-of-first-week - start-of-year
+  function firstWeekOffset(year, dow, doy) {
+    var // first-week day -- which january is always in the first week (4 for iso, 1 for other)
+    fwd = 7 + dow - doy, // first-week day local weekday -- which local weekday is fwd
+    fwdlw = (7 + createUTCDate(year, 0, fwd).getUTCDay() - dow) % 7;
+    return -fwdlw + fwd - 1;
+  }
+  // https://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
+  function dayOfYearFromWeeks(year, week, weekday, dow, doy) {
+    var localWeekday = (7 + weekday - dow) % 7, weekOffset = firstWeekOffset(year, dow, doy), dayOfYear = 1 + 7 * (week - 1) + localWeekday + weekOffset, resYear, resDayOfYear;
+    if (dayOfYear <= 0) {
+      resYear = year - 1;
+      resDayOfYear = daysInYear(resYear) + dayOfYear;
+    } else if (dayOfYear > daysInYear(year)) {
+      resYear = year + 1;
+      resDayOfYear = dayOfYear - daysInYear(year);
+    } else {
+      resYear = year;
+      resDayOfYear = dayOfYear;
+    }
+    return {
+      year: resYear,
+      dayOfYear: resDayOfYear
+    };
+  }
+  function weekOfYear(mom, dow, doy) {
+    var weekOffset = firstWeekOffset(mom.year(), dow, doy), week = Math.floor((mom.dayOfYear() - weekOffset - 1) / 7) + 1, resWeek, resYear;
+    if (week < 1) {
+      resYear = mom.year() - 1;
+      resWeek = week + weeksInYear(resYear, dow, doy);
+    } else if (week > weeksInYear(mom.year(), dow, doy)) {
+      resWeek = week - weeksInYear(mom.year(), dow, doy);
+      resYear = mom.year() + 1;
+    } else {
+      resYear = mom.year();
+      resWeek = week;
+    }
+    return {
+      week: resWeek,
+      year: resYear
+    };
+  }
+  function weeksInYear(year, dow, doy) {
+    var weekOffset = firstWeekOffset(year, dow, doy), weekOffsetNext = firstWeekOffset(year + 1, dow, doy);
+    return (daysInYear(year) - weekOffset + weekOffsetNext) / 7;
+  }
+  // FORMATTING
+  addFormatToken('w', ['ww', 2], 'wo', 'week');
+  addFormatToken('W', ['WW', 2], 'Wo', 'isoWeek');
+  // ALIASES
+  addUnitAlias('week', 'w');
+  addUnitAlias('isoWeek', 'W');
+  // PRIORITIES
+  addUnitPriority('week', 5);
+  addUnitPriority('isoWeek', 5);
+  // PARSING
+  addRegexToken('w', match1to2);
+  addRegexToken('ww', match1to2, match2);
+  addRegexToken('W', match1to2);
+  addRegexToken('WW', match1to2, match2);
+  addWeekParseToken(['w', 'ww', 'W', 'WW'], function (input, week, config, token) {
+    week[token.substr(0, 1)] = toInt(input);
+  });
+  // HELPERS
+  // LOCALES
+  function localeWeek(mom) {
+    return weekOfYear(mom, this._week.dow, this._week.doy).week;
+  }
+  var defaultLocaleWeek = {
+    dow: 0,
+    // Sunday is the first day of the week.
+    doy: 6
+  };
+  function localeFirstDayOfWeek() {
+    return this._week.dow;
+  }
+  function localeFirstDayOfYear() {
+    return this._week.doy;
+  }
+  // MOMENTS
+  function getSetWeek(input) {
+    var week = this.localeData().week(this);
+    return input == null ? week : this.add((input - week) * 7, 'd');
+  }
+  function getSetISOWeek(input) {
+    var week = weekOfYear(this, 1, 4).week;
+    return input == null ? week : this.add((input - week) * 7, 'd');
+  }
+  // FORMATTING
+  addFormatToken('d', 0, 'do', 'day');
+  addFormatToken('dd', 0, 0, function (format) {
+    return this.localeData().weekdaysMin(this, format);
+  });
+  addFormatToken('ddd', 0, 0, function (format) {
+    return this.localeData().weekdaysShort(this, format);
+  });
+  addFormatToken('dddd', 0, 0, function (format) {
+    return this.localeData().weekdays(this, format);
+  });
+  addFormatToken('e', 0, 0, 'weekday');
+  addFormatToken('E', 0, 0, 'isoWeekday');
+  // ALIASES
+  addUnitAlias('day', 'd');
+  addUnitAlias('weekday', 'e');
+  addUnitAlias('isoWeekday', 'E');
+  // PRIORITY
+  addUnitPriority('day', 11);
+  addUnitPriority('weekday', 11);
+  addUnitPriority('isoWeekday', 11);
+  // PARSING
+  addRegexToken('d', match1to2);
+  addRegexToken('e', match1to2);
+  addRegexToken('E', match1to2);
+  addRegexToken('dd', function (isStrict, locale) {
+    return locale.weekdaysMinRegex(isStrict);
+  });
+  addRegexToken('ddd', function (isStrict, locale) {
+    return locale.weekdaysShortRegex(isStrict);
+  });
+  addRegexToken('dddd', function (isStrict, locale) {
+    return locale.weekdaysRegex(isStrict);
+  });
+  addWeekParseToken(['dd', 'ddd', 'dddd'], function (input, week, config, token) {
+    var weekday = config._locale.weekdaysParse(input, token, config._strict);
+    // if we didn't get a weekday name, mark the date as invalid
+    if (weekday != null) {
+      week.d = weekday;
+    } else {
+      getParsingFlags(config).invalidWeekday = input;
+    }
+  });
+  addWeekParseToken(['d', 'e', 'E'], function (input, week, config, token) {
+    week[token] = toInt(input);
+  });
+  // HELPERS
+  function parseWeekday(input, locale) {
+    if (typeof input !== 'string') {
+      return input;
+    }
+    if (!isNaN(input)) {
+      return parseInt(input, 10);
+    }
+    input = locale.weekdaysParse(input);
+    if (typeof input === 'number') {
+      return input;
+    }
+    return null;
+  }
+  function parseIsoWeekday(input, locale) {
+    if (typeof input === 'string') {
+      return locale.weekdaysParse(input) % 7 || 7;
+    }
+    return isNaN(input) ? null : input;
+  }
+  // LOCALES
+  function shiftWeekdays(ws, n) {
+    return ws.slice(n, 7).concat(ws.slice(0, n));
+  }
+  var defaultLocaleWeekdays = ('Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday').split('_'), defaultLocaleWeekdaysShort = ('Sun_Mon_Tue_Wed_Thu_Fri_Sat').split('_'), defaultLocaleWeekdaysMin = ('Su_Mo_Tu_We_Th_Fr_Sa').split('_'), defaultWeekdaysRegex = matchWord, defaultWeekdaysShortRegex = matchWord, defaultWeekdaysMinRegex = matchWord;
+  function localeWeekdays(m, format) {
+    var weekdays = isArray(this._weekdays) ? this._weekdays : this._weekdays[m && m !== true && this._weekdays.isFormat.test(format) ? 'format' : 'standalone'];
+    return m === true ? shiftWeekdays(weekdays, this._week.dow) : m ? weekdays[m.day()] : weekdays;
+  }
+  function localeWeekdaysShort(m) {
+    return m === true ? shiftWeekdays(this._weekdaysShort, this._week.dow) : m ? this._weekdaysShort[m.day()] : this._weekdaysShort;
+  }
+  function localeWeekdaysMin(m) {
+    return m === true ? shiftWeekdays(this._weekdaysMin, this._week.dow) : m ? this._weekdaysMin[m.day()] : this._weekdaysMin;
+  }
+  function handleStrictParse$1(weekdayName, format, strict) {
+    var i, ii, mom, llc = weekdayName.toLocaleLowerCase();
+    if (!this._weekdaysParse) {
+      this._weekdaysParse = [];
+      this._shortWeekdaysParse = [];
+      this._minWeekdaysParse = [];
+      for (i = 0; i < 7; ++i) {
+        mom = createUTC([2000, 1]).day(i);
+        this._minWeekdaysParse[i] = this.weekdaysMin(mom, '').toLocaleLowerCase();
+        this._shortWeekdaysParse[i] = this.weekdaysShort(mom, '').toLocaleLowerCase();
+        this._weekdaysParse[i] = this.weekdays(mom, '').toLocaleLowerCase();
+      }
+    }
+    if (strict) {
+      if (format === 'dddd') {
+        ii = indexOf.call(this._weekdaysParse, llc);
+        return ii !== -1 ? ii : null;
+      } else if (format === 'ddd') {
+        ii = indexOf.call(this._shortWeekdaysParse, llc);
+        return ii !== -1 ? ii : null;
+      } else {
+        ii = indexOf.call(this._minWeekdaysParse, llc);
+        return ii !== -1 ? ii : null;
+      }
+    } else {
+      if (format === 'dddd') {
+        ii = indexOf.call(this._weekdaysParse, llc);
+        if (ii !== -1) {
+          return ii;
+        }
+        ii = indexOf.call(this._shortWeekdaysParse, llc);
+        if (ii !== -1) {
+          return ii;
+        }
+        ii = indexOf.call(this._minWeekdaysParse, llc);
+        return ii !== -1 ? ii : null;
+      } else if (format === 'ddd') {
+        ii = indexOf.call(this._shortWeekdaysParse, llc);
+        if (ii !== -1) {
+          return ii;
+        }
+        ii = indexOf.call(this._weekdaysParse, llc);
+        if (ii !== -1) {
+          return ii;
+        }
+        ii = indexOf.call(this._minWeekdaysParse, llc);
+        return ii !== -1 ? ii : null;
+      } else {
+        ii = indexOf.call(this._minWeekdaysParse, llc);
+        if (ii !== -1) {
+          return ii;
+        }
+        ii = indexOf.call(this._weekdaysParse, llc);
+        if (ii !== -1) {
+          return ii;
+        }
+        ii = indexOf.call(this._shortWeekdaysParse, llc);
+        return ii !== -1 ? ii : null;
+      }
+    }
+  }
+  function localeWeekdaysParse(weekdayName, format, strict) {
+    var i, mom, regex;
+    if (this._weekdaysParseExact) {
+      return handleStrictParse$1.call(this, weekdayName, format, strict);
+    }
+    if (!this._weekdaysParse) {
+      this._weekdaysParse = [];
+      this._minWeekdaysParse = [];
+      this._shortWeekdaysParse = [];
+      this._fullWeekdaysParse = [];
+    }
+    for (i = 0; i < 7; i++) {
+      // make the regex if we don't have it already
+      mom = createUTC([2000, 1]).day(i);
+      if (strict && !this._fullWeekdaysParse[i]) {
+        this._fullWeekdaysParse[i] = new RegExp('^' + this.weekdays(mom, '').replace('.', '\\.?') + '$', 'i');
+        this._shortWeekdaysParse[i] = new RegExp('^' + this.weekdaysShort(mom, '').replace('.', '\\.?') + '$', 'i');
+        this._minWeekdaysParse[i] = new RegExp('^' + this.weekdaysMin(mom, '').replace('.', '\\.?') + '$', 'i');
+      }
+      if (!this._weekdaysParse[i]) {
+        regex = '^' + this.weekdays(mom, '') + '|^' + this.weekdaysShort(mom, '') + '|^' + this.weekdaysMin(mom, '');
+        this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
+      }
+      // test the regex
+      if (strict && format === 'dddd' && this._fullWeekdaysParse[i].test(weekdayName)) {
+        return i;
+      } else if (strict && format === 'ddd' && this._shortWeekdaysParse[i].test(weekdayName)) {
+        return i;
+      } else if (strict && format === 'dd' && this._minWeekdaysParse[i].test(weekdayName)) {
+        return i;
+      } else if (!strict && this._weekdaysParse[i].test(weekdayName)) {
+        return i;
+      }
+    }
+  }
+  // MOMENTS
+  function getSetDayOfWeek(input) {
+    if (!this.isValid()) {
+      return input != null ? this : NaN;
+    }
+    var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
+    if (input != null) {
+      input = parseWeekday(input, this.localeData());
+      return this.add(input - day, 'd');
+    } else {
+      return day;
+    }
+  }
+  function getSetLocaleDayOfWeek(input) {
+    if (!this.isValid()) {
+      return input != null ? this : NaN;
+    }
+    var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
+    return input == null ? weekday : this.add(input - weekday, 'd');
+  }
+  function getSetISODayOfWeek(input) {
+    if (!this.isValid()) {
+      return input != null ? this : NaN;
+    }
+    // behaves the same as moment#day except
+    // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
+    // as a setter, sunday should belong to the previous week.
+    if (input != null) {
+      var weekday = parseIsoWeekday(input, this.localeData());
+      return this.day(this.day() % 7 ? weekday : weekday - 7);
+    } else {
+      return this.day() || 7;
+    }
+  }
+  function weekdaysRegex(isStrict) {
+    if (this._weekdaysParseExact) {
+      if (!hasOwnProp(this, '_weekdaysRegex')) {
+        computeWeekdaysParse.call(this);
+      }
+      if (isStrict) {
+        return this._weekdaysStrictRegex;
+      } else {
+        return this._weekdaysRegex;
+      }
+    } else {
+      if (!hasOwnProp(this, '_weekdaysRegex')) {
+        this._weekdaysRegex = defaultWeekdaysRegex;
+      }
+      return this._weekdaysStrictRegex && isStrict ? this._weekdaysStrictRegex : this._weekdaysRegex;
+    }
+  }
+  function weekdaysShortRegex(isStrict) {
+    if (this._weekdaysParseExact) {
+      if (!hasOwnProp(this, '_weekdaysRegex')) {
+        computeWeekdaysParse.call(this);
+      }
+      if (isStrict) {
+        return this._weekdaysShortStrictRegex;
+      } else {
+        return this._weekdaysShortRegex;
+      }
+    } else {
+      if (!hasOwnProp(this, '_weekdaysShortRegex')) {
+        this._weekdaysShortRegex = defaultWeekdaysShortRegex;
+      }
+      return this._weekdaysShortStrictRegex && isStrict ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex;
+    }
+  }
+  function weekdaysMinRegex(isStrict) {
+    if (this._weekdaysParseExact) {
+      if (!hasOwnProp(this, '_weekdaysRegex')) {
+        computeWeekdaysParse.call(this);
+      }
+      if (isStrict) {
+        return this._weekdaysMinStrictRegex;
+      } else {
+        return this._weekdaysMinRegex;
+      }
+    } else {
+      if (!hasOwnProp(this, '_weekdaysMinRegex')) {
+        this._weekdaysMinRegex = defaultWeekdaysMinRegex;
+      }
+      return this._weekdaysMinStrictRegex && isStrict ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex;
+    }
+  }
+  function computeWeekdaysParse() {
+    function cmpLenRev(a, b) {
+      return b.length - a.length;
+    }
+    var minPieces = [], shortPieces = [], longPieces = [], mixedPieces = [], i, mom, minp, shortp, longp;
+    for (i = 0; i < 7; i++) {
+      // make the regex if we don't have it already
+      mom = createUTC([2000, 1]).day(i);
+      minp = regexEscape(this.weekdaysMin(mom, ''));
+      shortp = regexEscape(this.weekdaysShort(mom, ''));
+      longp = regexEscape(this.weekdays(mom, ''));
+      minPieces.push(minp);
+      shortPieces.push(shortp);
+      longPieces.push(longp);
+      mixedPieces.push(minp);
+      mixedPieces.push(shortp);
+      mixedPieces.push(longp);
+    }
+    // Sorting makes sure if one weekday (or abbr) is a prefix of another it
+    // will match the longer piece.
+    minPieces.sort(cmpLenRev);
+    shortPieces.sort(cmpLenRev);
+    longPieces.sort(cmpLenRev);
+    mixedPieces.sort(cmpLenRev);
+    this._weekdaysRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
+    this._weekdaysShortRegex = this._weekdaysRegex;
+    this._weekdaysMinRegex = this._weekdaysRegex;
+    this._weekdaysStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
+    this._weekdaysShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
+    this._weekdaysMinStrictRegex = new RegExp('^(' + minPieces.join('|') + ')', 'i');
+  }
+  // FORMATTING
+  function hFormat() {
+    return this.hours() % 12 || 12;
+  }
+  function kFormat() {
+    return this.hours() || 24;
+  }
+  addFormatToken('H', ['HH', 2], 0, 'hour');
+  addFormatToken('h', ['hh', 2], 0, hFormat);
+  addFormatToken('k', ['kk', 2], 0, kFormat);
+  addFormatToken('hmm', 0, 0, function () {
+    return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2);
+  });
+  addFormatToken('hmmss', 0, 0, function () {
+    return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2) + zeroFill(this.seconds(), 2);
+  });
+  addFormatToken('Hmm', 0, 0, function () {
+    return '' + this.hours() + zeroFill(this.minutes(), 2);
+  });
+  addFormatToken('Hmmss', 0, 0, function () {
+    return '' + this.hours() + zeroFill(this.minutes(), 2) + zeroFill(this.seconds(), 2);
+  });
+  function meridiem(token, lowercase) {
+    addFormatToken(token, 0, 0, function () {
+      return this.localeData().meridiem(this.hours(), this.minutes(), lowercase);
+    });
+  }
+  meridiem('a', true);
+  meridiem('A', false);
+  // ALIASES
+  addUnitAlias('hour', 'h');
+  // PRIORITY
+  addUnitPriority('hour', 13);
+  // PARSING
+  function matchMeridiem(isStrict, locale) {
+    return locale._meridiemParse;
+  }
+  addRegexToken('a', matchMeridiem);
+  addRegexToken('A', matchMeridiem);
+  addRegexToken('H', match1to2);
+  addRegexToken('h', match1to2);
+  addRegexToken('k', match1to2);
+  addRegexToken('HH', match1to2, match2);
+  addRegexToken('hh', match1to2, match2);
+  addRegexToken('kk', match1to2, match2);
+  addRegexToken('hmm', match3to4);
+  addRegexToken('hmmss', match5to6);
+  addRegexToken('Hmm', match3to4);
+  addRegexToken('Hmmss', match5to6);
+  addParseToken(['H', 'HH'], HOUR);
+  addParseToken(['k', 'kk'], function (input, array, config) {
+    var kInput = toInt(input);
+    array[HOUR] = kInput === 24 ? 0 : kInput;
+  });
+  addParseToken(['a', 'A'], function (input, array, config) {
+    config._isPm = config._locale.isPM(input);
+    config._meridiem = input;
+  });
+  addParseToken(['h', 'hh'], function (input, array, config) {
+    array[HOUR] = toInt(input);
+    getParsingFlags(config).bigHour = true;
+  });
+  addParseToken('hmm', function (input, array, config) {
+    var pos = input.length - 2;
+    array[HOUR] = toInt(input.substr(0, pos));
+    array[MINUTE] = toInt(input.substr(pos));
+    getParsingFlags(config).bigHour = true;
+  });
+  addParseToken('hmmss', function (input, array, config) {
+    var pos1 = input.length - 4, pos2 = input.length - 2;
+    array[HOUR] = toInt(input.substr(0, pos1));
+    array[MINUTE] = toInt(input.substr(pos1, 2));
+    array[SECOND] = toInt(input.substr(pos2));
+    getParsingFlags(config).bigHour = true;
+  });
+  addParseToken('Hmm', function (input, array, config) {
+    var pos = input.length - 2;
+    array[HOUR] = toInt(input.substr(0, pos));
+    array[MINUTE] = toInt(input.substr(pos));
+  });
+  addParseToken('Hmmss', function (input, array, config) {
+    var pos1 = input.length - 4, pos2 = input.length - 2;
+    array[HOUR] = toInt(input.substr(0, pos1));
+    array[MINUTE] = toInt(input.substr(pos1, 2));
+    array[SECOND] = toInt(input.substr(pos2));
+  });
+  // LOCALES
+  function localeIsPM(input) {
+    // IE8 Quirks Mode & IE7 Standards Mode do not allow accessing strings like arrays
+    // Using charAt should be more compatible.
+    return (input + '').toLowerCase().charAt(0) === 'p';
+  }
+  var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i, // Setting the hour should keep the time, because the user explicitly
+  // specified which hour they want. So trying to maintain the same hour (in
+  // a new timezone) makes sense. Adding/subtracting hours does not follow
+  // this rule.
+  getSetHour = makeGetSet('Hours', true);
+  function localeMeridiem(hours, minutes, isLower) {
+    if (hours > 11) {
+      return isLower ? 'pm' : 'PM';
+    } else {
+      return isLower ? 'am' : 'AM';
+    }
+  }
+  var baseConfig = {
+    calendar: defaultCalendar,
+    longDateFormat: defaultLongDateFormat,
+    invalidDate: defaultInvalidDate,
+    ordinal: defaultOrdinal,
+    dayOfMonthOrdinalParse: defaultDayOfMonthOrdinalParse,
+    relativeTime: defaultRelativeTime,
+    months: defaultLocaleMonths,
+    monthsShort: defaultLocaleMonthsShort,
+    week: defaultLocaleWeek,
+    weekdays: defaultLocaleWeekdays,
+    weekdaysMin: defaultLocaleWeekdaysMin,
+    weekdaysShort: defaultLocaleWeekdaysShort,
+    meridiemParse: defaultLocaleMeridiemParse
+  };
+  // internal storage for locale config files
+  var locales = {}, localeFamilies = {}, globalLocale;
+  function commonPrefix(arr1, arr2) {
+    var i, minl = Math.min(arr1.length, arr2.length);
+    for (i = 0; i < minl; i += 1) {
+      if (arr1[i] !== arr2[i]) {
+        return i;
+      }
+    }
+    return minl;
+  }
+  function normalizeLocale(key) {
+    return key ? key.toLowerCase().replace('_', '-') : key;
+  }
+  // pick the locale from the array
+  // try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
+  // substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
+  function chooseLocale(names) {
+    var i = 0, j, next, locale, split;
+    while (i < names.length) {
+      split = normalizeLocale(names[i]).split('-');
+      j = split.length;
+      next = normalizeLocale(names[i + 1]);
+      next = next ? next.split('-') : null;
+      while (j > 0) {
+        locale = loadLocale(split.slice(0, j).join('-'));
+        if (locale) {
+          return locale;
+        }
+        if (next && next.length >= j && commonPrefix(split, next) >= j - 1) {
+          // the next array item is better than a shallower substring of this one
+          break;
+        }
+        j--;
+      }
+      i++;
+    }
+    return globalLocale;
+  }
+  function loadLocale(name) {
+    var oldLocale = null, aliasedRequire;
+    // TODO: Find a better way to register and load all the locales in Node
+    if (locales[name] === undefined && typeof module !== 'undefined' && module && module.exports) {
+      try {
+        oldLocale = globalLocale._abbr;
+        aliasedRequire = require;
+        aliasedRequire('./locale/' + name);
+        getSetGlobalLocale(oldLocale);
+      } catch (e) {
+        // mark as not found to avoid repeating expensive file require call causing high CPU
+        // when trying to find en-US, en_US, en-us for every format call
+        locales[name] = null;
+      }
+    }
+    return locales[name];
+  }
+  // This function will load locale and then set the global locale.  If
+  // no arguments are passed in, it will simply return the current global
+  // locale key.
+  function getSetGlobalLocale(key, values) {
+    var data;
+    if (key) {
+      if (isUndefined(values)) {
+        data = getLocale(key);
+      } else {
+        data = defineLocale(key, values);
+      }
+      if (data) {
+        // moment.duration._locale = moment._locale = data;
+        globalLocale = data;
+      } else {
+        if (typeof console !== 'undefined' && console.warn) {
+          // warn user if arguments are passed but the locale could not be set
+          console.warn('Locale ' + key + ' not found. Did you forget to load it?');
+        }
+      }
+    }
+    return globalLocale._abbr;
+  }
+  function defineLocale(name, config) {
+    if (config !== null) {
+      var locale, parentConfig = baseConfig;
+      config.abbr = name;
+      if (locales[name] != null) {
+        deprecateSimple('defineLocaleOverride', 'use moment.updateLocale(localeName, config) to change ' + 'an existing locale. moment.defineLocale(localeName, ' + 'config) should only be used for creating a new locale ' + 'See http://momentjs.com/guides/#/warnings/define-locale/ for more info.');
+        parentConfig = locales[name]._config;
+      } else if (config.parentLocale != null) {
+        if (locales[config.parentLocale] != null) {
+          parentConfig = locales[config.parentLocale]._config;
+        } else {
+          locale = loadLocale(config.parentLocale);
+          if (locale != null) {
+            parentConfig = locale._config;
+          } else {
+            if (!localeFamilies[config.parentLocale]) {
+              localeFamilies[config.parentLocale] = [];
+            }
+            localeFamilies[config.parentLocale].push({
+              name: name,
+              config: config
+            });
+            return null;
+          }
+        }
+      }
+      locales[name] = new Locale(mergeConfigs(parentConfig, config));
+      if (localeFamilies[name]) {
+        localeFamilies[name].forEach(function (x) {
+          defineLocale(x.name, x.config);
+        });
+      }
+      // backwards compat for now: also set the locale
+      // make sure we set the locale AFTER all child locales have been
+      // created, so we won't end up with the child locale set.
+      getSetGlobalLocale(name);
+      return locales[name];
+    } else {
+      // useful for testing
+      delete locales[name];
+      return null;
+    }
+  }
+  function updateLocale(name, config) {
+    if (config != null) {
+      var locale, tmpLocale, parentConfig = baseConfig;
+      if (locales[name] != null && locales[name].parentLocale != null) {
+        // Update existing child locale in-place to avoid memory-leaks
+        locales[name].set(mergeConfigs(locales[name]._config, config));
+      } else {
+        // MERGE
+        tmpLocale = loadLocale(name);
+        if (tmpLocale != null) {
+          parentConfig = tmpLocale._config;
+        }
+        config = mergeConfigs(parentConfig, config);
+        if (tmpLocale == null) {
+          // updateLocale is called for creating a new locale
+          // Set abbr so it will have a name (getters return
+          // undefined otherwise).
+          config.abbr = name;
+        }
+        locale = new Locale(config);
+        locale.parentLocale = locales[name];
+        locales[name] = locale;
+      }
+      // backwards compat for now: also set the locale
+      getSetGlobalLocale(name);
+    } else {
+      // pass null for config to unupdate, useful for tests
+      if (locales[name] != null) {
+        if (locales[name].parentLocale != null) {
+          locales[name] = locales[name].parentLocale;
+          if (name === getSetGlobalLocale()) {
+            getSetGlobalLocale(name);
+          }
+        } else if (locales[name] != null) {
+          delete locales[name];
+        }
+      }
+    }
+    return locales[name];
+  }
+  // returns locale data
+  function getLocale(key) {
+    var locale;
+    if (key && key._locale && key._locale._abbr) {
+      key = key._locale._abbr;
+    }
+    if (!key) {
+      return globalLocale;
+    }
+    if (!isArray(key)) {
+      // short-circuit everything else
+      locale = loadLocale(key);
+      if (locale) {
+        return locale;
+      }
+      key = [key];
+    }
+    return chooseLocale(key);
+  }
+  function listLocales() {
+    return keys(locales);
+  }
+  function checkOverflow(m) {
+    var overflow, a = m._a;
+    if (a && getParsingFlags(m).overflow === -2) {
+      overflow = a[MONTH] < 0 || a[MONTH] > 11 ? MONTH : a[DATE] < 1 || a[DATE] > daysInMonth(a[YEAR], a[MONTH]) ? DATE : a[HOUR] < 0 || a[HOUR] > 24 || a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0) ? HOUR : a[MINUTE] < 0 || a[MINUTE] > 59 ? MINUTE : a[SECOND] < 0 || a[SECOND] > 59 ? SECOND : a[MILLISECOND] < 0 || a[MILLISECOND] > 999 ? MILLISECOND : -1;
+      if (getParsingFlags(m)._overflowDayOfYear && (overflow < YEAR || overflow > DATE)) {
+        overflow = DATE;
+      }
+      if (getParsingFlags(m)._overflowWeeks && overflow === -1) {
+        overflow = WEEK;
+      }
+      if (getParsingFlags(m)._overflowWeekday && overflow === -1) {
+        overflow = WEEKDAY;
+      }
+      getParsingFlags(m).overflow = overflow;
+    }
+    return m;
+  }
+  // iso 8601 regex
+  // 0000-00-00 0000-W00 or 0000-W00-0 + T + 00 or 00:00 or 00:00:00 or 00:00:00.000 + +00:00 or +0000 or +00)
+  var extendedIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/, basicIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d|))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/, tzRegex = /Z|[+-]\d\d(?::?\d\d)?/, isoDates = [['YYYYYY-MM-DD', /[+-]\d{6}-\d\d-\d\d/], ['YYYY-MM-DD', /\d{4}-\d\d-\d\d/], ['GGGG-[W]WW-E', /\d{4}-W\d\d-\d/], ['GGGG-[W]WW', /\d{4}-W\d\d/, false], ['YYYY-DDD', /\d{4}-\d{3}/], ['YYYY-MM', /\d{4}-\d\d/, false], ['YYYYYYMMDD', /[+-]\d{10}/], ['YYYYMMDD', /\d{8}/], ['GGGG[W]WWE', /\d{4}W\d{3}/], ['GGGG[W]WW', /\d{4}W\d{2}/, false], ['YYYYDDD', /\d{7}/], ['YYYYMM', /\d{6}/, false], ['YYYY', /\d{4}/, false]], // iso time formats and regexes
+  isoTimes = [['HH:mm:ss.SSSS', /\d\d:\d\d:\d\d\.\d+/], ['HH:mm:ss,SSSS', /\d\d:\d\d:\d\d,\d+/], ['HH:mm:ss', /\d\d:\d\d:\d\d/], ['HH:mm', /\d\d:\d\d/], ['HHmmss.SSSS', /\d\d\d\d\d\d\.\d+/], ['HHmmss,SSSS', /\d\d\d\d\d\d,\d+/], ['HHmmss', /\d\d\d\d\d\d/], ['HHmm', /\d\d\d\d/], ['HH', /\d\d/]], aspNetJsonRegex = /^\/?Date\((-?\d+)/i, // RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
+  rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/, obsOffsets = {
+    UT: 0,
+    GMT: 0,
+    EDT: -4 * 60,
+    EST: -5 * 60,
+    CDT: -5 * 60,
+    CST: -6 * 60,
+    MDT: -6 * 60,
+    MST: -7 * 60,
+    PDT: -7 * 60,
+    PST: -8 * 60
+  };
+  // date from iso format
+  function configFromISO(config) {
+    var i, l, string = config._i, match = extendedIsoRegex.exec(string) || basicIsoRegex.exec(string), allowTime, dateFormat, timeFormat, tzFormat;
+    if (match) {
+      getParsingFlags(config).iso = true;
+      for ((i = 0, l = isoDates.length); i < l; i++) {
+        if (isoDates[i][1].exec(match[1])) {
+          dateFormat = isoDates[i][0];
+          allowTime = isoDates[i][2] !== false;
+          break;
+        }
+      }
+      if (dateFormat == null) {
+        config._isValid = false;
+        return;
+      }
+      if (match[3]) {
+        for ((i = 0, l = isoTimes.length); i < l; i++) {
+          if (isoTimes[i][1].exec(match[3])) {
+            // match[2] should be 'T' or space
+            timeFormat = (match[2] || ' ') + isoTimes[i][0];
+            break;
+          }
+        }
+        if (timeFormat == null) {
+          config._isValid = false;
+          return;
+        }
+      }
+      if (!allowTime && timeFormat != null) {
+        config._isValid = false;
+        return;
+      }
+      if (match[4]) {
+        if (tzRegex.exec(match[4])) {
+          tzFormat = 'Z';
+        } else {
+          config._isValid = false;
+          return;
+        }
+      }
+      config._f = dateFormat + (timeFormat || '') + (tzFormat || '');
+      configFromStringAndFormat(config);
+    } else {
+      config._isValid = false;
+    }
+  }
+  function extractFromRFC2822Strings(yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr) {
+    var result = [untruncateYear(yearStr), defaultLocaleMonthsShort.indexOf(monthStr), parseInt(dayStr, 10), parseInt(hourStr, 10), parseInt(minuteStr, 10)];
+    if (secondStr) {
+      result.push(parseInt(secondStr, 10));
+    }
+    return result;
+  }
+  function untruncateYear(yearStr) {
+    var year = parseInt(yearStr, 10);
+    if (year <= 49) {
+      return 2000 + year;
+    } else if (year <= 999) {
+      return 1900 + year;
+    }
+    return year;
+  }
+  function preprocessRFC2822(s) {
+    // Remove comments and folding whitespace and replace multiple-spaces with a single space
+    return s.replace(/\([^)]*\)|[\n\t]/g, ' ').replace(/(\s\s+)/g, ' ').replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+  }
+  function checkWeekday(weekdayStr, parsedInput, config) {
+    if (weekdayStr) {
+      // TODO: Replace the vanilla JS Date object with an independent day-of-week check.
+      var weekdayProvided = defaultLocaleWeekdaysShort.indexOf(weekdayStr), weekdayActual = new Date(parsedInput[0], parsedInput[1], parsedInput[2]).getDay();
+      if (weekdayProvided !== weekdayActual) {
+        getParsingFlags(config).weekdayMismatch = true;
+        config._isValid = false;
+        return false;
+      }
+    }
+    return true;
+  }
+  function calculateOffset(obsOffset, militaryOffset, numOffset) {
+    if (obsOffset) {
+      return obsOffsets[obsOffset];
+    } else if (militaryOffset) {
+      // the only allowed military tz is Z
+      return 0;
+    } else {
+      var hm = parseInt(numOffset, 10), m = hm % 100, h = (hm - m) / 100;
+      return h * 60 + m;
+    }
+  }
+  // date and time from ref 2822 format
+  function configFromRFC2822(config) {
+    var match = rfc2822.exec(preprocessRFC2822(config._i)), parsedArray;
+    if (match) {
+      parsedArray = extractFromRFC2822Strings(match[4], match[3], match[2], match[5], match[6], match[7]);
+      if (!checkWeekday(match[1], parsedArray, config)) {
+        return;
+      }
+      config._a = parsedArray;
+      config._tzm = calculateOffset(match[8], match[9], match[10]);
+      config._d = createUTCDate.apply(null, config._a);
+      config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
+      getParsingFlags(config).rfc2822 = true;
+    } else {
+      config._isValid = false;
+    }
+  }
+  // date from 1) ASP.NET, 2) ISO, 3) RFC 2822 formats, or 4) optional fallback if parsing isn't strict
+  function configFromString(config) {
+    var matched = aspNetJsonRegex.exec(config._i);
+    if (matched !== null) {
+      config._d = new Date(+matched[1]);
+      return;
+    }
+    configFromISO(config);
+    if (config._isValid === false) {
+      delete config._isValid;
+    } else {
+      return;
+    }
+    configFromRFC2822(config);
+    if (config._isValid === false) {
+      delete config._isValid;
+    } else {
+      return;
+    }
+    if (config._strict) {
+      config._isValid = false;
+    } else {
+      // Final attempt, use Input Fallback
+      hooks.createFromInputFallback(config);
+    }
+  }
+  hooks.createFromInputFallback = deprecate('value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), ' + 'which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are ' + 'discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.', function (config) {
+    config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
+  });
+  // Pick the first defined of two or three arguments.
+  function defaults(a, b, c) {
+    if (a != null) {
+      return a;
+    }
+    if (b != null) {
+      return b;
+    }
+    return c;
+  }
+  function currentDateArray(config) {
+    // hooks is actually the exported moment object
+    var nowValue = new Date(hooks.now());
+    if (config._useUTC) {
+      return [nowValue.getUTCFullYear(), nowValue.getUTCMonth(), nowValue.getUTCDate()];
+    }
+    return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
+  }
+  // convert an array to a date.
+  // the array should mirror the parameters below
+  // note: all values past the year are optional and will default to the lowest possible value.
+  // [year, month, day , hour, minute, second, millisecond]
+  function configFromArray(config) {
+    var i, date, input = [], currentDate, expectedWeekday, yearToUse;
+    if (config._d) {
+      return;
+    }
+    currentDate = currentDateArray(config);
+    // compute day of the year from weeks and weekdays
+    if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
+      dayOfYearFromWeekInfo(config);
+    }
+    // if the day of the year is set, figure out what it is
+    if (config._dayOfYear != null) {
+      yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
+      if (config._dayOfYear > daysInYear(yearToUse) || config._dayOfYear === 0) {
+        getParsingFlags(config)._overflowDayOfYear = true;
+      }
+      date = createUTCDate(yearToUse, 0, config._dayOfYear);
+      config._a[MONTH] = date.getUTCMonth();
+      config._a[DATE] = date.getUTCDate();
+    }
+    // Default to current date.
+    // * if no year, month, day of month are given, default to today
+    // * if day of month is given, default month and year
+    // * if month is given, default only year
+    // * if year is given, don't default anything
+    for (i = 0; i < 3 && config._a[i] == null; ++i) {
+      config._a[i] = input[i] = currentDate[i];
+    }
+    // Zero out whatever was not defaulted, including time
+    for (; i < 7; i++) {
+      config._a[i] = input[i] = config._a[i] == null ? i === 2 ? 1 : 0 : config._a[i];
+    }
+    // Check for 24:00:00.000
+    if (config._a[HOUR] === 24 && config._a[MINUTE] === 0 && config._a[SECOND] === 0 && config._a[MILLISECOND] === 0) {
+      config._nextDay = true;
+      config._a[HOUR] = 0;
+    }
+    config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
+    expectedWeekday = config._useUTC ? config._d.getUTCDay() : config._d.getDay();
+    // Apply timezone offset from input. The actual utcOffset can be changed
+    // with parseZone.
+    if (config._tzm != null) {
+      config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
+    }
+    if (config._nextDay) {
+      config._a[HOUR] = 24;
+    }
+    // check for mismatching day of week
+    if (config._w && typeof config._w.d !== 'undefined' && config._w.d !== expectedWeekday) {
+      getParsingFlags(config).weekdayMismatch = true;
+    }
+  }
+  function dayOfYearFromWeekInfo(config) {
+    var w, weekYear, week, weekday, dow, doy, temp, weekdayOverflow, curWeek;
+    w = config._w;
+    if (w.GG != null || w.W != null || w.E != null) {
+      dow = 1;
+      doy = 4;
+      // TODO: We need to take the current isoWeekYear, but that depends on
+      // how we interpret now (local, utc, fixed offset). So create
+      // a now version of current config (take local/utc/offset flags, and
+      // create now).
+      weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(createLocal(), 1, 4).year);
+      week = defaults(w.W, 1);
+      weekday = defaults(w.E, 1);
+      if (weekday < 1 || weekday > 7) {
+        weekdayOverflow = true;
+      }
+    } else {
+      dow = config._locale._week.dow;
+      doy = config._locale._week.doy;
+      curWeek = weekOfYear(createLocal(), dow, doy);
+      weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
+      // Default to current week.
+      week = defaults(w.w, curWeek.week);
+      if (w.d != null) {
+        // weekday -- low day numbers are considered next week
+        weekday = w.d;
+        if (weekday < 0 || weekday > 6) {
+          weekdayOverflow = true;
+        }
+      } else if (w.e != null) {
+        // local weekday -- counting starts from beginning of week
+        weekday = w.e + dow;
+        if (w.e < 0 || w.e > 6) {
+          weekdayOverflow = true;
+        }
+      } else {
+        // default to beginning of week
+        weekday = dow;
+      }
+    }
+    if (week < 1 || week > weeksInYear(weekYear, dow, doy)) {
+      getParsingFlags(config)._overflowWeeks = true;
+    } else if (weekdayOverflow != null) {
+      getParsingFlags(config)._overflowWeekday = true;
+    } else {
+      temp = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy);
+      config._a[YEAR] = temp.year;
+      config._dayOfYear = temp.dayOfYear;
+    }
+  }
+  // constant that refers to the ISO standard
+  hooks.ISO_8601 = function () {};
+  // constant that refers to the RFC 2822 form
+  hooks.RFC_2822 = function () {};
+  // date from string and format string
+  function configFromStringAndFormat(config) {
+    // TODO: Move this to another part of the creation flow to prevent circular deps
+    if (config._f === hooks.ISO_8601) {
+      configFromISO(config);
+      return;
+    }
+    if (config._f === hooks.RFC_2822) {
+      configFromRFC2822(config);
+      return;
+    }
+    config._a = [];
+    getParsingFlags(config).empty = true;
+    // This array is used to make a Date, either with `new Date` or `Date.UTC`
+    var string = '' + config._i, i, parsedInput, tokens, token, skipped, stringLength = string.length, totalParsedInputLength = 0, era;
+    tokens = expandFormat(config._f, config._locale).match(formattingTokens) || [];
+    for (i = 0; i < tokens.length; i++) {
+      token = tokens[i];
+      parsedInput = (string.match(getParseRegexForToken(token, config)) || [])[0];
+      if (parsedInput) {
+        skipped = string.substr(0, string.indexOf(parsedInput));
+        if (skipped.length > 0) {
+          getParsingFlags(config).unusedInput.push(skipped);
+        }
+        string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
+        totalParsedInputLength += parsedInput.length;
+      }
+      // don't parse if it's not a known token
+      if (formatTokenFunctions[token]) {
+        if (parsedInput) {
+          getParsingFlags(config).empty = false;
+        } else {
+          getParsingFlags(config).unusedTokens.push(token);
+        }
+        addTimeToArrayFromToken(token, parsedInput, config);
+      } else if (config._strict && !parsedInput) {
+        getParsingFlags(config).unusedTokens.push(token);
+      }
+    }
+    // add remaining unparsed input length to the string
+    getParsingFlags(config).charsLeftOver = stringLength - totalParsedInputLength;
+    if (string.length > 0) {
+      getParsingFlags(config).unusedInput.push(string);
+    }
+    // clear _12h flag if hour is <= 12
+    if (config._a[HOUR] <= 12 && getParsingFlags(config).bigHour === true && config._a[HOUR] > 0) {
+      getParsingFlags(config).bigHour = undefined;
+    }
+    getParsingFlags(config).parsedDateParts = config._a.slice(0);
+    getParsingFlags(config).meridiem = config._meridiem;
+    // handle meridiem
+    config._a[HOUR] = meridiemFixWrap(config._locale, config._a[HOUR], config._meridiem);
+    // handle era
+    era = getParsingFlags(config).era;
+    if (era !== null) {
+      config._a[YEAR] = config._locale.erasConvertYear(era, config._a[YEAR]);
+    }
+    configFromArray(config);
+    checkOverflow(config);
+  }
+  function meridiemFixWrap(locale, hour, meridiem) {
+    var isPm;
+    if (meridiem == null) {
+      // nothing to do
+      return hour;
+    }
+    if (locale.meridiemHour != null) {
+      return locale.meridiemHour(hour, meridiem);
+    } else if (locale.isPM != null) {
+      // Fallback
+      isPm = locale.isPM(meridiem);
+      if (isPm && hour < 12) {
+        hour += 12;
+      }
+      if (!isPm && hour === 12) {
+        hour = 0;
+      }
+      return hour;
+    } else {
+      // this is not supposed to happen
+      return hour;
+    }
+  }
+  // date from string and array of format strings
+  function configFromStringAndArray(config) {
+    var tempConfig, bestMoment, scoreToBeat, i, currentScore, validFormatFound, bestFormatIsValid = false;
+    if (config._f.length === 0) {
+      getParsingFlags(config).invalidFormat = true;
+      config._d = new Date(NaN);
+      return;
+    }
+    for (i = 0; i < config._f.length; i++) {
+      currentScore = 0;
+      validFormatFound = false;
+      tempConfig = copyConfig({}, config);
+      if (config._useUTC != null) {
+        tempConfig._useUTC = config._useUTC;
+      }
+      tempConfig._f = config._f[i];
+      configFromStringAndFormat(tempConfig);
+      if (isValid(tempConfig)) {
+        validFormatFound = true;
+      }
+      // if there is any input that was not parsed add a penalty for that format
+      currentScore += getParsingFlags(tempConfig).charsLeftOver;
+      // or tokens
+      currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
+      getParsingFlags(tempConfig).score = currentScore;
+      if (!bestFormatIsValid) {
+        if (scoreToBeat == null || currentScore < scoreToBeat || validFormatFound) {
+          scoreToBeat = currentScore;
+          bestMoment = tempConfig;
+          if (validFormatFound) {
+            bestFormatIsValid = true;
+          }
+        }
+      } else {
+        if (currentScore < scoreToBeat) {
+          scoreToBeat = currentScore;
+          bestMoment = tempConfig;
+        }
+      }
+    }
+    extend(config, bestMoment || tempConfig);
+  }
+  function configFromObject(config) {
+    if (config._d) {
+      return;
+    }
+    var i = normalizeObjectUnits(config._i), dayOrDate = i.day === undefined ? i.date : i.day;
+    config._a = map([i.year, i.month, dayOrDate, i.hour, i.minute, i.second, i.millisecond], function (obj) {
+      return obj && parseInt(obj, 10);
+    });
+    configFromArray(config);
+  }
+  function createFromConfig(config) {
+    var res = new Moment(checkOverflow(prepareConfig(config)));
+    if (res._nextDay) {
+      // Adding is smart enough around DST
+      res.add(1, 'd');
+      res._nextDay = undefined;
+    }
+    return res;
+  }
+  function prepareConfig(config) {
+    var input = config._i, format = config._f;
+    config._locale = config._locale || getLocale(config._l);
+    if (input === null || format === undefined && input === '') {
+      return createInvalid({
+        nullInput: true
+      });
+    }
+    if (typeof input === 'string') {
+      config._i = input = config._locale.preparse(input);
+    }
+    if (isMoment(input)) {
+      return new Moment(checkOverflow(input));
+    } else if (isDate(input)) {
+      config._d = input;
+    } else if (isArray(format)) {
+      configFromStringAndArray(config);
+    } else if (format) {
+      configFromStringAndFormat(config);
+    } else {
+      configFromInput(config);
+    }
+    if (!isValid(config)) {
+      config._d = null;
+    }
+    return config;
+  }
+  function configFromInput(config) {
+    var input = config._i;
+    if (isUndefined(input)) {
+      config._d = new Date(hooks.now());
+    } else if (isDate(input)) {
+      config._d = new Date(input.valueOf());
+    } else if (typeof input === 'string') {
+      configFromString(config);
+    } else if (isArray(input)) {
+      config._a = map(input.slice(0), function (obj) {
+        return parseInt(obj, 10);
+      });
+      configFromArray(config);
+    } else if (isObject(input)) {
+      configFromObject(config);
+    } else if (isNumber(input)) {
+      // from milliseconds
+      config._d = new Date(input);
+    } else {
+      hooks.createFromInputFallback(config);
+    }
+  }
+  function createLocalOrUTC(input, format, locale, strict, isUTC) {
+    var c = {};
+    if (format === true || format === false) {
+      strict = format;
+      format = undefined;
+    }
+    if (locale === true || locale === false) {
+      strict = locale;
+      locale = undefined;
+    }
+    if (isObject(input) && isObjectEmpty(input) || isArray(input) && input.length === 0) {
+      input = undefined;
+    }
+    // object construction must be done this way.
+    // https://github.com/moment/moment/issues/1423
+    c._isAMomentObject = true;
+    c._useUTC = c._isUTC = isUTC;
+    c._l = locale;
+    c._i = input;
+    c._f = format;
+    c._strict = strict;
+    return createFromConfig(c);
+  }
+  function createLocal(input, format, locale, strict) {
+    return createLocalOrUTC(input, format, locale, strict, false);
+  }
+  var prototypeMin = deprecate('moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/', function () {
+    var other = createLocal.apply(null, arguments);
+    if (this.isValid() && other.isValid()) {
+      return other < this ? this : other;
+    } else {
+      return createInvalid();
+    }
+  }), prototypeMax = deprecate('moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/', function () {
+    var other = createLocal.apply(null, arguments);
+    if (this.isValid() && other.isValid()) {
+      return other > this ? this : other;
+    } else {
+      return createInvalid();
+    }
+  });
+  // Pick a moment m from moments so that m[fn](other) is true for all
+  // other. This relies on the function fn to be transitive.
+  // 
+  // moments should either be an array of moment objects or an array, whose
+  // first element is an array of moment objects.
+  function pickBy(fn, moments) {
+    var res, i;
+    if (moments.length === 1 && isArray(moments[0])) {
+      moments = moments[0];
+    }
+    if (!moments.length) {
+      return createLocal();
+    }
+    res = moments[0];
+    for (i = 1; i < moments.length; ++i) {
+      if (!moments[i].isValid() || moments[i][fn](res)) {
+        res = moments[i];
+      }
+    }
+    return res;
+  }
+  // TODO: Use [].sort instead?
+  function min() {
+    var args = [].slice.call(arguments, 0);
+    return pickBy('isBefore', args);
+  }
+  function max() {
+    var args = [].slice.call(arguments, 0);
+    return pickBy('isAfter', args);
+  }
+  var now = function () {
+    return Date.now ? Date.now() : +new Date();
+  };
+  var ordering = ['year', 'quarter', 'month', 'week', 'day', 'hour', 'minute', 'second', 'millisecond'];
+  function isDurationValid(m) {
+    var key, unitHasDecimal = false, i;
+    for (key in m) {
+      if (hasOwnProp(m, key) && !(indexOf.call(ordering, key) !== -1 && (m[key] == null || !isNaN(m[key])))) {
+        return false;
+      }
+    }
+    for (i = 0; i < ordering.length; ++i) {
+      if (m[ordering[i]]) {
+        if (unitHasDecimal) {
+          return false;
+        }
+        if (parseFloat(m[ordering[i]]) !== toInt(m[ordering[i]])) {
+          unitHasDecimal = true;
+        }
+      }
+    }
+    return true;
+  }
+  function isValid$1() {
+    return this._isValid;
+  }
+  function createInvalid$1() {
+    return createDuration(NaN);
+  }
+  function Duration(duration) {
+    var normalizedInput = normalizeObjectUnits(duration), years = normalizedInput.year || 0, quarters = normalizedInput.quarter || 0, months = normalizedInput.month || 0, weeks = normalizedInput.week || normalizedInput.isoWeek || 0, days = normalizedInput.day || 0, hours = normalizedInput.hour || 0, minutes = normalizedInput.minute || 0, seconds = normalizedInput.second || 0, milliseconds = normalizedInput.millisecond || 0;
+    this._isValid = isDurationValid(normalizedInput);
+    // representation for dateAddRemove
+    this._milliseconds = +milliseconds + seconds * 1e3 + // 1000
+    minutes * 6e4 + // 1000 * 60
+    hours * 1000 * 60 * 60;
+    // using 1000 * 60 * 60 instead of 36e5 to avoid floating point rounding errors https://github.com/moment/moment/issues/2978
+    // Because of dateAddRemove treats 24 hours as different from a
+    // day when working around DST, we need to store them separately
+    this._days = +days + weeks * 7;
+    // It is impossible to translate months into days without knowing
+    // which months you are are talking about, so we have to store
+    // it separately.
+    this._months = +months + quarters * 3 + years * 12;
+    this._data = {};
+    this._locale = getLocale();
+    this._bubble();
+  }
+  function isDuration(obj) {
+    return obj instanceof Duration;
+  }
+  function absRound(number) {
+    if (number < 0) {
+      return Math.round(-1 * number) * -1;
+    } else {
+      return Math.round(number);
+    }
+  }
+  // compare two arrays, return the number of differences
+  function compareArrays(array1, array2, dontConvert) {
+    var len = Math.min(array1.length, array2.length), lengthDiff = Math.abs(array1.length - array2.length), diffs = 0, i;
+    for (i = 0; i < len; i++) {
+      if (dontConvert && array1[i] !== array2[i] || !dontConvert && toInt(array1[i]) !== toInt(array2[i])) {
+        diffs++;
+      }
+    }
+    return diffs + lengthDiff;
+  }
+  // FORMATTING
+  function offset(token, separator) {
+    addFormatToken(token, 0, 0, function () {
+      var offset = this.utcOffset(), sign = '+';
+      if (offset < 0) {
+        offset = -offset;
+        sign = '-';
+      }
+      return sign + zeroFill(~~(offset / 60), 2) + separator + zeroFill(~~offset % 60, 2);
+    });
+  }
+  offset('Z', ':');
+  offset('ZZ', '');
+  // PARSING
+  addRegexToken('Z', matchShortOffset);
+  addRegexToken('ZZ', matchShortOffset);
+  addParseToken(['Z', 'ZZ'], function (input, array, config) {
+    config._useUTC = true;
+    config._tzm = offsetFromString(matchShortOffset, input);
+  });
+  // HELPERS
+  // timezone chunker
+  // '+10:00' > ['10',  '00']
+  // '-1530'  > ['-15', '30']
+  var chunkOffset = /([\+\-]|\d\d)/gi;
+  function offsetFromString(matcher, string) {
+    var matches = (string || '').match(matcher), chunk, parts, minutes;
+    if (matches === null) {
+      return null;
+    }
+    chunk = matches[matches.length - 1] || [];
+    parts = (chunk + '').match(chunkOffset) || ['-', 0, 0];
+    minutes = +(parts[1] * 60) + toInt(parts[2]);
+    return minutes === 0 ? 0 : parts[0] === '+' ? minutes : -minutes;
+  }
+  // Return a moment from input, that is local/utc/zone equivalent to model.
+  function cloneWithOffset(input, model) {
+    var res, diff;
+    if (model._isUTC) {
+      res = model.clone();
+      diff = (isMoment(input) || isDate(input) ? input.valueOf() : createLocal(input).valueOf()) - res.valueOf();
+      // Use low-level api, because this fn is low-level api.
+      res._d.setTime(res._d.valueOf() + diff);
+      hooks.updateOffset(res, false);
+      return res;
+    } else {
+      return createLocal(input).local();
+    }
+  }
+  function getDateOffset(m) {
+    // On Firefox.24 Date#getTimezoneOffset returns a floating point.
+    // https://github.com/moment/moment/pull/1871
+    return -Math.round(m._d.getTimezoneOffset());
+  }
+  // HOOKS
+  // This function will be called whenever a moment is mutated.
+  // It is intended to keep the offset in sync with the timezone.
+  hooks.updateOffset = function () {};
+  // MOMENTS
+  // keepLocalTime = true means only change the timezone, without
+  // affecting the local hour. So 5:31:26 +0300 --[utcOffset(2, true)]-->
+  // 5:31:26 +0200 It is possible that 5:31:26 doesn't exist with offset
+  // +0200, so we adjust the time as needed, to be valid.
+  // 
+  // Keeping the time actually adds/subtracts (one hour)
+  // from the actual represented time. That is why we call updateOffset
+  // a second time. In case it wants us to change the offset again
+  // _changeInProgress == true case, then we have to adjust, because
+  // there is no such time in the given timezone.
+  function getSetOffset(input, keepLocalTime, keepMinutes) {
+    var offset = this._offset || 0, localAdjust;
+    if (!this.isValid()) {
+      return input != null ? this : NaN;
+    }
+    if (input != null) {
+      if (typeof input === 'string') {
+        input = offsetFromString(matchShortOffset, input);
+        if (input === null) {
+          return this;
+        }
+      } else if (Math.abs(input) < 16 && !keepMinutes) {
+        input = input * 60;
+      }
+      if (!this._isUTC && keepLocalTime) {
+        localAdjust = getDateOffset(this);
+      }
+      this._offset = input;
+      this._isUTC = true;
+      if (localAdjust != null) {
+        this.add(localAdjust, 'm');
+      }
+      if (offset !== input) {
+        if (!keepLocalTime || this._changeInProgress) {
+          addSubtract(this, createDuration(input - offset, 'm'), 1, false);
+        } else if (!this._changeInProgress) {
+          this._changeInProgress = true;
+          hooks.updateOffset(this, true);
+          this._changeInProgress = null;
+        }
+      }
+      return this;
+    } else {
+      return this._isUTC ? offset : getDateOffset(this);
+    }
+  }
+  function getSetZone(input, keepLocalTime) {
+    if (input != null) {
+      if (typeof input !== 'string') {
+        input = -input;
+      }
+      this.utcOffset(input, keepLocalTime);
+      return this;
+    } else {
+      return -this.utcOffset();
+    }
+  }
+  function setOffsetToUTC(keepLocalTime) {
+    return this.utcOffset(0, keepLocalTime);
+  }
+  function setOffsetToLocal(keepLocalTime) {
+    if (this._isUTC) {
+      this.utcOffset(0, keepLocalTime);
+      this._isUTC = false;
+      if (keepLocalTime) {
+        this.subtract(getDateOffset(this), 'm');
+      }
+    }
+    return this;
+  }
+  function setOffsetToParsedOffset() {
+    if (this._tzm != null) {
+      this.utcOffset(this._tzm, false, true);
+    } else if (typeof this._i === 'string') {
+      var tZone = offsetFromString(matchOffset, this._i);
+      if (tZone != null) {
+        this.utcOffset(tZone);
+      } else {
+        this.utcOffset(0, true);
+      }
+    }
+    return this;
+  }
+  function hasAlignedHourOffset(input) {
+    if (!this.isValid()) {
+      return false;
+    }
+    input = input ? createLocal(input).utcOffset() : 0;
+    return (this.utcOffset() - input) % 60 === 0;
+  }
+  function isDaylightSavingTime() {
+    return this.utcOffset() > this.clone().month(0).utcOffset() || this.utcOffset() > this.clone().month(5).utcOffset();
+  }
+  function isDaylightSavingTimeShifted() {
+    if (!isUndefined(this._isDSTShifted)) {
+      return this._isDSTShifted;
+    }
+    var c = {}, other;
+    copyConfig(c, this);
+    c = prepareConfig(c);
+    if (c._a) {
+      other = c._isUTC ? createUTC(c._a) : createLocal(c._a);
+      this._isDSTShifted = this.isValid() && compareArrays(c._a, other.toArray()) > 0;
+    } else {
+      this._isDSTShifted = false;
+    }
+    return this._isDSTShifted;
+  }
+  function isLocal() {
+    return this.isValid() ? !this._isUTC : false;
+  }
+  function isUtcOffset() {
+    return this.isValid() ? this._isUTC : false;
+  }
+  function isUtc() {
+    return this.isValid() ? this._isUTC && this._offset === 0 : false;
+  }
+  // ASP.NET json date format regex
+  var aspNetRegex = /^(-|\+)?(?:(\d*)[. ])?(\d+):(\d+)(?::(\d+)(\.\d*)?)?$/, // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
+  // somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
+  // and further modified to allow for strings containing both week and day
+  isoRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
+  function createDuration(input, key) {
+    var duration = input, // matching against regexp is expensive, do it on demand
+    match = null, sign, ret, diffRes;
+    if (isDuration(input)) {
+      duration = {
+        ms: input._milliseconds,
+        d: input._days,
+        M: input._months
+      };
+    } else if (isNumber(input) || !isNaN(+input)) {
+      duration = {};
+      if (key) {
+        duration[key] = +input;
+      } else {
+        duration.milliseconds = +input;
+      }
+    } else if (match = aspNetRegex.exec(input)) {
+      sign = match[1] === '-' ? -1 : 1;
+      duration = {
+        y: 0,
+        d: toInt(match[DATE]) * sign,
+        h: toInt(match[HOUR]) * sign,
+        m: toInt(match[MINUTE]) * sign,
+        s: toInt(match[SECOND]) * sign,
+        ms: toInt(absRound(match[MILLISECOND] * 1000)) * sign
+      };
+    } else if (match = isoRegex.exec(input)) {
+      sign = match[1] === '-' ? -1 : 1;
+      duration = {
+        y: parseIso(match[2], sign),
+        M: parseIso(match[3], sign),
+        w: parseIso(match[4], sign),
+        d: parseIso(match[5], sign),
+        h: parseIso(match[6], sign),
+        m: parseIso(match[7], sign),
+        s: parseIso(match[8], sign)
+      };
+    } else if (duration == null) {
+      // checks for null or undefined
+      duration = {};
+    } else if (typeof duration === 'object' && (('from' in duration) || ('to' in duration))) {
+      diffRes = momentsDifference(createLocal(duration.from), createLocal(duration.to));
+      duration = {};
+      duration.ms = diffRes.milliseconds;
+      duration.M = diffRes.months;
+    }
+    ret = new Duration(duration);
+    if (isDuration(input) && hasOwnProp(input, '_locale')) {
+      ret._locale = input._locale;
+    }
+    if (isDuration(input) && hasOwnProp(input, '_isValid')) {
+      ret._isValid = input._isValid;
+    }
+    return ret;
+  }
+  createDuration.fn = Duration.prototype;
+  createDuration.invalid = createInvalid$1;
+  function parseIso(inp, sign) {
+    // We'd normally use ~~inp for this, but unfortunately it also
+    // converts floats to ints.
+    // inp may be undefined, so careful calling replace on it.
+    var res = inp && parseFloat(inp.replace(',', '.'));
+    // apply sign while we're at it
+    return (isNaN(res) ? 0 : res) * sign;
+  }
+  function positiveMomentsDifference(base, other) {
+    var res = {};
+    res.months = other.month() - base.month() + (other.year() - base.year()) * 12;
+    if (base.clone().add(res.months, 'M').isAfter(other)) {
+      --res.months;
+    }
+    res.milliseconds = +other - +base.clone().add(res.months, 'M');
+    return res;
+  }
+  function momentsDifference(base, other) {
+    var res;
+    if (!(base.isValid() && other.isValid())) {
+      return {
+        milliseconds: 0,
+        months: 0
+      };
+    }
+    other = cloneWithOffset(other, base);
+    if (base.isBefore(other)) {
+      res = positiveMomentsDifference(base, other);
+    } else {
+      res = positiveMomentsDifference(other, base);
+      res.milliseconds = -res.milliseconds;
+      res.months = -res.months;
+    }
+    return res;
+  }
+  // TODO: remove 'name' arg after deprecation is removed
+  function createAdder(direction, name) {
+    return function (val, period) {
+      var dur, tmp;
+      // invert the arguments, but complain about it
+      if (period !== null && !isNaN(+period)) {
+        deprecateSimple(name, 'moment().' + name + '(period, number) is deprecated. Please use moment().' + name + '(number, period). ' + 'See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.');
+        tmp = val;
+        val = period;
+        period = tmp;
+      }
+      dur = createDuration(val, period);
+      addSubtract(this, dur, direction);
+      return this;
+    };
+  }
+  function addSubtract(mom, duration, isAdding, updateOffset) {
+    var milliseconds = duration._milliseconds, days = absRound(duration._days), months = absRound(duration._months);
+    if (!mom.isValid()) {
+      // No op
+      return;
+    }
+    updateOffset = updateOffset == null ? true : updateOffset;
+    if (months) {
+      setMonth(mom, get(mom, 'Month') + months * isAdding);
+    }
+    if (days) {
+      set$1(mom, 'Date', get(mom, 'Date') + days * isAdding);
+    }
+    if (milliseconds) {
+      mom._d.setTime(mom._d.valueOf() + milliseconds * isAdding);
+    }
+    if (updateOffset) {
+      hooks.updateOffset(mom, days || months);
+    }
+  }
+  var add = createAdder(1, 'add'), subtract = createAdder(-1, 'subtract');
+  function isString(input) {
+    return typeof input === 'string' || input instanceof String;
+  }
+  // type MomentInput = Moment | Date | string | number | (number | string)[] | MomentInputObject | void; // null | undefined
+  function isMomentInput(input) {
+    return isMoment(input) || isDate(input) || isString(input) || isNumber(input) || isNumberOrStringArray(input) || isMomentInputObject(input) || input === null || input === undefined;
+  }
+  function isMomentInputObject(input) {
+    var objectTest = isObject(input) && !isObjectEmpty(input), propertyTest = false, properties = ['years', 'year', 'y', 'months', 'month', 'M', 'days', 'day', 'd', 'dates', 'date', 'D', 'hours', 'hour', 'h', 'minutes', 'minute', 'm', 'seconds', 'second', 's', 'milliseconds', 'millisecond', 'ms'], i, property;
+    for (i = 0; i < properties.length; i += 1) {
+      property = properties[i];
+      propertyTest = propertyTest || hasOwnProp(input, property);
+    }
+    return objectTest && propertyTest;
+  }
+  function isNumberOrStringArray(input) {
+    var arrayTest = isArray(input), dataTypeTest = false;
+    if (arrayTest) {
+      dataTypeTest = input.filter(function (item) {
+        return !isNumber(item) && isString(input);
+      }).length === 0;
+    }
+    return arrayTest && dataTypeTest;
+  }
+  function isCalendarSpec(input) {
+    var objectTest = isObject(input) && !isObjectEmpty(input), propertyTest = false, properties = ['sameDay', 'nextDay', 'lastDay', 'nextWeek', 'lastWeek', 'sameElse'], i, property;
+    for (i = 0; i < properties.length; i += 1) {
+      property = properties[i];
+      propertyTest = propertyTest || hasOwnProp(input, property);
+    }
+    return objectTest && propertyTest;
+  }
+  function getCalendarFormat(myMoment, now) {
+    var diff = myMoment.diff(now, 'days', true);
+    return diff < -6 ? 'sameElse' : diff < -1 ? 'lastWeek' : diff < 0 ? 'lastDay' : diff < 1 ? 'sameDay' : diff < 2 ? 'nextDay' : diff < 7 ? 'nextWeek' : 'sameElse';
+  }
+  function calendar$1(time, formats) {
+    // Support for single parameter, formats only overload to the calendar function
+    if (arguments.length === 1) {
+      if (!arguments[0]) {
+        time = undefined;
+        formats = undefined;
+      } else if (isMomentInput(arguments[0])) {
+        time = arguments[0];
+        formats = undefined;
+      } else if (isCalendarSpec(arguments[0])) {
+        formats = arguments[0];
+        time = undefined;
+      }
+    }
+    // We want to compare the start of today, vs this.
+    // Getting start-of-today depends on whether we're local/utc/offset or not.
+    var now = time || createLocal(), sod = cloneWithOffset(now, this).startOf('day'), format = hooks.calendarFormat(this, sod) || 'sameElse', output = formats && (isFunction(formats[format]) ? formats[format].call(this, now) : formats[format]);
+    return this.format(output || this.localeData().calendar(format, this, createLocal(now)));
+  }
+  function clone() {
+    return new Moment(this);
+  }
+  function isAfter(input, units) {
+    var localInput = isMoment(input) ? input : createLocal(input);
+    if (!(this.isValid() && localInput.isValid())) {
+      return false;
+    }
+    units = normalizeUnits(units) || 'millisecond';
+    if (units === 'millisecond') {
+      return this.valueOf() > localInput.valueOf();
+    } else {
+      return localInput.valueOf() < this.clone().startOf(units).valueOf();
+    }
+  }
+  function isBefore(input, units) {
+    var localInput = isMoment(input) ? input : createLocal(input);
+    if (!(this.isValid() && localInput.isValid())) {
+      return false;
+    }
+    units = normalizeUnits(units) || 'millisecond';
+    if (units === 'millisecond') {
+      return this.valueOf() < localInput.valueOf();
+    } else {
+      return this.clone().endOf(units).valueOf() < localInput.valueOf();
+    }
+  }
+  function isBetween(from, to, units, inclusivity) {
+    var localFrom = isMoment(from) ? from : createLocal(from), localTo = isMoment(to) ? to : createLocal(to);
+    if (!(this.isValid() && localFrom.isValid() && localTo.isValid())) {
+      return false;
+    }
+    inclusivity = inclusivity || '()';
+    return (inclusivity[0] === '(' ? this.isAfter(localFrom, units) : !this.isBefore(localFrom, units)) && (inclusivity[1] === ')' ? this.isBefore(localTo, units) : !this.isAfter(localTo, units));
+  }
+  function isSame(input, units) {
+    var localInput = isMoment(input) ? input : createLocal(input), inputMs;
+    if (!(this.isValid() && localInput.isValid())) {
+      return false;
+    }
+    units = normalizeUnits(units) || 'millisecond';
+    if (units === 'millisecond') {
+      return this.valueOf() === localInput.valueOf();
+    } else {
+      inputMs = localInput.valueOf();
+      return this.clone().startOf(units).valueOf() <= inputMs && inputMs <= this.clone().endOf(units).valueOf();
+    }
+  }
+  function isSameOrAfter(input, units) {
+    return this.isSame(input, units) || this.isAfter(input, units);
+  }
+  function isSameOrBefore(input, units) {
+    return this.isSame(input, units) || this.isBefore(input, units);
+  }
+  function diff(input, units, asFloat) {
+    var that, zoneDelta, output;
+    if (!this.isValid()) {
+      return NaN;
+    }
+    that = cloneWithOffset(input, this);
+    if (!that.isValid()) {
+      return NaN;
+    }
+    zoneDelta = (that.utcOffset() - this.utcOffset()) * 6e4;
+    units = normalizeUnits(units);
+    switch (units) {
+      case 'year':
+        output = monthDiff(this, that) / 12;
+        break;
+      case 'month':
+        output = monthDiff(this, that);
+        break;
+      case 'quarter':
+        output = monthDiff(this, that) / 3;
+        break;
+      case 'second':
+        output = (this - that) / 1e3;
+        break;
+      case 'minute':
+        output = (this - that) / 6e4;
+        break;
+      case 'hour':
+        output = (this - that) / 36e5;
+        break;
+      case 'day':
+        output = (this - that - zoneDelta) / 864e5;
+        break;
+      case 'week':
+        output = (this - that - zoneDelta) / 6048e5;
+        break;
+      default:
+        output = this - that;
+    }
+    return asFloat ? output : absFloor(output);
+  }
+  function monthDiff(a, b) {
+    if (a.date() < b.date()) {
+      // end-of-month calculations work correct when the start month has more
+      // days than the end month.
+      return -monthDiff(b, a);
+    }
+    // difference in months
+    var wholeMonthDiff = (b.year() - a.year()) * 12 + (b.month() - a.month()), // b is in (anchor - 1 month, anchor + 1 month)
+    anchor = a.clone().add(wholeMonthDiff, 'months'), anchor2, adjust;
+    if (b - anchor < 0) {
+      anchor2 = a.clone().add(wholeMonthDiff - 1, 'months');
+      // linear across the month
+      adjust = (b - anchor) / (anchor - anchor2);
+    } else {
+      anchor2 = a.clone().add(wholeMonthDiff + 1, 'months');
+      // linear across the month
+      adjust = (b - anchor) / (anchor2 - anchor);
+    }
+    // check for negative zero, return zero if negative zero
+    return -(wholeMonthDiff + adjust) || 0;
+  }
+  hooks.defaultFormat = 'YYYY-MM-DDTHH:mm:ssZ';
+  hooks.defaultFormatUtc = 'YYYY-MM-DDTHH:mm:ss[Z]';
+  function toString() {
+    return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
+  }
+  function toISOString(keepOffset) {
+    if (!this.isValid()) {
+      return null;
+    }
+    var utc = keepOffset !== true, m = utc ? this.clone().utc() : this;
+    if (m.year() < 0 || m.year() > 9999) {
+      return formatMoment(m, utc ? 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYYYY-MM-DD[T]HH:mm:ss.SSSZ');
+    }
+    if (isFunction(Date.prototype.toISOString)) {
+      // native implementation is ~50x faster, use it when we can
+      if (utc) {
+        return this.toDate().toISOString();
+      } else {
+        return new Date(this.valueOf() + this.utcOffset() * 60 * 1000).toISOString().replace('Z', formatMoment(m, 'Z'));
+      }
+    }
+    return formatMoment(m, utc ? 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYY-MM-DD[T]HH:mm:ss.SSSZ');
+  }
+  /**
+  * Return a human readable representation of a moment that can
+  * also be evaluated to get a new moment which is the same
+  *
+  * @link https://nodejs.org/dist/latest/docs/api/util.html#util_custom_inspect_function_on_objects
+  */
+  function inspect() {
+    if (!this.isValid()) {
+      return 'moment.invalid(/* ' + this._i + ' */)';
+    }
+    var func = 'moment', zone = '', prefix, year, datetime, suffix;
+    if (!this.isLocal()) {
+      func = this.utcOffset() === 0 ? 'moment.utc' : 'moment.parseZone';
+      zone = 'Z';
+    }
+    prefix = '[' + func + '("]';
+    year = 0 <= this.year() && this.year() <= 9999 ? 'YYYY' : 'YYYYYY';
+    datetime = '-MM-DD[T]HH:mm:ss.SSS';
+    suffix = zone + '[")]';
+    return this.format(prefix + year + datetime + suffix);
+  }
+  function format(inputString) {
+    if (!inputString) {
+      inputString = this.isUtc() ? hooks.defaultFormatUtc : hooks.defaultFormat;
+    }
+    var output = formatMoment(this, inputString);
+    return this.localeData().postformat(output);
+  }
+  function from(time, withoutSuffix) {
+    if (this.isValid() && (isMoment(time) && time.isValid() || createLocal(time).isValid())) {
+      return createDuration({
+        to: this,
+        from: time
+      }).locale(this.locale()).humanize(!withoutSuffix);
+    } else {
+      return this.localeData().invalidDate();
+    }
+  }
+  function fromNow(withoutSuffix) {
+    return this.from(createLocal(), withoutSuffix);
+  }
+  function to(time, withoutSuffix) {
+    if (this.isValid() && (isMoment(time) && time.isValid() || createLocal(time).isValid())) {
+      return createDuration({
+        from: this,
+        to: time
+      }).locale(this.locale()).humanize(!withoutSuffix);
+    } else {
+      return this.localeData().invalidDate();
+    }
+  }
+  function toNow(withoutSuffix) {
+    return this.to(createLocal(), withoutSuffix);
+  }
+  // If passed a locale key, it will set the locale for this
+  // instance.  Otherwise, it will return the locale configuration
+  // variables for this instance.
+  function locale(key) {
+    var newLocaleData;
+    if (key === undefined) {
+      return this._locale._abbr;
+    } else {
+      newLocaleData = getLocale(key);
+      if (newLocaleData != null) {
+        this._locale = newLocaleData;
+      }
+      return this;
+    }
+  }
+  var lang = deprecate('moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.', function (key) {
+    if (key === undefined) {
+      return this.localeData();
+    } else {
+      return this.locale(key);
+    }
+  });
+  function localeData() {
+    return this._locale;
+  }
+  var MS_PER_SECOND = 1000, MS_PER_MINUTE = 60 * MS_PER_SECOND, MS_PER_HOUR = 60 * MS_PER_MINUTE, MS_PER_400_YEARS = (365 * 400 + 97) * 24 * MS_PER_HOUR;
+  // actual modulo - handles negative numbers (for dates before 1970):
+  function mod$1(dividend, divisor) {
+    return (dividend % divisor + divisor) % divisor;
+  }
+  function localStartOfDate(y, m, d) {
+    // the date constructor remaps years 0-99 to 1900-1999
+    if (y < 100 && y >= 0) {
+      // preserve leap years using a full 400 year cycle, then reset
+      return new Date(y + 400, m, d) - MS_PER_400_YEARS;
+    } else {
+      return new Date(y, m, d).valueOf();
+    }
+  }
+  function utcStartOfDate(y, m, d) {
+    // Date.UTC remaps years 0-99 to 1900-1999
+    if (y < 100 && y >= 0) {
+      // preserve leap years using a full 400 year cycle, then reset
+      return Date.UTC(y + 400, m, d) - MS_PER_400_YEARS;
+    } else {
+      return Date.UTC(y, m, d);
+    }
+  }
+  function startOf(units) {
+    var time, startOfDate;
+    units = normalizeUnits(units);
+    if (units === undefined || units === 'millisecond' || !this.isValid()) {
+      return this;
+    }
+    startOfDate = this._isUTC ? utcStartOfDate : localStartOfDate;
+    switch (units) {
+      case 'year':
+        time = startOfDate(this.year(), 0, 1);
+        break;
+      case 'quarter':
+        time = startOfDate(this.year(), this.month() - this.month() % 3, 1);
+        break;
+      case 'month':
+        time = startOfDate(this.year(), this.month(), 1);
+        break;
+      case 'week':
+        time = startOfDate(this.year(), this.month(), this.date() - this.weekday());
+        break;
+      case 'isoWeek':
+        time = startOfDate(this.year(), this.month(), this.date() - (this.isoWeekday() - 1));
+        break;
+      case 'day':
+      case 'date':
+        time = startOfDate(this.year(), this.month(), this.date());
+        break;
+      case 'hour':
+        time = this._d.valueOf();
+        time -= mod$1(time + (this._isUTC ? 0 : this.utcOffset() * MS_PER_MINUTE), MS_PER_HOUR);
+        break;
+      case 'minute':
+        time = this._d.valueOf();
+        time -= mod$1(time, MS_PER_MINUTE);
+        break;
+      case 'second':
+        time = this._d.valueOf();
+        time -= mod$1(time, MS_PER_SECOND);
+        break;
+    }
+    this._d.setTime(time);
+    hooks.updateOffset(this, true);
+    return this;
+  }
+  function endOf(units) {
+    var time, startOfDate;
+    units = normalizeUnits(units);
+    if (units === undefined || units === 'millisecond' || !this.isValid()) {
+      return this;
+    }
+    startOfDate = this._isUTC ? utcStartOfDate : localStartOfDate;
+    switch (units) {
+      case 'year':
+        time = startOfDate(this.year() + 1, 0, 1) - 1;
+        break;
+      case 'quarter':
+        time = startOfDate(this.year(), this.month() - this.month() % 3 + 3, 1) - 1;
+        break;
+      case 'month':
+        time = startOfDate(this.year(), this.month() + 1, 1) - 1;
+        break;
+      case 'week':
+        time = startOfDate(this.year(), this.month(), this.date() - this.weekday() + 7) - 1;
+        break;
+      case 'isoWeek':
+        time = startOfDate(this.year(), this.month(), this.date() - (this.isoWeekday() - 1) + 7) - 1;
+        break;
+      case 'day':
+      case 'date':
+        time = startOfDate(this.year(), this.month(), this.date() + 1) - 1;
+        break;
+      case 'hour':
+        time = this._d.valueOf();
+        time += MS_PER_HOUR - mod$1(time + (this._isUTC ? 0 : this.utcOffset() * MS_PER_MINUTE), MS_PER_HOUR) - 1;
+        break;
+      case 'minute':
+        time = this._d.valueOf();
+        time += MS_PER_MINUTE - mod$1(time, MS_PER_MINUTE) - 1;
+        break;
+      case 'second':
+        time = this._d.valueOf();
+        time += MS_PER_SECOND - mod$1(time, MS_PER_SECOND) - 1;
+        break;
+    }
+    this._d.setTime(time);
+    hooks.updateOffset(this, true);
+    return this;
+  }
+  function valueOf() {
+    return this._d.valueOf() - (this._offset || 0) * 60000;
+  }
+  function unix() {
+    return Math.floor(this.valueOf() / 1000);
+  }
+  function toDate() {
+    return new Date(this.valueOf());
+  }
+  function toArray() {
+    var m = this;
+    return [m.year(), m.month(), m.date(), m.hour(), m.minute(), m.second(), m.millisecond()];
+  }
+  function toObject() {
+    var m = this;
+    return {
+      years: m.year(),
+      months: m.month(),
+      date: m.date(),
+      hours: m.hours(),
+      minutes: m.minutes(),
+      seconds: m.seconds(),
+      milliseconds: m.milliseconds()
+    };
+  }
+  function toJSON() {
+    // new Date(NaN).toJSON() === null
+    return this.isValid() ? this.toISOString() : null;
+  }
+  function isValid$2() {
+    return isValid(this);
+  }
+  function parsingFlags() {
+    return extend({}, getParsingFlags(this));
+  }
+  function invalidAt() {
+    return getParsingFlags(this).overflow;
+  }
+  function creationData() {
+    return {
+      input: this._i,
+      format: this._f,
+      locale: this._locale,
+      isUTC: this._isUTC,
+      strict: this._strict
+    };
+  }
+  addFormatToken('N', 0, 0, 'eraAbbr');
+  addFormatToken('NN', 0, 0, 'eraAbbr');
+  addFormatToken('NNN', 0, 0, 'eraAbbr');
+  addFormatToken('NNNN', 0, 0, 'eraName');
+  addFormatToken('NNNNN', 0, 0, 'eraNarrow');
+  addFormatToken('y', ['y', 1], 'yo', 'eraYear');
+  addFormatToken('y', ['yy', 2], 0, 'eraYear');
+  addFormatToken('y', ['yyy', 3], 0, 'eraYear');
+  addFormatToken('y', ['yyyy', 4], 0, 'eraYear');
+  addRegexToken('N', matchEraAbbr);
+  addRegexToken('NN', matchEraAbbr);
+  addRegexToken('NNN', matchEraAbbr);
+  addRegexToken('NNNN', matchEraName);
+  addRegexToken('NNNNN', matchEraNarrow);
+  addParseToken(['N', 'NN', 'NNN', 'NNNN', 'NNNNN'], function (input, array, config, token) {
+    var era = config._locale.erasParse(input, token, config._strict);
+    if (era) {
+      getParsingFlags(config).era = era;
+    } else {
+      getParsingFlags(config).invalidEra = input;
+    }
+  });
+  addRegexToken('y', matchUnsigned);
+  addRegexToken('yy', matchUnsigned);
+  addRegexToken('yyy', matchUnsigned);
+  addRegexToken('yyyy', matchUnsigned);
+  addRegexToken('yo', matchEraYearOrdinal);
+  addParseToken(['y', 'yy', 'yyy', 'yyyy'], YEAR);
+  addParseToken(['yo'], function (input, array, config, token) {
+    var match;
+    if (config._locale._eraYearOrdinalRegex) {
+      match = input.match(config._locale._eraYearOrdinalRegex);
+    }
+    if (config._locale.eraYearOrdinalParse) {
+      array[YEAR] = config._locale.eraYearOrdinalParse(input, match);
+    } else {
+      array[YEAR] = parseInt(input, 10);
+    }
+  });
+  function localeEras(m, format) {
+    var i, l, date, eras = this._eras || getLocale('en')._eras;
+    for ((i = 0, l = eras.length); i < l; ++i) {
+      switch (typeof eras[i].since) {
+        case 'string':
+          // truncate time
+          date = hooks(eras[i].since).startOf('day');
+          eras[i].since = date.valueOf();
+          break;
+      }
+      switch (typeof eras[i].until) {
+        case 'undefined':
+          eras[i].until = +Infinity;
+          break;
+        case 'string':
+          // truncate time
+          date = hooks(eras[i].until).startOf('day').valueOf();
+          eras[i].until = date.valueOf();
+          break;
+      }
+    }
+    return eras;
+  }
+  function localeErasParse(eraName, format, strict) {
+    var i, l, eras = this.eras(), name, abbr, narrow;
+    eraName = eraName.toUpperCase();
+    for ((i = 0, l = eras.length); i < l; ++i) {
+      name = eras[i].name.toUpperCase();
+      abbr = eras[i].abbr.toUpperCase();
+      narrow = eras[i].narrow.toUpperCase();
+      if (strict) {
+        switch (format) {
+          case 'N':
+          case 'NN':
+          case 'NNN':
+            if (abbr === eraName) {
+              return eras[i];
+            }
+            break;
+          case 'NNNN':
+            if (name === eraName) {
+              return eras[i];
+            }
+            break;
+          case 'NNNNN':
+            if (narrow === eraName) {
+              return eras[i];
+            }
+            break;
+        }
+      } else if ([name, abbr, narrow].indexOf(eraName) >= 0) {
+        return eras[i];
+      }
+    }
+  }
+  function localeErasConvertYear(era, year) {
+    var dir = era.since <= era.until ? +1 : -1;
+    if (year === undefined) {
+      return hooks(era.since).year();
+    } else {
+      return hooks(era.since).year() + (year - era.offset) * dir;
+    }
+  }
+  function getEraName() {
+    var i, l, val, eras = this.localeData().eras();
+    for ((i = 0, l = eras.length); i < l; ++i) {
+      // truncate time
+      val = this.clone().startOf('day').valueOf();
+      if (eras[i].since <= val && val <= eras[i].until) {
+        return eras[i].name;
+      }
+      if (eras[i].until <= val && val <= eras[i].since) {
+        return eras[i].name;
+      }
+    }
+    return '';
+  }
+  function getEraNarrow() {
+    var i, l, val, eras = this.localeData().eras();
+    for ((i = 0, l = eras.length); i < l; ++i) {
+      // truncate time
+      val = this.clone().startOf('day').valueOf();
+      if (eras[i].since <= val && val <= eras[i].until) {
+        return eras[i].narrow;
+      }
+      if (eras[i].until <= val && val <= eras[i].since) {
+        return eras[i].narrow;
+      }
+    }
+    return '';
+  }
+  function getEraAbbr() {
+    var i, l, val, eras = this.localeData().eras();
+    for ((i = 0, l = eras.length); i < l; ++i) {
+      // truncate time
+      val = this.clone().startOf('day').valueOf();
+      if (eras[i].since <= val && val <= eras[i].until) {
+        return eras[i].abbr;
+      }
+      if (eras[i].until <= val && val <= eras[i].since) {
+        return eras[i].abbr;
+      }
+    }
+    return '';
+  }
+  function getEraYear() {
+    var i, l, dir, val, eras = this.localeData().eras();
+    for ((i = 0, l = eras.length); i < l; ++i) {
+      dir = eras[i].since <= eras[i].until ? +1 : -1;
+      // truncate time
+      val = this.clone().startOf('day').valueOf();
+      if (eras[i].since <= val && val <= eras[i].until || eras[i].until <= val && val <= eras[i].since) {
+        return (this.year() - hooks(eras[i].since).year()) * dir + eras[i].offset;
+      }
+    }
+    return this.year();
+  }
+  function erasNameRegex(isStrict) {
+    if (!hasOwnProp(this, '_erasNameRegex')) {
+      computeErasParse.call(this);
+    }
+    return isStrict ? this._erasNameRegex : this._erasRegex;
+  }
+  function erasAbbrRegex(isStrict) {
+    if (!hasOwnProp(this, '_erasAbbrRegex')) {
+      computeErasParse.call(this);
+    }
+    return isStrict ? this._erasAbbrRegex : this._erasRegex;
+  }
+  function erasNarrowRegex(isStrict) {
+    if (!hasOwnProp(this, '_erasNarrowRegex')) {
+      computeErasParse.call(this);
+    }
+    return isStrict ? this._erasNarrowRegex : this._erasRegex;
+  }
+  function matchEraAbbr(isStrict, locale) {
+    return locale.erasAbbrRegex(isStrict);
+  }
+  function matchEraName(isStrict, locale) {
+    return locale.erasNameRegex(isStrict);
+  }
+  function matchEraNarrow(isStrict, locale) {
+    return locale.erasNarrowRegex(isStrict);
+  }
+  function matchEraYearOrdinal(isStrict, locale) {
+    return locale._eraYearOrdinalRegex || matchUnsigned;
+  }
+  function computeErasParse() {
+    var abbrPieces = [], namePieces = [], narrowPieces = [], mixedPieces = [], i, l, eras = this.eras();
+    for ((i = 0, l = eras.length); i < l; ++i) {
+      namePieces.push(regexEscape(eras[i].name));
+      abbrPieces.push(regexEscape(eras[i].abbr));
+      narrowPieces.push(regexEscape(eras[i].narrow));
+      mixedPieces.push(regexEscape(eras[i].name));
+      mixedPieces.push(regexEscape(eras[i].abbr));
+      mixedPieces.push(regexEscape(eras[i].narrow));
+    }
+    this._erasRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
+    this._erasNameRegex = new RegExp('^(' + namePieces.join('|') + ')', 'i');
+    this._erasAbbrRegex = new RegExp('^(' + abbrPieces.join('|') + ')', 'i');
+    this._erasNarrowRegex = new RegExp('^(' + narrowPieces.join('|') + ')', 'i');
+  }
+  // FORMATTING
+  addFormatToken(0, ['gg', 2], 0, function () {
+    return this.weekYear() % 100;
+  });
+  addFormatToken(0, ['GG', 2], 0, function () {
+    return this.isoWeekYear() % 100;
+  });
+  function addWeekYearFormatToken(token, getter) {
+    addFormatToken(0, [token, token.length], 0, getter);
+  }
+  addWeekYearFormatToken('gggg', 'weekYear');
+  addWeekYearFormatToken('ggggg', 'weekYear');
+  addWeekYearFormatToken('GGGG', 'isoWeekYear');
+  addWeekYearFormatToken('GGGGG', 'isoWeekYear');
+  // ALIASES
+  addUnitAlias('weekYear', 'gg');
+  addUnitAlias('isoWeekYear', 'GG');
+  // PRIORITY
+  addUnitPriority('weekYear', 1);
+  addUnitPriority('isoWeekYear', 1);
+  // PARSING
+  addRegexToken('G', matchSigned);
+  addRegexToken('g', matchSigned);
+  addRegexToken('GG', match1to2, match2);
+  addRegexToken('gg', match1to2, match2);
+  addRegexToken('GGGG', match1to4, match4);
+  addRegexToken('gggg', match1to4, match4);
+  addRegexToken('GGGGG', match1to6, match6);
+  addRegexToken('ggggg', match1to6, match6);
+  addWeekParseToken(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (input, week, config, token) {
+    week[token.substr(0, 2)] = toInt(input);
+  });
+  addWeekParseToken(['gg', 'GG'], function (input, week, config, token) {
+    week[token] = hooks.parseTwoDigitYear(input);
+  });
+  // MOMENTS
+  function getSetWeekYear(input) {
+    return getSetWeekYearHelper.call(this, input, this.week(), this.weekday(), this.localeData()._week.dow, this.localeData()._week.doy);
+  }
+  function getSetISOWeekYear(input) {
+    return getSetWeekYearHelper.call(this, input, this.isoWeek(), this.isoWeekday(), 1, 4);
+  }
+  function getISOWeeksInYear() {
+    return weeksInYear(this.year(), 1, 4);
+  }
+  function getISOWeeksInISOWeekYear() {
+    return weeksInYear(this.isoWeekYear(), 1, 4);
+  }
+  function getWeeksInYear() {
+    var weekInfo = this.localeData()._week;
+    return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
+  }
+  function getWeeksInWeekYear() {
+    var weekInfo = this.localeData()._week;
+    return weeksInYear(this.weekYear(), weekInfo.dow, weekInfo.doy);
+  }
+  function getSetWeekYearHelper(input, week, weekday, dow, doy) {
+    var weeksTarget;
+    if (input == null) {
+      return weekOfYear(this, dow, doy).year;
+    } else {
+      weeksTarget = weeksInYear(input, dow, doy);
+      if (week > weeksTarget) {
+        week = weeksTarget;
+      }
+      return setWeekAll.call(this, input, week, weekday, dow, doy);
+    }
+  }
+  function setWeekAll(weekYear, week, weekday, dow, doy) {
+    var dayOfYearData = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy), date = createUTCDate(dayOfYearData.year, 0, dayOfYearData.dayOfYear);
+    this.year(date.getUTCFullYear());
+    this.month(date.getUTCMonth());
+    this.date(date.getUTCDate());
+    return this;
+  }
+  // FORMATTING
+  addFormatToken('Q', 0, 'Qo', 'quarter');
+  // ALIASES
+  addUnitAlias('quarter', 'Q');
+  // PRIORITY
+  addUnitPriority('quarter', 7);
+  // PARSING
+  addRegexToken('Q', match1);
+  addParseToken('Q', function (input, array) {
+    array[MONTH] = (toInt(input) - 1) * 3;
+  });
+  // MOMENTS
+  function getSetQuarter(input) {
+    return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
+  }
+  // FORMATTING
+  addFormatToken('D', ['DD', 2], 'Do', 'date');
+  // ALIASES
+  addUnitAlias('date', 'D');
+  // PRIORITY
+  addUnitPriority('date', 9);
+  // PARSING
+  addRegexToken('D', match1to2);
+  addRegexToken('DD', match1to2, match2);
+  addRegexToken('Do', function (isStrict, locale) {
+    // TODO: Remove "ordinalParse" fallback in next major release.
+    return isStrict ? locale._dayOfMonthOrdinalParse || locale._ordinalParse : locale._dayOfMonthOrdinalParseLenient;
+  });
+  addParseToken(['D', 'DD'], DATE);
+  addParseToken('Do', function (input, array) {
+    array[DATE] = toInt(input.match(match1to2)[0]);
+  });
+  // MOMENTS
+  var getSetDayOfMonth = makeGetSet('Date', true);
+  // FORMATTING
+  addFormatToken('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear');
+  // ALIASES
+  addUnitAlias('dayOfYear', 'DDD');
+  // PRIORITY
+  addUnitPriority('dayOfYear', 4);
+  // PARSING
+  addRegexToken('DDD', match1to3);
+  addRegexToken('DDDD', match3);
+  addParseToken(['DDD', 'DDDD'], function (input, array, config) {
+    config._dayOfYear = toInt(input);
+  });
+  // HELPERS
+  // MOMENTS
+  function getSetDayOfYear(input) {
+    var dayOfYear = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 864e5) + 1;
+    return input == null ? dayOfYear : this.add(input - dayOfYear, 'd');
+  }
+  // FORMATTING
+  addFormatToken('m', ['mm', 2], 0, 'minute');
+  // ALIASES
+  addUnitAlias('minute', 'm');
+  // PRIORITY
+  addUnitPriority('minute', 14);
+  // PARSING
+  addRegexToken('m', match1to2);
+  addRegexToken('mm', match1to2, match2);
+  addParseToken(['m', 'mm'], MINUTE);
+  // MOMENTS
+  var getSetMinute = makeGetSet('Minutes', false);
+  // FORMATTING
+  addFormatToken('s', ['ss', 2], 0, 'second');
+  // ALIASES
+  addUnitAlias('second', 's');
+  // PRIORITY
+  addUnitPriority('second', 15);
+  // PARSING
+  addRegexToken('s', match1to2);
+  addRegexToken('ss', match1to2, match2);
+  addParseToken(['s', 'ss'], SECOND);
+  // MOMENTS
+  var getSetSecond = makeGetSet('Seconds', false);
+  // FORMATTING
+  addFormatToken('S', 0, 0, function () {
+    return ~~(this.millisecond() / 100);
+  });
+  addFormatToken(0, ['SS', 2], 0, function () {
+    return ~~(this.millisecond() / 10);
+  });
+  addFormatToken(0, ['SSS', 3], 0, 'millisecond');
+  addFormatToken(0, ['SSSS', 4], 0, function () {
+    return this.millisecond() * 10;
+  });
+  addFormatToken(0, ['SSSSS', 5], 0, function () {
+    return this.millisecond() * 100;
+  });
+  addFormatToken(0, ['SSSSSS', 6], 0, function () {
+    return this.millisecond() * 1000;
+  });
+  addFormatToken(0, ['SSSSSSS', 7], 0, function () {
+    return this.millisecond() * 10000;
+  });
+  addFormatToken(0, ['SSSSSSSS', 8], 0, function () {
+    return this.millisecond() * 100000;
+  });
+  addFormatToken(0, ['SSSSSSSSS', 9], 0, function () {
+    return this.millisecond() * 1000000;
+  });
+  // ALIASES
+  addUnitAlias('millisecond', 'ms');
+  // PRIORITY
+  addUnitPriority('millisecond', 16);
+  // PARSING
+  addRegexToken('S', match1to3, match1);
+  addRegexToken('SS', match1to3, match2);
+  addRegexToken('SSS', match1to3, match3);
+  var token, getSetMillisecond;
+  for (token = 'SSSS'; token.length <= 9; token += 'S') {
+    addRegexToken(token, matchUnsigned);
+  }
+  function parseMs(input, array) {
+    array[MILLISECOND] = toInt(('0.' + input) * 1000);
+  }
+  for (token = 'S'; token.length <= 9; token += 'S') {
+    addParseToken(token, parseMs);
+  }
+  getSetMillisecond = makeGetSet('Milliseconds', false);
+  // FORMATTING
+  addFormatToken('z', 0, 0, 'zoneAbbr');
+  addFormatToken('zz', 0, 0, 'zoneName');
+  // MOMENTS
+  function getZoneAbbr() {
+    return this._isUTC ? 'UTC' : '';
+  }
+  function getZoneName() {
+    return this._isUTC ? 'Coordinated Universal Time' : '';
+  }
+  var proto = Moment.prototype;
+  proto.add = add;
+  proto.calendar = calendar$1;
+  proto.clone = clone;
+  proto.diff = diff;
+  proto.endOf = endOf;
+  proto.format = format;
+  proto.from = from;
+  proto.fromNow = fromNow;
+  proto.to = to;
+  proto.toNow = toNow;
+  proto.get = stringGet;
+  proto.invalidAt = invalidAt;
+  proto.isAfter = isAfter;
+  proto.isBefore = isBefore;
+  proto.isBetween = isBetween;
+  proto.isSame = isSame;
+  proto.isSameOrAfter = isSameOrAfter;
+  proto.isSameOrBefore = isSameOrBefore;
+  proto.isValid = isValid$2;
+  proto.lang = lang;
+  proto.locale = locale;
+  proto.localeData = localeData;
+  proto.max = prototypeMax;
+  proto.min = prototypeMin;
+  proto.parsingFlags = parsingFlags;
+  proto.set = stringSet;
+  proto.startOf = startOf;
+  proto.subtract = subtract;
+  proto.toArray = toArray;
+  proto.toObject = toObject;
+  proto.toDate = toDate;
+  proto.toISOString = toISOString;
+  proto.inspect = inspect;
+  if (typeof Symbol !== 'undefined' && Symbol.for != null) {
+    proto[Symbol.for('nodejs.util.inspect.custom')] = function () {
+      return 'Moment<' + this.format() + '>';
+    };
+  }
+  proto.toJSON = toJSON;
+  proto.toString = toString;
+  proto.unix = unix;
+  proto.valueOf = valueOf;
+  proto.creationData = creationData;
+  proto.eraName = getEraName;
+  proto.eraNarrow = getEraNarrow;
+  proto.eraAbbr = getEraAbbr;
+  proto.eraYear = getEraYear;
+  proto.year = getSetYear;
+  proto.isLeapYear = getIsLeapYear;
+  proto.weekYear = getSetWeekYear;
+  proto.isoWeekYear = getSetISOWeekYear;
+  proto.quarter = proto.quarters = getSetQuarter;
+  proto.month = getSetMonth;
+  proto.daysInMonth = getDaysInMonth;
+  proto.week = proto.weeks = getSetWeek;
+  proto.isoWeek = proto.isoWeeks = getSetISOWeek;
+  proto.weeksInYear = getWeeksInYear;
+  proto.weeksInWeekYear = getWeeksInWeekYear;
+  proto.isoWeeksInYear = getISOWeeksInYear;
+  proto.isoWeeksInISOWeekYear = getISOWeeksInISOWeekYear;
+  proto.date = getSetDayOfMonth;
+  proto.day = proto.days = getSetDayOfWeek;
+  proto.weekday = getSetLocaleDayOfWeek;
+  proto.isoWeekday = getSetISODayOfWeek;
+  proto.dayOfYear = getSetDayOfYear;
+  proto.hour = proto.hours = getSetHour;
+  proto.minute = proto.minutes = getSetMinute;
+  proto.second = proto.seconds = getSetSecond;
+  proto.millisecond = proto.milliseconds = getSetMillisecond;
+  proto.utcOffset = getSetOffset;
+  proto.utc = setOffsetToUTC;
+  proto.local = setOffsetToLocal;
+  proto.parseZone = setOffsetToParsedOffset;
+  proto.hasAlignedHourOffset = hasAlignedHourOffset;
+  proto.isDST = isDaylightSavingTime;
+  proto.isLocal = isLocal;
+  proto.isUtcOffset = isUtcOffset;
+  proto.isUtc = isUtc;
+  proto.isUTC = isUtc;
+  proto.zoneAbbr = getZoneAbbr;
+  proto.zoneName = getZoneName;
+  proto.dates = deprecate('dates accessor is deprecated. Use date instead.', getSetDayOfMonth);
+  proto.months = deprecate('months accessor is deprecated. Use month instead', getSetMonth);
+  proto.years = deprecate('years accessor is deprecated. Use year instead', getSetYear);
+  proto.zone = deprecate('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', getSetZone);
+  proto.isDSTShifted = deprecate('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', isDaylightSavingTimeShifted);
+  function createUnix(input) {
+    return createLocal(input * 1000);
+  }
+  function createInZone() {
+    return createLocal.apply(null, arguments).parseZone();
+  }
+  function preParsePostFormat(string) {
+    return string;
+  }
+  var proto$1 = Locale.prototype;
+  proto$1.calendar = calendar;
+  proto$1.longDateFormat = longDateFormat;
+  proto$1.invalidDate = invalidDate;
+  proto$1.ordinal = ordinal;
+  proto$1.preparse = preParsePostFormat;
+  proto$1.postformat = preParsePostFormat;
+  proto$1.relativeTime = relativeTime;
+  proto$1.pastFuture = pastFuture;
+  proto$1.set = set;
+  proto$1.eras = localeEras;
+  proto$1.erasParse = localeErasParse;
+  proto$1.erasConvertYear = localeErasConvertYear;
+  proto$1.erasAbbrRegex = erasAbbrRegex;
+  proto$1.erasNameRegex = erasNameRegex;
+  proto$1.erasNarrowRegex = erasNarrowRegex;
+  proto$1.months = localeMonths;
+  proto$1.monthsShort = localeMonthsShort;
+  proto$1.monthsParse = localeMonthsParse;
+  proto$1.monthsRegex = monthsRegex;
+  proto$1.monthsShortRegex = monthsShortRegex;
+  proto$1.week = localeWeek;
+  proto$1.firstDayOfYear = localeFirstDayOfYear;
+  proto$1.firstDayOfWeek = localeFirstDayOfWeek;
+  proto$1.weekdays = localeWeekdays;
+  proto$1.weekdaysMin = localeWeekdaysMin;
+  proto$1.weekdaysShort = localeWeekdaysShort;
+  proto$1.weekdaysParse = localeWeekdaysParse;
+  proto$1.weekdaysRegex = weekdaysRegex;
+  proto$1.weekdaysShortRegex = weekdaysShortRegex;
+  proto$1.weekdaysMinRegex = weekdaysMinRegex;
+  proto$1.isPM = localeIsPM;
+  proto$1.meridiem = localeMeridiem;
+  function get$1(format, index, field, setter) {
+    var locale = getLocale(), utc = createUTC().set(setter, index);
+    return locale[field](utc, format);
+  }
+  function listMonthsImpl(format, index, field) {
+    if (isNumber(format)) {
+      index = format;
+      format = undefined;
+    }
+    format = format || '';
+    if (index != null) {
+      return get$1(format, index, field, 'month');
+    }
+    var i, out = [];
+    for (i = 0; i < 12; i++) {
+      out[i] = get$1(format, i, field, 'month');
+    }
+    return out;
+  }
+  // ()
+  // (5)
+  // (fmt, 5)
+  // (fmt)
+  // (true)
+  // (true, 5)
+  // (true, fmt, 5)
+  // (true, fmt)
+  function listWeekdaysImpl(localeSorted, format, index, field) {
+    if (typeof localeSorted === 'boolean') {
+      if (isNumber(format)) {
+        index = format;
+        format = undefined;
+      }
+      format = format || '';
+    } else {
+      format = localeSorted;
+      index = format;
+      localeSorted = false;
+      if (isNumber(format)) {
+        index = format;
+        format = undefined;
+      }
+      format = format || '';
+    }
+    var locale = getLocale(), shift = localeSorted ? locale._week.dow : 0, i, out = [];
+    if (index != null) {
+      return get$1(format, (index + shift) % 7, field, 'day');
+    }
+    for (i = 0; i < 7; i++) {
+      out[i] = get$1(format, (i + shift) % 7, field, 'day');
+    }
+    return out;
+  }
+  function listMonths(format, index) {
+    return listMonthsImpl(format, index, 'months');
+  }
+  function listMonthsShort(format, index) {
+    return listMonthsImpl(format, index, 'monthsShort');
+  }
+  function listWeekdays(localeSorted, format, index) {
+    return listWeekdaysImpl(localeSorted, format, index, 'weekdays');
+  }
+  function listWeekdaysShort(localeSorted, format, index) {
+    return listWeekdaysImpl(localeSorted, format, index, 'weekdaysShort');
+  }
+  function listWeekdaysMin(localeSorted, format, index) {
+    return listWeekdaysImpl(localeSorted, format, index, 'weekdaysMin');
+  }
+  getSetGlobalLocale('en', {
+    eras: [{
+      since: '0001-01-01',
+      until: +Infinity,
+      offset: 1,
+      name: 'Anno Domini',
+      narrow: 'AD',
+      abbr: 'AD'
+    }, {
+      since: '0000-12-31',
+      until: -Infinity,
+      offset: 1,
+      name: 'Before Christ',
+      narrow: 'BC',
+      abbr: 'BC'
+    }],
+    dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/,
+    ordinal: function (number) {
+      var b = number % 10, output = toInt(number % 100 / 10) === 1 ? 'th' : b === 1 ? 'st' : b === 2 ? 'nd' : b === 3 ? 'rd' : 'th';
+      return number + output;
+    }
+  });
+  // Side effect imports
+  hooks.lang = deprecate('moment.lang is deprecated. Use moment.locale instead.', getSetGlobalLocale);
+  hooks.langData = deprecate('moment.langData is deprecated. Use moment.localeData instead.', getLocale);
+  var mathAbs = Math.abs;
+  function abs() {
+    var data = this._data;
+    this._milliseconds = mathAbs(this._milliseconds);
+    this._days = mathAbs(this._days);
+    this._months = mathAbs(this._months);
+    data.milliseconds = mathAbs(data.milliseconds);
+    data.seconds = mathAbs(data.seconds);
+    data.minutes = mathAbs(data.minutes);
+    data.hours = mathAbs(data.hours);
+    data.months = mathAbs(data.months);
+    data.years = mathAbs(data.years);
+    return this;
+  }
+  function addSubtract$1(duration, input, value, direction) {
+    var other = createDuration(input, value);
+    duration._milliseconds += direction * other._milliseconds;
+    duration._days += direction * other._days;
+    duration._months += direction * other._months;
+    return duration._bubble();
+  }
+  // supports only 2.0-style add(1, 's') or add(duration)
+  function add$1(input, value) {
+    return addSubtract$1(this, input, value, 1);
+  }
+  // supports only 2.0-style subtract(1, 's') or subtract(duration)
+  function subtract$1(input, value) {
+    return addSubtract$1(this, input, value, -1);
+  }
+  function absCeil(number) {
+    if (number < 0) {
+      return Math.floor(number);
+    } else {
+      return Math.ceil(number);
+    }
+  }
+  function bubble() {
+    var milliseconds = this._milliseconds, days = this._days, months = this._months, data = this._data, seconds, minutes, hours, years, monthsFromDays;
+    // if we have a mix of positive and negative values, bubble down first
+    // check: https://github.com/moment/moment/issues/2166
+    if (!(milliseconds >= 0 && days >= 0 && months >= 0 || milliseconds <= 0 && days <= 0 && months <= 0)) {
+      milliseconds += absCeil(monthsToDays(months) + days) * 864e5;
+      days = 0;
+      months = 0;
+    }
+    // The following code bubbles up values, see the tests for
+    // examples of what that means.
+    data.milliseconds = milliseconds % 1000;
+    seconds = absFloor(milliseconds / 1000);
+    data.seconds = seconds % 60;
+    minutes = absFloor(seconds / 60);
+    data.minutes = minutes % 60;
+    hours = absFloor(minutes / 60);
+    data.hours = hours % 24;
+    days += absFloor(hours / 24);
+    // convert days to months
+    monthsFromDays = absFloor(daysToMonths(days));
+    months += monthsFromDays;
+    days -= absCeil(monthsToDays(monthsFromDays));
+    // 12 months -> 1 year
+    years = absFloor(months / 12);
+    months %= 12;
+    data.days = days;
+    data.months = months;
+    data.years = years;
+    return this;
+  }
+  function daysToMonths(days) {
+    // 400 years have 146097 days (taking into account leap year rules)
+    // 400 years have 12 months === 4800
+    return days * 4800 / 146097;
+  }
+  function monthsToDays(months) {
+    // the reverse of daysToMonths
+    return months * 146097 / 4800;
+  }
+  function as(units) {
+    if (!this.isValid()) {
+      return NaN;
+    }
+    var days, months, milliseconds = this._milliseconds;
+    units = normalizeUnits(units);
+    if (units === 'month' || units === 'quarter' || units === 'year') {
+      days = this._days + milliseconds / 864e5;
+      months = this._months + daysToMonths(days);
+      switch (units) {
+        case 'month':
+          return months;
+        case 'quarter':
+          return months / 3;
+        case 'year':
+          return months / 12;
+      }
+    } else {
+      // handle milliseconds separately because of floating point math errors (issue #1867)
+      days = this._days + Math.round(monthsToDays(this._months));
+      switch (units) {
+        case 'week':
+          return days / 7 + milliseconds / 6048e5;
+        case 'day':
+          return days + milliseconds / 864e5;
+        case 'hour':
+          return days * 24 + milliseconds / 36e5;
+        case 'minute':
+          return days * 1440 + milliseconds / 6e4;
+        case 'second':
+          return days * 86400 + milliseconds / 1000;
+        case 'millisecond':
+          return Math.floor(days * 864e5) + milliseconds;
+        default:
+          throw new Error('Unknown unit ' + units);
+      }
+    }
+  }
+  // TODO: Use this.as('ms')?
+  function valueOf$1() {
+    if (!this.isValid()) {
+      return NaN;
+    }
+    return this._milliseconds + this._days * 864e5 + this._months % 12 * 2592e6 + toInt(this._months / 12) * 31536e6;
+  }
+  function makeAs(alias) {
+    return function () {
+      return this.as(alias);
+    };
+  }
+  var asMilliseconds = makeAs('ms'), asSeconds = makeAs('s'), asMinutes = makeAs('m'), asHours = makeAs('h'), asDays = makeAs('d'), asWeeks = makeAs('w'), asMonths = makeAs('M'), asQuarters = makeAs('Q'), asYears = makeAs('y');
+  function clone$1() {
+    return createDuration(this);
+  }
+  function get$2(units) {
+    units = normalizeUnits(units);
+    return this.isValid() ? this[units + 's']() : NaN;
+  }
+  function makeGetter(name) {
+    return function () {
+      return this.isValid() ? this._data[name] : NaN;
+    };
+  }
+  var milliseconds = makeGetter('milliseconds'), seconds = makeGetter('seconds'), minutes = makeGetter('minutes'), hours = makeGetter('hours'), days = makeGetter('days'), months = makeGetter('months'), years = makeGetter('years');
+  function weeks() {
+    return absFloor(this.days() / 7);
+  }
+  var round = Math.round, thresholds = {
+    ss: 44,
+    // a few seconds to seconds
+    s: 45,
+    // seconds to minute
+    m: 45,
+    // minutes to hour
+    h: 22,
+    // hours to day
+    d: 26,
+    // days to month/week
+    w: null,
+    // weeks to month
+    M: 11
+  };
+  // helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
+  function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale) {
+    return locale.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
+  }
+  function relativeTime$1(posNegDuration, withoutSuffix, thresholds, locale) {
+    var duration = createDuration(posNegDuration).abs(), seconds = round(duration.as('s')), minutes = round(duration.as('m')), hours = round(duration.as('h')), days = round(duration.as('d')), months = round(duration.as('M')), weeks = round(duration.as('w')), years = round(duration.as('y')), a = seconds <= thresholds.ss && ['s', seconds] || seconds < thresholds.s && ['ss', seconds] || minutes <= 1 && ['m'] || minutes < thresholds.m && ['mm', minutes] || hours <= 1 && ['h'] || hours < thresholds.h && ['hh', hours] || days <= 1 && ['d'] || days < thresholds.d && ['dd', days];
+    if (thresholds.w != null) {
+      a = a || weeks <= 1 && ['w'] || weeks < thresholds.w && ['ww', weeks];
+    }
+    a = a || months <= 1 && ['M'] || months < thresholds.M && ['MM', months] || years <= 1 && ['y'] || ['yy', years];
+    a[2] = withoutSuffix;
+    a[3] = +posNegDuration > 0;
+    a[4] = locale;
+    return substituteTimeAgo.apply(null, a);
+  }
+  // This function allows you to set the rounding function for relative time strings
+  function getSetRelativeTimeRounding(roundingFunction) {
+    if (roundingFunction === undefined) {
+      return round;
+    }
+    if (typeof roundingFunction === 'function') {
+      round = roundingFunction;
+      return true;
+    }
+    return false;
+  }
+  // This function allows you to set a threshold for relative time strings
+  function getSetRelativeTimeThreshold(threshold, limit) {
+    if (thresholds[threshold] === undefined) {
+      return false;
+    }
+    if (limit === undefined) {
+      return thresholds[threshold];
+    }
+    thresholds[threshold] = limit;
+    if (threshold === 's') {
+      thresholds.ss = limit - 1;
+    }
+    return true;
+  }
+  function humanize(argWithSuffix, argThresholds) {
+    if (!this.isValid()) {
+      return this.localeData().invalidDate();
+    }
+    var withSuffix = false, th = thresholds, locale, output;
+    if (typeof argWithSuffix === 'object') {
+      argThresholds = argWithSuffix;
+      argWithSuffix = false;
+    }
+    if (typeof argWithSuffix === 'boolean') {
+      withSuffix = argWithSuffix;
+    }
+    if (typeof argThresholds === 'object') {
+      th = Object.assign({}, thresholds, argThresholds);
+      if (argThresholds.s != null && argThresholds.ss == null) {
+        th.ss = argThresholds.s - 1;
+      }
+    }
+    locale = this.localeData();
+    output = relativeTime$1(this, !withSuffix, th, locale);
+    if (withSuffix) {
+      output = locale.pastFuture(+this, output);
+    }
+    return locale.postformat(output);
+  }
+  var abs$1 = Math.abs;
+  function sign(x) {
+    return (x > 0) - (x < 0) || +x;
+  }
+  function toISOString$1() {
+    // for ISO strings we do not use the normal bubbling rules:
+    // * milliseconds bubble up until they become hours
+    // * days do not bubble at all
+    // * months bubble up until they become years
+    // This is because there is no context-free conversion between hours and days
+    // (think of clock changes)
+    // and also not between days and months (28-31 days per month)
+    if (!this.isValid()) {
+      return this.localeData().invalidDate();
+    }
+    var seconds = abs$1(this._milliseconds) / 1000, days = abs$1(this._days), months = abs$1(this._months), minutes, hours, years, s, total = this.asSeconds(), totalSign, ymSign, daysSign, hmsSign;
+    if (!total) {
+      // this is the same as C#'s (Noda) and python (isodate)...
+      // but not other JS (goog.date)
+      return 'P0D';
+    }
+    // 3600 seconds -> 60 minutes -> 1 hour
+    minutes = absFloor(seconds / 60);
+    hours = absFloor(minutes / 60);
+    seconds %= 60;
+    minutes %= 60;
+    // 12 months -> 1 year
+    years = absFloor(months / 12);
+    months %= 12;
+    // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
+    s = seconds ? seconds.toFixed(3).replace(/\.?0+$/, '') : '';
+    totalSign = total < 0 ? '-' : '';
+    ymSign = sign(this._months) !== sign(total) ? '-' : '';
+    daysSign = sign(this._days) !== sign(total) ? '-' : '';
+    hmsSign = sign(this._milliseconds) !== sign(total) ? '-' : '';
+    return totalSign + 'P' + (years ? ymSign + years + 'Y' : '') + (months ? ymSign + months + 'M' : '') + (days ? daysSign + days + 'D' : '') + (hours || minutes || seconds ? 'T' : '') + (hours ? hmsSign + hours + 'H' : '') + (minutes ? hmsSign + minutes + 'M' : '') + (seconds ? hmsSign + s + 'S' : '');
+  }
+  var proto$2 = Duration.prototype;
+  proto$2.isValid = isValid$1;
+  proto$2.abs = abs;
+  proto$2.add = add$1;
+  proto$2.subtract = subtract$1;
+  proto$2.as = as;
+  proto$2.asMilliseconds = asMilliseconds;
+  proto$2.asSeconds = asSeconds;
+  proto$2.asMinutes = asMinutes;
+  proto$2.asHours = asHours;
+  proto$2.asDays = asDays;
+  proto$2.asWeeks = asWeeks;
+  proto$2.asMonths = asMonths;
+  proto$2.asQuarters = asQuarters;
+  proto$2.asYears = asYears;
+  proto$2.valueOf = valueOf$1;
+  proto$2._bubble = bubble;
+  proto$2.clone = clone$1;
+  proto$2.get = get$2;
+  proto$2.milliseconds = milliseconds;
+  proto$2.seconds = seconds;
+  proto$2.minutes = minutes;
+  proto$2.hours = hours;
+  proto$2.days = days;
+  proto$2.weeks = weeks;
+  proto$2.months = months;
+  proto$2.years = years;
+  proto$2.humanize = humanize;
+  proto$2.toISOString = toISOString$1;
+  proto$2.toString = toISOString$1;
+  proto$2.toJSON = toISOString$1;
+  proto$2.locale = locale;
+  proto$2.localeData = localeData;
+  proto$2.toIsoString = deprecate('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', toISOString$1);
+  proto$2.lang = lang;
+  // FORMATTING
+  addFormatToken('X', 0, 0, 'unix');
+  addFormatToken('x', 0, 0, 'valueOf');
+  // PARSING
+  addRegexToken('x', matchSigned);
+  addRegexToken('X', matchTimestamp);
+  addParseToken('X', function (input, array, config) {
+    config._d = new Date(parseFloat(input) * 1000);
+  });
+  addParseToken('x', function (input, array, config) {
+    config._d = new Date(toInt(input));
+  });
+  // ! moment.js
+  hooks.version = '2.29.1';
+  setHookCallback(createLocal);
+  hooks.fn = proto;
+  hooks.min = min;
+  hooks.max = max;
+  hooks.now = now;
+  hooks.utc = createUTC;
+  hooks.unix = createUnix;
+  hooks.months = listMonths;
+  hooks.isDate = isDate;
+  hooks.locale = getSetGlobalLocale;
+  hooks.invalid = createInvalid;
+  hooks.duration = createDuration;
+  hooks.isMoment = isMoment;
+  hooks.weekdays = listWeekdays;
+  hooks.parseZone = createInZone;
+  hooks.localeData = getLocale;
+  hooks.isDuration = isDuration;
+  hooks.monthsShort = listMonthsShort;
+  hooks.weekdaysMin = listWeekdaysMin;
+  hooks.defineLocale = defineLocale;
+  hooks.updateLocale = updateLocale;
+  hooks.locales = listLocales;
+  hooks.weekdaysShort = listWeekdaysShort;
+  hooks.normalizeUnits = normalizeUnits;
+  hooks.relativeTimeRounding = getSetRelativeTimeRounding;
+  hooks.relativeTimeThreshold = getSetRelativeTimeThreshold;
+  hooks.calendarFormat = getCalendarFormat;
+  hooks.prototype = proto;
+  // currently HTML5 input type only supports 24-hour formats
+  hooks.HTML5_FMT = {
+    DATETIME_LOCAL: 'YYYY-MM-DDTHH:mm',
+    // <input type="datetime-local" />
+    DATETIME_LOCAL_SECONDS: 'YYYY-MM-DDTHH:mm:ss',
+    // <input type="datetime-local" step="1" />
+    DATETIME_LOCAL_MS: 'YYYY-MM-DDTHH:mm:ss.SSS',
+    // <input type="datetime-local" step="0.001" />
+    DATE: 'YYYY-MM-DD',
+    // <input type="date" />
+    TIME: 'HH:mm',
+    // <input type="time" />
+    TIME_SECONDS: 'HH:mm:ss',
+    // <input type="time" step="1" />
+    TIME_MS: 'HH:mm:ss.SSS',
+    // <input type="time" step="0.001" />
+    WEEK: 'GGGG-[W]WW',
+    // <input type="week" />
+    MONTH: 'YYYY-MM'
+  };
+  return hooks;
+});
+
+},{}],"6iOL6":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _HeaderComponentHeader = require("../HeaderComponent/header");
+  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
+  var _TextInputComponentTextInputComponent = require("../TextInputComponent/textInputComponent");
+  var _TextInputComponentTextInputComponentDefault = _parcelHelpers.interopDefault(_TextInputComponentTextInputComponent);
+  var _ButtonComponentButtonComponent = require("../ButtonComponent/buttonComponent");
+  var _ButtonComponentButtonComponentDefault = _parcelHelpers.interopDefault(_ButtonComponentButtonComponent);
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js";
+  const initialState = {
+    researchTitle: "",
+    researchField: "",
+    researchYear: "",
+    coAuthors: "",
+    fileURL: "",
+    researchPaper: ""
+  };
+  class researchEditComponent extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = initialState;
+      this.onChange = this.onChange.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
+    }
+    componentDidMount() {
+      _axiosDefault.default.get(`http://localhost:5000/researchDetails/getResearch/${this.props.match.params.id}`).then(response => {
+        console.log(response.data.data);
+        this.setState(response.data.data);
+      }).catch(error => {
+        console.log(error.message);
+        alert(error.message);
+      });
+    }
+    onChange(e) {
+      this.setState({
+        [e.target.name]: e.target.value
+      });
+    }
+    onSubmit(e) {
+      e.preventDefault();
+      console.log(" inside submit");
+      const dataSet = {
+        researchTitle: this.state.researchTitle,
+        researchField: this.state.researchField,
+        researchYear: this.state.researchYear,
+        coAuthors: this.state.coAuthors,
+        fileURL: this.state.fileURL,
+        isAccepted: "false"
+      };
+      console.log("DataSet", dataSet);
+      _axiosDefault.default.put(`http://localhost:5000/researchDetails/editResearchDetails/${this.props.match.params.id}`, dataSet).then(response => {
+        alert("Research Details Updated!!!");
+      }).catch(error => {
+        console.log(error.message);
+        alert(error.message);
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 75,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 76,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 77,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+          className: "mt-5 mb-5",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 78,
+            columnNumber: 11
+          }
+        }, "Edit Research Details "), /*#__PURE__*/_reactDefault.default.createElement("form", {
+          onSubmit: this.onSubmit,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 79,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "text",
+          fieldValue: "Research Title",
+          name: "researchTitle",
+          value: this.state.researchTitle,
+          id: "researchTitle",
+          onchange: this.onChange,
+          placeholder: "Research Title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 80,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "text",
+          fieldValue: "Research Field",
+          name: "researchField",
+          value: this.state.researchField,
+          id: "researchField",
+          onchange: this.onChange,
+          placeholder: "Research Field",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 89,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "date",
+          fieldValue: "Research Year",
+          name: "researchYear",
+          value: this.state.researchYear,
+          id: "researchYear",
+          onchange: this.onChange,
+          placeholder: "Research Year",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 98,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "text",
+          fieldValue: "Research Author",
+          name: "coAuthors",
+          value: this.state.coAuthors,
+          id: "coAuthors",
+          onchange: this.onChange,
+          placeholder: "Research Author",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 107,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "submit",
+          classname: "btn btn-info",
+          /*onClick={this.onSubmit}*/
+          value: "Edit Details",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 125,
+            columnNumber: 13
+          }
+        }))))
+      );
+    }
+  }
+  exports.default = researchEditComponent;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../HeaderComponent/header":"5VZ8N","../TextInputComponent/textInputComponent":"15meu","../ButtonComponent/buttonComponent":"Zx1Ei","axios":"7rA65","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7AyLR":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./addCommiteeMember.css");
+  var _HeaderComponentHeader = require("../HeaderComponent/header");
+  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
+  var _TextInputComponentTextInputComponent = require("../TextInputComponent/textInputComponent");
+  var _TextInputComponentTextInputComponentDefault = _parcelHelpers.interopDefault(_TextInputComponentTextInputComponent);
+  var _ButtonComponentButtonComponent = require("../ButtonComponent/buttonComponent");
+  var _ButtonComponentButtonComponentDefault = _parcelHelpers.interopDefault(_ButtonComponentButtonComponent);
+  var _firebase = require("../../firebase");
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js";
+  class addCommiteeMembers extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        memberName: "",
+        memberPosition: "",
+        memberQualification: "",
+        memberNotes: "",
+        memberImage: "",
+        imageUrl: ""
+      };
+      this.handlerChange = this.handlerChange.bind(this);
+      this.handlerChangeFiles = this.handlerChangeFiles.bind(this);
+      this.saveDetails = this.saveDetails.bind(this);
+      this.SubmitDetails = this.SubmitDetails.bind(this);
+    }
+    handlerChange(e) {
+      this.setState({
+        [e.target.name]: e.target.value
+      });
+    }
+    handlerChangeFiles(e) {
+      if (e.target.files[0]) {
+        this.setState({
+          [e.target.name]: e.target.files[0]
+        });
+      }
+    }
+    saveDetails() {
+      const {memberImage} = this.state;
+      const date = Date.now();
+      const uploadTask = _firebase.storage.ref(`images/${date}_${memberImage.name}`).put(memberImage);
+      uploadTask.on("state_changed", snapshot => {}, error => {
+        console.log(error);
+      }, () => {
+        _firebase.storage.ref("images").child(`${date}_${memberImage.name}`).getDownloadURL().then(url => {
+          console.log(url);
+          this.setState({
+            imageUrl: url
+          });
+          setTimeout(this.SubmitDetails(), 3000);
+        });
+      });
+    }
+    SubmitDetails() {
+      const {memberName, memberPosition, memberQualification, memberNotes, imageUrl} = this.state;
+      const details = {
+        memberName,
+        memberPosition,
+        memberQualification,
+        memberNotes,
+        imageUrl
+      };
+      _axiosDefault.default.post("http://localhost:5000/memberDetails/", details).then(() => {
+        alert("Details of Committee Member are Added Successfully");
+      }).catch(err => {
+        alert("Error in Submiiting.Please Check Again Before Submitting...!");
+        console.log(err);
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 92,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 93,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 96,
+            columnNumber: 11
+          }
+        }, "Add Committee Members"), /*#__PURE__*/_reactDefault.default.createElement("hr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 97,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 98,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("form", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 99,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "text",
+          placeholder: "Please Enter Member Name",
+          name: "memberName",
+          onchange: this.handlerChange,
+          id: "memberName",
+          fieldValue: "Member Name",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 100,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "text",
+          placeholder: "Please Enter Member Position",
+          name: "memberPosition",
+          onchange: this.handlerChange,
+          id: "memberPosition",
+          fieldValue: "Member Position",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 108,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 116,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "input-group-prepend",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 117,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "input-group-text",
+          id: "basic-addon1",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 118,
+            columnNumber: 17
+          }
+        }, "Qualifications of the Member")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
+          id: "memberQualification",
+          name: "memberQualification",
+          rows: "6",
+          cols: "151",
+          onChange: this.handlerChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 122,
+            columnNumber: 15
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 130,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 131,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "input-group-prepend",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 132,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "input-group-text",
+          id: "basic-addon1",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 133,
+            columnNumber: 17
+          }
+        }, "Additional Notes of the Member")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
+          id: "memberNotes",
+          name: "memberNotes",
+          rows: "6",
+          cols: "151",
+          onChange: this.handlerChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 137,
+            columnNumber: 15
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "file",
+          placeholder: "Please Enter Member Image",
+          name: "memberImage",
+          onchange: this.handlerChangeFiles,
+          id: "memberImage",
+          fieldValue: "Member Image",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 145,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 153,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "button",
+          classname: "btn btn-outline-dark",
+          value: "Save Member Details",
+          onsubmit: this.saveDetails,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 154,
+            columnNumber: 13
+          }
+        }))), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 162,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 163,
+            columnNumber: 9
+          }
+        }))
+      );
+    }
+  }
+  exports.default = addCommiteeMembers;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","./addCommiteeMember.css":"3Qs12","../HeaderComponent/header":"5VZ8N","../TextInputComponent/textInputComponent":"15meu","../ButtonComponent/buttonComponent":"Zx1Ei","../../firebase":"3CZmC","axios":"7rA65","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3Qs12":[function() {},{}],"d53Ty":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _ButtonComponentButtonComponent = require("../ButtonComponent/buttonComponent");
+  var _ButtonComponentButtonComponentDefault = _parcelHelpers.interopDefault(_ButtonComponentButtonComponent);
+  var _HeaderComponentHeader = require("../HeaderComponent/header");
+  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _moment = require("moment");
+  var _momentDefault = _parcelHelpers.interopDefault(_moment);
+  var _NotificationServiceComponentNotificationService = require("../NotificationServiceComponent/notificationService");
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\ResearchReviewerComponent\\researchReviewerComponent.js";
+  const initialState = {
+    researchTitle: "",
+    researchField: "",
+    researchYear: "",
+    coAuthors: "",
+    fileURL: "",
+    isApproved: "",
+    dataArray: []
+  };
+  class researchReviewerComponent extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = initialState;
+      this.approveResearch = this.approveResearch.bind(this);
+      this.onRemove = this.onRemove.bind(this);
+    }
+    componentDidMount() {
+      _axiosDefault.default.get("http://localhost:5000/researchDetails/getResearchDetails").then(response => {
+        console.log("Response data: ", response.data.data);
+        this.setState({
+          dataArray: response.data.data
+        });
+      }).catch(error => {
+        console.log(error.message);
+      });
+    }
+    approveResearch(id, data) {
+      console.log(data);
+      const dataSet = {
+        isAccepted: data
+      };
+      console.log("DataSet", dataSet);
+      _axiosDefault.default.put(`http://localhost:5000/researchDetails/editResearchDetails/${id}`, dataSet).then(response => {
+        window.location.reload();
+        alert("Research Approved!!!");
+        _NotificationServiceComponentNotificationService.notificationService.sendMessage("Research paper Accepted!!");
+      }).catch(error => {
+        console.log(error.message);
+        alert(error.message);
+      });
+    }
+    onRemove(id) {
+      console.log(id);
+      _axiosDefault.default.delete(`http://localhost:5000/researchDetails/deleteResearchDetail/${id}`).then(response => {
+        alert("Deleted Successfully!");
+        console.log("Deleted Successfully!");
+        window.location.reload();
+      }).catch(error => {
+        console.log(error.message);
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 81,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 82,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 83,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 84,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          className: "card-header text-center font-weight-bold text-uppercase py-4",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 85,
+            columnNumber: 13
+          }
+        }, "All Research Paper Uploads"), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card mb-3 p-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 89,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card-body",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 90,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          id: "table",
+          className: "table-editable",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 91,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("table", {
+          className: "table table-bordered table-responsive-md table-striped text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 92,
+            columnNumber: 19
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("thead", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 93,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94,
+            columnNumber: 23
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95,
+            columnNumber: 25
+          }
+        }, "Research Title"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 96,
+            columnNumber: 25
+          }
+        }, "Research Field"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 97,
+            columnNumber: 25
+          }
+        }, "Research Year"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 98,
+            columnNumber: 25
+          }
+        }, "Research Author"))), this.state.dataArray.length > 0 && this.state.dataArray.map((item, index) => /*#__PURE__*/_reactDefault.default.createElement("tbody", {
+          key: index,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 103,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 104,
+            columnNumber: 27
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "researchTitle",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 105,
+            columnNumber: 29
+          }
+        }, item.researchTitle), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "researchField",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 112,
+            columnNumber: 29
+          }
+        }, item.researchField), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "researchYear",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 119,
+            columnNumber: 29
+          }
+        }, _momentDefault.default(item.researchYear).format("YYYY")), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "coAuthors",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 126,
+            columnNumber: 29
+          }
+        }, item.coAuthors), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half ",
+          name: "fileURL",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 133,
+            columnNumber: 29
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          href: item.fileURL,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 138,
+            columnNumber: 31
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("i", {
+          className: "fas fa-file-download",
+          id: "acc-icon",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 139,
+            columnNumber: 33
+          }
+        }))), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 145,
+            columnNumber: 29
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "table-remove",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 146,
+            columnNumber: 31
+          }
+        }, !item.isAccepted ? /*#__PURE__*/_reactDefault.default.createElement("button", {
+          type: "button",
+          className: "btn btn-primary btn-rounded btn-sm my-0",
+          onClick: () => this.approveResearch(item._id, true),
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 148,
+            columnNumber: 35
+          }
+        }, "Accept") : /*#__PURE__*/_reactDefault.default.createElement("button", {
+          type: "button",
+          className: "btn btn-success btn-rounded btn-sm my-0",
+          onClick: () => this.approveResearch(item._id, false),
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 158,
+            columnNumber: 35
+          }
+        }, "Decline"))), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 170,
+            columnNumber: 29
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "submit",
+          classname: "btn btn-danger btn-rounded btn-sm my-0",
+          onsubmit: () => {
+            this.onRemove(item._id);
+          },
+          value: "Delete",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 171,
+            columnNumber: 31
+          }
+        }))))))))))))
+      );
+    }
+  }
+  exports.default = researchReviewerComponent;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../ButtonComponent/buttonComponent":"Zx1Ei","../HeaderComponent/header":"5VZ8N","axios":"7rA65","moment":"5Hi32","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../NotificationServiceComponent/notificationService":"1wCag"}],"1wCag":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "notificationService", function () {
+  return notificationService;
+});
+var _rxjs = require("rxjs");
+const subject = new _rxjs.Subject();
+const notificationService = {
+  sendMessage: message => subject.next({
+    text: message
+  }),
+  clearMessage: () => subject.next(),
+  getMessage: () => subject.asObservable()
+};
+
+},{"rxjs":"3ULHQ","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3ULHQ":[function(require,module,exports) {
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.interval = exports.iif = exports.generate = exports.fromEventPattern = exports.fromEvent = exports.from = exports.forkJoin = exports.empty = exports.defer = exports.connectable = exports.concat = exports.combineLatest = exports.bindNodeCallback = exports.bindCallback = exports.UnsubscriptionError = exports.TimeoutError = exports.SequenceError = exports.ObjectUnsubscribedError = exports.NotFoundError = exports.EmptyError = exports.ArgumentOutOfRangeError = exports.firstValueFrom = exports.lastValueFrom = exports.isObservable = exports.identity = exports.noop = exports.pipe = exports.NotificationKind = exports.Notification = exports.Subscriber = exports.Subscription = exports.Scheduler = exports.VirtualAction = exports.VirtualTimeScheduler = exports.animationFrameScheduler = exports.animationFrame = exports.queueScheduler = exports.queue = exports.asyncScheduler = exports.async = exports.asapScheduler = exports.asap = exports.AsyncSubject = exports.ReplaySubject = exports.BehaviorSubject = exports.Subject = exports.animationFrames = exports.observable = exports.ConnectableObservable = exports.Observable = void 0;
+exports.config = exports.NEVER = exports.EMPTY = exports.scheduled = exports.zip = exports.using = exports.timer = exports.throwError = exports.range = exports.race = exports.partition = exports.pairs = exports.onErrorResumeNext = exports.of = exports.never = exports.merge = void 0;
+var Observable_1 = require("./internal/Observable");
+Object.defineProperty(exports, "Observable", { enumerable: true, get: function () { return Observable_1.Observable; } });
+var ConnectableObservable_1 = require("./internal/observable/ConnectableObservable");
+Object.defineProperty(exports, "ConnectableObservable", { enumerable: true, get: function () { return ConnectableObservable_1.ConnectableObservable; } });
+var observable_1 = require("./internal/symbol/observable");
+Object.defineProperty(exports, "observable", { enumerable: true, get: function () { return observable_1.observable; } });
+var animationFrames_1 = require("./internal/observable/dom/animationFrames");
+Object.defineProperty(exports, "animationFrames", { enumerable: true, get: function () { return animationFrames_1.animationFrames; } });
+var Subject_1 = require("./internal/Subject");
+Object.defineProperty(exports, "Subject", { enumerable: true, get: function () { return Subject_1.Subject; } });
+var BehaviorSubject_1 = require("./internal/BehaviorSubject");
+Object.defineProperty(exports, "BehaviorSubject", { enumerable: true, get: function () { return BehaviorSubject_1.BehaviorSubject; } });
+var ReplaySubject_1 = require("./internal/ReplaySubject");
+Object.defineProperty(exports, "ReplaySubject", { enumerable: true, get: function () { return ReplaySubject_1.ReplaySubject; } });
+var AsyncSubject_1 = require("./internal/AsyncSubject");
+Object.defineProperty(exports, "AsyncSubject", { enumerable: true, get: function () { return AsyncSubject_1.AsyncSubject; } });
+var asap_1 = require("./internal/scheduler/asap");
+Object.defineProperty(exports, "asap", { enumerable: true, get: function () { return asap_1.asap; } });
+Object.defineProperty(exports, "asapScheduler", { enumerable: true, get: function () { return asap_1.asapScheduler; } });
+var async_1 = require("./internal/scheduler/async");
+Object.defineProperty(exports, "async", { enumerable: true, get: function () { return async_1.async; } });
+Object.defineProperty(exports, "asyncScheduler", { enumerable: true, get: function () { return async_1.asyncScheduler; } });
+var queue_1 = require("./internal/scheduler/queue");
+Object.defineProperty(exports, "queue", { enumerable: true, get: function () { return queue_1.queue; } });
+Object.defineProperty(exports, "queueScheduler", { enumerable: true, get: function () { return queue_1.queueScheduler; } });
+var animationFrame_1 = require("./internal/scheduler/animationFrame");
+Object.defineProperty(exports, "animationFrame", { enumerable: true, get: function () { return animationFrame_1.animationFrame; } });
+Object.defineProperty(exports, "animationFrameScheduler", { enumerable: true, get: function () { return animationFrame_1.animationFrameScheduler; } });
+var VirtualTimeScheduler_1 = require("./internal/scheduler/VirtualTimeScheduler");
+Object.defineProperty(exports, "VirtualTimeScheduler", { enumerable: true, get: function () { return VirtualTimeScheduler_1.VirtualTimeScheduler; } });
+Object.defineProperty(exports, "VirtualAction", { enumerable: true, get: function () { return VirtualTimeScheduler_1.VirtualAction; } });
+var Scheduler_1 = require("./internal/Scheduler");
+Object.defineProperty(exports, "Scheduler", { enumerable: true, get: function () { return Scheduler_1.Scheduler; } });
+var Subscription_1 = require("./internal/Subscription");
+Object.defineProperty(exports, "Subscription", { enumerable: true, get: function () { return Subscription_1.Subscription; } });
+var Subscriber_1 = require("./internal/Subscriber");
+Object.defineProperty(exports, "Subscriber", { enumerable: true, get: function () { return Subscriber_1.Subscriber; } });
+var Notification_1 = require("./internal/Notification");
+Object.defineProperty(exports, "Notification", { enumerable: true, get: function () { return Notification_1.Notification; } });
+Object.defineProperty(exports, "NotificationKind", { enumerable: true, get: function () { return Notification_1.NotificationKind; } });
+var pipe_1 = require("./internal/util/pipe");
+Object.defineProperty(exports, "pipe", { enumerable: true, get: function () { return pipe_1.pipe; } });
+var noop_1 = require("./internal/util/noop");
+Object.defineProperty(exports, "noop", { enumerable: true, get: function () { return noop_1.noop; } });
+var identity_1 = require("./internal/util/identity");
+Object.defineProperty(exports, "identity", { enumerable: true, get: function () { return identity_1.identity; } });
+var isObservable_1 = require("./internal/util/isObservable");
+Object.defineProperty(exports, "isObservable", { enumerable: true, get: function () { return isObservable_1.isObservable; } });
+var lastValueFrom_1 = require("./internal/lastValueFrom");
+Object.defineProperty(exports, "lastValueFrom", { enumerable: true, get: function () { return lastValueFrom_1.lastValueFrom; } });
+var firstValueFrom_1 = require("./internal/firstValueFrom");
+Object.defineProperty(exports, "firstValueFrom", { enumerable: true, get: function () { return firstValueFrom_1.firstValueFrom; } });
+var ArgumentOutOfRangeError_1 = require("./internal/util/ArgumentOutOfRangeError");
+Object.defineProperty(exports, "ArgumentOutOfRangeError", { enumerable: true, get: function () { return ArgumentOutOfRangeError_1.ArgumentOutOfRangeError; } });
+var EmptyError_1 = require("./internal/util/EmptyError");
+Object.defineProperty(exports, "EmptyError", { enumerable: true, get: function () { return EmptyError_1.EmptyError; } });
+var NotFoundError_1 = require("./internal/util/NotFoundError");
+Object.defineProperty(exports, "NotFoundError", { enumerable: true, get: function () { return NotFoundError_1.NotFoundError; } });
+var ObjectUnsubscribedError_1 = require("./internal/util/ObjectUnsubscribedError");
+Object.defineProperty(exports, "ObjectUnsubscribedError", { enumerable: true, get: function () { return ObjectUnsubscribedError_1.ObjectUnsubscribedError; } });
+var SequenceError_1 = require("./internal/util/SequenceError");
+Object.defineProperty(exports, "SequenceError", { enumerable: true, get: function () { return SequenceError_1.SequenceError; } });
+var timeout_1 = require("./internal/operators/timeout");
+Object.defineProperty(exports, "TimeoutError", { enumerable: true, get: function () { return timeout_1.TimeoutError; } });
+var UnsubscriptionError_1 = require("./internal/util/UnsubscriptionError");
+Object.defineProperty(exports, "UnsubscriptionError", { enumerable: true, get: function () { return UnsubscriptionError_1.UnsubscriptionError; } });
+var bindCallback_1 = require("./internal/observable/bindCallback");
+Object.defineProperty(exports, "bindCallback", { enumerable: true, get: function () { return bindCallback_1.bindCallback; } });
+var bindNodeCallback_1 = require("./internal/observable/bindNodeCallback");
+Object.defineProperty(exports, "bindNodeCallback", { enumerable: true, get: function () { return bindNodeCallback_1.bindNodeCallback; } });
+var combineLatest_1 = require("./internal/observable/combineLatest");
+Object.defineProperty(exports, "combineLatest", { enumerable: true, get: function () { return combineLatest_1.combineLatest; } });
+var concat_1 = require("./internal/observable/concat");
+Object.defineProperty(exports, "concat", { enumerable: true, get: function () { return concat_1.concat; } });
+var connectable_1 = require("./internal/observable/connectable");
+Object.defineProperty(exports, "connectable", { enumerable: true, get: function () { return connectable_1.connectable; } });
+var defer_1 = require("./internal/observable/defer");
+Object.defineProperty(exports, "defer", { enumerable: true, get: function () { return defer_1.defer; } });
+var empty_1 = require("./internal/observable/empty");
+Object.defineProperty(exports, "empty", { enumerable: true, get: function () { return empty_1.empty; } });
+var forkJoin_1 = require("./internal/observable/forkJoin");
+Object.defineProperty(exports, "forkJoin", { enumerable: true, get: function () { return forkJoin_1.forkJoin; } });
+var from_1 = require("./internal/observable/from");
+Object.defineProperty(exports, "from", { enumerable: true, get: function () { return from_1.from; } });
+var fromEvent_1 = require("./internal/observable/fromEvent");
+Object.defineProperty(exports, "fromEvent", { enumerable: true, get: function () { return fromEvent_1.fromEvent; } });
+var fromEventPattern_1 = require("./internal/observable/fromEventPattern");
+Object.defineProperty(exports, "fromEventPattern", { enumerable: true, get: function () { return fromEventPattern_1.fromEventPattern; } });
+var generate_1 = require("./internal/observable/generate");
+Object.defineProperty(exports, "generate", { enumerable: true, get: function () { return generate_1.generate; } });
+var iif_1 = require("./internal/observable/iif");
+Object.defineProperty(exports, "iif", { enumerable: true, get: function () { return iif_1.iif; } });
+var interval_1 = require("./internal/observable/interval");
+Object.defineProperty(exports, "interval", { enumerable: true, get: function () { return interval_1.interval; } });
+var merge_1 = require("./internal/observable/merge");
+Object.defineProperty(exports, "merge", { enumerable: true, get: function () { return merge_1.merge; } });
+var never_1 = require("./internal/observable/never");
+Object.defineProperty(exports, "never", { enumerable: true, get: function () { return never_1.never; } });
+var of_1 = require("./internal/observable/of");
+Object.defineProperty(exports, "of", { enumerable: true, get: function () { return of_1.of; } });
+var onErrorResumeNext_1 = require("./internal/observable/onErrorResumeNext");
+Object.defineProperty(exports, "onErrorResumeNext", { enumerable: true, get: function () { return onErrorResumeNext_1.onErrorResumeNext; } });
+var pairs_1 = require("./internal/observable/pairs");
+Object.defineProperty(exports, "pairs", { enumerable: true, get: function () { return pairs_1.pairs; } });
+var partition_1 = require("./internal/observable/partition");
+Object.defineProperty(exports, "partition", { enumerable: true, get: function () { return partition_1.partition; } });
+var race_1 = require("./internal/observable/race");
+Object.defineProperty(exports, "race", { enumerable: true, get: function () { return race_1.race; } });
+var range_1 = require("./internal/observable/range");
+Object.defineProperty(exports, "range", { enumerable: true, get: function () { return range_1.range; } });
+var throwError_1 = require("./internal/observable/throwError");
+Object.defineProperty(exports, "throwError", { enumerable: true, get: function () { return throwError_1.throwError; } });
+var timer_1 = require("./internal/observable/timer");
+Object.defineProperty(exports, "timer", { enumerable: true, get: function () { return timer_1.timer; } });
+var using_1 = require("./internal/observable/using");
+Object.defineProperty(exports, "using", { enumerable: true, get: function () { return using_1.using; } });
+var zip_1 = require("./internal/observable/zip");
+Object.defineProperty(exports, "zip", { enumerable: true, get: function () { return zip_1.zip; } });
+var scheduled_1 = require("./internal/scheduled/scheduled");
+Object.defineProperty(exports, "scheduled", { enumerable: true, get: function () { return scheduled_1.scheduled; } });
+var empty_2 = require("./internal/observable/empty");
+Object.defineProperty(exports, "EMPTY", { enumerable: true, get: function () { return empty_2.EMPTY; } });
+var never_2 = require("./internal/observable/never");
+Object.defineProperty(exports, "NEVER", { enumerable: true, get: function () { return never_2.NEVER; } });
+__exportStar(require("./internal/types"), exports);
+var config_1 = require("./internal/config");
+Object.defineProperty(exports, "config", { enumerable: true, get: function () { return config_1.config; } });
+
+},{"./internal/Observable":"6XfFQ","./internal/observable/ConnectableObservable":"3B9kX","./internal/symbol/observable":"3EZgt","./internal/observable/dom/animationFrames":"25HgK","./internal/Subject":"CTCrE","./internal/BehaviorSubject":"1BSll","./internal/ReplaySubject":"7ewvk","./internal/AsyncSubject":"OZRwe","./internal/scheduler/asap":"6EbLW","./internal/scheduler/async":"5ysvr","./internal/scheduler/queue":"3YH6F","./internal/scheduler/animationFrame":"5T66N","./internal/scheduler/VirtualTimeScheduler":"xGadC","./internal/Scheduler":"4uCy0","./internal/Subscription":"55zJP","./internal/Subscriber":"1ew17","./internal/Notification":"6rp8f","./internal/util/pipe":"2vIS3","./internal/util/noop":"2s9LI","./internal/util/identity":"2QJLj","./internal/util/isObservable":"3VXNH","./internal/lastValueFrom":"1W7DR","./internal/firstValueFrom":"5wc49","./internal/util/ArgumentOutOfRangeError":"4Xzvo","./internal/util/EmptyError":"63brV","./internal/util/NotFoundError":"ZITwI","./internal/util/ObjectUnsubscribedError":"11G9r","./internal/util/SequenceError":"3yeE8","./internal/operators/timeout":"4fjS3","./internal/util/UnsubscriptionError":"2Cu79","./internal/observable/bindCallback":"5GyYi","./internal/observable/bindNodeCallback":"6Uys1","./internal/observable/combineLatest":"wOUJf","./internal/observable/concat":"3qROP","./internal/observable/connectable":"2YaUG","./internal/observable/defer":"6CxUm","./internal/observable/empty":"2Zbmy","./internal/observable/forkJoin":"1UQr7","./internal/observable/from":"Fatr8","./internal/observable/fromEvent":"4a11j","./internal/observable/fromEventPattern":"21Udi","./internal/observable/generate":"3pBIw","./internal/observable/iif":"5ps6j","./internal/observable/interval":"aMShB","./internal/observable/merge":"3u8OG","./internal/observable/never":"2htjn","./internal/observable/of":"745Yx","./internal/observable/onErrorResumeNext":"78agF","./internal/observable/pairs":"3vJ31","./internal/observable/partition":"7lv9y","./internal/observable/race":"1MY0M","./internal/observable/range":"1MLuR","./internal/observable/throwError":"6xzeK","./internal/observable/timer":"MBto6","./internal/observable/using":"1yWKa","./internal/observable/zip":"3Wymr","./internal/scheduled/scheduled":"3LGAO","./internal/types":"69AK9","./internal/config":"4ddy5"}],"6XfFQ":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Observable = void 0;
+var Subscriber_1 = require("./Subscriber");
+var Subscription_1 = require("./Subscription");
+var observable_1 = require("./symbol/observable");
+var pipe_1 = require("./util/pipe");
+var config_1 = require("./config");
+var isFunction_1 = require("./util/isFunction");
+var Observable = (function () {
+    function Observable(subscribe) {
+        if (subscribe) {
+            this._subscribe = subscribe;
+        }
+    }
+    Observable.prototype.lift = function (operator) {
+        var observable = new Observable();
+        observable.source = this;
+        observable.operator = operator;
+        return observable;
+    };
+    Observable.prototype.subscribe = function (observerOrNext, error, complete) {
+        var subscriber = isSubscriber(observerOrNext) ? observerOrNext : new Subscriber_1.SafeSubscriber(observerOrNext, error, complete);
+        if (config_1.config.useDeprecatedSynchronousErrorHandling) {
+            this._deprecatedSyncErrorSubscribe(subscriber);
+        }
+        else {
+            var _a = this, operator = _a.operator, source = _a.source;
+            subscriber.add(operator
+                ?
+                    operator.call(subscriber, source)
+                : source
+                    ?
+                        this._subscribe(subscriber)
+                    :
+                        this._trySubscribe(subscriber));
+        }
+        return subscriber;
+    };
+    Observable.prototype._deprecatedSyncErrorSubscribe = function (subscriber) {
+        var localSubscriber = subscriber;
+        localSubscriber._syncErrorHack_isSubscribing = true;
+        var operator = this.operator;
+        if (operator) {
+            subscriber.add(operator.call(subscriber, this.source));
+        }
+        else {
+            try {
+                subscriber.add(this._subscribe(subscriber));
+            }
+            catch (err) {
+                localSubscriber.__syncError = err;
+            }
+        }
+        var dest = localSubscriber;
+        while (dest) {
+            if ('__syncError' in dest) {
+                try {
+                    throw dest.__syncError;
+                }
+                finally {
+                    subscriber.unsubscribe();
+                }
+            }
+            dest = dest.destination;
+        }
+        localSubscriber._syncErrorHack_isSubscribing = false;
+    };
+    Observable.prototype._trySubscribe = function (sink) {
+        try {
+            return this._subscribe(sink);
+        }
+        catch (err) {
+            sink.error(err);
+        }
+    };
+    Observable.prototype.forEach = function (next, promiseCtor) {
+        var _this = this;
+        promiseCtor = getPromiseCtor(promiseCtor);
+        return new promiseCtor(function (resolve, reject) {
+            var subscription;
+            subscription = _this.subscribe(function (value) {
+                try {
+                    next(value);
+                }
+                catch (err) {
+                    reject(err);
+                    subscription === null || subscription === void 0 ? void 0 : subscription.unsubscribe();
+                }
+            }, reject, resolve);
+        });
+    };
+    Observable.prototype._subscribe = function (subscriber) {
+        var _a;
+        return (_a = this.source) === null || _a === void 0 ? void 0 : _a.subscribe(subscriber);
+    };
+    Observable.prototype[observable_1.observable] = function () {
+        return this;
+    };
+    Observable.prototype.pipe = function () {
+        var operations = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            operations[_i] = arguments[_i];
+        }
+        return operations.length ? pipe_1.pipeFromArray(operations)(this) : this;
+    };
+    Observable.prototype.toPromise = function (promiseCtor) {
+        var _this = this;
+        promiseCtor = getPromiseCtor(promiseCtor);
+        return new promiseCtor(function (resolve, reject) {
+            var value;
+            _this.subscribe(function (x) { return (value = x); }, function (err) { return reject(err); }, function () { return resolve(value); });
+        });
+    };
+    Observable.create = function (subscribe) {
+        return new Observable(subscribe);
+    };
+    return Observable;
+}());
+exports.Observable = Observable;
+function getPromiseCtor(promiseCtor) {
+    var _a;
+    return (_a = promiseCtor !== null && promiseCtor !== void 0 ? promiseCtor : config_1.config.Promise) !== null && _a !== void 0 ? _a : Promise;
+}
+function isObserver(value) {
+    return value && isFunction_1.isFunction(value.next) && isFunction_1.isFunction(value.error) && isFunction_1.isFunction(value.complete);
+}
+function isSubscriber(value) {
+    return (value && value instanceof Subscriber_1.Subscriber) || (isObserver(value) && Subscription_1.isSubscription(value));
+}
+
+},{"./Subscriber":"1ew17","./Subscription":"55zJP","./symbol/observable":"3EZgt","./util/pipe":"2vIS3","./config":"4ddy5","./util/isFunction":"1rux0"}],"1ew17":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EMPTY_OBSERVER = exports.SafeSubscriber = exports.Subscriber = void 0;
+var isFunction_1 = require("./util/isFunction");
+var Subscription_1 = require("./Subscription");
+var config_1 = require("./config");
+var reportUnhandledError_1 = require("./util/reportUnhandledError");
+var noop_1 = require("./util/noop");
+var NotificationFactories_1 = require("./NotificationFactories");
+var timeoutProvider_1 = require("./scheduler/timeoutProvider");
+var Subscriber = (function (_super) {
+    __extends(Subscriber, _super);
+    function Subscriber(destination) {
+        var _this = _super.call(this) || this;
+        _this.isStopped = false;
+        if (destination) {
+            _this.destination = destination;
+            if (Subscription_1.isSubscription(destination)) {
+                destination.add(_this);
+            }
+        }
+        else {
+            _this.destination = exports.EMPTY_OBSERVER;
+        }
+        return _this;
+    }
+    Subscriber.create = function (next, error, complete) {
+        return new SafeSubscriber(next, error, complete);
+    };
+    Subscriber.prototype.next = function (value) {
+        if (this.isStopped) {
+            handleStoppedNotification(NotificationFactories_1.nextNotification(value), this);
+        }
+        else {
+            this._next(value);
+        }
+    };
+    Subscriber.prototype.error = function (err) {
+        if (this.isStopped) {
+            handleStoppedNotification(NotificationFactories_1.errorNotification(err), this);
+        }
+        else {
+            this.isStopped = true;
+            this._error(err);
+        }
+    };
+    Subscriber.prototype.complete = function () {
+        if (this.isStopped) {
+            handleStoppedNotification(NotificationFactories_1.COMPLETE_NOTIFICATION, this);
+        }
+        else {
+            this.isStopped = true;
+            this._complete();
+        }
+    };
+    Subscriber.prototype.unsubscribe = function () {
+        if (!this.closed) {
+            this.isStopped = true;
+            _super.prototype.unsubscribe.call(this);
+            this.destination = null;
+        }
+    };
+    Subscriber.prototype._next = function (value) {
+        this.destination.next(value);
+    };
+    Subscriber.prototype._error = function (err) {
+        try {
+            this.destination.error(err);
+        }
+        finally {
+            this.unsubscribe();
+        }
+    };
+    Subscriber.prototype._complete = function () {
+        try {
+            this.destination.complete();
+        }
+        finally {
+            this.unsubscribe();
+        }
+    };
+    return Subscriber;
+}(Subscription_1.Subscription));
+exports.Subscriber = Subscriber;
+var SafeSubscriber = (function (_super) {
+    __extends(SafeSubscriber, _super);
+    function SafeSubscriber(observerOrNext, error, complete) {
+        var _this = _super.call(this) || this;
+        var next;
+        if (isFunction_1.isFunction(observerOrNext)) {
+            next = observerOrNext;
+        }
+        else if (observerOrNext) {
+            (next = observerOrNext.next, error = observerOrNext.error, complete = observerOrNext.complete);
+            var context_1;
+            if (_this && config_1.config.useDeprecatedNextContext) {
+                context_1 = Object.create(observerOrNext);
+                context_1.unsubscribe = function () { return _this.unsubscribe(); };
+            }
+            else {
+                context_1 = observerOrNext;
+            }
+            next = next === null || next === void 0 ? void 0 : next.bind(context_1);
+            error = error === null || error === void 0 ? void 0 : error.bind(context_1);
+            complete = complete === null || complete === void 0 ? void 0 : complete.bind(context_1);
+        }
+        _this.destination = {
+            next: next ? wrapForErrorHandling(next, _this) : noop_1.noop,
+            error: wrapForErrorHandling(error !== null && error !== void 0 ? error : defaultErrorHandler, _this),
+            complete: complete ? wrapForErrorHandling(complete, _this) : noop_1.noop,
+        };
+        return _this;
+    }
+    return SafeSubscriber;
+}(Subscriber));
+exports.SafeSubscriber = SafeSubscriber;
+function wrapForErrorHandling(handler, instance) {
+    return function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        try {
+            handler.apply(void 0, __spreadArray([], __read(args)));
+        }
+        catch (err) {
+            if (config_1.config.useDeprecatedSynchronousErrorHandling) {
+                if (instance._syncErrorHack_isSubscribing) {
+                    instance.__syncError = err;
+                }
+                else {
+                    throw err;
+                }
+            }
+            else {
+                reportUnhandledError_1.reportUnhandledError(err);
+            }
+        }
+    };
+}
+function defaultErrorHandler(err) {
+    throw err;
+}
+function handleStoppedNotification(notification, subscriber) {
+    var onStoppedNotification = config_1.config.onStoppedNotification;
+    onStoppedNotification && timeoutProvider_1.timeoutProvider.setTimeout(function () { return onStoppedNotification(notification, subscriber); });
+}
+exports.EMPTY_OBSERVER = {
+    closed: true,
+    next: noop_1.noop,
+    error: defaultErrorHandler,
+    complete: noop_1.noop,
+};
+
+},{"./util/isFunction":"1rux0","./Subscription":"55zJP","./config":"4ddy5","./util/reportUnhandledError":"2980V","./util/noop":"2s9LI","./NotificationFactories":"LKkZb","./scheduler/timeoutProvider":"1Wqve"}],"1rux0":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isFunction = void 0;
+function isFunction(value) {
+    return typeof value === 'function';
+}
+exports.isFunction = isFunction;
+
+},{}],"55zJP":[function(require,module,exports) {
+"use strict";
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isSubscription = exports.EMPTY_SUBSCRIPTION = exports.Subscription = void 0;
+var isFunction_1 = require("./util/isFunction");
+var UnsubscriptionError_1 = require("./util/UnsubscriptionError");
+var arrRemove_1 = require("./util/arrRemove");
+var Subscription = (function () {
+    function Subscription(initialTeardown) {
+        this.initialTeardown = initialTeardown;
+        this.closed = false;
+        this._parentage = null;
+        this._teardowns = null;
+    }
+    Subscription.prototype.unsubscribe = function () {
+        var e_1, _a, e_2, _b;
+        var errors;
+        if (!this.closed) {
+            this.closed = true;
+            var _parentage = this._parentage;
+            if (_parentage) {
+                this._parentage = null;
+                if (Array.isArray(_parentage)) {
+                    try {
+                        for (var _parentage_1 = __values(_parentage), _parentage_1_1 = _parentage_1.next(); !_parentage_1_1.done; _parentage_1_1 = _parentage_1.next()) {
+                            var parent_1 = _parentage_1_1.value;
+                            parent_1.remove(this);
+                        }
+                    }
+                    catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                    finally {
+                        try {
+                            if (_parentage_1_1 && !_parentage_1_1.done && (_a = _parentage_1.return)) _a.call(_parentage_1);
+                        }
+                        finally { if (e_1) throw e_1.error; }
+                    }
+                }
+                else {
+                    _parentage.remove(this);
+                }
+            }
+            var initialTeardown = this.initialTeardown;
+            if (isFunction_1.isFunction(initialTeardown)) {
+                try {
+                    initialTeardown();
+                }
+                catch (e) {
+                    errors = e instanceof UnsubscriptionError_1.UnsubscriptionError ? e.errors : [e];
+                }
+            }
+            var _teardowns = this._teardowns;
+            if (_teardowns) {
+                this._teardowns = null;
+                try {
+                    for (var _teardowns_1 = __values(_teardowns), _teardowns_1_1 = _teardowns_1.next(); !_teardowns_1_1.done; _teardowns_1_1 = _teardowns_1.next()) {
+                        var teardown_1 = _teardowns_1_1.value;
+                        try {
+                            execTeardown(teardown_1);
+                        }
+                        catch (err) {
+                            errors = errors !== null && errors !== void 0 ? errors : [];
+                            if (err instanceof UnsubscriptionError_1.UnsubscriptionError) {
+                                errors = __spreadArray(__spreadArray([], __read(errors)), __read(err.errors));
+                            }
+                            else {
+                                errors.push(err);
+                            }
+                        }
+                    }
+                }
+                catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                finally {
+                    try {
+                        if (_teardowns_1_1 && !_teardowns_1_1.done && (_b = _teardowns_1.return)) _b.call(_teardowns_1);
+                    }
+                    finally { if (e_2) throw e_2.error; }
+                }
+            }
+            if (errors) {
+                throw new UnsubscriptionError_1.UnsubscriptionError(errors);
+            }
+        }
+    };
+    Subscription.prototype.add = function (teardown) {
+        var _a;
+        if (teardown && teardown !== this) {
+            if (this.closed) {
+                execTeardown(teardown);
+            }
+            else {
+                if (teardown instanceof Subscription) {
+                    if (teardown.closed || teardown._hasParent(this)) {
+                        return;
+                    }
+                    teardown._addParent(this);
+                }
+                (this._teardowns = (_a = this._teardowns) !== null && _a !== void 0 ? _a : []).push(teardown);
+            }
+        }
+    };
+    Subscription.prototype._hasParent = function (parent) {
+        var _parentage = this._parentage;
+        return _parentage === parent || (Array.isArray(_parentage) && _parentage.includes(parent));
+    };
+    Subscription.prototype._addParent = function (parent) {
+        var _parentage = this._parentage;
+        this._parentage = Array.isArray(_parentage) ? (_parentage.push(parent), _parentage) : _parentage ? [_parentage, parent] : parent;
+    };
+    Subscription.prototype._removeParent = function (parent) {
+        var _parentage = this._parentage;
+        if (_parentage === parent) {
+            this._parentage = null;
+        }
+        else if (Array.isArray(_parentage)) {
+            arrRemove_1.arrRemove(_parentage, parent);
+        }
+    };
+    Subscription.prototype.remove = function (teardown) {
+        var _teardowns = this._teardowns;
+        _teardowns && arrRemove_1.arrRemove(_teardowns, teardown);
+        if (teardown instanceof Subscription) {
+            teardown._removeParent(this);
+        }
+    };
+    Subscription.EMPTY = (function () {
+        var empty = new Subscription();
+        empty.closed = true;
+        return empty;
+    })();
+    return Subscription;
+}());
+exports.Subscription = Subscription;
+exports.EMPTY_SUBSCRIPTION = Subscription.EMPTY;
+function isSubscription(value) {
+    return (value instanceof Subscription ||
+        (value && 'closed' in value && isFunction_1.isFunction(value.remove) && isFunction_1.isFunction(value.add) && isFunction_1.isFunction(value.unsubscribe)));
+}
+exports.isSubscription = isSubscription;
+function execTeardown(teardown) {
+    if (isFunction_1.isFunction(teardown)) {
+        teardown();
+    }
+    else {
+        teardown.unsubscribe();
+    }
+}
+
+},{"./util/isFunction":"1rux0","./util/UnsubscriptionError":"2Cu79","./util/arrRemove":"4Y9kk"}],"2Cu79":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnsubscriptionError = void 0;
+var createErrorClass_1 = require("./createErrorClass");
+exports.UnsubscriptionError = createErrorClass_1.createErrorClass(function (_super) {
+    return function UnsubscriptionErrorImpl(errors) {
+        _super(this);
+        this.message = errors
+            ? errors.length + " errors occurred during unsubscription:\n" + errors.map(function (err, i) { return i + 1 + ") " + err.toString(); }).join('\n  ')
+            : '';
+        this.name = 'UnsubscriptionError';
+        this.errors = errors;
+    };
+});
+
+},{"./createErrorClass":"4TwIo"}],"4TwIo":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createErrorClass = void 0;
+function createErrorClass(createImpl) {
+    var _super = function (instance) {
+        Error.call(instance);
+        instance.stack = new Error().stack;
+    };
+    var ctorFunc = createImpl(_super);
+    ctorFunc.prototype = Object.create(Error.prototype);
+    ctorFunc.prototype.constructor = ctorFunc;
+    return ctorFunc;
+}
+exports.createErrorClass = createErrorClass;
+
+},{}],"4Y9kk":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.arrRemove = void 0;
+function arrRemove(arr, item) {
+    if (arr) {
+        var index = arr.indexOf(item);
+        0 <= index && arr.splice(index, 1);
+    }
+}
+exports.arrRemove = arrRemove;
+
+},{}],"4ddy5":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.config = void 0;
+exports.config = {
+    onUnhandledError: null,
+    onStoppedNotification: null,
+    Promise: undefined,
+    useDeprecatedSynchronousErrorHandling: false,
+    useDeprecatedNextContext: false,
+};
+
+},{}],"2980V":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.reportUnhandledError = void 0;
+var config_1 = require("../config");
+var timeoutProvider_1 = require("../scheduler/timeoutProvider");
+function reportUnhandledError(err) {
+    timeoutProvider_1.timeoutProvider.setTimeout(function () {
+        var onUnhandledError = config_1.config.onUnhandledError;
+        if (onUnhandledError) {
+            onUnhandledError(err);
+        }
+        else {
+            throw err;
+        }
+    });
+}
+exports.reportUnhandledError = reportUnhandledError;
+
+},{"../config":"4ddy5","../scheduler/timeoutProvider":"1Wqve"}],"1Wqve":[function(require,module,exports) {
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.timeoutProvider = void 0;
+exports.timeoutProvider = {
+    setTimeout: function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        var delegate = exports.timeoutProvider.delegate;
+        return ((delegate === null || delegate === void 0 ? void 0 : delegate.setTimeout) || setTimeout).apply(void 0, __spreadArray([], __read(args)));
+    },
+    clearTimeout: function (handle) {
+        var delegate = exports.timeoutProvider.delegate;
+        return ((delegate === null || delegate === void 0 ? void 0 : delegate.clearTimeout) || clearTimeout)(handle);
+    },
+    delegate: undefined,
+};
+
+},{}],"2s9LI":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.noop = void 0;
+function noop() { }
+exports.noop = noop;
+
+},{}],"LKkZb":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createNotification = exports.nextNotification = exports.errorNotification = exports.COMPLETE_NOTIFICATION = void 0;
+exports.COMPLETE_NOTIFICATION = (function () { return createNotification('C', undefined, undefined); })();
+function errorNotification(error) {
+    return createNotification('E', undefined, error);
+}
+exports.errorNotification = errorNotification;
+function nextNotification(value) {
+    return createNotification('N', value, undefined);
+}
+exports.nextNotification = nextNotification;
+function createNotification(kind, value, error) {
+    return {
+        kind: kind,
+        value: value,
+        error: error,
+    };
+}
+exports.createNotification = createNotification;
+
+},{}],"3EZgt":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.observable = void 0;
+exports.observable = (function () { return (typeof Symbol === 'function' && Symbol.observable) || '@@observable'; })();
+
+},{}],"2vIS3":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.pipeFromArray = exports.pipe = void 0;
+var identity_1 = require("./identity");
+function pipe() {
+    var fns = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        fns[_i] = arguments[_i];
+    }
+    return pipeFromArray(fns);
+}
+exports.pipe = pipe;
+function pipeFromArray(fns) {
+    if (fns.length === 0) {
+        return identity_1.identity;
+    }
+    if (fns.length === 1) {
+        return fns[0];
+    }
+    return function piped(input) {
+        return fns.reduce(function (prev, fn) { return fn(prev); }, input);
+    };
+}
+exports.pipeFromArray = pipeFromArray;
+
+},{"./identity":"2QJLj"}],"2QJLj":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.identity = void 0;
+function identity(x) {
+    return x;
+}
+exports.identity = identity;
+
+},{}],"3B9kX":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectableObservable = void 0;
+var Observable_1 = require("../Observable");
+var Subscription_1 = require("../Subscription");
+var refCount_1 = require("../operators/refCount");
+var OperatorSubscriber_1 = require("../operators/OperatorSubscriber");
+var lift_1 = require("../util/lift");
+var ConnectableObservable = (function (_super) {
+    __extends(ConnectableObservable, _super);
+    function ConnectableObservable(source, subjectFactory) {
+        var _this = _super.call(this) || this;
+        _this.source = source;
+        _this.subjectFactory = subjectFactory;
+        _this._subject = null;
+        _this._refCount = 0;
+        _this._connection = null;
+        if (lift_1.hasLift(source)) {
+            _this.lift = source.lift;
+        }
+        return _this;
+    }
+    ConnectableObservable.prototype._subscribe = function (subscriber) {
+        return this.getSubject().subscribe(subscriber);
+    };
+    ConnectableObservable.prototype.getSubject = function () {
+        var subject = this._subject;
+        if (!subject || subject.isStopped) {
+            this._subject = this.subjectFactory();
+        }
+        return this._subject;
+    };
+    ConnectableObservable.prototype._teardown = function () {
+        this._refCount = 0;
+        var _connection = this._connection;
+        this._subject = this._connection = null;
+        _connection === null || _connection === void 0 ? void 0 : _connection.unsubscribe();
+    };
+    ConnectableObservable.prototype.connect = function () {
+        var _this = this;
+        var connection = this._connection;
+        if (!connection) {
+            connection = this._connection = new Subscription_1.Subscription();
+            var subject_1 = this.getSubject();
+            connection.add(this.source.subscribe(new OperatorSubscriber_1.OperatorSubscriber(subject_1, undefined, function () {
+                _this._teardown();
+                subject_1.complete();
+            }, function (err) {
+                _this._teardown();
+                subject_1.error(err);
+            }, function () { return _this._teardown(); })));
+            if (connection.closed) {
+                this._connection = null;
+                connection = Subscription_1.Subscription.EMPTY;
+            }
+        }
+        return connection;
+    };
+    ConnectableObservable.prototype.refCount = function () {
+        return refCount_1.refCount()(this);
+    };
+    return ConnectableObservable;
+}(Observable_1.Observable));
+exports.ConnectableObservable = ConnectableObservable;
+
+},{"../Observable":"6XfFQ","../Subscription":"55zJP","../operators/refCount":"bJjLi","../operators/OperatorSubscriber":"3gY6m","../util/lift":"3Hhm5"}],"bJjLi":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.refCount = void 0;
+var lift_1 = require("../util/lift");
+var OperatorSubscriber_1 = require("./OperatorSubscriber");
+function refCount() {
+    return lift_1.operate(function (source, subscriber) {
+        var connection = null;
+        source._refCount++;
+        var refCounter = new OperatorSubscriber_1.OperatorSubscriber(subscriber, undefined, undefined, undefined, function () {
+            if (!source || source._refCount <= 0 || 0 < --source._refCount) {
+                connection = null;
+                return;
+            }
+            var sharedConnection = source._connection;
+            var conn = connection;
+            connection = null;
+            if (sharedConnection && (!conn || sharedConnection === conn)) {
+                sharedConnection.unsubscribe();
+            }
+            subscriber.unsubscribe();
+        });
+        source.subscribe(refCounter);
+        if (!refCounter.closed) {
+            connection = source.connect();
+        }
+    });
+}
+exports.refCount = refCount;
+
+},{"../util/lift":"3Hhm5","./OperatorSubscriber":"3gY6m"}],"3Hhm5":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.operate = exports.hasLift = void 0;
+var isFunction_1 = require("./isFunction");
+function hasLift(source) {
+    return isFunction_1.isFunction(source === null || source === void 0 ? void 0 : source.lift);
+}
+exports.hasLift = hasLift;
+function operate(init) {
+    return function (source) {
+        if (hasLift(source)) {
+            return source.lift(function (liftedSource) {
+                try {
+                    return init(liftedSource, this);
+                }
+                catch (err) {
+                    this.error(err);
+                }
+            });
+        }
+        throw new TypeError('Unable to lift unknown Observable type');
+    };
+}
+exports.operate = operate;
+
+},{"./isFunction":"1rux0"}],"3gY6m":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperatorSubscriber = void 0;
+var Subscriber_1 = require("../Subscriber");
+var OperatorSubscriber = (function (_super) {
+    __extends(OperatorSubscriber, _super);
+    function OperatorSubscriber(destination, onNext, onComplete, onError, onFinalize) {
+        var _this = _super.call(this, destination) || this;
+        _this.onFinalize = onFinalize;
+        _this._next = onNext
+            ? function (value) {
+                try {
+                    onNext(value);
+                }
+                catch (err) {
+                    destination.error(err);
+                }
+            }
+            : _super.prototype._next;
+        _this._error = onError
+            ? function (err) {
+                try {
+                    onError(err);
+                }
+                catch (err) {
+                    destination.error(err);
+                }
+                finally {
+                    this.unsubscribe();
+                }
+            }
+            : _super.prototype._error;
+        _this._complete = onComplete
+            ? function () {
+                try {
+                    onComplete();
+                }
+                catch (err) {
+                    destination.error(err);
+                }
+                finally {
+                    this.unsubscribe();
+                }
+            }
+            : _super.prototype._complete;
+        return _this;
+    }
+    OperatorSubscriber.prototype.unsubscribe = function () {
+        var _a;
+        var closed = this.closed;
+        _super.prototype.unsubscribe.call(this);
+        !closed && ((_a = this.onFinalize) === null || _a === void 0 ? void 0 : _a.call(this));
+    };
+    return OperatorSubscriber;
+}(Subscriber_1.Subscriber));
+exports.OperatorSubscriber = OperatorSubscriber;
+
+},{"../Subscriber":"1ew17"}],"25HgK":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.animationFrames = void 0;
+var Observable_1 = require("../../Observable");
+var Subscription_1 = require("../../Subscription");
+var performanceTimestampProvider_1 = require("../../scheduler/performanceTimestampProvider");
+var animationFrameProvider_1 = require("../../scheduler/animationFrameProvider");
+function animationFrames(timestampProvider) {
+    return timestampProvider ? animationFramesFactory(timestampProvider) : DEFAULT_ANIMATION_FRAMES;
+}
+exports.animationFrames = animationFrames;
+function animationFramesFactory(timestampProvider) {
+    var schedule = animationFrameProvider_1.animationFrameProvider.schedule;
+    return new Observable_1.Observable(function (subscriber) {
+        var subscription = new Subscription_1.Subscription();
+        var provider = timestampProvider || performanceTimestampProvider_1.performanceTimestampProvider;
+        var start = provider.now();
+        var run = function (timestamp) {
+            var now = provider.now();
+            subscriber.next({
+                timestamp: timestampProvider ? now : timestamp,
+                elapsed: now - start
+            });
+            if (!subscriber.closed) {
+                subscription.add(schedule(run));
+            }
+        };
+        subscription.add(schedule(run));
+        return subscription;
+    });
+}
+var DEFAULT_ANIMATION_FRAMES = animationFramesFactory();
+
+},{"../../Observable":"6XfFQ","../../Subscription":"55zJP","../../scheduler/performanceTimestampProvider":"4ZrEN","../../scheduler/animationFrameProvider":"5lHAX"}],"4ZrEN":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.performanceTimestampProvider = void 0;
+exports.performanceTimestampProvider = {
+    now: function () {
+        return (exports.performanceTimestampProvider.delegate || performance).now();
+    },
+    delegate: undefined,
+};
+
+},{}],"5lHAX":[function(require,module,exports) {
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.animationFrameProvider = void 0;
+var Subscription_1 = require("../Subscription");
+exports.animationFrameProvider = {
+    schedule: function (callback) {
+        var request = requestAnimationFrame;
+        var cancel = cancelAnimationFrame;
+        var delegate = exports.animationFrameProvider.delegate;
+        if (delegate) {
+            request = delegate.requestAnimationFrame;
+            cancel = delegate.cancelAnimationFrame;
+        }
+        var handle = request(function (timestamp) {
+            cancel = undefined;
+            callback(timestamp);
+        });
+        return new Subscription_1.Subscription(function () { return cancel === null || cancel === void 0 ? void 0 : cancel(handle); });
+    },
+    requestAnimationFrame: function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        var delegate = exports.animationFrameProvider.delegate;
+        return ((delegate === null || delegate === void 0 ? void 0 : delegate.requestAnimationFrame) || requestAnimationFrame).apply(void 0, __spreadArray([], __read(args)));
+    },
+    cancelAnimationFrame: function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        var delegate = exports.animationFrameProvider.delegate;
+        return ((delegate === null || delegate === void 0 ? void 0 : delegate.cancelAnimationFrame) || cancelAnimationFrame).apply(void 0, __spreadArray([], __read(args)));
+    },
+    delegate: undefined,
+};
+
+},{"../Subscription":"55zJP"}],"CTCrE":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnonymousSubject = exports.Subject = void 0;
+var Observable_1 = require("./Observable");
+var Subscription_1 = require("./Subscription");
+var ObjectUnsubscribedError_1 = require("./util/ObjectUnsubscribedError");
+var arrRemove_1 = require("./util/arrRemove");
+var Subject = (function (_super) {
+    __extends(Subject, _super);
+    function Subject() {
+        var _this = _super.call(this) || this;
+        _this.closed = false;
+        _this.observers = [];
+        _this.isStopped = false;
+        _this.hasError = false;
+        _this.thrownError = null;
+        return _this;
+    }
+    Subject.prototype.lift = function (operator) {
+        var subject = new AnonymousSubject(this, this);
+        subject.operator = operator;
+        return subject;
+    };
+    Subject.prototype._throwIfClosed = function () {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+    };
+    Subject.prototype.next = function (value) {
+        var e_1, _a;
+        this._throwIfClosed();
+        if (!this.isStopped) {
+            var copy = this.observers.slice();
+            try {
+                for (var copy_1 = __values(copy), copy_1_1 = copy_1.next(); !copy_1_1.done; copy_1_1 = copy_1.next()) {
+                    var observer = copy_1_1.value;
+                    observer.next(value);
+                }
+            }
+            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+            finally {
+                try {
+                    if (copy_1_1 && !copy_1_1.done && (_a = copy_1.return)) _a.call(copy_1);
+                }
+                finally { if (e_1) throw e_1.error; }
+            }
+        }
+    };
+    Subject.prototype.error = function (err) {
+        this._throwIfClosed();
+        if (!this.isStopped) {
+            this.hasError = this.isStopped = true;
+            this.thrownError = err;
+            var observers = this.observers;
+            while (observers.length) {
+                observers.shift().error(err);
+            }
+        }
+    };
+    Subject.prototype.complete = function () {
+        this._throwIfClosed();
+        if (!this.isStopped) {
+            this.isStopped = true;
+            var observers = this.observers;
+            while (observers.length) {
+                observers.shift().complete();
+            }
+        }
+    };
+    Subject.prototype.unsubscribe = function () {
+        this.isStopped = this.closed = true;
+        this.observers = null;
+    };
+    Object.defineProperty(Subject.prototype, "observed", {
+        get: function () {
+            var _a;
+            return ((_a = this.observers) === null || _a === void 0 ? void 0 : _a.length) > 0;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Subject.prototype._trySubscribe = function (subscriber) {
+        this._throwIfClosed();
+        return _super.prototype._trySubscribe.call(this, subscriber);
+    };
+    Subject.prototype._subscribe = function (subscriber) {
+        this._throwIfClosed();
+        this._checkFinalizedStatuses(subscriber);
+        return this._innerSubscribe(subscriber);
+    };
+    Subject.prototype._innerSubscribe = function (subscriber) {
+        var _a = this, hasError = _a.hasError, isStopped = _a.isStopped, observers = _a.observers;
+        return hasError || isStopped
+            ? Subscription_1.EMPTY_SUBSCRIPTION
+            : (observers.push(subscriber), new Subscription_1.Subscription(function () { return arrRemove_1.arrRemove(observers, subscriber); }));
+    };
+    Subject.prototype._checkFinalizedStatuses = function (subscriber) {
+        var _a = this, hasError = _a.hasError, thrownError = _a.thrownError, isStopped = _a.isStopped;
+        if (hasError) {
+            subscriber.error(thrownError);
+        }
+        else if (isStopped) {
+            subscriber.complete();
+        }
+    };
+    Subject.prototype.asObservable = function () {
+        var observable = new Observable_1.Observable();
+        observable.source = this;
+        return observable;
+    };
+    Subject.create = function (destination, source) {
+        return new AnonymousSubject(destination, source);
+    };
+    return Subject;
+}(Observable_1.Observable));
+exports.Subject = Subject;
+var AnonymousSubject = (function (_super) {
+    __extends(AnonymousSubject, _super);
+    function AnonymousSubject(destination, source) {
+        var _this = _super.call(this) || this;
+        _this.destination = destination;
+        _this.source = source;
+        return _this;
+    }
+    AnonymousSubject.prototype.next = function (value) {
+        var _a, _b;
+        (_b = (_a = this.destination) === null || _a === void 0 ? void 0 : _a.next) === null || _b === void 0 ? void 0 : _b.call(_a, value);
+    };
+    AnonymousSubject.prototype.error = function (err) {
+        var _a, _b;
+        (_b = (_a = this.destination) === null || _a === void 0 ? void 0 : _a.error) === null || _b === void 0 ? void 0 : _b.call(_a, err);
+    };
+    AnonymousSubject.prototype.complete = function () {
+        var _a, _b;
+        (_b = (_a = this.destination) === null || _a === void 0 ? void 0 : _a.complete) === null || _b === void 0 ? void 0 : _b.call(_a);
+    };
+    AnonymousSubject.prototype._subscribe = function (subscriber) {
+        var _a, _b;
+        return (_b = (_a = this.source) === null || _a === void 0 ? void 0 : _a.subscribe(subscriber)) !== null && _b !== void 0 ? _b : Subscription_1.EMPTY_SUBSCRIPTION;
+    };
+    return AnonymousSubject;
+}(Subject));
+exports.AnonymousSubject = AnonymousSubject;
+
+},{"./Observable":"6XfFQ","./Subscription":"55zJP","./util/ObjectUnsubscribedError":"11G9r","./util/arrRemove":"4Y9kk"}],"11G9r":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectUnsubscribedError = void 0;
+var createErrorClass_1 = require("./createErrorClass");
+exports.ObjectUnsubscribedError = createErrorClass_1.createErrorClass(function (_super) {
+    return function ObjectUnsubscribedErrorImpl() {
+        _super(this);
+        this.name = 'ObjectUnsubscribedError';
+        this.message = 'object unsubscribed';
+    };
+});
+
+},{"./createErrorClass":"4TwIo"}],"1BSll":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BehaviorSubject = void 0;
+var Subject_1 = require("./Subject");
+var BehaviorSubject = (function (_super) {
+    __extends(BehaviorSubject, _super);
+    function BehaviorSubject(_value) {
+        var _this = _super.call(this) || this;
+        _this._value = _value;
+        return _this;
+    }
+    Object.defineProperty(BehaviorSubject.prototype, "value", {
+        get: function () {
+            return this.getValue();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    BehaviorSubject.prototype._subscribe = function (subscriber) {
+        var subscription = _super.prototype._subscribe.call(this, subscriber);
+        !subscription.closed && subscriber.next(this._value);
+        return subscription;
+    };
+    BehaviorSubject.prototype.getValue = function () {
+        var _a = this, hasError = _a.hasError, thrownError = _a.thrownError, _value = _a._value;
+        if (hasError) {
+            throw thrownError;
+        }
+        this._throwIfClosed();
+        return _value;
+    };
+    BehaviorSubject.prototype.next = function (value) {
+        _super.prototype.next.call(this, (this._value = value));
+    };
+    return BehaviorSubject;
+}(Subject_1.Subject));
+exports.BehaviorSubject = BehaviorSubject;
+
+},{"./Subject":"CTCrE"}],"7ewvk":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplaySubject = void 0;
+var Subject_1 = require("./Subject");
+var dateTimestampProvider_1 = require("./scheduler/dateTimestampProvider");
+var ReplaySubject = (function (_super) {
+    __extends(ReplaySubject, _super);
+    function ReplaySubject(_bufferSize, _windowTime, _timestampProvider) {
+        if (_bufferSize === void 0) { _bufferSize = Infinity; }
+        if (_windowTime === void 0) { _windowTime = Infinity; }
+        if (_timestampProvider === void 0) { _timestampProvider = dateTimestampProvider_1.dateTimestampProvider; }
+        var _this = _super.call(this) || this;
+        _this._bufferSize = _bufferSize;
+        _this._windowTime = _windowTime;
+        _this._timestampProvider = _timestampProvider;
+        _this._buffer = [];
+        _this._infiniteTimeWindow = true;
+        _this._infiniteTimeWindow = _windowTime === Infinity;
+        _this._bufferSize = Math.max(1, _bufferSize);
+        _this._windowTime = Math.max(1, _windowTime);
+        return _this;
+    }
+    ReplaySubject.prototype.next = function (value) {
+        var _a = this, isStopped = _a.isStopped, _buffer = _a._buffer, _infiniteTimeWindow = _a._infiniteTimeWindow, _timestampProvider = _a._timestampProvider, _windowTime = _a._windowTime;
+        if (!isStopped) {
+            _buffer.push(value);
+            !_infiniteTimeWindow && _buffer.push(_timestampProvider.now() + _windowTime);
+        }
+        this._trimBuffer();
+        _super.prototype.next.call(this, value);
+    };
+    ReplaySubject.prototype._subscribe = function (subscriber) {
+        this._throwIfClosed();
+        this._trimBuffer();
+        var subscription = this._innerSubscribe(subscriber);
+        var _a = this, _infiniteTimeWindow = _a._infiniteTimeWindow, _buffer = _a._buffer;
+        var copy = _buffer.slice();
+        for (var i = 0; i < copy.length && !subscriber.closed; i += _infiniteTimeWindow ? 1 : 2) {
+            subscriber.next(copy[i]);
+        }
+        this._checkFinalizedStatuses(subscriber);
+        return subscription;
+    };
+    ReplaySubject.prototype._trimBuffer = function () {
+        var _a = this, _bufferSize = _a._bufferSize, _timestampProvider = _a._timestampProvider, _buffer = _a._buffer, _infiniteTimeWindow = _a._infiniteTimeWindow;
+        var adjustedBufferSize = (_infiniteTimeWindow ? 1 : 2) * _bufferSize;
+        _bufferSize < Infinity && adjustedBufferSize < _buffer.length && _buffer.splice(0, _buffer.length - adjustedBufferSize);
+        if (!_infiniteTimeWindow) {
+            var now = _timestampProvider.now();
+            var last = 0;
+            for (var i = 1; i < _buffer.length && _buffer[i] <= now; i += 2) {
+                last = i;
+            }
+            last && _buffer.splice(0, last + 1);
+        }
+    };
+    return ReplaySubject;
+}(Subject_1.Subject));
+exports.ReplaySubject = ReplaySubject;
+
+},{"./Subject":"CTCrE","./scheduler/dateTimestampProvider":"30F63"}],"30F63":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.dateTimestampProvider = void 0;
+exports.dateTimestampProvider = {
+    now: function () {
+        return (exports.dateTimestampProvider.delegate || Date).now();
+    },
+    delegate: undefined,
+};
+
+},{}],"OZRwe":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AsyncSubject = void 0;
+var Subject_1 = require("./Subject");
+var AsyncSubject = (function (_super) {
+    __extends(AsyncSubject, _super);
+    function AsyncSubject() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this._value = null;
+        _this._hasValue = false;
+        _this._isComplete = false;
+        return _this;
+    }
+    AsyncSubject.prototype._checkFinalizedStatuses = function (subscriber) {
+        var _a = this, hasError = _a.hasError, _hasValue = _a._hasValue, _value = _a._value, thrownError = _a.thrownError, isStopped = _a.isStopped;
+        if (hasError) {
+            subscriber.error(thrownError);
+        }
+        else if (isStopped) {
+            _hasValue && subscriber.next(_value);
+            subscriber.complete();
+        }
+    };
+    AsyncSubject.prototype.next = function (value) {
+        if (!this.isStopped) {
+            this._value = value;
+            this._hasValue = true;
+        }
+    };
+    AsyncSubject.prototype.complete = function () {
+        var _a = this, _hasValue = _a._hasValue, _value = _a._value, _isComplete = _a._isComplete;
+        if (!_isComplete) {
+            this._isComplete = true;
+            _hasValue && _super.prototype.next.call(this, _value);
+            _super.prototype.complete.call(this);
+        }
+    };
+    return AsyncSubject;
+}(Subject_1.Subject));
+exports.AsyncSubject = AsyncSubject;
+
+},{"./Subject":"CTCrE"}],"6EbLW":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.asap = exports.asapScheduler = void 0;
+var AsapAction_1 = require("./AsapAction");
+var AsapScheduler_1 = require("./AsapScheduler");
+exports.asapScheduler = new AsapScheduler_1.AsapScheduler(AsapAction_1.AsapAction);
+exports.asap = exports.asapScheduler;
+
+},{"./AsapAction":"6JMMr","./AsapScheduler":"Nxe97"}],"6JMMr":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AsapAction = void 0;
+var AsyncAction_1 = require("./AsyncAction");
+var immediateProvider_1 = require("./immediateProvider");
+var AsapAction = (function (_super) {
+    __extends(AsapAction, _super);
+    function AsapAction(scheduler, work) {
+        var _this = _super.call(this, scheduler, work) || this;
+        _this.scheduler = scheduler;
+        _this.work = work;
+        return _this;
+    }
+    AsapAction.prototype.requestAsyncId = function (scheduler, id, delay) {
+        if (delay === void 0) { delay = 0; }
+        if (delay !== null && delay > 0) {
+            return _super.prototype.requestAsyncId.call(this, scheduler, id, delay);
+        }
+        scheduler.actions.push(this);
+        return scheduler._scheduled || (scheduler._scheduled = immediateProvider_1.immediateProvider.setImmediate(scheduler.flush.bind(scheduler, undefined)));
+    };
+    AsapAction.prototype.recycleAsyncId = function (scheduler, id, delay) {
+        if (delay === void 0) { delay = 0; }
+        if ((delay != null && delay > 0) || (delay == null && this.delay > 0)) {
+            return _super.prototype.recycleAsyncId.call(this, scheduler, id, delay);
+        }
+        if (scheduler.actions.length === 0) {
+            immediateProvider_1.immediateProvider.clearImmediate(id);
+            scheduler._scheduled = undefined;
+        }
+        return undefined;
+    };
+    return AsapAction;
+}(AsyncAction_1.AsyncAction));
+exports.AsapAction = AsapAction;
+
+},{"./AsyncAction":"KAR0W","./immediateProvider":"4byTx"}],"KAR0W":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AsyncAction = void 0;
+var Action_1 = require("./Action");
+var intervalProvider_1 = require("./intervalProvider");
+var arrRemove_1 = require("../util/arrRemove");
+var AsyncAction = (function (_super) {
+    __extends(AsyncAction, _super);
+    function AsyncAction(scheduler, work) {
+        var _this = _super.call(this, scheduler, work) || this;
+        _this.scheduler = scheduler;
+        _this.work = work;
+        _this.pending = false;
+        return _this;
+    }
+    AsyncAction.prototype.schedule = function (state, delay) {
+        if (delay === void 0) { delay = 0; }
+        if (this.closed) {
+            return this;
+        }
+        this.state = state;
+        var id = this.id;
+        var scheduler = this.scheduler;
+        if (id != null) {
+            this.id = this.recycleAsyncId(scheduler, id, delay);
+        }
+        this.pending = true;
+        this.delay = delay;
+        this.id = this.id || this.requestAsyncId(scheduler, this.id, delay);
+        return this;
+    };
+    AsyncAction.prototype.requestAsyncId = function (scheduler, _id, delay) {
+        if (delay === void 0) { delay = 0; }
+        return intervalProvider_1.intervalProvider.setInterval(scheduler.flush.bind(scheduler, this), delay);
+    };
+    AsyncAction.prototype.recycleAsyncId = function (_scheduler, id, delay) {
+        if (delay === void 0) { delay = 0; }
+        if (delay != null && this.delay === delay && this.pending === false) {
+            return id;
+        }
+        intervalProvider_1.intervalProvider.clearInterval(id);
+        return undefined;
+    };
+    AsyncAction.prototype.execute = function (state, delay) {
+        if (this.closed) {
+            return new Error('executing a cancelled action');
+        }
+        this.pending = false;
+        var error = this._execute(state, delay);
+        if (error) {
+            return error;
+        }
+        else if (this.pending === false && this.id != null) {
+            this.id = this.recycleAsyncId(this.scheduler, this.id, null);
+        }
+    };
+    AsyncAction.prototype._execute = function (state, _delay) {
+        var errored = false;
+        var errorValue;
+        try {
+            this.work(state);
+        }
+        catch (e) {
+            errored = true;
+            errorValue = (!!e && e) || new Error(e);
+        }
+        if (errored) {
+            this.unsubscribe();
+            return errorValue;
+        }
+    };
+    AsyncAction.prototype.unsubscribe = function () {
+        if (!this.closed) {
+            var _a = this, id = _a.id, scheduler = _a.scheduler;
+            var actions = scheduler.actions;
+            this.work = this.state = this.scheduler = null;
+            this.pending = false;
+            arrRemove_1.arrRemove(actions, this);
+            if (id != null) {
+                this.id = this.recycleAsyncId(scheduler, id, null);
+            }
+            this.delay = null;
+            _super.prototype.unsubscribe.call(this);
+        }
+    };
+    return AsyncAction;
+}(Action_1.Action));
+exports.AsyncAction = AsyncAction;
+
+},{"./Action":"2DZ2a","./intervalProvider":"4QzKq","../util/arrRemove":"4Y9kk"}],"2DZ2a":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Action = void 0;
+var Subscription_1 = require("../Subscription");
+var Action = (function (_super) {
+    __extends(Action, _super);
+    function Action(scheduler, work) {
+        return _super.call(this) || this;
+    }
+    Action.prototype.schedule = function (state, delay) {
+        if (delay === void 0) { delay = 0; }
+        return this;
+    };
+    return Action;
+}(Subscription_1.Subscription));
+exports.Action = Action;
+
+},{"../Subscription":"55zJP"}],"4QzKq":[function(require,module,exports) {
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.intervalProvider = void 0;
+exports.intervalProvider = {
+    setInterval: function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        var delegate = exports.intervalProvider.delegate;
+        return ((delegate === null || delegate === void 0 ? void 0 : delegate.setInterval) || setInterval).apply(void 0, __spreadArray([], __read(args)));
+    },
+    clearInterval: function (handle) {
+        var delegate = exports.intervalProvider.delegate;
+        return ((delegate === null || delegate === void 0 ? void 0 : delegate.clearInterval) || clearInterval)(handle);
+    },
+    delegate: undefined,
+};
+
+},{}],"4byTx":[function(require,module,exports) {
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.immediateProvider = void 0;
+var Immediate_1 = require("../util/Immediate");
+var setImmediate = Immediate_1.Immediate.setImmediate, clearImmediate = Immediate_1.Immediate.clearImmediate;
+exports.immediateProvider = {
+    setImmediate: function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        var delegate = exports.immediateProvider.delegate;
+        return ((delegate === null || delegate === void 0 ? void 0 : delegate.setImmediate) || setImmediate).apply(void 0, __spreadArray([], __read(args)));
+    },
+    clearImmediate: function (handle) {
+        var delegate = exports.immediateProvider.delegate;
+        return ((delegate === null || delegate === void 0 ? void 0 : delegate.clearImmediate) || clearImmediate)(handle);
+    },
+    delegate: undefined,
+};
+
+},{"../util/Immediate":"5DcJq"}],"5DcJq":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestTools = exports.Immediate = void 0;
+var nextHandle = 1;
+var resolved;
+var activeHandles = {};
+function findAndClearHandle(handle) {
+    if (handle in activeHandles) {
+        delete activeHandles[handle];
+        return true;
+    }
+    return false;
+}
+exports.Immediate = {
+    setImmediate: function (cb) {
+        var handle = nextHandle++;
+        activeHandles[handle] = true;
+        if (!resolved) {
+            resolved = Promise.resolve();
+        }
+        resolved.then(function () { return findAndClearHandle(handle) && cb(); });
+        return handle;
+    },
+    clearImmediate: function (handle) {
+        findAndClearHandle(handle);
+    },
+};
+exports.TestTools = {
+    pending: function () {
+        return Object.keys(activeHandles).length;
+    }
+};
+
+},{}],"Nxe97":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AsapScheduler = void 0;
+var AsyncScheduler_1 = require("./AsyncScheduler");
+var AsapScheduler = (function (_super) {
+    __extends(AsapScheduler, _super);
+    function AsapScheduler() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    AsapScheduler.prototype.flush = function (action) {
+        this._active = true;
+        this._scheduled = undefined;
+        var actions = this.actions;
+        var error;
+        var index = -1;
+        action = action || actions.shift();
+        var count = actions.length;
+        do {
+            if ((error = action.execute(action.state, action.delay))) {
+                break;
+            }
+        } while (++index < count && (action = actions.shift()));
+        this._active = false;
+        if (error) {
+            while (++index < count && (action = actions.shift())) {
+                action.unsubscribe();
+            }
+            throw error;
+        }
+    };
+    return AsapScheduler;
+}(AsyncScheduler_1.AsyncScheduler));
+exports.AsapScheduler = AsapScheduler;
+
+},{"./AsyncScheduler":"38LRN"}],"38LRN":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AsyncScheduler = void 0;
+var Scheduler_1 = require("../Scheduler");
+var AsyncScheduler = (function (_super) {
+    __extends(AsyncScheduler, _super);
+    function AsyncScheduler(SchedulerAction, now) {
+        if (now === void 0) { now = Scheduler_1.Scheduler.now; }
+        var _this = _super.call(this, SchedulerAction, now) || this;
+        _this.actions = [];
+        _this._active = false;
+        _this._scheduled = undefined;
+        return _this;
+    }
+    AsyncScheduler.prototype.flush = function (action) {
+        var actions = this.actions;
+        if (this._active) {
+            actions.push(action);
+            return;
+        }
+        var error;
+        this._active = true;
+        do {
+            if ((error = action.execute(action.state, action.delay))) {
+                break;
+            }
+        } while ((action = actions.shift()));
+        this._active = false;
+        if (error) {
+            while ((action = actions.shift())) {
+                action.unsubscribe();
+            }
+            throw error;
+        }
+    };
+    return AsyncScheduler;
+}(Scheduler_1.Scheduler));
+exports.AsyncScheduler = AsyncScheduler;
+
+},{"../Scheduler":"4uCy0"}],"4uCy0":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Scheduler = void 0;
+var dateTimestampProvider_1 = require("./scheduler/dateTimestampProvider");
+var Scheduler = (function () {
+    function Scheduler(schedulerActionCtor, now) {
+        if (now === void 0) { now = Scheduler.now; }
+        this.schedulerActionCtor = schedulerActionCtor;
+        this.now = now;
+    }
+    Scheduler.prototype.schedule = function (work, delay, state) {
+        if (delay === void 0) { delay = 0; }
+        return new this.schedulerActionCtor(this, work).schedule(state, delay);
+    };
+    Scheduler.now = dateTimestampProvider_1.dateTimestampProvider.now;
+    return Scheduler;
+}());
+exports.Scheduler = Scheduler;
+
+},{"./scheduler/dateTimestampProvider":"30F63"}],"5ysvr":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.async = exports.asyncScheduler = void 0;
+var AsyncAction_1 = require("./AsyncAction");
+var AsyncScheduler_1 = require("./AsyncScheduler");
+exports.asyncScheduler = new AsyncScheduler_1.AsyncScheduler(AsyncAction_1.AsyncAction);
+exports.async = exports.asyncScheduler;
+
+},{"./AsyncAction":"KAR0W","./AsyncScheduler":"38LRN"}],"3YH6F":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.queue = exports.queueScheduler = void 0;
+var QueueAction_1 = require("./QueueAction");
+var QueueScheduler_1 = require("./QueueScheduler");
+exports.queueScheduler = new QueueScheduler_1.QueueScheduler(QueueAction_1.QueueAction);
+exports.queue = exports.queueScheduler;
+
+},{"./QueueAction":"1wHkV","./QueueScheduler":"20At9"}],"1wHkV":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueueAction = void 0;
+var AsyncAction_1 = require("./AsyncAction");
+var QueueAction = (function (_super) {
+    __extends(QueueAction, _super);
+    function QueueAction(scheduler, work) {
+        var _this = _super.call(this, scheduler, work) || this;
+        _this.scheduler = scheduler;
+        _this.work = work;
+        return _this;
+    }
+    QueueAction.prototype.schedule = function (state, delay) {
+        if (delay === void 0) { delay = 0; }
+        if (delay > 0) {
+            return _super.prototype.schedule.call(this, state, delay);
+        }
+        this.delay = delay;
+        this.state = state;
+        this.scheduler.flush(this);
+        return this;
+    };
+    QueueAction.prototype.execute = function (state, delay) {
+        return (delay > 0 || this.closed) ?
+            _super.prototype.execute.call(this, state, delay) :
+            this._execute(state, delay);
+    };
+    QueueAction.prototype.requestAsyncId = function (scheduler, id, delay) {
+        if (delay === void 0) { delay = 0; }
+        if ((delay != null && delay > 0) || (delay == null && this.delay > 0)) {
+            return _super.prototype.requestAsyncId.call(this, scheduler, id, delay);
+        }
+        return scheduler.flush(this);
+    };
+    return QueueAction;
+}(AsyncAction_1.AsyncAction));
+exports.QueueAction = QueueAction;
+
+},{"./AsyncAction":"KAR0W"}],"20At9":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueueScheduler = void 0;
+var AsyncScheduler_1 = require("./AsyncScheduler");
+var QueueScheduler = (function (_super) {
+    __extends(QueueScheduler, _super);
+    function QueueScheduler() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return QueueScheduler;
+}(AsyncScheduler_1.AsyncScheduler));
+exports.QueueScheduler = QueueScheduler;
+
+},{"./AsyncScheduler":"38LRN"}],"5T66N":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.animationFrame = exports.animationFrameScheduler = void 0;
+var AnimationFrameAction_1 = require("./AnimationFrameAction");
+var AnimationFrameScheduler_1 = require("./AnimationFrameScheduler");
+exports.animationFrameScheduler = new AnimationFrameScheduler_1.AnimationFrameScheduler(AnimationFrameAction_1.AnimationFrameAction);
+exports.animationFrame = exports.animationFrameScheduler;
+
+},{"./AnimationFrameAction":"6FSE0","./AnimationFrameScheduler":"1Lu2o"}],"6FSE0":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnimationFrameAction = void 0;
+var AsyncAction_1 = require("./AsyncAction");
+var animationFrameProvider_1 = require("./animationFrameProvider");
+var AnimationFrameAction = (function (_super) {
+    __extends(AnimationFrameAction, _super);
+    function AnimationFrameAction(scheduler, work) {
+        var _this = _super.call(this, scheduler, work) || this;
+        _this.scheduler = scheduler;
+        _this.work = work;
+        return _this;
+    }
+    AnimationFrameAction.prototype.requestAsyncId = function (scheduler, id, delay) {
+        if (delay === void 0) { delay = 0; }
+        if (delay !== null && delay > 0) {
+            return _super.prototype.requestAsyncId.call(this, scheduler, id, delay);
+        }
+        scheduler.actions.push(this);
+        return scheduler._scheduled || (scheduler._scheduled = animationFrameProvider_1.animationFrameProvider.requestAnimationFrame(function () { return scheduler.flush(undefined); }));
+    };
+    AnimationFrameAction.prototype.recycleAsyncId = function (scheduler, id, delay) {
+        if (delay === void 0) { delay = 0; }
+        if ((delay != null && delay > 0) || (delay == null && this.delay > 0)) {
+            return _super.prototype.recycleAsyncId.call(this, scheduler, id, delay);
+        }
+        if (scheduler.actions.length === 0) {
+            animationFrameProvider_1.animationFrameProvider.cancelAnimationFrame(id);
+            scheduler._scheduled = undefined;
+        }
+        return undefined;
+    };
+    return AnimationFrameAction;
+}(AsyncAction_1.AsyncAction));
+exports.AnimationFrameAction = AnimationFrameAction;
+
+},{"./AsyncAction":"KAR0W","./animationFrameProvider":"5lHAX"}],"1Lu2o":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnimationFrameScheduler = void 0;
+var AsyncScheduler_1 = require("./AsyncScheduler");
+var AnimationFrameScheduler = (function (_super) {
+    __extends(AnimationFrameScheduler, _super);
+    function AnimationFrameScheduler() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    AnimationFrameScheduler.prototype.flush = function (action) {
+        this._active = true;
+        this._scheduled = undefined;
+        var actions = this.actions;
+        var error;
+        var index = -1;
+        action = action || actions.shift();
+        var count = actions.length;
+        do {
+            if ((error = action.execute(action.state, action.delay))) {
+                break;
+            }
+        } while (++index < count && (action = actions.shift()));
+        this._active = false;
+        if (error) {
+            while (++index < count && (action = actions.shift())) {
+                action.unsubscribe();
+            }
+            throw error;
+        }
+    };
+    return AnimationFrameScheduler;
+}(AsyncScheduler_1.AsyncScheduler));
+exports.AnimationFrameScheduler = AnimationFrameScheduler;
+
+},{"./AsyncScheduler":"38LRN"}],"xGadC":[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualAction = exports.VirtualTimeScheduler = void 0;
+var AsyncAction_1 = require("./AsyncAction");
+var Subscription_1 = require("../Subscription");
+var AsyncScheduler_1 = require("./AsyncScheduler");
+var VirtualTimeScheduler = (function (_super) {
+    __extends(VirtualTimeScheduler, _super);
+    function VirtualTimeScheduler(schedulerActionCtor, maxFrames) {
+        if (schedulerActionCtor === void 0) { schedulerActionCtor = VirtualAction; }
+        if (maxFrames === void 0) { maxFrames = Infinity; }
+        var _this = _super.call(this, schedulerActionCtor, function () { return _this.frame; }) || this;
+        _this.maxFrames = maxFrames;
+        _this.frame = 0;
+        _this.index = -1;
+        return _this;
+    }
+    VirtualTimeScheduler.prototype.flush = function () {
+        var _a = this, actions = _a.actions, maxFrames = _a.maxFrames;
+        var error;
+        var action;
+        while ((action = actions[0]) && action.delay <= maxFrames) {
+            actions.shift();
+            this.frame = action.delay;
+            if ((error = action.execute(action.state, action.delay))) {
+                break;
+            }
+        }
+        if (error) {
+            while ((action = actions.shift())) {
+                action.unsubscribe();
+            }
+            throw error;
+        }
+    };
+    VirtualTimeScheduler.frameTimeFactor = 10;
+    return VirtualTimeScheduler;
+}(AsyncScheduler_1.AsyncScheduler));
+exports.VirtualTimeScheduler = VirtualTimeScheduler;
+var VirtualAction = (function (_super) {
+    __extends(VirtualAction, _super);
+    function VirtualAction(scheduler, work, index) {
+        if (index === void 0) { index = (scheduler.index += 1); }
+        var _this = _super.call(this, scheduler, work) || this;
+        _this.scheduler = scheduler;
+        _this.work = work;
+        _this.index = index;
+        _this.active = true;
+        _this.index = scheduler.index = index;
+        return _this;
+    }
+    VirtualAction.prototype.schedule = function (state, delay) {
+        if (delay === void 0) { delay = 0; }
+        if (Number.isFinite(delay)) {
+            if (!this.id) {
+                return _super.prototype.schedule.call(this, state, delay);
+            }
+            this.active = false;
+            var action = new VirtualAction(this.scheduler, this.work);
+            this.add(action);
+            return action.schedule(state, delay);
+        }
+        else {
+            return Subscription_1.Subscription.EMPTY;
+        }
+    };
+    VirtualAction.prototype.requestAsyncId = function (scheduler, id, delay) {
+        if (delay === void 0) { delay = 0; }
+        this.delay = scheduler.frame + delay;
+        var actions = scheduler.actions;
+        actions.push(this);
+        actions.sort(VirtualAction.sortActions);
+        return true;
+    };
+    VirtualAction.prototype.recycleAsyncId = function (scheduler, id, delay) {
+        if (delay === void 0) { delay = 0; }
+        return undefined;
+    };
+    VirtualAction.prototype._execute = function (state, delay) {
+        if (this.active === true) {
+            return _super.prototype._execute.call(this, state, delay);
+        }
+    };
+    VirtualAction.sortActions = function (a, b) {
+        if (a.delay === b.delay) {
+            if (a.index === b.index) {
+                return 0;
+            }
+            else if (a.index > b.index) {
+                return 1;
+            }
+            else {
+                return -1;
+            }
+        }
+        else if (a.delay > b.delay) {
+            return 1;
+        }
+        else {
+            return -1;
+        }
+    };
+    return VirtualAction;
+}(AsyncAction_1.AsyncAction));
+exports.VirtualAction = VirtualAction;
+
+},{"./AsyncAction":"KAR0W","../Subscription":"55zJP","./AsyncScheduler":"38LRN"}],"6rp8f":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.observeNotification = exports.Notification = exports.NotificationKind = void 0;
+var empty_1 = require("./observable/empty");
+var of_1 = require("./observable/of");
+var throwError_1 = require("./observable/throwError");
+var isFunction_1 = require("./util/isFunction");
+var NotificationKind;
+(function (NotificationKind) {
+    NotificationKind["NEXT"] = "N";
+    NotificationKind["ERROR"] = "E";
+    NotificationKind["COMPLETE"] = "C";
+})(NotificationKind = exports.NotificationKind || (exports.NotificationKind = {}));
+var Notification = (function () {
+    function Notification(kind, value, error) {
+        this.kind = kind;
+        this.value = value;
+        this.error = error;
+        this.hasValue = kind === 'N';
+    }
+    Notification.prototype.observe = function (observer) {
+        return observeNotification(this, observer);
+    };
+    Notification.prototype.do = function (nextHandler, errorHandler, completeHandler) {
+        var _a = this, kind = _a.kind, value = _a.value, error = _a.error;
+        return kind === 'N' ? nextHandler === null || nextHandler === void 0 ? void 0 : nextHandler(value) : kind === 'E' ? errorHandler === null || errorHandler === void 0 ? void 0 : errorHandler(error) : completeHandler === null || completeHandler === void 0 ? void 0 : completeHandler();
+    };
+    Notification.prototype.accept = function (nextOrObserver, error, complete) {
+        var _a;
+        return isFunction_1.isFunction((_a = nextOrObserver) === null || _a === void 0 ? void 0 : _a.next)
+            ? this.observe(nextOrObserver)
+            : this.do(nextOrObserver, error, complete);
+    };
+    Notification.prototype.toObservable = function () {
+        var _a = this, kind = _a.kind, value = _a.value, error = _a.error;
+        var result = kind === 'N'
+            ?
+                of_1.of(value)
+            :
+                kind === 'E'
+                    ?
+                        throwError_1.throwError(function () { return error; })
+                    :
+                        kind === 'C'
+                            ?
+                                empty_1.EMPTY
+                            :
+                                0;
+        if (!result) {
+            throw new TypeError("Unexpected notification kind " + kind);
+        }
+        return result;
+    };
+    Notification.createNext = function (value) {
+        return new Notification('N', value);
+    };
+    Notification.createError = function (err) {
+        return new Notification('E', undefined, err);
+    };
+    Notification.createComplete = function () {
+        return Notification.completeNotification;
+    };
+    Notification.completeNotification = new Notification('C');
+    return Notification;
+}());
+exports.Notification = Notification;
+function observeNotification(notification, observer) {
+    var _a, _b, _c;
+    var _d = notification, kind = _d.kind, value = _d.value, error = _d.error;
+    if (typeof kind !== 'string') {
+        throw new TypeError('Invalid notification, missing "kind"');
+    }
+    kind === 'N' ? (_a = observer.next) === null || _a === void 0 ? void 0 : _a.call(observer, value) : kind === 'E' ? (_b = observer.error) === null || _b === void 0 ? void 0 : _b.call(observer, error) : (_c = observer.complete) === null || _c === void 0 ? void 0 : _c.call(observer);
+}
+exports.observeNotification = observeNotification;
+
+},{"./observable/empty":"2Zbmy","./observable/of":"745Yx","./observable/throwError":"6xzeK","./util/isFunction":"1rux0"}],"2Zbmy":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.empty = exports.EMPTY = void 0;
+var Observable_1 = require("../Observable");
+exports.EMPTY = new Observable_1.Observable(function (subscriber) { return subscriber.complete(); });
+function empty(scheduler) {
+    return scheduler ? emptyScheduled(scheduler) : exports.EMPTY;
+}
+exports.empty = empty;
+function emptyScheduled(scheduler) {
+    return new Observable_1.Observable(function (subscriber) { return scheduler.schedule(function () { return subscriber.complete(); }); });
+}
+
+},{"../Observable":"6XfFQ"}],"745Yx":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.of = void 0;
+var fromArray_1 = require("./fromArray");
+var scheduleArray_1 = require("../scheduled/scheduleArray");
+var args_1 = require("../util/args");
+function of() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var scheduler = args_1.popScheduler(args);
+    return scheduler ? scheduleArray_1.scheduleArray(args, scheduler) : fromArray_1.internalFromArray(args);
+}
+exports.of = of;
+
+},{"./fromArray":"PMrPy","../scheduled/scheduleArray":"69Ztx","../util/args":"3JFPu"}],"PMrPy":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.internalFromArray = void 0;
+var scheduleArray_1 = require("../scheduled/scheduleArray");
+var from_1 = require("./from");
+function internalFromArray(input, scheduler) {
+    return scheduler ? scheduleArray_1.scheduleArray(input, scheduler) : from_1.fromArrayLike(input);
+}
+exports.internalFromArray = internalFromArray;
+
+},{"../scheduled/scheduleArray":"69Ztx","./from":"Fatr8"}],"69Ztx":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.scheduleArray = void 0;
+var Observable_1 = require("../Observable");
+function scheduleArray(input, scheduler) {
+    return new Observable_1.Observable(function (subscriber) {
+        var i = 0;
+        return scheduler.schedule(function () {
+            if (i === input.length) {
+                subscriber.complete();
+            }
+            else {
+                subscriber.next(input[i++]);
+                if (!subscriber.closed) {
+                    this.schedule();
+                }
+            }
+        });
+    });
+}
+exports.scheduleArray = scheduleArray;
+
+},{"../Observable":"6XfFQ"}],"Fatr8":[function(require,module,exports) {
+"use strict";
+var __awaiter = this && this.__awaiter || (function (thisArg, _arguments, P, generator) {
+  function adopt(value) {
+    return value instanceof P ? value : new P(function (resolve) {
+      resolve(value);
+    });
+  }
+  return new (P || (P = Promise))(function (resolve, reject) {
+    function fulfilled(value) {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    }
+    function rejected(value) {
+      try {
+        step(generator["throw"](value));
+      } catch (e) {
+        reject(e);
+      }
+    }
+    function step(result) {
+      result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+    }
+    step((generator = generator.apply(thisArg, _arguments || [])).next());
+  });
+});
+var __generator = this && this.__generator || (function (thisArg, body) {
+  var _ = {
+    label: 0,
+    sent: function () {
+      if (t[0] & 1) throw t[1];
+      return t[1];
+    },
+    trys: [],
+    ops: []
+  }, f, y, t, g;
+  return (g = {
+    next: verb(0),
+    "throw": verb(1),
+    "return": verb(2)
+  }, typeof Symbol === "function" && (g[Symbol.iterator] = function () {
+    return this;
+  }), g);
+  function verb(n) {
+    return function (v) {
+      return step([n, v]);
+    };
+  }
+  function step(op) {
+    if (f) throw new TypeError("Generator is already executing.");
+    while (_) try {
+      if ((f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)) return t;
+      if ((y = 0, t)) op = [op[0] & 2, t.value];
+      switch (op[0]) {
+        case 0:
+        case 1:
+          t = op;
+          break;
+        case 4:
+          _.label++;
+          return {
+            value: op[1],
+            done: false
+          };
+        case 5:
+          _.label++;
+          y = op[1];
+          op = [0];
+          continue;
+        case 7:
+          op = _.ops.pop();
+          _.trys.pop();
+          continue;
+        default:
+          if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+            _ = 0;
+            continue;
+          }
+          if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+            _.label = op[1];
+            break;
+          }
+          if (op[0] === 6 && _.label < t[1]) {
+            _.label = t[1];
+            t = op;
+            break;
+          }
+          if (t && _.label < t[2]) {
+            _.label = t[2];
+            _.ops.push(op);
+            break;
+          }
+          if (t[2]) _.ops.pop();
+          _.trys.pop();
+          continue;
+      }
+      op = body.call(thisArg, _);
+    } catch (e) {
+      op = [6, e];
+      y = 0;
+    } finally {
+      f = t = 0;
+    }
+    if (op[0] & 5) throw op[1];
+    return {
+      value: op[0] ? op[1] : void 0,
+      done: true
+    };
+  }
+});
+var __asyncValues = this && this.__asyncValues || (function (o) {
+  if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+  var m = o[Symbol.asyncIterator], i;
+  return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+    return this;
+  }, i);
+  function verb(n) {
+    i[n] = o[n] && (function (v) {
+      return new Promise(function (resolve, reject) {
+        (v = o[n](v), settle(resolve, reject, v.done, v.value));
+      });
+    });
+  }
+  function settle(resolve, reject, d, v) {
+    Promise.resolve(v).then(function (v) {
+      resolve({
+        value: v,
+        done: d
+      });
+    }, reject);
+  }
+});
+var __values = this && this.__values || (function (o) {
+  var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+  if (m) return m.call(o);
+  if (o && typeof o.length === "number") return {
+    next: function () {
+      if (o && i >= o.length) o = void 0;
+      return {
+        value: o && o[i++],
+        done: !o
+      };
+    }
+  };
+  throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+});
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fromArrayLike = exports.innerFrom = exports.from = void 0;
+var isArrayLike_1 = require("../util/isArrayLike");
+var isPromise_1 = require("../util/isPromise");
+var observable_1 = require("../symbol/observable");
+var Observable_1 = require("../Observable");
+var scheduled_1 = require("../scheduled/scheduled");
+var isFunction_1 = require("../util/isFunction");
+var reportUnhandledError_1 = require("../util/reportUnhandledError");
+var isInteropObservable_1 = require("../util/isInteropObservable");
+var isAsyncIterable_1 = require("../util/isAsyncIterable");
+var throwUnobservableError_1 = require("../util/throwUnobservableError");
+var isIterable_1 = require("../util/isIterable");
+var isReadableStreamLike_1 = require("../util/isReadableStreamLike");
+function from(input, scheduler) {
+  return scheduler ? scheduled_1.scheduled(input, scheduler) : innerFrom(input);
+}
+exports.from = from;
+function innerFrom(input) {
+  if (input instanceof Observable_1.Observable) {
+    return input;
+  }
+  if (input != null) {
+    if (isInteropObservable_1.isInteropObservable(input)) {
+      return fromInteropObservable(input);
+    }
+    if (isArrayLike_1.isArrayLike(input)) {
+      return fromArrayLike(input);
+    }
+    if (isPromise_1.isPromise(input)) {
+      return fromPromise(input);
+    }
+    if (isAsyncIterable_1.isAsyncIterable(input)) {
+      return fromAsyncIterable(input);
+    }
+    if (isIterable_1.isIterable(input)) {
+      return fromIterable(input);
+    }
+    if (isReadableStreamLike_1.isReadableStreamLike(input)) {
+      return fromReadableStreamLike(input);
+    }
+  }
+  throw throwUnobservableError_1.createInvalidObservableTypeError(input);
+}
+exports.innerFrom = innerFrom;
+function fromInteropObservable(obj) {
+  return new Observable_1.Observable(function (subscriber) {
+    var obs = obj[observable_1.observable]();
+    if (isFunction_1.isFunction(obs.subscribe)) {
+      return obs.subscribe(subscriber);
+    }
+    throw new TypeError('Provided object does not correctly implement Symbol.observable');
+  });
+}
+function fromArrayLike(array) {
+  return new Observable_1.Observable(function (subscriber) {
+    for (var i = 0; i < array.length && !subscriber.closed; i++) {
+      subscriber.next(array[i]);
+    }
+    subscriber.complete();
+  });
+}
+exports.fromArrayLike = fromArrayLike;
+function fromPromise(promise) {
+  return new Observable_1.Observable(function (subscriber) {
+    promise.then(function (value) {
+      if (!subscriber.closed) {
+        subscriber.next(value);
+        subscriber.complete();
+      }
+    }, function (err) {
+      return subscriber.error(err);
+    }).then(null, reportUnhandledError_1.reportUnhandledError);
+  });
+}
+function fromIterable(iterable) {
+  return new Observable_1.Observable(function (subscriber) {
+    var e_1, _a;
+    try {
+      for (var iterable_1 = __values(iterable), iterable_1_1 = iterable_1.next(); !iterable_1_1.done; iterable_1_1 = iterable_1.next()) {
+        var value = iterable_1_1.value;
+        subscriber.next(value);
+        if (subscriber.closed) {
+          return;
+        }
+      }
+    } catch (e_1_1) {
+      e_1 = {
+        error: e_1_1
+      };
+    } finally {
+      try {
+        if (iterable_1_1 && !iterable_1_1.done && (_a = iterable_1.return)) _a.call(iterable_1);
+      } finally {
+        if (e_1) throw e_1.error;
+      }
+    }
+    subscriber.complete();
+  });
+}
+function fromAsyncIterable(asyncIterable) {
+  return new Observable_1.Observable(function (subscriber) {
+    process(asyncIterable, subscriber).catch(function (err) {
+      return subscriber.error(err);
+    });
+  });
+}
+function fromReadableStreamLike(readableStream) {
+  return fromAsyncIterable(isReadableStreamLike_1.readableStreamLikeToAsyncGenerator(readableStream));
+}
+function process(asyncIterable, subscriber) {
+  var asyncIterable_1, asyncIterable_1_1;
+  var e_2, _a;
+  return __awaiter(this, void 0, void 0, function () {
+    var value, e_2_1;
+    return __generator(this, function (_b) {
+      switch (_b.label) {
+        case 0:
+          _b.trys.push([0, 5, 6, 11]);
+          asyncIterable_1 = __asyncValues(asyncIterable);
+          _b.label = 1;
+        case 1:
+          return [4, asyncIterable_1.next()];
+        case 2:
+          if (!(asyncIterable_1_1 = _b.sent(), !asyncIterable_1_1.done)) return [3, 4];
+          value = asyncIterable_1_1.value;
+          subscriber.next(value);
+          if (subscriber.closed) {
+            return [2];
+          }
+          _b.label = 3;
+        case 3:
+          return [3, 1];
+        case 4:
+          return [3, 11];
+        case 5:
+          e_2_1 = _b.sent();
+          e_2 = {
+            error: e_2_1
+          };
+          return [3, 11];
+        case 6:
+          _b.trys.push([6, , 9, 10]);
+          if (!(asyncIterable_1_1 && !asyncIterable_1_1.done && (_a = asyncIterable_1.return))) return [3, 8];
+          return [4, _a.call(asyncIterable_1)];
+        case 7:
+          _b.sent();
+          _b.label = 8;
+        case 8:
+          return [3, 10];
+        case 9:
+          if (e_2) throw e_2.error;
+          return [7];
+        case 10:
+          return [7];
+        case 11:
+          subscriber.complete();
+          return [2];
+      }
+    });
+  });
+}
+
+},{"../util/isArrayLike":"Y3Lij","../util/isPromise":"7KELv","../symbol/observable":"3EZgt","../Observable":"6XfFQ","../scheduled/scheduled":"3LGAO","../util/isFunction":"1rux0","../util/reportUnhandledError":"2980V","../util/isInteropObservable":"1TsRv","../util/isAsyncIterable":"7CsRz","../util/throwUnobservableError":"7HnBI","../util/isIterable":"6JGlx","../util/isReadableStreamLike":"6F3tn"}],"Y3Lij":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isArrayLike = void 0;
+exports.isArrayLike = (function (x) { return x && typeof x.length === 'number' && typeof x !== 'function'; });
+
+},{}],"7KELv":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isPromise = void 0;
+var isFunction_1 = require("./isFunction");
+function isPromise(value) {
+    return isFunction_1.isFunction(value === null || value === void 0 ? void 0 : value.then);
+}
+exports.isPromise = isPromise;
+
+},{"./isFunction":"1rux0"}],"3LGAO":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.scheduled = void 0;
+var scheduleObservable_1 = require("./scheduleObservable");
+var schedulePromise_1 = require("./schedulePromise");
+var scheduleArray_1 = require("./scheduleArray");
+var scheduleIterable_1 = require("./scheduleIterable");
+var scheduleAsyncIterable_1 = require("./scheduleAsyncIterable");
+var isInteropObservable_1 = require("../util/isInteropObservable");
+var isPromise_1 = require("../util/isPromise");
+var isArrayLike_1 = require("../util/isArrayLike");
+var isIterable_1 = require("../util/isIterable");
+var isAsyncIterable_1 = require("../util/isAsyncIterable");
+var throwUnobservableError_1 = require("../util/throwUnobservableError");
+var isReadableStreamLike_1 = require("../util/isReadableStreamLike");
+var scheduleReadableStreamLike_1 = require("./scheduleReadableStreamLike");
+function scheduled(input, scheduler) {
+    if (input != null) {
+        if (isInteropObservable_1.isInteropObservable(input)) {
+            return scheduleObservable_1.scheduleObservable(input, scheduler);
+        }
+        if (isArrayLike_1.isArrayLike(input)) {
+            return scheduleArray_1.scheduleArray(input, scheduler);
+        }
+        if (isPromise_1.isPromise(input)) {
+            return schedulePromise_1.schedulePromise(input, scheduler);
+        }
+        if (isAsyncIterable_1.isAsyncIterable(input)) {
+            return scheduleAsyncIterable_1.scheduleAsyncIterable(input, scheduler);
+        }
+        if (isIterable_1.isIterable(input)) {
+            return scheduleIterable_1.scheduleIterable(input, scheduler);
+        }
+        if (isReadableStreamLike_1.isReadableStreamLike(input)) {
+            return scheduleReadableStreamLike_1.scheduleReadableStreamLike(input, scheduler);
+        }
+    }
+    throw throwUnobservableError_1.createInvalidObservableTypeError(input);
+}
+exports.scheduled = scheduled;
+
+},{"./scheduleObservable":"aMrnF","./schedulePromise":"33plC","./scheduleArray":"69Ztx","./scheduleIterable":"3CwLs","./scheduleAsyncIterable":"1LmoI","../util/isInteropObservable":"1TsRv","../util/isPromise":"7KELv","../util/isArrayLike":"Y3Lij","../util/isIterable":"6JGlx","../util/isAsyncIterable":"7CsRz","../util/throwUnobservableError":"7HnBI","../util/isReadableStreamLike":"6F3tn","./scheduleReadableStreamLike":"M2x5c"}],"aMrnF":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.scheduleObservable = void 0;
+var Observable_1 = require("../Observable");
+var Subscription_1 = require("../Subscription");
+var observable_1 = require("../symbol/observable");
+function scheduleObservable(input, scheduler) {
+    return new Observable_1.Observable(function (subscriber) {
+        var sub = new Subscription_1.Subscription();
+        sub.add(scheduler.schedule(function () {
+            var observable = input[observable_1.observable]();
+            sub.add(observable.subscribe({
+                next: function (value) { sub.add(scheduler.schedule(function () { return subscriber.next(value); })); },
+                error: function (err) { sub.add(scheduler.schedule(function () { return subscriber.error(err); })); },
+                complete: function () { sub.add(scheduler.schedule(function () { return subscriber.complete(); })); },
+            }));
+        }));
+        return sub;
+    });
+}
+exports.scheduleObservable = scheduleObservable;
+
+},{"../Observable":"6XfFQ","../Subscription":"55zJP","../symbol/observable":"3EZgt"}],"33plC":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.schedulePromise = void 0;
+var Observable_1 = require("../Observable");
+function schedulePromise(input, scheduler) {
+    return new Observable_1.Observable(function (subscriber) {
+        return scheduler.schedule(function () {
+            return input.then(function (value) {
+                subscriber.add(scheduler.schedule(function () {
+                    subscriber.next(value);
+                    subscriber.add(scheduler.schedule(function () { return subscriber.complete(); }));
+                }));
+            }, function (err) {
+                subscriber.add(scheduler.schedule(function () { return subscriber.error(err); }));
+            });
+        });
+    });
+}
+exports.schedulePromise = schedulePromise;
+
+},{"../Observable":"6XfFQ"}],"3CwLs":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.scheduleIterable = void 0;
+var Observable_1 = require("../Observable");
+var iterator_1 = require("../symbol/iterator");
+var isFunction_1 = require("../util/isFunction");
+var caughtSchedule_1 = require("../util/caughtSchedule");
+function scheduleIterable(input, scheduler) {
+    return new Observable_1.Observable(function (subscriber) {
+        var iterator;
+        subscriber.add(scheduler.schedule(function () {
+            iterator = input[iterator_1.iterator]();
+            caughtSchedule_1.caughtSchedule(subscriber, scheduler, function () {
+                var _a = iterator.next(), value = _a.value, done = _a.done;
+                if (done) {
+                    subscriber.complete();
+                }
+                else {
+                    subscriber.next(value);
+                    this.schedule();
+                }
+            });
+        }));
+        return function () { return isFunction_1.isFunction(iterator === null || iterator === void 0 ? void 0 : iterator.return) && iterator.return(); };
+    });
+}
+exports.scheduleIterable = scheduleIterable;
+
+},{"../Observable":"6XfFQ","../symbol/iterator":"3gAVo","../util/isFunction":"1rux0","../util/caughtSchedule":"6BYyn"}],"3gAVo":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.iterator = exports.getSymbolIterator = void 0;
+function getSymbolIterator() {
+    if (typeof Symbol !== 'function' || !Symbol.iterator) {
+        return '@@iterator';
+    }
+    return Symbol.iterator;
+}
+exports.getSymbolIterator = getSymbolIterator;
+exports.iterator = getSymbolIterator();
+
+},{}],"6BYyn":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.caughtSchedule = void 0;
+function caughtSchedule(subscriber, scheduler, execute, delay) {
+    if (delay === void 0) { delay = 0; }
+    var subscription = scheduler.schedule(function () {
+        try {
+            execute.call(this);
+        }
+        catch (err) {
+            subscriber.error(err);
+        }
+    }, delay);
+    subscriber.add(subscription);
+    return subscription;
+}
+exports.caughtSchedule = caughtSchedule;
+
+},{}],"1LmoI":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.scheduleAsyncIterable = void 0;
+var Observable_1 = require("../Observable");
+var Subscription_1 = require("../Subscription");
+function scheduleAsyncIterable(input, scheduler) {
+    if (!input) {
+        throw new Error('Iterable cannot be null');
+    }
+    return new Observable_1.Observable(function (subscriber) {
+        var sub = new Subscription_1.Subscription();
+        sub.add(scheduler.schedule(function () {
+            var iterator = input[Symbol.asyncIterator]();
+            sub.add(scheduler.schedule(function () {
+                var _this = this;
+                iterator.next().then(function (result) {
+                    if (result.done) {
+                        subscriber.complete();
+                    }
+                    else {
+                        subscriber.next(result.value);
+                        _this.schedule();
+                    }
+                });
+            }));
+        }));
+        return sub;
+    });
+}
+exports.scheduleAsyncIterable = scheduleAsyncIterable;
+
+},{"../Observable":"6XfFQ","../Subscription":"55zJP"}],"1TsRv":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isInteropObservable = void 0;
+var observable_1 = require("../symbol/observable");
+var isFunction_1 = require("./isFunction");
+function isInteropObservable(input) {
+    return isFunction_1.isFunction(input[observable_1.observable]);
+}
+exports.isInteropObservable = isInteropObservable;
+
+},{"../symbol/observable":"3EZgt","./isFunction":"1rux0"}],"6JGlx":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isIterable = void 0;
+var iterator_1 = require("../symbol/iterator");
+var isFunction_1 = require("./isFunction");
+function isIterable(input) {
+    return isFunction_1.isFunction(input === null || input === void 0 ? void 0 : input[iterator_1.iterator]);
+}
+exports.isIterable = isIterable;
+
+},{"../symbol/iterator":"3gAVo","./isFunction":"1rux0"}],"7CsRz":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isAsyncIterable = void 0;
+var isFunction_1 = require("./isFunction");
+function isAsyncIterable(obj) {
+    return Symbol.asyncIterator && isFunction_1.isFunction(obj === null || obj === void 0 ? void 0 : obj[Symbol.asyncIterator]);
+}
+exports.isAsyncIterable = isAsyncIterable;
+
+},{"./isFunction":"1rux0"}],"7HnBI":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createInvalidObservableTypeError = void 0;
+function createInvalidObservableTypeError(input) {
+    return new TypeError("You provided " + (input !== null && typeof input === 'object' ? 'an invalid object' : "'" + input + "'") + " where a stream was expected. You can provide an Observable, Promise, ReadableStream, Array, AsyncIterable, or Iterable.");
+}
+exports.createInvalidObservableTypeError = createInvalidObservableTypeError;
+
+},{}],"6F3tn":[function(require,module,exports) {
+"use strict";
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __await = (this && this.__await) || function (v) { return this instanceof __await ? (this.v = v, this) : new __await(v); }
+var __asyncGenerator = (this && this.__asyncGenerator) || function (thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isReadableStreamLike = exports.readableStreamLikeToAsyncGenerator = void 0;
+var isFunction_1 = require("./isFunction");
+function readableStreamLikeToAsyncGenerator(readableStream) {
+    return __asyncGenerator(this, arguments, function readableStreamLikeToAsyncGenerator_1() {
+        var reader, _a, value, done;
+        return __generator(this, function (_b) {
+            switch (_b.label) {
+                case 0:
+                    reader = readableStream.getReader();
+                    _b.label = 1;
+                case 1:
+                    _b.trys.push([1, , 9, 10]);
+                    _b.label = 2;
+                case 2:
+                    if (!true) return [3, 8];
+                    return [4, __await(reader.read())];
+                case 3:
+                    _a = _b.sent(), value = _a.value, done = _a.done;
+                    if (!done) return [3, 5];
+                    return [4, __await(void 0)];
+                case 4: return [2, _b.sent()];
+                case 5: return [4, __await(value)];
+                case 6: return [4, _b.sent()];
+                case 7:
+                    _b.sent();
+                    return [3, 2];
+                case 8: return [3, 10];
+                case 9:
+                    reader.releaseLock();
+                    return [7];
+                case 10: return [2];
+            }
+        });
+    });
+}
+exports.readableStreamLikeToAsyncGenerator = readableStreamLikeToAsyncGenerator;
+function isReadableStreamLike(obj) {
+    return isFunction_1.isFunction(obj === null || obj === void 0 ? void 0 : obj.getReader);
+}
+exports.isReadableStreamLike = isReadableStreamLike;
+
+},{"./isFunction":"1rux0"}],"M2x5c":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.scheduleReadableStreamLike = void 0;
+var scheduleAsyncIterable_1 = require("./scheduleAsyncIterable");
+var isReadableStreamLike_1 = require("../util/isReadableStreamLike");
+function scheduleReadableStreamLike(input, scheduler) {
+    return scheduleAsyncIterable_1.scheduleAsyncIterable(isReadableStreamLike_1.readableStreamLikeToAsyncGenerator(input), scheduler);
+}
+exports.scheduleReadableStreamLike = scheduleReadableStreamLike;
+
+},{"./scheduleAsyncIterable":"1LmoI","../util/isReadableStreamLike":"6F3tn"}],"3JFPu":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.popNumber = exports.popScheduler = exports.popResultSelector = void 0;
+var isFunction_1 = require("./isFunction");
+var isScheduler_1 = require("./isScheduler");
+function last(arr) {
+    return arr[arr.length - 1];
+}
+function popResultSelector(args) {
+    return isFunction_1.isFunction(last(args)) ? args.pop() : undefined;
+}
+exports.popResultSelector = popResultSelector;
+function popScheduler(args) {
+    return isScheduler_1.isScheduler(last(args)) ? args.pop() : undefined;
+}
+exports.popScheduler = popScheduler;
+function popNumber(args, defaultValue) {
+    return typeof last(args) === 'number' ? args.pop() : defaultValue;
+}
+exports.popNumber = popNumber;
+
+},{"./isFunction":"1rux0","./isScheduler":"5CcUT"}],"5CcUT":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isScheduler = void 0;
+var isFunction_1 = require("./isFunction");
+function isScheduler(value) {
+    return value && isFunction_1.isFunction(value.schedule);
+}
+exports.isScheduler = isScheduler;
+
+},{"./isFunction":"1rux0"}],"6xzeK":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.throwError = void 0;
+var Observable_1 = require("../Observable");
+var isFunction_1 = require("../util/isFunction");
+function throwError(errorOrErrorFactory, scheduler) {
+    var errorFactory = isFunction_1.isFunction(errorOrErrorFactory) ? errorOrErrorFactory : function () { return errorOrErrorFactory; };
+    var init = function (subscriber) { return subscriber.error(errorFactory()); };
+    return new Observable_1.Observable(scheduler ? function (subscriber) { return scheduler.schedule(init, 0, subscriber); } : init);
+}
+exports.throwError = throwError;
+
+},{"../Observable":"6XfFQ","../util/isFunction":"1rux0"}],"3VXNH":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isObservable = void 0;
+var Observable_1 = require("../Observable");
+var isFunction_1 = require("./isFunction");
+function isObservable(obj) {
+    return !!obj && (obj instanceof Observable_1.Observable || (isFunction_1.isFunction(obj.lift) && isFunction_1.isFunction(obj.subscribe)));
+}
+exports.isObservable = isObservable;
+
+},{"../Observable":"6XfFQ","./isFunction":"1rux0"}],"1W7DR":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.lastValueFrom = void 0;
+var EmptyError_1 = require("./util/EmptyError");
+function lastValueFrom(source, config) {
+    var hasConfig = typeof config === 'object';
+    return new Promise(function (resolve, reject) {
+        var _hasValue = false;
+        var _value;
+        source.subscribe({
+            next: function (value) {
+                _value = value;
+                _hasValue = true;
+            },
+            error: reject,
+            complete: function () {
+                if (_hasValue) {
+                    resolve(_value);
+                }
+                else if (hasConfig) {
+                    resolve(config.defaultValue);
+                }
+                else {
+                    reject(new EmptyError_1.EmptyError());
+                }
+            },
+        });
+    });
+}
+exports.lastValueFrom = lastValueFrom;
+
+},{"./util/EmptyError":"63brV"}],"63brV":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmptyError = void 0;
+var createErrorClass_1 = require("./createErrorClass");
+exports.EmptyError = createErrorClass_1.createErrorClass(function (_super) { return function EmptyErrorImpl() {
+    _super(this);
+    this.name = 'EmptyError';
+    this.message = 'no elements in sequence';
+}; });
+
+},{"./createErrorClass":"4TwIo"}],"5wc49":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.firstValueFrom = void 0;
+var EmptyError_1 = require("./util/EmptyError");
+var Subscriber_1 = require("./Subscriber");
+function firstValueFrom(source, config) {
+    var hasConfig = typeof config === 'object';
+    return new Promise(function (resolve, reject) {
+        var subscriber = new Subscriber_1.SafeSubscriber({
+            next: function (value) {
+                resolve(value);
+                subscriber.unsubscribe();
+            },
+            error: reject,
+            complete: function () {
+                if (hasConfig) {
+                    resolve(config.defaultValue);
+                }
+                else {
+                    reject(new EmptyError_1.EmptyError());
+                }
+            },
+        });
+        source.subscribe(subscriber);
+    });
+}
+exports.firstValueFrom = firstValueFrom;
+
+},{"./util/EmptyError":"63brV","./Subscriber":"1ew17"}],"4Xzvo":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArgumentOutOfRangeError = void 0;
+var createErrorClass_1 = require("./createErrorClass");
+exports.ArgumentOutOfRangeError = createErrorClass_1.createErrorClass(function (_super) {
+    return function ArgumentOutOfRangeErrorImpl() {
+        _super(this);
+        this.name = 'ArgumentOutOfRangeError';
+        this.message = 'argument out of range';
+    };
+});
+
+},{"./createErrorClass":"4TwIo"}],"ZITwI":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotFoundError = void 0;
+var createErrorClass_1 = require("./createErrorClass");
+exports.NotFoundError = createErrorClass_1.createErrorClass(function (_super) {
+    return function NotFoundErrorImpl(message) {
+        _super(this);
+        this.name = 'NotFoundError';
+        this.message = message;
+    };
+});
+
+},{"./createErrorClass":"4TwIo"}],"3yeE8":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SequenceError = void 0;
+var createErrorClass_1 = require("./createErrorClass");
+exports.SequenceError = createErrorClass_1.createErrorClass(function (_super) {
+    return function SequenceErrorImpl(message) {
+        _super(this);
+        this.name = 'SequenceError';
+        this.message = message;
+    };
+});
+
+},{"./createErrorClass":"4TwIo"}],"4fjS3":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.timeout = exports.TimeoutError = void 0;
+var async_1 = require("../scheduler/async");
+var isDate_1 = require("../util/isDate");
+var lift_1 = require("../util/lift");
+var from_1 = require("../observable/from");
+var createErrorClass_1 = require("../util/createErrorClass");
+var caughtSchedule_1 = require("../util/caughtSchedule");
+var OperatorSubscriber_1 = require("./OperatorSubscriber");
+exports.TimeoutError = createErrorClass_1.createErrorClass(function (_super) {
+    return function TimeoutErrorImpl(info) {
+        if (info === void 0) { info = null; }
+        _super(this);
+        this.message = 'Timeout has occurred';
+        this.name = 'TimeoutError';
+        this.info = info;
+    };
+});
+function timeout(config, schedulerArg) {
+    var _a = (isDate_1.isValidDate(config)
+        ? { first: config }
+        : typeof config === 'number'
+            ? { each: config }
+            : config), first = _a.first, each = _a.each, _b = _a.with, _with = _b === void 0 ? timeoutErrorFactory : _b, _c = _a.scheduler, scheduler = _c === void 0 ? schedulerArg !== null && schedulerArg !== void 0 ? schedulerArg : async_1.asyncScheduler : _c, _d = _a.meta, meta = _d === void 0 ? null : _d;
+    if (first == null && each == null) {
+        throw new TypeError('No timeout provided.');
+    }
+    return lift_1.operate(function (source, subscriber) {
+        var originalSourceSubscription;
+        var timerSubscription;
+        var lastValue = null;
+        var seen = 0;
+        var startTimer = function (delay) {
+            timerSubscription = caughtSchedule_1.caughtSchedule(subscriber, scheduler, function () {
+                originalSourceSubscription.unsubscribe();
+                from_1.innerFrom(_with({
+                    meta: meta,
+                    lastValue: lastValue,
+                    seen: seen,
+                })).subscribe(subscriber);
+            }, delay);
+        };
+        originalSourceSubscription = source.subscribe(new OperatorSubscriber_1.OperatorSubscriber(subscriber, function (value) {
+            timerSubscription === null || timerSubscription === void 0 ? void 0 : timerSubscription.unsubscribe();
+            seen++;
+            subscriber.next((lastValue = value));
+            each > 0 && startTimer(each);
+        }, undefined, undefined, function () {
+            if (!(timerSubscription === null || timerSubscription === void 0 ? void 0 : timerSubscription.closed)) {
+                timerSubscription === null || timerSubscription === void 0 ? void 0 : timerSubscription.unsubscribe();
+            }
+            lastValue = null;
+        }));
+        startTimer(first != null ? (typeof first === 'number' ? first : +first - scheduler.now()) : each);
+    });
+}
+exports.timeout = timeout;
+function timeoutErrorFactory(info) {
+    throw new exports.TimeoutError(info);
+}
+
+},{"../scheduler/async":"5ysvr","../util/isDate":"1CkFX","../util/lift":"3Hhm5","../observable/from":"Fatr8","../util/createErrorClass":"4TwIo","../util/caughtSchedule":"6BYyn","./OperatorSubscriber":"3gY6m"}],"1CkFX":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isValidDate = void 0;
+function isValidDate(value) {
+    return value instanceof Date && !isNaN(value);
+}
+exports.isValidDate = isValidDate;
+
+},{}],"5GyYi":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.bindCallback = void 0;
+var bindCallbackInternals_1 = require("./bindCallbackInternals");
+function bindCallback(callbackFunc, resultSelector, scheduler) {
+    return bindCallbackInternals_1.bindCallbackInternals(false, callbackFunc, resultSelector, scheduler);
+}
+exports.bindCallback = bindCallback;
+
+},{"./bindCallbackInternals":"6Hrkc"}],"6Hrkc":[function(require,module,exports) {
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.bindCallbackInternals = void 0;
+var isScheduler_1 = require("../util/isScheduler");
+var Observable_1 = require("../Observable");
+var subscribeOn_1 = require("../operators/subscribeOn");
+var mapOneOrManyArgs_1 = require("../util/mapOneOrManyArgs");
+var observeOn_1 = require("../operators/observeOn");
+var AsyncSubject_1 = require("../AsyncSubject");
+function bindCallbackInternals(isNodeStyle, callbackFunc, resultSelector, scheduler) {
+    if (resultSelector) {
+        if (isScheduler_1.isScheduler(resultSelector)) {
+            scheduler = resultSelector;
+        }
+        else {
+            return function () {
+                var args = [];
+                for (var _i = 0; _i < arguments.length; _i++) {
+                    args[_i] = arguments[_i];
+                }
+                return bindCallbackInternals(isNodeStyle, callbackFunc, scheduler)
+                    .apply(this, args)
+                    .pipe(mapOneOrManyArgs_1.mapOneOrManyArgs(resultSelector));
+            };
+        }
+    }
+    if (scheduler) {
+        return function () {
+            var args = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                args[_i] = arguments[_i];
+            }
+            return bindCallbackInternals(isNodeStyle, callbackFunc)
+                .apply(this, args)
+                .pipe(subscribeOn_1.subscribeOn(scheduler), observeOn_1.observeOn(scheduler));
+        };
+    }
+    return function () {
+        var _this = this;
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        var subject = new AsyncSubject_1.AsyncSubject();
+        var uninitialized = true;
+        return new Observable_1.Observable(function (subscriber) {
+            var subs = subject.subscribe(subscriber);
+            if (uninitialized) {
+                uninitialized = false;
+                var isAsync_1 = false;
+                var isComplete_1 = false;
+                callbackFunc.apply(_this, __spreadArray(__spreadArray([], __read(args)), [
+                    function () {
+                        var results = [];
+                        for (var _i = 0; _i < arguments.length; _i++) {
+                            results[_i] = arguments[_i];
+                        }
+                        if (isNodeStyle) {
+                            var err = results.shift();
+                            if (err != null) {
+                                subject.error(err);
+                                return;
+                            }
+                        }
+                        subject.next(1 < results.length ? results : results[0]);
+                        isComplete_1 = true;
+                        if (isAsync_1) {
+                            subject.complete();
+                        }
+                    },
+                ]));
+                if (isComplete_1) {
+                    subject.complete();
+                }
+                isAsync_1 = true;
+            }
+            return subs;
+        });
+    };
+}
+exports.bindCallbackInternals = bindCallbackInternals;
+
+},{"../util/isScheduler":"5CcUT","../Observable":"6XfFQ","../operators/subscribeOn":"3ycX1","../util/mapOneOrManyArgs":"6B4SF","../operators/observeOn":"4GztM","../AsyncSubject":"OZRwe"}],"3ycX1":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.subscribeOn = void 0;
+var lift_1 = require("../util/lift");
+function subscribeOn(scheduler, delay) {
+    if (delay === void 0) { delay = 0; }
+    return lift_1.operate(function (source, subscriber) {
+        subscriber.add(scheduler.schedule(function () { return source.subscribe(subscriber); }, delay));
+    });
+}
+exports.subscribeOn = subscribeOn;
+
+},{"../util/lift":"3Hhm5"}],"6B4SF":[function(require,module,exports) {
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.mapOneOrManyArgs = void 0;
+var map_1 = require("../operators/map");
+var isArray = Array.isArray;
+function callOrApply(fn, args) {
+    return isArray(args) ? fn.apply(void 0, __spreadArray([], __read(args))) : fn(args);
+}
+function mapOneOrManyArgs(fn) {
+    return map_1.map(function (args) { return callOrApply(fn, args); });
+}
+exports.mapOneOrManyArgs = mapOneOrManyArgs;
+
+},{"../operators/map":"7vINI"}],"7vINI":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.map = void 0;
+var lift_1 = require("../util/lift");
+var OperatorSubscriber_1 = require("./OperatorSubscriber");
+function map(project, thisArg) {
+    return lift_1.operate(function (source, subscriber) {
+        var index = 0;
+        source.subscribe(new OperatorSubscriber_1.OperatorSubscriber(subscriber, function (value) {
+            subscriber.next(project.call(thisArg, value, index++));
+        }));
+    });
+}
+exports.map = map;
+
+},{"../util/lift":"3Hhm5","./OperatorSubscriber":"3gY6m"}],"4GztM":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.observeOn = void 0;
+var lift_1 = require("../util/lift");
+var OperatorSubscriber_1 = require("./OperatorSubscriber");
+function observeOn(scheduler, delay) {
+    if (delay === void 0) { delay = 0; }
+    return lift_1.operate(function (source, subscriber) {
+        source.subscribe(new OperatorSubscriber_1.OperatorSubscriber(subscriber, function (value) { return subscriber.add(scheduler.schedule(function () { return subscriber.next(value); }, delay)); }, function () { return subscriber.add(scheduler.schedule(function () { return subscriber.complete(); }, delay)); }, function (err) { return subscriber.add(scheduler.schedule(function () { return subscriber.error(err); }, delay)); }));
+    });
+}
+exports.observeOn = observeOn;
+
+},{"../util/lift":"3Hhm5","./OperatorSubscriber":"3gY6m"}],"6Uys1":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.bindNodeCallback = void 0;
+var bindCallbackInternals_1 = require("./bindCallbackInternals");
+function bindNodeCallback(callbackFunc, resultSelector, scheduler) {
+    return bindCallbackInternals_1.bindCallbackInternals(true, callbackFunc, resultSelector, scheduler);
+}
+exports.bindNodeCallback = bindNodeCallback;
+
+},{"./bindCallbackInternals":"6Hrkc"}],"wOUJf":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.combineLatestInit = exports.combineLatest = void 0;
+var Observable_1 = require("../Observable");
+var argsArgArrayOrObject_1 = require("../util/argsArgArrayOrObject");
+var from_1 = require("./from");
+var identity_1 = require("../util/identity");
+var mapOneOrManyArgs_1 = require("../util/mapOneOrManyArgs");
+var args_1 = require("../util/args");
+var createObject_1 = require("../util/createObject");
+var OperatorSubscriber_1 = require("../operators/OperatorSubscriber");
+function combineLatest() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var scheduler = args_1.popScheduler(args);
+    var resultSelector = args_1.popResultSelector(args);
+    var _a = argsArgArrayOrObject_1.argsArgArrayOrObject(args), observables = _a.args, keys = _a.keys;
+    if (observables.length === 0) {
+        return from_1.from([], scheduler);
+    }
+    var result = new Observable_1.Observable(combineLatestInit(observables, scheduler, keys
+        ?
+            function (values) { return createObject_1.createObject(keys, values); }
+        :
+            identity_1.identity));
+    return resultSelector ? result.pipe(mapOneOrManyArgs_1.mapOneOrManyArgs(resultSelector)) : result;
+}
+exports.combineLatest = combineLatest;
+function combineLatestInit(observables, scheduler, valueTransform) {
+    if (valueTransform === void 0) { valueTransform = identity_1.identity; }
+    return function (subscriber) {
+        maybeSchedule(scheduler, function () {
+            var length = observables.length;
+            var values = new Array(length);
+            var active = length;
+            var remainingFirstValues = length;
+            var _loop_1 = function (i) {
+                maybeSchedule(scheduler, function () {
+                    var source = from_1.from(observables[i], scheduler);
+                    var hasFirstValue = false;
+                    source.subscribe(new OperatorSubscriber_1.OperatorSubscriber(subscriber, function (value) {
+                        values[i] = value;
+                        if (!hasFirstValue) {
+                            hasFirstValue = true;
+                            remainingFirstValues--;
+                        }
+                        if (!remainingFirstValues) {
+                            subscriber.next(valueTransform(values.slice()));
+                        }
+                    }, function () {
+                        if (!--active) {
+                            subscriber.complete();
+                        }
+                    }));
+                }, subscriber);
+            };
+            for (var i = 0; i < length; i++) {
+                _loop_1(i);
+            }
+        }, subscriber);
+    };
+}
+exports.combineLatestInit = combineLatestInit;
+function maybeSchedule(scheduler, execute, subscription) {
+    if (scheduler) {
+        subscription.add(scheduler.schedule(execute));
+    }
+    else {
+        execute();
+    }
+}
+
+},{"../Observable":"6XfFQ","../util/argsArgArrayOrObject":"3tBWg","./from":"Fatr8","../util/identity":"2QJLj","../util/mapOneOrManyArgs":"6B4SF","../util/args":"3JFPu","../util/createObject":"4Qj1e","../operators/OperatorSubscriber":"3gY6m"}],"3tBWg":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.argsArgArrayOrObject = void 0;
+var isArray = Array.isArray;
+var getPrototypeOf = Object.getPrototypeOf, objectProto = Object.prototype, getKeys = Object.keys;
+function argsArgArrayOrObject(args) {
+    if (args.length === 1) {
+        var first_1 = args[0];
+        if (isArray(first_1)) {
+            return { args: first_1, keys: null };
+        }
+        if (isPOJO(first_1)) {
+            var keys = getKeys(first_1);
+            return {
+                args: keys.map(function (key) { return first_1[key]; }),
+                keys: keys,
+            };
+        }
+    }
+    return { args: args, keys: null };
+}
+exports.argsArgArrayOrObject = argsArgArrayOrObject;
+function isPOJO(obj) {
+    return obj && typeof obj === 'object' && getPrototypeOf(obj) === objectProto;
+}
+
+},{}],"4Qj1e":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createObject = void 0;
+function createObject(keys, values) {
+    return keys.reduce(function (result, key, i) { return ((result[key] = values[i]), result); }, {});
+}
+exports.createObject = createObject;
+
+},{}],"3qROP":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.concat = void 0;
+var concatAll_1 = require("../operators/concatAll");
+var fromArray_1 = require("./fromArray");
+var args_1 = require("../util/args");
+function concat() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    return concatAll_1.concatAll()(fromArray_1.internalFromArray(args, args_1.popScheduler(args)));
+}
+exports.concat = concat;
+
+},{"../operators/concatAll":"2P5sS","./fromArray":"PMrPy","../util/args":"3JFPu"}],"2P5sS":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.concatAll = void 0;
+var mergeAll_1 = require("./mergeAll");
+function concatAll() {
+    return mergeAll_1.mergeAll(1);
+}
+exports.concatAll = concatAll;
+
+},{"./mergeAll":"3xK3Y"}],"3xK3Y":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.mergeAll = void 0;
+var mergeMap_1 = require("./mergeMap");
+var identity_1 = require("../util/identity");
+function mergeAll(concurrent) {
+    if (concurrent === void 0) { concurrent = Infinity; }
+    return mergeMap_1.mergeMap(identity_1.identity, concurrent);
+}
+exports.mergeAll = mergeAll;
+
+},{"./mergeMap":"4fW0U","../util/identity":"2QJLj"}],"4fW0U":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.mergeMap = void 0;
+var map_1 = require("./map");
+var from_1 = require("../observable/from");
+var lift_1 = require("../util/lift");
+var mergeInternals_1 = require("./mergeInternals");
+var isFunction_1 = require("../util/isFunction");
+function mergeMap(project, resultSelector, concurrent) {
+    if (concurrent === void 0) { concurrent = Infinity; }
+    if (isFunction_1.isFunction(resultSelector)) {
+        return mergeMap(function (a, i) { return map_1.map(function (b, ii) { return resultSelector(a, b, i, ii); })(from_1.innerFrom(project(a, i))); }, concurrent);
+    }
+    else if (typeof resultSelector === 'number') {
+        concurrent = resultSelector;
+    }
+    return lift_1.operate(function (source, subscriber) { return mergeInternals_1.mergeInternals(source, subscriber, project, concurrent); });
+}
+exports.mergeMap = mergeMap;
+
+},{"./map":"7vINI","../observable/from":"Fatr8","../util/lift":"3Hhm5","./mergeInternals":"3hBCt","../util/isFunction":"1rux0"}],"3hBCt":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.mergeInternals = void 0;
+var from_1 = require("../observable/from");
+var OperatorSubscriber_1 = require("./OperatorSubscriber");
+function mergeInternals(source, subscriber, project, concurrent, onBeforeNext, expand, innerSubScheduler, additionalTeardown) {
+    var buffer = [];
+    var active = 0;
+    var index = 0;
+    var isComplete = false;
+    var checkComplete = function () {
+        if (isComplete && !buffer.length && !active) {
+            subscriber.complete();
+        }
+    };
+    var outerNext = function (value) { return (active < concurrent ? doInnerSub(value) : buffer.push(value)); };
+    var doInnerSub = function (value) {
+        expand && subscriber.next(value);
+        active++;
+        var innerComplete = false;
+        from_1.innerFrom(project(value, index++)).subscribe(new OperatorSubscriber_1.OperatorSubscriber(subscriber, function (innerValue) {
+            onBeforeNext === null || onBeforeNext === void 0 ? void 0 : onBeforeNext(innerValue);
+            if (expand) {
+                outerNext(innerValue);
+            }
+            else {
+                subscriber.next(innerValue);
+            }
+        }, function () {
+            innerComplete = true;
+        }, undefined, function () {
+            if (innerComplete) {
+                try {
+                    active--;
+                    var _loop_1 = function () {
+                        var bufferedValue = buffer.shift();
+                        innerSubScheduler ? subscriber.add(innerSubScheduler.schedule(function () { return doInnerSub(bufferedValue); })) : doInnerSub(bufferedValue);
+                    };
+                    while (buffer.length && active < concurrent) {
+                        _loop_1();
+                    }
+                    checkComplete();
+                }
+                catch (err) {
+                    subscriber.error(err);
+                }
+            }
+        }));
+    };
+    source.subscribe(new OperatorSubscriber_1.OperatorSubscriber(subscriber, outerNext, function () {
+        isComplete = true;
+        checkComplete();
+    }));
+    return function () {
+        additionalTeardown === null || additionalTeardown === void 0 ? void 0 : additionalTeardown();
+    };
+}
+exports.mergeInternals = mergeInternals;
+
+},{"../observable/from":"Fatr8","./OperatorSubscriber":"3gY6m"}],"2YaUG":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.connectable = void 0;
+var Subject_1 = require("../Subject");
+var Observable_1 = require("../Observable");
+var defer_1 = require("./defer");
+var DEFAULT_CONFIG = {
+    connector: function () { return new Subject_1.Subject(); },
+    resetOnDisconnect: true,
+};
+function connectable(source, config) {
+    if (config === void 0) { config = DEFAULT_CONFIG; }
+    var connection = null;
+    var connector = config.connector, _a = config.resetOnDisconnect, resetOnDisconnect = _a === void 0 ? true : _a;
+    var subject = connector();
+    var result = new Observable_1.Observable(function (subscriber) {
+        return subject.subscribe(subscriber);
+    });
+    result.connect = function () {
+        if (!connection || connection.closed) {
+            connection = defer_1.defer(function () { return source; }).subscribe(subject);
+            if (resetOnDisconnect) {
+                connection.add(function () { return (subject = connector()); });
+            }
+        }
+        return connection;
+    };
+    return result;
+}
+exports.connectable = connectable;
+
+},{"../Subject":"CTCrE","../Observable":"6XfFQ","./defer":"6CxUm"}],"6CxUm":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.defer = void 0;
+var Observable_1 = require("../Observable");
+var from_1 = require("./from");
+function defer(observableFactory) {
+    return new Observable_1.Observable(function (subscriber) {
+        from_1.innerFrom(observableFactory()).subscribe(subscriber);
+    });
+}
+exports.defer = defer;
+
+},{"../Observable":"6XfFQ","./from":"Fatr8"}],"1UQr7":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.forkJoin = void 0;
+var Observable_1 = require("../Observable");
+var argsArgArrayOrObject_1 = require("../util/argsArgArrayOrObject");
+var from_1 = require("./from");
+var args_1 = require("../util/args");
+var OperatorSubscriber_1 = require("../operators/OperatorSubscriber");
+var mapOneOrManyArgs_1 = require("../util/mapOneOrManyArgs");
+var createObject_1 = require("../util/createObject");
+function forkJoin() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var resultSelector = args_1.popResultSelector(args);
+    var _a = argsArgArrayOrObject_1.argsArgArrayOrObject(args), sources = _a.args, keys = _a.keys;
+    var result = new Observable_1.Observable(function (subscriber) {
+        var length = sources.length;
+        if (!length) {
+            subscriber.complete();
+            return;
+        }
+        var values = new Array(length);
+        var remainingCompletions = length;
+        var remainingEmissions = length;
+        var _loop_1 = function (sourceIndex) {
+            var hasValue = false;
+            from_1.innerFrom(sources[sourceIndex]).subscribe(new OperatorSubscriber_1.OperatorSubscriber(subscriber, function (value) {
+                if (!hasValue) {
+                    hasValue = true;
+                    remainingEmissions--;
+                }
+                values[sourceIndex] = value;
+            }, function () {
+                if (!--remainingCompletions || !hasValue) {
+                    if (!remainingEmissions) {
+                        subscriber.next(keys ? createObject_1.createObject(keys, values) : values);
+                    }
+                    subscriber.complete();
+                }
+            }));
+        };
+        for (var sourceIndex = 0; sourceIndex < length; sourceIndex++) {
+            _loop_1(sourceIndex);
+        }
+    });
+    return resultSelector ? result.pipe(mapOneOrManyArgs_1.mapOneOrManyArgs(resultSelector)) : result;
+}
+exports.forkJoin = forkJoin;
+
+},{"../Observable":"6XfFQ","../util/argsArgArrayOrObject":"3tBWg","./from":"Fatr8","../util/args":"3JFPu","../operators/OperatorSubscriber":"3gY6m","../util/mapOneOrManyArgs":"6B4SF","../util/createObject":"4Qj1e"}],"4a11j":[function(require,module,exports) {
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.fromEvent = void 0;
+var Observable_1 = require("../Observable");
+var mergeMap_1 = require("../operators/mergeMap");
+var isArrayLike_1 = require("../util/isArrayLike");
+var isFunction_1 = require("../util/isFunction");
+var mapOneOrManyArgs_1 = require("../util/mapOneOrManyArgs");
+var fromArray_1 = require("./fromArray");
+var nodeEventEmitterMethods = ['addListener', 'removeListener'];
+var eventTargetMethods = ['addEventListener', 'removeEventListener'];
+var jqueryMethods = ['on', 'off'];
+function fromEvent(target, eventName, options, resultSelector) {
+    if (isFunction_1.isFunction(options)) {
+        resultSelector = options;
+        options = undefined;
+    }
+    if (resultSelector) {
+        return fromEvent(target, eventName, options).pipe(mapOneOrManyArgs_1.mapOneOrManyArgs(resultSelector));
+    }
+    var _a = __read(isEventTarget(target)
+        ? eventTargetMethods.map(function (methodName) { return function (handler) { return target[methodName](eventName, handler, options); }; })
+        :
+            isNodeStyleEventEmitter(target)
+                ? nodeEventEmitterMethods.map(toCommonHandlerRegistry(target, eventName))
+                : isJQueryStyleEventEmitter(target)
+                    ? jqueryMethods.map(toCommonHandlerRegistry(target, eventName))
+                    : [], 2), add = _a[0], remove = _a[1];
+    if (!add) {
+        if (isArrayLike_1.isArrayLike(target)) {
+            return mergeMap_1.mergeMap(function (subTarget) { return fromEvent(subTarget, eventName, options); })(fromArray_1.internalFromArray(target));
+        }
+    }
+    if (!add) {
+        throw new TypeError('Invalid event target');
+    }
+    return new Observable_1.Observable(function (subscriber) {
+        var handler = function () {
+            var args = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                args[_i] = arguments[_i];
+            }
+            return subscriber.next(1 < args.length ? args : args[0]);
+        };
+        add(handler);
+        return function () { return remove(handler); };
+    });
+}
+exports.fromEvent = fromEvent;
+function toCommonHandlerRegistry(target, eventName) {
+    return function (methodName) { return function (handler) { return target[methodName](eventName, handler); }; };
+}
+function isNodeStyleEventEmitter(target) {
+    return isFunction_1.isFunction(target.addListener) && isFunction_1.isFunction(target.removeListener);
+}
+function isJQueryStyleEventEmitter(target) {
+    return isFunction_1.isFunction(target.on) && isFunction_1.isFunction(target.off);
+}
+function isEventTarget(target) {
+    return isFunction_1.isFunction(target.addEventListener) && isFunction_1.isFunction(target.removeEventListener);
+}
+
+},{"../Observable":"6XfFQ","../operators/mergeMap":"4fW0U","../util/isArrayLike":"Y3Lij","../util/isFunction":"1rux0","../util/mapOneOrManyArgs":"6B4SF","./fromArray":"PMrPy"}],"21Udi":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.fromEventPattern = void 0;
+var Observable_1 = require("../Observable");
+var isFunction_1 = require("../util/isFunction");
+var mapOneOrManyArgs_1 = require("../util/mapOneOrManyArgs");
+function fromEventPattern(addHandler, removeHandler, resultSelector) {
+    if (resultSelector) {
+        return fromEventPattern(addHandler, removeHandler).pipe(mapOneOrManyArgs_1.mapOneOrManyArgs(resultSelector));
+    }
+    return new Observable_1.Observable(function (subscriber) {
+        var handler = function () {
+            var e = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                e[_i] = arguments[_i];
+            }
+            return subscriber.next(e.length === 1 ? e[0] : e);
+        };
+        var retValue = addHandler(handler);
+        return isFunction_1.isFunction(removeHandler) ? function () { return removeHandler(handler, retValue); } : undefined;
+    });
+}
+exports.fromEventPattern = fromEventPattern;
+
+},{"../Observable":"6XfFQ","../util/isFunction":"1rux0","../util/mapOneOrManyArgs":"6B4SF"}],"3pBIw":[function(require,module,exports) {
+"use strict";
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.generate = void 0;
+var identity_1 = require("../util/identity");
+var isScheduler_1 = require("../util/isScheduler");
+var defer_1 = require("./defer");
+var scheduleIterable_1 = require("../scheduled/scheduleIterable");
+function generate(initialStateOrOptions, condition, iterate, resultSelectorOrScheduler, scheduler) {
+    var _a, _b;
+    var resultSelector;
+    var initialState;
+    if (arguments.length === 1) {
+        (_a = initialStateOrOptions, initialState = _a.initialState, condition = _a.condition, iterate = _a.iterate, _b = _a.resultSelector, resultSelector = _b === void 0 ? identity_1.identity : _b, scheduler = _a.scheduler);
+    }
+    else {
+        initialState = initialStateOrOptions;
+        if (!resultSelectorOrScheduler || isScheduler_1.isScheduler(resultSelectorOrScheduler)) {
+            resultSelector = identity_1.identity;
+            scheduler = resultSelectorOrScheduler;
+        }
+        else {
+            resultSelector = resultSelectorOrScheduler;
+        }
+    }
+    function gen() {
+        var state;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    state = initialState;
+                    _a.label = 1;
+                case 1:
+                    if (!(!condition || condition(state))) return [3, 4];
+                    return [4, resultSelector(state)];
+                case 2:
+                    _a.sent();
+                    _a.label = 3;
+                case 3:
+                    state = iterate(state);
+                    return [3, 1];
+                case 4: return [2];
+            }
+        });
+    }
+    return defer_1.defer((scheduler
+        ?
+            function () { return scheduleIterable_1.scheduleIterable(gen(), scheduler); }
+        :
+            gen));
+}
+exports.generate = generate;
+
+},{"../util/identity":"2QJLj","../util/isScheduler":"5CcUT","./defer":"6CxUm","../scheduled/scheduleIterable":"3CwLs"}],"5ps6j":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.iif = void 0;
+var defer_1 = require("./defer");
+function iif(condition, trueResult, falseResult) {
+    return defer_1.defer(function () { return (condition() ? trueResult : falseResult); });
+}
+exports.iif = iif;
+
+},{"./defer":"6CxUm"}],"aMShB":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.interval = void 0;
+var async_1 = require("../scheduler/async");
+var timer_1 = require("./timer");
+function interval(period, scheduler) {
+    if (period === void 0) { period = 0; }
+    if (scheduler === void 0) { scheduler = async_1.asyncScheduler; }
+    if (period < 0) {
+        period = 0;
+    }
+    return timer_1.timer(period, period, scheduler);
+}
+exports.interval = interval;
+
+},{"../scheduler/async":"5ysvr","./timer":"MBto6"}],"MBto6":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.timer = void 0;
+var Observable_1 = require("../Observable");
+var async_1 = require("../scheduler/async");
+var isScheduler_1 = require("../util/isScheduler");
+var isDate_1 = require("../util/isDate");
+function timer(dueTime, intervalOrScheduler, scheduler) {
+    if (dueTime === void 0) { dueTime = 0; }
+    if (scheduler === void 0) { scheduler = async_1.async; }
+    var intervalDuration = -1;
+    if (intervalOrScheduler != null) {
+        if (isScheduler_1.isScheduler(intervalOrScheduler)) {
+            scheduler = intervalOrScheduler;
+        }
+        else {
+            intervalDuration = intervalOrScheduler;
+        }
+    }
+    return new Observable_1.Observable(function (subscriber) {
+        var due = isDate_1.isValidDate(dueTime) ? +dueTime - scheduler.now() : dueTime;
+        if (due < 0) {
+            due = 0;
+        }
+        var n = 0;
+        return scheduler.schedule(function () {
+            if (!subscriber.closed) {
+                subscriber.next(n++);
+                if (0 <= intervalDuration) {
+                    this.schedule(undefined, intervalDuration);
+                }
+                else {
+                    subscriber.complete();
+                }
+            }
+        }, due);
+    });
+}
+exports.timer = timer;
+
+},{"../Observable":"6XfFQ","../scheduler/async":"5ysvr","../util/isScheduler":"5CcUT","../util/isDate":"1CkFX"}],"3u8OG":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.merge = void 0;
+var mergeAll_1 = require("../operators/mergeAll");
+var fromArray_1 = require("./fromArray");
+var from_1 = require("./from");
+var empty_1 = require("./empty");
+var args_1 = require("../util/args");
+function merge() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var scheduler = args_1.popScheduler(args);
+    var concurrent = args_1.popNumber(args, Infinity);
+    var sources = args;
+    return !sources.length
+        ?
+            empty_1.EMPTY
+        : sources.length === 1
+            ?
+                from_1.innerFrom(sources[0])
+            :
+                mergeAll_1.mergeAll(concurrent)(fromArray_1.internalFromArray(sources, scheduler));
+}
+exports.merge = merge;
+
+},{"../operators/mergeAll":"3xK3Y","./fromArray":"PMrPy","./from":"Fatr8","./empty":"2Zbmy","../util/args":"3JFPu"}],"2htjn":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.never = exports.NEVER = void 0;
+var Observable_1 = require("../Observable");
+var noop_1 = require("../util/noop");
+exports.NEVER = new Observable_1.Observable(noop_1.noop);
+function never() {
+    return exports.NEVER;
+}
+exports.never = never;
+
+},{"../Observable":"6XfFQ","../util/noop":"2s9LI"}],"78agF":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.onErrorResumeNext = void 0;
+var empty_1 = require("./empty");
+var onErrorResumeNext_1 = require("../operators/onErrorResumeNext");
+var argsOrArgArray_1 = require("../util/argsOrArgArray");
+function onErrorResumeNext() {
+    var sources = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        sources[_i] = arguments[_i];
+    }
+    return onErrorResumeNext_1.onErrorResumeNext(argsOrArgArray_1.argsOrArgArray(sources))(empty_1.EMPTY);
+}
+exports.onErrorResumeNext = onErrorResumeNext;
+
+},{"./empty":"2Zbmy","../operators/onErrorResumeNext":"6wRxZ","../util/argsOrArgArray":"4SxkS"}],"6wRxZ":[function(require,module,exports) {
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.onErrorResumeNext = void 0;
+var lift_1 = require("../util/lift");
+var from_1 = require("../observable/from");
+var argsOrArgArray_1 = require("../util/argsOrArgArray");
+var OperatorSubscriber_1 = require("./OperatorSubscriber");
+var noop_1 = require("../util/noop");
+function onErrorResumeNext() {
+    var sources = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        sources[_i] = arguments[_i];
+    }
+    var nextSources = argsOrArgArray_1.argsOrArgArray(sources);
+    return lift_1.operate(function (source, subscriber) {
+        var remaining = __spreadArray([source], __read(nextSources));
+        var subscribeNext = function () {
+            if (!subscriber.closed) {
+                if (remaining.length > 0) {
+                    var nextSource = void 0;
+                    try {
+                        nextSource = from_1.innerFrom(remaining.shift());
+                    }
+                    catch (err) {
+                        subscribeNext();
+                        return;
+                    }
+                    var innerSub = new OperatorSubscriber_1.OperatorSubscriber(subscriber, undefined, noop_1.noop, noop_1.noop);
+                    subscriber.add(nextSource.subscribe(innerSub));
+                    innerSub.add(subscribeNext);
+                }
+                else {
+                    subscriber.complete();
+                }
+            }
+        };
+        subscribeNext();
+    });
+}
+exports.onErrorResumeNext = onErrorResumeNext;
+
+},{"../util/lift":"3Hhm5","../observable/from":"Fatr8","../util/argsOrArgArray":"4SxkS","./OperatorSubscriber":"3gY6m","../util/noop":"2s9LI"}],"4SxkS":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.argsOrArgArray = void 0;
+var isArray = Array.isArray;
+function argsOrArgArray(args) {
+    return args.length === 1 && isArray(args[0]) ? args[0] : args;
+}
+exports.argsOrArgArray = argsOrArgArray;
+
+},{}],"3vJ31":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.pairs = void 0;
+var from_1 = require("./from");
+function pairs(obj, scheduler) {
+    return from_1.from(Object.entries(obj), scheduler);
+}
+exports.pairs = pairs;
+
+},{"./from":"Fatr8"}],"7lv9y":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.partition = void 0;
+var not_1 = require("../util/not");
+var filter_1 = require("../operators/filter");
+var from_1 = require("./from");
+function partition(source, predicate, thisArg) {
+    return [filter_1.filter(predicate, thisArg)(from_1.innerFrom(source)), filter_1.filter(not_1.not(predicate, thisArg))(from_1.innerFrom(source))];
+}
+exports.partition = partition;
+
+},{"../util/not":"7oKg7","../operators/filter":"2N5w7","./from":"Fatr8"}],"7oKg7":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.not = void 0;
+function not(pred, thisArg) {
+    return function (value, index) { return !pred.call(thisArg, value, index); };
+}
+exports.not = not;
+
+},{}],"2N5w7":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.filter = void 0;
+var lift_1 = require("../util/lift");
+var OperatorSubscriber_1 = require("./OperatorSubscriber");
+function filter(predicate, thisArg) {
+    return lift_1.operate(function (source, subscriber) {
+        var index = 0;
+        source.subscribe(new OperatorSubscriber_1.OperatorSubscriber(subscriber, function (value) { return predicate.call(thisArg, value, index++) && subscriber.next(value); }));
+    });
+}
+exports.filter = filter;
+
+},{"../util/lift":"3Hhm5","./OperatorSubscriber":"3gY6m"}],"1MY0M":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.raceInit = exports.race = void 0;
+var Observable_1 = require("../Observable");
+var from_1 = require("./from");
+var argsOrArgArray_1 = require("../util/argsOrArgArray");
+var OperatorSubscriber_1 = require("../operators/OperatorSubscriber");
+function race() {
+    var sources = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        sources[_i] = arguments[_i];
+    }
+    sources = argsOrArgArray_1.argsOrArgArray(sources);
+    return sources.length === 1 ? from_1.innerFrom(sources[0]) : new Observable_1.Observable(raceInit(sources));
+}
+exports.race = race;
+function raceInit(sources) {
+    return function (subscriber) {
+        var subscriptions = [];
+        var _loop_1 = function (i) {
+            subscriptions.push(from_1.innerFrom(sources[i]).subscribe(new OperatorSubscriber_1.OperatorSubscriber(subscriber, function (value) {
+                if (subscriptions) {
+                    for (var s = 0; s < subscriptions.length; s++) {
+                        s !== i && subscriptions[s].unsubscribe();
+                    }
+                    subscriptions = null;
+                }
+                subscriber.next(value);
+            })));
+        };
+        for (var i = 0; subscriptions && !subscriber.closed && i < sources.length; i++) {
+            _loop_1(i);
+        }
+    };
+}
+exports.raceInit = raceInit;
+
+},{"../Observable":"6XfFQ","./from":"Fatr8","../util/argsOrArgArray":"4SxkS","../operators/OperatorSubscriber":"3gY6m"}],"1MLuR":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.range = void 0;
+var Observable_1 = require("../Observable");
+var empty_1 = require("./empty");
+function range(start, count, scheduler) {
+    if (count == null) {
+        count = start;
+        start = 0;
+    }
+    if (count <= 0) {
+        return empty_1.EMPTY;
+    }
+    var end = count + start;
+    return new Observable_1.Observable(scheduler
+        ?
+            function (subscriber) {
+                var n = start;
+                return scheduler.schedule(function () {
+                    if (n < end) {
+                        subscriber.next(n++);
+                        this.schedule();
+                    }
+                    else {
+                        subscriber.complete();
+                    }
+                });
+            }
+        :
+            function (subscriber) {
+                var n = start;
+                while (n < end && !subscriber.closed) {
+                    subscriber.next(n++);
+                }
+                subscriber.complete();
+            });
+}
+exports.range = range;
+
+},{"../Observable":"6XfFQ","./empty":"2Zbmy"}],"1yWKa":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.using = void 0;
+var Observable_1 = require("../Observable");
+var from_1 = require("./from");
+var empty_1 = require("./empty");
+function using(resourceFactory, observableFactory) {
+    return new Observable_1.Observable(function (subscriber) {
+        var resource = resourceFactory();
+        var result = observableFactory(resource);
+        var source = result ? from_1.innerFrom(result) : empty_1.EMPTY;
+        source.subscribe(subscriber);
+        return function () {
+            if (resource) {
+                resource.unsubscribe();
+            }
+        };
+    });
+}
+exports.using = using;
+
+},{"../Observable":"6XfFQ","./from":"Fatr8","./empty":"2Zbmy"}],"3Wymr":[function(require,module,exports) {
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.zip = void 0;
+var Observable_1 = require("../Observable");
+var from_1 = require("./from");
+var argsOrArgArray_1 = require("../util/argsOrArgArray");
+var empty_1 = require("./empty");
+var OperatorSubscriber_1 = require("../operators/OperatorSubscriber");
+var args_1 = require("../util/args");
+function zip() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var resultSelector = args_1.popResultSelector(args);
+    var sources = argsOrArgArray_1.argsOrArgArray(args);
+    return sources.length
+        ? new Observable_1.Observable(function (subscriber) {
+            var buffers = sources.map(function () { return []; });
+            var completed = sources.map(function () { return false; });
+            subscriber.add(function () {
+                buffers = completed = null;
+            });
+            var _loop_1 = function (sourceIndex) {
+                from_1.innerFrom(sources[sourceIndex]).subscribe(new OperatorSubscriber_1.OperatorSubscriber(subscriber, function (value) {
+                    buffers[sourceIndex].push(value);
+                    if (buffers.every(function (buffer) { return buffer.length; })) {
+                        var result = buffers.map(function (buffer) { return buffer.shift(); });
+                        subscriber.next(resultSelector ? resultSelector.apply(void 0, __spreadArray([], __read(result))) : result);
+                        if (buffers.some(function (buffer, i) { return !buffer.length && completed[i]; })) {
+                            subscriber.complete();
+                        }
+                    }
+                }, function () {
+                    completed[sourceIndex] = true;
+                    !buffers[sourceIndex].length && subscriber.complete();
+                }));
+            };
+            for (var sourceIndex = 0; !subscriber.closed && sourceIndex < sources.length; sourceIndex++) {
+                _loop_1(sourceIndex);
+            }
+            return function () {
+                buffers = completed = null;
+            };
+        })
+        : empty_1.EMPTY;
+}
+exports.zip = zip;
+
+},{"../Observable":"6XfFQ","./from":"Fatr8","../util/argsOrArgArray":"4SxkS","./empty":"2Zbmy","../operators/OperatorSubscriber":"3gY6m","../util/args":"3JFPu"}],"69AK9":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+
+},{}],"3mRRg":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("../ButtonComponent/buttonComponent");
+  var _HeaderComponentHeader = require("../HeaderComponent/header");
+  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _moment = require("moment");
+  var _momentDefault = _parcelHelpers.interopDefault(_moment);
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\ResearchAcceptedComponent\\researchAcceptedComponent.js";
+  const initialState = {
+    researchTitle: "",
+    researchField: "",
+    researchYear: "",
+    coAuthors: "",
+    fileURL: "",
+    isApproved: "",
+    dataArray: []
+  };
+  class researchAcceptedComponent extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = initialState;
+    }
+    componentDidMount() {
+      _axiosDefault.default.get("http://localhost:5000/researchDetails/getAcceptedResearches").then(response => {
+        console.log("Response data: ", response.data.data);
+        this.setState({
+          dataArray: response.data.data
+        });
+      }).catch(error => {
+        console.log(error.message);
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 36,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          className: "card-header text-center font-weight-bold text-uppercase py-4",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 40,
+            columnNumber: 13
+          }
+        }, "Accepted Research Papers"), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card mb-3 p-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card-body",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          id: "table",
+          className: "table-editable",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("table", {
+          className: "table table-bordered table-responsive-md table-striped text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47,
+            columnNumber: 19
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("thead", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49,
+            columnNumber: 23
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50,
+            columnNumber: 25
+          }
+        }, "Research Title"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51,
+            columnNumber: 25
+          }
+        }, "Research Field"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52,
+            columnNumber: 25
+          }
+        }, "Research Year"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+          className: "text-center",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53,
+            columnNumber: 25
+          }
+        }, "Research Author"))), this.state.dataArray.length > 0 && this.state.dataArray.map((item, index) => /*#__PURE__*/_reactDefault.default.createElement("tbody", {
+          key: index,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 58,
+            columnNumber: 25
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 59,
+            columnNumber: 27
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "researchTitle",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60,
+            columnNumber: 29
+          }
+        }, item.researchTitle), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "researchField",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 67,
+            columnNumber: 29
+          }
+        }, item.researchField), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "researchYear",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 74,
+            columnNumber: 29
+          }
+        }, _momentDefault.default(item.researchYear).format("YYYY")), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half",
+          name: "coAuthors",
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 81,
+            columnNumber: 29
+          }
+        }, item.coAuthors), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          className: "pt-3-half ",
+          name: "fileURL",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 88,
+            columnNumber: 29
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          href: item.fileURL,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 93,
+            columnNumber: 31
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("i", {
+          className: "fas fa-file-download",
+          id: "acc-icon",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94,
+            columnNumber: 33
+          }
+        }))), /*#__PURE__*/_reactDefault.default.createElement("td", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 100,
+            columnNumber: 29
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "table-remove",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 101,
+            columnNumber: 31
+          }
+        }, item.isAccepted && /*#__PURE__*/_reactDefault.default.createElement("button", {
+          type: "button",
+          className: "btn btn-danger btn-rounded btn-sm my-0",
+          onClick: () => this.approveResearch(item._id, true),
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 103,
+            columnNumber: 35
+          }
+        }, "Pay")))))))))))))
+      );
+    }
+  }
+  exports.default = researchAcceptedComponent;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../ButtonComponent/buttonComponent":"Zx1Ei","../HeaderComponent/header":"5VZ8N","axios":"7rA65","moment":"5Hi32","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6LiEh":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactRouterDom = require("react-router-dom");
+  var _NotificationServiceComponentNotificationService = require("../NotificationServiceComponent/notificationService");
+  var _jsxFileName = "D:\\SLIIT\\Year 3\\Git\\AF-GroupProjectMERN\\frontend\\Components\\NotificationViewComponent\\notificationViewComponent.js";
+  class notificationViewComponent extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        notifications: []
+      };
+    }
+    componentDidMount() {
+      this.subscription = _NotificationServiceComponentNotificationService.notificationService.getMessage().subscribe(notification => {
+        if (notification) {
+          this.setState({
+            notifications: [...this.state.notifications, notification]
+          });
+        } else {
+          this.setState({
+            notifications: []
+          });
+        }
+      });
+    }
+    componentWillUnmount() {
+      this.subscription.unsubscribe();
+    }
+    render() {
+      const {notifications} = this.state;
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h4", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 36,
+            columnNumber: 11
+          }
+        }, "Notifications"), notifications.map((notification, index) => /*#__PURE__*/_reactDefault.default.createElement("div", {
+          key: index,
+          className: "alert alert-success",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39,
+            columnNumber: 15
+          }
+        }, notification.text)))))
+      );
+    }
+  }
+  exports.default = notificationViewComponent;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","react-router-dom":"1PMSK","../NotificationServiceComponent/notificationService":"1wCag","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire768c")
 
 //# sourceMappingURL=index.63f10152.js.map
