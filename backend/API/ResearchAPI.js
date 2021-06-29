@@ -77,27 +77,6 @@ const getResearchById = async (req, res) => {
     });
 };
 
-// function editResearchDetails(id, data) {
-//   try {
-//     const result = Research.findByIdAndUpdate(
-//       { _id: id },
-//       {
-//         $set: {
-//           researchTitle: data.title,
-//           researchField: data.field,
-//           researchYear: data.year,
-//           coAuthors: data.authors,
-//           isAccepted: data.isAccepted,
-//         },
-//       },
-//       { new: true }
-//     );
-//     return result;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
 const editResearchDetails = async (req, res) => {
   let id = req.params.id;
   let dataSet = req.body;
