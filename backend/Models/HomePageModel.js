@@ -2,31 +2,40 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const homePageModel = new Schema({
-  homePageTitle: {
+  confName: {
     type: String,
     required: true,
   },
 
-  date: {
+  dateOfConf: {
     type: String,
     required: true,
   },
-  time: {
+  venueOfConf: {
     type: String,
     required: true,
   },
-  venue: {
+  confDesc: {
     type: String,
     required: true,
   },
-  backGroudImg: {
+  trackOne: {
+    type: String,
+  },
+  trackTwo: {
+    type: String,
+  },
+  trackThree: {
+    type: String,
+  },
+  trackFour: {
+    type: String,
+  },
+  imageUrl: {
     type: String,
     required: true,
   },
-  logo: {
-    type: String,
-  },
-  homePageDescription: {
+  status: {
     type: String,
     required: true,
   },

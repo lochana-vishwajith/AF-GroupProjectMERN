@@ -1,29 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const WorkshopTemplateDetails = require("../Models/WorkshopTemplateModel");
-const multer = require("multer");
-const path = require("path");
 
-const template = multer.diskStorage({
-  destination: "./WorkshopRresentationTemplate",
-  filename: (req, file, cb) => {
-    return cb(
-      null,
-      `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`
-    );
-  },
-});
-
-const upload = multer({
-  storage: template,
-});
-
-router.post("/", upload.single("templateFile"), (req, res, next) => {
-  const { templateTitle, specialNotes } = req.body;
+router.post("/", (req, res, next) => {
+  const { templateTitle, specialNotes, templateFile } = req.body;
 
   const templateDetails = new WorkshopTemplateDetails({
     templateTitle,
-    templateFile: `http://localhost:5000/templateFolder/${req.file.filename}`,
+    templateFile,
     specialNotes,
   });
 
@@ -59,14 +43,14 @@ router.get("/:id", async (req, res) => {
     });
 });
 
-router.put("/:id", upload.single("templateFile"), async (req, res) => {
+router.put("/:id", async (req, res) => {
   let templateId = req.params.id;
 
-  const { templateTitle, specialNotes } = req.body;
+  const { templateTitle, specialNotes, templateFile } = req.body;
 
   const details = {
     templateTitle,
-    templateFile: `http://localhost:5000/templateFolder/${req.file.filename}`,
+    templateFile,
     specialNotes,
   };
 

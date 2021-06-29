@@ -5,6 +5,7 @@ import TextInput from "../TextInputComponent/textInputComponent";
 import Button from "../ButtonComponent/buttonComponent";
 import { storage } from "../../firebase";
 import axios from "axios";
+import EditorHeader from "../EditorHeader/editorHeader";
 
 export default class addCommiteeMembers extends Component {
   constructor(props) {
@@ -91,7 +92,7 @@ export default class addCommiteeMembers extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <EditorHeader />
         <div className="container">
           <br />
           <h2>Add Committee Members</h2>

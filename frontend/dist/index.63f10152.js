@@ -26287,6 +26287,10 @@ try {
   var _ComponentsDisplayMembersForEditorDisplayMembersForEditorDefault = _parcelHelpers.interopDefault(_ComponentsDisplayMembersForEditorDisplayMembersForEditor);
   var _ComponentsUpdateComitteeMembersComponentUpdateMember = require("./Components/updateComitteeMembersComponent/updateMember");
   var _ComponentsUpdateComitteeMembersComponentUpdateMemberDefault = _parcelHelpers.interopDefault(_ComponentsUpdateComitteeMembersComponentUpdateMember);
+  var _ComponentsHomePageAcceptComponentHomePageAcceptComponent = require("./Components/HomePageAcceptComponent/HomePageAcceptComponent");
+  var _ComponentsHomePageAcceptComponentHomePageAcceptComponentDefault = _parcelHelpers.interopDefault(_ComponentsHomePageAcceptComponentHomePageAcceptComponent);
+  var _ComponentsApplyHomeContentComponentApplyHomeContent = require('./Components/ApplyHomeContentComponent/ApplyHomeContent');
+  var _ComponentsApplyHomeContentComponentApplyHomeContentDefault = _parcelHelpers.interopDefault(_ComponentsApplyHomeContentComponentApplyHomeContent);
   var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\App.jsx";
   class App extends _react.Component {
     render() {
@@ -26295,14 +26299,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 22,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 23,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26312,7 +26316,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
+            lineNumber: 24,
             columnNumber: 21
           }
         }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26322,7 +26326,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 25,
             columnNumber: 21
           }
         }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26332,7 +26336,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 26,
             columnNumber: 21
           }
         }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26342,7 +26346,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25,
+            lineNumber: 27,
             columnNumber: 21
           }
         }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26352,7 +26356,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26,
+            lineNumber: 28,
             columnNumber: 21
           }
         }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26362,14 +26366,34 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27,
+            lineNumber: 29,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/homePageAccept",
+          component: _ComponentsHomePageAcceptComponentHomePageAcceptComponentDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30,
+            columnNumber: 21
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          exact: true,
+          path: "/homecontent",
+          component: _ComponentsApplyHomeContentComponentApplyHomeContentDefault.default,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement(_ComponentsFooterComponentFooterDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29,
+            lineNumber: 33,
             columnNumber: 17
           }
         }))
@@ -26383,7 +26407,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","bootstrap/dist/css/bootstrap.min.css":"5GTF8","react-router-dom":"1PMSK","./Components/HomePageConfigComponent/homePageConfig":"2xxfo","./Components/HomePageComponent/home":"4ESIl","./Components/FooterComponent/footer":"5J3H4","./Components/AddCommiteeMembers/addCommiteeMembers":"7AyLR","./Components/DisplayComitteeMember/displayComitteeMember":"4Aigj","./Components/displayMembersForEditor/displayMembersForEditor":"4HEqB","./Components/updateComitteeMembersComponent/updateMember":"6T9qG"}],"5gA8y":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","bootstrap/dist/css/bootstrap.min.css":"5GTF8","react-router-dom":"1PMSK","./Components/HomePageConfigComponent/homePageConfig":"2xxfo","./Components/HomePageComponent/home":"4ESIl","./Components/FooterComponent/footer":"5J3H4","./Components/AddCommiteeMembers/addCommiteeMembers":"7AyLR","./Components/DisplayComitteeMember/displayComitteeMember":"4Aigj","./Components/displayMembersForEditor/displayMembersForEditor":"4HEqB","./Components/updateComitteeMembersComponent/updateMember":"6T9qG","./Components/HomePageAcceptComponent/HomePageAcceptComponent":"6KMWt","./Components/ApplyHomeContentComponent/ApplyHomeContent":"3cDXs"}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {
@@ -30530,9 +30554,13 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require("./homepageconfig.css");
   require("react-select");
-  require("axios");
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
   var _TextInputComponentTextInputComponent = require("../TextInputComponent/textInputComponent");
   var _TextInputComponentTextInputComponentDefault = _parcelHelpers.interopDefault(_TextInputComponentTextInputComponent);
+  var _firebase = require("../../firebase");
+  var _ButtonComponentButtonComponent = require("../ButtonComponent/buttonComponent");
+  var _ButtonComponentButtonComponentDefault = _parcelHelpers.interopDefault(_ButtonComponentButtonComponent);
   var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js";
   class homePageConfig extends _react.Component {
     constructor(props) {
@@ -30546,9 +30574,15 @@ try {
         confDesc: "",
         trackOne: "",
         trackTwo: "",
-        trackFour: ""
+        trackThree: "",
+        trackFour: "",
+        imageUrl: "",
+        status: "pending"
       };
       this.fileChange = this.fileChange.bind(this);
+      this.handlerChange = this.handlerChange.bind(this);
+      this.saveImage = this.saveImage.bind(this);
+      this.SubmitDetails = this.SubmitDetails.bind(this);
     }
     fileChange(e) {
       const reader = new FileReader();
@@ -30564,6 +30598,49 @@ try {
       };
       reader.readAsDataURL(e.target.files[0]);
     }
+    handlerChange(e) {
+      this.setState({
+        [e.target.name]: e.target.value
+      });
+    }
+    saveImage() {
+      const {imageUplaod} = this.state;
+      const date = Date.now();
+      const uploadTask = _firebase.storage.ref(`images/${date}_${imageUplaod.name}`).put(imageUplaod);
+      uploadTask.on("state_changed", snapshot => {}, error => {
+        console.log(error);
+      }, () => {
+        _firebase.storage.ref("images").child(`${date}_${imageUplaod.name}`).getDownloadURL().then(url => {
+          console.log(url);
+          this.setState({
+            imageUrl: url
+          });
+          setTimeout(this.SubmitDetails(), 1000);
+        });
+      });
+    }
+    SubmitDetails() {
+      const {confName, dateOfConf, venueOfConf, imageUrl, confDesc, trackOne, trackTwo, trackThree, trackFour, status} = this.state;
+      const details = {
+        confName,
+        dateOfConf,
+        venueOfConf,
+        imageUrl,
+        confDesc,
+        trackOne,
+        trackTwo,
+        trackThree,
+        trackFour,
+        status
+      };
+      _axiosDefault.default.post("http://localhost:5000/homePage/", details).then(() => {
+        alert("Home Page Content Details are Added Successfully");
+        window.location.reload();
+      }).catch(err => {
+        alert("Error in Submiiting.Please Check Again Before Submitting...!");
+        console.log(err);
+      });
+    }
     render() {
       const {image} = this.state;
       return (
@@ -30572,7 +30649,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 36,
+            lineNumber: 111,
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30580,7 +30657,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 37,
+            lineNumber: 112,
             columnNumber: 9
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("img", {
@@ -30590,14 +30667,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 38,
+            lineNumber: 113,
             columnNumber: 11
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41,
+            lineNumber: 116,
             columnNumber: 9
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30606,7 +30683,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42,
+            lineNumber: 117,
             columnNumber: 9
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("i", {
@@ -30615,7 +30692,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43,
+            lineNumber: 118,
             columnNumber: 11
           }
         }), "Upload an Image"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -30627,7 +30704,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 46,
+            lineNumber: 121,
             columnNumber: 9
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30635,7 +30712,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53,
+            lineNumber: 128,
             columnNumber: 9
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30643,14 +30720,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 54,
+            lineNumber: 129,
             columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("center", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 55,
+            lineNumber: 130,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
@@ -30658,7 +30735,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 56,
+            lineNumber: 131,
             columnNumber: 15
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
@@ -30671,7 +30748,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57,
+            lineNumber: 132,
             columnNumber: 17
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -30679,7 +30756,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66,
+            lineNumber: 141,
             columnNumber: 15
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
@@ -30692,7 +30769,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 67,
+            lineNumber: 142,
             columnNumber: 17
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -30700,7 +30777,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 76,
+            lineNumber: 151,
             columnNumber: 15
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
@@ -30709,11 +30786,11 @@ try {
           name: "venueOfConf",
           onchange: this.handlerChange,
           id: "venueOfConf",
-          fieldValue: "Conference Name",
+          fieldValue: "Conference Venue",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 77,
+            lineNumber: 152,
             columnNumber: 17
           }
         }))))), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30721,21 +30798,21 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89,
+            lineNumber: 164,
             columnNumber: 9
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 90,
+            lineNumber: 165,
             columnNumber: 11
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("center", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91,
+            lineNumber: 166,
             columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -30743,7 +30820,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92,
+            lineNumber: 167,
             columnNumber: 13
           }
         }, "About Our Conference"), /*#__PURE__*/_reactDefault.default.createElement("h3", {
@@ -30751,21 +30828,21 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 94,
+            lineNumber: 169,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("b", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 95,
+            lineNumber: 170,
             columnNumber: 15
           }
         }, "Internatinal Conference on Application Framework"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 98,
+            lineNumber: 173,
             columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30773,7 +30850,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99,
+            lineNumber: 174,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
@@ -30782,7 +30859,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 100,
+            lineNumber: 175,
             columnNumber: 15
           }
         }, "Brief Description About The Conference")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
@@ -30794,42 +30871,42 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 104,
+            lineNumber: 179,
             columnNumber: 13
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 112,
+            lineNumber: 187,
             columnNumber: 11
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("center", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 113,
+            lineNumber: 188,
             columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 114,
+            lineNumber: 189,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("b", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 115,
+            lineNumber: 190,
             columnNumber: 15
           }
         }, "Conference Tracks"))), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118,
+            lineNumber: 193,
             columnNumber: 11
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30837,7 +30914,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 119,
+            lineNumber: 194,
             columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30845,14 +30922,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 120,
+            lineNumber: 195,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 121,
+            lineNumber: 196,
             columnNumber: 15
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30860,7 +30937,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 122,
+            lineNumber: 197,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
@@ -30869,7 +30946,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 123,
+            lineNumber: 198,
             columnNumber: 19
           }
         }, "Conference Track 01 :")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
@@ -30881,7 +30958,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 127,
+            lineNumber: 202,
             columnNumber: 17
           }
         }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30889,14 +30966,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 136,
+            lineNumber: 211,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 137,
+            lineNumber: 212,
             columnNumber: 15
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30904,7 +30981,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 138,
+            lineNumber: 213,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
@@ -30913,7 +30990,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 139,
+            lineNumber: 214,
             columnNumber: 19
           }
         }, "Conference Track 02 :")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
@@ -30925,7 +31002,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143,
+            lineNumber: 218,
             columnNumber: 17
           }
         }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30933,14 +31010,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 152,
+            lineNumber: 227,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 153,
+            lineNumber: 228,
             columnNumber: 15
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30948,7 +31025,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 154,
+            lineNumber: 229,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
@@ -30957,19 +31034,19 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 155,
+            lineNumber: 230,
             columnNumber: 19
           }
         }, "Conference Track 03 :")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
-          id: "trackTree",
-          name: "trackTree",
+          id: "trackThree",
+          name: "trackThree",
           rows: "6",
           cols: "75",
           onChange: this.handlerChange,
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 159,
+            lineNumber: 234,
             columnNumber: 17
           }
         }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30977,14 +31054,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 168,
+            lineNumber: 243,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 169,
+            lineNumber: 244,
             columnNumber: 15
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30992,7 +31069,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 170,
+            lineNumber: 245,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
@@ -31001,7 +31078,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 171,
+            lineNumber: 246,
             columnNumber: 19
           }
         }, "Conference Track 04 :")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
@@ -31013,14 +31090,39 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 175,
+            lineNumber: 250,
             columnNumber: 17
           }
-        }))))), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        })))), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 186,
+            lineNumber: 260,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("center", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 261,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "submit",
+          classname: "btn btn-outline-dark",
+          value: "Save Details",
+          onsubmit: this.saveImage,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 262,
+            columnNumber: 13
+          }
+        }))), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 270,
             columnNumber: 9
           }
         }))
@@ -31034,7 +31136,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./homepageconfig.css":"5Mm2P","react-select":"7d3cD","axios":"7rA65","../TextInputComponent/textInputComponent":"15meu"}],"5Mm2P":[function() {},{}],"7d3cD":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./homepageconfig.css":"5Mm2P","react-select":"7d3cD","axios":"7rA65","../TextInputComponent/textInputComponent":"15meu","../../firebase":"3CZmC","../ButtonComponent/buttonComponent":"Zx1Ei"}],"5Mm2P":[function() {},{}],"7d3cD":[function(require,module,exports) {
 "use strict";
 if ("development" === "production") {
   module.exports = require("./react-select.cjs.prod.js");
@@ -39061,1026 +39163,6 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"4ESIl":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  require("./home.css");
-  var _HeaderComponentHeader = require("../HeaderComponent/header");
-  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
-  var _react = require("react");
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\HomePageComponent\\home.js";
-  class home extends _react.Component {
-    render() {
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 8,
-            columnNumber: 7
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "header-img",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 9,
-            columnNumber: 9
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 10,
-            columnNumber: 11
-          }
-        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "outer-div",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 13,
-            columnNumber: 9
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "page-name",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 14,
-            columnNumber: 11
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("center", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 15,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
-          className: "conf-name",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 16,
-            columnNumber: 15
-          }
-        }, "Internatinal Conference on Application Framework"), /*#__PURE__*/_reactDefault.default.createElement("p", {
-          className: "dateOfConf",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 19,
-            columnNumber: 15
-          }
-        }, "6,7 & 8 of September of 2021"), /*#__PURE__*/_reactDefault.default.createElement("p", {
-          className: "venueOfConf",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 20,
-            columnNumber: 15
-          }
-        }, "Kularathne Hall of Ananda Collage")))), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "container",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 24,
-            columnNumber: 9
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("br", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 25,
-            columnNumber: 11
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("center", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 26,
-            columnNumber: 11
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-          className: "about",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 27,
-            columnNumber: 13
-          }
-        }, "About Our Conference"), /*#__PURE__*/_reactDefault.default.createElement("h3", {
-          className: "aboutConfTopic",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 29,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 30,
-            columnNumber: 15
-          }
-        }, "Internatinal Conference on Application Framework"))), /*#__PURE__*/_reactDefault.default.createElement("p", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 33,
-            columnNumber: 11
-          }
-        }, "The 3rd International conference on advancements in computing -2021 (ICAC2021) is organized by the Faculty of Computing of the Sri Lanka Institute of Information Technology (SLIIT) as an open forum for academics along with industry professionals to present the latest findings and research output and practical deployments in the Computer Science and Information Technology domains. Primary objective of the ICAC is to uplift the research culture and the quality of research done by Sri Lankan researchers. This conference will create a platform for national and international researchers to showcase their research output, networking opportunities to discuss innovative ideas, and initiate collaborative work. ICAC 2019 and ICAC 2020 were successfully conducted with a technical co-sponsorship by IEEE Sri Lanka Section and all publications are available in IEEE Xplore digital library December 9 - 11 in Sri Lanka Institute of Information Technology"), /*#__PURE__*/_reactDefault.default.createElement("br", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 50,
-            columnNumber: 11
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("center", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 51,
-            columnNumber: 11
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 52,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 53,
-            columnNumber: 15
-          }
-        }, "Conference Tracks"))), /*#__PURE__*/_reactDefault.default.createElement("br", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 56,
-            columnNumber: 11
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "trackGrid",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 57,
-            columnNumber: 11
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 58,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 59,
-            columnNumber: 15
-          }
-        }, "Frontend Frameworks and Best Parctices"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 60,
-            columnNumber: 15
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 61,
-            columnNumber: 17
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 62,
-            columnNumber: 19
-          }
-        }, "Introduction to Web Frameworks")), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 64,
-            columnNumber: 17
-          }
-        }, "React"), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 65,
-            columnNumber: 17
-          }
-        }, "Angular"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 68,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 69,
-            columnNumber: 15
-          }
-        }, "ServerSide Frameworks and Best Parctices"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 70,
-            columnNumber: 15
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 71,
-            columnNumber: 17
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 72,
-            columnNumber: 19
-          }
-        }, "Introduction to ServerSide Frameworks")), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 74,
-            columnNumber: 17
-          }
-        }, "Express"), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 75,
-            columnNumber: 17
-          }
-        }, "Koa"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 78,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 79,
-            columnNumber: 15
-          }
-        }, "Databases"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 80,
-            columnNumber: 15
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 81,
-            columnNumber: 17
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 82,
-            columnNumber: 19
-          }
-        }, "Introduction to Databases")), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 84,
-            columnNumber: 17
-          }
-        }, "MongoDB"), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 85,
-            columnNumber: 17
-          }
-        }, "FireBase"), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 86,
-            columnNumber: 17
-          }
-        }, "MySQL"))))))
-      );
-    }
-  }
-  exports.default = home;
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"./home.css":"6JSfZ","../HeaderComponent/header":"5VZ8N","react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6JSfZ":[function() {},{}],"5VZ8N":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require("react");
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require("./header.css");
-  var _reactRouterDom = require("react-router-dom");
-  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\HeaderComponent\\header.js";
-  class header extends _react.Component {
-    render() {
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 8,
-            columnNumber: 7
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("nav", {
-          className: "navbar navbar-expand-lg",
-          id: "header",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 9,
-            columnNumber: 9
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "container-fluid",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 10,
-            columnNumber: 11
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
-          className: "navbar-brand",
-          to: "/",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 11,
-            columnNumber: 13
-          }
-        }, "logo"), /*#__PURE__*/_reactDefault.default.createElement("button", {
-          className: "navbar-toggler",
-          type: "button",
-          "data-bs-toggle": "collapse",
-          "data-bs-target": "#navbarNav",
-          "aria-controls": "navbarNav",
-          "aria-expanded": "false",
-          "aria-label": "Toggle navigation",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 14,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
-          className: "navbar-toggler-icon",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 23,
-            columnNumber: 15
-          }
-        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "collapse navbar-collapse",
-          id: "navbarNav",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 25,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
-          className: "navbar-nav",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 26,
-            columnNumber: 15
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
-          className: "nav-item",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 27,
-            columnNumber: 17
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
-          className: "nav-link",
-          "aria-current": "page",
-          to: "/",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 28,
-            columnNumber: 19
-          }
-        }, "Home")), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          className: "nav-item",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 32,
-            columnNumber: 17
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
-          className: "nav-link",
-          to: "#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 33,
-            columnNumber: 19
-          }
-        }, "Key Notes")), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          className: "nav-item",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 37,
-            columnNumber: 17
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
-          className: "nav-link",
-          to: "/displayComMembers",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 38,
-            columnNumber: 19
-          }
-        }, "Committe Members")), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          className: "nav-item",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 42,
-            columnNumber: 17
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
-          className: "nav-link",
-          to: "#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 43,
-            columnNumber: 19
-          }
-        }, "Registration")), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          className: "nav-item",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 47,
-            columnNumber: 17
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
-          className: "nav-link",
-          to: "#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 48,
-            columnNumber: 19
-          }
-        }, "WorkShops")), /*#__PURE__*/_reactDefault.default.createElement("li", {
-          className: "nav-item",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 52,
-            columnNumber: 17
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
-          className: "nav-link",
-          to: "#",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 53,
-            columnNumber: 19
-          }
-        }, "Template Download")))))))
-      );
-    }
-  }
-  exports.default = header;
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./header.css":"76D0H","react-router-dom":"1PMSK"}],"76D0H":[function() {},{}],"5J3H4":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require("react");
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require("./footer.css");
-  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\FooterComponent\\footer.js";
-  class footer extends _react.Component {
-    render() {
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "footerdiv",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 7,
-            columnNumber: 7
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "footerGrid",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 8,
-            columnNumber: 9
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 9,
-            columnNumber: 11
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-          className: "copyRights",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 10,
-            columnNumber: 13
-          }
-        }, "© UniqueScripters@2021")), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "followDiv",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 12,
-            columnNumber: 11
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "fbLogo",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 13,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
-          src: "../../Images/fb.png",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 14,
-            columnNumber: 15
-          }
-        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "TwitLogo",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 16,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
-          src: "../../Images/twit.png",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 17,
-            columnNumber: 15
-          }
-        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "LinkLogo",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 19,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
-          src: "../../Images/linkedIn.png",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 20,
-            columnNumber: 15
-          }
-        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "InstaLogo",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 22,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
-          src: "../../Images/insta.png",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 23,
-            columnNumber: 15
-          }
-        })))))
-      );
-    }
-  }
-  exports.default = footer;
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./footer.css":"4JVrG"}],"4JVrG":[function() {},{}],"7AyLR":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require("react");
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require("./addCommiteeMember.css");
-  var _HeaderComponentHeader = require("../HeaderComponent/header");
-  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
-  var _TextInputComponentTextInputComponent = require("../TextInputComponent/textInputComponent");
-  var _TextInputComponentTextInputComponentDefault = _parcelHelpers.interopDefault(_TextInputComponentTextInputComponent);
-  var _ButtonComponentButtonComponent = require("../ButtonComponent/buttonComponent");
-  var _ButtonComponentButtonComponentDefault = _parcelHelpers.interopDefault(_ButtonComponentButtonComponent);
-  var _firebase = require("../../firebase");
-  var _axios = require("axios");
-  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
-  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js";
-  class addCommiteeMembers extends _react.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        memberName: "",
-        memberPosition: "",
-        memberQualification: "",
-        memberNotes: "",
-        memberImage: "",
-        imageUrl: ""
-      };
-      this.handlerChange = this.handlerChange.bind(this);
-      this.handlerChangeFiles = this.handlerChangeFiles.bind(this);
-      this.saveDetails = this.saveDetails.bind(this);
-      this.SubmitDetails = this.SubmitDetails.bind(this);
-    }
-    handlerChange(e) {
-      this.setState({
-        [e.target.name]: e.target.value
-      });
-    }
-    handlerChangeFiles(e) {
-      if (e.target.files[0]) {
-        this.setState({
-          [e.target.name]: e.target.files[0]
-        });
-      }
-    }
-    saveDetails() {
-      const {memberImage} = this.state;
-      const date = Date.now();
-      const uploadTask = _firebase.storage.ref(`images/${date}_${memberImage.name}`).put(memberImage);
-      uploadTask.on("state_changed", snapshot => {}, error => {
-        console.log(error);
-      }, () => {
-        _firebase.storage.ref("images").child(`${date}_${memberImage.name}`).getDownloadURL().then(url => {
-          console.log(url);
-          this.setState({
-            imageUrl: url
-          });
-          setTimeout(this.SubmitDetails(), 3000);
-        });
-      });
-    }
-    SubmitDetails() {
-      const {memberName, memberPosition, memberQualification, memberNotes, imageUrl} = this.state;
-      const details = {
-        memberName,
-        memberPosition,
-        memberQualification,
-        memberNotes,
-        imageUrl
-      };
-      _axiosDefault.default.post("http://localhost:5000/memberDetails/", details).then(() => {
-        alert("Details of Committee Member are Added Successfully");
-        this.props.history.push("/displayComMembersEditor");
-      }).catch(err => {
-        alert("Error in Submiiting.Please Check Again Before Submitting...!");
-        console.log(err);
-      });
-    }
-    render() {
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 93,
-            columnNumber: 7
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 94,
-            columnNumber: 9
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "container",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 95,
-            columnNumber: 9
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("br", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 96,
-            columnNumber: 11
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 97,
-            columnNumber: 11
-          }
-        }, "Add Committee Members"), /*#__PURE__*/_reactDefault.default.createElement("hr", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 98,
-            columnNumber: 11
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 99,
-            columnNumber: 11
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("form", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 100,
-            columnNumber: 11
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
-          type: "text",
-          placeholder: "Please Enter Member Name",
-          name: "memberName",
-          onchange: this.handlerChange,
-          id: "memberName",
-          fieldValue: "Member Name",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 101,
-            columnNumber: 13
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
-          type: "text",
-          placeholder: "Please Enter Member Position",
-          name: "memberPosition",
-          onchange: this.handlerChange,
-          id: "memberPosition",
-          fieldValue: "Member Position",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 109,
-            columnNumber: 13
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 117,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "input-group-prepend",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 118,
-            columnNumber: 15
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
-          className: "input-group-text",
-          id: "basic-addon1",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 119,
-            columnNumber: 17
-          }
-        }, "Qualifications of the Member")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
-          id: "memberQualification",
-          name: "memberQualification",
-          rows: "6",
-          cols: "151",
-          onChange: this.handlerChange,
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 123,
-            columnNumber: 15
-          }
-        })), /*#__PURE__*/_reactDefault.default.createElement("br", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 131,
-            columnNumber: 13
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 132,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-          className: "input-group-prepend",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 133,
-            columnNumber: 15
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
-          className: "input-group-text",
-          id: "basic-addon1",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 134,
-            columnNumber: 17
-          }
-        }, "Additional Notes of the Member")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
-          id: "memberNotes",
-          name: "memberNotes",
-          rows: "6",
-          cols: "151",
-          onChange: this.handlerChange,
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 138,
-            columnNumber: 15
-          }
-        })), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
-          type: "file",
-          placeholder: "Please Enter Member Image",
-          name: "memberImage",
-          onchange: this.handlerChangeFiles,
-          id: "memberImage",
-          fieldValue: "Member Image",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 146,
-            columnNumber: 13
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 154,
-            columnNumber: 13
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
-          type: "button",
-          classname: "btn btn-outline-dark",
-          value: "Save Member Details",
-          onsubmit: this.saveDetails,
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 155,
-            columnNumber: 13
-          }
-        }))), /*#__PURE__*/_reactDefault.default.createElement("br", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 163,
-            columnNumber: 9
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 164,
-            columnNumber: 9
-          }
-        }))
-      );
-    }
-  }
-  exports.default = addCommiteeMembers;
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","../HeaderComponent/header":"5VZ8N","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./addCommiteeMember.css":"3Qs12","../TextInputComponent/textInputComponent":"15meu","../ButtonComponent/buttonComponent":"Zx1Ei","../../firebase":"3CZmC","axios":"7rA65"}],"3Qs12":[function() {},{}],"Zx1Ei":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require("react");
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _propTypes = require("prop-types");
-  var _propTypesDefault = _parcelHelpers.interopDefault(_propTypes);
-  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\ButtonComponent\\buttonComponent.js";
-  const button = ({type, classname, value, onsubmit}) => {
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement("button", {
-        type: type,
-        className: classname,
-        onClick: onsubmit,
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 6,
-          columnNumber: 5
-        }
-      }, value)
-    );
-  };
-  button.prototype = {
-    type: _propTypesDefault.default.string.isRequired,
-    classname: _propTypesDefault.default.string.isRequired,
-    value: _propTypesDefault.default.string.isRequired,
-    onsubmit: _propTypesDefault.default.func
-  };
-  exports.default = button;
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
 },{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3CZmC":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
@@ -47764,7 +46846,1027 @@ function registerStorage(instance) {
 }
 registerStorage(_firebaseAppDefault.default);
 
-},{"@firebase/app":"6IUA5","tslib":"4rd38","@firebase/util":"3bR6t","@firebase/component":"5qT0x","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"4Aigj":[function(require,module,exports) {
+},{"@firebase/app":"6IUA5","tslib":"4rd38","@firebase/util":"3bR6t","@firebase/component":"5qT0x","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"Zx1Ei":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _propTypes = require("prop-types");
+  var _propTypesDefault = _parcelHelpers.interopDefault(_propTypes);
+  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\ButtonComponent\\buttonComponent.js";
+  const button = ({type, classname, value, onsubmit}) => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("button", {
+        type: type,
+        className: classname,
+        onClick: onsubmit,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 6,
+          columnNumber: 5
+        }
+      }, value)
+    );
+  };
+  button.prototype = {
+    type: _propTypesDefault.default.string.isRequired,
+    classname: _propTypesDefault.default.string.isRequired,
+    value: _propTypesDefault.default.string.isRequired,
+    onsubmit: _propTypesDefault.default.func
+  };
+  exports.default = button;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"4ESIl":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  require("./home.css");
+  var _HeaderComponentHeader = require("../HeaderComponent/header");
+  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\HomePageComponent\\home.js";
+  class home extends _react.Component {
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 8,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "header-img",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10,
+            columnNumber: 11
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "outer-div",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "page-name",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("center", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+          className: "conf-name",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16,
+            columnNumber: 15
+          }
+        }, "Internatinal Conference on Application Framework"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "dateOfConf",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19,
+            columnNumber: 15
+          }
+        }, "6,7 & 8 of September of 2021"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "venueOfConf",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20,
+            columnNumber: 15
+          }
+        }, "Kularathne Hall of Ananda Collage")))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("center", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "about",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 13
+          }
+        }, "About Our Conference"), /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          className: "aboutConfTopic",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30,
+            columnNumber: 15
+          }
+        }, "Internatinal Conference on Application Framework"))), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33,
+            columnNumber: 11
+          }
+        }, "The 3rd International conference on advancements in computing -2021 (ICAC2021) is organized by the Faculty of Computing of the Sri Lanka Institute of Information Technology (SLIIT) as an open forum for academics along with industry professionals to present the latest findings and research output and practical deployments in the Computer Science and Information Technology domains. Primary objective of the ICAC is to uplift the research culture and the quality of research done by Sri Lankan researchers. This conference will create a platform for national and international researchers to showcase their research output, networking opportunities to discuss innovative ideas, and initiate collaborative work. ICAC 2019 and ICAC 2020 were successfully conducted with a technical co-sponsorship by IEEE Sri Lanka Section and all publications are available in IEEE Xplore digital library December 9 - 11 in Sri Lanka Institute of Information Technology"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("center", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53,
+            columnNumber: 15
+          }
+        }, "Conference Tracks"))), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "trackGrid",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 58,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 59,
+            columnNumber: 15
+          }
+        }, "Frontend Frameworks and Best Parctices"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62,
+            columnNumber: 19
+          }
+        }, "Introduction to Web Frameworks")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 64,
+            columnNumber: 17
+          }
+        }, "React"), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 65,
+            columnNumber: 17
+          }
+        }, "Angular"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 68,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 69,
+            columnNumber: 15
+          }
+        }, "ServerSide Frameworks and Best Parctices"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 70,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72,
+            columnNumber: 19
+          }
+        }, "Introduction to ServerSide Frameworks")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 74,
+            columnNumber: 17
+          }
+        }, "Express"), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 75,
+            columnNumber: 17
+          }
+        }, "Koa"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 78,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 79,
+            columnNumber: 15
+          }
+        }, "Databases"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 80,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 81,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("b", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 82,
+            columnNumber: 19
+          }
+        }, "Introduction to Databases")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 84,
+            columnNumber: 17
+          }
+        }, "MongoDB"), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 85,
+            columnNumber: 17
+          }
+        }, "FireBase"), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 86,
+            columnNumber: 17
+          }
+        }, "MySQL"))))))
+      );
+    }
+  }
+  exports.default = home;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"./home.css":"6JSfZ","../HeaderComponent/header":"5VZ8N","react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6JSfZ":[function() {},{}],"5VZ8N":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./header.css");
+  var _reactRouterDom = require("react-router-dom");
+  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\HeaderComponent\\header.js";
+  class header extends _react.Component {
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 8,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("nav", {
+          className: "navbar navbar-expand-lg",
+          id: "header",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container-fluid",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+          className: "navbar-brand",
+          to: "/",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11,
+            columnNumber: 13
+          }
+        }, "logo"), /*#__PURE__*/_reactDefault.default.createElement("button", {
+          className: "navbar-toggler",
+          type: "button",
+          "data-bs-toggle": "collapse",
+          "data-bs-target": "#navbarNav",
+          "aria-controls": "navbarNav",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "navbar-toggler-icon",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 15
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "collapse navbar-collapse",
+          id: "navbarNav",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
+          className: "navbar-nav",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+          className: "nav-link",
+          "aria-current": "page",
+          to: "/",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28,
+            columnNumber: 19
+          }
+        }, "Home")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+          className: "nav-link",
+          to: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33,
+            columnNumber: 19
+          }
+        }, "Key Notes")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+          className: "nav-link",
+          to: "/displayComMembers",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38,
+            columnNumber: 19
+          }
+        }, "Committe Members")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+          className: "nav-link",
+          to: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43,
+            columnNumber: 19
+          }
+        }, "Registration")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+          className: "nav-link",
+          to: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48,
+            columnNumber: 19
+          }
+        }, "WorkShops")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+          className: "nav-link",
+          to: "#",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53,
+            columnNumber: 19
+          }
+        }, "Template Download")))))))
+      );
+    }
+  }
+  exports.default = header;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./header.css":"76D0H","react-router-dom":"1PMSK"}],"76D0H":[function() {},{}],"5J3H4":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./footer.css");
+  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\FooterComponent\\footer.js";
+  class footer extends _react.Component {
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "footerdiv",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 7,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "footerGrid",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 8,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "copyRights",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10,
+            columnNumber: 13
+          }
+        }, "© UniqueScripters@2021")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "followDiv",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 12,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "fbLogo",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "../../Images/fb.png",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14,
+            columnNumber: 15
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "TwitLogo",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "../../Images/twit.png",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17,
+            columnNumber: 15
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "LinkLogo",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "../../Images/linkedIn.png",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20,
+            columnNumber: 15
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "InstaLogo",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "../../Images/insta.png",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 15
+          }
+        })))))
+      );
+    }
+  }
+  exports.default = footer;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./footer.css":"4JVrG"}],"4JVrG":[function() {},{}],"7AyLR":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./addCommiteeMember.css");
+  var _HeaderComponentHeader = require("../HeaderComponent/header");
+  var _HeaderComponentHeaderDefault = _parcelHelpers.interopDefault(_HeaderComponentHeader);
+  var _TextInputComponentTextInputComponent = require("../TextInputComponent/textInputComponent");
+  var _TextInputComponentTextInputComponentDefault = _parcelHelpers.interopDefault(_TextInputComponentTextInputComponent);
+  var _ButtonComponentButtonComponent = require("../ButtonComponent/buttonComponent");
+  var _ButtonComponentButtonComponentDefault = _parcelHelpers.interopDefault(_ButtonComponentButtonComponent);
+  var _firebase = require("../../firebase");
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js";
+  class addCommiteeMembers extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        memberName: "",
+        memberPosition: "",
+        memberQualification: "",
+        memberNotes: "",
+        memberImage: "",
+        imageUrl: ""
+      };
+      this.handlerChange = this.handlerChange.bind(this);
+      this.handlerChangeFiles = this.handlerChangeFiles.bind(this);
+      this.saveDetails = this.saveDetails.bind(this);
+      this.SubmitDetails = this.SubmitDetails.bind(this);
+    }
+    handlerChange(e) {
+      this.setState({
+        [e.target.name]: e.target.value
+      });
+    }
+    handlerChangeFiles(e) {
+      if (e.target.files[0]) {
+        this.setState({
+          [e.target.name]: e.target.files[0]
+        });
+      }
+    }
+    saveDetails() {
+      const {memberImage} = this.state;
+      const date = Date.now();
+      const uploadTask = _firebase.storage.ref(`images/${date}_${memberImage.name}`).put(memberImage);
+      uploadTask.on("state_changed", snapshot => {}, error => {
+        console.log(error);
+      }, () => {
+        _firebase.storage.ref("images").child(`${date}_${memberImage.name}`).getDownloadURL().then(url => {
+          console.log(url);
+          this.setState({
+            imageUrl: url
+          });
+          setTimeout(this.SubmitDetails(), 3000);
+        });
+      });
+    }
+    SubmitDetails() {
+      const {memberName, memberPosition, memberQualification, memberNotes, imageUrl} = this.state;
+      const details = {
+        memberName,
+        memberPosition,
+        memberQualification,
+        memberNotes,
+        imageUrl
+      };
+      _axiosDefault.default.post("http://localhost:5000/memberDetails/", details).then(() => {
+        alert("Details of Committee Member are Added Successfully");
+        this.props.history.push("/displayComMembersEditor");
+      }).catch(err => {
+        alert("Error in Submiiting.Please Check Again Before Submitting...!");
+        console.log(err);
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 93,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_HeaderComponentHeaderDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 96,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 97,
+            columnNumber: 11
+          }
+        }, "Add Committee Members"), /*#__PURE__*/_reactDefault.default.createElement("hr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 98,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 99,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("form", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 100,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "text",
+          placeholder: "Please Enter Member Name",
+          name: "memberName",
+          onchange: this.handlerChange,
+          id: "memberName",
+          fieldValue: "Member Name",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 101,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "text",
+          placeholder: "Please Enter Member Position",
+          name: "memberPosition",
+          onchange: this.handlerChange,
+          id: "memberPosition",
+          fieldValue: "Member Position",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 109,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 117,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "input-group-prepend",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 118,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "input-group-text",
+          id: "basic-addon1",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 119,
+            columnNumber: 17
+          }
+        }, "Qualifications of the Member")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
+          id: "memberQualification",
+          name: "memberQualification",
+          rows: "6",
+          cols: "151",
+          onChange: this.handlerChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 123,
+            columnNumber: 15
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 131,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 132,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "input-group-prepend",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 133,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "input-group-text",
+          id: "basic-addon1",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 134,
+            columnNumber: 17
+          }
+        }, "Additional Notes of the Member")), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
+          id: "memberNotes",
+          name: "memberNotes",
+          rows: "6",
+          cols: "151",
+          onChange: this.handlerChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 138,
+            columnNumber: 15
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement(_TextInputComponentTextInputComponentDefault.default, {
+          type: "file",
+          placeholder: "Please Enter Member Image",
+          name: "memberImage",
+          onchange: this.handlerChangeFiles,
+          id: "memberImage",
+          fieldValue: "Member Image",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 146,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 154,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "button",
+          classname: "btn btn-outline-dark",
+          value: "Save Member Details",
+          onsubmit: this.saveDetails,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 155,
+            columnNumber: 13
+          }
+        }))), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 163,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 164,
+            columnNumber: 9
+          }
+        }))
+      );
+    }
+  }
+  exports.default = addCommiteeMembers;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../HeaderComponent/header":"5VZ8N","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./addCommiteeMember.css":"3Qs12","../TextInputComponent/textInputComponent":"15meu","../ButtonComponent/buttonComponent":"Zx1Ei","../../firebase":"3CZmC","axios":"7rA65"}],"3Qs12":[function() {},{}],"4Aigj":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -48446,6 +48548,453 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./updateMember.css":"2KJDN","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../TextInputComponent/textInputComponent":"15meu","../ButtonComponent/buttonComponent":"Zx1Ei","axios":"7rA65"}],"2KJDN":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire768c")
+},{"react":"3b2NM","./updateMember.css":"2KJDN","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../TextInputComponent/textInputComponent":"15meu","../ButtonComponent/buttonComponent":"Zx1Ei","axios":"7rA65"}],"2KJDN":[function() {},{}],"6KMWt":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  require("./HomePageAcceptComponent.css");
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _ButtonComponentButtonComponent = require("../ButtonComponent/buttonComponent");
+  var _ButtonComponentButtonComponentDefault = _parcelHelpers.interopDefault(_ButtonComponentButtonComponent);
+  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js";
+  class HomePageAcceptComponent extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        home: []
+      };
+      this.acceptContent = this.acceptContent.bind(this);
+      this.declinecontent = this.declinecontent.bind(this);
+    }
+    componentDidMount() {
+      _axiosDefault.default.get(`http://localhost:5000/homePage/pending`).then(res => {
+        console.log(res.data);
+        this.setState({
+          home: res.data
+        });
+      });
+    }
+    acceptContent(Id) {
+      const homeState = {
+        status: "accepted"
+      };
+      _axiosDefault.default.put(`http://localhost:5000/homePage/${Id}`, homeState).then(() => {
+        alert("Content is Accepted");
+        window.location.reload();
+      });
+    }
+    declinecontent(id) {
+      const ContentState = {
+        status: "decline"
+      };
+      _axiosDefault.default.put(`http://localhost:5000/homePage/${id}`, ContentState).then(() => {
+        alert("Content is Declined");
+        window.location.reload();
+      });
+    }
+    render() {
+      const {home} = this.state;
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43,
+            columnNumber: 7
+          }
+        }, home.map(homeContent => /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card",
+          key: homeContent._id,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: homeContent.imageUrl,
+          className: "card-img-top",
+          alt: "...",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card-body",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
+          className: "card-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52,
+            columnNumber: 15
+          }
+        }, homeContent.confName), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "card-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53,
+            columnNumber: 15
+          }
+        }, homeContent.dateOfConf), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "card-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54,
+            columnNumber: 15
+          }
+        }, homeContent.venueOfConf), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "card-text",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55,
+            columnNumber: 15
+          }
+        }, homeContent.confDesc), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "btnHome",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "submit",
+          classname: "btn btn-outline-success",
+          value: "Accept",
+          onsubmit: () => this.acceptContent(homeContent._id),
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 58,
+            columnNumber: 19
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 65,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "submit",
+          classname: "btn btn-outline-danger",
+          value: "Decline",
+          onsubmit: () => this.declinecontent(homeContent._id),
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 66,
+            columnNumber: 19
+          }
+        })))))), ";")
+      );
+    }
+  }
+  exports.default = HomePageAcceptComponent;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"./HomePageAcceptComponent.css":"3j7AF","react":"3b2NM","axios":"7rA65","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../ButtonComponent/buttonComponent":"Zx1Ei"}],"3j7AF":[function() {},{}],"3cDXs":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  require("./ApplyHomeContent.css");
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _ButtonComponentButtonComponent = require("../ButtonComponent/buttonComponent");
+  var _ButtonComponentButtonComponentDefault = _parcelHelpers.interopDefault(_ButtonComponentButtonComponent);
+  var _jsxFileName = "E:\\lecture notes\\Y3\\AF\\Project\\videoconfercingapp\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js";
+  class ApplyHomeContent extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        content: [],
+        currentContent: []
+      };
+      this.setAsHomePage = this.setAsHomePage.bind(this);
+      this.removeHomeStyle = this.removeHomeStyle.bind(this);
+    }
+    componentDidMount() {
+      _axiosDefault.default.get(`http://localhost:5000/homePage/accepted`).then(res => {
+        console.log(res.data);
+        this.setState({
+          content: res.data
+        });
+      });
+    }
+    setAsHomePage(Id) {
+      alert(Id);
+    }
+    removeHomeStyle(Id) {
+      alert(Id);
+    }
+    render() {
+      const {content} = this.state;
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34,
+            columnNumber: 11
+          }
+        }, "Current Home Pahe Style"), /*#__PURE__*/_reactDefault.default.createElement("hr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 36,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: "homeContent.imageUrl",
+          className: "card-img-top",
+          alt: "...",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card-body",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
+          className: "card-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44,
+            columnNumber: 15
+          }
+        }, "homeContent.confName"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "card-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45,
+            columnNumber: 15
+          }
+        }, "homeContent.dateOfConf"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "card-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46,
+            columnNumber: 15
+          }
+        }, "homeContent.venueOfConf"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "card-text",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47,
+            columnNumber: 15
+          }
+        }, "homeContent.confDesc"), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "submit",
+          classname: "btn btn-outline-danger",
+          value: "Remove Home Page Content",
+          onsubmit: () => this.removeHomeStyle("homeContent._id"),
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49,
+            columnNumber: 17
+          }
+        }))))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 59,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60,
+            columnNumber: 11
+          }
+        }, "Available Home Pahe Style"), /*#__PURE__*/_reactDefault.default.createElement("hr", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62,
+            columnNumber: 11
+          }
+        }), content.map(homeContent => /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card",
+          key: homeContent._id,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 64,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          src: homeContent.imageUrl,
+          className: "card-img-top",
+          alt: "...",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 65,
+            columnNumber: 15
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "card-body",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 70,
+            columnNumber: 15
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
+          className: "card-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71,
+            columnNumber: 17
+          }
+        }, homeContent.confName), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "card-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72,
+            columnNumber: 17
+          }
+        }, homeContent.dateOfConf), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "card-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 73,
+            columnNumber: 17
+          }
+        }, homeContent.venueOfConf), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "card-text",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 74,
+            columnNumber: 17
+          }
+        }, homeContent.confDesc), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 75,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_ButtonComponentButtonComponentDefault.default, {
+          type: "submit",
+          classname: "btn btn-outline-success",
+          value: "Set As Home Page Content",
+          onsubmit: () => this.setAsHomePage(homeContent._id),
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 76,
+            columnNumber: 19
+          }
+        }))))), ";"))
+      );
+    }
+  }
+  exports.default = ApplyHomeContent;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"./ApplyHomeContent.css":"3ytq6","react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","axios":"7rA65","../ButtonComponent/buttonComponent":"Zx1Ei"}],"3ytq6":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire768c")
 
 //# sourceMappingURL=index.63f10152.js.map

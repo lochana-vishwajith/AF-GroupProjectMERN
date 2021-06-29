@@ -20,7 +20,6 @@
   margin-top: -4px;
 }
 .header-img {
-  background-image: url("../../Book-Shelf.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,4 +32,9 @@
   display: grid;
   grid-template-columns: 3fr 3fr;
   box-sizing: border-box;
+}
+.homeCover {
+  width: auto;
+  height: 344.2px;
+  position: relative;
 }

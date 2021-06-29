@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import './App.css'
 import React, { Component } from 'react'
 import {
     BrowserRouter as Router,
@@ -13,6 +14,11 @@ import AddCommiteeMembers from "./Components/AddCommiteeMembers/addCommiteeMembe
 import DisplayComitteeMember from "./Components/DisplayComitteeMember/displayComitteeMember";
 import DisplayMembersForEditor from "./Components/displayMembersForEditor/displayMembersForEditor";
 import UpdateMember from "./Components/updateComitteeMembersComponent/updateMember";
+import HomePageAcceptComponent from "./Components/HomePageAcceptComponent/HomePageAcceptComponent";
+import ApplyHome from './Components/ApplyHomeContentComponent/ApplyHomeContent'
+import AddTemplate from "./Components/AddTemplateComponent/AddTemplate";
+import DisplayTemplate from "./Components/DisplayTemplateComponent/displayTemplate";
+import TemplateDownload from './Components/TemplateRWDownloadComponent/downloadTemplate'
 
 export default class App extends Component {
     render() {
@@ -25,6 +31,11 @@ export default class App extends Component {
                     <Route exact path = '/displayComMembers' component = {DisplayComitteeMember}/>
                     <Route exact path = '/displayComMembersEditor' component = {DisplayMembersForEditor}/>
                     <Route exact path = '/updatemember/:id' component = {UpdateMember}/>
+                    <Route exact path = '/homePageAccept' component = {HomePageAcceptComponent}/>
+                    <Route exact path = '/homecontent' component = {ApplyHome}/>
+                    <Route exact path = '/addTemplate' component = {AddTemplate}/>
+                    <Route exact path = '/displayTemplate' component = {DisplayTemplate}/>
+                    <Route exact path = '/templatedownload/:type' component = {TemplateDownload}/>
                 </Router>
                 <Footer/>
             </div>

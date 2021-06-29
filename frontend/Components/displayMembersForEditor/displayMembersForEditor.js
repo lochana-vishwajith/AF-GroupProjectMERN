@@ -4,6 +4,7 @@ import Header from "../HeaderComponent/header";
 import axios from "axios";
 import Button from "../ButtonComponent/buttonComponent";
 import { Link } from "react-router-dom";
+import EditorHeader from "../EditorHeader/editorHeader";
 
 export default class displayMembersForEditor extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ export default class displayMembersForEditor extends Component {
     const { members } = this.state;
     return (
       <div>
-        <Header />
+        <EditorHeader />
         <div className="container">
           <h3>
             <b>Comittee Members</b>
