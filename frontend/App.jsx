@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css'
 import React, { Component } from 'react'
 import {
     BrowserRouter as Router,
@@ -9,8 +8,13 @@ import {
 } from "react-router-dom";
 import Home from "./Components/HomePageComponent/home";
 import HomePageConfig from "./Components/HomePageConfigComponent/homePageConfig";
-import Footer from "./Components/FooterComponent/footer";
+
+
+
 import AddCommiteeMembers from "./Components/AddCommiteeMembers/addCommiteeMembers";
+
+
+
 import DisplayComitteeMember from "./Components/DisplayComitteeMember/displayComitteeMember";
 import DisplayMembersForEditor from "./Components/displayMembersForEditor/displayMembersForEditor";
 import UpdateMember from "./Components/updateComitteeMembersComponent/updateMember";
@@ -19,6 +23,7 @@ import ApplyHome from './Components/ApplyHomeContentComponent/ApplyHomeContent'
 import AddTemplate from "./Components/AddTemplateComponent/AddTemplate";
 import DisplayTemplate from "./Components/DisplayTemplateComponent/displayTemplate";
 import TemplateDownload from './Components/TemplateRWDownloadComponent/downloadTemplate'
+import Footer from "./Components/FooterComponent/footer";
 
 export default class App extends Component {
     render() {
