@@ -2,83 +2,135 @@
 const Research = require("../Models/ResearchModel").researchDetails;
 const User = require("../Models/UserModel");
 
-async function addResearchDetails(research) {
-  const researchData = new Research({
-    researchTitle: research.title,
-    researchField: research.field,
-    researchYear: research.year,
-    coAuthors: research.authors,
-    isAccepted: research.isAccepted,
-    fileName: `http://localhost:5000/repaper/${research.file.filename}`,
-    // fileName: `http://localhost:5000/repaper/${file}`,
-  });
-
-  try {
-    const result = await researchData.save();
-    return result;
-  } catch (error) {
-    console.log(error);
+const addResearchDetails = async (req, res) => {
+  if (req.body) {
+    element = req.params.id;
+    const research = new Research(req.body);
+    await research
+      .save()
+      .then((data) => {
+        res.status(200).send({ data: data });
+        console.log(data);
+        User.findByIdAndUpdate(element, {
+          $push: {
+            research: data._id,
+          },
+        })
+          .then((data) => {
+            console.log("Successfully added the Research Details...", data);
+          })
+          .catch((err) => {
+            console.log({ error: err.message });
+          });
+      })
+      .catch((error) => {
+        res.status(500).send({
+          error: error.message,
+        });
+      });
   }
-}
+};
 
-async function getAllResearchDetails() {
-  try {
-    const result = Research.find();
-    return result;
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-async function getAcceptedResearchDetails() {
-  try {
-    const result = Research.find({
-      isAccepted: true,
+const getAllResearchDetails = async (req, res) => {
+  await Research.find({})
+    // .populate("categories", "name description")
+    .then((data) => {
+      res.status(200).send({
+        data: data,
+      });
+    })
+    .catch((error) => {
+      res.status(500).send({
+        error: error.message,
+      });
     });
-    return result;
-  } catch (error) {
-    console.log(error);
-  }
-}
+};
 
-async function getResearchById(id) {
-  try {
-    const result = await Research.findById({ id });
-    return result;
-  } catch (error) {
-    console.log(error);
-  }
-}
+const getAcceptedResearchDetails = async (req, res) => {
+  await Research.find({ isAccepted: true })
+    .then((data) => {
+      res.status(200).send({
+        data: data,
+      });
+    })
+    .catch((error) => {
+      res.status(500).send({
+        error: error.message,
+      });
+    });
+};
 
-function editResearchDetails(id, data) {
-  try {
-    const result = Research.findByIdAndUpdate(
-      { _id: id },
-      {
-        $set: {
-          researchTitle: data.title,
-          researchField: data.field,
-          researchYear: data.year,
-          coAuthors: data.authors,
-          isAccepted: data.isAccepted,
-        },
-      },
-      { new: true }
-    );
-    return result;
-  } catch (error) {
-    console.log(error);
-  }
-}
+const getResearchById = async (req, res) => {
+  let id = req.params.id;
+  console.log("ID:", id);
+  await Research.findById({ _id: id })
+    .then((data) => {
+      console.log(data);
+      res.status(200).send({
+        data: data,
+      });
+    })
+    .catch((error) => {
+      res.status(500).send({
+        error: error.message,
+      });
+    });
+};
 
-async function deleteResearchDetail(id) {
-  try {
-    const result = Research.findByIdAndDelete({ _id: id });
-    return result;
-  } catch (error) {
-    console.log(error);
+const editResearchDetails = async (req, res) => {
+  let id = req.params.id;
+  let dataSet = req.body;
+  console.log("ID:", id);
+  console.log("Data:", dataSet);
+  await Research.findByIdAndUpdate(id, dataSet)
+    .then((data) => {
+      console.log(data);
+      res.status(200).send({
+        data: data,
+      });
+    })
+    .catch((error) => {
+      res.status(500).send({
+        error: error.message,
+      });
+    });
+};
+
+const deleteResearchDetail = async (req, res) => {
+  if (req.params.id) {
+    await Research.findByIdAndDelete(req.params.id)
+      .then((data) => {
+        res.status(200).send({
+          data: data,
+        });
+      })
+      .catch((error) => {
+        res.status(500).send({
+          error: error.message,
+        });
+      });
   }
-}
+};
+
+const getResearchByUser = async (req, res) => {
+  if (req.params && req.params.id) {
+    await User.findById(req.params.id)
+      .populate(
+        "research",
+        "researchTitle researchField researchYear coAuthors isAccepted"
+      )
+      .then((data) => {
+        res.status(200).send({
+          data: data,
+        });
+      })
+      .catch((error) => {
+        res.status(500).send({
+          error: error.message,
+        });
+      });
+  }
+};
 
 module.exports = {
   addResearchDetails,
@@ -87,4 +139,5 @@ module.exports = {
   editResearchDetails,
   deleteResearchDetail,
   getResearchById,
+  getResearchByUser,
 };
