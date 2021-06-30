@@ -7,7 +7,7 @@ const workshopSchema = new mongoose.Schema({
   },
 
   wsDate: {
-    type: String,
+    type: Date,
     required: true,
   },
 
@@ -28,14 +28,23 @@ const workshopSchema = new mongoose.Schema({
 
   status: {
     type: Boolean,
-    required: true,
+    required: false,
     default: false,
   },
   comment: {
+    required: false,
     type: String,
+    default: null,
   },
+
+  url: {
+    required: false,
+    type: String,
+  
+  },
+
 });
 
 const workshopModel = mongoose.model("Workshop", workshopSchema);
 
-module.exports ={workshopModel,workshopSchema}
+module.exports = { workshopModel, workshopSchema };

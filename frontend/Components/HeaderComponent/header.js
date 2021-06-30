@@ -29,23 +29,19 @@ export default class header extends Component {
                     Home
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    Key Notes
-                  </Link>
-                </li>
+             
                 <li className="nav-item">
                   <Link className="nav-link" to="/displayComMembers">
                     Committe Members
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" href="/chooseReg">
+                  <Link className="nav-link" to="/chooseReg">
                     Registration
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="#">
+                  <Link className="nav-link" to="/final-workshops">
                     WorkShops
                   </Link>
                 </li>
@@ -60,11 +56,7 @@ export default class header extends Component {
                   </Link>
                 </li>
 
-                <li className="nav-item">
-                  <Link className="nav-link" to="">
-                    Committe Members
-                  </Link>
-                </li>
+                
 
                 <li className="nav-item">
                   <Link className="nav-link" to="/getWorkshopusers">

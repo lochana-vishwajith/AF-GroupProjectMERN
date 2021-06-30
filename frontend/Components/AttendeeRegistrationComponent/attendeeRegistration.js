@@ -21,12 +21,6 @@ export default class attendeeRegistration extends Component{
         this.Onchange = this.Onchange.bind(this);
     }
 
-    componentDidMount() {
-        const userObj = localStorage.getItem('user');
-        this.setState({obj:userObj});
-        alert(userObj);
-    }
-
     handlerChange(e){
         this.setState({category:e.value});
     }
@@ -36,7 +30,7 @@ export default class attendeeRegistration extends Component{
     }
 
     onSubmit(e){
-        window.location = '/pay'
+
         e.preventDefault();
 
 
@@ -47,6 +41,10 @@ export default class attendeeRegistration extends Component{
         axios.post('http://localhost:5000/Users/addUsers',post)
             .then((res) =>{ alert('hello world'+res.data.name)
             console.log('hello')
+                alert(res.data._id)
+                    localStorage.setItem('unpaid',res.data._id);
+                    localStorage.setItem('payType','nawAttendee')
+                window.location = '/pay'
             }
             )
             .catch((err)=>{alert(err)
@@ -104,7 +102,7 @@ export default class attendeeRegistration extends Component{
 
                         <Button
                             type ={"submit"}
-                            classname={"btn btn-primary"}
+                            classname={"btn btn-secondary"}
                             value={"Proceed"}
                             onsubmit={this.onSubmit}
                         />

@@ -33,8 +33,8 @@ const getAllUsers = async(req,res)=>{
 
 
 const UpdateUser =async (req,res)=>{
-    console.log('downsss');
-   const id = req.params.id
+    console.log('update called');
+    const id = req.user._id;
     const { description, awards, linkedIn} = req.body;
 
     const details = new User({
@@ -54,36 +54,43 @@ const UpdateUser =async (req,res)=>{
 }
 
 
+
+const attendeePayment =async (req,res)=>{
+    console.log('update called');
+
+    const id = req.params.id;
+
+    const {payment} = req.body;
+
+    const details = new User({
+        payment
+    });
+
+
+
+    await User.update(
+        {_id:id},
+        {$set:{payment:payment}},
+        {upsert:true}
+    ).then(() => {
+        res.send({ status: "Details are updated" });
+    })
+        .catch((err) => {
+            console.log(err);
+        });
+}
+
+
 const deleteUser =async (req,res)=>{
-   const id = req.params.id
+    const id = req.user._id;
     try {
         const result = await User.findByIdAndDelete({_id:id})
-        return result;
+       res.send(result);
     }catch (e){
         console.log(e.message);
     }
 }
 
-/*const loggingUser = async(req,res)=>{
-   const logObj =req.body
-try {
-    const loggedObj = User.findOne({email: logObj.email});
-    if (!loggedObj) {
-        res.send('invalid email');
-    } else {
-        const result = bcrypt.compare(logObj.password, loggedObj.password);
-        if(result){
-            const authenticateToken = await loggedObj.authenticateUser();
-            res.header('x-auth-user',authenticateToken).send('Successfully Logged in');
-        }
-        else{
-            res.send('Wrong password')
-        }
-    }
-}catch (e) {
-    console.log(e.message);
-}
-}*/
 
 
 async  function loggingUser(logObj){
@@ -119,4 +126,4 @@ const getUserDetails = async(req,res)=>{
 }
 
 
-module.exports = {Adduser,getAllUsers,UpdateUser,deleteUser,getUserDetails,loggingUser}
+module.exports = {Adduser,getAllUsers,UpdateUser,deleteUser,getUserDetails,loggingUser,attendeePayment}

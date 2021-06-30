@@ -41,9 +41,10 @@ export default class displayTemplate extends Component {
                 <hr />
                 <center>
                   <img
-                    src="https://www.seekpng.com/png/detail/497-4974759_research-paper-icon-clipart-paper-research-computer-research.png"
-                    className="rImg"
+                    src="https://image.pngaaa.com/159/54159-middle.png"
+                    className="rImgP"
                   />
+
                   <br />
                   <br />
                   <Link to="/templatedownload/workshop">

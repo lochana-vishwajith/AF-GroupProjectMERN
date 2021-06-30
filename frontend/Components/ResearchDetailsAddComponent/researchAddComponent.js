@@ -1,4 +1,4 @@
-import Header from "../HeaderComponent/header";
+import RHeader from '../ResearcherHeader/header';
 import React, { Component } from "react";
 import TextInput from "../TextInputComponent/textInputComponent";
 import Button from "../ButtonComponent/buttonComponent";
@@ -77,11 +77,11 @@ export default class researchAddComponent extends Component {
     };
 
     console.log("DataSet", dataSet);
-    const id = "60d82ca3b881ad7a64ce04f2";
+    //const id = "60d82ca3b881ad7a64ce04f2";
 
     axios
       .post(
-        `http://localhost:5000/researchDetails/addResearchDetails/${id}`,
+        `http://localhost:5000/researchDetails/addResearchDetails/${localStorage.getItem('uid')}`,
         dataSet
       )
       .then((response) => {
@@ -96,7 +96,7 @@ export default class researchAddComponent extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <RHeader />
         <div className="container">
           <h2 className="mt-5 mb-5">Research Details </h2>
           <form>

@@ -5,6 +5,7 @@ import Button from "../ButtonComponent/buttonComponent";
 
 export default class updateProfile extends Component{
     constructor(props) {
+        localStorage.getItem('')
         super(props);
         this.state ={
             id:'',
@@ -15,6 +16,7 @@ export default class updateProfile extends Component{
         }
         this.handlerChange = this.handlerChange.bind(this);
         this.Onchange=this.Onchange.bind(this);
+        this.onSubmit=this.onSubmit.bind(this);
     }
 
     handlerChange(e){
@@ -41,6 +43,7 @@ export default class updateProfile extends Component{
             this.setState({description:res.data.description})
             this.setState({awards:res.data.awards})
             this.setState({id:res.data._id})
+
         }).catch(
             err =>{ alert(err)}
         )
@@ -51,22 +54,25 @@ export default class updateProfile extends Component{
     async onSubmit(e){
         e.preventDefault();
 
+
         const{
-            id,
             linkedIn,
             description,
             awards} =this.state
 
+        alert(linkedIn+
+            description+
+            awards)
         const post={
             linkedIn,
             description,
             awards,
         }
         axios
-            .put(`http://localhost:5000/Users/updateUser/${id}`,post)
+            .put(`http://localhost:5000/Users/updateUser/`,post)
             .then(res=>{
-                alert('details saved Success');
-                alert(res.data)})
+                alert('details update Success');
+            })
             .catch((err)=>{
                 alert('An error occurred')
                 alert(err.message)})
@@ -122,8 +128,8 @@ export default class updateProfile extends Component{
 
                 <Button
                     type ={"submit"}
-                    classname={"btn btn-primary"}
-                    value={"SaveUpdates"}
+                    classname={"btn btn-secondary"}
+                    value={"Save Updates"}
                     onsubmit={this.onSubmit}
                 />
             </div>

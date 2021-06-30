@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Header from "../HeaderComponent/header";
+import RHeader from '../ResearcherHeader/header';
 import TextInput from "../TextInputComponent/textInputComponent";
 import Button from "../ButtonComponent/buttonComponent";
 import axios from "axios";
+
 
 const initialState = {
   researchTitle: "",
@@ -73,7 +74,7 @@ export default class researchEditComponent extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <RHeader />
         <div className="container">
           <h2 className="mt-5 mb-5">Edit Research Details </h2>
           <form onSubmit={this.onSubmit}>

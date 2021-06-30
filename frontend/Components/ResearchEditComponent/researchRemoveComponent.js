@@ -1,9 +1,10 @@
-import Header from "../HeaderComponent/header";
+
 import React, { Component } from "react";
 import TextInput from "../TextInputComponent/textInputComponent";
 import Button from "../ButtonComponent/buttonComponent";
 import axios from "axios";
 import moment from "moment";
+import RHeader from '../ResearcherHeader/header';
 
 const initialState = {
   researchTitle: "",
@@ -22,9 +23,10 @@ export default class researchRemoveComponent extends Component {
   }
 
   componentDidMount() {
-    const id = "60d82ca3b881ad7a64ce04f2";
+
+    //const id = "60d82ca3b881ad7a64ce04f2";
     axios
-      .get(`http://localhost:5000/researchDetails/userResearch/${id}`)
+      .get(`http://localhost:5000/researchDetails/userResearch/${localStorage.getItem('uid')}`)
       .then((response) => {
         console.log("Response data: ", response.data.data.research);
         this.setState({ dataArray: response.data.data.research });
@@ -51,13 +53,13 @@ export default class researchRemoveComponent extends Component {
   }
 
   navigateToEditPage(e, researchID) {
-    window.location = `/${researchID}`;
+    window.location = `/researchEditById/${researchID}`;
   }
 
   render() {
     return (
       <div>
-        <Header />
+        <RHeader />
         <div className="container">
           <div className="card">
             <h3 className="card-header text-center font-weight-bold text-uppercase py-4">

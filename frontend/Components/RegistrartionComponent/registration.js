@@ -26,6 +26,7 @@ export default class registration extends Component{
             description:'',
             awards:'',
             profilePic:'',
+            image :'',
             selectedOption: options,
         }
 
@@ -57,6 +58,7 @@ export default class registration extends Component{
             category,
             description,
             awards,
+            
             profilePic,
         }
        axios
@@ -64,7 +66,8 @@ export default class registration extends Component{
            .then(res=>{
               // console.log('awaaaa');
                alert('details saved Success');
-               alert(res.data)})
+               window.location ='/login'
+               })
            .catch((err)=>{
                alert('An error occurred')
                alert(err.message)})
@@ -82,17 +85,17 @@ export default class registration extends Component{
 
     upload(e){
         e.preventDefault();
-        const {profilePic} = this.state;
+        const {image} = this.state;
 
-        if(!profilePic){
+        if(!image){
             alert("Please Select a Picture First");
         }else {
-            const {profilePic} = this.state;
+            const {image} = this.state;
             const date = Date.now();
 
             const uploadTask = storage
-                .ref(`ProfilePics/${date}_${profilePic.name}`)
-                .put(profilePic);
+                .ref(`ProfilePics/${date}_${image.name}`)
+                .put(image);
             uploadTask.on(
                 "state_changed",
                 (snapshot) => {
@@ -103,7 +106,7 @@ export default class registration extends Component{
                 () => {
                     storage
                         .ref("ProfilePics")
-                        .child(`${date}_${profilePic.name}`)
+                        .child(`${date}_${image.name}`)
                         .getDownloadURL()
                         .then((url) => {
                             console.log(url);
@@ -123,9 +126,10 @@ export default class registration extends Component{
                  <Header />
 
                     <div className="container">
-                        <h1>Registration Page </h1>
                         <form>
-                             <TextInput
+                            <h1>Registration Page </h1>
+
+                            <TextInput
                                 name={"name"}
                                 placeholder={"Enter Name"}
                                 fieldValue={"Name"}
@@ -187,7 +191,7 @@ export default class registration extends Component{
                             <div>
                                 <div className="input-group-prepend">
                                     <span className="input-group-text" id="basic-addon1">
-                                Description About You
+                                Awards
                                     </span>
                                 </div>
                                 <textarea
@@ -221,7 +225,7 @@ export default class registration extends Component{
                             <TextInput
                                 type={"file"}
                                 placeholder={"Please Enter Member Image"}
-                                name={"profilePic"}
+                                name={"image"}
                                 onchange={this.picUpload}
                                 id={"suerImage"}
                                 fieldValue={"User Image"}
@@ -242,7 +246,7 @@ export default class registration extends Component{
 
                             <Button
                                 type ={"submit"}
-                                classname={"btn btn-primary"}
+                                classname={"btn btn-secondary"}
                                 value={"submit"}
                                 onsubmit={this.onSubmit}
                             />

@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import axios from "axios";
-
+import './workshopConductor.css';
+import Header from '../HeaderComponent/header'
 export default class workshopHosters extends Component{
     constructor(props) {
         super(props);
@@ -16,7 +17,6 @@ export default class workshopHosters extends Component{
                 const arr =[];
                 res.data.map(r =>{
                        if(r.category == 'WorkshopConductor' ){
-                           alert("awa");
                            arr.push(r);
                            this.setState({wUsers:arr})
                        }
@@ -33,27 +33,38 @@ export default class workshopHosters extends Component{
     render() {
         const {wUsers} = this.state
         return (
-            <div>{
+            <div>
+                <Header/>
+                {
                 (this.state.wUsers) ? (
                     <div>
-                        <h1>Workshop Hoster</h1>
+                        <div className="header-box">
+                            <h1>Workshop Hoster</h1>
+                        </div>
                         <div className="container">
+                        <div className="hosterDiv">
                             {this.state.wUsers.map(c =>{
                                 return (
                                     <div className="card mb-3" key ={c._id}>
-                                        <img src={c.profilePic} className="img-thumbnail"/>
-                                        <ul className="list-group list-group-flush">
-                                            <li className="list-group-item">{c.name}</li>
-                                            <li className="list-group-item">{c.description}</li>
-                                            <li className="list-group-item">{c.awards}</li>
-                                            <li className="list-group-item" href ={c.linkedIn}>{c.linkedIn}</li>
-                                        </ul>
+                                       
+                                            <div className="card box-view">
+                                                <div className="pro-pic">
+                                                <img src={c.profilePic} className="img-thumbnail"/>
+                                                </div>                                                
+                                                <br/>
+                                                    <h1>{c.name}</h1>
+                                                    <p><b>{c.description}</b> </p>
+                                                    <p><b>{c.awards}</b> </p>
+                                                <a href={c.linkedIn}><i>click here to Linked In</i></a>
+                                                
+                                            </div>
+
                                     </div>
 
                                 )
                             })}
-                        </div>)
-
+                        </div>
+</div>
                     </div>
                 ) : (
                     <h1>Sorry there is no Workshop Conductors</h1>

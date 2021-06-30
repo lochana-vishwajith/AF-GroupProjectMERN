@@ -1,0 +1,25 @@
+.card img{
+    width: 100%;
+}
+.card .pro-pic{
+max-width: 200px !important;
+    width: 200px;
+    height: 200px;
+    object-position: center;
+    object-fit: contain;
+}
+.box-view{
+    padding: 15px;
+    width: 500px;
+}
+h1{
+    color: black;
+}
+.header-box{
+    text-align: center;
+}
+.hosterDiv{
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+}

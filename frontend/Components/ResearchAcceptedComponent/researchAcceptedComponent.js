@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Button from "../ButtonComponent/buttonComponent";
-import Header from "../HeaderComponent/header";
+import RHeader from '../ResearcherHeader/header';
 import axios from "axios";
 import moment from "moment";
 
@@ -34,7 +34,7 @@ export default class researchAcceptedComponent extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <RHeader />
         <div className="container">
           <div className="card">
             <h3 className="card-header text-center font-weight-bold text-uppercase py-4">

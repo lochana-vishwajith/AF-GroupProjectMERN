@@ -33,6 +33,12 @@ import updateProfile from "./Components/updateProfileComponent/updateProfile";
 import Payments from "./Components/PaymentComponent/paymentForm"
 import ChooseReg from "./Components/RegistrationCards/RegistrationCards"
 import workshopHosters from "./Components/getWorkshopHostersComponent/workshopHosters";
+import wsAddWorkshop from "./Components/wsAddWorkshop/wsAddWorkshop";
+import wsUpdateWorkshop from "./Components/wsUpdateWorkshop/wsUpdateWorkshop";
+import wsWorkshops from "./Components/wsWorkshops/wsWorkShops";
+import wsAdminWorkshop from "./Components/wsWorkshops/wsAdminWorkshop";
+import wsFinalWorkshops from "./Components/wsWorkshops/wsFinalWorkshops";
+
 
 export default class App extends Component {
     render() {
@@ -45,6 +51,7 @@ export default class App extends Component {
                     <Route exact path = '/displayComMembers' component = {DisplayComitteeMember}/>
                     <Route exact path = '/displayComMembersEditor' component = {DisplayMembersForEditor}/>
                     <Route exact path = '/updatemember/:id' component = {UpdateMember}/>
+                    <Route exact path = '/AttendeeReg' component = {AttendeeReg}/>
                     <Route exact path = '/homePageAccept' component = {HomePageAcceptComponent}/>
                     <Route exact path = '/homecontent' component = {ApplyHome}/>
                     <Route exact path = '/addTemplate' component = {AddTemplate}/>
@@ -58,11 +65,16 @@ export default class App extends Component {
                     <Route exact path= '/chooseReg' component={ChooseReg}/>
                     <Route exact path='/getWorkshopusers' component={workshopHosters}/>
 					<Route exact path = '/researchAdd' component = {researchAddComponent} />
-                    <Route exact path = '/researchEdit' component = {researchRemove} />
+                    <Route exact path = '/researchEdit/:id' component = {researchRemove} />
                     <Route exact path = '/researchReview' component = {researchReviewerComponent} />
                     <Route exact path = '/researchAccepted' component = {researchAcceptedComponent} />
                     <Route exact path = '/noti' component = {notificationViewComponent} />
-                    <Route exact path = '/:id' component = {researchEdit} />
+                    <Route exact path = '/researchEditById/:id' component = {researchEdit} />
+                    <Route path="/addworkshop" component={wsAddWorkshop} />
+                    <Route path="/workshops" component={wsWorkshops} />
+                    <Route path="/updateworkshop/:id" component={wsUpdateWorkshop} />
+                    <Route path="/admin-workshops" component={wsAdminWorkshop} />
+                    <Route path="/final-workshops" component={wsFinalWorkshops} />
                 </Router>
                 <Footer/>
             </div>

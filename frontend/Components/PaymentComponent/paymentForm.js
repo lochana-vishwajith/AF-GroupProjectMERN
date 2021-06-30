@@ -2,6 +2,8 @@ import React,{Component} from 'react'
 import Select from "react-select";
 import TextInput from "../TextInputComponent/textInputComponent"
 import Header from "../HeaderComponent/header"
+import axios from "axios";
+import Button from "../ButtonComponent/buttonComponent";
 const options = [
     { value: 400, label: 'EntryFee' },
     { value: 200, label: 'HostingFee' },
@@ -11,10 +13,8 @@ export default  class PaymentForm extends Component{
 
     constructor(props) {
         super(props);
-
         this.state={
             name:'',
-            idNumber:'',
             email:'',
             mobile:'',
             cardNumber:'',
@@ -23,6 +23,7 @@ export default  class PaymentForm extends Component{
             selectedOption:options
 
         }
+        this.onSubmit=this.onSubmit.bind(this);
         this.handlerChange =this.handlerChange.bind(this);
         this.Onchange =this.Onchange.bind(this);
     }
@@ -37,6 +38,69 @@ export default  class PaymentForm extends Component{
         this.setState({[name]:value})
     }
 
+    onSubmit(e){
+        e.preventDefault();
+
+        const {
+            name,
+            email,
+            mobile,
+            cardNumber,
+            cvs,
+            amount,
+            payment,
+
+        } = this.state;
+
+        if(localStorage.getItem('unpaid')){
+            const ide = localStorage.getItem('unpaid');
+            const post ={
+                idNumber:ide,
+                name,
+                email,
+                mobile,
+                cardNumber,
+                cvs,
+                amount,
+            }
+            axios.post('http://localhost:5000/payments/pay',post)
+                .then((res) =>{
+                    if(res.data){
+                        if(localStorage.getItem('payType' )== 'nawAttendee'){
+                            const obj ={
+                                payment:true
+                            }
+                            axios.put(`http://localhost:5000/Users/attendeePayment/${ide}`,obj)
+                                .then((res) =>{
+                                    alert(res.data)
+                                        localStorage.clear();
+                                        window.location = '/login'
+                                    }
+                                )
+                                .catch((err)=>{alert(err)
+                                    console.log(err)}
+                                )
+
+
+
+                        }
+
+
+                    }
+                        //localStorage.setItem('unpaid',res.data._id);
+                       // window.location = '/pay'
+                    }
+                )
+                .catch((err)=>{alert(err)
+                    console.log(err)}
+                )
+
+
+        }
+
+
+    }
+
     render() {
 
         return(
@@ -44,25 +108,20 @@ export default  class PaymentForm extends Component{
             <div>
                 <Header/>
                     <br></br>
+
+
                 <h1>Payment Gateway </h1>
 
                 </div>
 
             <div className='container'>
-
+                <form>
 
                 <TextInput
                     name={"name"}
                     placeholder={"Enter Name"}
                     fieldValue={"Name"}
                     value={this.state.name}
-                    onchange={this.Onchange}
-                />
-                <TextInput
-                    name={"idNumber"}
-                    placeholder={"idNumber"}
-                    fieldValue={"idNumber"}
-                    value={this.state.idNumber}
                     onchange={this.Onchange}
                 />
                 <TextInput
@@ -114,6 +173,13 @@ export default  class PaymentForm extends Component{
                 <br></br>
                 <br></br>
 
+                <Button
+                    type ={"submit"}
+                    classname={"btn btn-Secondary"}
+                    value={"Pay"}
+                    onsubmit={this.onSubmit}
+                />
+                </form>
             </div>
             </div>
 

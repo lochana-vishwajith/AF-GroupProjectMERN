@@ -55,11 +55,13 @@ const userSchema = new mongoose.Schema({
     //9
     type: String,
   },
-  workshop: [
+ workshop: [
     {
-      type: WorkshopSchema,
-    },
-  ], //add Workshop related things
+      type: mongoose.Schema.Types.ObjectId,
+      require: false,
+      ref: "Workshop",
+
+    }],//add Workshop related things
   research: [
     {
       type: mongoose.Schema.Types.ObjectId,

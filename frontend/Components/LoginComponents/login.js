@@ -1,7 +1,9 @@
 import React,{Component} from 'react'
+import "./login.css";
 import TextInput from "../TextInputComponent/textInputComponent";
 import Button from "../ButtonComponent/buttonComponent";
 import Header from "../HeaderComponent/header";
+import Footer from "../FooterComponent/footer";
 import axios from "axios";
 export default class login extends Component{
     constructor(props) {
@@ -27,39 +29,55 @@ export default class login extends Component{
 onSubmit(e){
 
 
-
-   // OnCLick = {(e) =>{navfunction(e,itemid)}
-    //window.location = `/aRegistration/${courseID}'
-
-    // window.location = '/aRegistration'
         e.preventDefault();
         const {email,password} = this.state;
         const user = {
             email,password
         }
+        if(email == "editor" && password == "editor"){
+            window.location = '/displayComMembersEditor'
+        }
+        else if(email == "reviewer" && password == "reviewer"){
+            window.location = '/researchReview'
+        } 
+        else if(email == "admin" && password == "admin"){
+            window.location = '/homePageAccept'
+        }
+
 
         axios
             .post('http://localhost:5000/Users/userLogin',user)
             .then(res =>{alert('helo world'+res.data.token);
               localStorage.setItem('token',res.data.token);
                     localStorage.setItem('category',res.data.obj.category)
+                    localStorage.setItem('uid',res.data.obj._id)
                 alert(res.data.obj.category);
-                    //  window.location = '/uRegistration'
-                window.location='/profile';
+                if(res.data.obj.category == "attendee"){
+                    window.location = '/researchAccepted'
+                }
+                else{
+                    window.location='/profile';
+                }
+                    
+                
             }
             )
             .catch(err=>{alert(err.message)})
-        alert('On submit')
+       
 }
 
     render() {
 
         return(
-            <div>
-                    <Header/>
-                <h1> Login Form </h1>
-                <div className='container'>
+            <div className = "login-outer-box">
 
+                    <Header/>
+
+                <div className='container'>
+                <div className ="loginOuterDiv">
+                <div className="col-6 inner-box">
+
+                    <h1> Login Form </h1>
                     <form>
 
                         <TextInput
@@ -76,16 +94,20 @@ onSubmit(e){
                             type={"password"}
                             onchange={this.Onchange}
                         />
-
+                    <center>
                         <Button
                             type ={"submit"}
                             classname={"btn btn-primary"}
-                            value={"submit"}
+                            value={"Login"}
                             onsubmit={this.onSubmit}
-                        />
+                        /></center>
                     </form>
                 </div>
-
+                </div>
+                   <div className="footer-box">
+                      
+                       </div>
+                   </div>
             </div>
         )
 
