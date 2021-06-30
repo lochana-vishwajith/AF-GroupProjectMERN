@@ -5,6 +5,8 @@ import Header from "../HeaderComponent/header";
 import Button from "../ButtonComponent/buttonComponent"
 import axios from "axios";
 import Select from 'react-select';
+import { storage } from "../../firebase";
+import MyContext from "../../ContextAPI/MyContext";
 
 const options = [
     { value: 'WorkshopConductor', label: 'WorkshopConductor' },
@@ -30,6 +32,8 @@ export default class registration extends Component{
         this.handlerChange=this.handlerChange.bind(this);
         this.Onchange = this.Onchange.bind(this);
         this.onSubmit =this.onSubmit.bind(this);
+        this.picUpload =this.picUpload.bind(this);
+        this.upload =this.upload.bind(this);
     }
 
     handlerChange(e){
@@ -41,33 +45,83 @@ export default class registration extends Component{
     }
     async onSubmit(e){
         e.preventDefault();
+
+        const{name,email,password,mobile,linkedIn,category,description,awards,profilePic} =this.state
+
         const post={
-            name:this.state.name,
-            email:this.state.email,
-            password:this.state.password,
-            mobile:this.state.mobile,
-            linkedIn:this.state.linkedIn,
-            category:this.state.category,
-            description:this.state.description,
-            awards:this.state.awards,
-            profilePic:this.state.profilePic,
+            name,
+            email,
+            password,
+            mobile,
+            linkedIn,
+            category,
+            description,
+            awards,
+            profilePic,
         }
-
-
        axios
            .post('http://localhost:5000/Users/addUsers',post)
            .then(res=>{
-               console.log('awaaaa');
+              // console.log('awaaaa');
                alert('details saved Success');
                alert(res.data)})
            .catch((err)=>{
                alert('An error occurred')
                alert(err.message)})
     }
+
+
+    picUpload(e){
+        e.preventDefault();
+        if (e.target.files[0]) {
+            this.setState({ [e.target.name]: e.target.files[0] });
+        }
+        alert(this.state.profilePic)
+    }
+
+
+    upload(e){
+        e.preventDefault();
+        const {profilePic} = this.state;
+
+        if(!profilePic){
+            alert("Please Select a Picture First");
+        }else {
+            const {profilePic} = this.state;
+            const date = Date.now();
+
+            const uploadTask = storage
+                .ref(`ProfilePics/${date}_${profilePic.name}`)
+                .put(profilePic);
+            uploadTask.on(
+                "state_changed",
+                (snapshot) => {
+                },
+                (error) => {
+                    console.log(error);
+                },
+                () => {
+                    storage
+                        .ref("ProfilePics")
+                        .child(`${date}_${profilePic.name}`)
+                        .getDownloadURL()
+                        .then((url) => {
+                            console.log(url);
+                            this.setState({profilePic: url});
+                        });
+
+
+                }
+            );
+        }
+    }
+
     render() {
         return(
+
              <div>
                  <Header />
+
                     <div className="container">
                         <h1>Registration Page </h1>
                         <form>
@@ -114,31 +168,77 @@ export default class registration extends Component{
                                 onchange={this.Onchange}
                             />
 
-                            <TextInput
+                            <div>
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text" id="basic-addon1">
+                                Description About You
+                                    </span>
+                                </div>
+                                <textarea
+                                    placeholder={"Enter Description About You"}
+                                    id="description"
+                                    name="description"
+                                    rows="6"
+                                    cols="160"
+                                    onChange={this.Onchange}
+                                ></textarea>
+                            </div>
+                            <br />
+                            <div>
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text" id="basic-addon1">
+                                Description About You
+                                    </span>
+                                </div>
+                                <textarea
+                                    placeholder={"Enter Your Achievements"}
+                                    id="awards"
+                                    name="awards"
+                                    rows="6"
+                                    cols="160"
+                                    onChange={this.Onchange}
+                                ></textarea>
+                            </div>
+                            <br />
 
-                                name={"description"}
-                                type={"textarea"}
-                                placeholder={"Description About You"}
-                                fieldValue={"Description"}
-                                value={this.state.description}
-                                onchange={this.Onchange}
-                            />
-
-                            <TextInput
-
-                                name={"awards"}
-                                type={"textarea"}
-                                placeholder={"Awards"}
-                                fieldValue={"Awards"}
-                                value={this.state.awards}
-                                onchange={this.Onchange}
-                            />
-
-
+                            <div>
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text" id="basic-addon1">
+                               Select the Appropriate User Type
+                                    </span>
+                                </div>
                             <Select
+                                placeholder ={"Select User Type"}
                                 onChange={this.handlerChange}
                                 options={this.state.selectedOption}
                             />
+                            </div>
+                            <br></br>
+                            <br></br>
+
+                            <div className= "input-group mb-3">
+
+                            <TextInput
+                                type={"file"}
+                                placeholder={"Please Enter Member Image"}
+                                name={"profilePic"}
+                                onchange={this.picUpload}
+                                id={"suerImage"}
+                                fieldValue={"User Image"}
+                                classname={"form-control"}
+                            />
+                            <div className= "input-group-append ">
+                                <Button
+                                    type ={"submit"}
+                                    classname={"btn btn-outline-secondary"}
+                                    value={"UploadImage"}
+                                    onsubmit={this.upload}
+                                />
+                            </div>
+                            </div>
+
+
+                            <br></br>
 
                             <Button
                                 type ={"submit"}
@@ -158,4 +258,5 @@ export default class registration extends Component{
 
 
 }
+registration.contextType =MyContext
 

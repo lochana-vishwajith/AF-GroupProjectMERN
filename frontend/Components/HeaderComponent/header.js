@@ -39,7 +39,7 @@ export default class header extends Component {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/uRegistration">
+                  <a className="nav-link" href="/chooseReg">
                     Registration
                   </a>
                 </li>
@@ -53,6 +53,19 @@ export default class header extends Component {
                     Template Download
                   </a>
                 </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="">
+                    Committe Members
+                  </a>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="/getWorkshopusers">
+                    Conductors
+                  </a>
+                </li>
+
 
                 <li className="nav-item">
                   <a className="nav-link" href="/login">

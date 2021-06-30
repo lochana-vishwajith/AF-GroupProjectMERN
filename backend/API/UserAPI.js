@@ -24,27 +24,33 @@ const Adduser = async (req,res)=>{
 const getAllUsers = async(req,res)=>{
     try {
         const result = await User.find()
-        return result;
+        res.send(result) ;
     }catch (e){
         console.log(e.message);
-        res.status(400).send();
+        res.status(400).send(e.message);
     }
 }
 
 
 const UpdateUser =async (req,res)=>{
+    console.log('downsss');
    const id = req.params.id
-    const reqObj =req.body
-    try{
-        const result = User.findByIdAndUpdate({id},{
-            $set:{description:reqObj.description,
-                awards:reqObj.awards
-            }},{new:true}
-        )
-        return result;
-    }catch (e) {
-        console.log(e.message);
-    }
+    const { description, awards, linkedIn} = req.body;
+
+    const details = new User({
+        description, awards, linkedIn
+    });
+
+    await User.update(
+    {_id:id},
+    {$set:{description:description, awards:awards, linkedIn:linkedIn}},
+        {upsert:true}
+    ).then(() => {
+            res.send({ status: "Details are updated" });
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 }
 
 
@@ -102,10 +108,14 @@ async  function loggingUser(logObj){
 
 
 const getUserDetails = async(req,res)=>{
-    const user =req.body
-    const UserOb =await User.findById({_id:user._id})
-        .select({name:1,email:1,mobile:1,linkedIn:1,description:1,awards:1})
-    return UserOb;
+    try {
+        const user = req.user
+        const UserOb = await User.findById({_id: user._id})
+            .select({name: 1, email: 1, mobile: 1, linkedIn: 1, description: 1, awards: 1,category:1})
+        res.send(UserOb);
+    }catch (e) {
+        console.log(e.message);
+    }
 }
 
 

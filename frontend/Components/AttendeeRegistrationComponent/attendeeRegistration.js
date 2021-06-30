@@ -13,13 +13,19 @@ export default class attendeeRegistration extends Component{
             email:'',
             password:'',
             mobile:'',
-            category:'Attendee'
+            category:'Attendee',
+            payment:false
         }
         this.onSubmit = this.onSubmit.bind(this);
         this.handlerChange=this.handlerChange.bind(this);
         this.Onchange = this.Onchange.bind(this);
     }
 
+    componentDidMount() {
+        const userObj = localStorage.getItem('user');
+        this.setState({obj:userObj});
+        alert(userObj);
+    }
 
     handlerChange(e){
         this.setState({category:e.value});
@@ -30,17 +36,18 @@ export default class attendeeRegistration extends Component{
     }
 
     onSubmit(e){
+        window.location = '/pay'
         e.preventDefault();
 
 
-        const {name,email,password,mobile, category} = this.state;
+        const {name,email,password,mobile, category, payment} = this.state;
         const post ={
-            name,email,password,mobile, category
+            name,email,password,mobile, category,payment
         }
-
         axios.post('http://localhost:5000/Users/addUsers',post)
             .then((res) =>{ alert('hello world'+res.data.name)
-            console.log('hello')}
+            console.log('hello')
+            }
             )
             .catch((err)=>{alert(err)
             console.log(err)}
@@ -55,6 +62,7 @@ export default class attendeeRegistration extends Component{
                 </div>
 
                 <div><h1>Attendee Registration</h1></div>
+                {console.log(this.state.obj+"hello world local storage")}
                 <div className='container'>
 
                     <form>
@@ -97,7 +105,7 @@ export default class attendeeRegistration extends Component{
                         <Button
                             type ={"submit"}
                             classname={"btn btn-primary"}
-                            value={"submit"}
+                            value={"Proceed"}
                             onsubmit={this.onSubmit}
                         />
 

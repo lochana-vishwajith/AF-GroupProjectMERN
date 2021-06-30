@@ -66,6 +66,6 @@ userSchema.methods.authenticateUser =function () {
   const jwtToken = JWT.sign({_id:this._id,category:this.category},"WEBTOKEN");
   return jwtToken;
 }
-const UserModel = mongoose.model('usermodels',userSchema)
+const UserModel = mongoose.model('users',userSchema)
 module.exports =UserModel;
 

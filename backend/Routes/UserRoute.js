@@ -26,7 +26,7 @@ router.get('/myProfile',auth,User.getUserDetails);
    res.send(userDetails);
 })*/
 
-router.get('/getUsers',auth,User.getAllUsers);
+router.get('/getUsers',User.getAllUsers);
   //  const userList = await User.getAllUsers()
    // res.send(userList);
 
@@ -63,14 +63,15 @@ router.post('/userLogin',async(req,res)=>{
     const  resultObject = await User.loggingUser(obj);
     if(resultObject){
         const authenticateToken = await resultObject.authenticateUser();
-        res.header('x-auth-user',authenticateToken).send('Successfully Logged in');
+        const userob ={
+            token:authenticateToken,
+            obj:resultObject
+        }
+        res.header('authorization',authenticateToken).send(userob);
+        console.log(authenticateToken);
     }
     else{
         res.status(404).send('UnSuccess')
     }
 })
-
-
-
-
 module.exports = router;

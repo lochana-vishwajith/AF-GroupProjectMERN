@@ -3,14 +3,14 @@ import TextInput from "../TextInputComponent/textInputComponent";
 import Button from "../ButtonComponent/buttonComponent";
 import Header from "../HeaderComponent/header";
 import axios from "axios";
-
 export default class login extends Component{
     constructor(props) {
         super(props);
 
         this.state ={
             email:'',
-            password:''
+            password:'',
+            user:'admin'
         }
 
         this.onSubmit = this.onSubmit.bind(this);
@@ -23,7 +23,15 @@ export default class login extends Component{
     }
 
 
+
 onSubmit(e){
+
+
+
+   // OnCLick = {(e) =>{navfunction(e,itemid)}
+    //window.location = `/aRegistration/${courseID}'
+
+    // window.location = '/aRegistration'
         e.preventDefault();
         const {email,password} = this.state;
         const user = {
@@ -32,7 +40,14 @@ onSubmit(e){
 
         axios
             .post('http://localhost:5000/Users/userLogin',user)
-            .then(res =>{alert('helo world'+res.data)})
+            .then(res =>{alert('helo world'+res.data.token);
+              localStorage.setItem('token',res.data.token);
+                    localStorage.setItem('category',res.data.obj.category)
+                alert(res.data.obj.category);
+                    //  window.location = '/uRegistration'
+                window.location='/profile';
+            }
+            )
             .catch(err=>{alert(err.message)})
         alert('On submit')
 }
@@ -68,15 +83,8 @@ onSubmit(e){
                             value={"submit"}
                             onsubmit={this.onSubmit}
                         />
-
                     </form>
-
-
-
-
-
                 </div>
-
 
             </div>
         )

@@ -37,6 +37,7 @@ app.use("/researchTemplate", researchTemplate);
 const workshopTemplate = require("./Routes/WorkshopTemplateRoute");
 app.use("/workshopTemplate", workshopTemplate);
 
+
 app.use("/images", express.static("HomePageImages"));
 app.use("/templateFolder", express.static("ResearchPaperTemplate"));
 app.use(
