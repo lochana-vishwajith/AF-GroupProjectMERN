@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./Components/HomePageComponent/home";
 import HomePageConfig from "./Components/HomePageConfigComponent/homePageConfig";
-<<<<<<< HEAD
+
 import Registration from "./Components/RegistrartionComponent/registration";
 import AttendeeReg from "./Components/AttendeeRegistrationComponent/attendeeRegistration"
 import AddCommiteeMembers from "./Components/AddCommiteeMembers/addCommiteeMembers";
@@ -18,7 +18,7 @@ import updateProfile from "./Components/updateProfileComponent/updateProfile";
 import Payments from "./Components/PaymentComponent/paymentForm"
 import ChooseReg from "./Components/RegistrationCards/RegistrationCards"
 import workshopHosters from "./Components/getWorkshopHostersComponent/workshopHosters";
-=======
+
 
 
 
@@ -42,7 +42,7 @@ import DisplayTemplate from "./Components/DisplayTemplateComponent/displayTempla
 import TemplateDownload from './Components/TemplateRWDownloadComponent/downloadTemplate'
 import Footer from "./Components/FooterComponent/footer";
 
->>>>>>> Af/Lochana-Savith-Merged
+
 export default class App extends Component {
     constructor(props) {
         super(props);

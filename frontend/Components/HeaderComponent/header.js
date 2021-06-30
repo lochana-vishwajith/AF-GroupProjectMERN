@@ -40,7 +40,7 @@ export default class header extends Component {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/chooseReg">
+                  <Link className="nav-link" href="/chooseReg">
                     Registration
                   </Link>
                 </li>
@@ -50,10 +50,9 @@ export default class header extends Component {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/displayTemplate">
-                  <a className="nav-link" href="/researchAdd">
+                  <Link className="nav-link" href="/researchAdd">
                     Research
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/researchReview">
@@ -73,13 +72,13 @@ export default class header extends Component {
                   </a>
                 </li>
 
-
                 <li className="nav-item">
                   <a className="nav-link" href="/login">
                     Login
                   </a>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link" to="/displayTemplate">
                     Template Download
                   </Link>
                 </li>
