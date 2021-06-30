@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default class header extends Component {
   render() {
     return (
-      <div>
+      <div className="header-img">
         <nav className="navbar navbar-expand-lg" id="header">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
@@ -40,13 +40,41 @@ export default class header extends Component {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="#">
+                  <Link className="nav-link" href="/chooseReg">
                     Registration
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
                     WorkShops
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/researchAdd">
+                    Research
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/researchReview">
+                    Research Review
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="">
+                    Committe Members
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/getWorkshopusers">
+                    Conductors
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/login">
+                    Login
                   </Link>
                 </li>
                 <li className="nav-item">

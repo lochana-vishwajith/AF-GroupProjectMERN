@@ -19,6 +19,20 @@ import ApplyHome from './Components/ApplyHomeContentComponent/ApplyHomeContent'
 import AddTemplate from "./Components/AddTemplateComponent/AddTemplate";
 import DisplayTemplate from "./Components/DisplayTemplateComponent/displayTemplate";
 import TemplateDownload from './Components/TemplateRWDownloadComponent/downloadTemplate'
+import Registration from "./Components/RegistrartionComponent/registration";
+import AttendeeReg from "./Components/AttendeeRegistrationComponent/attendeeRegistration"
+import researchAddComponent from "./Components/ResearchDetailsAddComponent/researchAddComponent";
+import researchRemove from "./Components/ResearchEditComponent/researchRemoveComponent";
+import researchEdit from "./Components/ResearchEditComponent/researchEditComponent";
+import researchReviewerComponent from "./Components/ResearchReviewerComponent/researchReviewerComponent";
+import researchAcceptedComponent from "./Components/ResearchAcceptedComponent/researchAcceptedComponent";
+import notificationViewComponent from "./Components/NotificationViewComponent/notificationViewComponent";
+import Login from "./Components/LoginComponents/login"
+import myProfile from "./Components/MyProfileComponents/myProfile";
+import updateProfile from "./Components/updateProfileComponent/updateProfile";
+import Payments from "./Components/PaymentComponent/paymentForm"
+import ChooseReg from "./Components/RegistrationCards/RegistrationCards"
+import workshopHosters from "./Components/getWorkshopHostersComponent/workshopHosters";
 
 export default class App extends Component {
     render() {
@@ -36,6 +50,19 @@ export default class App extends Component {
                     <Route exact path = '/addTemplate' component = {AddTemplate}/>
                     <Route exact path = '/displayTemplate' component = {DisplayTemplate}/>
                     <Route exact path = '/templatedownload/:type' component = {TemplateDownload}/>
+					<Route exact path= '/uRegistration' component={Registration}/>
+                    <Route exact path= '/login' component={Login}/>
+                    <Route exact path='/profile' component={myProfile}/>
+                    <Route exact path='/updateProfile' component={updateProfile}/>
+                    <Route exact path= '/pay' component={Payments}/>
+                    <Route exact path= '/chooseReg' component={ChooseReg}/>
+                    <Route exact path='/getWorkshopusers' component={workshopHosters}/>
+					<Route exact path = '/researchAdd' component = {researchAddComponent} />
+                    <Route exact path = '/researchEdit' component = {researchRemove} />
+                    <Route exact path = '/researchReview' component = {researchReviewerComponent} />
+                    <Route exact path = '/researchAccepted' component = {researchAcceptedComponent} />
+                    <Route exact path = '/noti' component = {notificationViewComponent} />
+                    <Route exact path = '/:id' component = {researchEdit} />
                 </Router>
                 <Footer/>
             </div>

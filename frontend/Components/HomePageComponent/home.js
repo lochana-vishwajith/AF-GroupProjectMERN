@@ -22,7 +22,7 @@ export default class home extends Component {
     return (
       <div>
         <div
-          className="header-img"
+          className="header-img-Home"
           style={{
             backgroundImage: `url(${content.imageUrl})`,
           }}
