@@ -91,10 +91,11 @@ export default class researchAcceptedComponent extends Component {
                               // onChange={this.onChange}
                             >
                               <a href={item.fileURL}>
-                                <i
+                                {/* <i
                                   className="fas fa-file-download"
                                   id="acc-icon"
-                                />
+                                /> */}
+                                Download
                               </a>
                             </td>
                             <td>

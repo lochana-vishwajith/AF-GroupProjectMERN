@@ -136,10 +136,11 @@ export default class researchReviewerComponent extends Component {
                               // onChange={this.onChange}
                             >
                               <a href={item.fileURL}>
-                                <i
+                                {/* <i
                                   className="fas fa-file-download"
                                   id="acc-icon"
-                                />
+                                /> */}
+                                Download
                               </a>
                             </td>
                             <td>
