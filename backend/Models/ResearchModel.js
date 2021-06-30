@@ -23,7 +23,7 @@ const researchDetailsSchema = new Schema({
     type: Boolean,
     required: true,
   },
-  fileName: {
+  fileURL: {
     type: String,
     required: false,
   },
@@ -34,4 +34,4 @@ const researchDetails = mongoose.model(
   researchDetailsSchema
 );
 
-module.exports = {researchDetails,researchDetailsSchema};
+module.exports = { researchDetails, researchDetailsSchema };

@@ -3,7 +3,9 @@ nav{
   background-color: black;
 }
 =======
->>>>>>> Af/FrontEnd-BasicComponents
+nav {
+  background-color: black;
+>>>>>>> Af/Lochana-Savith-Merged
 .nav-link {
   color: aliceblue !important;
 }

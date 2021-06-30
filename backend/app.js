@@ -38,13 +38,6 @@ const workshopTemplate = require("./Routes/WorkshopTemplateRoute");
 app.use("/workshopTemplate", workshopTemplate);
 
 
-app.use("/images", express.static("HomePageImages"));
-app.use("/templateFolder", express.static("ResearchPaperTemplate"));
-app.use(
-  "/workShopTemplateFolder",
-  express.static("WorkshopRresentationTemplate")
-);
-
 //routes for the users
 const users = require("./Routes/UserRoute");
 app.use("/Users", users);
@@ -62,7 +55,8 @@ app.use("/Workshops", workshops);
 const research = require("./Routes/ResearchRoute");
 app.use("/researchDetails", research);
 
-app.use("/repaper", express.static("FileStorage/ResearchPapers"));
+const home = require("./Routes/HomePagePresentContentRoutes");
+app.use("/content", home);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

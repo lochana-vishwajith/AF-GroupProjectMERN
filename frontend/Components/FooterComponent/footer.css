@@ -1,5 +1,11 @@
 .footerdiv {
   background-color: black;
+  margin-top: 1rem;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .footerGrid {
   display: grid;
@@ -16,3 +22,9 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   box-sizing: border-box;
 }
+/* .footer {
+ 
+  background-color: rgb(235, 195, 64);
+ 
+  
+} */

@@ -1,43 +1,35 @@
 const express = require("express");
 const router = express.Router();
 const HomePageRoute = require("../Models/HomePageModel");
-const multer = require("multer");
 const path = require("path");
-const homePageDetails = require("../Models/HomePageModel");
 
 const app = express();
 
-const homePageImages = multer.diskStorage({
-  destination: "./HomePageImages",
-  filename: (req, file, cb) => {
-    return cb(
-      null,
-      `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`
-    );
-  },
-});
-
-const upload = multer({
-  storage: homePageImages,
-});
-
-const multipleImg = upload.fields([
-  { name: "backGroudImg", maxCount: 1 },
-  { name: "logo", maxCount: 1 },
-]);
-
-//image uploading not completed
-router.post("/", multipleImg, (req, res) => {
-  const { homePageTitle, date, time, venue, homePageDescription } = req.body;
+router.post("/", (req, res) => {
+  const {
+    confName,
+    dateOfConf,
+    venueOfConf,
+    imageUrl,
+    confDesc,
+    trackOne,
+    trackTwo,
+    trackThree,
+    trackFour,
+    status,
+  } = req.body;
 
   const details = new HomePageRoute({
-    homePageTitle,
-    date,
-    time,
-    venue,
-    backGroudImg: `http://localhost:5000/images/${req.file.filename}`,
-    logo: `http://localhost:5000/images/${req.file.filename}`,
-    homePageDescription,
+    confName,
+    dateOfConf,
+    venueOfConf,
+    imageUrl,
+    confDesc,
+    trackOne,
+    trackTwo,
+    trackThree,
+    trackFour,
+    status,
   });
 
   details
@@ -60,12 +52,12 @@ router.get("/", async (req, res) => {
     });
 });
 
-router.get("/:id", async (req, res) => {
-  let detailId = req.params.id;
+router.get("/:type", async (req, res) => {
+  let type = req.params.type;
 
-  await HomePageRoute.findById(detailId)
+  await HomePageRoute.find({ status: type })
     .then((detail) => {
-      res.send({ status: "Detail Are Fetched", detail });
+      res.send(detail);
     })
     .catch((err) => {
       console.log(err);
@@ -87,19 +79,13 @@ router.delete("/:id", async (req, res) => {
 router.put("/:id", async (req, res) => {
   let detailId = req.params.id;
 
-  const { homePageTitle, date, time, venue, homePageDescription } = req.body;
+  const { status } = req.body;
 
-  const details = new HomePageRoute({
-    homePageTitle,
-    date,
-    time,
-    venue,
-    backGroudImg: req.file.toString,
-    logo: req.file.toString,
-    homePageDescription,
-  });
-
-  await HomePageRoute.findByIdAndUpdate(detailId, details)
+  await HomePageRoute.update(
+    { _id: detailId },
+    { $set: { status: status } },
+    { upsert: true }
+  )
     .then(() => {
       res.send({ status: "Details are updated" });
     })

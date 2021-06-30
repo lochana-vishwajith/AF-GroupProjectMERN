@@ -1,0 +1,105 @@
+const mongoose = require("mongoose");
+const ResearchSchema = require("./ResearchModel").researchDetailsSchema;
+const WorkshopSchema = require("./Workshop").workshopSchema;
+const JWT = require("jsonwebtoken");
+// note that this schema might vary please add Workshop and Research Schemas to this
+
+const userSchema = new mongoose.Schema({
+  name: {
+    //1
+    type: String,
+    required: true,
+  },
+  email: {
+    //2
+    type: String,
+<<<<<<< HEAD
+    //required: true,
+    //match: /.com$/,
+    //lowercase: true,
+   // unique:true,
+=======
+    required: true,
+    match: /.com$/,
+    lowercase: true,
+    unique: true,
+>>>>>>> Af/Lochana-Savith-Merged
+  },
+  password: {
+    //3
+    type: String,
+    required: true,
+  },
+  mobile: {
+    //4
+    type: Number,
+    required: true,
+    unique: true,
+  },
+  linkedIn: {
+    //5
+    type: String,
+  },
+<<<<<<< HEAD
+  category: {//6
+    type:String,
+    enum: ["WorkshopConductor", "Researcher","Attendee"],
+=======
+  category: {
+    //6
+    type: String,
+    enum: ["Workshop Conductor", "Researcher"],
+>>>>>>> Af/Lochana-Savith-Merged
+    required: true,
+  },
+  Date: {
+    type: Date,
+    default: Date.now,
+  },
+  description: {
+    //7
+    type: String,
+  },
+  awards: {
+    //8
+    type: String,
+  },
+  profilePic: {
+    //9
+    type: String,
+  },
+  workshop: [
+    {
+      type: WorkshopSchema,
+    },
+  ], //add Workshop related things
+  research: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      require: false,
+      ref: "researchDetails",
+    },
+  ], //add Research related things
+  payment:{
+    type:Boolean
+  }
+
+});
+
+userSchema.methods.authenticateUser = function () {
+  const jwtToken = JWT.sign(
+    { _id: this._id, category: this.category },
+    "WEBTOKEN"
+  );
+  return jwtToken;
+<<<<<<< HEAD
+}
+const UserModel = mongoose.model('users',userSchema)
+module.exports =UserModel;
+=======
+};
+
+const UserModel = mongoose.model("UserModel", userSchema);
+>>>>>>> Af/Lochana-Savith-Merged
+
+module.exports = UserModel;

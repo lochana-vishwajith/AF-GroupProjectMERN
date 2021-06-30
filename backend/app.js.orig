@@ -34,6 +34,11 @@ app.use("/homePage", homePage);
 const researchTemplate = require("./Routes/ResearchPaperTemplateRoute");
 app.use("/researchTemplate", researchTemplate);
 
+const workshopTemplate = require("./Routes/WorkshopTemplateRoute");
+app.use("/workshopTemplate", workshopTemplate);
+
+<<<<<<< HEAD
+
 app.use("/images", express.static("HomePageImages"));
 app.use("/templateFolder", express.static("ResearchPaperTemplate"));
 app.use(
@@ -41,13 +46,16 @@ app.use(
   express.static("WorkshopRresentationTemplate")
 );
 
-//routes for the users
-<<<<<<< HEAD
-const users = require("./Routes/UserRoute");
 =======
-const users = require("./Routes/User");
->>>>>>> origin/Admin-Editor
+>>>>>>> Af/Lochana-Savith-Merged
+//routes for the users
+const users = require("./Routes/UserRoute");
 app.use("/Users", users);
+
+
+//Routes for Payment
+const Payment = require('./Payemnt/PaymentRoutes');
+app.use('/payments',Payment);
 
 //routes for workshop
 const workshops = require("./Routes/Workshop");
@@ -57,7 +65,9 @@ app.use("/Workshops", workshops);
 const research = require("./Routes/ResearchRoute");
 app.use("/researchDetails", research);
 
-app.use("/repaper", express.static("FileStorage/ResearchPapers"));
+const home = require("./Routes/HomePagePresentContentRoutes");
+app.use("/content", home);
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

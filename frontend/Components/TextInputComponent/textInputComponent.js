@@ -34,10 +34,10 @@ const textInput = ({
 
 textInput.prototype = {
   type: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  fieldValue: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  fieldValue: PropTypes.string,
+  name: PropTypes.string,
+  id: PropTypes.string,
   value: PropTypes.string,
   onchange: PropTypes.func,
 };
