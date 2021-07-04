@@ -1,0 +1,195 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _homePageAcceptComponentCss = require("./HomePageAcceptComponent.css");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _adminheader = require("../AdminHeader/adminheader");
+var _adminheaderDefault = parcelHelpers.interopDefault(_adminheader);
+class HomePageAcceptComponent extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            home: []
+        };
+        this.acceptContent = this.acceptContent.bind(this);
+        this.declinecontent = this.declinecontent.bind(this);
+    }
+    componentDidMount() {
+        _axiosDefault.default.get(`http://localhost:5000/homePage/pending`).then((res)=>{
+            console.log(res.data);
+            this.setState({
+                home: res.data
+            });
+        });
+    }
+    acceptContent(Id) {
+        const homeState = {
+            status: "accepted"
+        };
+        _axiosDefault.default.put(`http://localhost:5000/homePage/${Id}`, homeState).then(()=>{
+            alert("Content is Accepted");
+            window.location.reload();
+        });
+    }
+    declinecontent(id) {
+        const ContentState = {
+            status: "decline"
+        };
+        _axiosDefault.default.put(`http://localhost:5000/homePage/${id}`, ContentState).then(()=>{
+            alert("Content is Declined");
+            window.location.reload();
+        });
+    }
+    render() {
+        const { home  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                lineNumber: 44
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_adminheaderDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                lineNumber: 45
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                lineNumber: 46
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                lineNumber: 47
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                lineNumber: 48
+            },
+            __self: this
+        }, home.map((homeContent)=>/*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "shadow-lg p-3 mb-5 bg-white rounded",
+                key: homeContent._id,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 50
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("center", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 54
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+                src: homeContent.imageUrl,
+                className: "card-img-top",
+                alt: "...",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 55
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "card-body",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 61
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+                className: "card-title",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 62
+                },
+                __self: this
+            }, homeContent.confName), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                className: "card-title",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 63
+                },
+                __self: this
+            }, homeContent.dateOfConf), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                className: "card-title",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 64
+                },
+                __self: this
+            }, homeContent.venueOfConf), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                className: "card-text",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 65
+                },
+                __self: this
+            }, homeContent.confDesc), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "btnHome",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 66
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 67
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+                type: "submit",
+                classname: "btn btn-outline-success",
+                value: "Accept",
+                onsubmit: ()=>this.acceptContent(homeContent._id)
+                ,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 68
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 75
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+                type: "submit",
+                classname: "btn btn-outline-danger",
+                value: "Decline",
+                onsubmit: ()=>this.declinecontent(homeContent._id)
+                ,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageAcceptComponent\\HomePageAcceptComponent.js",
+                    lineNumber: 76
+                },
+                __self: this
+            })))))
+        ), ";")));
+    }
+}
+exports.default = HomePageAcceptComponent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

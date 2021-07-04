@@ -1,0 +1,228 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _moment = require("moment");
+var _momentDefault = parcelHelpers.interopDefault(_moment);
+var _header = require("../HeaderComponent/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+const initialState = {
+    researchTitle: "",
+    researchField: "",
+    researchYear: "",
+    coAuthors: "",
+    fileURL: "",
+    isApproved: "",
+    dataArray: []
+};
+class researchAcceptedComponent extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = initialState;
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/researchDetails/payedResearch").then((response)=>{
+            console.log("Response data: ", response.data.data);
+            this.setState({
+                dataArray: response.data.data
+            });
+        }).catch((error)=>{
+            console.log(error.message);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 38
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 39
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 40
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            className: "card-header text-center font-weight-bold text-uppercase py-4",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 41
+            },
+            __self: this
+        }, "Accepted Research Papers"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card mb-3 p-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 45
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 46
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            id: "table",
+            className: "table-editable",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 47
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("table", {
+            className: "table table-bordered table-responsive-md table-striped text-center",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 48
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 49
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 50
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            className: "text-center",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 51
+            },
+            __self: this
+        }, "Research Title"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            className: "text-center",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 52
+            },
+            __self: this
+        }, "Research Field"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            className: "text-center",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 53
+            },
+            __self: this
+        }, "Research Year"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            className: "text-center",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                lineNumber: 54
+            },
+            __self: this
+        }, "Research Author"))), this.state.dataArray.length > 0 && this.state.dataArray.map((item, index)=>/*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+                key: index,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                    lineNumber: 59
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                    lineNumber: 60
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                className: "pt-3-half",
+                name: "researchTitle",
+                onChange: this.onChange,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                    lineNumber: 61
+                },
+                __self: this
+            }, item.researchTitle), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                className: "pt-3-half",
+                name: "researchField",
+                onChange: this.onChange,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                    lineNumber: 68
+                },
+                __self: this
+            }, item.researchField), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                className: "pt-3-half",
+                name: "researchYear",
+                onChange: this.onChange,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                    lineNumber: 75
+                },
+                __self: this
+            }, _momentDefault.default(item.researchYear).format("YYYY")), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                className: "pt-3-half",
+                name: "coAuthors",
+                onChange: this.onChange,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                    lineNumber: 82
+                },
+                __self: this
+            }, item.coAuthors), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                className: "pt-3-half ",
+                name: "fileURL",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                    lineNumber: 89
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: item.fileURL,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                    lineNumber: 94
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("i", {
+                className: "fas fa-file-download",
+                id: "acc-icon",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchAcceptedComponentForClient\\researchAcceptedComponent.js",
+                    lineNumber: 95
+                },
+                __self: this
+            })))))
+        )))))))));
+    }
+}
+exports.default = researchAcceptedComponent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

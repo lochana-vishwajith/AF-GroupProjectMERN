@@ -1,0 +1,30 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "registerBundle", ()=>t
+);
+var _util = require("@firebase/util");
+var _logger = require("@firebase/logger");
+var _webchannelWrapper = require("@firebase/webchannel-wrapper");
+var _tslib = require("tslib");
+var _prebuiltDf0F24F5F4D3F7F5Js = require("./prebuilt-df0f24f5-f4d3f7f5.js");
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */ /**
+ * Prototype patches bundle loading to Firestore.
+ */ function t(o) {
+    o.prototype.loadBundle = _prebuiltDf0F24F5F4D3F7F5Js.o, o.prototype.namedQuery = _prebuiltDf0F24F5F4D3F7F5Js.c;
+}
+t(_prebuiltDf0F24F5F4D3F7F5Js.q);

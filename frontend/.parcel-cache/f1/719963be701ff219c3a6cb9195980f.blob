@@ -1,0 +1,62 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.observeNotification = exports.Notification = exports.NotificationKind = void 0;
+var empty_1 = require("./observable/empty");
+var of_1 = require("./observable/of");
+var throwError_1 = require("./observable/throwError");
+var isFunction_1 = require("./util/isFunction");
+var NotificationKind;
+(function(NotificationKind1) {
+    NotificationKind1["NEXT"] = "N";
+    NotificationKind1["ERROR"] = "E";
+    NotificationKind1["COMPLETE"] = "C";
+})(NotificationKind = exports.NotificationKind || (exports.NotificationKind = {
+}));
+var Notification1 = function() {
+    function Notification2(kind, value, error) {
+        this.kind = kind;
+        this.value = value;
+        this.error = error;
+        this.hasValue = kind === 'N';
+    }
+    Notification2.prototype.observe = function(observer) {
+        return observeNotification(this, observer);
+    };
+    Notification2.prototype.do = function(nextHandler, errorHandler, completeHandler) {
+        var _a = this, kind = _a.kind, value = _a.value, error = _a.error;
+        return kind === 'N' ? nextHandler === null || nextHandler === void 0 ? void 0 : nextHandler(value) : kind === 'E' ? errorHandler === null || errorHandler === void 0 ? void 0 : errorHandler(error) : completeHandler === null || completeHandler === void 0 ? void 0 : completeHandler();
+    };
+    Notification2.prototype.accept = function(nextOrObserver, error, complete) {
+        var _a;
+        return isFunction_1.isFunction((_a = nextOrObserver) === null || _a === void 0 ? void 0 : _a.next) ? this.observe(nextOrObserver) : this.do(nextOrObserver, error, complete);
+    };
+    Notification2.prototype.toObservable = function() {
+        var _a = this, kind = _a.kind, value = _a.value, error = _a.error;
+        var result = kind === 'N' ? of_1.of(value) : kind === 'E' ? throwError_1.throwError(function() {
+            return error;
+        }) : kind === 'C' ? empty_1.EMPTY : 0;
+        if (!result) throw new TypeError("Unexpected notification kind " + kind);
+        return result;
+    };
+    Notification2.createNext = function(value) {
+        return new Notification2('N', value);
+    };
+    Notification2.createError = function(err) {
+        return new Notification2('E', undefined, err);
+    };
+    Notification2.createComplete = function() {
+        return Notification2.completeNotification;
+    };
+    Notification2.completeNotification = new Notification2('C');
+    return Notification2;
+}();
+exports.Notification = Notification1;
+function observeNotification(notification, observer) {
+    var _a, _b, _c;
+    var _d = notification, kind = _d.kind, value = _d.value, error = _d.error;
+    if (typeof kind !== 'string') throw new TypeError('Invalid notification, missing "kind"');
+    kind === 'N' ? (_a = observer.next) === null || _a === void 0 || _a.call(observer, value) : kind === 'E' ? (_b = observer.error) === null || _b === void 0 || _b.call(observer, error) : (_c = observer.complete) === null || _c === void 0 || _c.call(observer);
+}
+exports.observeNotification = observeNotification;

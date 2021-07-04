@@ -81,7 +81,7 @@ export default class addCommiteeMembers extends Component {
       .post("http://localhost:5000/memberDetails/", details)
       .then(() => {
         alert("Details of Committee Member are Added Successfully");
-        this.props.history.push("/displayComMembersEditor");
+        window.location = "/displayComMembersEditor";
       })
       .catch((err) => {
         alert("Error in Submiiting.Please Check Again Before Submitting...!");

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Button from "../ButtonComponent/buttonComponent";
-import Header from "../HeaderComponent/header";
+import Header from "../ReviewerHeaderComponent/ResearchHeader";
 import axios from "axios";
 import moment from "moment";
 import { notificationService } from "../NotificationServiceComponent/notificationService";

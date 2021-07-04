@@ -1,0 +1,107 @@
+"use strict";
+var __extends = this && this.__extends || function() {
+    var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || ({
+            __proto__: []
+        }) instanceof Array && function(d1, b1) {
+            d1.__proto__ = b1;
+        } || function(d1, b1) {
+            for(var p in b1)if (Object.prototype.hasOwnProperty.call(b1, p)) d1[p] = b1[p];
+        };
+        return extendStatics(d, b);
+    };
+    return function(d, b) {
+        if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.VirtualAction = exports.VirtualTimeScheduler = void 0;
+var AsyncAction_1 = require("./AsyncAction");
+var Subscription_1 = require("../Subscription");
+var AsyncScheduler_1 = require("./AsyncScheduler");
+var VirtualTimeScheduler1 = function(_super) {
+    __extends(VirtualTimeScheduler2, _super);
+    function VirtualTimeScheduler2(schedulerActionCtor, maxFrames) {
+        if (schedulerActionCtor === void 0) schedulerActionCtor = VirtualAction1;
+        if (maxFrames === void 0) maxFrames = Infinity;
+        var _this = _super.call(this, schedulerActionCtor, function() {
+            return _this.frame;
+        }) || this;
+        _this.maxFrames = maxFrames;
+        _this.frame = 0;
+        _this.index = -1;
+        return _this;
+    }
+    VirtualTimeScheduler2.prototype.flush = function() {
+        var _a = this, actions = _a.actions, maxFrames = _a.maxFrames;
+        var error;
+        var action;
+        while((action = actions[0]) && action.delay <= maxFrames){
+            actions.shift();
+            this.frame = action.delay;
+            if (error = action.execute(action.state, action.delay)) break;
+        }
+        if (error) {
+            while(action = actions.shift())action.unsubscribe();
+            throw error;
+        }
+    };
+    VirtualTimeScheduler2.frameTimeFactor = 10;
+    return VirtualTimeScheduler2;
+}(AsyncScheduler_1.AsyncScheduler);
+exports.VirtualTimeScheduler = VirtualTimeScheduler1;
+var VirtualAction1 = function(_super) {
+    __extends(VirtualAction2, _super);
+    function VirtualAction2(scheduler, work, index) {
+        if (index === void 0) index = scheduler.index += 1;
+        var _this = _super.call(this, scheduler, work) || this;
+        _this.scheduler = scheduler;
+        _this.work = work;
+        _this.index = index;
+        _this.active = true;
+        _this.index = scheduler.index = index;
+        return _this;
+    }
+    VirtualAction2.prototype.schedule = function(state, delay) {
+        if (delay === void 0) delay = 0;
+        if (Number.isFinite(delay)) {
+            if (!this.id) return _super.prototype.schedule.call(this, state, delay);
+            this.active = false;
+            var action = new VirtualAction2(this.scheduler, this.work);
+            this.add(action);
+            return action.schedule(state, delay);
+        } else return Subscription_1.Subscription.EMPTY;
+    };
+    VirtualAction2.prototype.requestAsyncId = function(scheduler, id, delay) {
+        if (delay === void 0) delay = 0;
+        this.delay = scheduler.frame + delay;
+        var actions = scheduler.actions;
+        actions.push(this);
+        actions.sort(VirtualAction2.sortActions);
+        return true;
+    };
+    VirtualAction2.prototype.recycleAsyncId = function(scheduler, id, delay) {
+        if (delay === void 0) delay = 0;
+        return undefined;
+    };
+    VirtualAction2.prototype._execute = function(state, delay) {
+        if (this.active === true) return _super.prototype._execute.call(this, state, delay);
+    };
+    VirtualAction2.sortActions = function(a, b) {
+        if (a.delay === b.delay) {
+            if (a.index === b.index) return 0;
+            else if (a.index > b.index) return 1;
+            else return -1;
+        } else if (a.delay > b.delay) return 1;
+        else return -1;
+    };
+    return VirtualAction2;
+}(AsyncAction_1.AsyncAction);
+exports.VirtualAction = VirtualAction1;

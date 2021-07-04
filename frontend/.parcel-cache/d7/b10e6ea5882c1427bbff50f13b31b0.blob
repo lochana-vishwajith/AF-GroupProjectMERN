@@ -1,0 +1,190 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+class updateProfile extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            id: '',
+            linkedIn: '',
+            description: '',
+            awards: ''
+        };
+        this.handlerChange = this.handlerChange.bind(this);
+        this.Onchange = this.Onchange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+    handlerChange(e) {
+        this.setState({
+            category: e.value
+        });
+    }
+    Onchange(e) {
+        const { name , value  } = e.target;
+        this.setState({
+            [name]: value
+        });
+    }
+    componentDidMount() {
+        const accessToken = sessionStorage.getItem('token');
+        _axiosDefault.default.interceptors.request.use((config)=>{
+            config.headers.authorization = `${accessToken}`;
+            return config;
+        }, (error)=>{
+            return Promise.reject(error);
+        });
+        _axiosDefault.default.get('http://localhost:5000/Users/myProfile').then((res)=>{
+            this.setState({
+                linkedIn: res.data.linkedIn
+            });
+            this.setState({
+                description: res.data.description
+            });
+            this.setState({
+                awards: res.data.awards
+            });
+            this.setState({
+                id: res.data._id
+            });
+        }).catch((err)=>{
+            alert(err);
+        });
+    }
+    async onSubmit(e) {
+        e.preventDefault();
+        const { linkedIn , description , awards  } = this.state;
+        const post = {
+            linkedIn,
+            description,
+            awards
+        };
+        _axiosDefault.default.put(`http://localhost:5000/Users/updateUser/`, post).then((res)=>{
+            alert('details update Success');
+            window.location = '/profile';
+        }).catch((err)=>{
+            alert('An error occurred');
+            alert(err.message);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 82
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 84
+            },
+            __self: this
+        }, "Update Profile"), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "linkedIn",
+            fieldValue: "linkedIn",
+            value: this.state.linkedIn,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 87
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 95
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 96
+            },
+            __self: this
+        }, "Update Your Awards")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            value: this.state.awards,
+            id: "awards",
+            name: "awards",
+            rows: "6",
+            cols: "160",
+            onChange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 100
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 108
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 109
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 110
+            },
+            __self: this
+        }, "Update Your Description")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            value: this.state.description,
+            id: "description",
+            name: "description",
+            rows: "6",
+            cols: "160",
+            onChange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 114
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 122
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-secondary",
+            value: "Save Updates",
+            onsubmit: this.onSubmit,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateProfileComponent\\updateProfile.js",
+                lineNumber: 126
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = updateProfile;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

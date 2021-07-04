@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Header from "../ReviewerHeaderComponent/ResearchHeader";
 
 class wsAdminWorkshop extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class wsAdminWorkshop extends React.Component {
       .delete(`http://localhost:5000/workshops/deletews/${e}`)
       .then((response) => {
         alert("Workshop Deleted !");
+        window.location = "/admin-workshops";
       })
       .catch((error) => {
         alert("Error - Workshop didnt deleted !");
@@ -55,6 +57,7 @@ class wsAdminWorkshop extends React.Component {
       .put(`http://localhost:5000/workshops/updatews/${wsID}`, data)
       .then((response) => {
         alert("Workshop Approved");
+        window.location = "/admin-workshops";
       })
       .catch((error) => {
         alert("Workshop didn't approved !");
@@ -68,84 +71,87 @@ class wsAdminWorkshop extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <h1 style={{ color: "blue" }}>Admin page workshops</h1>
-        <br />
-        <br />
+      <div>
+        <Header />
+        <div className="container">
+          <h1 style={{ color: "blue" }}>Admin page workshops</h1>
+          <br />
+          <br />
 
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">Workshop Name</th>
-              <th scope="col">Date</th>
-              <th scope="col">Workshop Description</th>
-              <th scope="col">Presentor Name</th>
-              <th scope="col">Presentor Description</th>
-            </tr>
-          </thead>
-
-          {this.state.workshops.map((workshop, index) => (
-            <tbody key={index}>
+          <table className="table">
+            <thead>
               <tr>
-                <th scope="row">{workshop.wsName}</th>
-                <td>{workshop.wsDate}</td>
-                <td>{workshop.wsDescription}</td>
-                <td>{workshop.wsPresentorName}</td>
-                <td>{workshop.wsPresentorDescription}</td>
-                <td>
-                  {" "}
-                  <button
-                    href="#"
-                    className="btn btn-danger"
-                    onClick={this.deleteWorkshop.bind(this, workshop._id)}
-                  >
-                    Delete
-                  </button>
-                </td>
-                <td>
-                  {" "}
-                  <a
-                    //href="updateworkshop"
-                    className="btn btn-primary"
-                    onClick={(e) => this.updateWorkshop(e, workshop._id)}
-                  >
-                    Update
-                  </a>
-                </td>
-
-                <td>
-                  <input
-                    disabled={workshop.comment == null ? false : true}
-                    type="text"
-                    name="comment"
-                    className="form-control"
-                    placeholder="Enter a comment"
-                    onChange={this.onchange}
-                  />
-                </td>
-
-                <td>
-                  {" "}
-                  <button
-                    disabled={
-                      workshop.status == true
-                        ? (this.disabled = true)
-                        : (this.disabled = false)
-                    }
-                    className="btn btn-success"
-                    onClick={(e) => {
-                      this.approveWorkshop(e, workshop._id);
-
-                      //this.disabled = true;
-                    }}
-                  >
-                    Approve
-                  </button>
-                </td>
+                <th scope="col">Workshop Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Workshop Description</th>
+                <th scope="col">Presentor Name</th>
+                <th scope="col">Presentor Description</th>
               </tr>
-            </tbody>
-          ))}
-        </table>
+            </thead>
+
+            {this.state.workshops.map((workshop, index) => (
+              <tbody key={index}>
+                <tr>
+                  <th scope="row">{workshop.wsName}</th>
+                  <td>{workshop.wsDate}</td>
+                  <td>{workshop.wsDescription}</td>
+                  <td>{workshop.wsPresentorName}</td>
+                  <td>{workshop.wsPresentorDescription}</td>
+                  <td>
+                    {" "}
+                    <button
+                      href="#"
+                      className="btn btn-danger"
+                      onClick={this.deleteWorkshop.bind(this, workshop._id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                  <td>
+                    {" "}
+                    <a
+                      //href="updateworkshop"
+                      className="btn btn-primary"
+                      onClick={(e) => this.updateWorkshop(e, workshop._id)}
+                    >
+                      Update
+                    </a>
+                  </td>
+
+                  <td>
+                    <input
+                      disabled={workshop.comment == null ? false : true}
+                      type="text"
+                      name="comment"
+                      className="form-control"
+                      placeholder="Enter a comment"
+                      onChange={this.onchange}
+                    />
+                  </td>
+
+                  <td>
+                    {" "}
+                    <button
+                      disabled={
+                        workshop.status == true
+                          ? (this.disabled = true)
+                          : (this.disabled = false)
+                      }
+                      className="btn btn-success"
+                      onClick={(e) => {
+                        this.approveWorkshop(e, workshop._id);
+
+                        //this.disabled = true;
+                      }}
+                    >
+                      Approve
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            ))}
+          </table>
+        </div>
       </div>
     );
   }

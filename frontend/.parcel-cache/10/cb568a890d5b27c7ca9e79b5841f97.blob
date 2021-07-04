@@ -1,0 +1,301 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactSelect = require("react-select");
+var _reactSelectDefault = parcelHelpers.interopDefault(_reactSelect);
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _header = require("../HeaderComponent/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+const options = [
+    {
+        value: 400,
+        label: "EntryFee"
+    },
+    {
+        value: 200,
+        label: "HostingFee"
+    }, 
+];
+class PaymentForm extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name: "",
+            email: "",
+            mobile: "",
+            cardNumber: "",
+            cvs: "",
+            amount: "",
+            selectedOption: options
+        };
+        this.onSubmit = this.onSubmit.bind(this);
+        this.handlerChange = this.handlerChange.bind(this);
+        this.Onchange = this.Onchange.bind(this);
+    }
+    handlerChange(e) {
+        this.setState({
+            amount: e.value
+        });
+    }
+    Onchange(e) {
+        const { name , value  } = e.target;
+        this.setState({
+            [name]: value
+        });
+    }
+    onSubmit(e) {
+        e.preventDefault();
+        const { name , email , mobile , cardNumber , cvs , amount , payment  } = this.state;
+        if (sessionStorage.getItem("unpaid")) {
+            const ide = sessionStorage.getItem("unpaid");
+            const post = {
+                idNumber: ide,
+                name,
+                email,
+                mobile,
+                cardNumber,
+                cvs,
+                amount
+            };
+            _axiosDefault.default.post("http://localhost:5000/payments/pay", post).then((res)=>{
+                if (res.data) {
+                    if (sessionStorage.getItem("payType") == "nawAttendee") {
+                        const obj = {
+                            payment: true
+                        };
+                        _axiosDefault.default.put(`http://localhost:5000/Users/attendeePayment/${ide}`, obj).then((res1)=>{
+                            alert("Payment is Successfully Processed Log in to Continue");
+                            sessionStorage.clear();
+                            window.location = "/login";
+                        }).catch((err)=>{
+                            alert("please fill the form correctly");
+                            // alert(err)
+                            //alert('please fill the form correctly')
+                            console.log(err);
+                        });
+                    }
+                }
+            //localStorage.setItem('unpaid',res.data._id);
+            // window.location = '/pay'
+            }).catch((err)=>{
+                alert("please fill the form correctly");
+                //alert(err)
+                console.log(err);
+            });
+        } else if (sessionStorage.getItem("Rid")) {
+            const { name: name1 , email: email1 , mobile: mobile1 , cardNumber: cardNumber1 , cvs: cvs1 , amount: amount1  } = this.state;
+            if (sessionStorage.getItem("uid")) {
+                const ide = sessionStorage.getItem("uid");
+                const post = {
+                    idNumber: ide,
+                    name: name1,
+                    email: email1,
+                    mobile: mobile1,
+                    cardNumber: cardNumber1,
+                    cvs: cvs1,
+                    amount: amount1
+                };
+                _axiosDefault.default.post("http://localhost:5000/payments/pay", post).then((res)=>{
+                    if (res.data) {
+                        const obj = {
+                            isPayed: true
+                        };
+                        _axiosDefault.default.put(`http://localhost:5000/researchDetails/editResearchDetailsStatus/${sessionStorage.getItem("Rid")}`).then((res1)=>{
+                            alert("Payment is Successfully Processed Log in to Continue");
+                            sessionStorage.clear();
+                            window.location = "/research4client";
+                        }).catch((err)=>{
+                            alert("please fill the form correctly ");
+                            // alert(err)
+                            //alert('please fill the form correctly')
+                            console.log(err);
+                        });
+                    }
+                //localStorage.setItem('unpaid',res.data._id);
+                // window.location = '/pay'
+                }).catch((err)=>{
+                    alert("please fill the form correctly");
+                    //alert(err)
+                    console.log(err);
+                });
+            }
+        }
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 140
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 141
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 142
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 143
+            },
+            __self: this
+        }, "Payment Gateway ")), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 146
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 147
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "name",
+            placeholder: "Enter Name",
+            fieldValue: "Name",
+            value: this.state.name,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 148
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "email",
+            placeholder: "Enter email",
+            fieldValue: "email",
+            value: this.state.email,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 155
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "mobile",
+            placeholder: "mobile",
+            fieldValue: "mobile",
+            type: "number",
+            value: this.state.mobile,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 162
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "cvs",
+            placeholder: "Enter cvv",
+            fieldValue: "cvv",
+            value: this.state.cvs,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 170
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "cardNumber",
+            placeholder: "cardNumber",
+            fieldValue: "cardNumber",
+            value: this.state.cardNumber,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 177
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            readonly: true,
+            name: "amount",
+            fieldValue: "Amount",
+            placeholder: "Please Select the User Type amount will Auto select",
+            value: this.state.amount,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 184
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 194
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 195
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 196
+            },
+            __self: this
+        }, "Select the Appropriate User Type")), /*#__PURE__*/ _reactDefault.default.createElement(_reactSelectDefault.default, {
+            onChange: this.handlerChange,
+            options: this.state.selectedOption,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 200
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 205
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 206
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-danger",
+            value: "Pay",
+            onsubmit: this.onSubmit,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\PaymentComponent\\paymentForm.js",
+                lineNumber: 208
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = PaymentForm;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

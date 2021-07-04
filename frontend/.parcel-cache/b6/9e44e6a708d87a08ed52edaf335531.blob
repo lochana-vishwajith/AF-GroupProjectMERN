@@ -1,0 +1,133 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _downloadTemplateCss = require("./downloadTemplate.css");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _header = require("../HeaderComponent/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class downloadTemplate extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            templates: []
+        };
+    }
+    componentDidMount() {
+        if (this.props.match.params.type === "research") _axiosDefault.default.get(`http://localhost:5000/researchTemplate`).then((res)=>{
+            console.log(res.data);
+            this.setState({
+                templates: res.data
+            });
+        });
+        else if (this.props.match.params.type === "workshop") _axiosDefault.default.get(`http://localhost:5000/workshopTemplate`).then((res)=>{
+            console.log(res.data);
+            this.setState({
+                templates: res.data
+            });
+        });
+    }
+    render() {
+        const { templates  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                lineNumber: 30
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                lineNumber: 31
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                lineNumber: 32
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                lineNumber: 34
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                lineNumber: 35
+            },
+            __self: this
+        }), templates.map((details)=>/*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "shadow p-5 mb-5 bg-gray rounded",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                    lineNumber: 37
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "downloadOutter",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                    lineNumber: 38
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                    lineNumber: 39
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                    lineNumber: 40
+                },
+                __self: this
+            }, details.templateTitle), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                    lineNumber: 41
+                },
+                __self: this
+            }, details.specialNotes)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                    lineNumber: 43
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: details.templateFile,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                    lineNumber: 44
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("i", {
+                className: "fas fa-file-download fa-3x",
+                id: "acc-icon",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TemplateRWDownloadComponent\\downloadTemplate.js",
+                    lineNumber: 45
+                },
+                __self: this
+            })))))
+        ))));
+    }
+}
+exports.default = downloadTemplate;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

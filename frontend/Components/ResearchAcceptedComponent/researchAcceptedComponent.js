@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Button from "../ButtonComponent/buttonComponent";
-import RHeader from '../ResearcherHeader/header';
+import RHeader from "../ResearcherHeader/header";
 import axios from "axios";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 const initialState = {
   researchTitle: "",
@@ -103,9 +104,11 @@ export default class researchAcceptedComponent extends Component {
                                   <button
                                     type="button"
                                     className="btn btn-danger btn-rounded btn-sm my-0"
-                                    onClick={() =>
-                                      this.approveResearch(item._id, true)
-                                    }
+                                    onClick={() => {
+                                      // this.approveResearch(item._id, true);
+                                      sessionStorage.setItem("Rid", item._id);
+                                      window.location = "/pay";
+                                    }}
                                   >
                                     Pay
                                   </button>

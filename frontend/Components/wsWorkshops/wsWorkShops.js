@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import WHeader from '../WorkShopHeader/workshopHeader'
+import WHeader from "../WorkShopHeader/workshopHeader";
 class wsWorkshops extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +27,7 @@ class wsWorkshops extends React.Component {
       .delete(`http://localhost:5000/workshops/deletews/${e}`)
       .then((response) => {
         alert("Workshop Deleted !");
+        window.location = "/workshops";
       })
       .catch((error) => {
         alert("Error - Workshop didnt deleted !");
@@ -42,57 +43,57 @@ class wsWorkshops extends React.Component {
   render() {
     return (
       <div>
-      <WHeader/>
-      <div className="container">
-        <h1 style={{ color: "blue" }}>Workshops</h1>
-        <br />
-        <br />
+        <WHeader />
+        <div className="container">
+          <h1 style={{ color: "blue" }}>Workshops</h1>
+          <br />
+          <br />
 
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Workshop Name</th>
-              <th scope="col">Date</th>
-              <th scope="col">Workshop Description</th>
-              <th scope="col">Presentor Name</th>
-              <th scope="col">Presentor Description</th>
-            </tr>
-          </thead>
-
-          {this.state.workshops.map((workshop, index) => (
-            <tbody key={index}>
+          <table class="table">
+            <thead>
               <tr>
-                <th scope="row">{workshop.wsName}</th>
-                <td>{workshop.wsDate}</td>
-                <td>{workshop.wsDescription}</td>
-                <td>{workshop.wsPresentorName}</td>
-                <td>{workshop.wsPresentorDescription}</td>
-                <td>
-                  {" "}
-                  <button
-                    href="#"
-                    className="btn btn-danger"
-                    onClick={this.deleteWorkshop.bind(this, workshop._id)}
-                  >
-                    Delete
-                  </button>
-                </td>
-                <td>
-                  {" "}
-                  <a
-                    style={{ float: "right" }}
-                    //href="updateworkshop"
-                    className="btn btn-primary"
-                    onClick={(e) => this.updateWorkshop(e, workshop._id)}
-                  >
-                    Update
-                  </a>
-                </td>
+                <th scope="col">Workshop Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Workshop Description</th>
+                <th scope="col">Presentor Name</th>
+                <th scope="col">Presentor Description</th>
               </tr>
-            </tbody>
-          ))}
-        </table>
-      </div>
+            </thead>
+
+            {this.state.workshops.map((workshop, index) => (
+              <tbody key={index}>
+                <tr>
+                  <th scope="row">{workshop.wsName}</th>
+                  <td>{workshop.wsDate}</td>
+                  <td>{workshop.wsDescription}</td>
+                  <td>{workshop.wsPresentorName}</td>
+                  <td>{workshop.wsPresentorDescription}</td>
+                  <td>
+                    {" "}
+                    <button
+                      href="#"
+                      className="btn btn-danger"
+                      onClick={this.deleteWorkshop.bind(this, workshop._id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                  <td>
+                    {" "}
+                    <a
+                      style={{ float: "right" }}
+                      //href="updateworkshop"
+                      className="btn btn-primary"
+                      onClick={(e) => this.updateWorkshop(e, workshop._id)}
+                    >
+                      Update
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            ))}
+          </table>
+        </div>
       </div>
     );
   }

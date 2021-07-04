@@ -5,7 +5,6 @@ import Button from "../ButtonComponent/buttonComponent";
 
 export default class updateProfile extends Component{
     constructor(props) {
-        localStorage.getItem('')
         super(props);
         this.state ={
             id:'',
@@ -30,7 +29,7 @@ export default class updateProfile extends Component{
     componentDidMount() {
 
 
-        const accessToken = localStorage.getItem('token');
+        const accessToken = sessionStorage.getItem('token');
         axios.interceptors.request.use(
             config =>{
                 config.headers.authorization =`${accessToken}`
@@ -60,9 +59,6 @@ export default class updateProfile extends Component{
             description,
             awards} =this.state
 
-        alert(linkedIn+
-            description+
-            awards)
         const post={
             linkedIn,
             description,
@@ -72,6 +68,7 @@ export default class updateProfile extends Component{
             .put(`http://localhost:5000/Users/updateUser/`,post)
             .then(res=>{
                 alert('details update Success');
+                window.location='/profile'
             })
             .catch((err)=>{
                 alert('An error occurred')

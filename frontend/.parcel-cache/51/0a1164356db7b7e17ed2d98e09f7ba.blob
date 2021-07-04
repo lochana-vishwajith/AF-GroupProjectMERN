@@ -1,0 +1,55 @@
+"use strict";
+var __extends = this && this.__extends || function() {
+    var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || ({
+            __proto__: []
+        }) instanceof Array && function(d1, b1) {
+            d1.__proto__ = b1;
+        } || function(d1, b1) {
+            for(var p in b1)if (Object.prototype.hasOwnProperty.call(b1, p)) d1[p] = b1[p];
+        };
+        return extendStatics(d, b);
+    };
+    return function(d, b) {
+        if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.AnimationFrameAction = void 0;
+var AsyncAction_1 = require("./AsyncAction");
+var animationFrameProvider_1 = require("./animationFrameProvider");
+var AnimationFrameAction1 = function(_super) {
+    __extends(AnimationFrameAction2, _super);
+    function AnimationFrameAction2(scheduler, work) {
+        var _this = _super.call(this, scheduler, work) || this;
+        _this.scheduler = scheduler;
+        _this.work = work;
+        return _this;
+    }
+    AnimationFrameAction2.prototype.requestAsyncId = function(scheduler, id, delay) {
+        if (delay === void 0) delay = 0;
+        if (delay !== null && delay > 0) return _super.prototype.requestAsyncId.call(this, scheduler, id, delay);
+        scheduler.actions.push(this);
+        return scheduler._scheduled || (scheduler._scheduled = animationFrameProvider_1.animationFrameProvider.requestAnimationFrame(function() {
+            return scheduler.flush(undefined);
+        }));
+    };
+    AnimationFrameAction2.prototype.recycleAsyncId = function(scheduler, id, delay) {
+        if (delay === void 0) delay = 0;
+        if (delay != null && delay > 0 || delay == null && this.delay > 0) return _super.prototype.recycleAsyncId.call(this, scheduler, id, delay);
+        if (scheduler.actions.length === 0) {
+            animationFrameProvider_1.animationFrameProvider.cancelAnimationFrame(id);
+            scheduler._scheduled = undefined;
+        }
+        return undefined;
+    };
+    return AnimationFrameAction2;
+}(AsyncAction_1.AsyncAction);
+exports.AnimationFrameAction = AnimationFrameAction1;

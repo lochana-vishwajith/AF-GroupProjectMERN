@@ -1,0 +1,178 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _loginCss = require("./login.css");
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _header = require("../HeaderComponent/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _footer = require("../FooterComponent/footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class login extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            email: "",
+            password: "",
+            user: "admin"
+        };
+        this.onSubmit = this.onSubmit.bind(this);
+        this.Onchange = this.Onchange.bind(this);
+        if (sessionStorage.getItem("token")) {
+            if (sessionStorage.getItem("payType") == "nawAttendee") {
+                alert("you have to pay for Registration");
+                window.location = "/pay";
+            } else {
+                alert("You have already logged in");
+                window.location = "/";
+            }
+        }
+    }
+    Onchange(e) {
+        const { name , value  } = e.target;
+        this.setState({
+            [name]: value
+        });
+    }
+    onSubmit(e) {
+        e.preventDefault();
+        const { email , password  } = this.state;
+        const user = {
+            email,
+            password
+        };
+        if (email == "editor" && password == "editor") window.location = "/displayComMembersEditor";
+        else if (email == "reviewer" && password == "reviewer") window.location = "/researchReview";
+        else if (email == "admin" && password == "admin") window.location = "/homePageAccept";
+        _axiosDefault.default.post("http://localhost:5000/Users/userLogin", user).then((res)=>{
+            sessionStorage.setItem("token", res.data.token);
+            sessionStorage.setItem("category", res.data.obj.category);
+            sessionStorage.setItem("uid", res.data.obj._id);
+            sessionStorage.setItem("pay", res.data.obj.payment);
+            alert("Logging In");
+            if (res.data.obj.category == "Attendee") {
+                if (res.data.obj.payment) window.location = "/";
+                else {
+                    alert("Please Do The Payment Before Logging");
+                    sessionStorage.setItem("unpaid", res.data.obj._id);
+                    sessionStorage.setItem("payType", "nawAttendee");
+                    window.location = "/pay";
+                }
+            } else window.location = "/";
+        }).catch((err)=>{
+            alert("Invalid UserName or Password");
+            alert(err.message);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "login-outer-box",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 81
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 82
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 84
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "loginOuterDiv",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 85
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "col-6 inner-box",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 87
+            },
+            __self: this
+        }, " Login Form "), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 88
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "email",
+            placeholder: "Enter email",
+            fieldValue: "Email",
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 89
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "password",
+            placeholder: "Enter Password",
+            fieldValue: "password",
+            type: "password",
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 96
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("center", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 103
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-primary",
+            value: "Login",
+            onsubmit: this.onSubmit,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 104
+            },
+            __self: this
+        }))))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "footer-box",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\LoginComponents\\login.js",
+                lineNumber: 114
+            },
+            __self: this
+        }))));
+    }
+}
+exports.default = login;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

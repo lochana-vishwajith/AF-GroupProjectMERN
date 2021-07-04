@@ -1,0 +1,14 @@
+.addTemplateDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+}
+.templateInnerDive {
+  max-width: 500px;
+}
+.rImg {
+  width: 150px;
+}
+.rImgP {
+  width: 160px;
+}

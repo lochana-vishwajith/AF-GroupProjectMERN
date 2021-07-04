@@ -1,0 +1,40 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+const button = ({ type , classname , value , onsubmit  })=>{
+    return(/*#__PURE__*/ _reactDefault.default.createElement("button", {
+        type: type,
+        className: classname,
+        onClick: onsubmit,
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ButtonComponent\\buttonComponent.js",
+            lineNumber: 6
+        },
+        __self: undefined
+    }, value));
+};
+_c = button;
+button.prototype = {
+    type: _propTypesDefault.default.string.isRequired,
+    classname: _propTypesDefault.default.string.isRequired,
+    value: _propTypesDefault.default.string.isRequired,
+    onsubmit: _propTypesDefault.default.func
+};
+exports.default = button;
+var _c;
+$RefreshReg$(_c, "button");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

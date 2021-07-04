@@ -17,6 +17,7 @@ export default class displayComitteeMember extends Component {
       this.setState({ members: res.data });
     });
   }
+
   render() {
     const { members } = this.state;
     return (

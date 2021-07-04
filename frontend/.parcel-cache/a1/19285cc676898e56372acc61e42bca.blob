@@ -1,0 +1,922 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _headerCss = require("./header.css");
+var _reactRouterDom = require("react-router-dom");
+const RenderMenu = ()=>{
+    if (!sessionStorage.getItem("token")) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "header-img",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 8
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("nav", {
+        className: "navbar navbar-expand-lg",
+        id: "header",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 9
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "container-fluid",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 10
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        className: "navbar-brand",
+        to: "/",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 11
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+        src: "https://firebasestorage.googleapis.com/v0/b/icaf-storage-c23a0.appspot.com/o/ProfilePics%2F1625309578593_MicrosoftTeams-image.png?alt=media&token=83190b54-d46d-475f-82fc-b31bfb78fa8b",
+        className: "logoImg",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 12
+        },
+        __self: undefined
+    })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        className: "navbar-toggler",
+        type: "button",
+        "data-bs-toggle": "collapse",
+        "data-bs-target": "#navbarNav",
+        "aria-controls": "navbarNav",
+        "aria-expanded": "false",
+        "aria-label": "Toggle navigation",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 17
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+        className: "navbar-toggler-icon",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 26
+        },
+        __self: undefined
+    })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "collapse navbar-collapse",
+        id: "navbarNav",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 28
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+        className: "navbar-nav",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 29
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+        className: "nav-item",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 30
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        className: "nav-link",
+        "aria-current": "page",
+        to: "/",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 31
+        },
+        __self: undefined
+    }, "Home")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+        className: "nav-item",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 35
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        className: "nav-link",
+        to: "/getWorkshopusers",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 36
+        },
+        __self: undefined
+    }, "Key Notes")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+        className: "nav-item",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 41
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        className: "nav-link",
+        to: "/displayComMembers",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 42
+        },
+        __self: undefined
+    }, "Committe Members")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+        className: "nav-item",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 47
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        className: "nav-link",
+        to: "/login",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 48
+        },
+        __self: undefined
+    }, "Login")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+        className: "nav-item",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 52
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+        className: "nav-link",
+        to: "/chooseReg",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+            lineNumber: 53
+        },
+        __self: undefined
+    }, "Registration"))))))));
+    else {
+        if (sessionStorage.getItem("category") == "Researcher") return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "header-img",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 66
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("nav", {
+            className: "navbar navbar-expand-lg",
+            id: "header",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 67
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container-fluid",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 68
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "navbar-brand",
+            to: "/",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 69
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+            src: "https://firebasestorage.googleapis.com/v0/b/icaf-storage-c23a0.appspot.com/o/ProfilePics%2F1625309578593_MicrosoftTeams-image.png?alt=media&token=83190b54-d46d-475f-82fc-b31bfb78fa8b",
+            className: "logoImg",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 70
+            },
+            __self: undefined
+        })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "navbar-toggler",
+            type: "button",
+            "data-bs-toggle": "collapse",
+            "data-bs-target": "#navbarNav",
+            "aria-controls": "navbarNav",
+            "aria-expanded": "false",
+            "aria-label": "Toggle navigation",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 75
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "navbar-toggler-icon",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 84
+            },
+            __self: undefined
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "collapse navbar-collapse",
+            id: "navbarNav",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 86
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            className: "navbar-nav",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 87
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 88
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            "aria-current": "page",
+            to: "/",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 89
+            },
+            __self: undefined
+        }, "Home")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 94
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/displayComMembers",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 95
+            },
+            __self: undefined
+        }, "Committe Members")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 100
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/final-workshops",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 101
+            },
+            __self: undefined
+        }, "WorkShops")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 106
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/getWorkshopusers",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 107
+            },
+            __self: undefined
+        }, "Key Notes")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 111
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/profile",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 112
+            },
+            __self: undefined
+        }, "Profile")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 117
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/displayTemplate",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 118
+            },
+            __self: undefined
+        }, "Template Download")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            id: "logout",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 122
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 123
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("i", {
+            className: "fas fa-sign-out-alt",
+            id: "logoutEditor",
+            onClick: ()=>{
+                sessionStorage.clear();
+                window.location = "/";
+            },
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 124
+            },
+            __self: undefined
+        })))))))));
+        else if (sessionStorage.getItem("category") == "WorkshopConductor") return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "header-img",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 142
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("nav", {
+            className: "navbar navbar-expand-lg",
+            id: "header",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 143
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container-fluid",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 144
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "navbar-brand",
+            to: "/",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 145
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+            src: "https://firebasestorage.googleapis.com/v0/b/icaf-storage-c23a0.appspot.com/o/ProfilePics%2F1625309578593_MicrosoftTeams-image.png?alt=media&token=83190b54-d46d-475f-82fc-b31bfb78fa8b",
+            className: "logoImg",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 146
+            },
+            __self: undefined
+        })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "navbar-toggler",
+            type: "button",
+            "data-bs-toggle": "collapse",
+            "data-bs-target": "#navbarNav",
+            "aria-controls": "navbarNav",
+            "aria-expanded": "false",
+            "aria-label": "Toggle navigation",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 151
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "navbar-toggler-icon",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 160
+            },
+            __self: undefined
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "collapse navbar-collapse",
+            id: "navbarNav",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 162
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            className: "navbar-nav",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 163
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 164
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            "aria-current": "page",
+            to: "/",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 165
+            },
+            __self: undefined
+        }, "Home")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 170
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/displayComMembers",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 171
+            },
+            __self: undefined
+        }, "Committe Members")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 176
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/final-workshops",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 177
+            },
+            __self: undefined
+        }, "WorkShops")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 182
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/getWorkshopusers",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 183
+            },
+            __self: undefined
+        }, "Key Notes")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 187
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/profile",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 188
+            },
+            __self: undefined
+        }, "Profile")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 193
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/displayTemplate",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 194
+            },
+            __self: undefined
+        }, "Template Download")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            id: "logout",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 198
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            className: "nav-link",
+            to: "/",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 199
+            },
+            __self: undefined
+        }, /*#__PURE__*/ _reactDefault.default.createElement("i", {
+            className: "fas fa-sign-out-alt",
+            id: "logoutEditor",
+            onClick: ()=>{
+                sessionStorage.clear();
+                window.location = "/";
+            },
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 200
+            },
+            __self: undefined
+        })))))))));
+        else if (sessionStorage.getItem("category") == "Attendee") {
+            if (sessionStorage.getItem("pay")) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "header-img",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 219
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("nav", {
+                className: "navbar navbar-expand-lg",
+                id: "header",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 220
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "container-fluid",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 221
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "navbar-brand",
+                to: "/",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 222
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+                src: "https://firebasestorage.googleapis.com/v0/b/icaf-storage-c23a0.appspot.com/o/ProfilePics%2F1625309578593_MicrosoftTeams-image.png?alt=media&token=83190b54-d46d-475f-82fc-b31bfb78fa8b",
+                className: "logoImg",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 223
+                },
+                __self: undefined
+            })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                className: "navbar-toggler",
+                type: "button",
+                "data-bs-toggle": "collapse",
+                "data-bs-target": "#navbarNav",
+                "aria-controls": "navbarNav",
+                "aria-expanded": "false",
+                "aria-label": "Toggle navigation",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 228
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+                className: "navbar-toggler-icon",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 237
+                },
+                __self: undefined
+            })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "collapse navbar-collapse",
+                id: "navbarNav",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 239
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+                className: "navbar-nav",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 240
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 241
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                "aria-current": "page",
+                to: "/",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 242
+                },
+                __self: undefined
+            }, "Home")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 247
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                to: "/displayComMembers",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 248
+                },
+                __self: undefined
+            }, "Committe Members")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 253
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                to: "/final-workshops",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 254
+                },
+                __self: undefined
+            }, "WorkShops")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 259
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                to: "/getWorkshopusers",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 260
+                },
+                __self: undefined
+            }, "Key Notes")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 264
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                to: "/research4client",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 265
+                },
+                __self: undefined
+            }, "Research-Papers")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                id: "logout",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 270
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                to: "/",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 271
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("i", {
+                className: "fas fa-sign-out-alt",
+                id: "logoutEditor",
+                onClick: ()=>{
+                    sessionStorage.clear();
+                    window.location = "/";
+                },
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 272
+                },
+                __self: undefined
+            })))))))));
+            else return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "header-img",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 290
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("nav", {
+                className: "navbar navbar-expand-lg",
+                id: "header",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 291
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "container-fluid",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 292
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "navbar-brand",
+                to: "/",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 293
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+                src: "https://firebasestorage.googleapis.com/v0/b/icaf-storage-c23a0.appspot.com/o/ProfilePics%2F1625309578593_MicrosoftTeams-image.png?alt=media&token=83190b54-d46d-475f-82fc-b31bfb78fa8b",
+                className: "logoImg",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 294
+                },
+                __self: undefined
+            })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                className: "navbar-toggler",
+                type: "button",
+                "data-bs-toggle": "collapse",
+                "data-bs-target": "#navbarNav",
+                "aria-controls": "navbarNav",
+                "aria-expanded": "false",
+                "aria-label": "Toggle navigation",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 299
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+                className: "navbar-toggler-icon",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 308
+                },
+                __self: undefined
+            })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "collapse navbar-collapse",
+                id: "navbarNav",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 310
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+                className: "navbar-nav",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 311
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 312
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                "aria-current": "page",
+                to: "/",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 313
+                },
+                __self: undefined
+            }, "Home")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 317
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                to: "/getWorkshopusers",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 318
+                },
+                __self: undefined
+            }, "Key Notes")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 323
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                to: "/displayComMembers",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 324
+                },
+                __self: undefined
+            }, "Committe Members")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 329
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                to: "/chooseReg",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 330
+                },
+                __self: undefined
+            }, "Registration")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+                className: "nav-item",
+                id: "logout",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 334
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                className: "nav-link",
+                to: "/",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 335
+                },
+                __self: undefined
+            }, /*#__PURE__*/ _reactDefault.default.createElement("i", {
+                className: "fas fa-sign-out-alt",
+                id: "logoutEditor",
+                onClick: ()=>{
+                    sessionStorage.clear();
+                    window.location = "/";
+                },
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                    lineNumber: 336
+                },
+                __self: undefined
+            })))))))));
+        }
+    }
+};
+_c = RenderMenu;
+class header extends _react.Component {
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 360
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(RenderMenu, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HeaderComponent\\header.js",
+                lineNumber: 361
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = header;
+var _c;
+$RefreshReg$(_c, "RenderMenu");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

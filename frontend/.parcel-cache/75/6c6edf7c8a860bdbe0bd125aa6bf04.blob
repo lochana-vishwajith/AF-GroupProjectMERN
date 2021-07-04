@@ -1,0 +1,192 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _regCardsCss = require("./RegCards.css");
+var _header = require("../HeaderComponent/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _footer = require("../FooterComponent/footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
+class RegistrationCards extends _react.Component {
+    constructor(props){
+        super(props);
+        if (sessionStorage.getItem("token")) {
+            alert("You have already registered");
+            window.location = "/";
+        }
+        this.userRegistration = this.userRegistration.bind(this);
+        this.attendeeRegistration = this.attendeeRegistration.bind(this);
+    }
+    userRegistration(e) {
+        e.preventDefault();
+        window.location = "/uRegistration";
+    }
+    attendeeRegistration(e) {
+        e.preventDefault();
+        window.location = "/AttendeeReg";
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 32
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 33
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 34
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "header-name-box",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 38
+            },
+            __self: this
+        }, "Registration According to Your Needs")), /*#__PURE__*/ _reactDefault.default.createElement("center", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 40
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card reg-card",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 41
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "reg-outer-box",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 42
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "reg-inner-box",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 43
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-header",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 44
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "img1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 45
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 47
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 48
+            },
+            __self: this
+        }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam atque consequuntur cum cumque eveniet fugiat ipsam magnam neque, nihil nobis non quas quia repellendus saepe sit, temporibus voluptas. Repellendus."), /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-secondary btn-lg btn-block",
+            value: "Host Registration",
+            onsubmit: this.userRegistration,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 54
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "reg-inner-box",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 62
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-header",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 63
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "img2",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 64
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 66
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 67
+            },
+            __self: this
+        }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur culpa cum debitis earum eligendi et, facere hic in maiores molestiae numquam officia provident rerum sapiente soluta velit vitae voluptate."), /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-secondary btn-lg btn-block",
+            value: "Attendee Registration",
+            onsubmit: this.attendeeRegistration,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrationCards\\RegistrationCards.js",
+                lineNumber: 73
+            },
+            __self: this
+        })))))))));
+    }
+}
+exports.default = RegistrationCards;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

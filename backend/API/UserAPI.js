@@ -10,7 +10,7 @@ const Adduser = async (req,res)=>{
     const userObj= new User(userOb)
     try {
         const result = await userObj.save()
-            console.log(result);
+           // console.log(result);
             res.send(result);
         
        
@@ -56,7 +56,7 @@ const UpdateUser =async (req,res)=>{
 
 
 const attendeePayment =async (req,res)=>{
-    console.log('update called');
+  //  console.log('update called');
 
     const id = req.params.id;
 
@@ -118,7 +118,7 @@ const getUserDetails = async(req,res)=>{
     try {
         const user = req.user
         const UserOb = await User.findById({_id: user._id})
-            .select({name: 1, email: 1, mobile: 1, linkedIn: 1, description: 1, awards: 1,category:1})
+            .select({name: 1, email: 1, mobile: 1, linkedIn: 1, description: 1, awards: 1,category:1,profilePic:1})
         res.send(UserOb);
     }catch (e) {
         console.log(e.message);

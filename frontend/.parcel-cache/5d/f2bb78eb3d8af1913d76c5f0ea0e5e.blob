@@ -1,0 +1,67 @@
+"use strict";
+var __extends = this && this.__extends || function() {
+    var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || ({
+            __proto__: []
+        }) instanceof Array && function(d1, b1) {
+            d1.__proto__ = b1;
+        } || function(d1, b1) {
+            for(var p in b1)if (Object.prototype.hasOwnProperty.call(b1, p)) d1[p] = b1[p];
+        };
+        return extendStatics(d, b);
+    };
+    return function(d, b) {
+        if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.OperatorSubscriber = void 0;
+var Subscriber_1 = require("../Subscriber");
+var OperatorSubscriber1 = function(_super) {
+    __extends(OperatorSubscriber2, _super);
+    function OperatorSubscriber2(destination, onNext, onComplete, onError, onFinalize) {
+        var _this = _super.call(this, destination) || this;
+        _this.onFinalize = onFinalize;
+        _this._next = onNext ? function(value) {
+            try {
+                onNext(value);
+            } catch (err) {
+                destination.error(err);
+            }
+        } : _super.prototype._next;
+        _this._error = onError ? function(err) {
+            try {
+                onError(err);
+            } catch (err1) {
+                destination.error(err1);
+            } finally{
+                this.unsubscribe();
+            }
+        } : _super.prototype._error;
+        _this._complete = onComplete ? function() {
+            try {
+                onComplete();
+            } catch (err) {
+                destination.error(err);
+            } finally{
+                this.unsubscribe();
+            }
+        } : _super.prototype._complete;
+        return _this;
+    }
+    OperatorSubscriber2.prototype.unsubscribe = function() {
+        var _a;
+        var closed = this.closed;
+        _super.prototype.unsubscribe.call(this);
+        !closed && ((_a = this.onFinalize) === null || _a === void 0 || _a.call(this));
+    };
+    return OperatorSubscriber2;
+}(Subscriber_1.Subscriber);
+exports.OperatorSubscriber = OperatorSubscriber1;

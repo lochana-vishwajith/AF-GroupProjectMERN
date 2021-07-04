@@ -26,7 +26,7 @@ export default class researchRemoveComponent extends Component {
 
     //const id = "60d82ca3b881ad7a64ce04f2";
     axios
-      .get(`http://localhost:5000/researchDetails/userResearch/${localStorage.getItem('uid')}`)
+      .get(`http://localhost:5000/researchDetails/userResearch/${sessionStorage.getItem('uid')}`)
       .then((response) => {
         console.log("Response data: ", response.data.data.research);
         this.setState({ dataArray: response.data.data.research });

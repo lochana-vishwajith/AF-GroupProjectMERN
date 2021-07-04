@@ -1,0 +1,231 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _displayMembersForEditorCss = require("./displayMembersForEditor.css");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _header = require("../HeaderComponent/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _reactRouterDom = require("react-router-dom");
+var _editorHeader = require("../EditorHeader/editorHeader");
+var _editorHeaderDefault = parcelHelpers.interopDefault(_editorHeader);
+class displayMembersForEditor extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            members: []
+        };
+        this.deleteEntry = this.deleteEntry.bind(this);
+    }
+    deleteEntry(id) {
+        alert("method called" + id);
+        _axiosDefault.default.delete(`http://localhost:5000/memberDetails/${id}`).then(()=>{
+            alert("Entry is Deleted");
+            window.location.reload();
+        }).catch((err)=>{
+            alert("Entry is not Deleted");
+            console.log(err);
+        });
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/memberDetails/").then((res)=>{
+            console.log(res.data);
+            this.setState({
+                members: res.data
+            });
+        });
+    }
+    render() {
+        const { members  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                lineNumber: 40
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_editorHeaderDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                lineNumber: 41
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                lineNumber: 42
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                lineNumber: 43
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("b", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                lineNumber: 44
+            },
+            __self: this
+        }, "Comittee Members")), /*#__PURE__*/ _reactDefault.default.createElement("hr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                lineNumber: 46
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "comitteeDiv",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                lineNumber: 47
+            },
+            __self: this
+        }, members.map((details)=>/*#__PURE__*/ _reactDefault.default.createElement("div", {
+                key: details._id,
+                className: "innerDiv",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 49
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("center", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 50
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+                src: details.imageUrl,
+                className: "image",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 51
+                },
+                __self: this
+            }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 52
+                },
+                __self: this
+            }), /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 53
+                },
+                __self: this
+            }, details.memberName), /*#__PURE__*/ _reactDefault.default.createElement("h6", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 54
+                },
+                __self: this
+            }, details.memberPosition), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 55
+                },
+                __self: this
+            }, details.memberQualification), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 56
+                },
+                __self: this
+            }, details.memberNotes), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "btnDiv",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 57
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 58
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+                to: `/updatemember/${details._id}`,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 59
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+                type: "submit",
+                classname: "btn btn-outline-primary",
+                value: "Edit",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 60
+                },
+                __self: this
+            }))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 67
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+                type: "submit",
+                classname: "btn btn-outline-danger",
+                value: "Delete",
+                onsubmit: ()=>this.deleteEntry(details._id)
+                ,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 68
+                },
+                __self: this
+            }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 74
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                    lineNumber: 76
+                },
+                __self: this
+            }))))
+        ), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                lineNumber: 81
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                lineNumber: 83
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\displayMembersForEditor\\displayMembersForEditor.js",
+                lineNumber: 85
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = displayMembersForEditor;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

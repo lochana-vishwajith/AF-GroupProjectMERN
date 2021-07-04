@@ -1,0 +1,292 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _applyHomeContentCss = require("./ApplyHomeContent.css");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _editorHeader = require("../EditorHeader/editorHeader");
+var _editorHeaderDefault = parcelHelpers.interopDefault(_editorHeader);
+class ApplyHomeContent extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            content: [],
+            currentContent: "",
+            contentId: "",
+            current: false
+        };
+        this.setAsHomePage = this.setAsHomePage.bind(this);
+        this.removeHomeStyle = this.removeHomeStyle.bind(this);
+    }
+    componentDidMount() {
+        _axiosDefault.default.get(`http://localhost:5000/homePage/accepted`).then((res)=>{
+            console.log(res.data);
+            this.setState({
+                content: res.data
+            });
+        });
+        _axiosDefault.default.get(`http://localhost:5000/content/`).then((res)=>{
+            console.log(res.data[0]);
+            if (res.data[0]) {
+                this.setState({
+                    currentContent: res.data[0].contentId
+                });
+                this.setState({
+                    contentId: res.data[0]._id
+                });
+                this.setState({
+                    current: true
+                });
+            }
+        });
+    }
+    setAsHomePage(Id) {
+        const homeCurrent = {
+            contentId: Id
+        };
+        if (this.state.current) alert("Please Remove the Existing Style For Home Page");
+        else _axiosDefault.default.post(`http://localhost:5000/content/`, homeCurrent).then(()=>{
+            alert("Style Is Added");
+            window.location.reload();
+        }).catch((err)=>{
+            alert("Style Is Not Added");
+            console.log(err);
+        });
+    }
+    removeHomeStyle(Id) {
+        alert(Id);
+        _axiosDefault.default.delete(`http://localhost:5000/content/${Id}`).then(()=>{
+            alert("Style Is Deleted");
+            this.setState({
+                current: false
+            });
+            window.location.reload();
+        }).catch((err)=>{
+            alert("Style Is Not Deleted");
+            console.log(err);
+        });
+    }
+    render() {
+        const { content , current , currentContent  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 73
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_editorHeaderDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 74
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 76
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 77
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 78
+            },
+            __self: this
+        }, "Current Home Page Style"), /*#__PURE__*/ _reactDefault.default.createElement("hr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 79
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 80
+            },
+            __self: this
+        }), current ? /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 82
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 83
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            className: "card-title",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 84
+            },
+            __self: this
+        }, currentContent.confName), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "card-title",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 85
+            },
+            __self: this
+        }, currentContent.dateOfConf), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "card-title",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, currentContent.venueOfConf), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 88
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-outline-danger",
+            value: "Remove Home Page Content",
+            onsubmit: ()=>this.removeHomeStyle(this.state.contentId)
+            ,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 89
+            },
+            __self: this
+        })))) : /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 101
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 102
+            },
+            __self: this
+        }, "No Style Is Added For Home Page"))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 106
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 107
+            },
+            __self: this
+        }, "Available Home Page Style"), /*#__PURE__*/ _reactDefault.default.createElement("hr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 108
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                lineNumber: 109
+            },
+            __self: this
+        }), content.map((homeContent)=>/*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "card",
+                key: homeContent._id,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                    lineNumber: 111
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+                src: homeContent.imageUrl,
+                className: "card-img-top",
+                alt: "...",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                    lineNumber: 112
+                },
+                __self: this
+            }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "card-body",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                    lineNumber: 117
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+                className: "card-title",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                    lineNumber: 118
+                },
+                __self: this
+            }, homeContent.confName), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                className: "card-title",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                    lineNumber: 119
+                },
+                __self: this
+            }, homeContent.dateOfConf), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                className: "card-title",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                    lineNumber: 120
+                },
+                __self: this
+            }, homeContent.venueOfConf), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                className: "card-text",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                    lineNumber: 121
+                },
+                __self: this
+            }, homeContent.confDesc), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                    lineNumber: 122
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+                type: "submit",
+                classname: "btn btn-outline-success",
+                value: "Set As Home Page Content",
+                onsubmit: ()=>this.setAsHomePage(homeContent._id)
+                ,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ApplyHomeContentComponent\\ApplyHomeContent.js",
+                    lineNumber: 123
+                },
+                __self: this
+            }))))
+        )))));
+    }
+}
+exports.default = ApplyHomeContent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

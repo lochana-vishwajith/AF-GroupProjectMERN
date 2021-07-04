@@ -1,0 +1,285 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _researchHeader = require("../ReviewerHeaderComponent/ResearchHeader");
+var _researchHeaderDefault = parcelHelpers.interopDefault(_researchHeader);
+class wsAdminWorkshop extends _reactDefault.default.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            workshops: [],
+            comment: ""
+        };
+        this.deleteWorkshop = this.deleteWorkshop.bind(this);
+        this.onchange = this.onchange.bind(this);
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/workshops/getws").then((response)=>{
+            this.setState({
+                workshops: response.data
+            });
+        //console.log("Data - ", response.data);
+        }).catch((error)=>{
+            console.log("Error - ", error.message);
+        });
+    }
+    deleteWorkshop(e) {
+        _axiosDefault.default.delete(`http://localhost:5000/workshops/deletews/${e}`).then((response)=>{
+            alert("Workshop Deleted !");
+            window.location = "/admin-workshops";
+        }).catch((error)=>{
+            alert("Error - Workshop didnt deleted !");
+            console.log("Error -", error);
+        });
+    }
+    updateWorkshop(e, wsID) {
+        // console.log(e);
+        window.location = `/updateworkshop/${wsID}`;
+    }
+    approveWorkshop(e, wsID) {
+        // console.log("wsID - ", wsID);
+        console.log(e);
+        e.target.disabled = true;
+        const data = {
+            status: true,
+            comment: this.state.comment
+        };
+        _axiosDefault.default.put(`http://localhost:5000/workshops/updatews/${wsID}`, data).then((response)=>{
+            alert("Workshop Approved");
+            window.location = "/admin-workshops";
+        }).catch((error)=>{
+            alert("Workshop didn't approved !");
+            console.log(error.message);
+        });
+    }
+    onchange(e) {
+        this.setState({
+            comment: e.target.value
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 74
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_researchHeaderDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 75
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 76
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            style: {
+                color: "blue"
+            },
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 77
+            },
+            __self: this
+        }, "Admin page workshops"), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 78
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 79
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("table", {
+            className: "table",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 81
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 82
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 83
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 84
+            },
+            __self: this
+        }, "Workshop Name"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 85
+            },
+            __self: this
+        }, "Date"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 86
+            },
+            __self: this
+        }, "Workshop Description"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 87
+            },
+            __self: this
+        }, "Presentor Name"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            scope: "col",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                lineNumber: 88
+            },
+            __self: this
+        }, "Presentor Description"))), this.state.workshops.map((workshop, index)=>/*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+                key: index,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 93
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 94
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+                scope: "row",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 95
+                },
+                __self: this
+            }, workshop.wsName), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 96
+                },
+                __self: this
+            }, workshop.wsDate), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 97
+                },
+                __self: this
+            }, workshop.wsDescription), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 98
+                },
+                __self: this
+            }, workshop.wsPresentorName), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 99
+                },
+                __self: this
+            }, workshop.wsPresentorDescription), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 100
+                },
+                __self: this
+            }, " ", /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                href: "#",
+                className: "btn btn-danger",
+                onClick: this.deleteWorkshop.bind(this, workshop._id),
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 102
+                },
+                __self: this
+            }, "Delete")), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 110
+                },
+                __self: this
+            }, " ", /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                //href="updateworkshop"
+                className: "btn btn-primary",
+                onClick: (e)=>this.updateWorkshop(e, workshop._id)
+                ,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 112
+                },
+                __self: this
+            }, "Update")), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 121
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+                disabled: workshop.comment == null ? false : true,
+                type: "text",
+                name: "comment",
+                className: "form-control",
+                placeholder: "Enter a comment",
+                onChange: this.onchange,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 122
+                },
+                __self: this
+            })), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 132
+                },
+                __self: this
+            }, " ", /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                disabled: workshop.status == true ? this.disabled = true : this.disabled = false,
+                className: "btn btn-success",
+                onClick: (e)=>{
+                    this.approveWorkshop(e, workshop._id);
+                //this.disabled = true;
+                },
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsWorkshops\\wsAdminWorkshop.js",
+                    lineNumber: 134
+                },
+                __self: this
+            }, "Approve"))))
+        )))));
+    }
+}
+exports.default = wsAdminWorkshop;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

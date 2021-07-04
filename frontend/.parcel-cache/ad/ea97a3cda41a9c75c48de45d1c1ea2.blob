@@ -1,0 +1,292 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _firebase = require("firebase");
+var _firebaseDefault = parcelHelpers.interopDefault(_firebase);
+var _index = require("../../firebase/index");
+var _workshopHeaderJs = require("../WorkShopHeader/workshopHeader.js");
+var _workshopHeaderJsDefault = parcelHelpers.interopDefault(_workshopHeaderJs);
+const initialState = {
+    wsName: "",
+    wsDate: "",
+    wsDescription: "",
+    wsPresentorName: "",
+    wsPresentorDetails: "",
+    fileURL: "",
+    files: ""
+};
+class wsAddWorkshop extends _reactDefault.default.Component {
+    constructor(props){
+        super(props);
+        this.state = initialState;
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.tUpload = this.tUpload.bind(this);
+        //this.handlerChangeFiles = this.handlerChangeFiles.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    //  this.handleSave = this.handleSave.bind(this);
+    // this.saveDetails = this.saveDetails.bind(this);
+    }
+    onChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    tUpload(e) {
+        e.preventDefault();
+        const { files  } = this.state;
+        if (!files) alert("Please Select a File First");
+        else {
+            const date = Date.now();
+            const uploadTask = _index.storage.ref(`WorkshopTemplate/${date}_${files.name}`).put(files);
+            uploadTask.on("state_changed", (snapshot)=>{
+            }, (error)=>{
+                console.log(error);
+            }, ()=>{
+                _index.storage.ref("WorkshopTemplate").child(`${date}_${files.name}`).getDownloadURL().then((url)=>{
+                    this.setState({
+                        fileURL: url
+                    });
+                    alert("File has uploaded");
+                    setTimeout(()=>{
+                        this.onSubmit();
+                    }, 3000);
+                });
+            });
+        }
+    }
+    onSubmit() {
+        let workshop = {
+            wsName: this.state.wsName,
+            wsDate: this.state.wsDate,
+            wsDescription: this.state.wsDescription,
+            wsPresentorName: this.state.wsPresentorName,
+            wsPresentorDescription: this.state.wsPresentorDetails,
+            url: this.state.fileURL
+        };
+        const id = sessionStorage.getItem("uid");
+        _axiosDefault.default.post(`http://localhost:5000/workshops/postws/${id}`, workshop).then((response)=>{
+            alert("Workshop inserted sucessfully !");
+            window.location = "/workshops";
+        }).catch((error)=>{
+            alert("ERROR - Data didnt send");
+            console.log("Error - ", error.message);
+        });
+    }
+    handleChange(e) {
+        if (e.target.files[0]) this.setState({
+            [e.target.name]: e.target.files[0]
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 101
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_workshopHeaderJsDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 102
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 103
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 104
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 105
+            },
+            __self: this
+        }, "Add AddWorkshop"), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            onSubmit: this.tUpload,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 107
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 108
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "form-label",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 109
+            },
+            __self: this
+        }, "Workshop Name"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            className: "form-control",
+            name: "wsName",
+            onChange: this.onChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 110
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 118
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "form-label",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 119
+            },
+            __self: this
+        }, "Date"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "date",
+            className: "form-control",
+            name: "wsDate",
+            onChange: this.onChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 120
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 128
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "form-label",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 129
+            },
+            __self: this
+        }, "Description"), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            type: "text",
+            className: "form-control",
+            name: "wsDescription",
+            onChange: this.onChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 130
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 138
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "form-label",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 139
+            },
+            __self: this
+        }, "Workshop Presentor"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            className: "form-control",
+            name: "wsPresentorName",
+            onChange: this.onChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 140
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 148
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "form-label",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 149
+            },
+            __self: this
+        }, "Presentor's Description"), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            type: "text",
+            className: "form-control",
+            name: "wsPresentorDetails",
+            onChange: this.onChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 150
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 159
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "form-label",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 160
+            },
+            __self: this
+        }, "template"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "file",
+            className: "form-control",
+            id: "template",
+            name: "files",
+            onChange: this.handleChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 161
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "submit",
+            className: "btn btn-primary",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\wsAddWorkshop\\wsAddWorkshop.js",
+                lineNumber: 170
+            },
+            __self: this
+        }, "Submit")))));
+    }
+}
+exports.default = wsAddWorkshop;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

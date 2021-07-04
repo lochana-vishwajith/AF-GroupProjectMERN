@@ -1,6 +1,15 @@
 import React from "react";
 import axios from "axios";
-import WHeader from '../WorkShopHeader/workshopHeader'
+import WorkHeader from "../WorkShopHeader/workshopHeader";
+import WHeader from "../ReviewerHeaderComponent/ResearchHeader";
+
+const RenderHeader = () => {
+  if (sessionStorage.getItem("category") == "WorkshopConductor") {
+    return <WorkHeader />;
+  } else {
+    return <WHeader />;
+  }
+};
 
 const initialState = {
   wsName: "",
@@ -49,67 +58,67 @@ class wsUpdateWorkshop extends React.Component {
   render() {
     return (
       <div>
-      <WHeader/>
-      <div className="container">
-        <h1>Update Workshop</h1>
-        <br /> <br />
-        <p>Enter the data that you want to update</p>
-        <form onSubmit={this.onSubmit}>
-          <div className="mb-3">
-            <label className="form-label">Workshop Name</label>
-            <input
-              type="text"
-              className="form-control"
-              name="wsName"
-              onChange={this.onChange}
-            />
-          </div>
+        <RenderHeader />
+        <div className="container">
+          <h1>Update Workshop</h1>
+          <br /> <br />
+          <p>Enter the data that you want to update</p>
+          <form onSubmit={this.onSubmit}>
+            <div className="mb-3">
+              <label className="form-label">Workshop Name</label>
+              <input
+                type="text"
+                className="form-control"
+                name="wsName"
+                onChange={this.onChange}
+              />
+            </div>
 
-          <div className="mb-3">
-            <label className="form-label">Date</label>
-            <input
-              type="date"
-              className="form-control"
-              name="wsDate"
-              onChange={this.onChange}
-            />
-          </div>
+            <div className="mb-3">
+              <label className="form-label">Date</label>
+              <input
+                type="date"
+                className="form-control"
+                name="wsDate"
+                onChange={this.onChange}
+              />
+            </div>
 
-          <div className="mb-3">
-            <label className="form-label">Description</label>
-            <textarea
-              type="text"
-              className="form-control"
-              name="wsDescription"
-              onChange={this.onChange}
-            />
-          </div>
+            <div className="mb-3">
+              <label className="form-label">Description</label>
+              <textarea
+                type="text"
+                className="form-control"
+                name="wsDescription"
+                onChange={this.onChange}
+              />
+            </div>
 
-          <div className="mb-3">
-            <label className="form-label">Workshop Presentor</label>
-            <input
-              type="text"
-              className="form-control"
-              name="wsPresentorName"
-              onChange={this.onChange}
-            />
-          </div>
+            <div className="mb-3">
+              <label className="form-label">Workshop Presentor</label>
+              <input
+                type="text"
+                className="form-control"
+                name="wsPresentorName"
+                onChange={this.onChange}
+              />
+            </div>
 
-          <div className="mb-3">
-            <label className="form-label">Presentor's Description</label>
-            <textarea
-              type="text"
-              className="form-control"
-              name="wsPresentorDetails"
-              onChange={this.onChange}
-            />
-          </div>
+            <div className="mb-3">
+              <label className="form-label">Presentor's Description</label>
+              <textarea
+                type="text"
+                className="form-control"
+                name="wsPresentorDetails"
+                onChange={this.onChange}
+              />
+            </div>
 
-          <button type="submit" className="btn btn-primary">
-            Update
-          </button>
-        </form>
-      </div>
+            <button type="submit" className="btn btn-primary">
+              Update
+            </button>
+          </form>
+        </div>
       </div>
     );
   }

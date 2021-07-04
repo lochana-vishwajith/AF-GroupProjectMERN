@@ -1,0 +1,189 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _workshopConductorCss = require("./workshopConductor.css");
+var _header = require("../HeaderComponent/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+class workshopHosters extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            users: [],
+            wUsers: []
+        };
+    }
+    componentDidMount() {
+        _axiosDefault.default.get("http://localhost:5000/Users/getUsers").then((res)=>{
+            const arr = [];
+            res.data.map((r)=>{
+                if (r.category == "WorkshopConductor") {
+                    arr.push(r);
+                    this.setState({
+                        wUsers: arr
+                    });
+                }
+            });
+        }).catch((err)=>{
+            console.log(err);
+        });
+    }
+    render() {
+        const { wUsers  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                lineNumber: 33
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                lineNumber: 34
+            },
+            __self: this
+        }), this.state.wUsers ? /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "header-box",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                lineNumber: 38
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                lineNumber: 39
+            },
+            __self: this
+        }, "Workshop Hoster")), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "hosterDiv",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                lineNumber: 42
+            },
+            __self: this
+        }, this.state.wUsers.map((c)=>{
+            return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "shadow-lg p-3 mb-5 bg-white rounded",
+                key: c._id,
+                id: "outerCard",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 45
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "box-view",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 50
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 51
+                },
+                __self: this
+            }, c.name), /*#__PURE__*/ _reactDefault.default.createElement("center", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 52
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                className: "pro-pic",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 53
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+                src: c.profilePic,
+                className: "img-thumbnail",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 54
+                },
+                __self: this
+            }))), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 57
+                },
+                __self: this
+            }), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 59
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("b", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 60
+                },
+                __self: this
+            }, c.description), " "), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 62
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("b", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 63
+                },
+                __self: this
+            }, c.awards), " "), /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                href: c.linkedIn,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 65
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("i", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                    lineNumber: 66
+                },
+                __self: this
+            }, "click here to Linked In")))));
+        })))) : /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\getWorkshopHostersComponent\\workshopHosters.js",
+                lineNumber: 76
+            },
+            __self: this
+        }, "Sorry there is no Workshop Conductors")));
+    }
+}
+exports.default = workshopHosters;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,407 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _registrationCss = require("./registration.css");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _header = require("../HeaderComponent/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactSelect = require("react-select");
+var _reactSelectDefault = parcelHelpers.interopDefault(_reactSelect);
+var _firebase = require("../../firebase");
+var _myContext = require("../../ContextAPI/MyContext");
+var _myContextDefault = parcelHelpers.interopDefault(_myContext);
+const options = [
+    {
+        value: "WorkshopConductor",
+        label: "WorkshopConductor"
+    },
+    {
+        value: "Researcher",
+        label: "Researcher"
+    }, 
+];
+class registration extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name: "",
+            email: "",
+            password: "",
+            mobile: "",
+            linkedIn: "",
+            category: "",
+            description: "",
+            awards: "",
+            profilePic: "",
+            image: "",
+            selectedOption: options
+        };
+        this.handlerChange = this.handlerChange.bind(this);
+        this.Onchange = this.Onchange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.picUpload = this.picUpload.bind(this);
+        this.upload = this.upload.bind(this);
+    }
+    handlerChange(e) {
+        this.setState({
+            category: e.value
+        });
+    }
+    Onchange(e) {
+        const { name , value  } = e.target;
+        this.setState({
+            [name]: value
+        });
+    }
+    async onSubmit(e) {
+        e.preventDefault();
+        const { name , email , password , mobile , linkedIn , category , description , awards , profilePic ,  } = this.state;
+        const post = {
+            name,
+            email,
+            password,
+            mobile,
+            linkedIn,
+            category,
+            description,
+            awards,
+            profilePic
+        };
+        _axiosDefault.default.post("http://localhost:5000/Users/addUsers", post).then((res)=>{
+            // console.log('awaaaa');
+            alert("Registration Completed please LogIn to continue");
+            window.location = "/login";
+        }).catch((err)=>{
+            alert("An error occurred");
+            alert(err.message);
+        });
+    }
+    picUpload(e) {
+        e.preventDefault();
+        if (e.target.files[0]) this.setState({
+            [e.target.name]: e.target.files[0]
+        });
+    }
+    upload(e) {
+        alert("picture is uploading please wait a minute");
+        e.preventDefault();
+        const { image  } = this.state;
+        if (!image) alert("Please Select a Picture First");
+        else {
+            const { image: image1  } = this.state;
+            const date = Date.now();
+            const uploadTask = _firebase.storage.ref(`ProfilePics/${date}_${image1.name}`).put(image1);
+            uploadTask.on("state_changed", (snapshot)=>{
+            }, (error)=>{
+                console.log(error);
+            }, ()=>{
+                _firebase.storage.ref("ProfilePics").child(`${date}_${image1.name}`).getDownloadURL().then((url)=>{
+                    console.log(url);
+                    this.setState({
+                        profilePic: url
+                    });
+                    alert("Picture has uploaded");
+                });
+            });
+        }
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 130
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 131
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 133
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 134
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 135
+            },
+            __self: this
+        }, "Registration Page "), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "name",
+            placeholder: "Enter Name",
+            fieldValue: "Name",
+            value: this.state.name,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 137
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "email",
+            placeholder: "Enter Email",
+            fieldValue: "Email",
+            value: this.state.email,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 144
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "mobile",
+            type: "number",
+            placeholder: "Enter Mobile Number",
+            fieldValue: "Mobile",
+            value: this.state.mobile,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 152
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "password",
+            type: "password",
+            placeholder: "Enter Password",
+            fieldValue: "password",
+            value: this.state.password,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 160
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "linkedIn",
+            placeholder: "Paste Link LinkedIn",
+            fieldValue: "LinkedIn",
+            value: this.state.linkedIn,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 169
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group mb-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 177
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 178
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 179
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 180
+            },
+            __self: this
+        }, "Description About You")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            placeholder: "Enter Description About You",
+            id: "description",
+            name: "description",
+            rows: "6",
+            cols: "178",
+            onChange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 184
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 194
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group mb-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 195
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 196
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 197
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 198
+            },
+            __self: this
+        }, "Awards")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            placeholder: "Enter Your Achievements",
+            id: "awards",
+            name: "awards",
+            rows: "6",
+            cols: "178",
+            onChange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 202
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 212
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 214
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 215
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 216
+            },
+            __self: this
+        }, "Select the Appropriate User Type")), /*#__PURE__*/ _reactDefault.default.createElement(_reactSelectDefault.default, {
+            placeholder: "Select User Type",
+            onChange: this.handlerChange,
+            options: this.state.selectedOption,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 220
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 226
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 227
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group mb-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 229
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "file",
+            placeholder: "Please Enter Member Image",
+            name: "image",
+            onchange: this.picUpload,
+            id: "suerImage",
+            fieldValue: "User Image",
+            classname: "form-control",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 230
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-append ",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 239
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-outline-secondary",
+            value: "UploadImage",
+            onsubmit: this.upload,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 240
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 249
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-secondary",
+            value: "submit",
+            onsubmit: this.onSubmit,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\RegistrartionComponent\\registration.js",
+                lineNumber: 251
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = registration;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

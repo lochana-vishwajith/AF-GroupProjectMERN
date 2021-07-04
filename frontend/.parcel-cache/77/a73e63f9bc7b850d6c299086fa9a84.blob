@@ -1,0 +1,21 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "storage", ()=>storage
+);
+parcelHelpers.export(exports, "default", ()=>_appDefault.default
+);
+var _app = require("firebase/app");
+var _appDefault = parcelHelpers.interopDefault(_app);
+var _storage = require("firebase/storage");
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyDfwvMHYrsp2uGp1wHVHPWXIWW8r8e_jTA",
+    authDomain: "icaf-storage-c23a0.firebaseapp.com",
+    projectId: "icaf-storage-c23a0",
+    storageBucket: "icaf-storage-c23a0.appspot.com",
+    messagingSenderId: "854087654213",
+    appId: "1:854087654213:web:606bcdf35d59e8166ffc2c",
+    measurementId: "G-C5MVXGNQKF"
+};
+_appDefault.default.initializeApp(firebaseConfig);
+const storage = _appDefault.default.storage();

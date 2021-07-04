@@ -1,0 +1,261 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _moment = require("moment");
+var _momentDefault = parcelHelpers.interopDefault(_moment);
+var _header = require("../ResearcherHeader/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+const initialState = {
+    researchTitle: "",
+    researchField: "",
+    researchYear: "",
+    coAuthors: "",
+    fileURL: "",
+    dataArray: []
+};
+class researchRemoveComponent extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = initialState;
+        this.onRemove = this.onRemove.bind(this);
+    }
+    componentDidMount() {
+        //const id = "60d82ca3b881ad7a64ce04f2";
+        _axiosDefault.default.get(`http://localhost:5000/researchDetails/userResearch/${sessionStorage.getItem('uid')}`).then((response)=>{
+            console.log("Response data: ", response.data.data.research);
+            this.setState({
+                dataArray: response.data.data.research
+            });
+        }).catch((error)=>{
+            console.log(error.message);
+        });
+    }
+    onRemove(id) {
+        console.log(id);
+        _axiosDefault.default.delete(`http://localhost:5000/researchDetails/deleteResearchDetail/${id}`).then((response)=>{
+            alert("Deleted Successfully!");
+            console.log("Deleted Successfully!");
+        }).catch((error)=>{
+            console.log(error.message);
+        });
+    }
+    navigateToEditPage(e, researchID) {
+        window.location = `/researchEditById/${researchID}`;
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 61
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 62
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 63
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 64
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            className: "card-header text-center font-weight-bold text-uppercase py-4",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 65
+            },
+            __self: this
+        }, "Edit Research Paper Details"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card mb-3 p-3",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 69
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "card-body",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 70
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            id: "table",
+            className: "table-editable",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 71
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("table", {
+            className: "table table-bordered table-responsive-md table-striped text-center",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 72
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 73
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 74
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            className: "text-center",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 75
+            },
+            __self: this
+        }, "Research Title"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            className: "text-center",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 76
+            },
+            __self: this
+        }, "Research Field"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            className: "text-center",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 77
+            },
+            __self: this
+        }, "Research Year"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            className: "text-center",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                lineNumber: 78
+            },
+            __self: this
+        }, "Research Author"))), this.state.dataArray.length > 0 && this.state.dataArray.map((item, index)=>/*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+                key: index,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 83
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 84
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                className: "pt-3-half",
+                name: "researchTitle",
+                onChange: this.onChange,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 85
+                },
+                __self: this
+            }, item.researchTitle), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                className: "pt-3-half",
+                name: "researchField",
+                onChange: this.onChange,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 92
+                },
+                __self: this
+            }, item.researchField), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                className: "pt-3-half",
+                name: "researchYear",
+                onChange: this.onChange,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 99
+                },
+                __self: this
+            }, _momentDefault.default(item.researchYear).format("YYYY")), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                className: "pt-3-half",
+                name: "coAuthors",
+                onChange: this.onChange,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 106
+                },
+                __self: this
+            }, item.coAuthors), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 113
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+                className: "table-remove",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 114
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+                type: "button",
+                className: "btn btn-primary btn-rounded btn-sm my-0",
+                onClick: (e)=>this.navigateToEditPage(e, item._id)
+                ,
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 115
+                },
+                __self: this
+            }, "Edit"))), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 126
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+                type: "submit",
+                classname: "btn btn-danger btn-rounded btn-sm my-0",
+                onsubmit: ()=>{
+                    this.onRemove(item._id);
+                },
+                value: "Delete",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchRemoveComponent.js",
+                    lineNumber: 127
+                },
+                __self: this
+            }))))
+        )))))))));
+    }
+}
+exports.default = researchRemoveComponent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

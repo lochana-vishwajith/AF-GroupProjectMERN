@@ -25,14 +25,21 @@ export default class header extends Component {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link" aria-current="page" to="/researchAdd">
+                  <Link
+                    className="nav-link"
+                    aria-current="page"
+                    to="/researchAdd"
+                  >
                     Add Research
                   </Link>
                 </li>
-             
+
                 <li className="nav-item">
-                  <Link className="nav-link" to={`/researchEdit/${localStorage.getItem('uid')}`}>
-                   View Researches
+                  <Link
+                    className="nav-link"
+                    to={`/researchEdit/${sessionStorage.getItem("uid")}`}
+                  >
+                    View Researches
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -40,7 +47,18 @@ export default class header extends Component {
                     Accepted Researches
                   </Link>
                 </li>
-                
+
+                <li className="nav-item">
+                  <Link className="nav-link" aria-current="page" to="/profile">
+                    My profile
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" aria-current="page" to="/">
+                    home
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

@@ -71,13 +71,16 @@ export default class displayMembersForEditor extends Component {
                         value={"Delete"}
                         onsubmit={() => this.deleteEntry(details._id)}
                       />
+                      <br />
                     </div>
                     <br />
                   </div>
                 </center>
               </div>
             ))}
+            <br />
           </div>
+          <br />
         </div>
         <br />
       </div>

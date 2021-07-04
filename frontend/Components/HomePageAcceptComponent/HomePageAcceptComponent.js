@@ -2,6 +2,7 @@ import "./HomePageAcceptComponent.css";
 import React, { Component } from "react";
 import axios from "axios";
 import Button from "../ButtonComponent/buttonComponent";
+import Adminheader from "../AdminHeader/adminheader";
 
 export default class HomePageAcceptComponent extends Component {
   constructor(props) {
@@ -40,41 +41,51 @@ export default class HomePageAcceptComponent extends Component {
   render() {
     const { home } = this.state;
     return (
-      <div className="container">
-        {home.map((homeContent) => (
-          <div className="card" key={homeContent._id}>
-            <img
-              src={homeContent.imageUrl}
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">{homeContent.confName}</h5>
-              <p className="card-title">{homeContent.dateOfConf}</p>
-              <p className="card-title">{homeContent.venueOfConf}</p>
-              <p className="card-text">{homeContent.confDesc}</p>
-              <div className="btnHome">
-                <div>
-                  <Button
-                    type={"submit"}
-                    classname={"btn btn-outline-success"}
-                    value={"Accept"}
-                    onsubmit={() => this.acceptContent(homeContent._id)}
-                  />
-                </div>
-                <div>
-                  <Button
-                    type={"submit"}
-                    classname={"btn btn-outline-danger"}
-                    value={"Decline"}
-                    onsubmit={() => this.declinecontent(homeContent._id)}
-                  />
+      <div>
+        <Adminheader />
+        <br />
+        <br />
+        <div className="container">
+          {home.map((homeContent) => (
+            <div
+              className="shadow-lg p-3 mb-5 bg-white rounded"
+              key={homeContent._id}
+            >
+              <center>
+                <img
+                  src={homeContent.imageUrl}
+                  className="card-img-top"
+                  alt="..."
+                />
+              </center>
+              <div className="card-body">
+                <h5 className="card-title">{homeContent.confName}</h5>
+                <p className="card-title">{homeContent.dateOfConf}</p>
+                <p className="card-title">{homeContent.venueOfConf}</p>
+                <p className="card-text">{homeContent.confDesc}</p>
+                <div className="btnHome">
+                  <div>
+                    <Button
+                      type={"submit"}
+                      classname={"btn btn-outline-success"}
+                      value={"Accept"}
+                      onsubmit={() => this.acceptContent(homeContent._id)}
+                    />
+                  </div>
+                  <div>
+                    <Button
+                      type={"submit"}
+                      classname={"btn btn-outline-danger"}
+                      value={"Decline"}
+                      onsubmit={() => this.declinecontent(homeContent._id)}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-        ;
+          ))}
+          ;
+        </div>
       </div>
     );
   }

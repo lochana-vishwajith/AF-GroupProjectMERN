@@ -1,0 +1,273 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _updateMemberCss = require("./updateMember.css");
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _editorHeader = require("../EditorHeader/editorHeader");
+var _editorHeaderDefault = parcelHelpers.interopDefault(_editorHeader);
+class updateMember extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            member: "",
+            memberName: "",
+            memberPosition: "",
+            memberQualification: "",
+            memberNotes: "",
+            imageUrl: ""
+        };
+        this.saveDetails = this.saveDetails.bind(this);
+        this.handlerChange = this.handlerChange.bind(this);
+    }
+    saveDetails() {
+        const { memberName , memberPosition , memberQualification , memberNotes , imageUrl ,  } = this.state;
+        const details = {
+            memberName,
+            memberPosition,
+            memberQualification,
+            memberNotes,
+            imageUrl
+        };
+        _axiosDefault.default.put(`http://localhost:5000/memberDetails/${this.props.match.params.id}`, details).then(()=>{
+            alert("Details Are Updated");
+        }).catch((err)=>{
+            console.log(err);
+            alert("Details Are Not Updated");
+        });
+    }
+    handlerChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    componentDidMount() {
+        _axiosDefault.default.get(`http://localhost:5000/memberDetails/${this.props.match.params.id}`).then((res)=>{
+            console.log(res.data.detail);
+            this.setState({
+                member: res.data.detail
+            });
+            this.setState({
+                memberName: res.data.detail.memberName
+            });
+            this.setState({
+                memberPosition: res.data.detail.memberPosition
+            });
+            this.setState({
+                memberNotes: res.data.detail.memberNotes
+            });
+            this.setState({
+                memberQualification: res.data.detail.memberQualification
+            });
+            this.setState({
+                imageUrl: res.data.detail.imageUrl
+            });
+        }).catch((err)=>{
+            console.log(err);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 75
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_editorHeaderDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 76
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 77
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 78
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h2", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 79
+            },
+            __self: this
+        }, "Update Committee Member Details"), /*#__PURE__*/ _reactDefault.default.createElement("hr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 80
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 81
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("center", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 82
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+            src: this.state.imageUrl,
+            className: "image",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 83
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 85
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            placeholder: "Please Enter Member Name",
+            name: "memberName",
+            value: this.state.memberName,
+            onchange: this.handlerChange,
+            id: "memberName",
+            fieldValue: "Member Name",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 86
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            placeholder: "Please Enter Member Position",
+            name: "memberPosition",
+            value: this.state.memberPosition,
+            onchange: this.handlerChange,
+            id: "memberPosition",
+            fieldValue: "Member Position",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 95
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 104
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 105
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 106
+            },
+            __self: this
+        }, "Qualifications of the Member")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "memberQualification",
+            name: "memberQualification",
+            rows: "6",
+            cols: "151",
+            value: this.state.memberQualification,
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 110
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 119
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 120
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 121
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 122
+            },
+            __self: this
+        }, "Additional Notes of the Member")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "memberNotes",
+            name: "memberNotes",
+            value: this.state.memberNotes,
+            rows: "6",
+            cols: "151",
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 126
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 136
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "button",
+            classname: "btn btn-outline-dark",
+            value: "Save Member Details",
+            onsubmit: this.saveDetails,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 137
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\updateComitteeMembersComponent\\updateMember.js",
+                lineNumber: 144
+            },
+            __self: this
+        }))));
+    }
+}
+exports.default = updateMember;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

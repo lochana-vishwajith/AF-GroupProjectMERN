@@ -1,0 +1,276 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _addCommiteeMemberCss = require("./addCommiteeMember.css");
+var _header = require("../HeaderComponent/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _firebase = require("../../firebase");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _editorHeader = require("../EditorHeader/editorHeader");
+var _editorHeaderDefault = parcelHelpers.interopDefault(_editorHeader);
+class addCommiteeMembers extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            memberName: "",
+            memberPosition: "",
+            memberQualification: "",
+            memberNotes: "",
+            memberImage: "",
+            imageUrl: ""
+        };
+        this.handlerChange = this.handlerChange.bind(this);
+        this.handlerChangeFiles = this.handlerChangeFiles.bind(this);
+        this.saveDetails = this.saveDetails.bind(this);
+        this.SubmitDetails = this.SubmitDetails.bind(this);
+    }
+    handlerChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    handlerChangeFiles(e) {
+        if (e.target.files[0]) this.setState({
+            [e.target.name]: e.target.files[0]
+        });
+    }
+    saveDetails() {
+        const { memberImage  } = this.state;
+        const date = Date.now();
+        const uploadTask = _firebase.storage.ref(`images/${date}_${memberImage.name}`).put(memberImage);
+        uploadTask.on("state_changed", (snapshot)=>{
+        }, (error)=>{
+            console.log(error);
+        }, ()=>{
+            _firebase.storage.ref("images").child(`${date}_${memberImage.name}`).getDownloadURL().then((url)=>{
+                console.log(url);
+                this.setState({
+                    imageUrl: url
+                });
+                setTimeout(this.SubmitDetails(), 3000);
+            });
+        });
+    }
+    SubmitDetails() {
+        const { memberName , memberPosition , memberQualification , memberNotes , imageUrl ,  } = this.state;
+        const details = {
+            memberName,
+            memberPosition,
+            memberQualification,
+            memberNotes,
+            imageUrl
+        };
+        _axiosDefault.default.post("http://localhost:5000/memberDetails/", details).then(()=>{
+            alert("Details of Committee Member are Added Successfully");
+            window.location = "/displayComMembersEditor";
+        }).catch((err)=>{
+            alert("Error in Submiiting.Please Check Again Before Submitting...!");
+            console.log(err);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 94
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_editorHeaderDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 95
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 96
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 97
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("h2", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 98
+            },
+            __self: this
+        }, "Add Committee Members"), /*#__PURE__*/ _reactDefault.default.createElement("hr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 99
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 100
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 101
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            placeholder: "Please Enter Member Name",
+            name: "memberName",
+            onchange: this.handlerChange,
+            id: "memberName",
+            fieldValue: "Member Name",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 102
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            placeholder: "Please Enter Member Position",
+            name: "memberPosition",
+            onchange: this.handlerChange,
+            id: "memberPosition",
+            fieldValue: "Member Position",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 110
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 118
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 119
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 120
+            },
+            __self: this
+        }, "Qualifications of the Member")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "memberQualification",
+            name: "memberQualification",
+            rows: "6",
+            cols: "151",
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 124
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 132
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 133
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 134
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 135
+            },
+            __self: this
+        }, "Additional Notes of the Member")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "memberNotes",
+            name: "memberNotes",
+            rows: "6",
+            cols: "151",
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 139
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "file",
+            placeholder: "Please Enter Member Image",
+            name: "memberImage",
+            onchange: this.handlerChangeFiles,
+            id: "memberImage",
+            fieldValue: "Member Image",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 147
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 155
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "button",
+            classname: "btn btn-outline-dark",
+            value: "Save Member Details",
+            onsubmit: this.saveDetails,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 156
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 164
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddCommiteeMembers\\addCommiteeMembers.js",
+                lineNumber: 165
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = addCommiteeMembers;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,4 +1,4 @@
-import RHeader from '../ResearcherHeader/header';
+import RHeader from "../ResearcherHeader/header";
 import React, { Component } from "react";
 import TextInput from "../TextInputComponent/textInputComponent";
 import Button from "../ButtonComponent/buttonComponent";
@@ -74,6 +74,7 @@ export default class researchAddComponent extends Component {
       coAuthors: this.state.coAuthors,
       fileURL: this.state.fileURL,
       isAccepted: "false",
+      isPayed: "false",
     };
 
     console.log("DataSet", dataSet);
@@ -81,7 +82,9 @@ export default class researchAddComponent extends Component {
 
     axios
       .post(
-        `http://localhost:5000/researchDetails/addResearchDetails/${localStorage.getItem('uid')}`,
+        `http://localhost:5000/researchDetails/addResearchDetails/${sessionStorage.getItem(
+          "uid"
+        )}`,
         dataSet
       )
       .then((response) => {

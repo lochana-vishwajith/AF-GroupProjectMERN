@@ -1,0 +1,380 @@
+var helpers = require("./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
+var _appCss = require("./App.css");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _home = require("./Components/HomePageComponent/home");
+var _homeDefault = parcelHelpers.interopDefault(_home);
+var _homePageConfig = require("./Components/HomePageConfigComponent/homePageConfig");
+var _homePageConfigDefault = parcelHelpers.interopDefault(_homePageConfig);
+var _footer = require("./Components/FooterComponent/footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
+var _addCommiteeMembers = require("./Components/AddCommiteeMembers/addCommiteeMembers");
+var _addCommiteeMembersDefault = parcelHelpers.interopDefault(_addCommiteeMembers);
+var _displayComitteeMember = require("./Components/DisplayComitteeMember/displayComitteeMember");
+var _displayComitteeMemberDefault = parcelHelpers.interopDefault(_displayComitteeMember);
+var _displayMembersForEditor = require("./Components/displayMembersForEditor/displayMembersForEditor");
+var _displayMembersForEditorDefault = parcelHelpers.interopDefault(_displayMembersForEditor);
+var _updateMember = require("./Components/updateComitteeMembersComponent/updateMember");
+var _updateMemberDefault = parcelHelpers.interopDefault(_updateMember);
+var _homePageAcceptComponent = require("./Components/HomePageAcceptComponent/HomePageAcceptComponent");
+var _homePageAcceptComponentDefault = parcelHelpers.interopDefault(_homePageAcceptComponent);
+var _applyHomeContent = require("./Components/ApplyHomeContentComponent/ApplyHomeContent");
+var _applyHomeContentDefault = parcelHelpers.interopDefault(_applyHomeContent);
+var _addTemplate = require("./Components/AddTemplateComponent/AddTemplate");
+var _addTemplateDefault = parcelHelpers.interopDefault(_addTemplate);
+var _displayTemplate = require("./Components/DisplayTemplateComponent/displayTemplate");
+var _displayTemplateDefault = parcelHelpers.interopDefault(_displayTemplate);
+var _downloadTemplate = require("./Components/TemplateRWDownloadComponent/downloadTemplate");
+var _downloadTemplateDefault = parcelHelpers.interopDefault(_downloadTemplate);
+var _registration = require("./Components/RegistrartionComponent/registration");
+var _registrationDefault = parcelHelpers.interopDefault(_registration);
+var _attendeeRegistration = require("./Components/AttendeeRegistrationComponent/attendeeRegistration");
+var _attendeeRegistrationDefault = parcelHelpers.interopDefault(_attendeeRegistration);
+var _researchAddComponent = require("./Components/ResearchDetailsAddComponent/researchAddComponent");
+var _researchAddComponentDefault = parcelHelpers.interopDefault(_researchAddComponent);
+var _researchRemoveComponent = require("./Components/ResearchEditComponent/researchRemoveComponent");
+var _researchRemoveComponentDefault = parcelHelpers.interopDefault(_researchRemoveComponent);
+var _researchEditComponent = require("./Components/ResearchEditComponent/researchEditComponent");
+var _researchEditComponentDefault = parcelHelpers.interopDefault(_researchEditComponent);
+var _researchReviewerComponent = require("./Components/ResearchReviewerComponent/researchReviewerComponent");
+var _researchReviewerComponentDefault = parcelHelpers.interopDefault(_researchReviewerComponent);
+var _researchAcceptedComponent = require("./Components/ResearchAcceptedComponent/researchAcceptedComponent");
+var _researchAcceptedComponentDefault = parcelHelpers.interopDefault(_researchAcceptedComponent);
+var _notificationViewComponent = require("./Components/NotificationViewComponent/notificationViewComponent");
+var _notificationViewComponentDefault = parcelHelpers.interopDefault(_notificationViewComponent);
+var _login = require("./Components/LoginComponents/login");
+var _loginDefault = parcelHelpers.interopDefault(_login);
+var _myProfile = require("./Components/MyProfileComponents/myProfile");
+var _myProfileDefault = parcelHelpers.interopDefault(_myProfile);
+var _updateProfile = require("./Components/updateProfileComponent/updateProfile");
+var _updateProfileDefault = parcelHelpers.interopDefault(_updateProfile);
+var _paymentForm = require("./Components/PaymentComponent/paymentForm");
+var _paymentFormDefault = parcelHelpers.interopDefault(_paymentForm);
+var _registrationCards = require("./Components/RegistrationCards/RegistrationCards");
+var _registrationCardsDefault = parcelHelpers.interopDefault(_registrationCards);
+var _workshopHosters = require("./Components/getWorkshopHostersComponent/workshopHosters");
+var _workshopHostersDefault = parcelHelpers.interopDefault(_workshopHosters);
+var _wsAddWorkshop = require("./Components/wsAddWorkshop/wsAddWorkshop");
+var _wsAddWorkshopDefault = parcelHelpers.interopDefault(_wsAddWorkshop);
+var _wsUpdateWorkshop = require("./Components/wsUpdateWorkshop/wsUpdateWorkshop");
+var _wsUpdateWorkshopDefault = parcelHelpers.interopDefault(_wsUpdateWorkshop);
+var _wsWorkShops = require("./Components/wsWorkshops/wsWorkShops");
+var _wsWorkShopsDefault = parcelHelpers.interopDefault(_wsWorkShops);
+var _wsAdminWorkshop = require("./Components/wsWorkshops/wsAdminWorkshop");
+var _wsAdminWorkshopDefault = parcelHelpers.interopDefault(_wsAdminWorkshop);
+var _wsFinalWorkshops = require("./Components/wsWorkshops/wsFinalWorkshops");
+var _wsFinalWorkshopsDefault = parcelHelpers.interopDefault(_wsFinalWorkshops);
+var _researchAcceptedComponent1 = require("./Components/ResearchAcceptedComponentForClient/researchAcceptedComponent");
+var _researchAcceptedComponentDefault1 = parcelHelpers.interopDefault(_researchAcceptedComponent1);
+class App extends _react.Component {
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 46
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 47
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/",
+            component: _homeDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 48
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/homePageConfig",
+            component: _homePageConfigDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 49
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/addComMembers",
+            component: _addCommiteeMembersDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 50
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/displayComMembers",
+            component: _displayComitteeMemberDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 51
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/displayComMembersEditor",
+            component: _displayMembersForEditorDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 52
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/updatemember/:id",
+            component: _updateMemberDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 53
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/AttendeeReg",
+            component: _attendeeRegistrationDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 54
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/homePageAccept",
+            component: _homePageAcceptComponentDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 55
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/homecontent",
+            component: _applyHomeContentDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 56
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/addTemplate",
+            component: _addTemplateDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 57
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/displayTemplate",
+            component: _displayTemplateDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 58
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/templatedownload/:type",
+            component: _downloadTemplateDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 59
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/uRegistration",
+            component: _registrationDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 60
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/login",
+            component: _loginDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 61
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/profile",
+            component: _myProfileDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 62
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/updateProfile",
+            component: _updateProfileDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 63
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/pay",
+            component: _paymentFormDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 64
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/chooseReg",
+            component: _registrationCardsDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 65
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/getWorkshopusers",
+            component: _workshopHostersDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 66
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/researchAdd",
+            component: _researchAddComponentDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 67
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/researchEdit/:id",
+            component: _researchRemoveComponentDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 68
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/researchReview",
+            component: _researchReviewerComponentDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 69
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/researchAccepted",
+            component: _researchAcceptedComponentDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 70
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/noti",
+            component: _notificationViewComponentDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 71
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/researchEditById/:id",
+            component: _researchEditComponentDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 72
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/addworkshop",
+            component: _wsAddWorkshopDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 73
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/workshops",
+            component: _wsWorkShopsDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 74
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/updateworkshop/:id",
+            component: _wsUpdateWorkshopDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 75
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/admin-workshops",
+            component: _wsAdminWorkshopDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 76
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/final-workshops",
+            component: _wsFinalWorkshopsDefault.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 77
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/research4client",
+            component: _researchAcceptedComponentDefault1.default,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 78
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_footerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\App.jsx",
+                lineNumber: 80
+            },
+            __self: this
+        })));
+    }
+}
+exports.default = App;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

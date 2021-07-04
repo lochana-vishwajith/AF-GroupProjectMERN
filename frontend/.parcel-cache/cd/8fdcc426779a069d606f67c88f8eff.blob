@@ -1,0 +1,68 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+const textInput = ({ type , placeholder , value , name , onchange , id , fieldValue ,  })=>{
+    return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "input-group mb-3",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TextInputComponent\\textInputComponent.js",
+            lineNumber: 14
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "input-group-prepend",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TextInputComponent\\textInputComponent.js",
+            lineNumber: 15
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+        className: "input-group-text",
+        id: "basic-addon1",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TextInputComponent\\textInputComponent.js",
+            lineNumber: 16
+        },
+        __self: undefined
+    }, fieldValue)), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+        type: type,
+        name: name,
+        value: value,
+        id: id,
+        onChange: onchange,
+        className: "form-control",
+        placeholder: placeholder,
+        "aria-label": placeholder,
+        "aria-describedby": "basic-addon1",
+        __source: {
+            fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\TextInputComponent\\textInputComponent.js",
+            lineNumber: 20
+        },
+        __self: undefined
+    })));
+};
+textInput.prototype = {
+    type: _propTypesDefault.default.string.isRequired,
+    placeholder: _propTypesDefault.default.string,
+    fieldValue: _propTypesDefault.default.string,
+    name: _propTypesDefault.default.string,
+    id: _propTypesDefault.default.string,
+    value: _propTypesDefault.default.string,
+    onchange: _propTypesDefault.default.func
+};
+exports.default = textInput;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

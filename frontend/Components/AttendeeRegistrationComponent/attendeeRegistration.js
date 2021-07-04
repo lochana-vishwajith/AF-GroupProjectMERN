@@ -39,15 +39,14 @@ export default class attendeeRegistration extends Component{
             name,email,password,mobile, category,payment
         }
         axios.post('http://localhost:5000/Users/addUsers',post)
-            .then((res) =>{ alert('hello world'+res.data.name)
+            .then((res) =>{ alert('hello'+res.data.name+'You need to pay Entry FEE')
             console.log('hello')
-                alert(res.data._id)
-                    localStorage.setItem('unpaid',res.data._id);
-                    localStorage.setItem('payType','nawAttendee')
+                    sessionStorage.setItem('unpaid',res.data._id);
+                    sessionStorage.setItem('payType','nawAttendee')
                 window.location = '/pay'
             }
             )
-            .catch((err)=>{alert(err)
+            .catch((err)=>{alert('email or Mobile number is Registered before ')
             console.log(err)}
             )
 }

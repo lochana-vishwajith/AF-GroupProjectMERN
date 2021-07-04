@@ -1,0 +1,38 @@
+"use strict";
+var __extends = this && this.__extends || function() {
+    var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || ({
+            __proto__: []
+        }) instanceof Array && function(d1, b1) {
+            d1.__proto__ = b1;
+        } || function(d1, b1) {
+            for(var p in b1)if (Object.prototype.hasOwnProperty.call(b1, p)) d1[p] = b1[p];
+        };
+        return extendStatics(d, b);
+    };
+    return function(d, b) {
+        if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Action = void 0;
+var Subscription_1 = require("../Subscription");
+var Action1 = function(_super) {
+    __extends(Action2, _super);
+    function Action2(scheduler, work) {
+        return _super.call(this) || this;
+    }
+    Action2.prototype.schedule = function(state, delay) {
+        if (delay === void 0) delay = 0;
+        return this;
+    };
+    return Action2;
+}(Subscription_1.Subscription);
+exports.Action = Action1;

@@ -1,0 +1,80 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _notificationService = require("../NotificationServiceComponent/notificationService");
+class notificationViewComponent extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            notifications: []
+        };
+    }
+    componentDidMount() {
+        this.subscription = _notificationService.notificationService.getMessage().subscribe((notification)=>{
+            if (notification) this.setState({
+                notifications: [
+                    ...this.state.notifications,
+                    notification
+                ]
+            });
+            else this.setState({
+                notifications: []
+            });
+        });
+    }
+    componentWillUnmount() {
+        this.subscription.unsubscribe();
+    }
+    render() {
+        const { notifications  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\NotificationViewComponent\\notificationViewComponent.js",
+                lineNumber: 34
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\NotificationViewComponent\\notificationViewComponent.js",
+                lineNumber: 35
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\NotificationViewComponent\\notificationViewComponent.js",
+                lineNumber: 36
+            },
+            __self: this
+        }, "Notifications"), notifications.map((notification, index)=>/*#__PURE__*/ _reactDefault.default.createElement("div", {
+                key: index,
+                className: "alert alert-success",
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\NotificationViewComponent\\notificationViewComponent.js",
+                    lineNumber: 38
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("p", {
+                __source: {
+                    fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\NotificationViewComponent\\notificationViewComponent.js",
+                    lineNumber: 39
+                },
+                __self: this
+            }, notification.text))
+        ))));
+    }
+}
+exports.default = notificationViewComponent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

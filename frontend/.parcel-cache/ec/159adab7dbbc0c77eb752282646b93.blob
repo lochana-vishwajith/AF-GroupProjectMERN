@@ -1,0 +1,176 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _header = require("../HeaderComponent/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+class attendeeRegistration extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            password: '',
+            mobile: '',
+            category: 'Attendee',
+            payment: false
+        };
+        this.onSubmit = this.onSubmit.bind(this);
+        this.handlerChange = this.handlerChange.bind(this);
+        this.Onchange = this.Onchange.bind(this);
+    }
+    handlerChange(e) {
+        this.setState({
+            category: e.value
+        });
+    }
+    Onchange(e) {
+        const { name , value  } = e.target;
+        this.setState({
+            [name]: value
+        });
+    }
+    onSubmit(e) {
+        e.preventDefault();
+        const { name , email , password , mobile , category , payment  } = this.state;
+        const post = {
+            name,
+            email,
+            password,
+            mobile,
+            category,
+            payment
+        };
+        _axiosDefault.default.post('http://localhost:5000/Users/addUsers', post).then((res)=>{
+            alert('hello' + res.data.name + 'You need to pay Entry FEE');
+            console.log('hello');
+            sessionStorage.setItem('unpaid', res.data._id);
+            sessionStorage.setItem('payType', 'nawAttendee');
+            window.location = '/pay';
+        }).catch((err)=>{
+            alert('email or Mobile number is Registered before ');
+            console.log(err);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 56
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 57
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 58
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 61
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 61
+            },
+            __self: this
+        }, "Attendee Registration")), console.log(this.state.obj + "hello world local storage"), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 63
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 65
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "name",
+            placeholder: "Enter Name",
+            fieldValue: "Name",
+            value: this.state.name,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 66
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "email",
+            placeholder: "Enter Email",
+            fieldValue: "Email",
+            value: this.state.email,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 74
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "mobile",
+            type: "number",
+            placeholder: "Enter Mobile Number",
+            fieldValue: "Mobile",
+            value: this.state.mobile,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 82
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            name: "password",
+            type: "password",
+            placeholder: "Enter Password",
+            fieldValue: "password",
+            value: this.state.password,
+            onchange: this.Onchange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 91
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-secondary",
+            value: "Proceed",
+            onsubmit: this.onSubmit,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AttendeeRegistrationComponent\\attendeeRegistration.js",
+                lineNumber: 102
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = attendeeRegistration;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

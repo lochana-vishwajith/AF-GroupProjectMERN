@@ -1,0 +1,172 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _header = require("../ResearcherHeader/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+const initialState = {
+    researchTitle: "",
+    researchField: "",
+    researchYear: "",
+    coAuthors: "",
+    fileURL: "",
+    researchPaper: ""
+};
+class researchEditComponent extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = initialState;
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+    componentDidMount() {
+        _axiosDefault.default.get(`http://localhost:5000/researchDetails/getResearch/${this.props.match.params.id}`).then((response)=>{
+            console.log(response.data.data);
+            this.setState(response.data.data);
+        }).catch((error)=>{
+            console.log(error.message);
+            alert(error.message);
+        });
+    }
+    onChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    onSubmit(e) {
+        e.preventDefault();
+        console.log(" inside submit");
+        const dataSet = {
+            researchTitle: this.state.researchTitle,
+            researchField: this.state.researchField,
+            researchYear: this.state.researchYear,
+            coAuthors: this.state.coAuthors,
+            fileURL: this.state.fileURL,
+            isAccepted: "false"
+        };
+        console.log("DataSet", dataSet);
+        _axiosDefault.default.put(`http://localhost:5000/researchDetails/editResearchDetails/${this.props.match.params.id}`, dataSet).then((response)=>{
+            alert("Research Details Updated!!!");
+        }).catch((error)=>{
+            console.log(error.message);
+            alert(error.message);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js",
+                lineNumber: 76
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js",
+                lineNumber: 77
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js",
+                lineNumber: 78
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h2", {
+            className: "mt-5 mb-5",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js",
+                lineNumber: 79
+            },
+            __self: this
+        }, "Edit Research Details "), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            onSubmit: this.onSubmit,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js",
+                lineNumber: 80
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            fieldValue: "Research Title",
+            name: "researchTitle",
+            value: this.state.researchTitle,
+            id: "researchTitle",
+            onchange: this.onChange,
+            placeholder: "Research Title",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js",
+                lineNumber: 81
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            fieldValue: "Research Field",
+            name: "researchField",
+            value: this.state.researchField,
+            id: "researchField",
+            onchange: this.onChange,
+            placeholder: "Research Field",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js",
+                lineNumber: 90
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "date",
+            fieldValue: "Research Year",
+            name: "researchYear",
+            value: this.state.researchYear,
+            id: "researchYear",
+            onchange: this.onChange,
+            placeholder: "Research Year",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js",
+                lineNumber: 99
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            fieldValue: "Research Author",
+            name: "coAuthors",
+            value: this.state.coAuthors,
+            id: "coAuthors",
+            onchange: this.onChange,
+            placeholder: "Research Author",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js",
+                lineNumber: 108
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-info",
+            //   onClick={this.onSubmit}
+            value: "Edit Details",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchEditComponent\\researchEditComponent.js",
+                lineNumber: 126
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = researchEditComponent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

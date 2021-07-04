@@ -38,7 +38,7 @@ import wsUpdateWorkshop from "./Components/wsUpdateWorkshop/wsUpdateWorkshop";
 import wsWorkshops from "./Components/wsWorkshops/wsWorkShops";
 import wsAdminWorkshop from "./Components/wsWorkshops/wsAdminWorkshop";
 import wsFinalWorkshops from "./Components/wsWorkshops/wsFinalWorkshops";
-
+import ReasearchForClinet from './Components/ResearchAcceptedComponentForClient/researchAcceptedComponent'
 
 export default class App extends Component {
     render() {
@@ -75,6 +75,7 @@ export default class App extends Component {
                     <Route path="/updateworkshop/:id" component={wsUpdateWorkshop} />
                     <Route path="/admin-workshops" component={wsAdminWorkshop} />
                     <Route path="/final-workshops" component={wsFinalWorkshops} />
+                    <Route path="/research4client" component={ReasearchForClinet} />
                 </Router>
                 <Footer/>
             </div>

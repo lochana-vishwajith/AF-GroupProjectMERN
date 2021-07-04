@@ -27,6 +27,10 @@ const researchDetailsSchema = new Schema({
     type: String,
     required: false,
   },
+  isPayed: {
+    type: Boolean,
+    required: false,
+  },
 });
 
 const researchDetails = mongoose.model(

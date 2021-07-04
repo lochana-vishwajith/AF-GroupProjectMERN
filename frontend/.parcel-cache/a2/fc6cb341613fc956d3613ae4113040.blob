@@ -1,0 +1,43 @@
+.config {
+  border: 1px;
+}
+#configImg {
+  display: none;
+  border: 1px solid gray;
+}
+
+.img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.imgName {
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  padding: 8px;
+}
+.page-name {
+  margin-top: 20px;
+}
+
+.outer-div {
+  background-color: black;
+  padding: 30px;
+}
+.conf-name {
+  color: blanchedalmond;
+}
+.dateOfConf {
+  color: darkgray;
+}
+.venueOfConf {
+  color: darkgray;
+  margin-top: -12px;
+}
+.innerGrid {
+  padding: 5px;
+}

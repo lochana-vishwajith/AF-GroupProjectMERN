@@ -1,0 +1,203 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _header = require("../ResearcherHeader/header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _index = require("../../firebase/index");
+const initialState = {
+    researchTitle: "",
+    researchField: "",
+    researchYear: "",
+    coAuthors: "",
+    fileURL: "",
+    researchPaper: ""
+};
+class researchAddComponent extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = initialState;
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.handlerChangeFiles = this.handlerChangeFiles.bind(this);
+        this.saveDetails = this.saveDetails.bind(this);
+    }
+    onChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    handlerChangeFiles(e) {
+        if (e.target.files[0]) this.setState({
+            [e.target.name]: e.target.files[0]
+        });
+    }
+    saveDetails() {
+        console.log("inside save Details");
+        const { researchPaper  } = this.state;
+        const date = Date.now();
+        const uploadTask = _index.storage.ref(`researchPapers/${date}_${researchPaper.name}`).put(researchPaper);
+        uploadTask.on("state_changed", (snapshot)=>{
+        }, (error)=>{
+            console.log(error);
+        }, ()=>{
+            _index.storage.ref("researchPapers").child(`${date}_${researchPaper.name}`).getDownloadURL().then((url)=>{
+                console.log(url);
+                this.setState({
+                    fileURL: url
+                });
+                setTimeout(this.onSubmit(), 3000);
+            });
+        });
+    }
+    onSubmit() {
+        // e.preventDefault();
+        console.log(" inside submit");
+        const dataSet = {
+            researchTitle: this.state.researchTitle,
+            researchField: this.state.researchField,
+            researchYear: this.state.researchYear,
+            coAuthors: this.state.coAuthors,
+            fileURL: this.state.fileURL,
+            isAccepted: "false",
+            isPayed: "false"
+        };
+        console.log("DataSet", dataSet);
+        //const id = "60d82ca3b881ad7a64ce04f2";
+        _axiosDefault.default.post(`http://localhost:5000/researchDetails/addResearchDetails/${sessionStorage.getItem("uid")}`, dataSet).then((response)=>{
+            alert("Research Details Added!!!");
+        }).catch((error)=>{
+            console.log(error.message);
+            alert(error.message);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 101
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 102
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 103
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h2", {
+            className: "mt-5 mb-5",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 104
+            },
+            __self: this
+        }, "Research Details "), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 105
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            fieldValue: "Research Title",
+            name: "researchTitle",
+            //   value={this.state.researchTitle}
+            id: "researchTitle",
+            onchange: this.onChange,
+            placeholder: "Research Title",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 106
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            fieldValue: "Research Field",
+            name: "researchField",
+            //   value={"value"}
+            id: "researchField",
+            onchange: this.onChange,
+            placeholder: "Research Field",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 115
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "date",
+            fieldValue: "Research Year",
+            name: "researchYear",
+            //   value={"value"}
+            id: "researchYear",
+            onchange: this.onChange,
+            placeholder: "Research Year",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 124
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            fieldValue: "Research Author",
+            name: "coAuthors",
+            //   value={"value"}
+            id: "coAuthors",
+            onchange: this.onChange,
+            placeholder: "Research Author",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 133
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "file",
+            fieldValue: "Research Paper",
+            name: "researchPaper",
+            //   value={"value"}
+            id: "researchPaper",
+            onchange: this.handlerChangeFiles,
+            placeholder: "Research Paper",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 142
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "button",
+            classname: "btn btn-info",
+            value: "Add Details",
+            onsubmit: this.saveDetails,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\ResearchDetailsAddComponent\\researchAddComponent.js",
+                lineNumber: 151
+            },
+            __self: this
+        })))));
+    }
+}
+exports.default = researchAddComponent;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

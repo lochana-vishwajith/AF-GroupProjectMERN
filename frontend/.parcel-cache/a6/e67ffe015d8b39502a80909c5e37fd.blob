@@ -1,0 +1,551 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _homepageconfigCss = require("./homepageconfig.css");
+var _reactSelect = require("react-select");
+var _reactSelectDefault = parcelHelpers.interopDefault(_reactSelect);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _firebase = require("../../firebase");
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _editorHeader = require("../EditorHeader/editorHeader");
+var _editorHeaderDefault = parcelHelpers.interopDefault(_editorHeader);
+class homePageConfig extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            image: "https://i.stack.imgur.com/y9DpT.jpg",
+            confName: "",
+            dateOfConf: "",
+            venueOfConf: "",
+            imageUplaod: "",
+            confDesc: "",
+            trackOne: "",
+            trackTwo: "",
+            trackThree: "",
+            trackFour: "",
+            imageUrl: "",
+            status: "pending"
+        };
+        this.fileChange = this.fileChange.bind(this);
+        this.handlerChange = this.handlerChange.bind(this);
+        this.saveImage = this.saveImage.bind(this);
+        this.SubmitDetails = this.SubmitDetails.bind(this);
+    }
+    fileChange(e) {
+        const reader = new FileReader();
+        reader.onload = ()=>{
+            if (reader.readyState == 2) {
+                this.setState({
+                    image: reader.result
+                });
+                this.setState({
+                    imageUplaod: e.target.files[0]
+                });
+            }
+        };
+        reader.readAsDataURL(e.target.files[0]);
+    }
+    handlerChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    saveImage() {
+        const { imageUplaod  } = this.state;
+        const date = Date.now();
+        const uploadTask = _firebase.storage.ref(`images/${date}_${imageUplaod.name}`).put(imageUplaod);
+        uploadTask.on("state_changed", (snapshot)=>{
+        }, (error)=>{
+            console.log(error);
+        }, ()=>{
+            _firebase.storage.ref("images").child(`${date}_${imageUplaod.name}`).getDownloadURL().then((url)=>{
+                console.log(url);
+                this.setState({
+                    imageUrl: url
+                });
+                setTimeout(this.SubmitDetails(), 1000);
+            });
+        });
+    }
+    SubmitDetails() {
+        const { confName , dateOfConf , venueOfConf , imageUrl , confDesc , trackOne , trackTwo , trackThree , trackFour , status ,  } = this.state;
+        const details = {
+            confName,
+            dateOfConf,
+            venueOfConf,
+            imageUrl,
+            confDesc,
+            trackOne,
+            trackTwo,
+            trackThree,
+            trackFour,
+            status
+        };
+        _axiosDefault.default.post("http://localhost:5000/homePage/", details).then(()=>{
+            alert("Home Page Content Details are Added Successfully");
+            window.location.reload();
+        }).catch((err)=>{
+            alert("Error in Submiiting.Please Check Again Before Submitting...!");
+            console.log(err);
+        });
+    }
+    render() {
+        const { image  } = this.state;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 112
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_editorHeaderDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 113
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "config",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 114
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "image-holder",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 115
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
+            src: image,
+            alt: "",
+            className: "img",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 116
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 119
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            htmlFor: "configImg",
+            className: "imgName",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 120
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("i", {
+            className: "fas fa-image",
+            id: "acc-icon",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 121
+            },
+            __self: this
+        }), "Upload an Image"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "file",
+            name: "image",
+            id: "configImg",
+            accept: "image/*",
+            onChange: this.fileChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 124
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "outer-div",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 131
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "page-name",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 132
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("center", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 133
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h2", {
+            className: "conf-name",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 134
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            placeholder: "Enter Conference Name",
+            name: "confName",
+            onchange: this.handlerChange,
+            id: "confName",
+            fieldValue: "Conference Name",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 135
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "dateOfConf",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 144
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            placeholder: "Enter Conference Dates",
+            name: "dateOfConf",
+            onchange: this.handlerChange,
+            id: "dateOfConf",
+            fieldValue: "Conference Dates",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 145
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "venueOfConf",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 154
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            placeholder: "Enter the Venue Conference",
+            name: "venueOfConf",
+            onchange: this.handlerChange,
+            id: "venueOfConf",
+            fieldValue: "Conference Venue",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 155
+            },
+            __self: this
+        }))))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 167
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 168
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("center", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 169
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            className: "about",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 170
+            },
+            __self: this
+        }, "About Our Conference"), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            className: "aboutConfTopic",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 172
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("b", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 173
+            },
+            __self: this
+        }, "Internatinal Conference on Application Framework"))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 176
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 177
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 178
+            },
+            __self: this
+        }, "Brief Description About The Conference")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "confDesc",
+            name: "confDesc",
+            rows: "6",
+            cols: "151",
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 182
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 190
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("center", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 191
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 192
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("b", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 193
+            },
+            __self: this
+        }, "Conference Tracks"))), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 196
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "trackGrid",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 197
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "innerGrid",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 198
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 199
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 200
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 201
+            },
+            __self: this
+        }, "Conference Track 01 :")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "trackOne",
+            name: "trackOne",
+            rows: "6",
+            cols: "75",
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 205
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "innerGrid",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 214
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 215
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 216
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 217
+            },
+            __self: this
+        }, "Conference Track 02 :")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "trackTwo",
+            name: "trackTwo",
+            rows: "6",
+            cols: "75",
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 221
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "innerGrid",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 230
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 231
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 232
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 233
+            },
+            __self: this
+        }, "Conference Track 03 :")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "trackThree",
+            name: "trackThree",
+            rows: "6",
+            cols: "75",
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 237
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "innerGrid",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 246
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 247
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 248
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 249
+            },
+            __self: this
+        }, "Conference Track 04 :")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "trackFour",
+            name: "trackFour",
+            rows: "6",
+            cols: "75",
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 253
+            },
+            __self: this
+        })))), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 263
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("center", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 264
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "submit",
+            classname: "btn btn-outline-dark",
+            value: "Save Details",
+            onsubmit: this.saveImage,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 265
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\HomePageConfigComponent\\homePageConfig.js",
+                lineNumber: 273
+            },
+            __self: this
+        }))));
+    }
+}
+exports.default = homePageConfig;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

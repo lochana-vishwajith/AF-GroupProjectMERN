@@ -3,7 +3,7 @@
     margin: 0 auto;
 } */
 .login-outer-box{
-background:url("../../Book-Shelf.jpg") no-repeat fixed 0 0;
+background:url("https://firebasestorage.googleapis.com/v0/b/icaf-storage-c23a0.appspot.com/o/icons%2FBook-Shelf.jpg?alt=media&token=cce7f65c-e665-4806-8302-2f6e0dfb149f") no-repeat fixed 0 0;
     min-height: 500px;
 }
 .loginOuterDiv{

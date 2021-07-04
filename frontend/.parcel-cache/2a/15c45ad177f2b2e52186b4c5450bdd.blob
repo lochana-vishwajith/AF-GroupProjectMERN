@@ -1,0 +1,15 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "notificationService", ()=>notificationService
+);
+var _rxjs = require("rxjs");
+const subject = new _rxjs.Subject();
+const notificationService = {
+    sendMessage: (message)=>subject.next({
+            text: message
+        })
+    ,
+    clearMessage: ()=>subject.next()
+    ,
+    getMessage: ()=>subject.asObservable()
+};

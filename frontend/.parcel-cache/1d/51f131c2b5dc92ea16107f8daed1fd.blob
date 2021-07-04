@@ -1,0 +1,40 @@
+.page-name {
+  margin-top: 20px;
+}
+
+.outer-div {
+  background-color: black;
+  padding: 30px;
+}
+.conf-name {
+  color: blanchedalmond;
+}
+.dateOfConf {
+  color: darkgray;
+}
+.venueOfConf {
+  color: darkgray;
+  margin-top: -12px;
+}
+.aboutConfTopic {
+  margin-top: -4px;
+}
+.header-img-Home {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: auto;
+  height: 400px;
+}
+
+.trackGrid {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  box-sizing: border-box;
+}
+.homeCover {
+  width: auto;
+  height: 344.2px;
+  position: relative;
+}

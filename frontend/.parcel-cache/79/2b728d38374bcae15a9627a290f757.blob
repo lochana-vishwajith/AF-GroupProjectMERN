@@ -1,0 +1,382 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _addTemplateCss = require("./AddTemplate.css");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _textInputComponent = require("../TextInputComponent/textInputComponent");
+var _textInputComponentDefault = parcelHelpers.interopDefault(_textInputComponent);
+var _buttonComponent = require("../ButtonComponent/buttonComponent");
+var _buttonComponentDefault = parcelHelpers.interopDefault(_buttonComponent);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _firebase = require("../../firebase");
+var _editorHeader = require("../EditorHeader/editorHeader");
+var _editorHeaderDefault = parcelHelpers.interopDefault(_editorHeader);
+class AddTemplate extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            RtemplateTitle: "",
+            RtemplateFile: "",
+            RspecialNotes: "",
+            rTemplate: "",
+            PtemplateTitle: "",
+            PspecialNotes: "",
+            PtemplateFile: "",
+            pTemplate: ""
+        };
+        this.saveResearchTemplate = this.saveResearchTemplate.bind(this);
+        this.saveWorkShopPresentation = this.saveWorkShopPresentation.bind(this);
+        this.handlerChange = this.handlerChange.bind(this);
+        this.handlerChangeFiles = this.handlerChangeFiles.bind(this);
+        this.submitResearch = this.submitResearch.bind(this);
+        this.submitWorkShop = this.submitWorkShop.bind(this);
+    }
+    submitResearch() {
+        const researchDetails = {
+            templateTitle: this.state.RtemplateTitle,
+            templateFile: this.state.RtemplateFile,
+            specialNotes: this.state.RspecialNotes
+        };
+        _axiosDefault.default.post(`http://localhost:5000/researchTemplate`, researchDetails).then(()=>{
+            alert("Research Paper Details Added");
+            window.location.reload();
+        }).catch((err)=>{
+            alert("Research Paper Details Not Added");
+        });
+    }
+    submitWorkShop() {
+        const workShop = {
+            templateTitle: this.state.PtemplateTitle,
+            templateFile: this.state.PtemplateFile,
+            specialNotes: this.state.PspecialNotes
+        };
+        _axiosDefault.default.post("http://localhost:5000/workshopTemplate", workShop).then(()=>{
+            alert("WorkShop Presenatation Template Added");
+            window.location.reload();
+        }).catch((err)=>{
+            console.log(err);
+            alert("WorkShop Presenatation Template Not Added");
+        });
+    }
+    saveResearchTemplate() {
+        const { rTemplate  } = this.state;
+        const date = Date.now();
+        const uploadTask = _firebase.storage.ref(`ResearchPaperTemplate/${date}_${rTemplate.name}`).put(rTemplate);
+        uploadTask.on("state_changed", (snapshot)=>{
+        }, (error)=>{
+            console.log(error);
+        }, ()=>{
+            _firebase.storage.ref("ResearchPaperTemplate").child(`${date}_${rTemplate.name}`).getDownloadURL().then((url)=>{
+                console.log(url);
+                this.setState({
+                    RtemplateFile: url
+                });
+                setTimeout(this.submitResearch(), 1000);
+            });
+        });
+    }
+    saveWorkShopPresentation() {
+        const { pTemplate  } = this.state;
+        const date = Date.now();
+        const uploadTask = _firebase.storage.ref(`workShopPresentationTemplate/${date}_${pTemplate.name}`).put(pTemplate);
+        uploadTask.on("state_changed", (snapshot)=>{
+        }, (error)=>{
+            console.log(error);
+        }, ()=>{
+            _firebase.storage.ref("workShopPresentationTemplate").child(`${date}_${pTemplate.name}`).getDownloadURL().then((url)=>{
+                console.log(url);
+                this.setState({
+                    PtemplateFile: url
+                });
+                setTimeout(this.submitWorkShop(), 1000);
+            });
+        });
+    }
+    handlerChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    handlerChangeFiles(e) {
+        if (e.target.files[0]) this.setState({
+            [e.target.name]: e.target.files[0]
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 126
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_editorHeaderDefault.default, {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 127
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 128
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h3", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 129
+            },
+            __self: this
+        }, "Upload Conference Templates"), /*#__PURE__*/ _reactDefault.default.createElement("hr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 130
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 131
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "addTemplateDiv",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 132
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "templateInnerDive",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 133
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            id: "card",
+            className: "shadow p-5 mb-5 bg-white rounded",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 134
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 135
+            },
+            __self: this
+        }, "Upload Research Paper Template"), /*#__PURE__*/ _reactDefault.default.createElement("hr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 136
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 137
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            placeholder: "Enter Title",
+            name: "RtemplateTitle",
+            onchange: this.handlerChange,
+            id: "RtemplateTitle",
+            fieldValue: "Tmaplate Title",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 138
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 146
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 147
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 148
+            },
+            __self: this
+        }, "Special Notes")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "RspecialNotes",
+            name: "RspecialNotes",
+            rows: "6",
+            cols: "53",
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 152
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "file",
+            placeholder: "Enter Title",
+            name: "rTemplate",
+            onchange: this.handlerChangeFiles,
+            id: "rTemplate",
+            fieldValue: "Template Title",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 160
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("center", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 168
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "button",
+            classname: "btn btn-outline-dark",
+            value: "Upload File",
+            onsubmit: this.saveResearchTemplate,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 169
+            },
+            __self: this
+        })))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "templateInnerDive",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 178
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            id: "card",
+            className: "shadow p-5 mb-5 bg-gray rounded",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 179
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 180
+            },
+            __self: this
+        }, "Upload WorkShop Presentation Template"), /*#__PURE__*/ _reactDefault.default.createElement("hr", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 181
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 182
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "text",
+            placeholder: "Enter Title",
+            name: "PtemplateTitle",
+            onchange: this.handlerChange,
+            id: "PtemplateTitle",
+            fieldValue: "Template Title",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 183
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 191
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "input-group-prepend",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 192
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "input-group-text",
+            id: "basic-addon1",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 193
+            },
+            __self: this
+        }, "Special Notes")), /*#__PURE__*/ _reactDefault.default.createElement("textarea", {
+            id: "PspecialNotes",
+            name: "PspecialNotes",
+            rows: "6",
+            cols: "53",
+            onChange: this.handlerChange,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 197
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_textInputComponentDefault.default, {
+            type: "file",
+            placeholder: "Enter Title",
+            name: "pTemplate",
+            onchange: this.handlerChangeFiles,
+            id: "pTemplate",
+            fieldValue: "Template Title",
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 205
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("center", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 213
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonComponentDefault.default, {
+            type: "button",
+            classname: "btn btn-outline-dark",
+            value: "Upload File",
+            onsubmit: this.saveWorkShopPresentation,
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 214
+            },
+            __self: this
+        }))))), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+            __source: {
+                fileName: "E:\\lecture notes\\Y3\\AF\\Project\\AF project\\frontend\\Components\\AddTemplateComponent\\AddTemplate.js",
+                lineNumber: 224
+            },
+            __self: this
+        }))));
+    }
+}
+exports.default = AddTemplate;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

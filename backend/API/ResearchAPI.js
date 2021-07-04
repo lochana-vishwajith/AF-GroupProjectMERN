@@ -95,6 +95,28 @@ const editResearchDetails = async (req, res) => {
       });
     });
 };
+const editResearchDetailsStatus = async (req, res) => {
+  let id = req.params.id;
+  console.log("Rid" + id);
+  console.log("ID:", id);
+
+  await Research.update(
+    { _id: id },
+    { $set: { isPayed: true } },
+    { upsert: true }
+  )
+    .then((data) => {
+      console.log(data);
+      res.status(200).send({
+        data: data,
+      });
+    })
+    .catch((error) => {
+      res.status(500).send({
+        error: error.message,
+      });
+    });
+};
 
 const deleteResearchDetail = async (req, res) => {
   if (req.params.id) {
@@ -132,6 +154,20 @@ const getResearchByUser = async (req, res) => {
   }
 };
 
+const getPayedResearchDetails = async (req, res) => {
+  await Research.find({ isAccepted: true, isPayed: true })
+    .then((data) => {
+      res.status(200).send({
+        data: data,
+      });
+    })
+    .catch((error) => {
+      res.status(500).send({
+        error: error.message,
+      });
+    });
+};
+
 module.exports = {
   addResearchDetails,
   getAllResearchDetails,
@@ -140,4 +176,6 @@ module.exports = {
   deleteResearchDetail,
   getResearchById,
   getResearchByUser,
+  getPayedResearchDetails,
+  editResearchDetailsStatus,
 };
